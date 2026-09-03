@@ -1,0 +1,66 @@
+<!-- source: https://www.opswat.com/docs/mdss/4.4.2/integrations/add-a-mft-storage -->
+
+# Add an OPSWAT MFT Storage
+
+This guide outlines the necessary steps to integrate an OPSWAT Managed File Transfer (MFT) storage solution with your OPSWAT MetaDefender Storage Security (MDSS) instance.
+
+LIMITATION
+
+The MFT integration does not currently support the "Shared Space" feature within Custom Groups. Consequently, while files in a Custom Group's Shared Space will be discovered during a scan using the "All users" storage option, any attempts to apply remediation actions to these files will fail.
+
+### [1. Prerequisites](/docs/mdss/4.4.2/integrations/add-a-mft-storage#1-prerequisites)
+
+Before you begin adding an MFT storage unit in MDSS, make sure you have the following:
+
+- an **MFT Service URL** - this is the base web address used to access your OPSWAT MFT provider
+- an **API Key** required for MDSS to authenticate and interact with your MFT service
+- You will need **administrator privileges** for both your MFT dashboard and your MDSS web page.
+
+## [2. Obtaining the Service URL](/docs/mdss/4.4.2/integrations/add-a-mft-storage#2-obtaining-the-service-url)
+
+The MFT Service URL is the primary address for your MFT provider.
+
+- Determine the complete base URL where your MFT service is hosted.
+- Make sure the URL includes the correct protocol, either `http://` or `https://`.
+
+  - Example: `https://mft.yourcompany.com` or `http://mft.internal.net`
+
+## [3. Generating Your MFT API Key](/docs/mdss/4.4.2/integrations/add-a-mft-storage#3-generating-your-mft-api-key)
+
+An API key is essential for secure communication between MDSS and your MFT service.
+
+- Log in to your MFT dashboard with administrator credentials and navigate to the **Settings** page.
+- Within the Settings menu, find and select the **Security** section. This is often located in a side navigation panel.
+- Within the Security section, select the **API Keys** tab.
+
+- Click on the **Add API key** button (or a similarly named option like "Generate New Key").
+- Set an appropriate expiration date for the API key to enhance security. Consider your organization's security policies.
+- Once generated, the API key will be displayed. **Immediately and securely copy and store this key.** For security reasons, treat this key like a password.
+
+## [4. Configuring MFT File Upload Settings](/docs/mdss/4.4.2/integrations/add-a-mft-storage#4-configuring-mft-file-upload-settings)
+
+To ensure MDSS can successfully upload files, a specific MFT setting needs to be enabled. This allows MDSS to upload files on behalf of users, even if those users are part of a group and the group membership isn't explicitly specified during the upload.
+
+- As an administrator, navigate to the **Settings** page on your MFT dashboard
+- Under the **Global Settings** section, locate and select the **Files** tab
+- Make sure that the option labeled **"Allow Users to Upload Files Without Specifying Group Membership"** is **checked (enabled)**
+- If you've made any modifications to this setting, ensure you save them
+
+### [5. Adding the MFT Storage Unit in MDSS](/docs/mdss/4.4.2/integrations/add-a-mft-storage#5-adding-the-mft-storage-unit-in-mdss)
+
+With the MFT Service URL and API key obtained, and the necessary MFT setting configured, you can now add the MFT storage to MDSS. (**Note**: The latest supported version of MFT Storage is **3.9.4**)
+
+- Log in to your MDSS web interface.
+- Go to the **Storage Units** page. This is typically found in the main navigation menu.
+- Click on the **"Add storage unit"** button.
+- From the available storage unit types, choose **"OPSWAT MFT"**
+- Fill in the required fields in the form, which will include:
+
+  - **MFT Service URL** - enter the URL obtained in Step 2.
+  - **API Key** - enter the API key generated and saved in Step 3.
+  - Complete any other specific configuration options presented in the MDSS form for MFT integration.
+- Save the configuration. It is highly recommended to test the integration by uploading or scanning a file to ensure the MFT storage is working correctly with MDSS.
+
+IMPORTANT
+
+MDSS will not discover or process files that OPSWAT MFT has already blocked and made unavailable for download.

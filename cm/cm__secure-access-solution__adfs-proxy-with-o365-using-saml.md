@@ -1,0 +1,184 @@
+<!-- source: https://www.opswat.com/docs/cm/secure-access-solution/adfs-proxy-with-o365-using-saml -->
+
+# ADFS Proxy with O365 using SAML
+
+My OPSWAT Central Management can be easily integrated with ADFS Proxy to ensure that a device is compliant with the organization's security policy before it is granted access to O365. This ensures that the device is not only authenticated by the IdP, but also tested for risks and vulnerabilities such as infections or unpatched versions of operating systems, BEFORE it access an organization's cloud services.
+
+To get started with implementing My OPSWAT Central Management integration to enforce device posture check before granting a device to access O365 with ADFS Proxy, you set up SSO between AD FS server and O365 manually. You need the following requirements
+
+1. A domain.
+2. An Active Directory instance.
+3. Add your domain to Office 365.
+4. Install Windows PowerShell for Azure Active Directory [here](https://docs.microsoft.com/en-us/powershell/module/MSOnline/?view=azureadps-1.0&redirectedfrom=msdn).
+5. Install ADFS server.
+6. Using Azure AD Connect to enable Single Sign-On to Office 365.
+
+Configuring, installing ADFS server and enabling SSO to Office 365 is beyond the scope of this tutorial. This tutorial uses screenshots from Server 2012R2, but similar steps should be possible on other versions.
+
+Now it's the time you can integrate My OPSWAT Central Management with your ADFS by following below steps. You can learn more details for each step here at [3.1.1. How to set it up?](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)
+
+- [Step 1. Enable Access Control on your MetaDefender IT Access account](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_O365_using_SAML.html#step-1-enable-access-control-on-your-metaaccess-account)
+- [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_O365_using_SAML.html#step-2-add-protected-applications-with-idp-method)
+- [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_O365_using_SAML.html#step-3-configure-access-rules)
+- [Step 4. Update Office 365 Relying Party Trusts in AD FS Server](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_O365_using_SAML.html#step-4-update-office-365-relying-party-trusts-in-ad-fs-server)
+- [Step 5. Edit SSO settings on Office 365](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_O365_using_SAML.html#step-5-edit-sso-settings-on-office-365)
+- [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_O365_using_SAML.html#step-6-test-your-integration)
+
+## Step 1. Enable Access Control on your My OPSWAT Central Management account
+
+1. Login to the My OPSWAT Central Management console.
+2. Navigate to **Secure Access > Protected Apps.**
+3. Check on the box **"Enable Secure Access ".**
+4. Navigate to **Integrations** and then **Device Identity**, and enable **Enable cross-domain API integration at port xxxx**
+
+## Step 2. Add protected applications with IdP Method
+
+1. The next step is importing an ADFS Signing certificate to My OPSWAT Central Management. This allows My OPSWAT Central Management to verify users signing though a trusted IdP. Each identity provider has a unique X.509 certificate. Download the ADFS Signing certificate by following these steps:
+   1. Login to Windows Server
+   2. Open **Server Manager**
+   3. Click **Tools**
+   4. Click **AD FS Management**
+   5. Expand **Service**
+   6. Click **Certificates**
+   7. Double-click on the "Token-signing" being used to sign your responses
+
+![](https://uploads.developerhub.io/prod/97qW/5cp1q0dbnfev4t85ackmwm6awlck6btxor3ftxcd4aa0ixvwtrarzr18dpwzdwk7.png)
+
+8.  Click **Copy to File** to download the certificate. That should open another box, showing the certificate export wizard. Click **Next** and you will be asked which format to export the certificate in. Choose **Base-64 encoded X.509**
+
+![](https://uploads.developerhub.io/prod/97qW/katqx3g2d8p1q1hqnmepxuuo3hvw8yvz2p75l6cng0xn3t0i1ct95671o0gmn38z.png)
+
+2. Collect Idp Login URL In this case, Idp Login URL is [https://login.microsoftonline.com/login.srf](https://login.microsoftonline.com/login.srf)
+3. Add the ADFS Identity Provider. If you already have ADFS IdP settings on your My OPSWAT Central Management account, go to 4 to add O365 application.
+   1. Login to the My OPSWAT Central Management console.
+   2. Navigate to **Secure Access** and then **Access Methods**
+   3. On the **Identity Providers** tab, click "**Create New Identity Provider**" to add your IdP
+   4. Fill in required fields for the Identity Provider
+      1. *IdP Name*: an IdP name, for example: ADFS
+      2. *IdP Certificate*: upload ADFS certificate you downloaded in Step 2.1
+4. Click **SAVE**.
+5. Add the O365 application:
+   1. Expand the ADFS IdP settings you have just added in Step 2.3 above.
+   2. Navigate to **Secure Access** and then **Protected Apps**. Click **Add New Application.**
+   3. Select **IdP Method** and choose from the existing IdPs, finding the one you just made. Press **Continue**.
+   4. Enter required field
+      1. *Application*: application name, for example: O365
+      2. *IDP Login URL*: application login URL which you have from Step 2.2
+      3. *Login URL*: [https://login.microsoftonline.com/login.srf](https://login.microsoftonline.com/login.srf)
+      4. *Logout URL*: [https://login.microsoftonline.com/logout.srf](https://login.microsoftonline.com/logout.srf)
+      5. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+      6. Click **Add**
+      7. After saving your changes successfully, click the **Setup Instructions** button of the O365 application you have just added             and then copy the **URL** My OPSWAT Central Management generated there. This URL is used to replace O365 login URL on ADFS.
+      8. Download the Note: you can add O365 application (step 2.4) when you add ADFS IdP settings.
+
+## Step 3. Configure Access Rules
+
+1. On My OPSWAT Central Management console, navigate to **Secure Access** and then **Rules**
+2. Click "**ADD NEW RULE**" to add a new rule for this application OR you can update existing access rules to add this application
+3. With a new access rule, you need to specify how you would like to block/allow access a device from the application
+   1. *Rule name*: a rule name, for example Block non-compliant devices
+   2. *Action*: Block or Allow
+   3. Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+4. Click **ADD RULE**
+
+## Step 4. Update Office 365 Relying Party Trusts in AD FS Server
+
+1. Update Passive Endpoint
+   1. Login to Windows Server
+   2. Open **Server Manager**
+   3. Click **Tools**
+   4. Click **AD FS Management**
+   5. Expand **Trust Relationships**
+   6. Click **Relying Party Trusts**
+   7. Double-click on "Microsoft Office 365 Identity Platform" and choose **Endpoints tab**
+
+![](https://uploads.developerhub.io/prod/97qW/vojumzr1710kbz60vi27hcidbymy8e92usm8es9fd3n1rqat2q9aiq3owc0kr0i2.png)
+
+8.  Click **Add SAML** to add new Endpoint
+
+9.  Use the URL in step 2.5 as **Trusted URL**:
+
+![](https://uploads.developerhub.io/prod/97qW/6yld55rwmu4udgnhac1yf235jjd3vujg21xobzpbsboavq9vevu01us3vq6p57k5.png)
+
+10.  Click **OK**
+
+2. Configure the Active Directory claims-provider trust
+   1. Right-click "Microsoft Office 365 Identity Platform" and choose **Edit Claim Rules**
+
+![](https://uploads.developerhub.io/prod/97qW/66xsxfwgbwbqwiz9a680otgvhug0wjozscohr1u81urwv4kl79oh1rhv4nxpsdsy.png)
+
+2.  On the **Issuance Transform Rules** tab, click **Add Rule**
+
+![](https://uploads.developerhub.io/prod/97qW/eb77wsp5ay8uioktz0p55gl7rtdbj2e99jzzwwx5d7b5vp4jufgcdlulx8wmygua.png)
+
+3.  In the Claim rule template box, select **Send Claims Using a Custom Rule**, and then click **Next**
+
+![](https://uploads.developerhub.io/prod/97qW/mwsfrp0yuect6agm4d45fqxjfr82p1giv1n4e04ppzkiwoyz5i2q8g0nnxuqj9es.png)
+
+4.  In the Claim rule name box type "Issue nameidentifier SAML 2.0", and fill the Custom rule as follow:
+
+c:[Type == "[http://schemas.microsoft.com/LiveID/Federation/2008/05/ImmutableID"]](http://schemas.microsoft.com/LiveID/Federation/2008/05/ImmutableID%22%5C%5D) => issue(Type = "[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier%22), Value = c.Value, Properties["[http://schemas.xmlsoap.org/ws/2005/05/identity/claimproperties/format"]](http://schemas.xmlsoap.org/ws/2005/05/identity/claimproperties/format%22%5C%5D) = "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent");
+
+![](https://uploads.developerhub.io/prod/97qW/xctfl17atpnr5k648ywso4s0dyrm4r26jsh0yu3q8pbnbfd7t41msp9dfx7fjfao.png)
+
+5.  Click **Finish**
+
+6.  Click **OK**
+
+![](https://uploads.developerhub.io/prod/97qW/aip8vq4mxeeijokvhexwrhsmurry710rqqxp80pnjtq4dirpd8q5ajiifb65bdfb.png)
+
+## Step 5. Edit SSO settings on Office 365
+
+After install and configure AD FS server, it will enable SSO for your domain, but you need to replace SigningCertificate in SSO setting to work with My OPSWAT Central Management
+
+1. Login to Azure Active Directory via Windows PowerShell
+   1. Login to a computer installed Windows PowerShell for Azure Active Directory
+   2. Start PowerShell and run **Connect-MsolService** cmdlet and enter your administrator credentials for your Office 365 domain when prompted
+
+```plaintext
+C:\Windows\system32>Connect-MsolService
+```
+
+2. Backup current SSO settings
+   1. Run **Get-MsolDomainFederationSettings -DomainName <your domain>** cmdlet to get current SSO setting
+   2. Get these information
+      1. FederationBrandName
+      2. IssuerUri
+      3. LogOffUri
+      4. PassiveLogOnUri
+3. Update existing current setting
+   1. Run following cmdlet
+
+```plaintext
+C:\Windows\system32>Set-MsolDomainAuthentication -DomainName <your domain> -Authentication Managed
+```
+
+2.  Run **Set-MsolDomainAuthentication** cmdlet
+
+```plaintext
+C:\Windows\system32>Set-MsolDomainAuthentication `
+-FederationBrandName <FederationBrandName> `
+-DomainName <Your Domain> `
+-Authentication Federated `
+-IssuerUri <Issuer> `
+-PassiveLogOnUri <Passive Endpoint> `
+-LogOffUri <LogOffUri> `
+-PreferredAuthenticationProtocol SAMLP `
+-SigningCertificate <OPSWAT Certificate in step 2>
+```
+
+**Note**: enter the certificate on a single line without break line
+
+3.  Run following cmdlet to verify configuration
+
+```plaintext
+C:\Windows\system32>Get-MsolDomainFederationSettings -DomainName <Your Domain>
+```
+
+**Note**: It can take some time for Office 365 to apply new configuration
+
+## Step 6: Test your integration
+
+Follow guideline at [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Step_6__Test_your_integration.html) to test your integration to verify if it works as your expectation.
+
+**DONE! CONGRATULATIONS.**

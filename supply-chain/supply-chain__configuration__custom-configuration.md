@@ -1,0 +1,129 @@
+<!-- source: https://www.opswat.com/docs/supply-chain/configuration/custom-configuration -->
+
+# Custom Configuration
+
+## How to edit the configuration file on Linux
+
+Custom application configuration can be achieved by editing the ***customer.env***  environment file.
+
+The following steps are required to change different parameters in this file:
+
+- Navigate to ***/etc/mdssc/customer.env*** and open the file
+- If the parameter that needs to be changed is not present, add the new parameter with the desired value. If it already exists, just edit the value.
+
+```bash
+CONFIGURATION_PROPERTY_NAME=VALUE
+```
+
+- Save the file
+- In order for the changes to apply, please restart the application by running the following command:
+
+```bash
+sudo mdssc -c restart
+```
+
+## Changing certificate validation
+
+This environment variable controls certificate validation for **MetaDefender** **Software Supply chain** integrations during HTTP(S) requests. It is useful when comes  the needing to accept a partially valid certificate chain or a self-signed certificate.
+
+```bash
+MD_CORE_CERTIFICATE_VALIDATION=VALUE
+```
+
+`VALUE` can be one of the following:
+
+- **Default** → Invalid certificate instances can't be integrated into MetaDefender Software Supply Chain
+- **IgnoreChainErrors** → Instances with certificate chain errors can be integrated
+- **IgnoreAllErrors** → Instances with invalid certificate can be integrated
+
+## Showing Direct Upload Scans in Results
+
+When enabled, direct file upload scans are included in connection views and scan results.
+
+Default value to this environment variable is **true**.
+
+```bash
+MDSSC_INCLUDE_DIRECT_SCANS_IN_VIEWS=true
+```
+
+## Saving Archive Scan Results
+
+When enabled, scan results for archive contents are stored for later access, default value is **true**.
+
+```bash
+STORE_ARCHIVE_SCAN_RESULTS=true
+```
+
+## Waiting for Archive Extraction to Complete
+
+When enabled, the scan process waits until archive extraction is fully completed before continuing. Default value is **true**.
+
+```bash
+SCAN_WAITS_FOR_ARCHIVE_COMPLETION=true
+```
+
+## Waiting for External Processing to Finish
+
+When enabled, the scan process waits for external processing to complete before finalizing. Default value is **true**.
+
+```bash
+SCAN_WAITS_FOR_EXTERNAL_PROCESSING=true
+```
+
+## How Connection Status Is Kept Up to Date
+
+Sets the interval, in milliseconds, for sending heartbeat signals over SignalR connections. This value is also used to throttle status updates for cross-domain transfers.
+
+Default value is **2000 ms**.
+
+```bash
+MDSSC_HEARTBEAT_INTERVAL_MS=2000
+```
+
+## Archive Scan Performance Mode
+
+When enabled, archive scanning prioritizes speed over detailed inventory results (thinner file inventory inside archives).
+
+Default value is **false**.
+
+```bash
+ARCHIVE_PERFORMANCE_MODE=false
+```
+
+Use this if archive scans feel slow. Setting `ARCHIVE_PERFORMANCE_MODE=true` typically makes results arrive noticeably faster, with the trade-off of less detailed archive contents.
+
+## Maximum Concurrent Discoveries
+
+Controls scan parallelism by allowing more discovery jobs to run at the same time.
+
+Default value is **4**.
+
+```bash
+MDSSC_MAX_CONCURRENT_DISCOVERIES=4
+```
+
+Use this if small scans wait behind one large scan. Increase the value to process more scans in parallel, but ensure you have enough CPU and memory headroom.
+
+## RabbitMQ Scanning Prefetch Count
+
+Controls scan message throughput by defining how many scan messages a worker can prefetch and hold at once.
+
+Default value is **30**.
+
+```bash
+RABBITMQ_SCANNING_PREFETCH_COUNT=30
+```
+
+Use this if overall scan throughput is low on strong hardware. Increase the value to let workers pick up more scan work at once. If the system becomes overloaded, lower it instead.
+
+## Temporary Archive Retention (Seconds)
+
+Controls how long temporary extracted archive files are kept before cleanup.
+
+Default value is **3600** seconds.
+
+```bash
+SCAN_TMP_ARCHIVE_RETENTION_SECONDS=3600
+```
+
+Use this if disk fills up during heavy archive scanning. Lower the value to clean up temporary extracted files sooner.

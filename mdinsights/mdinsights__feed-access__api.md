@@ -1,6 +1,5 @@
 <!-- source: https://www.opswat.com/docs/mdinsights/feed-access/api -->
 
-[MetaDefender InSights](https://www.opswat.com/docs/mdinsights)Need Help? [Contact Support](https://www.opswat.com/support/contact-support)
 # API Access
 
 MetaDefender InSights is accessible via a RESTful web API that presents threat intelligence indicators in a simple JSON data format.
@@ -19,8 +18,6 @@ API access details:
 
 - **API host**: <https://eyelet.inquest.net>
 - **API authentication**: API queries must be authenticated, and require an API key to identify the requestor.
-
-To query the APIs documented on this page:
 
 1. Send an HTTPS request to the URL of the desired API endpoint.
 2. Send requests using the `POST` method.
@@ -120,5 +117,3 @@ The following API endpoints can be accessed through the snapshot download interf
 | `/api/insights/insights-osint-domain` | Download the most recent MetaDefender InSights OSINT domain feed snapshot. |
 
 ---
-
-  Last updated  on  Next to read:  [Partner Availability](/docs/mdinsights/feed-access/partner-access) On This Page [API Access](https://www.opswat.com/docs/mdinsights/feed-access/api#)[Authentication and authorization](https://www.opswat.com/docs/mdinsights/feed-access/api#authentication-and-authorization)[How to query the API](https://www.opswat.com/docs/mdinsights/feed-access/api#how-to-query-the-api)[Lookup query interface](https://www.opswat.com/docs/mdinsights/feed-access/api#lookup-query-interface)[Supported InSights data feeds](https://www.opswat.com/docs/mdinsights/feed-access/api#supported-insights-data-feeds)[Supported API endpoints](https://www.opswat.com/docs/mdinsights/feed-access/api#supported-api-endpoints)[InSights C2 DNS lookup](https://www.opswat.com/docs/mdinsights/feed-access/api#insights-c2-dns-lookup)[InSights C2 IP lookup](https://www.opswat.com/docs/mdinsights/feed-access/api#insights-c2-ip-lookup)[InSights TI reputation lookup](https://www.opswat.com/docs/mdinsights/feed-access/api#insights-ti-reputation-lookup)[Download interface](https://www.opswat.com/docs/mdinsights/feed-access/api#download-interface)[Supported InSights data feeds](https://www.opswat.com/docs/mdinsights/feed-access/api#supported-insights-data-feeds)[Supported API endpoints](https://www.opswat.com/docs/mdinsights/feed-access/api#supported-api-endpoints)[InSights C2 snapshots](https://www.opswat.com/docs/mdinsights/feed-access/api#insights-c2-snapshots)[InSights TI snapshots](https://www.opswat.com/docs/mdinsights/feed-access/api#insights-ti-snapshots)[InSights OSINT snapshots](https://www.opswat.com/docs/mdinsights/feed-access/api#insights-osint-snapshots)

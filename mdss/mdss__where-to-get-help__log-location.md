@@ -1,0 +1,20 @@
+<!-- source: https://www.opswat.com/docs/mdss/where-to-get-help/log-location -->
+
+# Logs location
+
+### [Unix](/docs/mdss/where-to-get-help/log-location#unix)
+
+| Type of logs | Location |
+| --- | --- |
+| Internal services logs | /etc/mdss/services_logs/{service-name}/ |
+| Installation logs | /var/log/mdss/ |
+| Script logs | /etc/mdss/logs |
+
+### [Windows](/docs/mdss/where-to-get-help/log-location#windows)
+
+| Type of logs | Location |
+| --- | --- |
+| Script logs | C:\Program Files\OPSWAT\MetaDefender Storage Security\logs\ |
+| Internal services logs | C:\Program Files\OPSWAT\MetaDefender Storage Security\services{service-name}\logs\ |
+| Windows Service logs | C:\Windows\System32\opswat.mdss.windows.service\ |
+| Installation logs | C:\Users<user>\AppData\Local\Temp\  C:\Program Files\OPSWAT\MetaDefender for Secure Storage\logs\ |

@@ -1,6 +1,5 @@
 <!-- source: https://www.opswat.com/docs/mdinsights -->
 
-[MetaDefender InSights](https://www.opswat.com/docs/mdinsights)Need Help? [Contact Support](https://www.opswat.com/support/contact-support)
 ### METADEFENDER
 
 # InSights

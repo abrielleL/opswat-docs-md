@@ -1,0 +1,91 @@
+<!-- source: https://www.opswat.com/docs/mdss/4.4.2/integrations/how-to-add-a-smb-share-as-a-nfs-storage -->
+
+# [Linux] How to Expose an SMB Share as an NFS Storage Unit
+
+This guide uses the **SMB/CIFS protocol** exclusively for all storage operations. Despite references to "NFS storage" in MDSS terminology, no NFS (Network File System) protocol is involved. The term "NFS storage" refers to MDSS's storage subsystem name that is using the local file system API, not the NFS network protocol. **All connections use SMB/CIFS (Common Internet File System).**
+
+## [Prerequisites](/docs/mdss/4.4.2/integrations/how-to-add-a-smb-share-as-a-nfs-storage#prerequisites)
+
+1. A machine where MetaDefender Storage Security is installed (let's call it MDSS machine)
+2. An SMB share from a Linux or Windows machine
+
+## [Step-by-Step Guide](/docs/mdss/4.4.2/integrations/how-to-add-a-smb-share-as-a-nfs-storage#step-by-step-guide)
+
+Follow these steps to configure the SMB share as an NFS storage unit in MDSS:
+
+### [Step 1: Install cifs-utils](/docs/mdss/4.4.2/integrations/how-to-add-a-smb-share-as-a-nfs-storage#step-1-install-cifs-utils)
+
+On the MDSS machine, you will need the **cifs-utils** package to enable mounting of SMB shares.
+
+Install it using your distribution's package manager.
+
+### [Step 2: Create new mounting directory](/docs/mdss/4.4.2/integrations/how-to-add-a-smb-share-as-a-nfs-storage#step-2-create-new-mounting-directory)
+
+Create a dedicated directory on the MDSS machine where the SMB share will be mounted.
+
+The new directory must be at the following path **/mnt/mdss/nfs/{my-new-folder}** where **{my-new-folder}** is a name you choose for your share.
+
+### [Step 3: Perform the mount](/docs/mdss/4.4.2/integrations/how-to-add-a-smb-share-as-a-nfs-storage#step-3-perform-the-mount)
+
+This step involves preparing credentials and then executing the mount command.
+
+#### [**3.1 Create a credentials file containing the SMB server credentials**](/docs/mdss/4.4.2/integrations/how-to-add-a-smb-share-as-a-nfs-storage#31-create-a-credentials-file-containing-the-smb-server-credentials)
+
+Create a file, for instance at **/etc/smb-credentials**, to store the SMB server login details. The file should contain:
+
+/etc/smb-credentialsCopyusername={username}
+password={password}
+domain={domain} # optional
+
+Replace **{username}, {password}** and (if needed) **{domain}** with the actual credentials for the SMB share.
+
+Security Recommendation
+
+It's recommended to use separate credential files for different shares
+
+#### [**3.2 Secure the credentials file**](/docs/mdss/4.4.2/integrations/how-to-add-a-smb-share-as-a-nfs-storage#32-secure-the-credentials-file)
+
+To protect the sensitive information in the credentials file, restrict its permissions and ownership:
+
+- set permissions so only the owner can read and write:
+
+Only the file owner can read / writeCopysudo chmod 600 /etc/smb-credentials
+
+- set ownership to root:
+
+Set complete root ownershipCopysudo chown root:root /etc/smb-credentials
+#### [**3.3 Perform the mount**](/docs/mdss/4.4.2/integrations/how-to-add-a-smb-share-as-a-nfs-storage#33-perform-the-mount)
+
+Execute the mount command to connect the SMB share to the directory you created. The command format is:
+
+BashCopysudo mount -t cifs //server/share /mnt/mdss/nfs/{my-new-folder} -o credentials=/etc/smb-credentials,uid=0,gid=0,file_mode=0655,dir_mode=0755
+
+- replace /`/server/share` with the actual path to your SMB share
+- replace `/mnt/mdss/nfs/{my-new-folder}` with the mount directory you created.
+- ensure the path to your credentials file is correct
+
+Info
+
+The mount command offers various configurable parameters. You can adapt these to your specific requirements.
+
+MDSS will work with any configuration as long as the SMB share is mounted successfully and MDSS has at least read access. For remediation capabilities, write access will be necessary.
+
+### [Step 4: Ensure mount is persistent](/docs/mdss/4.4.2/integrations/how-to-add-a-smb-share-as-a-nfs-storage#step-4-ensure-mount-is-persistent)
+
+To make sure the SMB share automatically mounts after the MDSS machine restarts, add an entry to the `/etc/fstab` file. Without this, the mount will be lost upon reboot.
+
+An example entry in `/etc/fstab` might look like this (adapt it to your specific paths and options):
+
+/etc/fstabCopy//server/share /mnt/mdss/nfs/{my-new-folder} cifs credentials=/etc/smb-credentials,uid=0,gid=0,file_mode=0655,dir_mode=0755 0 0
+
+You may need to adjust options like **uid** and **gid** to ensure proper file permissions for MDSS.
+
+### [Step 5: Add the mounted directory in MDSS](/docs/mdss/4.4.2/integrations/how-to-add-a-smb-share-as-a-nfs-storage#step-5-add-the-mounted-directory-in-mdss)
+
+Once the SMB share is successfully mounted and persistance is configured:
+
+- open the MetaDefender Storage Security user interface
+- Navigate to the section for adding a new storage unit
+- Choose to add an **NFS storage unit**
+- In the configuration, specify the **Mount directory** as the folder you created and used in Step 2 (**{my-new-folder}**)
+- You'll also typically provide a **Storage name** and potentially save it as a new account or assign it to a group, as suggested by the screenshot below:

@@ -1,0 +1,36 @@
+<!-- source: https://www.opswat.com/docs/cm/knowledge-base/where-is-my-opswat-central-management-hosted- -->
+
+# Where is My OPSWAT Central Management Hosted?
+
+> **Check Your Product:**
+>
+> This article applies to the current solution, as well as all component product releases deployed on Windows, macOS, Linux, Android and iOS systems.
+
+My OPSWAT Central Management is a global cloud product, designed to meet the cyber-security needs of diverse clients from around the world.
+
+The physical location of the servers hosting a cloud product is instrumental due to the following factors:
+
+- **Speed:** a cloud service located closer to users has faster response times.
+- **Privacy:** due to certain privacy requirements, such as GDPR, organizations require that their data not leave the perimeter of their country or continent.
+
+We value the performance experience and privacy of our users, and have selected our server locations based on their proximity to our users.
+
+My OPSWAT Central Management service is provided from servers in the following locations:
+
+| **Tenant** | **Location** | **Console** | **API** |
+| ---- | ---- | ---- | ---- |
+| US Tenant B | United States West Coast (Oregon) | [my.us.opswat.com](https://my.us.opswat.com) | [product.my.us.opswat.com](https://product.my.us.opswat.com/) |
+| US Tenant C | United States West Coast (Oregon) | [my-beta.us.opswat.com](https://my-beta.us.opswat.com/) | [product.my-beta.us.opswat.com](https://product.my-beta.us.opswat.com/) |
+| EU Tenant | Northern Europe (Stockholm) | [my.eu.opswat.com](https://my.eu.opswat.com/) | [product.my.eu.opswat.com](https://product.my.eu.opswat.com/) |
+
+> **Privacy Note:**
+>
+> All sensitive user and device data is automatically encrypted when stored.
+
+> **Hosting In Other Locations:**
+>
+> Should your organization have unique security needs that require a host presence in a location other than those mentioned above, please contact [OPSWAT Sales](https://www.opswat.com/contact) to discuss the possibility of adding a new location to the list.
+
+> **Support:**
+>
+> For further queries or concerns regarding **Host Locations And The Implications Thereof**, please open a [Support Case](https://my.opswat.com/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
