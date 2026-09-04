@@ -2,7 +2,7 @@
 
 # MetaDefender Drive v3.13.0
 
-| [MetaDefender Drive v3.13.0](/docs/mddrive/v4.4.7/release-notes/metadefender-drive-v3-13-0#metadefender-drive-v3130) Released on Apr 08, 2022 | This is a major release that adds new feature as well as improvement and stability |
+| MetaDefender Drive v3.13.0 Released on Apr 08, 2022 | This is a major release that adds new feature as well as improvement and stability |
 | --- | --- |
 | **New features** |  |
 | Scan BIOS/UEFI threats and notify on new Firmware updates availability | UEFI threats are gradually becoming a norm and hardware vendors are taking more precautions to mitigate attacks and to provide updates regularly. This version of MetaDefender Drive we are able to scan and report if system firmware is attacked and to notify if there is a new version of system firmware is available. |
