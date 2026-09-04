@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/changing-metadefender-email-gateway-security-configuration -->
 
-Too many requests
-# You're going a little too fast.
+# Changing MetaDefender Email Security Configuration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to change the configuration of a MetaDefender Email Security instance remotely.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Go to the **MetaDefender Email Security** management page under **Inventory** in the sidebar.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. Click the **Settings** button in the gear icon's drop-down menu.
+3. OPSWAT Central Management will load the settings of the instance. Change the settings as required.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fchanging-metadefender-email-gateway-security-configuration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+4. Change any settings and click the **Submit** button.

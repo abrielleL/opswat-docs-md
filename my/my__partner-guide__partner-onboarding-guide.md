@@ -2,7 +2,7 @@
 
 # Onboarding
 
-If you're an OPSWAT Channel Partner, use this guide to begin your journey with **My OPSWAT Portal**. This page outlines what you need to access the Portal and make the most of its core features.
+Once you are connected to your Partner Organization, your available permissions can give you access to capabilities such as Partner Portal, customer licenses and contracts, customer hardware, and support workflows.
 
 1. [Access Requirements](https://www.opswat.com/docs/my/partner-guide/partner-onboarding-guide#access-requirements)
 2. [Invite Members to Your Organizations (for Administrators)](https://www.opswat.com/docs/my/partner-guide/partner-onboarding-guide#invite-members-to-your-organizations-for-administrators)
@@ -10,7 +10,7 @@ If you're an OPSWAT Channel Partner, use this guide to begin your journey with *
 
 ## Access Requirements
 
-To access partner-specific features in My OPSWAT such as Partner Portal, Customer License Management, Customer Contracts, and Support for Partners, you must
+To access partner capabilities in My OPSWAT, you need to:
 
 - Have a registered **OPSWAT account.**
 - AND Belong to a **Partner Organization.**
@@ -27,6 +27,10 @@ Follow these steps below to get started 👇
 4. Follow the instructions in the email to activate your account.
 
 ### Step 2: Join Your Partner Organization
+
+After signing in, join the Partner Organization associated with your company.
+
+Your request may require approval from an administrator of that organization. Once approved, the partner capabilities available to your organization will appear based on your assigned role and permissions.
 
 #### Option 1: Invitation from Your Administrators
 
@@ -57,6 +61,16 @@ Once submitted:
 >
 > If you do not see any available organizations, please contact your dedicated Channel Manager
 
+### Step 3: Make sure you are in the correct organization
+
+If your account belongs to multiple organizations:
+
+1. Select your profile in the upper-right corner.
+2. Select **Switch Organizations**.
+3. Choose your Partner Organization.
+
+You can also set your Partner Organization as your default organization from **My Information > My Current Organizations**.
+
 ## Invite Members to Your Organizations (for Administrators)
 
 Administrators can invite additional members to join the organization and access partner-specific features.
@@ -71,10 +85,10 @@ Invited users will receive an email with instructions to get started with My OPS
 
 ## What to Explore Next
 
-After setup, you may want to:
+Once your organization access is ready:
 
-- [Understand roles and permissions](https://www.opswat.com/docs/my/partner-guide/partner-role-management)
-- [Submit a New Deal](https://www.opswat.com/docs/my/partner-guide/partner-portal#deal-registration)
-- [Submit a New MDF request](https://www.opswat.com/docs/my/partner-guide/partner-portal#marketing-development-funds)
-- [Manage customer licenses](https://www.opswat.com/docs/my/partner-guide/customer-organizations-licenses)
-- [Submit support cases on behalf of customers](https://www.opswat.com/docs/my/partner-guide/support-for-partners)
+- [Roles & Permissions](https://www.opswat.com/docs/my/partner-guide/partner-role-management) - understand what your team can access
+- [Partner Information](https://www.opswat.com/docs/my/partner-guide/partner-information) - review your OPSWAT partnership profile
+- [Partner Portal](https://www.opswat.com/docs/my/partner-guide/partner-portal) - manage deals, MDF and resources
+- [Customer License Management](https://www.opswat.com/docs/my/partner-guide/customer-licenses)- monitor customer licenses
+- [Support for Partners](https://www.opswat.com/docs/my/partner-guide/support-for-partners) - submit and manage support cases on behalf of customers

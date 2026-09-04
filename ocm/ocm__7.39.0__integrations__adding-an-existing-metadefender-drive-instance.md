@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/adding-an-existing-metadefender-drive-instance -->
 
-Too many requests
-# You're going a little too fast.
+# Adding an existing MetaDefender Drive instance
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to add an existing MetaDefender Drive instance to OPSWAT Central Management.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Adding an existing MetaDefender Drive instance to OPSWAT Central Management can only be done from the MetaDefender Drive instance's interface.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fadding-an-existing-metadefender-drive-instance%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. From MetaDefender Drive's main page, select **Central Management** in the upper-right corner.
+2. Enter the **IP Address** and **API Key** of the OPSWAT Central Management server.
+
+   - IP Address can be found in **Settings > Server Configuration > DEVICE API** under **Server URL.**
+
+- API Key can be found in **Settings > Global Settings > ACCOUNT** under **Registration Code****.**
+
+3. Select **Connect**.
+4. The **MetaDefender** **Drive** page will display the new instance if the process is successful.

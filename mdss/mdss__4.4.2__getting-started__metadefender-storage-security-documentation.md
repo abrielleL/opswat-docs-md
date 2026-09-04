@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/getting-started/metadefender-storage-security-documentation -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Storage Security Documentation
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Storage Security (MDSS) protects your storage against malware, zero-day threats, and hidden sensitive data. It scans files at rest and in real time across cloud and on-premises storage, using multiscanning with 30+ anti-malware engines, Deep CDR (Content Disarm and Reconstruction), Proactive DLP, and vulnerability assessment.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Use this documentation to plan, deploy, size, license, and operate MDSS across supported storage targets including Amazon S3, Azure Blob, Dell EMC Isilon, NetApp, SMB/CIFS and NFS shares, and Kubernetes-based cloud deployments.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**What you'll find here**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fgetting-started%2Fmetadefender-storage-security-documentation%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Overview and how MDSS fits into an OPSWAT MetaDefender deployment
+- Architecture and components, including MD Core scanning backend and shared services
+- Planning your deployment and choosing a deployment model (basic, advanced, managed, self-hosted, or cloud/Kubernetes)
+- Sizing guide for on-demand and real-time scanning, instance counts, and machine specs
+- General system requirements and supported storage integrations
+- Licensing model
+
+**Choosing your deployment model**
+
+MDSS supports basic and advanced deployments, with either managed or self-hosted shared services, plus a Kubernetes (k8s) option for cloud. Pick the model that matches your scale, storage type, and operational preferences. See the deployment sections in the left menu for step-by-step guidance.
+
+**Download the full manual**
+
+Prefer a single file? [Download link](https://metascanbucket.s3.amazonaws.com/Metadefender/MetaDefender_Secure_Storage/4.4.2/MetaDefender_Storage_Security_4.4.2.pdf) for the complete guide in PDF format for OPSWAT MetaDefender Storage Security (MDSS) 4.4.2 Documentation
+
+SHA256: E493D92862F4311D7C2BCB24E9CA2B22A620735EC0FB39A0A1D8EADC34F8B197

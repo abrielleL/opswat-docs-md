@@ -1,12 +1,10 @@
 <!-- source: https://www.opswat.com/docs/ocm/installation/data-migration -->
 
-Too many requests
-# You're going a little too fast.
+# Data migration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT Central Management supports data migration between OPSWAT Central Management instances via importing and exporting data in .json file format. The transferable data includes product instances, users and user directories. In addition, OPSWAT Central Management also supports user to import data during setup wizard. This feature is supported from OPSWAT Central Management version 7.2.0.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Additionally, all OPSWAT Central Management versions from 7.1.0 also support importing data from OPSWAT Central Management version 5.2.7+ via a given URL.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2Finstallation%2Fdata-migration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- [Importing in Setup Wizard](/docs/ocm/installation/importing-in-setup-wizard)
+- [Importing and Exporting](/docs/ocm/installation/importing-and-exporting)

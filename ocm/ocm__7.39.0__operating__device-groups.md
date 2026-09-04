@@ -1,12 +1,33 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/operating/device-groups -->
 
-Too many requests
-# You're going a little too fast.
+# Device Groups
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT Central Management allows administrators to manage devices by categorizing them into groups with different security level. This will not only help administrators in reducing time spent in device management but also help ensure compliance by assigning different security requirements to a group.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Groups management page](/docs/ocm/7.39.0/operating/device-groups#groups-management-page)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The users can add new group via the **Add New Group** button, modify an existing group by clicking on the corresponding entry, or remove it via the corresponding delete icon.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Foperating%2Fdevice-groups%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Add new group](/docs/ocm/7.39.0/operating/device-groups#add-new-group)
+
+The users can add new device groups in the groups management page.
+
+1. Click on **Add New Group.**
+2. Fill out the required information and choose from the available customization options for the new device group. Click on **Assign Devices To Group** when ready.
+
+- **Name, Description:** The group's name and description
+
+- **Accessibility checkbox:** Choose if newly added devices should be assigned to this group automatically
+
+- **Select existing policy:** Assign an existing policy to the group
+
+- **Select existing package:** Assign an existing rebranding package to the group
+
+3. Choose the devices that should be assigned under the new group. Click on **Create** when ready. Your new device group should now be displayed on the Groups management page.
+
+## [Update a group](/docs/ocm/7.39.0/operating/device-groups#update-a-group)
+
+1. From the Groups management page, click on the group you want to update.
+2. You can choose to assign a new policy or rebranding package to the group in this page. Via the **Actions** drop-down menu, you can make changes to selected devices in the group. If you want to assign more devices to this group, click on **Add Devices To Group.**
+
+3. Select the devices you wish to add and press **Add Devices To Group** to finalize your choice.

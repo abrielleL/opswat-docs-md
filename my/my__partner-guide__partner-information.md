@@ -29,3 +29,5 @@ The **Partner Information** tab shows the following details related to your part
 > **Note**
 >
 > If any of your partner information is incorrect or incomplete, contact your OPSWAT Partner Manager or contact us via [OPSWAT Support](https://my.opswat.com/portal/support).
+
+**Related capabilities:** [Partner Portal](https://www.opswat.com/docs/my/partner-guide/partner-portal) | [Roles & Permissions](https://www.opswat.com/docs/my/partner-guide/partner-role-management)

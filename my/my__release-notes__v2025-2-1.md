@@ -44,7 +44,7 @@ Partners can now subscribe to receive automatic alerts for upcoming customer lic
 
 **Settings:** Subscription settings available under License Management > Customer Organizations > Customer License Expiring Notifications toggle.
 
-**Further reading:** [Customer License Management](https://www.opswat.com/docs/my/partner-guide/customer-organizations-licenses)
+**Further reading:** [Customer License Management](https://www.opswat.com/docs/my/partner-guide/customer-licenses)
 
 ## Bug Fixes and Enhancements
 

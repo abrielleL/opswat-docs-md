@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/adding-a-metaaccess-nac-instance -->
 
-Too many requests
-# You're going a little too fast.
+# Adding a MetaAccess NAC instance
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to add a MetaAccess NAC instance to OPSWAT Central Management.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The OPSWAT Central Management server must have been registered with a license that provides MetaAccess NAC support in order to manage MetaAccess NAC instances.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fadding-a-metaaccess-nac-instance%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Follow the [MetaAccess NAC deployment guide](https://impulsepoint.atlassian.net/wiki/spaces/CK/pages/213483564/VM+Deployment+Guide) up to the **Configure Appliance Network Settings** step.
+2. For the **Enter License Key** step, instead of following the aforementioned guide, enter OPSWAT Central Management's OPSWAT Agent recovery key into the **License Key** field and fill out the **OPSWAT Central Management URL (Optional)** field with the correct server address.
+
+OPSWAT Central Management's OPSWAT Agent recovery key is located at **Settings > Global Settings > Account.**
+
+3. Select **Register License Key** and complete the deployment. On success, the MetaAccess NAC instance should then be managed by OPSWAT Central Management.
+
+- **Port**: The unique identification assigned to each MetaAccess NAC instance. An OPSWAT Central Management license with MetaAccess NAC support specifies a limited number of ports that can be assigned to MetaAccess NAC instances.
+
+Info
+
+The status of the MetaAccess NAC instance is **Connected** after fetching its version successfully.

@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/metadefender-kiosk-linux-dashboard -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Kiosk Linux Dashboard
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT Central Management's MetaDefender Kiosk Linux Dashboard gives a general overview of the status and activities of all managed MetaDefender Kiosk Linux instances.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Processing Overview](/docs/ocm/7.39.0/integrations/metadefender-kiosk-linux-dashboard#processing-overview)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Processing Overview shows the combined file processing history of the managed MetaDefender Kiosk Linux instances.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fmetadefender-kiosk-linux-dashboard%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The first chart shows the total number of files processed and the number of problematic files detected.
+
+The second chart shows the average statistics of all scan sessions, which include the average session duration and the average number of files processed per session.
+
+## [Resources](/docs/ocm/7.39.0/integrations/metadefender-kiosk-linux-dashboard#resources)
+
+The Resources section lists the managed MetaDefender Kiosk Linux instances. Each instance is listed with its connection status, version information, system check status, and engine freshness.
+
+## [Download Report function](/docs/ocm/7.39.0/integrations/metadefender-kiosk-linux-dashboard#download-report-function)
+
+OPSWAT Central Management provides the ability to export the content of the MetaDefender Kiosk Linux dashboard to a .pdf file.
+
+Select **Download Report** to download the .pdf file. OPSWAT Central Management will create a popup containing the preview and automatically start the download. Please note that the exported file contains the state of the MetaDefender Kiosk Linux Dashboard at the time of export, including all applied filter settings.

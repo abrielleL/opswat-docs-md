@@ -7,50 +7,39 @@
 > - **User type:** [Organization user](https://www.opswat.com/docs/my/get-started/user-types-in-my-opswat-portal#organization-user)
 > - **Organization type:** Partner Organization
 
-The **Channel Partner Guide** is your single go-to documentation for all partner-specific functionalities in My OPSWAT Portal. This guide provides detailed instructions for all features designed specifically for OPSWAT Channel Partners,  helping you to take full advantage of partner tools within the My OPSWAT Portal.
+**My OPSWAT Portal** brings together the tools and information you need to work with OPSWAT and support your customers.
 
-## What You’ll Find Here
+As an OPSWAT Channel Partner, you can use My OPSWAT to manage pipelines, access partner resources, review customer licenses and contracts, track customer hardware, submit support cases on behalf of customers, and manage your partner organization.
 
-### 1. Onboarding
+Use this guide as your starting point to understand the capabilities available to you and where to find them.
 
-Quick-start guide on how to get access to partner-only features
+## What can you do in My OPSWAT?
 
-👉 [Onboarding](https://www.opswat.com/docs/my/partner-guide/partner-onboarding-guide)
+| I want to... | What you can do | Go to |
+| ---- | ---- | ---- |
+| **Get my team set up** | Create your account, join your Partner Organization, invite team members, and prepare access to partner capabilities | [Onboarding](https://www.opswat.com/docs/my/partner-guide/partner-onboarding-guide) |
+| **Manage who can access what** | Understand built-in partner roles, permissions, and partner-specific role objects | [Roles & Permissions](https://www.opswat.com/docs/my/partner-guide/partner-role-management) |
+| **View my OPSWAT partnership details** | See your Partner Program Level, Sales Region, Partner Manager, Solution Focus, and Industry Focus | [Partner Information](https://www.opswat.com/docs/my/partner-guide/partner-information) |
+| **Manage business with OPSWAT** | View partner activity, register and track deals, request MDF where eligible, and access partner resources | [Partner Portal](https://www.opswat.com/docs/my/partner-guide/partner-portal) |
+| **Manage customer licenses** | Review customer license status, usage, deployment information, upcoming expirations, and partner notes | [Statistical charts](https://www.opswat.com/docs/my/partner-guide/customer-licenses#statistical-charts) |
+| **Review customer contracts** | Access contract numbers, dates, values, invoices, products, quantities, and associated reseller information | [Customer Contract Management](https://www.opswat.com/docs/my/partner-guide/customer-contracts) |
+| **Track customer hardware** | View hardware orders and inventory for the customers you serve, including shipping and delivery information | [Customer Hardware Management](https://www.opswat.com/docs/my/partner-guide/customer-hardware) |
+| **Support my customers** | Submit and manage support cases on behalf of assigned customers | [Support for Partners](https://www.opswat.com/docs/my/partner-guide/support-for-partners) |
 
-### 2. Roles & Permissions
+This capability set reflects the existing partner experience across Partner Portal, customer license management, customer contracts and customer support.
 
-Understand the additional built-in roles and extra role objects for partner organizations.
+## Other My OPSWAT capabilities available to partners
 
-👉 [Roles & Permissions](https://www.opswat.com/docs/my/partner-guide/partner-role-management)
+Your Partner Guide focuses on partner workflows, but your My OPSWAT account can also give you access to other My OPSWAT capabilities depending on your organization's products, services, and permissions.
 
-### 3. Partner Information
+You may also use:
 
-View partner-specific details such as account type, sales region, dedicated partner manager, and more.
+- [OPSWAT Academy](https://www.opswat.com/docs/my/academy/academy) to access product training and continue your learning
+- [Trust Center](https://www.opswat.com/docs/my/trust-center/trust-center) to access OPSWAT security, privacy, and compliance information
+- [Product Downloads](https://www.opswat.com/docs/my/product-downloads/product-downloads) to access eligible OPSWAT product installers and packages
 
-👉 [Partner Information](https://www.opswat.com/docs/my/partner-guide/partner-information)
+> What you see in My OPSWAT may vary based on your Partner Organization, customer relationships, product entitlements, and assigned permissions.
 
-### 4. Partner Portal
+## New to My OPSWAT?
 
-Access the built-in Partner Portal inside My OPSWAT Portal to register deals, request MDF, and access sales resources.
-
-👉 [Partner Portal](https://www.opswat.com/docs/my/partner-guide/partner-portal)
-
-[Submit a Deal](https://www.opswat.com/docs/my/partner-guide/partner-portal#deal-registration)
-
-[Request Marketing Development Funds](https://www.opswat.com/docs/my/partner-guide/partner-portal#marketing-development-funds)
-
-### 5. License Management for Partners
-
-Monitor your customers’ license usage and expirations. View all opportunity contract details and hardware orders associated with each customer.
-
-👉 [Customer License Management](https://www.opswat.com/docs/my/partner-guide/customer-organizations-licenses)
-
-👉 [Customer Contract Management](https://www.opswat.com/docs/my/partner-guide/customer-contracts)
-
-[Customer Hardware Order Management](https://www.opswat.com/docs/my/partner-guide/customer-hardware)
-
-### 6. Support for Partners
-
-Submit support cases on behalf of your customers and stay updated on case status.
-
-👉 [Support for Partners](https://www.opswat.com/docs/my/partner-guide/support-for-partners)
+Start with [Onboarding](https://www.opswat.com/docs/my/partner-guide/partner-onboarding-guide) to set up your account and make sure you are connected to the correct Partner Organization.

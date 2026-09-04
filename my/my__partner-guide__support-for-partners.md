@@ -2,13 +2,15 @@
 
 # Support for Partners
 
+Support for Partners enables your Partner Organization to work with OPSWAT Support on behalf of the customers you serve.
+
+From the Support module, authorized users can submit customer cases, provide troubleshooting information and attachments, communicate with OPSWAT, and monitor customer case progress from one place
+
 > **Who can use this feature?**
 >
 > - **User type:** [Organization user](https://www.opswat.com/docs/my/get-started/user-types-in-my-opswat-portal#organization-user)
 > - **Organization type:** Partner Organization having at least one linked customer with a Partner relationship
 > - **Role:** **Full Access** to **Support Service - Customer Cases**
-
-The **Support** feature enables partners to submit and manage support cases on behalf of their customers. You can log issues, attach logs and evidence, add comments, escalate cases to OPSWAT, and track resolutions. This makes it easier to act as a single point of contact and help customers resolve issues faster.
 
 This page covers partner-specific actions, prerequisites, and quick how-tos. For the full Support guide, see the main [Support](https://www.opswat.com/docs/my/support-services/support-services) page.
 

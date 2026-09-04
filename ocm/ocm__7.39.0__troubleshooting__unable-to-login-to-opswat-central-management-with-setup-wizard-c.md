@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/troubleshooting/unable-to-login-to-opswat-central-management-with-setup-wizard-c -->
 
-Too many requests
-# You're going a little too fast.
+# Unable to login to OPSWAT Central Management with setup wizard credentials
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Term | Detail |
+| --- | --- |
+| Problem | Unable to login into OPSWAT Central Management with username set during setup wizard |
+| Cause | OPSWAT Central Management requires email instead of username as credentials for new users of version 7. |
+| Troubleshooting | Using the correct username and password still returns the message "Invalid credentials!" |
+| Solution | Use email and password as login credentials. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Ftroubleshooting%2Funable-to-login-to-opswat-central-management-with-setup-wizard-c%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+For new users of version 7, OPSWAT Central Management requires a combination of email and password as login credential for the account created in the setup wizard. However, for returning users who have chosen to import data from OPSWAT Central Management version 5, the login credentials for the imported accounts must be a combination of username and password instead.

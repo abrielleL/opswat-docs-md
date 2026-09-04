@@ -1,12 +1,14 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/troubleshooting/unable-to-connect-to-the-target-machine-during-remote-installati -->
 
-Too many requests
-# You're going a little too fast.
+# Unable to connect to the target machine during remote installation
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Term | Detail |
+| --- | --- |
+| Problem | Unable to connect to the target machine during remote installation |
+| Cause | The target machine has not enabled an OpenSSH server. |
+| Troubleshooting | The error message in the remote installation UI displays "Connection cannot be established." |
+| Solution | Refer to [Remote Install OPSWAT Products](/operating/remote-install-opswat-products) for how to enable OpenSSH server on the target machine. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+If the UI displays the error message " Connection cannot be established" during the remote installation of an OPSWAT Product, it means that the target machine is not reachable.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Ftroubleshooting%2Funable-to-connect-to-the-target-machine-during-remote-installati%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+A possible cause is that the target machine has not enabled an OpenSSH server to communicate with OPSWAT Central Management. Please refer to [Remote Install OPSWAT Products](/operating/remote-install-opswat-products) on how to enable OpenSSH.

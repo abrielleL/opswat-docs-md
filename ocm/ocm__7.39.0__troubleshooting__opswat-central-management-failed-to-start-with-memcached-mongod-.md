@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/troubleshooting/opswat-central-management-failed-to-start-with-memcached-mongod- -->
 
-Too many requests
-# You're going a little too fast.
+# OPSWAT Central Management failed to start with memcached/mongod shells hanging in the foreground
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Term | Detail |
+| --- | --- |
+| Problem | OPSWAT Central Management failed to start with memcached/mongod shells hanging in the foreground |
+| Cause | System variable Path is not set properly to Windows\System32 location. |
+| Troubleshooting | Open OPSWAT Central Management's activity log in **C:\ProgramData\OPSWAT\Central\Logs\<date>.txt** and check for the error " The term <> is not recognized as the name of a cmdlet, function, script file, or operable program." |
+| Solution | Add /system32 to system variable Path. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+OPSWAT Central Management requires the use of command-line utilities such as netstat, which is located in the Windows\System32 folder. In order to access these commands, the system variable Path must include this folder.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Without access, the mongod and memcached services that OPSWAT Central Management depends on may hang in the foreground.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Ftroubleshooting%2Fopswat-central-management-failed-to-start-with-memcached-mongod-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Navigating to OPSWAT Central Management's activity log in **C:\ProgramData\OPSWAT\Central\Logs\<date>.txt**, the exact error is shown.
+
+To solve this problem, navigate to the Environment Variables window from the Start menu.
+
+Under **Path** (as highlighted), add "\system32" in a new line.
+
+Restart the machine to ensure the change is propagated properly.

@@ -2,22 +2,22 @@
 
 # How to read the MetaDefender ICAP Server log
 
-- [Linux](/docs/mdicap/v5.14.1/troubleshooting/how-to-read-the-metadefender-icap-server-log#linux)
+- [Linux](/troubleshooting/how-to-read-the-metadefender-icap-server-log#linux)
 
-  - [Files](/docs/mdicap/v5.14.1/troubleshooting/how-to-read-the-metadefender-icap-server-log#files)
-  - [Format](/docs/mdicap/v5.14.1/troubleshooting/how-to-read-the-metadefender-icap-server-log#format)
-  - [Severity levels of log entries](/docs/mdicap/v5.14.1/troubleshooting/how-to-read-the-metadefender-icap-server-log#severity-levels-of-log-entries)
-- [Windows](/docs/mdicap/v5.14.1/troubleshooting/how-to-read-the-metadefender-icap-server-log#windows)
+  - [Files](/troubleshooting/how-to-read-the-metadefender-icap-server-log#files)
+  - [Format](/troubleshooting/how-to-read-the-metadefender-icap-server-log#format)
+  - [Severity levels of log entries](/troubleshooting/how-to-read-the-metadefender-icap-server-log#severity-levels-of-log-entries)
+- [Windows](/troubleshooting/how-to-read-the-metadefender-icap-server-log#windows)
 
-## [Linux](/docs/mdicap/v5.14.1/troubleshooting/how-to-read-the-metadefender-icap-server-log#linux)
+## Linux
 
 The log files are plain text files that can be opened with any text editor.
 
-## [Files](/docs/mdicap/v5.14.1/troubleshooting/how-to-read-the-metadefender-icap-server-log#files)
+## Files
 
 The MetaDefender ICAP Server generates a log file under **/var/log/mdicapsrv** named mdicapsrv.log.
 
-## [Format](/docs/mdicap/v5.14.1/troubleshooting/how-to-read-the-metadefender-icap-server-log#format)
+## Format
 
 In the log, each line represents a log message sent by the server. Depending on the log file, the format of the line is as follows:
 
@@ -35,7 +35,7 @@ Where the different values are:
 - **MESSAGE** : the verbose string of the entry's message
 - **MESSAGE** **ID** : the unique ID of this log entry
 
-## [Severity levels of log entries](/docs/mdicap/v5.14.1/troubleshooting/how-to-read-the-metadefender-icap-server-log#severity-levels-of-log-entries)
+## Severity levels of log entries
 
 Depending on the reason for the log entry, there are different types of severity levels.
 
@@ -47,7 +47,7 @@ Based on the configuration, the following levels are possible:
 - **WARNING** : A problem occurred needs investigation and OPSWAT support must be contacted, however the product is supposed to be operational.
 - **ERROR** : Software error happened, please contact support if the issue is persist. Software functionality may be downgraded in these cases.
 
-## [Windows](/docs/mdicap/v5.14.1/troubleshooting/how-to-read-the-metadefender-icap-server-log#windows)
+## Windows
 
 On Windows systems logging is done via Event Log.
 

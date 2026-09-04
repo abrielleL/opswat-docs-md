@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/ocm/installation/importing-in-setup-wizard -->
 
-Too many requests
-# You're going a little too fast.
+# Importing in Setup Wizard
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to import data from an older version of OPSWAT Central Management (from version 5.2.7) during configuration wizard.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Go to the **Import Data** step in Setup Wizard. You can choose **Import** to continue migrate data from the old version or skip the migration step by click on **Import Later** button.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2Finstallation%2Fimporting-in-setup-wizard%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+After choosing option **Import** option, you need to choose which migrate method you will use. There are 2 options: [Importing from URL](/docs/ocm/installation/importing-and-exporting#importing-from-url) and [Importing from file](/docs/ocm/installation/importing-and-exporting#importing-from-file).

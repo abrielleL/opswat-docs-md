@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/troubleshooting/unable-to-access-opswat-central-management-console-due-to-corrup -->
 
-Too many requests
-# You're going a little too fast.
+# Unable to access OPSWAT Central Management console due to corrupted web application files
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Term | Detail |
+| --- | --- |
+| Problem | Cannot access OPSWAT Central Management console |
+| Cause | One or more web application packages were not unpacked properly during startup. |
+| Troubleshooting | Accessing the dashboard at <server address>/console redirects to an error page. |
+| Solution | Manually trigger the unpacking process. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+After installing OPSWAT Central Management, the web application packages may rarely fail to be unpacked properly, causing a situation where the service status is detected as running but the console cannot be accessed. This can happen if the startup processed was interrupted abruptly then restarted.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+In that case, accessing the dashboard will redirect the browser to an error page, as in the image below.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Ftroubleshooting%2Funable-to-access-opswat-central-management-console-due-to-corrup%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+In order to fix this problem, please manually trigger the unpack process by following the steps described below:
+
+1. Stop the OPSWAT Central Management service.
+2. Navigate to the web application folder:
+
+   - On Windows systems, it is located at Program Files\OPSWAT\Central\tomcat\webapps
+   - On Linux systems, it is located at /opt/ocm/tomcat/webapps
+3. Delete the folders **console**, **files**, **gears**, **nac**, **o** and **scheduler.**
+4. Restart the OPSWAT Central Management service.

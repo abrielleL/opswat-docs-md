@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/operating/device-policies -->
 
-Too many requests
-# You're going a little too fast.
+# Device Policies
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT Central Management allows administrators to set different security requirements for different device groups.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To manage device policies, you can find all policies under your account by navigating to Device Policies
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Create a new policy](/docs/ocm/7.39.0/operating/device-policies#create-a-new-policy)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Foperating%2Fdevice-policies%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+In case the administrators would like to create a new policy from an existing policy, they can clone an existing policy by clicking on the setting icon on the desired policy and Clone it.
+
+Otherwise, here are the steps to create a new policy with default settings.
+
+1. Click on **Create New Policy**.
+2. Fill out the required basic information for the new policy.
+
+- **Name:** The new policy's name
+
+- **Description:** The new policy's description
+
+3. The **Actions** page allows administrators to customize the device's security behaviors. Click on **Actions**
+
+4. The **Security Requirements** page specifies when a device should report a security issue for consideration. Click on **Security Requirements**
+
+5. The **Compliance** page specifies the criteria to judge whether a device is compliant or non-compliant based on the security issues reported. Click on **Create** to finalize the new policy's creation, which will be displayed in the Policies management page.

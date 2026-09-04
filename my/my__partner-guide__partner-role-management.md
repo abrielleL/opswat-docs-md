@@ -8,29 +8,57 @@
 > - **Organization type:** Partner organization
 > - **Role**: View Only/Full Access on [Role Management](https://www.opswat.com/docs/my/my-organization/single-organization#role-objects-and-permissions)
 
-Besides the role objects available to customer organizations, partner organizations include additional built-in roles and extra role objects.
+Roles and permissions determine which My OPSWAT features and information each member of your Partner Organization can access.
 
-For the full list of role objects and permissions available to all organizations, see the [Roles](https://www.opswat.com/docs/my/my-organization/single-organization#custom-roles) page.
+Partner organizations have the standard My OPSWAT roles plus additional partner permissions for workflows such as Deal Registration, MDF, customer license management, organization playbooks, and customer support cases.
 
-### Built-in Roles
+**Use this guide when you need to:**
 
-Partner organizations include **3 standard built-in roles**, plus **2 additional roles**
+- Understand what each built-in role can do
+- Decide which role to assign to a team member
+- Understand why a partner feature is not visible
+- Create a custom role where supported
 
-**Super Admin**
+## Built-in roles for Partner Organizations
 
-- Holds the highest level of permissions, with **full control** over all organizational functions.
-- Each organization can have only **one (1)** Super Admin, automatically assigned to the first Admin added.
-- Super Admins can transfer their role to another Admin.
+| Role | Best suited for |
+| ---- | ---- |
+| **Super Admin** | - Holds the highest level of permissions, with **full control** over all organizational functions. - Each organization can have only **one (1)** Super Admin, automatically assigned to the first Admin added. - Super Admins can transfer their role to another Admin. |
+| **Admin** | Has full control over all organizational functions, except assigning MDF Admin role to other users. |
+| **User** | Have view-only permission to all data of the organization |
+| **MDF Admin** | Has full control over all organizational function, except user management |
+| **Partner User** | Have view-only permission to all data of the organization, plus ability to submit a deal and manage partner resources. |
 
-**Admin:** Has full control over all organizational functions, except assigning MDF Admin role to other users.
+> **MDF availability:** MDF capabilities are available only to eligible OPSWAT Preferred Partners enrolled in the MDF Program
 
-**User:** Have view-only permission to all data of the organization
+## Key partner permissions
 
-**MDF Admin:** Has full control over all organizational function, except user management
+### Partner Portal
 
-**Partner user:** Have view-only permission to all data of the organization, plus ability to submit a deal and manage partner resources.
+Permissions control whether users can:
 
-The table below provides detailed permission breakdown.
+- Submit their own deals
+- View deals across their organization
+- Access MDF
+- View or manage organization playbooks
+
+### Customer License Management
+
+The **License Management - Customer Organizations** permission controls access to licenses belonging to assigned customers.
+
+Depending on the permission level, users may be able to view customer licenses, review license history, access customer and partner notes, export active deployment information, or edit partner notes.
+
+### Support for Partners
+
+The **Support Service - Customer Cases** permission controls whether users can view or submit support cases on behalf of assigned customers.
+
+### Customer Hardware
+
+The relevant Hardware Orders permission controls access to customer hardware associated with the customers your Partner Organization serves.
+
+## Managing roles
+
+Users with the appropriate Role Management permission can manage roles from: **My Organization > Roles**
 
 |  | **Super Admin** | **Admin** | **User** | **MDF Admin*** | **Partner User** |
 | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -65,11 +93,9 @@ The table below provides detailed permission breakdown.
 >
 > (**) MDF Admin role and Channel Partner Portal - MDF role object is only visible only to OPSWAT Preferred Partners enrolled in the MDF Program. To request enrollment, please contact your dedicated Channel Manager.
 
-### Custom Roles
+### Create a Custom Role
 
 If you have **Full Access** to **Role Management**, you can **create, modify, or delete roles** tailored to your organization's needs
-
-#### Create a Custom Role
 
 1. Login to My OPSWAT Portal
 2. Navigate to **My Organization > Roles**
@@ -83,7 +109,7 @@ If you have **Full Access** to **Role Management**, you can **create, modify, or
 >
 > Default permission for **Channel Partner Portal Role Objects** will be NONE for custom role and cannot be edited, except for Channel Partner Portal - Organization Playbook
 
-#### Role Objects & Permissions
+### Role Objects & Permissions
 
 In addition to the [standard role objects](https://www.opswat.com/docs/my/my-organization/single-organization#role-objects-and-permissions), partner organizations have access to the following:
 
@@ -97,3 +123,13 @@ In addition to the [standard role objects](https://www.opswat.com/docs/my/my-org
 | **License Management - Customer Organizations** *Applies to Hardware Orders > Customer Hardware* | No access | View your customers' hardware inventory and orders. |  |
 | **Support Service - Customer Cases** *Applies to Partner Organization has at least one linked customer with a Preferred Partner relationship* | No access | View cases submitted on behalf of customers by other users within the organization | Log cases on behalf on assigned customers |
 | **Support Service - RMA Cases** *Applies to Partner Organization has Hardware Orders module* | No access | View RMA cases | Log RMA cases on behalf of customers |
+
+## Can't see a feature?
+
+Check these three things first:
+
+1. You are currently in the correct Partner Organization.
+2. Your Partner Organization is eligible for the capability.
+3. Your assigned role includes the required permission.
+
+**Related capabilities:** Onboarding | Partner Portal | Customer License Management | Support for Partners

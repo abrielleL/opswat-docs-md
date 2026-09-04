@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/processing-history -->
 
-Too many requests
-# You're going a little too fast.
+# Processing History
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The **Processing History** page, located under the **Events And History** submenu, contains the scanning history of all MetaDefender Core instances under the management of OPSWAT Central Management.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Scan results can be color-coded and bold for readability. Select **Settings** and choose the text settings that should be associated with each type of results. Use the delete icon to remove the corresponding settings.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Search criteria and filters can be applied to display only specific entries. The results can be exported to a .csv file via the **EXPORT FILTERED RESULT** button.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fprocessing-history%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Administrators can also delete part of or the entire processing history via the **CLEANUP** button.
+
+User can view the detail of each scan event by clicking on its entry.
+
+**Download Result** provides a PDF file containing the selected event's scan report. The **Advanced Download** option allows users to customize which fields should be included in this report. Below is an example list of possible customizations.
+
+Warning
+
+When clean up action is executed, system will clear not only the processing history in OPSWAT Central Management but also in MetaDefender Core console

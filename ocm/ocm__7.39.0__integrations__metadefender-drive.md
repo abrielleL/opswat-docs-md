@@ -1,12 +1,5 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/metadefender-drive -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fmetadefender-drive%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+MetaDefender Drive provides an advanced analysis solution in a USB form factor that embeds multiple anti-malware engines and OPSWAT file-based vulnerability detection capabilities. MetaDefender Drive is able to quickly and easily boot into any suspicious (x86/x64 based architecture) device in an organization. After the analysis is complete MetaDefender Drive provides a comprehensive report on the state of the device without modifying the underlying filesystem leaving it at rest.

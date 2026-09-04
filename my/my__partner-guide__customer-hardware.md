@@ -2,22 +2,24 @@
 
 # Customer Hardware Management
 
+**Customer Hardware** gives partners visibility into OPSWAT hardware orders and inventory associated with the customers they serve.
+
+Use this page to track customer hardware from order and shipment through delivery, and quickly find logistics information when supporting a customer.
+
 > **Who can use this feature?**
 >
 > - **User type:** [Organization user](https://www.opswat.com/docs/my/get-started/user-types-in-my-opswat-portal#organization-user)
 > - **Organization type:** Partner Organization having assigned customer’s organizations.
 > - **Role:** View Only on **Hardware Inventory - Customer Hardware**
 
-The **Customer Hardware** tab gives Partners visibility into the hardware orders and inventory tied to the customers they serve.
-
-To access this tab
+To access:
 
 1. Select **Hardware Inventory** in the left navigation.
 2. Click the **Customer Hardware** tab.
 
 ![](https://uploads.developerhub.io/prod/JYvy/p3a33rpdq5d3qbn9ewubhpra4pe53yquqdl3txm8difdjfeu8kudmj80snwnwfp3.png)
 
-### Overview
+### Get an overview of customer hardware
 
 The top of the tab summarizes your customers' hardware at a glance. Select any figure to filter the list below to the matching items.
 

@@ -1,12 +1,53 @@
 <!-- source: https://www.opswat.com/docs/ocm/configuration/proxy-configuration -->
 
-Too many requests
-# You're going a little too fast.
+# Proxy Configuration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT Central Management can be configured to send its traffic through a forward proxy. Administrators can configure proxy settings in the **Proxy** tab at **Settings >** **Server Configuration.**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- **Enable proxy:** Enable the use of proxy
+- **Use the system/external proxy:** Swap between using the system proxy settings available on the machine or the proxy settings configured only for OPSWAT Central Management.
+- **External proxy only:**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+  - **different settings/same settings:** Determine if each protocol should have their own proxy server settings or if they should share the same settings.
+  - **Username,** **Password:** The credentials to access the proxy server. Optional if the server does not require credentials.
+  - **Proxy Address, Port:** The address of the proxy server.
+  - **Bypass Proxy Server:** The bypass list includes the domain that should be accessed directly and not via proxy.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2Fconfiguration%2Fproxy-configuration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Info
+
+OPSWAT Central Management currently only supports the basic authorization scheme for proxy credentials.
+
+Info
+
+Supported bypass list format:
+
+- IP range (CIDR notation).
+  For example: 192.168.203.1/16.
+  **Note:** The broadcast and network addresses are not included in the bypass list.
+- Valid IP address or host name. Wildcard character * is supported as prefix and/or suffix.
+  For example: 192.168.*;*.opswat.*
+
+**Note:** Each entry should be separated by the semi-colon character ';'.
+
+## System proxy settings
+
+In the setup wizard after a fresh installation, OPSWAT Central Management will attempt to locate the current system proxy settings and bypass list:
+
+- On Windows, via the netsh winhttp command.
+- On Ubuntu, via the environment variables http_proxy, https_proxy and no_proxy set in the EnvironmentFile configuration for OPSWAT Central Management's service file (/var/lib/ocm/ocm.service).
+- On Red Hat Enterprise Linux, via the environment variables http_proxy, https_proxy and no_proxy set in /etc/bashrc.
+
+Info
+
+The environment variable http_proxy will be used for both http and https protocols, if its counterpart https_proxy is not detected.
+
+The system proxy settings will be saved to OPSWAT Central Management's proxy configuration.
+
+Warning
+
+OPSWAT Central Management requires a restart to adopt newly changed system settings.
+
+Warning
+
+The supported format for proxy server is <host>:<port>, for example, proxy.test.com:1111.
+Please use OPSWAT Central Management's external proxy settings on the console if your system proxy server does not fit this format.

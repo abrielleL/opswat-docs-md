@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/update-history -->
 
-Too many requests
-# You're going a little too fast.
+# Update History
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The **Update History** page, located under the **Events And History** menu, contains the module update history of all MetaDefender Core instances managed by OPSWAT Central Management.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**OCM Pool** refers to OPSWAT Central Management's module update pool.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fupdate-history%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Users can use **Refresh** to ensure the events are up-to-date. Search criteria, filter and timeframe settings can be applied to display only specific entries. The results can be exported to a .csv file via the **EXPORT FILTERED RESULT** button.
+
+**Filters** include the following event types:
+
+- **Internet update**: Events related to the Internet updater function, which downloads MetaDefender Core module updates from OPSWAT updater server to OPSWAT Central Management's module update pool.
+- **Folder update**: Events related to the folder updater function of the module updater feature, which imports module updates from a user-specified folder into OPSWAT Central Management's module update pool.
+- **Cleanup**: Events related to the cleanup routine of OPSWAT Central Management's module update pool.
+- **Package update**: Events related to the module update process of individual MetaDefender Core instances.
+
+Info
+
+For more information about OPSWAT Central Management's MetaDefender Core module updater feature, please refer to the page [MetaDefender Core module update](/docs/ocm/7.39.0/configuration/update-settings).

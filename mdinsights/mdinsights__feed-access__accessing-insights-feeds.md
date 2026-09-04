@@ -1,6 +1,5 @@
 <!-- source: https://www.opswat.com/docs/mdinsights/feed-access/accessing-insights-feeds -->
 
-[MetaDefender InSights](https://www.opswat.com/docs/mdinsights)Need Help? [Contact Support](https://www.opswat.com/support/contact-support)
 # Accessing InSights Feeds
 
 MetaDefender InSights is accessible through multiple channels. Below we provide an overview of these options.
@@ -20,5 +19,3 @@ InSights threat intelligence snapshots provide a complete, downloadable collecti
 ### [Threat Intelligence Platform (TIP) partner integrations](/docs/mdinsights/feed-access/accessing-insights-feeds#threat-intelligence-platform-tip-partner-integrations)
 
 MetaDefender InSights threat intelligence data is integrated today in exclusive partner intelligence portals. See [Partner Availability](/docs/mdinsights/feed-access/partner-access) for further details.
-
-  Last updated  on  Next to read:  [API Access](/docs/mdinsights/feed-access/api) On This Page [Accessing InSights Feeds](https://www.opswat.com/docs/mdinsights/feed-access/accessing-insights-feeds#)[Flexible Data Access Methods](https://www.opswat.com/docs/mdinsights/feed-access/accessing-insights-feeds#flexible-data-access-methods)[API lookups](https://www.opswat.com/docs/mdinsights/feed-access/accessing-insights-feeds#api-lookups)[Bulk intelligence data downloads (snapshots)](https://www.opswat.com/docs/mdinsights/feed-access/accessing-insights-feeds#bulk-intelligence-data-downloads-snapshots)[Threat Intelligence Platform (TIP) partner integrations](https://www.opswat.com/docs/mdinsights/feed-access/accessing-insights-feeds#threat-intelligence-platform-tip-partner-integrations)

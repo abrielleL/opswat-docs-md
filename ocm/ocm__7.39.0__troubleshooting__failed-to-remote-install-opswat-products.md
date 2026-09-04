@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/troubleshooting/failed-to-remote-install-opswat-products -->
 
-Too many requests
-# You're going a little too fast.
+# Failed to remote install OPSWAT Products
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Term | Detail |
+| --- | --- |
+| Problem | Failed to remote install OPSWAT Products |
+| Cause | OPSWAT Central Management was unable to open a SSH connection. The target machine did not satisfy the system requirements of the OPSWAT Product that was being installed. |
+| Troubleshooting | Check log in gears_product_service.log file. Look for the newest version of the message **"Testing connection to <target machine>".** |
+| Solution | Ensure that the target machine has enabled OpenSSH server and can satisfy the system requirements of the OPSWAT Product. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+After starting the remote installation, the new OPSWAT Product's entry in the corresponding management page shows the **Disconnected** status.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Please check the file gears_product_service.log in the folder "C:\Program Files\OPSWAT\Central\tomcat\logs".
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Ftroubleshooting%2Ffailed-to-remote-install-opswat-products%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Look for the section that starts with **"Testing connection to <target machine>"** to find the remote installation's error message. If the log includes the line **"Install failed"**, a possible cause is that the target machine did not satisfy the OPSWAT Product's system requirements. Please ensure that the target machine does meet the system requirements and try again.
+
+If the log has one or more error messages **"ExitStatus: 1"** instead of **"ExitStatus: 0"**, it is possible that OpenSSH server has not been enabled correctly on the target machine. Please refer to [Remote Install OPSWAT Products](/docs/ocm/7.39.0/operating/remote-install-opswat-products) to correct its configuration.

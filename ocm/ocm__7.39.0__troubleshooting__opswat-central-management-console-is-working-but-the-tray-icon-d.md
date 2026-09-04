@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/troubleshooting/opswat-central-management-console-is-working-but-the-tray-icon-d -->
 
-Too many requests
-# You're going a little too fast.
+# OPSWAT Central Management console is working but the tray icon does not transition to the running status and eventually times out
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Term | Detail |
+| --- | --- |
+| Problem | OPSWAT Central Management times out even though the console was working. The tray icon did not transition to the running status. |
+| Cause | OPSWAT Central Management service's current status cannot be retrieved by the tray icon. |
+| Troubleshooting | Check the log at ProgramData\OPSWAT\Central\Logs\powershell_error.txt |
+| Solution | Ensure Powershell is working properly on the affected system. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+OPSWAT Central Management is set to time out after 10 minutes unless its status transitions to running, as shown on the tray icon.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+One possible cause for the timeout is that the Windows Management Instrumentation (WMI) service is not working properly, creating an error in Powershell. The log at ProgramData\OPSWAT\Central\Logs\powershell_error.txt should show a message similar to the example below.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Ftroubleshooting%2Fopswat-central-management-console-is-working-but-the-tray-icon-d%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Get-NetTCPConnection : Invalid class
+
+In this case, the command Get-NetTCPConnection cannot be run in Powershell due to a corrupted WMI repository. Please consult Windows's troubleshooting to remedy this problem.

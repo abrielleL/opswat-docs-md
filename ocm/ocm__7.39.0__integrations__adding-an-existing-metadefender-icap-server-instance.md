@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/adding-an-existing-metadefender-icap-server-instance -->
 
-Too many requests
-# You're going a little too fast.
+# Adding an existing MetaDefender ICAP Server instance
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to add an existing MetaDefender ICAP Server instance to OPSWAT Central Management.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Go to the **MetaDefender ICAP Server** management page under **Inventory** in the sidebar.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. Click the **ADD NEW INSTANCE** button in the top right panel.
+3. The dialog **Add Instance** will be opened. Select the **Add an existing Instance** button.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fadding-an-existing-metadefender-icap-server-instance%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+4. Fill the proper inputs and then click the **TEST CONNECTION** button to check the connection status.
+
+- **Name:** The name you want to assign to the new ICAP Server instance.
+
+- **API Key:** The API Key of the ICAP Server instance to authenticate the request
+
+- **Server Address:** The address of the ICAP Server instance
+
+- **Assign instance to set**: The set of ICAP Server instance
+
+5. If this instance is already managed by another OPSWAT Central Management, the force takeover instance dialog will show the information and ask you if you want to force takeover this instance to your OPSWAT Central Management. Click FORCE to proceed.
+
+6. The dialog will be closed and the management page will be reloaded automatically if the result is successful.
