@@ -1,12 +1,30 @@
 <!-- source: https://www.opswat.com/docs/mdicap/v5.14.1/integrations/check-cached-objects-properties -->
 
-Too many requests
-# You're going a little too fast.
+# Check cached objects properties
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article describes how to check if an object is cached by Symantec Blue Coat ProxySG and its current properties.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Prerequisites](/docs/mdicap/v5.14.1/integrations/check-cached-objects-properties#prerequisites)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. ICAP is setup with Blue Coat.
+2. Blue Coat caching is enabled (default).
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdicap%2Fv5.14.1%2Fintegrations%2Fcheck-cached-objects-properties%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+   - See: [4.4.2.5 Disable Symantec Blue Coat ProxySG caching](/docs/mdicap/v5.14.1/integrations/disable-symantec-blue-coat-proxysg-caching)
+
+## [Step-by-step guide](/docs/mdicap/v5.14.1/integrations/check-cached-objects-properties#step-by-step-guide)
+
+Use the following syntax to check if an object is in cache:
+
+https://<proxyip>:8082/CE/Info/<protocol name,
+
+e.g. http>/<url without the protocol specification, e.g. without http://>
+
+Example: The check if the following object is in the cache: <http://www.bluecoat.com/sites/default/themes/bc_pandemonium/css/docviewer.css>
+
+Enter the following in the browser: <https://1.2.3.4:8082/CE/Info/http/www.bluecoat.com/sites/default/themes/bc_pandemonium/css/docviewer.css>
+
+If the object is in the cache, you will obtain a table providing details on the cached object such as:
+
+## [Related Information](/docs/mdicap/v5.14.1/integrations/check-cached-objects-properties#related-information)
+
+Error rendering macro 'contentbylabel' : parameters should not be empty

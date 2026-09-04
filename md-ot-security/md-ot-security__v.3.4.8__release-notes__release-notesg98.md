@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/release-notes/release-notesg98 -->
 
-Too many requests
-# You're going a little too fast.
+# Version 3.4.6
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | 3.4.6 |
+| --- | --- |
+| **Release date** | 05 August 2025 |
+| **Scope** | Enhance current features and add new features. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/md-ot-security/v.3.4.8/release-notes/release-notesg98#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Frelease-notes%2Frelease-notesg98%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  | Details |
+| --- | --- |
+| **Allow to customize IP ranges of internal hosts** | Support for adding customized non-private IP ranges to the internal hosts. This gives organizations with non-standard network IP configurations the flexibility in distinguishing between internal and external traffic, improving detection and asset classification. |
+| **Validate domains and external IP against Threat Intelligence DB** | Integrated with Threat Intelligence to validate domains and external IP addresses against threat intelligence database. This improve accuracy in detection of malicious entities and enhances overall threat visibility |
+| **General Improvements** | Included various performance optimizations and bug fixes to enhance reliability and user experience. |

@@ -1,12 +1,34 @@
 <!-- source: https://www.opswat.com/docs/mdicap/v5.14.1/integrations/ara-jaguar-5000 -->
 
-Too many requests
-# You're going a little too fast.
+# ARA JAGUAR 5000
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Configuration via Web-based manager](/docs/mdicap/v5.14.1/integrations/ara-jaguar-5000#configuration-via-web-based-manager)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. In your browser log into Jaguar's Web Administration
+2. Go to the **Configuration** page
+3. From the menu on the left, click on **Others** under the **Protocol** group
+4. From the top menu, select **ICAP**
+5. Make sure that **Send Client Address** checkbox is checked
+6. Apply changes
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+images/download/attachments/4864665/jaguar5k_webadmin.PNG
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdicap%2Fv5.14.1%2Fintegrations%2Fara-jaguar-5000%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+7. Click on the **ICAP Profile** button on the bottom of the page
+8. Add a new profile
+9. Type in "icap://<IP>:<PORT>/OMSScanReq-AV" to **Vectoring Point 1**
+10. Type in "icap://<IP>:<PORT>/OMSScanResp-AV " to **Vectoring Point 3**
+11. Apply changes
+
+images/download/attachments/4864665/jaguar5k_webadmin_2.PNG](<https://onlinehelp.opswat.com/icap/images/download/attachments/4864665/jaguar5k_webadmin_2.PNG>) | ![images/download/attachments/4864665/jaguar5k_webadmin_3.PNG
+
+## [Scanning HTTPS Content](/docs/mdicap/v5.14.1/integrations/ara-jaguar-5000#scanning-https-content)
+
+1. Go to the Configuration page
+2. From the menu on the left, select SSL under the Protocol group
+3. Check the Enable SSL checkbox
+4. Check the Support SSL intercepting checkbox
+5. Upload root certificate
+6. Upload root key
+7. Apply changes and restart the device
+
+images/download/attachments/4864665/jaguar5k_webadmin_4.PNG

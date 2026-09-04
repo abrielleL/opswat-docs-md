@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/metadefender-drive-v3-15-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v3.15.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Fmetadefender-drive-v3-15-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| [MetaDefender Drive v3.15.0](/docs/mddrive/release-notes/metadefender-drive-v3-15-0#metadefender-drive-v3150) Released on Dec 08, 2022 | This is a major release that is fully integrated with OPSWAT Toolkit and ready for new advanced features in the future |
+| --- | --- |
+| **New features** | New mechanism for updates and upgrades: We are changing the way users use Drives from end to end with the new Toolkit, so that new features can be deployed in a more convenient way. |
+| **Improvements** | - Drive's kernel has been updated to the latest to fix completely the issue with APFS Encryption (FileVault) and to support new hardwares - Some minor bugs with boot and activation have been fixed |
+| **Known Issues** | There is a conflict if Drive is configured to get updates from OPSWAT Central Management (OCM) but that OCM is not accessible on boot. User is recommended to use Drive Toolkit to update latest engines in such a case. |

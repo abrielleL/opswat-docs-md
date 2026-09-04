@@ -1,12 +1,55 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/developer-guide/device-action-v2-0 -->
 
-Too many requests
-# You're going a little too fast.
+# Device Action v2.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| API version | 2.0 |
+| --- | --- |
+| Last Update | 03/24/2015 |
+| Authentication | YES |
+| Response Format | JSON |
+| HTTP Method | POST |
+| Rate limited | YES |
+| Requests per rate limit | 10/min |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Use to send a command to a given device
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [API URL](/docs/macloud-sdp/developer-guide/device-action-v2-0#api-url)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fdeveloper-guide%2Fdevice-action-v2-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+https://gears.opswat.com/o/api/v2/devices/:id/action
+## [Request Parameters](/docs/macloud-sdp/developer-guide/device-action-v2-0#request-parameters)
+
+| Key | Datatype | Parameter Type | Required | Description | Default |
+| --- | --- | --- | --- | --- | --- |
+| access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
+| types | string | URL | Yes | The action type. dhcprenew - renew ip address for interfaces. exempt_critical - enable exempt critical mode for device. exempt_all - enable exempt all mode for device. unexempt - disable exempt mode for device. |  |
+| id | string | URL | Yes | HWID or MAC Address of a device to be applied the action. |  |
+| opt | int | URL | Optional | 0 - MAC Address 1 - HWID | 0 |
+
+## [Response HTTP Code](/docs/macloud-sdp/developer-guide/device-action-v2-0#response-http-code)
+
+| HTTP Code | Description |
+| --- | --- |
+| 200 | Success |
+| 400 | Bad Request |
+| 401 | Unauthorized. Your access_token is invalid or expired |
+| 404 | Not found |
+
+## [Response Parameters](/docs/macloud-sdp/developer-guide/device-action-v2-0#response-parameters)
+
+| Key | Datatype | Description |
+| --- | --- | --- |
+| result | int | 0 - failure 1- success |
+| msg | string | Result details |
+
+## [Example](/docs/macloud-sdp/developer-guide/device-action-v2-0#example)
+
+**Request **Example****
+
+https://gears.opswat.com/o/api/v2/devices/HWID123/action?types=dhcprenew&opt=1&access_token=TEST7P9ZMJ2LBF8AMOMJLFNPMMLO953AVQ4C9YFF52R61234
+
+****Response **Example******
+
+{
+"result": 1,
+"msg": "OK"
+}

@@ -1,12 +1,132 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/developer-guide/get-applications -->
 
-Too many requests
-# You're going a little too fast.
+# Get applications
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| API version | 3.0 |
+| --- | --- |
+| Last Update | 05/21/2018 |
+| Authentication | YES |
+| HTTP Method | POST |
+| Content Type | application/json |
+| Rate limited | YES |
+| Requests per rate limit | 10/min |
+| Response Format | JSON |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Use to get applications installed on endpoints on a specific account.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [API URL](/docs/macloud-sdp/developer-guide/get-applications#api-url)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fdeveloper-guide%2Fget-applications%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+https://gears.opswat.com/o/api/v3/apps
+## [Request Parameters](/docs/macloud-sdp/developer-guide/get-applications#request-parameters)
+
+| Key | Datatype | Parameter Type | Required | Description | Default |
+| --- | --- | --- | --- | --- | --- |
+| access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
+| search | string | Body | No | The key word to search. |  |
+| filter | object | Body | No | Indicate criteria you want to filter applications |  |
+| filter.severity | array | Body | No | The severity level to filter. |  |
+| filter.category | array | Body | No | The category ID to filter. |  |
+| sort | object | Body | No | Indicate how you want to sort applications |  |
+| sort.order | string | Body | No | The direction to sort. | desc |
+| sort.field | string | Body | No | which field | name |
+| page | number | Body | No | A page you want to get data | 1 |
+| limit | number | Body | No | The limited number of how many records to be returned. | 50 |
+
+## [Response HTTP Code](/docs/macloud-sdp/developer-guide/get-applications#response-http-code)
+
+See [APIs](/docs/macloud-sdp/developer-guide/apis)
+
+## [Response Parameters](/docs/macloud-sdp/developer-guide/get-applications#response-parameters)
+
+| Key | DataType | Description |
+| --- | --- | --- |
+| category_id | string | The category ID |
+| category_name | string | The category name |
+| severity | string | The app's severity level |
+| product_id | string | Product Signature ID |
+| name | string | Product name |
+| vendor | string | Product vendor |
+| version | string | Product version |
+| number_of_devices | int | A number determines how many devices install the product |
+| number_of_cves | int | A number determines how many cve issues that product exposures |
+
+## [Example](/docs/macloud-sdp/developer-guide/get-applications#example)
+
+**Example Request: using Product ID**
+
+https://gears.opswat.com/o/api/v3/apps?access_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+{
+"search": "",
+"filter": {
+"severity": [],
+"category": [
+"Antivirus"
+]
+},
+"sort": {
+"order": "desc",
+"field": "name"
+},
+"page": 1,
+"limit": 50
+}
+
+**Example Response**
+
+[
+{
+"number_of_devices": 2,
+"severity": "unknown",
+"category_name": "Anti-Malware",
+"category_id": "Antivirus",
+"vendor": "Microsoft Corporation",
+"product_id": 236,
+"name": "avast! Free Antivirus",
+"version": "6.1.7600.16385",
+"number_of_cves": 0
+},
+{
+"number_of_devices": 20,
+"severity": "unknown",
+"category_name": "Anti-Malware",
+"category_id": "Antivirus",
+"vendor": "AVAST Software a.s.",
+"product_id": 236,
+"name": "avast! Free Antivirus",
+"version": "12.3.3154.23",
+"number_of_cves": 0
+},
+{
+"number_of_devices": 20,
+"severity": "unknown",
+"category_name": "Anti-Malware",
+"category_id": "Antivirus",
+"vendor": "Microsoft Corporation",
+"product_id": 477,
+"name": "Windows Defender",
+"version": "6.1.7600.16385",
+"number_of_cves": 0
+},
+{
+"number_of_devices": 1,
+"severity": "unknown",
+"category_name": "Anti-Malware",
+"category_id": "Antivirus",
+"vendor": "Microsoft Corporation",
+"product_id": 477,
+"name": "Windows Defender",
+"version": "4.13.17134.1",
+"number_of_cves": 0
+},
+{
+"number_of_devices": 4,
+"severity": "unknown",
+"category_name": "Anti-Malware",
+"category_id": "Antivirus",
+"vendor": "Apple Inc.",
+"product_id": 100141,
+"name": "Gatekeeper",
+"version": "10.11",
+"number_of_cves": 0
+}
+]

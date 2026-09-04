@@ -4,14 +4,14 @@
 
 This article describes how to check if an object is cached by Symantec Blue Coat ProxySG and its current properties.
 
-## [Prerequisites](/docs/mdicap/integrations/check-cached-objects-properties#prerequisites)
+## Prerequisites
 
 1. ICAP is setup with Blue Coat.
 2. Blue Coat caching is enabled (default).
 
-   - See: [4.4.2.5 Disable Symantec Blue Coat ProxySG caching](/docs/mdicap/integrations/disable-symantec-blue-coat-proxysg-caching)
+   - See: [4.4.2.5 Disable Symantec Blue Coat ProxySG caching](/integrations/disable-symantec-blue-coat-proxysg-caching)
 
-## [Step-by-step guide](/docs/mdicap/integrations/check-cached-objects-properties#step-by-step-guide)
+## Step-by-step guide
 
 Use the following syntax to check if an object is in cache:
 
@@ -25,6 +25,6 @@ Enter the following in the browser: <https://1.2.3.4:8082/CE/Info/http/www.bluec
 
 If the object is in the cache, you will obtain a table providing details on the cached object such as:
 
-## [Related Information](/docs/mdicap/integrations/check-cached-objects-properties#related-information)
+## Related Information
 
 Error rendering macro 'contentbylabel' : parameters should not be empty

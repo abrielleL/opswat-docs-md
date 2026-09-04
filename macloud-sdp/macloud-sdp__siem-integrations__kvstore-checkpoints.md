@@ -1,12 +1,7 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/siem-integrations/kvstore-checkpoints -->
 
-Too many requests
-# You're going a little too fast.
+# KVStore Checkpoints
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The application saves important data like script execution timestamps and API authentication tokens to Splunk’s KVStore as “checkpoints”. The checkpoints should not require any maintenance, but if needed, can be found at the following location within Splunk on data collection node(HF).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsiem-integrations%2Fkvstore-checkpoints%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+$Splunk_home/var/lib/splunk/kvstore/mongo/s_TA-ops<random data>

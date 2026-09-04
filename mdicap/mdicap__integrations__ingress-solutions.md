@@ -2,11 +2,11 @@
 
 # NGINX Ingress Controller Integration
 
-## [OMetaScan NGINX Ingress Controller Configuration](/docs/mdicap/integrations/ingress-solutions#ometascan-nginx-ingress-controller-configuration)
+## OMetaScan NGINX Ingress Controller Configuration
 
 **This document covers the new approach** using the OPSWAT-customised image on top of the NGINX Ingress Controller Helm chart ([maintained by NGINX Org](https://github.com/nginx/kubernetes-ingress)). For the Kubernetes Ingress Controller (EOL March 2026), starting from version of the controller 5.4.2 will be compatible with the Ingress Controller provided by NGINX Org.
 
-### [ConfigMaps](/docs/mdicap/integrations/ingress-solutions#configmaps)
+### ConfigMaps
 
 ConfigMaps allow you to decouple configuration artifacts from image content to keep containerized applications portable.
 
@@ -16,7 +16,7 @@ The ConfigMap API resource stores configuration data as key-value pairs. The dat
 | --- | --- | --- | --- |
 | enable-ometascan | bool | “false” | Enable or Disable ometascan module globally  **Note**: You must enable this config to use ometascan module |
 
-### [Annotations](/docs/mdicap/integrations/ingress-solutions#annotations)
+### Annotations
 
 | **Name** | **Type** | **Default** | **Usage** |
 | --- | --- | --- | --- |
@@ -42,9 +42,9 @@ The ConfigMap API resource stores configuration data as key-value pairs. The dat
 
 You can add these Kubernetes annotations to specific Ingress objects to customize their behavior.
 
-## [OMetaScan NGINX Ingress on Minikube](/docs/mdicap/integrations/ingress-solutions#ometascan-nginx-ingress-on-minikube)
+## OMetaScan NGINX Ingress on Minikube
 
-### [Requirement](/docs/mdicap/integrations/ingress-solutions#requirement)
+### Requirement
 
 - Minikube: <https://minikube.sigs.k8s.io/docs/>
 - NGINX Ingress with OMetascan module images on [Docker Hub](https://hub.docker.com/r/opswat/nginx-ingress)
@@ -53,11 +53,11 @@ You can add these Kubernetes annotations to specific Ingress objects to customiz
 
     - latest image: opswat/nginx-ingress
     - or specify the tag: opswat/nginx-ingress:controller-5.4.1_ometascan-1.5.0_r1
-- MD ICAP Server at least version v5.1.0, which has already enabled NGINX integration [NGINX Integration Configurations](/docs/mdicap/configuration/enable-integration-with-nginx)
+- MD ICAP Server at least version v5.1.0, which has already enabled NGINX integration [NGINX Integration Configurations](/configuration/enable-integration-with-nginx)
 
-### [Pre-setup](/docs/mdicap/integrations/ingress-solutions#pre-setup)
+### Pre-setup
 
-#### [Enable Nginx ingress on Minikube](/docs/mdicap/integrations/ingress-solutions#enable-nginx-ingress-on-minikube)
+#### Enable Nginx ingress on Minikube
 
 - Start minikube
 
@@ -75,7 +75,7 @@ The output is similar to:
 
 NAME CONTROLLER PARAMETERS AGE
 nginx nginx.org/ingress-controller <none> 10m
-#### [Change the default Nginx Ingress image to Nginx Ingress with the OMetascan module image](/docs/mdicap/integrations/ingress-solutions#change-the-default-nginx-ingress-image-to-nginx-ingress-with-the-ometascan-module-image)
+#### Change the default Nginx Ingress image to Nginx Ingress with the OMetascan module image
 
 - Update the default image to opswat/nginx-ingress using the following command:
 
@@ -104,7 +104,7 @@ The output is similar to:
 
 NAME READY STATUS RESTARTS AGE
 nginx-ingress-controller-785746b95c-djcjx 1/1 Running 0 119s
-#### [Enable OMetascan Module](/docs/mdicap/integrations/ingress-solutions#enable-ometascan-module)
+#### Enable OMetascan Module
 
 - Set **enable-ometascan: "true"** to turn on the OMetascan module on ConfigMaps of ingress-nginx-controller:
 
@@ -126,7 +126,7 @@ helm.sh/chart: nginx-ingress-2.5.1
 name: nginx-ingress
 namespace: default
 EOF
-#### [Deploy Echo Server as Service A](/docs/mdicap/integrations/ingress-solutions#deploy-echo-server-as-service-a)
+#### Deploy Echo Server as Service A
 
 refer to: <https://github.com/Ealenn/Echo-Server#kubernetes>
 
@@ -175,7 +175,7 @@ type: ClusterIP
 selector:
 app: echoserver
 EOF
-#### [Example:](/docs/mdicap/integrations/ingress-solutions#example)
+#### Example:
 
 - `/path1` rewrite to `/subpathA` (use ometascan)
 - `/path2` rewrite to `/subpathB` (use ometascan)
@@ -249,9 +249,9 @@ name: echoserver
 port:
 number: 80
 EOF
-## [OMetaScan NGINX Ingress on Kubernetes](/docs/mdicap/integrations/ingress-solutions#ometascan-nginx-ingress-on-kubernetes)
+## OMetaScan NGINX Ingress on Kubernetes
 
-### [Requirements](/docs/mdicap/integrations/ingress-solutions#requirements)
+### Requirements
 
 - An existing K8S cluster
 - Helm CLI
@@ -264,27 +264,41 @@ docker pull opswat/nginx-ingress:controller-5.4.1_ometascan-1.5.0_r1
 
 - An existing MD ICAP Server on Kubernetes
 
-### [Instructions](/docs/mdicap/integrations/ingress-solutions#instructions)
+### Instructions
 
 Example:
 
-#### [1. Install NGINX Ingress Controller via Helm Chart](/docs/mdicap/integrations/ingress-solutions#1-install-nginx-ingress-controller-via-helm-chart)
+#### 1. Install NGINX Ingress Controller via Helm Chart
+
+To use the NGINX Ingress Controller with the Ometascan module, we need to change the image to OPSWAT's NGINX Ingress Controller image <https://hub.docker.com/r/opswat/nginx-ingress/tags>
+
+Prepare the `values.yaml`
+
+controller:
+# Custom OPSWAT build
+image:
+repository: opswat/nginx-ingress
+tag: "controller-5.5.0_ometascan-1.5.0_r1"
+
+Install Nginx Ingress via Helm
 
 helm install nginx-ingress oci://ghcr.io/nginx/charts/nginx-ingress \
---version 2.5.2
+--version 2.6.0 -f values.yaml
 
 Output:
 
-JavascriptCopyPulled: ghcr.io/nginx/charts/nginx-ingress:2.5.2
-Digest: sha256:0d0548ec8f087ef431f2f7e26503775d99cd8f5644261f571d9133264d183094
+BashCopyPulled: ghcr.io/nginx/charts/nginx-ingress:2.6.0
+Digest: sha256:cc9f3994608426d0c441d3ff3753aa374de16ff5a758b950b37753aa010cf5b6
+Release "nginx-ingress" has been upgraded. Happy Helming!
 NAME: nginx-ingress
-LAST DEPLOYED: Wed May 20 15:07:07 2026
+LAST DEPLOYED: Fri Sep 4 15:04:04 2026
 NAMESPACE: default
 STATUS: deployed
-REVISION: 1
+REVISION: 8
+DESCRIPTION: Upgrade complete
 TEST SUITE: None
 NOTES:
-NGINX Ingress Controller 5.4.2 has been installed.
+NGINX Ingress Controller 5.5.0 has been installed.
 For release notes, see: https://docs.nginx.com/nginx-ingress-controller/changelog/
 For Helm installation instructions, see: https://docs.nginx.com/nginx-ingress-controller/install/helm/
 
@@ -294,33 +308,16 @@ kubectl get pods -A | grep nginx-ingress
 
 Output:
 
-JavascriptCopyNAME READY STATUS RESTARTS AGE
+BashCopyNAME READY STATUS RESTARTS AGE
 nginx-ingress-controller-69fbfb9f44-frjgg 1/1 Running 0 69sInfo
 
 Make sure your nginx install with status of the pod nginx-ingress is running!
 
-#### [2. Replace The Ingress Controller Image](/docs/mdicap/integrations/ingress-solutions#2-replace-the-ingress-controller-image)
-
-To replace the ingress controller image, we need to patch the existing k8s resource (deployment, DaemonSet, etc.) for the existing ingress controller to include the new image. For this, edit the `ingress-controller-patch-image.yml` file and replace the container name to match the existing controller and run the following command (replace 'deployment' and 'ingress-nginx-controller' with your specific resource type and name for the controller):
-
-`ingress-controller-patch-image.yml`
-
----
-spec:
-template:
-spec:
-containers:
-- name: nginx-ingress
-image: opswat/nginx-ingresskubectl patch deployment nginx-ingress-controller \
---patch-file ingress-controller-patch-image.yml
-
-Output:
-
-JavascriptCopydeployment.apps/nginx-ingress-controller patched
+#### 2. Enable Ometascan
 
 Create the file `update-configmap-ingress-controller.yml`
 
-JavascriptCopyapiVersion: v1
+YamlCopyapiVersion: v1
 kind: ConfigMap
 metadata:
 name: nginx-ingress
@@ -330,8 +327,8 @@ enable-ometascan: "true"kubectl apply -f update-configmap-ingress-controller.yml
 
 Output:
 
-JavascriptCopyconfigmap/nginx-ingress configured
-#### [3. Deploy A Service To Test with MetaDefender ICAP Server](/docs/mdicap/integrations/ingress-solutions#3-deploy-a-service-to-test-with-metadefender-icap-server)
+BashCopyconfigmap/nginx-ingress configured
+#### 3. Deploy A Service To Test with MetaDefender ICAP Server
 
 3.1. Create deployment sample:
 
@@ -352,14 +349,27 @@ Output:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-name: ingress-be-rule-a
+name: ingress-be-master
 annotations:
-nginx.org/rewrite-target: /subpathA
-nginx.org/ometascan-pass: "http://md-icapsrv:8043" # Replace with the address and port of an existing ICAP instace, for example, if ICAP is running in the same cluster: http://<ICAP_SERVICE_NAME>.<ICAP_NAMESPACE>.svc.cluster.local:<ICAP_PORT>
+nginx.org/mergeable-ingress-type: "master"
+spec:
+ingressClassName: nginx
+# The master owns the host and must not declare any paths.
+rules:
+- host: testserver.com
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+name: ingress-be-minion-a
+annotations:
+nginx.org/mergeable-ingress-type: "minion"
+nginx.org/rewrites: "serviceName=backend rewrite=/subpathA"
+nginx.org/ometascan-pass: "http://md-icapsrv:8043" # Replace with the address and port of an existing ICAP instance, for example, if ICAP is running in the same cluster: http://<ICAP_SERVICE_NAME>.<ICAP_NAMESPACE>.svc.cluster.local:<ICAP_PORT>
 spec:
 ingressClassName: nginx
 rules:
-- host: testserver-a.com
+- host: testserver.com
 http:
 paths:
 - path: /subpathA
@@ -373,16 +383,17 @@ number: 8080
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-name: ingress-be-rule-b
+name: ingress-be-minion-b
 annotations:
-nginx.org/rewrite-target: /subpathB
-nginx.org/ometascan-pass: "http://md-icapsrv:8043" # Replace with the address and port of an existing ICAP instace, for example, if ICAP is running in the same cluster: http://<ICAP_SERVICE_NAME>.<ICAP_NAMESPACE>.svc.cluster.local:<ICAP_PORT>
+nginx.org/mergeable-ingress-type: "minion"
+nginx.org/rewrites: "serviceName=backend rewrite=/subpathB"
+nginx.org/ometascan-pass: "http://md-icapsrv:8043" # Replace with the address and port of an existing ICAP instance, for example, if ICAP is running in the same cluster: http://<ICAP_SERVICE_NAME>.<ICAP_NAMESPACE>.svc.cluster.local:<ICAP_PORT>
 nginx.org/ometascan-methods: "PUT"
-nginx.org/client-body-buffer-size: 100M
+nginx.org/client-max-body-size: "100m"
 spec:
 ingressClassName: nginx
 rules:
-- host: testserver-b.com
+- host: testserver.com
 http:
 paths:
 - path: /subpathB
@@ -393,16 +404,18 @@ name: backend
 port:
 number: 8080
 ---
+# No ometascan annotations: this path is not scanned.
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-name: ingress-be-rule-c
+name: ingress-be-minion-c
 annotations:
-nginx.org/rewrite-target: /subpathC
+nginx.org/mergeable-ingress-type: "minion"
+nginx.org/rewrites: "serviceName=backend rewrite=/subpathC"
 spec:
 ingressClassName: nginx
 rules:
-- host: testserver-c.com
+- host: testserver.com
 http:
 paths:
 - path: /subpathC
@@ -415,14 +428,18 @@ number: 8080kubectl apply -f ingress-be.yml
 
 Output:
 
+ingress.networking.k8s.io/ingress-be-master created
+ingress.networking.k8s.io/ingress-be-minion-a created
+ingress.networking.k8s.io/ingress-be-minion-b created
+ingress.networking.k8s.io/ingress-be-minion-c created
+
 Add the following line to the bottom of the `/etc/hosts` file on your computer (you will need administrator access):
 
-10.40.162.150 testserver.com mdicapsrvs-ui.opswat.local
-Send requests to Backend:
-curl -X GET testserver-a.com/subPathA
-curl -X POST testserver-a.com/subPathA
-curl -X PUT testserver-b.com/subPathB
-curl -X GET testserver-b.com/subPathB
-curl -X GET testserver-c.com/subPathC
+127.0.0.1 testserver.comSend requests to the backend:
+curl -X GET testserver.com/subPathA
+curl -X POST testserver.com/subPathA
+curl -X PUT testserver.com/subPathB
+curl -X GET testserver.com/subPathB
+curl -X GET testserver.com/subPathC
 
 The expected MD ICAP Server will scan requests

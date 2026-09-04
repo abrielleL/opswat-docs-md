@@ -1,12 +1,72 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/developer-guide/get-reports-v2-0 -->
 
-Too many requests
-# You're going a little too fast.
+# Get Reports v2.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| API version | 2.0 |
+| --- | --- |
+| Last Update | 05/16/2016 |
+| Authentication | YES |
+| Response Format | CSV |
+| HTTP Method | POST |
+| Rate limited | YES |
+| Requests per rate limit | 10/min |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Use to download reports such as OS patches summary, devices which missing a specific OS patch, missing OS patches on a specific device.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [API URL](/docs/macloud-sdp/developer-guide/get-reports-v2-0#api-url)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fdeveloper-guide%2Fget-reports-v2-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+https://gears.opswat.com/o/api/v2/get_reports
+## [Request Parameters](/docs/macloud-sdp/developer-guide/get-reports-v2-0#request-parameters)
+
+| Key | Datatype | Parameter Type | Required | Description | Default |
+| --- | --- | --- | --- | --- | --- |
+| access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
+| type | string | URL | Yes | Specify what report you want to download. Values can be:   - OSPatchSummary: get OS Patches summary report - DeviceMissingOSPatch: get devices which missing a specific OS Patch report - MissingOSPatch: get missing OS Patches on a device |  |
+| kb | string | URL | Optional | Must be passed in with if the report type is *DeviceMissingOSPatch* Value: KB Number |  |
+| id | string | URL | Optional | Must be passed in if the report type is *MissingOSPatch* Value: device's id or MAC address |  |
+
+Response HTTP Code
+
+See [APIs](/docs/macloud-sdp/developer-guide/apis)
+
+## [Example](/docs/macloud-sdp/developer-guide/get-reports-v2-0#example)
+
+## [Get OS Patches Summary Report](/docs/macloud-sdp/developer-guide/get-reports-v2-0#get-os-patches-summary-report)
+
+**Request Example**
+
+Request:https://gears.opswat.com/o/api/v2/get_reports?type=OSPatchSummary&access_token=TEST7P9ZMJ2LBF8AMOMJLFNPMMLO953AVQ4C9YFF52R61234
+
+**Example Response**: csv file
+
+| No. | Category | KB Number | Title | Description | Product | Vendor | Severity | No. of Devices |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | critical_update | KB3115040 | Update for Microsoft Project 2013 32-Bit Edition | Microsoft has released an update for Microsoft Project 2013 32-Bit Edition. | Office 2013 | Microsoft Corporation | unknown | 1 |
+| 2 | critical_update | KB3115039 | Update for Microsoft OneDrive for Business 32-Bit Edition | Microsoft has released an update for Microsoft OneDrive for Business 32-Bit Edition. | Office 2013 | Microsoft Corporation | unknown | 1 |
+
+## [Get Devices Which Missing a Specific OS Patch Report](/docs/macloud-sdp/developer-guide/get-reports-v2-0#get-devices-which-missing-a-specific-os-patch-report)
+
+**Request Example**
+
+https://gears.opswat.com/o/api/v2/get_reports?type=DeviceMissingOSPatch&kb=KB3115040&access_token=TEST7P9ZMJ2LBF8AMOMJLFNPMMLO953AVQ4C9YFF52R61234
+
+**Response Example:** csv file
+
+| KB Number: KB3115040 |  |  |  |
+| --- | --- | --- | --- |
+| Title: Update for Microsoft Project 2013 32-Bit Edition |  |  |  |
+| No. | Device ID | Device Name | Username |
+| 1 | 3AD89B1F7647455889897B5D2A63D15A | WSEVN20 | ctran |
+
+## [Get Missing OS Patches on Device](/docs/macloud-sdp/developer-guide/get-reports-v2-0#get-missing-os-patches-on-device)
+
+**Request Example**
+
+https://gears.opswat.com/o/api/v2/get_reports?type=MissingOSPatch&id=00:0c:29:cd:c7:b2&access_token=TEST7P9ZMJ2LBF8AMOMJLFNPMMLO953AVQ4C9YFF52R61234
+
+**Response Example:** csv file
+
+| Last information updated: May 04, 2016 03:23:13 AM UTC |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| No. | Category | KB Number | Title | Description | Product | Vendor | Severity |
+| 1 | update | KB3013816 | Update for Windows 8.1 for x64-based Systems | Install this update to resolve issues in Windows | Windows 8.1 | Microsoft Corporation | unknown |

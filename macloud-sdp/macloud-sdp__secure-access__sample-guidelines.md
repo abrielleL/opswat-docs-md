@@ -1,12 +1,5 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/sample-guidelines -->
 
-Too many requests
-# You're going a little too fast.
+# Sample Guidelines
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fsample-guidelines%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This section will give you details on how to set up integration your existing SSO solution with OPSWAT solution for specific IdPs and applications. If you find difficult to do so and you couldn't find a detailed guideline on this section, please [contact our customer support](https://www.opswat.com/support#support-levels) for help.

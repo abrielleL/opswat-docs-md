@@ -1,13 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mdicap -->
 
-[MetaDefender ICAP Server](https://www.opswat.com/docs/mdicap)Need Help?
 ### METADEFENDER
 
 # ICAP Server
 
 #### v5.15.0 [Latest]
 
-[Release Notes](https://opswat.developerhub.io/docs/mdicap/release-notes)
+[Release Notes](https://www.opswat.com/docs/mdicap/release-notes)
 
 Getting Started[##### Getting Started
 

@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/metadefender-drive-v3-8-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v3.8.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Fmetadefender-drive-v3-8-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| **MetaDefender Drive v3.8.0**  Released on Feb 1st, 2021 | This is a major release that adds new feature as well as improvement and stability |
+| --- | --- |
+| **New Features** |  |
+| Copy clean files to external USB device (Beta) | After scanning, user can choose to backup their clean documents and files into another USB storage |
+| [**Improvements**](/docs/mddrive/release-notes/metadefender-drive-v3-8-0#improvements) |  |
+| Improve performance | This version of MetaDefender Drive is proven to be able to scan millions of files with 10 percent faster than previous versions |
+| Disk Status and Remediation shortcut | Users will be able to view the attached local drives and unlock them anytime |
