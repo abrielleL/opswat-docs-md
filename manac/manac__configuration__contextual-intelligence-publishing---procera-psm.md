@@ -20,11 +20,11 @@ The purpose of this guide is to walk through the configuration requirements for 
 
 Prior to working through this document, a Procera PSM and NAC must be installed and functional on the network. CIP must also be installed in the NAC system.
 
-## Configure Procera PSM
+## [Configure Procera PSM](/docs/manac/configuration/contextual-intelligence-publishing---procera-psm#configure-procera-psm)
 
 On the Procera PSM, a JSON UDP bulk Source will need to be configured to receive the CIP messages and a new subscriber + session schema will need to be configured to store the values.
 
-## Configure the Schema
+## [Configure the Schema](/docs/manac/configuration/contextual-intelligence-publishing---procera-psm#configure-the-schema)
 
 Add the desired attributes you want to store on the subscriber.
 
@@ -34,7 +34,7 @@ Subscriber Schema:
 
 Session Schema:
 
-## Configure the PSM Source
+## [Configure the PSM Source](/docs/manac/configuration/contextual-intelligence-publishing---procera-psm#configure-the-psm-source)
 
 *NOTE: For more complete information on setting up a new source, please refer to the PSM documentation
 
@@ -50,7 +50,7 @@ Define rules to create/update/delete subscriber/session objects. The rules have 
 
 Assign which Attributes (from the list of 'Variables' defined earlier) should be mapped to which subscriber/session object Attributes:
 
-## Configure Contextual Intelligence Publisher
+## [Configure Contextual Intelligence Publisher](/docs/manac/configuration/contextual-intelligence-publishing---procera-psm#configure-contextual-intelligence-publisher)
 
 Once the Procera PSM has been configured, enter the following information:
 
@@ -61,7 +61,7 @@ Once the Procera PSM has been configured, enter the following information:
 
 Once finished, click “Submit” and continue to the next section to verify the integration.
 
-## Verify Integration
+## [Verify Integration](/docs/manac/configuration/contextual-intelligence-publishing---procera-psm#verify-integration)
 
 If everything is configured correctly, subscribers and sessions will be created automatically when the PSM receives the UDP messages from CIP.
 
