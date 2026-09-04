@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/operating/validate-external-ips-domains-with-threat-intelligence-database -->
 
-Too many requests
-# You're going a little too fast.
+# Validate external IPs/Domains with Threat Intelligence Database
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+For Unauthorized Connection, there is an additional feature called **Validate external IPs/Domains with Threat Intelligence Database**. To enable this feature, follow these steps:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Step 1: Policies → Connection Policies → Unauthorized Connection
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Step 2: Click to settings icon
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Foperating%2Fvalidate-external-ips-domains-with-threat-intelligence-database%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Step 3: Enable Validate external IPs/Domains with Threat Intelligence Database and save
+
+After enabling the "Validate external IPs/Domains with Threat Intelligence Database" feature, you can create a new Unauthorized Connection policy with Threat Intelligence.
+
+Within the policy settings, you will see the option **"Only make an alert if external IPs/Domains are found in the Threat Intelligence Database"**. This option becomes available when you select **"External Host"** for either the Source or Destination and also choose **“DNS” or “Any”** for the Protocol.
+
+When you select the **“Only make an alert if external IPs/Domains are found in the Threat Intelligence Database”** option, the system will only create an alert under that specific circumstance.
+
+On screen alert when the option “Only make an alert if external IPs/Domains are found in the Threat Intelligence Database” is selected
+
+When you do not select the **"Only make an alert if external IPs/Domains are found in the Threat Intelligence Database"** option, the system will create an alert for all external hosts whether they are found in the Threat Intelligence Database or not.
+
+On-screen Alert for External Host Found in TI Database
+
+On-screen Alert for External Host Not Found in TI Database

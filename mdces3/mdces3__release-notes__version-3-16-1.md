@@ -1,12 +1,47 @@
 <!-- source: https://www.opswat.com/docs/mdces3/release-notes/version-3-16-1 -->
 
-Too many requests
-# You're going a little too fast.
+# 3.16.1
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+| Release date | Version |
+| --- | --- |
+| 17th December 2025 | 3.16.1 |
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**MetaDefender** **Cloud Email Security**™ is an advanced solution that bolsters Microsoft 365’s native email defenses with industry-leading threat prevention. It is purpose-built to detect and neutralize malware, zero-day exploits, and embedded file-based threats before they reach the inbox.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdces3%2Frelease-notes%2Fversion-3-16-1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This solution is powered by OPSWAT’s Metascan™ Multiscanning, adding more AV (antivirus) engines, and Deep CDR™ (Content Disarm & Reconstruction) against file-based threats. With multi-layered, proactive protection, email security goes beyond signature-based detection with advanced technologies against evolving threats. Designed for seamless integration, the solution deploys rapidly without disrupting mail flow.
+
+## Improvements & Fixes
+
+### Email Protection & Policy Enforcement
+
+- Fixed an issue where policies were not correctly applied to group recipients, ensuring the intended policies are enforced consistently.
+- Improved OTP validation to support secondary domains and email aliases.
+- Resolved issues with certain attachment types incorrectly failing analysis.
+
+### Reporting & Dashboard
+
+- Fixed discrepancies between Dashboard metrics and report data for prevented threats and event counts.
+- Improved accuracy of Dashboard event counters for released and quarantined messages.
+- Updated “Top Blocked Senders” logic to use the sender’s From: address across Dashboards and Reports.
+- Improved report filtering and field availability in Quarantine Reports.
+- Enhanced date handling in Quarantine Reports.
+
+### Search & Event Visibility
+
+- Improved email search reliability when From: header information differs from the SMTP envelope sender.
+- Improved audit trail completeness for message rescans and related events.
+
+### SIEM / SOAR Enhancements
+
+- Improved SIEM/SOAR configuration experience with clearer guidance and safer handling of sensitive fields.
+- Expanded SIEM/SOAR event coverage to include:
+
+  - Quarantined and blocked emails
+  - Login and logout events (successful and failed)
+- Added configurable filtering to control which events are sent to SIEM/SOAR platforms.
+
+### Operational & Platform Improvements
+
+- General performance, reliability, and maintainability improvements across the platform.

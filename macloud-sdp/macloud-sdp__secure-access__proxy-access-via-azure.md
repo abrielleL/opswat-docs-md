@@ -1,12 +1,34 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/proxy-access-via-azure -->
 
-Too many requests
-# You're going a little too fast.
+# Proxy Access via Azure
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This is a paid add-on feature in MetaDefender IT-OT Access for Windows client's only. Please contact OPSWAT Sales for more information.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender IT-OT Access utilizes a secure access method called proxy-based access. This method uses a combination of proxies to provide device compliance based access control to applications that can limit access based on location. This approach is designed with Azure AD's Location based Conditional Access policies.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To enable this feature:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fproxy-access-via-azure%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Navigate to **Secure Access > Access Methods > Proxy**.
+- Under this tab, enable proxy-based access by enabling **Enable Azure Protection**.
+- Copy the Host IP address and save for later.
+- Select **Save**.
+
+*Note: For Azure Protection to work, cross-domain API must be enabled and the port set to 1139. For more information on cross-domain API, click* [*here*](https://docs.opswat.com/macloud-sdp/developer-guide/cross-domain-api)*.*
+
+Once enabled in MetaDefender IT-OT Access, you will need to configure Microsoft AD accordingly:
+
+- Navigate to Azure's portal and sign into your account.
+- Continue on to **Conditional Access**, and select **Named locations**.
+- Select **+IP ranges location**.
+- Fill out name, and add the IP range based on the Host IP address in MetaDefender IT-OT Access '/32' at the end of the address.
+- Select **Create.**
+- Navigate to **Policies**, and select **+ New Policy**.
+- Fill out name and assign relevant users.
+- Select **Conditions > Locations** **> Exclude**, and select the IP range you created.
+- Under **Access Controls**, select **Grant** and change to **Block access.**
+- Enable the policy.
+- Select **Create**.
+
+After creating this policy, MetaDefender IT-OT Access will be able to determine access to Microsoft products based on the device's compliance state.
+
+*Note: The minimum OPSWAT agent version to support proxy-based access control is: 7.6.2301.163 (Windows only).*

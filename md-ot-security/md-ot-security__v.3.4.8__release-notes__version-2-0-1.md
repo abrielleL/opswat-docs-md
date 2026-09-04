@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/release-notes/version-2-0-1 -->
 
-Too many requests
-# You're going a little too fast.
+# Version 2.0.1
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | **v2.0.1** |
+| --- | --- |
+| **Release date** | 1 September 2022 |
+| **Scope** | All features. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/md-ot-security/v.3.4.8/release-notes/version-2-0-1#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Frelease-notes%2Fversion-2-0-1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  | **Details** |
+| --- | --- |
+| **Operating** | Added Monitoring & Technical view.  Added Dashboard (overview).  Added Network Map Visualization.  Added Assets Inventory (overview, asset list, device alerts, misconfigurations, vulnerabilities, update history).  Added Connections (overview, connections list, connections alerts).  Added Policies - Alerting: Device: Allowlist, Unauthorized Device, Misconfiguration, Supply Chain Violation, Vulnerability.  Connection: Allowlist, Unauthorized Connection, Disallowed Port/Period, Disallowed Country of Remote Host.  Added Discovery - Fingerprinting. Added Anomaly Detection mode.  Added Alert list.  Added Device Manipulation.  Added User Management.  Added Reports. |
+| **Settings** | Added Discovery settings.  Added Network Topology.  Added Device Type settings.  Added Alert settings.  Added Protocol settings.  Added Site settings.  Added Update settings.  Added License.  Added Application settings.  Added Support Package. |

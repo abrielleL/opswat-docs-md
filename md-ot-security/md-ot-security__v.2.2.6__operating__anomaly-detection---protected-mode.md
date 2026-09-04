@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/operating/anomaly-detection---protected-mode -->
 
-Too many requests
-# You're going a little too fast.
+# Anomaly Detection - Protected Mode
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+When in turn on Anomaly Detection, MetaDefender OT Security will make alert if there are any abnormal activities or unauthorized behaviors in the system, including:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- Unauthorized asset connected to the system.
+- An asset is in an inactive state for too long, exceeding the allowable threshold.
+- An asset is in an active state but does not communicate for a period of time beyond the threshold.
+- An asset that has unauthorized open ports and use unauthorized protocol on allowed ports.
+- An asset that has supply chain violation.
+- An asset that has CVSS score in unwanted range.
+- 2 assets in the system communicating with each other using the protocol are not allowed.
+- 2 assets in the system to communicate with each other on the port is not allowed.
+- 2 assets in the system communicate with each other at unauthorized intervals.
+- An asset that is being communicated to unwanted remote host.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To avoid generating unwanted alerts, make sure you've reviewed the policies for the asset and connection, the settings in the Asset Type Settings.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Foperating%2Fanomaly-detection---protected-mode%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+if you need to work with assets or edit settings or other operations inside MetaDefender OT Security and don't want to be interrupted by alerts (which will take you to the alert screen), just head to Alert settings and disable "Make On-screen alert".
+
+Note: The asset that still in learning phase will not be alerted even user turn on Anomaly Detection.

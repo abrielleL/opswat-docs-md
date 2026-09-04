@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/switch-platform/switch-platform -->
 
-Too many requests
-# You're going a little too fast.
+# Switch Platform
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender OT Security can support accessing by Web. User can navigate to Switch platform section under … button to switch to the Web platform or Desktop platform.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When switching to the Web platform, the interface is selected for “Management (web access)” (displays as IP address) that is used for web access.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+There are only one NIC displayed (which is selected as management NIC).
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Fswitch-platform%2Fswitch-platform%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Example for web URL: [**https://10.40.163.x**](http://192.168.x.x/)
+
+When accessing to the web, user will be asked to log in again.
+
+User can switch to desktop application by go to Switch Platform section on web or directly click on the “Switch to Desktop” button on AIO machine.
+
+**Note:**
+
+- If you are logging with multiple users, there are some events will be shown for all users: alerts, PCAP environment, notification.
+- Support package, CVE remediation must be download to USB drive, downloading by web is not supported on this version.
+- Changing management NIC will impact accessing Web platform. If you want to change management NIC, you can switch to web platform for changing.

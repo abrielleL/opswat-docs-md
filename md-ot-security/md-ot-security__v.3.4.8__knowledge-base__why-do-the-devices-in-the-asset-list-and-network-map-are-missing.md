@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/knowledge-base/why-do-the-devices-in-the-asset-list-and-network-map-are-missing -->
 
-Too many requests
-# You're going a little too fast.
+# Why do the devices in the Asset List and Network Map are missing in MetaDefender OT Security?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+In OT Security Management, the **Asset List** and **Network Map** serve distinct purposes, which can lead to differences in the number of displayed devices.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+### [**Network Map**](/docs/md-ot-security/v.3.4.8/knowledge-base/why-do-the-devices-in-the-asset-list-and-network-map-are-missing#network-map)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The Network Map visualizes all devices that OT Security has detected across the network. This includes routers, switches, and other network infrastructure components. However, if a device is behind a router, OT Security may only detect the router’s **MAC address** rather than the individual devices connected to it. This behavior is expected because OT Security identifies devices based on MAC address data.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Fknowledge-base%2Fwhy-do-the-devices-in-the-asset-list-and-network-map-are-missing%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+### [**Asset List**](/docs/md-ot-security/v.3.4.8/knowledge-base/why-do-the-devices-in-the-asset-list-and-network-map-are-missing#asset-list)
+
+The Asset List provides detailed information on recognized devices that OT Security has fully identified, including their MAC addresses. Since devices behind a router may not have their MAC addresses directly visible, they **will not appear** in the Asset List. This is a key reason why the number of assets listed differs from the number of devices shown in the Network Map.
+
+### [**Possible Reasons for Missing Devices in the Asset List**](/docs/md-ot-security/v.3.4.8/knowledge-base/why-do-the-devices-in-the-asset-list-and-network-map-are-missing#possible-reasons-for-missing-devices-in-the-asset-list)
+
+1. **Devices Are Behind a Router** – OT Security detects the router’s MAC address instead of the individual devices behind it.
+2. **No Active Communication and Active Scanning Is Not Enabled** – If devices are not actively communicating on the network, and **Active Scanning** is not enabled, OT Security relies on passive network monitoring, which may not capture all devices.
+
+To verify if missing devices are behind a router, check their network positioning and consider enabling Active Scanning to enhance detection.

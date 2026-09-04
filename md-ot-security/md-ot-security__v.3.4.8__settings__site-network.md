@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/settings/site-network -->
 
-Too many requests
-# You're going a little too fast.
+# Site - Network configuration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Network** settings are accessible under **Settings > Network Settings.**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Under this section, you can see all the NICs of the Site Server, each in a different numbered card.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+This information about the NICs matches the settings in the setup wizard you have completed.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Fsettings%2Fsite-network%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Information of a network interface card includes:
+
+- MAC
+- IP address
+- Netmask
+- Default gateway
+
+If you need to adjust the method of NIC configuration, set it to automatic (DHCP) or Manual, set Address, Netmask, Gateway, set DNS, and click the Apply button. Your changes will be applied to the system after saving.
+
+After finishing configuring NICs, you can choose a NIC for management.

@@ -1,12 +1,106 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/developer-guide/custom-policy-check -->
 
-Too many requests
-# You're going a little too fast.
+# Custom Policy Check
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Endpoint provides Device ID and policy compliance status in Windows registry or macOS p-list file. If you have an agent on endpoints and has admin right, you can simply get device ID and device status by this way. In other case, you can retrieve device compliance information from MetaDefender IT-OT Access by using [How to work with MetaDefender IT Access APIs](/docs/macloud-sdp/developer-guide/how-to-work-with-metaaccess-apis) using device's MAC address or Device ID.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+While using this approach, you should check and make sure that your license key matches registration key on endpoints. Your license key can be found on MetaDefender IT-OT Access console on **Settings > Global** page.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+MetaDefender Endpoint offers 2 types of clients: persistent client and on-demand client.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fdeveloper-guide%2Fcustom-policy-check%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- The **persistent** **MetaDefender Endpoint** is designed to remain running on users' device after installation.
+- By comparison, the **on-demand** **MetaDefender Endpoint** is only run when needed. If exited or restarted, the client will not automatically start.
+
+Depend on which MetaDefender Endpoint you deploy on your endpoints, you should look for proper registry keys or p-list values.
+
+## [Persistent MetaDefender Endpoint](/docs/macloud-sdp/developer-guide/custom-policy-check#persistent--metadefender-endpoint)
+
+## [Windows](/docs/macloud-sdp/developer-guide/custom-policy-check#windows)
+
+On Windows endpoints, we provide two paths, one for 32-bit and one for 64-bit, as the registry locations are different in each.
+
+Things you can check against with Windows persistent MetaDefender Endpoint:
+
+1. Check whether MetaDefender Endpoint is running to ensure that the compliance information stored in the registry is current.
+
+   1. You can look at running Processes ('GearsAgentService.exe');
+   2. OR running Services ('OPSWAT GEARS Client’): confirm that process and service are signed by OPSWAT and certificate is valid
+2. Confirm the Registration Key on the endpoint matches your license key:
+
+   1. Registry subkey
+
+      1. Windows 32-bit: HKEY_LOCAL_MACHINE\SOFTWARE\OPSWAT\GEARS Client\Config
+      2. Windows 64-bit: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\OPSWAT\GEARS Client\Config
+   2. Name - RegistrationKey
+   3. Type - REG_SZ
+   4. Value should match your License Key
+3. Check the Compliance status on the endpoint:
+
+   1. Registry subkey
+
+      1. Windows 32-bit: HKEY_LOCAL_MACHINE\SOFTWARE\OPSWAT\GEARS Client\Status
+      2. Windows 64-bit: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\OPSWAT\GEARS Client\Status
+   2. Name - Policy
+   3. Type - DWORD
+   4. Value
+
+- 0 = NOT in compliance with your policy
+- 1 = in compliance with your policy
+
+The combination of the 2 values, both Policy and RegistrationKey, ensure that the agent installed is assigned to the Account that manages the defined Polices.
+
+## [macOS](/docs/macloud-sdp/developer-guide/custom-policy-check#macos)
+
+1. Confirm that the MetaDefender Endpoint is installed and running, look for the Process named opswat-gears-od.
+2. Validate compliance of the endpoint by checking the file
+
+   1. Located at: Applications/OPSWAT GEARS Client/Policies
+   2. file named: GEARS_[*License Key*]_[*Policy Value*].txt, where [License Key] will be your account License Key, and [*Policy Value*] would be 1 if the device passes the policy defined in the MetaDefender IT-OT Access console.
+
+This file includes a combination of 2 values, Policy and LicenseKey, to ensure that the client installed is assigned to the Account that manages the defined Polices.
+
+The endpoint compliance parameters are configured on your MetaDefender IT-OT Access account. Once the Policies are configured and the agents installed across all of the endpoints, you can begin using MetaDefender Endpoint as part of the additional security and compliance enforcement.
+
+## [On-demand MetaDefender Endpoint](/docs/macloud-sdp/developer-guide/custom-policy-check#on-demand--metadefender-endpoint)
+
+## [What is the On-demand MetaDefender Endpoint?](/docs/macloud-sdp/developer-guide/custom-policy-check#what-is-the-on-demand--metadefender-endpoint)
+
+The On-Demand client is a lightweight, non-persistent version of the MetaDefender Endpoint that can be integrated into existing third-party applications. It is a program that collects information about the endpoint by detecting installed applications, scans its memory for malware, and puts everything into a report to send to the MetaDefender IT-OT Access cloud. It's everything that the MetaDefender Endpoint does without the installation, services, and persistence. This process "registers" the endpoint as a device in a MetaDefender IT-OT Access account, which in return responds with whether the agent is in compliance with policies configured on MetaDefender IT-OT Access. This allows further actions to be taken, such as denying access to a network.
+
+## [Logging](/docs/macloud-sdp/developer-guide/custom-policy-check#logging)
+
+Logs are automatically generated by default on the same directory you store the on-demand client. The file is called gears-ondemand.log and is overwritten on each run. Logging can be disabled via the command-line interface.
+
+## [Policy Values](/docs/macloud-sdp/developer-guide/custom-policy-check#policy-values)
+
+### [Windows](/docs/macloud-sdp/developer-guide/custom-policy-check#windows)
+
+Some values are written to the registry by On-demand MetaDefender Endpoint to allow third-party components with limited access to system resources to read the outcome of a run.
+
+All values are written to the following registry key:
+
+\\HKEY_CURRENT_USER\\SOFTWARE\\OPSWAT\\GEARS OnDemand\\Config
+
+To indicate whether an endpoint that On-demand MetaDefender Endpoint ran on is compliant with a policy set by a MetaDefender IT-OT Access account that the client reported to, the following value gets written.
+
+Name: *Policy* Value:
+
+- 0 - system is not compliant.
+- 1 - system is compliant.
+
+### [macOS](/docs/macloud-sdp/developer-guide/custom-policy-check#macos)
+
+Some values are written to the file system by On-demand MetaDefender Endpoint to allow third-party components to read the outcome of an On-Demand run.
+
+All values are written to the following user location:
+
+/Users/username/Documents/OPSWAT/GEARS OnDemand
+
+To indicate whether an endpoint that On-demand MetaDefender Endpoint ran on is compliant with a policy set by a MetaDefender IT-OT Access account that the client reported to, the following value gets written to a filename (NOTE: the value is in the file name, not the contents of the file).
+
+Filename Format: GEARS_[*license key*]_[*Policy Value*].txt
+
+where:
+
+- *license key:* your account license key
+- *Policy Value* would be 1 if the device passes a policy defined in the MetaDefender IT-OT Access console

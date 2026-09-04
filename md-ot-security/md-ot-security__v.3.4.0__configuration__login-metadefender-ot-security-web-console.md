@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/configuration/login-metadefender-ot-security-web-console -->
 
-Too many requests
-# You're going a little too fast.
+# Logging in to the MetaDefender OT Security web administration portal
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [About this task](/docs/md-ot-security/v.3.4.0/configuration/login-metadefender-ot-security-web-console#about-this-task)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+You can access the MetaDefender OT Security web administration portal by using the MetaDefender OT Security URL
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Procedure](/docs/md-ot-security/v.3.4.0/configuration/login-metadefender-ot-security-web-console#procedure)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Fconfiguration%2Flogin-metadefender-ot-security-web-console%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Open your web browser.
+2. Type the URL in one of the following formats:
+
+   - *http://<IP_Address>*
+   - *<IP_Address>* is the **IP address of NIC Used for management** settings on the local management console application.
+   - The following are URL examples:
+   - IPv4 address example: [https://192.168.2.44](https://192.168.2.44/)
+3. Press Enter.
+4. On the Login screen, enter your username and password. To access the web-based administration portal, use an account with an administrator role defined in the configuration when installation.
+5. Click Log on.

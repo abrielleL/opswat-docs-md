@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/release-notes/version-2-1-4 -->
 
-Too many requests
-# You're going a little too fast.
+# Version 2.1.4
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | **v2.1.4** |
+| --- | --- |
+| **Release date** | 07 April 2023 |
+| **Scope** | Support deployment for common hardware, improve Network setting and improve performance |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/md-ot-security/v.3.4.8/release-notes/version-2-1-4#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Frelease-notes%2Fversion-2-1-4%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  | **Details** |
+| --- | --- |
+| **Settings** | - Add setting to configure visual effects including option recommendation via performance scanning. |
+| **Environment** | - Support deployment for common hardware. |
+| [**Enhancements**](/docs/md-ot-security/v.3.4.8/release-notes/version-2-1-4#enhancements) | - Improve Network & Discovery Settings by UI and mechanics. - User can now remain accessing to web mode after MetaDefender OT Security finished updating without the need of re-activating web mode from host device. - Update geographical database. - Support upload larger PCAP file (larger than 2GB). |
+| **Performance** | - Improve web mode performance. |
+| **Etc.** | - Include some minor enhancements to UI and performance for better user experience. |

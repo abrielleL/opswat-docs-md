@@ -1,12 +1,89 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/networking-requirements-for-sdp -->
 
-Too many requests
-# You're going a little too fast.
+# Networking Requirements for SDP
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+For MetaDefender IT-OT Access SDP to successfully provide secure access to protected applications, each of the Gateways and Clients require network access to various Cloud components, as well as to each other. Cloud-based services used by SDP include: STUN (Session Traversal Utilities for NAT), HTTPS APIs, WebSocket APIs, and NTP (Network Time Protocol).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Client](/docs/macloud-sdp/secure-access/networking-requirements-for-sdp#client)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [HTTPS APIs](/docs/macloud-sdp/secure-access/networking-requirements-for-sdp#https-apis)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fnetworking-requirements-for-sdp%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The MetaDefender Endpoint uses HTTPS APIs hosted in the cloud to coordinate connections with Secure IT Access Gateways. Outgoing traffic should be allowed on port 443/TCP to the following hosts:
+
+- <https://api-us.sdp.opswat.com> | US environment
+- <https://cognito-idp.us-east-2.amazonaws.com> | US environment
+- <https://cognito-idp.eu-central-1.amazonaws.com> | EU environment
+- <https://api-eu.sdp.opswat.com> | EU environment
+
+### [STUN Servers](/docs/macloud-sdp/secure-access/networking-requirements-for-sdp#stun-servers)
+
+STUN services detect public IP addresses and ports for clients. This is critical for SDP to detect where a user’s device is located and to coordinate it's connection to Gateways. Outgoing traffic should be allowed on port 30000/UDP to the following hosts:
+
+| **Production Version** | Address |
+| --- | --- |
+| US Production | 3.128.173.107  18.116.34.83  3.134.96.213 |
+| EU Production | 13.48.78.200  13.48.84.113  13.51.158.149 |
+
+### [Client-to-Gateway Communication](/docs/macloud-sdp/secure-access/networking-requirements-for-sdp#client-to-gateway-communication)
+
+Client-to-Gateway communication is a crucial part of SDP functioning properly. After initial configurations are obtained from the SDP controller, subsequent communications are between the Client device and the Gateway.
+
+The client will communicate with the Gateway over UDP. The public ports are configurable, but must be forwarded to 30000/UDP and 30001/UDP for each deployed gateway. More information about Gateway port forwards is available in the next section.
+
+| Gateway Port | Description |
+| --- | --- |
+| Port 30000/UDP | Gateways expect to receive most traffic from the Client on port 30000/UDP. |
+| Port 30001/UDP | When a connection is initializing, the client may need to send a single packet to open the firewall, on port 30001/UDP. |
+
+## [Gateway](/docs/macloud-sdp/secure-access/networking-requirements-for-sdp#gateway)
+
+### [HTTPS APIs](/docs/macloud-sdp/secure-access/networking-requirements-for-sdp#https-apis)
+
+The Secure IT Access Gateway uses HTTPS APIs hosted in the cloud to coordinate connections and access for SDP Clients. Outgoing traffic from the Gateway should be allowed on port 443/TCP to the following hosts:
+
+- <https://api-us.sdp.opswat.com> | US environment
+- <https://api-eu.sdp.opswat.com> | EU environment
+
+### [Gateway WebSocket APIs](/docs/macloud-sdp/secure-access/networking-requirements-for-sdp#gateway-websocket-apis)
+
+Secure IT Access Gateways also make use of websockets for bi-directional communication with the SDP Controller. Outgoing traffic from the Gateway should be allowed on port 443/TCP to the following hosts for websocket traffic:
+
+- wss://gateway-websockets-api-us.sdp.opswat.com | US Environment
+- wss://gateway-websockets-api-eu.sdp.opswat.com | EU Environment
+
+### [STUN Servers](/docs/macloud-sdp/secure-access/networking-requirements-for-sdp#stun-servers)
+
+Secure IT Access Gateways also utilize STUN services to automatically discover public IP addresses for Clients to connect to. To allow this outgoing traffic from the Gateway should be allowed on port 30000/UDP to the following hosts:
+
+| **Production Version** | Address |
+| --- | --- |
+| US Production | 3.128.173.107  18.116.34.83  3.134.96.213 |
+| EU Production | 13.48.78.200  13.48.84.113  13.51.158.149 |
+
+### [Gateway-to-Client Communication](/docs/macloud-sdp/secure-access/networking-requirements-for-sdp#gateway-to-client-communication)
+
+Using STUN services, Gateways and Clients are able to connect through many networks automatically without the need for further configuration. In some cases, however, port-forwards configured in the public firewall may be required to allow Client traffic to successfully reach Gateways. To ensure connectivity, two UDP ports should be forwarded from the public firewall to each Gateway on ports 30000 and 30001. The public ports configured should match the configuration made for each Gateway in the MetaDefender IT-OT Access console.
+
+| Gateway Port | Description |
+| --- | --- |
+| Port 30000/UDP | Gateways expect to receive most traffic from the Client on port 30000/UDP. |
+| Port 30001/UDP | When a connection is initializing, the client may need to send a single packet to open the firewall, on port 30001/UDP. |
+
+### [NTP](/docs/macloud-sdp/secure-access/networking-requirements-for-sdp#ntp)
+
+NTP ensures the system clock of Gateways remains highly accurate. An accurate system clock is required for cryptographic security. Client connections may fail if the Gateway clock and Client clock disagree by more than a few seconds. Traffic should be allowed from Gateways on port 123/UDP to the following pools of public NTP servers (administrators requiring specific addresses for their region can find more information at [ntppool.org](https://www.ntppool.org/zone/@)):
+
+| NTP | Address |
+| --- | --- |
+| OVA | pool.ntp.org |
+| AWS | 0.amazon.pool.ntp.org  1.amazon.pool.ntp.org  2.amazon.pool.ntp.org |
+| Azure | 2.debian.pool.ntp.org |
+
+## [Controller](/docs/macloud-sdp/secure-access/networking-requirements-for-sdp#controller)
+
+Network traffic allowed by the administrator for SDP components (Gateway and Client) will prepare the Controller to receive and send information related to new SDP connections and established sessions.
+
+- **HTTPS APIs** - The client and gateway will make API calls over HTTPS.
+- **Gateway WebSocket APIs** - The Controller sends real-time updates to the gateway.
+- **STUN Servers** - OPSWAT supplies a STUN server to help locate clients and gateways.
+- **NTP** - OPSWAT relies on public NTP servers to synchronize gateways.

@@ -1,12 +1,32 @@
 <!-- source: https://www.opswat.com/docs/mdces3/release-notes/version-3-24 -->
 
-Too many requests
-# You're going a little too fast.
+# 3.24
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+| Release date | Version |
+| --- | --- |
+| 11th June 2026 | 3.24 |
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**MetaDefender** **Cloud Email Security**™ is an advanced solution that bolsters Microsoft 365’s native email defenses with industry-leading threat prevention. It is purpose-built to detect and neutralize malware, zero-day exploits, and embedded file-based threats before they reach the inbox.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdces3%2Frelease-notes%2Fversion-3-24%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This solution is powered by OPSWAT’s Metascan™ Multiscanning, adding more AV (antivirus) engines, MetaDefender Aether Sandbox for advanced dynamic threat analysis, and Deep CDR™ (Content Disarm & Reconstruction) against file-based threats. By combining signature-based detection, behavioral sandboxing, and proactive content sanitization, email security extends beyond traditional defenses to identify and neutralize both known and zero-day threats. With multi-layered, proactive protection and advanced technologies designed to combat evolving attack techniques, the solution deploys rapidly and integrates seamlessly without disrupting mail flow.
+
+### [Enhancements](/docs/mdces3/release-notes/version-3-24#enhancements)
+
+- Introduced sandbox integration to analyze files with active content for deeper threat detection
+- Added configurable engine-count thresholds for malicious and suspicious verdicts to reduce false positives
+- Added file hash allowlist support for managing trusted files across scanning, verdict, and audit flows
+- Added CSV export for the Events and Messages pages
+- Enabled rescanning of emails carrying a sandbox verdict
+- Fixed an error in the integration wizard that disrupted onboarding
+- Fixed the onboarding wizard not pre-populating a sample integration name
+- Fixed the Dashboard integrations counter incorrectly counting empty integrations
+
+### [Bugs](/docs/mdces3/release-notes/version-3-24#bugs)
+
+- Fixed emails incorrectly receiving a 'Failure to Analyze' verdict
+- Fixed Dashboard graphs and counts not updating without a hard refresh
+- Fixed the policy page refreshing when changing a policy status
+- Fixed a 'Bad Request' error when creating a policy with a duplicate name
+- Fixed the Scan Report showing external recipient addresses under top blocked recipients

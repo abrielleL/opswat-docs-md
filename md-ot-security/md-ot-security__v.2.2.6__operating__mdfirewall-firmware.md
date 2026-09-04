@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/operating/mdfirewall-firmware -->
 
-Too many requests
-# You're going a little too fast.
+# Firmware
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The **Firmware** is accessible under **Settings → Firmware**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The list of Firmware contains all firmware versions of the MetaDefender Industrial Firewall & IPS.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Each row contains fields such as Version, Build, Size, Bitness, Uploaded Time, Applied Time, Action.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Foperating%2Fmdfirewall-firmware%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+User can delete, upload or apply firmware for this MetaDefender Industrial Firewall & IPS. The firmware for this device can only have a maximum of 8 versions. User has to delete 1 firmware in the list if user want to upload new firmware.
+
+**Note:** *If user apply an unsupported firmware (firmware version has a yellow tips), user will be disconnected to this* *MetaDefender Industrial Firewall & IPS*_. In this case, user have to access_ *MetaDefender Industrial Firewall & IPS* *via web to update a supported firmware with* *MetaDefender OT Security.*

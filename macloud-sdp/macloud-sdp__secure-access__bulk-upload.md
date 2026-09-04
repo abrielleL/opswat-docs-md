@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/bulk-upload -->
 
-Too many requests
-# You're going a little too fast.
+# Bulk Upload
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender IT-OT Access provide administrators with the ability to add up to 1,000 addresses to a **SSH, RDP, or Other** protected application.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+There are two methods for adding the addresses:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Manually - By selecting the **+Add Another Address** , a new address field will appear and a user can add a valid IP, IP range, CIDR block, or domain in the field.
+- Bulk Upload - By selecting the upload button (☁) , users can select to either replace or add to their address list. MetaDefender IT-OT Access will only accept .txt files with up to 1,000 addresses.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fbulk-upload%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+  - If there are any typos in the uploaded .txt file, MetaDefender IT-OT Access will notify the user and will require those be amended prior to upload.
+  - If there are any duplicated addresses, MetaDefender IT-OT Access will remove the duplicates during the upload process.
+
+When administrators are done adding addresses, they can continue with creating or updating the protected application.

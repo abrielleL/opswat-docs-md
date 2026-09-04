@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/operating/connection-policies -->
 
-Too many requests
-# You're going a little too fast.
+# Connection Policies
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The **Connection policies** tab is accessible by clicking on the icon Policies in the footer menu.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Connection policies** is a set of rules for connections between source and destination devices.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Connection policy** works based on a combination of both ***allowlist*** and ***blocklist*** principles.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Foperating%2Fconnection-policies%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+There is 4 type of connection policies:
+
+- Allow list.
+- Block list:
+
+  - Unauthorized connection.
+  - Disallowed Port/Period.
+  - Disallowed Country of Remote Host.
+
+If the connection violates both allowlist and blocklist at the same time, blocklist detection will have higher priority.
+
+The policies in allowlist will be highlighted if they have the same rule with blocklist policies.

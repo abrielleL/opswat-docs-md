@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/operating/protected-plc -->
 
-Too many requests
-# You're going a little too fast.
+# Protected PLC
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This page contains all PLCs are protected by this MetaDefender Industrial Firewall & IPS
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [PLC Management](/docs/md-ot-security/v.2.2.6/operating/protected-plc#plc-management)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+User can add or remove the PLCs in PLC Management
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Foperating%2Fprotected-plc%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Network Topology](/docs/md-ot-security/v.2.2.6/operating/protected-plc#network-topology)
+
+User can add Industrial Switch to visualize the network topology by manually.
+
+When MetaDefender Industrial Firewall & IPS is in **Monitor Mode**, if having some unauthorized connection want to connect to 1 of PLCs that are protected by this MetaDefender Industrial Firewall & IPS, the alert will trigger and ask user to block this connection or not. If user select Unexpected, the popup will display as below and ask user Block this connection with MetaDefender Industrial Firewall & IPS. When confirming, the MetaDefender Industrial Firewall & IPS will automatically change to **Protect Mode**.
+
+User also can see the event in Event page.
+
+When MetaDefender Industrial Firewall & IPS is in **Protect Mode**, if having some unauthorized connection want to connect to 1 of PLCs that are protected by this MetaDefender Industrial Firewall & IPS , the MetaDefender Industrial Firewall & IPS will prevent the connection. User also can see the event in Event page.

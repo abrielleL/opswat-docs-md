@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/settings/support-package -->
 
-Too many requests
-# You're going a little too fast.
+# Support Package
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Support package is accessible under **Settings > Support Package.**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Support package is used for analysis when user have any problems with the system.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+It contains application logs and operation system logs.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Fsettings%2Fsupport-package%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Additionally, if user want to export all database, they can check on Exporting database option when create support package.
+
+*Note*: Please make sure USB is already plugged in the AIO machine.

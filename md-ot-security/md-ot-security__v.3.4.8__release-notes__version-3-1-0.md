@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/release-notes/version-3-1-0 -->
 
-Too many requests
-# You're going a little too fast.
+# Version 3.1.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | **v3.1.0** |
+| --- | --- |
+| **Release date** | 03 June 2024 |
+| **Scope** | Enhance Enterprise Architecture. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/md-ot-security/v.3.4.8/release-notes/version-3-1-0#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Frelease-notes%2Fversion-3-1-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  | **Details** |
+| --- | --- |
+| **One-way communication** | MD OT Security allows users to select the method of communication (uni-directional or bi-directional) in the wizard between the site server and the enterprise server, as well as between the sensor and the site server. |
+| **Secure communications between all components** | Secure communications between Sensor and Site, Site and Enterprise. |
+| **Inactive status of a device** | The inactive status of a device is no longer based on active scans and will be set to inactive only if there are no connections for 30 minutes for both IT and OT devices. |

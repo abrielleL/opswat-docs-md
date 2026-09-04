@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/settings/sensor-alert -->
 
-Too many requests
-# You're going a little too fast.
+# Sensor - Alert
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Alert](/docs/md-ot-security/v.3.4.8/settings/sensor-alert#alert)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Alert setting is accessible under **Settings > Alert.**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+On alert setting page, user can configure how MetaDefender OT Security behave when there is an alert triggered: make on screen alert, notify operator by sending email and send syslog message.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Fsettings%2Fsensor-alert%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+You can choose how alerts can be displayed:
+
+- The on-screen alert is checked: you will be navigated to the alert screen whenever there is an alert triggered, and all the alerts need to be resolved to be able to leave the alert screen or the user can Ignore All to leave the alert screen.
+- The on-screen alert is unchecked: alerts will only appear in alert list pages with an Acknowledge button beside them so that the user can resolve them later.
+
+Note: Alerts with medium criticality will not be shown on screen by default.

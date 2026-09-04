@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/siem-integrations/logging -->
 
-Too many requests
-# You're going a little too fast.
+# Logging
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The MetaDefender IT-OT Access Add-on for Splunk has INFO log level set by default. However, if a user wants to change this, they can change the Logging level from the Logging tab.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Note that logging messages go to Splunk’s internal index and does not count against the Splunk license quota. However, if you would like to ingest the add-on’s log to a custom index, you can copy the snippets below and adding them to the default/inputs.conf configuration file (can be found in C:\Program Files\Splunk\etc\apps\TA-opswat-metaaccess\default\inputs.conf). Ensure that you replace both occurrences of <logging index> with the custom internal logging index you want to use. After adding the custom internal logging snippets to the inputs.conf file, restart Splunk to apply the changes. If at any time you need to disable logging to the custom index, simply update ‘disabled = 0’ to ‘disabled =1’ and restart Splunk.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+[monitor:///$SPLUNK_HOME/var/log/splunk/ta_opswat_metaaccess_metaaccess_logs.log]
+disabled = 0
+index = <logging index>
+sourcetype = opswat:ta:logs
+ 
+[monitor:///$SPLUNK_HOME/var/log/splunk/ta_opswat_metaaccess_metaaccess_api.log]
+disabled = 0
+index = <logging index>
+sourcetype = opswat:ta:logs
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsiem-integrations%2Flogging%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To view the messages logged to the custom internal index, simply enter the Search app and enter the following query
+
+index=<logging index>

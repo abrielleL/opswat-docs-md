@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/knowledge-base/cisco-switch-os-that-support-lldp -->
 
-Too many requests
-# You're going a little too fast.
+# Cisco Switch IOS version that support LLDP
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The below table is the minimum software release required to support the LLDP feature of Catalyst 3750, 3560, and 2960.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+| Feature | Cisco IOS Required | Catalyst Switch Support |
+| --- | --- | --- |
+| Link Layer Discovery Protocol (LLDP) and LLDP Media Endpoint Discovery (LLDP-MED) | 12.2(37)SE | 3750, 3560, 2960 |
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+If your IOS version below 12.2(37)SE, please upgrade to newer version. After upgrading, you can access to switch and check if LLDP feature is available and running by default.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Fknowledge-base%2Fcisco-switch-os-that-support-lldp%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+For other features, please refer to [this page](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3750/software/release/12-2_50_se/release/notes/OL18263.html).

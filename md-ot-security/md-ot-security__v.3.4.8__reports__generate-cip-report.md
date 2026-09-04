@@ -1,12 +1,37 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/reports/generate-cip-report -->
 
-Too many requests
-# You're going a little too fast.
+# Generate CIP Report
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [How to Generate CIP Report](/docs/md-ot-security/v.3.4.8/reports/generate-cip-report#how-to-generate-cip-report)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This guide provides step-by-step instructions on generating a CIP (Critical Infrastructure Protection) report using the system.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [1. Navigating to the Reports Page](/docs/md-ot-security/v.3.4.8/reports/generate-cip-report#1-navigating-to-the-reports-page)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Freports%2Fgenerate-cip-report%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Locate the **Reports** page from the main menu or navigation bar.
+2. Click on the **Reports** page to proceed
+
+### [2. Initialing CIP Report Generation](/docs/md-ot-security/v.3.4.8/reports/generate-cip-report#2-initialing-cip-report-generation)
+
+1. On the **Reports** page, locate the **Generate CIP Report** button in the top-right corner of the screen.
+2. Click the **Generate CIP Report** button to start the process.
+
+### [3.Capturing the Network Map](/docs/md-ot-security/v.3.4.8/reports/generate-cip-report#3capturing-the-network-map)
+
+Before generating the CIP report, you must capture the **Network Map** as prompted:
+
+1. After clicking the **Generate CIP Report** button, a popup will appear with instructions.
+2. Navigate to the **Network Map** page from the main menu or navigation bar.
+3. On the **Network Map** page, clicking on the icon to capture.
+
+4. Once the **Network Map** is successfully captured, you can proceed to the next step.
+
+### [4. Completing the CIP Report Generation](/docs/md-ot-security/v.3.4.8/reports/generate-cip-report#4-completing-the-cip-report-generation)
+
+1. Return to the **Reports** page.
+2. Click the **Generate CIP Report** button again to finalize the report.
+3. The system will process the request and generate the CIP report.
+
+### [5. Downloading the CIP Report](/docs/md-ot-security/v.3.4.8/reports/generate-cip-report#5-downloading-the-cip-report)
+
+This is the same with Downloading Report of Report Export and Management Guide.

@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/operating/asset-policies -->
 
-Too many requests
-# You're going a little too fast.
+# Asset Policies
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The **Asset policies** tab is accessible by clicking on icon Policies on footer menu.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The asset policies contain all policies of the asset that learnt by MetaDefender OT Security or manually create by user.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+There is 5 type of asset policies:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Foperating%2Fasset-policies%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Allow list.
+- Blocklist:
+
+  - Unauthorized asset.
+  - Misconfiguration.
+  - Supply chain violation.
+  - Vulnerability.
+  - Firmware Changes
+  - Port Scan Rules
+
+If the asset violates both allowlist and blocklist at the same time, blocklist detection will have higher priority.
+
+The policies in allowlist will be highlighted if they have the same rule with misconfiguration blocklist policies.

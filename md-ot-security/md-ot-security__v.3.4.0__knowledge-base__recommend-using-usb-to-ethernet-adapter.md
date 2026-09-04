@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/knowledge-base/recommend-using-usb-to-ethernet-adapter -->
 
-Too many requests
-# You're going a little too fast.
+# Recommend using USB to Ethernet Adapter
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+- UNITEK Model: Y-3470
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- UGREEN Model: 20254
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Fknowledge-base%2Frecommend-using-usb-to-ethernet-adapter%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+We have a network problem with Dell Adapter model: **DBJBCBC064z**

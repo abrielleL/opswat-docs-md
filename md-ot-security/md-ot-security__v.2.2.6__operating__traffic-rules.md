@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/operating/traffic-rules -->
 
-Too many requests
-# You're going a little too fast.
+# Traffic Rules
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The **Traffic Rules** is accessible under **Operation Monitoring → Traffic Rules**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This page shows the traffic being monitored by the MetaDefender Industrial Firewall & IPS and information of each traffic.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+When MetaDefender Industrial Firewall & IPS in **Learn Mode,** the MetaDefender Industrial Firewall & IPS create a set of learned traffic connections between devices.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Foperating%2Ftraffic-rules%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Add Traffic Rule](/docs/md-ot-security/v.2.2.6/operating/traffic-rules#add-traffic-rule)
+
+User can add traffic rule by manually by clicking Traffic Rule button.
+
+If the MetaDefender Industrial Firewall & IPS is in **Learn Mode/Monitor Mode or Protect Mode**, the confirm message will be displayed to ask user to keep the current mode after adding Traffic Rule or not by checking/unchecking checkbox.
+
+## [Export Traffic Rule](/docs/md-ot-security/v.2.2.6/operating/traffic-rules#export-traffic-rule)
+
+The export includes all learned data on connections and traffic in a JSON file format. You can export data in any mode.
+
+## [Import Traffic Rule](/docs/md-ot-security/v.2.2.6/operating/traffic-rules#import-traffic-rule)
+
+User can import the updated export file with your connections and communication to speed up the learning process. User have to change to **Idle Mode** to import Traffic Rule.

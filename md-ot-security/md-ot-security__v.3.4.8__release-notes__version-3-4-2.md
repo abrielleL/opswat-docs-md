@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/release-notes/version-3-4-2 -->
 
-Too many requests
-# You're going a little too fast.
+# Version 3.4.2
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | 3.4.2 |
+| --- | --- |
+| **Release date** | 11 Apr 2025 |
+| **Scope** | Enhance current features and add new features. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/md-ot-security/v.3.4.8/release-notes/version-3-4-2#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Frelease-notes%2Fversion-3-4-2%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  | Details |
+| --- | --- |
+| **LDAP authentication** | Integrated LDAP authentication to allow centralized user management and seamless integration with enterprise directory services, enhancing security and user access control. |
+| **Implement MFA - Authenticator app** | Implemented MFA using authenticator apps (e.g., Google Authenticator, Microsoft Authenticator) to provide an extra layer of security for user logins. |
+| **Active scanning: Run Smart Asset Profiling correspondingly for protocols based on its Smart Asset Profiling setting** | Enabled protocol-specific active scanning by running Smart Asset Profiling according to its configuration. This ensures targeted and efficient profiling of network assets based on selected protocols. |
+| **General Improvements** | Includes various performance optimizations and bug fixes to enhance reliability and user experience. |

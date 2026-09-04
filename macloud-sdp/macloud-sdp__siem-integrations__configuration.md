@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/siem-integrations/configuration -->
 
-Too many requests
-# You're going a little too fast.
+# Configuration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This section guides you how to configure the add-on to collect data from your MetaDefender IT-OT Access accounts.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Pre-requisites](/docs/macloud-sdp/siem-integrations/configuration#pre-requisites)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsiem-integrations%2Fconfiguration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Register an OAuth application through your OPSWAT account via [MetaDefender IT-OT Access OAuth Portal](https://console.metaaccess-b.opswat.com/o) and get an client key and client secret that is needed to configure an account for the add-on. Please find detailed steps [here](/docs/macloud-sdp/kb/how-could-i-retrieve-client-id-and-client-secret-on-metaaccess-t).
+- Implement the required firewall rules to enable your Splunk Forwarder to make API calls to port 443 of your OPSWAT on-prem/cloud server.
+- Create an index (for example: opswat) that will be used to store the data retrieved by this add-on.

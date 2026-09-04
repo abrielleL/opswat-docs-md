@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/release-notes/release-notesftp -->
 
-Too many requests
-# You're going a little too fast.
+# Version 3.4.7
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | 3.4.7 |
+| --- | --- |
+| **Release date** | 21 August 2025 |
+| **Scope** | Enhance current features and add new features. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/md-ot-security/v.3.4.8/release-notes/release-notesftp#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Frelease-notes%2Frelease-notesftp%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  | Details |
+| --- | --- |
+| **Update License expiring / expired notification** | Enhanced the notification system to provide clearer and more timely alerts when licenses are nearing expiration or have already expired. Improved the application flow to minimize disruptive prompts and notifications, allowing users to focus on their tasks with a smoother and more seamless experience |
+| **General Improvements** | Included various performance optimizations and bug fixes to enhance reliability and user experience. |

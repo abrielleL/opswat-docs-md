@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/settings/custom-fields -->
 
-Too many requests
-# You're going a little too fast.
+# Enterprise - Custom Fields
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The **Custom Fields** setting is accessible under **Settings > Custom Fields.**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+In this section, you can add more new Custom Fields to the Asset
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Users can choose Enable All or Disable All to display Custom Fields in Asset or not
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Fsettings%2Fcustom-fields%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Users can create New Custom Fields, and delete or edit them. When editing custom fields, users only can edit Label and Placeholder.

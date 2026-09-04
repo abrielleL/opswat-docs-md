@@ -1,12 +1,46 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/integrations/misp--threat-intelligence- -->
 
-Too many requests
-# You're going a little too fast.
+# MISP (Threat Intelligence)
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Configuration](/docs/md-ot-security/v.3.4.8/integrations/misp--threat-intelligence-#configuration)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**MISP (Threat Intelligence)** Integration is accessible under **Integrations > MISP (Threat Intelligence)** of the **MetaDefender OT Security Enterprise Manager**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+After clicking **"Enable MISP Threat Intelligence Integration"**, the configuration screen appears. Below is an overview of the setup process:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Fintegrations%2Fmisp--threat-intelligence-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+### [1. Authentication](/docs/md-ot-security/v.3.4.8/integrations/misp--threat-intelligence-#1-authentication)
+
+All fields in this section are required. Use the values collected during the **MISP Threat Intelligence** configuration. Use the API key for authentication.
+
+Configuration Authentication
+
+The table below explains the fields used for configuration in detail:
+
+| Field Name | **Value/Notes** |
+| --- | --- |
+| **MISP server address** | Enter the MISP IP Address. |
+| **API Key** | Use the API key for authentication. |
+
+### [2. Supported output engine format:](/docs/md-ot-security/v.3.4.8/integrations/misp--threat-intelligence-#2-supported-output-engine-format)
+
+Configure the output format for the data retrieved from MISP.
+
+### [3. Fetch new rules from MISP:](/docs/md-ot-security/v.3.4.8/integrations/misp--threat-intelligence-#3-fetch-new-rules-from-misp)
+
+Once fetched, new rules will be added to the **Threat Intelligence Database**, enhancing detection capabilities.
+
+#### [3.1. Periodic Fetch](/docs/md-ot-security/v.3.4.8/integrations/misp--threat-intelligence-#31-periodic-fetch)
+
+Configure an automatic schedule to ensure regular updates.
+
+#### [3.2. Manual Fetch](/docs/md-ot-security/v.3.4.8/integrations/misp--threat-intelligence-#32-manual-fetch)
+
+Click the **"Fetch Now"** button to retrieve the latest rules instantly.
+
+### [4. Test Configuration and Apply](/docs/md-ot-security/v.3.4.8/integrations/misp--threat-intelligence-#4-test-configuration-and-apply)
+
+**Test Connection**: Click **"Test Connection"** to validate the settings. If successful, a message **"Test successfully"** appears in the top-right corner.
+
+**Apply Configuration**: Click **"Apply"** to save the configuration. A confirmation message **"MISP integration applied successfully"** appears.
+
+Once successfully applied, the **connection status** will change to **"Connected"**, confirming a successful integration.

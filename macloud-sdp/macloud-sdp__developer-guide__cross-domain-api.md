@@ -1,12 +1,263 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/developer-guide/cross-domain-api -->
 
-Too many requests
-# You're going a little too fast.
+# Cross-Domain API
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Although cookie and client certificate integration methods work well under most scenarios, however, both methods heavily depend on browser applications and sometimes require end-users interaction which could introduce usability issues. MetaDefender IT Access now offers a cross-domain API for you to integrate with your solution. This method leverages JSONP technology to overcome the cross-domain restrictions imposed by browsers' same-origin policy that limits access to resources retrieved from origins other than the one the page was served by.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The cross-domain API can be enabled on MetaDefender IT Access console as the screenshot below.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Once the cross-domain API setting is enabled, MetaDefender IT Access agent tries to open a cross-domain API at the configured port on an endpoint. Please make sure that the configured port is valid and not used by any existing applications running on the same endpoint.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fdeveloper-guide%2Fcross-domain-api%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Whenever MetaDefender Endpoint is uninstalled, the cross-domain API will be closed and the configured port will be released on the endpoint.
+
+## [API Description](/docs/macloud-sdp/developer-guide/cross-domain-api#api-description)
+
+**Request**
+
+|  | Description |
+| --- | --- |
+| **URL path** | [https://eapi.opswatgears.com:[configured](https://eapi.opswatgears.com:%5C%5Bconfigured)`port]/opswat/devinfo` |
+| **URL path (API V3)** | [https://eapi.opswatgears.com:[configured](https://eapi.opswatgears.com:%5C%5Bconfigured/)`port]/opswat/3/devinfo` |
+| **Method** | GET |
+
+In which:
+
+- configured port: the port you configured for the cross-domain API settings on MetaDefender IT Access account which the endpoint is reporting to.
+- eapi.opswatgears.com is resolved as 127.0.0.1. If endpoints are running proxy, you need to add exception on the proxy settings to ignore queries to [eapi.opswatgears.com](http://eapi.opswatgears.com).
+
+For example:
+
+https://eapi.opswatgears.com:11369/opswat/devinfo
+API V3: https://eapi.opswatgears.com:11369/opswat/3/devinfo
+
+**Success response**
+
+The response json will be padded by the value of "callback" parameter
+
+{
+"code": number,
+"description": string,
+"info": {
+"hwid": string
+}
+}
+
+**Error response**
+
+{
+"code": number,
+"description": string
+}
+
+| Key | DataType | Definition |
+| --- | --- | --- |
+| code | number | Status code. Values could be:   - 0: success - -30: Timeout - -31: API not found - -32: Verification failed - -41: Failed to get hardware id |
+| description | string | result details |
+| info | object | device information |
+| info.hwid | string | device id of the device. This information is used to query device information from the cloud. |
+
+## [Sample code V1 (Don't use JWT token to verify the response data - Less secure)](/docs/macloud-sdp/developer-guide/cross-domain-api#sample-code-v1-dont-use-jwt-token-to-verify-the-response-data---less-secure)
+
+**Client sample** (you can download from [here](https://onlinehelp.opswat.com/metaaccess/attachments_5719785_1_client_sample_code.rar))
+
+<html>
+<head>
+</head>
+<body>
+<div style="margin-top: 25px; margin-bottom: 25px"> THIS IS A DEMO TO RETRIVE DEVICE ID OF THE LOCAL DEVICE</div>
+<div id="loader" style="display: none; position: fixed;left: 0px;top: 0px;width: 100%;height: 100%;z-index: 9999;background: url('page-loader.gif') 50% 50% no-repeat rgb(249,249,249);"></div>
+Server Port: <input type="text" id="server_port" value="11369" placeholder="11369"/><p>
+ 
+<div>
+<input type="button" value="Get Agent Info" onClick="submitGetAgentInfo()">
+<div id="error_msg" style="color: red; margin-top: 10px;"> </div>
+</div>
+ 
+<div id="hwid_field"> </div>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="opswat.jsonp.js"></script>
+<script type="text/javascript">
+function myCallback( data_back ){
+$('#loader').hide();
+// callback function to handle response from cloud
+if ( data_back.code < 0 ) {
+$('#error_msg').html("Error: " + data_back.description );
+return;
+}
+$('#hwid_field').text('Device ID: '+ data_back.info.hwid);
+}
+function submitGetAgentInfo()
+{
+$('#hwid_field').text('');
+$('#error_msg').html('');
+$('#loader').show();
+// Using Opswat lib prototype to make a request to cloud
+var server_port = $('#server_port').val();
+var casb = new OpswatJSONP();
+casb.jsonp({
+'serverPort': server_port,
+'callback' : myCallback
+});
+}
+</script>
+</body>
+</html>
+
+Note: you can find **jquery-3.1.1.min.js** and **opswat.jsonp.js** in the [sample package](https://onlinehelp.opswat.com/metaaccess/attachments_5719785_1_client_sample_code.rar).
+
+## [Sample code V2: (Using JWT token to verify the response data - more secure)](/docs/macloud-sdp/developer-guide/cross-domain-api#sample-code-v2-using-jwt-token-to-verify-the-response-data---more-secure)
+
+**Client sample** (you can download from [client_sample_code_v2.zip](https://onlinehelp.opswat.com/metaaccess/attachments_5719783_1_client_sample_code_v2.zip))
+
+<html>
+<head>
+</head>
+<body>
+<div id="loader" style="display: none; position: fixed;left: 0px;top: 0px;width: 100%;height: 100%;z-index: 9999;background: url('page-loader.gif') 50% 50% no-repeat rgb(249,249,249);"></div>
+Server Port: <input type="text" id="server_port" value="11369" placeholder="11369"/><p>
+ 
+<div>
+<input type="button" value="Get Agent Info - JWT (More Secure)" onClick="submitGetAgentInfoJWT()">
+<div id="error_msg" style="color: red; margin-top: 10px;"> </div>
+</div>
+ 
+<div id="hwid_field"> </div>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script> <!-- required, go along with opswat.casb.js -->
+<script type="text/javascript" src="jsrsasign-all-min.js"></script> <!-- required, go along with opswat.casb.js -->
+<script type="text/javascript" src="opswat.casb.js"></script> <!-- Opswat library -->
+<script type="text/javascript">
+function myCallback( data_back ){
+$('#loader').hide();
+// callback function to handle response from cloud
+if ( data_back.code < 0 ) {
+$('#error_msg').html("Error: " + data_back.description );
+return;
+}
+$('#hwid_field').text('Hardward ID: '+ data_back.info.hwid);
+}
+function submitGetAgentInfoJWT()
+{
+$('#hwid_field').text('');
+$('#error_msg').html('');
+$('#loader').show();
+ 
+//We need to generate a session id for every request to recive the dynamic response and verify it when we receive the response from Jsonp server
+var sessionId = uuidv4();
+ 
+// Using Opswat lib prototype to make a request to cloud
+var server_port = $('#server_port').val();
+var casb = new OpswatCASB();
+casb.jsonp({
+'serverPort': server_port,
+'callback' : myCallback,
+'sessionId' : sessionId
+});
+}
+ 
+function uuidv4() {
+return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+(c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+);
+}
+</script>
+</body>
+</html>
+
+Note: you can find **jquery-3.1.1.min.js**, jsrsasign-all-min.js and **opswat.jsonp.js** in the [client_sample_code_v2.zip](https://onlinehelp.opswat.com/metaaccess/attachments_5719783_1_client_sample_code_v2.zip).
+
+## [Sample code V3: (Using JWT token to verify the response data and support Cross-Origin Resource Sharing - CORS)](/docs/macloud-sdp/developer-guide/cross-domain-api#sample-code-v3-using-jwt-token-to-verify-the-response-data-and-support-cross-origin-resource-sharing---cors)
+
+**Client sample** (you can download from [*client_sample_code_v3.zip*](https://opswat-gears-cloud-clients.s3.us-west-2.amazonaws.com/PublicTool/client_sample_code_v3.zip))
+
+NoneCopy<html>
+<head>
+</head>
+<body>
+<div id="loader" style="display: none; position: fixed;left: 0px;top: 0px;width: 100%;height: 100%;z-index: 9999;background: url('page-loader.gif') 50% 50% no-repeat rgb(249,249,249);"></div>
+Server Port: <input type="text" id="server_port" value="11369" placeholder="11369"/><p>
+<div>
+<input type="button" value="Get Agent Info - JWT (More Secure) V3" onClick="submitGetAgentInfoJWT(true)">
+<div id="error_msg" style="color: red; margin-top: 10px;"> </div>
+</div>
+<div id="hwid_field"> </div>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script> <!-- required, go along with opswat.casb.js -->
+<script type="text/javascript" src="jsrsasign-all-min.js"></script> <!-- required, go along with opswat.casb.js -->
+<script type="text/javascript" src="opswat.casb.js"></script> <!-- Opswat library -->
+<script type="text/javascript">
+function myCallback( data_back ){
+$('#loader').hide();
+// callback function to handle response from cloud
+if ( data_back.code < 0 ) {
+$('#error_msg').html("Error: " + data_back.description );
+return;
+}
+$('#hwid_field').text('Hardward ID: '+ data_back.info.hwid);
+}
+function submitGetAgentInfoJWT(isV3 = false)
+{
+// console.log(isV3);
+$('#hwid_field').text('');
+$('#error_msg').html('');
+$('#loader').show();
+var sessionId = uuidv4();
+// Using Opswat lib prototype to make a request to cloud
+var server_port = $('#server_port').val();
+var casb = new OpswatCASB();
+if(isV3) {
+casb.jsonp({
+'serverPort': server_port,
+'callback' : myCallback,
+'apiUrl' : '/opswat/3/devinfo',
+'sessionId' : sessionId
+});
+} else {
+casb.jsonp({
+'serverPort': server_port,
+'callback' : myCallback,
+'sessionId' : sessionId
+});
+}
+}
+function uuidv4() {
+return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+(c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+);
+}
+</script>
+</body>
+</html>
+
+Note: you can find **jquery-3.1.1.min.js**, jsrsasign-all-min.js and **opswat.jsonp.js** in the [*client_sample_code_v3.zip*](https://opswat-gears-cloud-clients.s3.us-west-2.amazonaws.com/PublicTool/client_sample_code_v3.zip)** **
+
+**Success response:**
+
+{
+"code": 0,
+"description": "Success",
+"info": {
+"hwid": "7EF012F7AB8E454FA37B0D2E9A2E812C"
+}
+}
+
+**Error response:**
+
+{
+"code": -41,
+"description": "Hardware ID failed to get"
+}
+## [Support chart](/docs/macloud-sdp/developer-guide/cross-domain-api#support-chart)
+
+As of November 10th, 2016, Cross-Domain API solution is only supported on persistent agents.
+
+|  | Persistent agent | On-demand agent |
+| --- | --- | --- |
+| Windows | Yes | Yes |
+| macOS | Yes | Yes |
+| Linux | Yes |  |
+| Android | No |  |
+| iOS | No |  |
+
+As Septempber 27, 2017, MetaDefender IT Access releases a new agent version which supports https protocol for the cross-domain API.
+
+- Windows persistent agent version: 7.6.121.0+
+- macOS persistent agent version: 10.4.147.0+

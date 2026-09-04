@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/update-applications-settings-on-identity-provider -->
 
-Too many requests
-# You're going a little too fast.
+# Update Applications settings on Identity Provider
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This step is done on your IdP to tell your IdP forward user authentication to OPSWAT MetaDefender IT-OT Access for checking device posture status before granting them log into your applications. Otherwise, IdP will allow the user to your application directly without going through MetaDefender IT-OT Access.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Before implementing this step, you need to add your IdP and applications to your MetaDefender IT-OT Access account by following [Add protected applications with IdP Method](/docs/macloud-sdp/secure-access/add-protected-applications-with-idp-method)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**1.** Log into the MetaDefender IT-OT Access console, navigate to Secure Access > Protected App
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fupdate-applications-settings-on-identity-provider%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**2.** Select a protected application you would like to update, select SSO Setup Instructions tab and copy an ACS URL that MetaDefender IT-OT Access generated for the application. This URL is used to replace the ACS URL of the application on IdP.
+
+**3.** Log into your IdP console as an administrator and navigate to your application single sign-on settings
+
+**4.** Replace ACS URL/LogIn URL of your application on the IdP with the ACS URL on MetaDefender IT-OT Access console for your application that you got from step 2 in this section.
+
+**5.** Save your changed settings

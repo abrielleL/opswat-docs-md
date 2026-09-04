@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/operating/monitoring---technical-view -->
 
-Too many requests
-# You're going a little too fast.
+# Monitoring & Technical View
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The Monitoring view can be accessed by clicking the **Monitor button** at the left footer or will be displayed when you do not perform any action on MetaDefender OT Security for a period of **15 minutes**.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Monitoring view is a collection of screens that summarize the system status overview but are equally full of activities taking place inside the system as well as the status of alerts so that you can monitor it without any manipulation. In other words, it is like screen-saver mode.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+There are 6 pages that will be changed sequentially in the form of animations. Each page displays information about the system.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Foperating%2Fmonitoring---technical-view%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Total number of active devices and connections.
+
+The number of current abnormal devices detected.
+
+The number of current misconfiguration devices detected.
+
+The number of current device vulnerabilities detected.
+
+The number of current abnormal connections detected.
+
+Some alerts are pending.
+
+## [Technical View](/docs/md-ot-security/v.3.4.0/operating/monitoring---technical-view#technical-view)
+
+To go back to the technical view, click on the button “Investigate”.
+
+Please continue to the next page - Dashboard for the technical view.

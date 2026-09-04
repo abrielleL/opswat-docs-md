@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/release-notes/version-2-2-5 -->
 
-Too many requests
-# You're going a little too fast.
+# Version 2.2.5
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | **v2.2.5** |
+| --- | --- |
+| **Release date** | 16 October 2024 |
+| **Scope** | Improvement |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## New Features, Improvements and Enhancements
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Frelease-notes%2Fversion-2-2-5%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  | **Details** |
+| --- | --- | --- |
+| **Modbus protocol** |  | Improve parsing data from the Modbus protocol |
+| **LLDP protocol for the passive scan to get hardware information** |  | Improve LLDP scanning to obtain hardware information |

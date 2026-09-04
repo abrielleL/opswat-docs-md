@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/settings/license -->
 
-Too many requests
-# You're going a little too fast.
+# Enterprise - License
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [License](/docs/md-ot-security/v.3.4.0/settings/license#license)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+License setting is accessible under **Settings > License.**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+In this section, you can choose the method by how the new MetaDefender OT Security license will be activated.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Fsettings%2Flicense%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+You can choose one of two update methods:
+
+- **Online activation:** The application will perform a check on the server for a new license of the system. You need to have the activation key to do this.
+
+- **Offline activation:** The application will perform a check on the USB or external storage plugged into the device for getting the deployment ID. Then you can click on Activate button to download activation file and activate the system.
+
+User can also request a trial license key for MetaDefender OT Security.
+
+*Note:* Don’t forget to press the Save button for the changes to be applied. In case you are leaving without saving, MetaDefender OT Security will display a reminder pop-up.

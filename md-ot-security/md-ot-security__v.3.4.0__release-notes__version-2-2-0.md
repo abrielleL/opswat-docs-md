@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/release-notes/version-2-2-0 -->
 
-Too many requests
-# You're going a little too fast.
+# Version 2.2.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | **v2.2.0** |
+| --- | --- |
+| **Release date** | 18 September 2023 |
+| **Scope** | MetaDefender OT Security integrates with MetaDefender Industrial Firewall & IPS and My OPSWAT |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## New Features, Improvements and Enhancements
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Frelease-notes%2Fversion-2-2-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  | **Details** |
+| --- | --- |
+| **MetaDefender Industrial Firewall & IPS** **Integration** | MetaDefender OT Security can manage MetaDefender Industrial Firewall & IPS. |
+| **My OPSWAT** **Integration** | MetaDefender OT Security will send a report to My OPSWAT, providing information about the MetaDefender OT Security's status. This should include details about instance health, connection status, and the validity of licenses (whether they are valid or expired). |
+| **Enhancements** | 1. Update geographical database. 2. Improve network map (support more than 500 devices) 3. Enhance input. 4. Improve import/export data. 5. PCAP: support cancel in operation. |
+| **Performance** | Improve performance for big network. |

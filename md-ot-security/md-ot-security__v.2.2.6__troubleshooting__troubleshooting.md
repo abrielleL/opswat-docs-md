@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/troubleshooting/troubleshooting -->
 
-Too many requests
-# You're going a little too fast.
+# Create Reports
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [How to create reports](/docs/md-ot-security/v.2.2.6/troubleshooting/troubleshooting#how-to-create-reports)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender OT Security support exporting the system settings, device data that scanned/learnt or policies.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+User just need to click on save report button at the top right corner every page and then select the type of file you want to save. For the first version, we only support CSV format.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Ftroubleshooting%2Ftroubleshooting%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+After save reports successfully, all files is stored in Reports page (at the bottom right).
+
+User can check on which file you want to export. Then plug-in the USB and click on Download button.
+
+User is able to filter report file by type, downloaded date or search report file by name.

@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/operating/port-scan-rules -->
 
-Too many requests
-# You're going a little too fast.
+# Port Scan Rules
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Port Scan Rules** is accessible under **Policies > Asset Policies.**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Note: Field Purdue models are view-only.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The device type setting page is where you can:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Foperating%2Fport-scan-rules%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Set whether or not to **apply smart active scanning** to devices of that type, if yes then
+
+  - Choose if a **scan for hardware** is allowed.
+  - Choose if a **scan for OS** is allowed.
+  - Choose if a **scan for open ports** is allowed.
+
+- Set criticality of alert on unauthorized devices of that type.
+
+- Set the allowed port and allowed protocol on that port (will make an alert if the device has open ports not on the list or communicate by protocol that is not allowed on a port)

@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/siem-integrations/accounts -->
 
-Too many requests
-# You're going a little too fast.
+# Accounts
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The OPSWAT MetaDefender IT-OT Access Add-on for Splunk supports multiple accounts and the user needs to select an appropriate account when creating a new input.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Follow the steps below to configure an account:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Login to Splunk Web UI.
+2. Go to the **Configuration** page of the OPSWAT MetaDefender IT-OT Access Add-on.
+3. Click on the Account tab and start adding account details
+4. Fill in required information.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsiem-integrations%2Faccounts%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| **Input Name** | **Required** | **Description** |
+| --- | --- | --- |
+| Account Name | Yes | Any identifiable, unique name for the OPSWAT Account. This box will not accept the space in name |
+| Host | Yes | OPSWAT Server DNS name or IP Address. Make sure it’s reachable from your Splunk Heavy Forwarder |
+| OAuth Token Endpoint | Yes | OAuth token endpoint with default value “/o/oauth/token”. User can change it if the endpoint gets changed/updated anytime in the future. |
+| Client Key | Yes | Client Key from an OAuth application you registered on [MetaDefender IT-OT Access OAuth Portal](https://console.metaaccess-b.opswat.com/o/app) |
+| Client Secret | Yes | Client Secret from an OAuth application you registered on [MetaDefender IT-OT Access OAuth Portal](https://console.metaaccess-b.opswat.com/o/app) |

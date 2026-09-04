@@ -1,12 +1,31 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/enable-sdp-on-users-devices -->
 
-Too many requests
-# You're going a little too fast.
+# Enable SDP on end-user devices
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Administrators can enable SDP on end-user devices by following one of two methods.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Solution 1: Enabling SDP globally](/docs/macloud-sdp/secure-access/enable-sdp-on-users-devices#solution-1-enabling-sdp-globally)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Administrators have the option to turn on SDP for all devices within their MetaDefender IT-OT Access account.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fenable-sdp-on-users-devices%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To enable SDP globally:
+
+1. Log into MetaDefender IT-OT Access console
+2. Navigate to **Settings > Global > Device Agents**
+3. Check off **Enable SDP for all devices**.
+4. Save the changes and enter your PIN to confirm.
+
+Within a few minutes after your change, the MetaDefender Endpoint will check in with the MetaDefender IT-OT Access backend servers, note the change, and begin installing SDP for the client devices.
+
+## [Solution 2: Enabling SDP per device group](/docs/macloud-sdp/secure-access/enable-sdp-on-users-devices#solution-2-enabling-sdp-per-device-group)
+
+Administrators can gradually turn on SDP on your organization by utilizing group overrides.
+
+To enable SDP on a device group:
+
+1. Log into MetaDefender IT-OT Access console
+2. Navigate to **Inventory > Device Groups**
+3. Select a group you would like to enable SDP, and select the **Settings** tab.
+4. Toggle on the **SDP** section, and check off **Enable SDP for this group**.
+
+Within a few minutes after your change, the MetaDefender Endpoint will check in with the MetaDefender IT-OT Access backend servers, note the change, and begin installing SDP for the client devices.

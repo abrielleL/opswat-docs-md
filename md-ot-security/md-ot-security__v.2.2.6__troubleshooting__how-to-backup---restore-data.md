@@ -1,12 +1,5 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/troubleshooting/how-to-backup---restore-data -->
 
-Too many requests
-# You're going a little too fast.
+# How to backup & restore Data
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Ftroubleshooting%2Fhow-to-backup---restore-data%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Currently, if you want to make a backup of MetaDefender OT Security, you can use the feature "Create support package" with database at SETTINGS-> Support Package: Create Support Package. From the support package, we can generate an installation package that you can install/restore it on a new hardware.

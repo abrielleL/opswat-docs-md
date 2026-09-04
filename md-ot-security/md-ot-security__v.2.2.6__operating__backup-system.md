@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/operating/backup-system -->
 
-Too many requests
-# You're going a little too fast.
+# Backup System
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The **Backup System** is accessible under **Settings → Backup System**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Backup files contain all the system data, such as traffic rules, system logs, and events. The MetaDefender Industrial Firewall & IPS creates a backup automatically before all configuration changes are made. You can also create a backup on demand.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Create a backup](/docs/md-ot-security/v.2.2.6/operating/backup-system#create-a-backup)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Foperating%2Fbackup-system%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+User can create a backup by click on Snapshot button, input Comment then click Save button.
+
+## [Export a backup](/docs/md-ot-security/v.2.2.6/operating/backup-system#export-a-backup)
+
+User can export a backup by click on export button of each row, input password for backup file then click Export button.
+
+## [Apply a backup](/docs/md-ot-security/v.2.2.6/operating/backup-system#apply-a-backup)
+
+If a new configuration does not operate correctly, you can return an older configuration (rebuild). You can select a backup of this appliance or upload a configuration from a different appliance.
+
+User can click Apply button on each backup to restore a backup then click Confirm. The MetaDefender Industrial Firewall & IPS require the user to reboot to apply the backup.
+
+## [Delete a backup](/docs/md-ot-security/v.2.2.6/operating/backup-system#delete-a-backup)
+
+User can delete a backup by click on Delete button of each row, input password for backup file then clicking Confirm button.

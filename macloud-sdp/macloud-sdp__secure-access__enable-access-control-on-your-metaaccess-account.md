@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/enable-access-control-on-your-metaaccess-account -->
 
-Too many requests
-# You're going a little too fast.
+# Enable Access Control on your MetaDefender IT Access account
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This step tells MetaDefender IT-OT Access if you want to enforce device posture check for every request which is forwarded from an IdP when a user accesses to a protected application. If you have not enabled Secure Access, MetaDefender IT-OT Access just simply forwards the SAML authentication from IdP to the specified application (service provider) in the request.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To enable Secure Access,
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fenable-access-control-on-your-metaaccess-account%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Log into the MetaDefender IT-OT Access console as an administrator
+2. Navigate to **Secure Access** and then **Protected Apps**
+3. Check "**Enable secure access**".
+4. Enter your PIN to confirm the change.

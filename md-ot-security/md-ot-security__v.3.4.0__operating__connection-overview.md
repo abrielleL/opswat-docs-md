@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/operating/connection-overview -->
 
-Too many requests
-# You're going a little too fast.
+# Connection Overview
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The connections overview is accessible under **Investigate** → **Connections** → **Connection Overview.**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The connection overview provides connection statistics at a certain point in time.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The list below indicates the number of connection by protocol/service and current active connection filtered as cards.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Foperating%2Fconnection-overview%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The total connections show the amount of protocols.
+
+The user is able to search by name of protocol/service or click on “Show Connections” to see the list of connections by protocol/service.
+
+The color of connections is based on the color of protocol that can be defined at Protocol Settings.
+
+**Note:** The time number is used for connections line chart only. The load connections are used for loading total connections only.

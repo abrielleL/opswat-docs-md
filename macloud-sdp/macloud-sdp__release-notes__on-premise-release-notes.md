@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/release-notes/on-premise-release-notes -->
 
-Too many requests
-# You're going a little too fast.
+# On-Premise Release Notes
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [3.49.2 : March 26, 2025](/docs/macloud-sdp/release-notes/on-premise-release-notes#3492--march-26-2025)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+New Enhancements:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Frelease-notes%2Fon-premise-release-notes%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Added support for Proxy
+- Added support for Custom Check in policies and Custom Script in playbook
+- For more, check [here](tenant-c-release-notes).
+- Regular bug fixes.

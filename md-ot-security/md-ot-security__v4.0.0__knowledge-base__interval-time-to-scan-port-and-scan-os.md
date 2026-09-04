@@ -1,12 +1,7 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v4.0.0/knowledge-base/interval-time-to-scan-port-and-scan-os -->
 
-Too many requests
-# You're going a little too fast.
+# Interval time to scan Port and scan OS
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv4.0.0%2Fknowledge-base%2Finterval-time-to-scan-port-and-scan-os%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Choose "**Allow scan for hardware info**" if scanning for hardware is permitted. It only scans once, the first time it detects the device.
+2. Choose "**Allow scan OS**" if scanning the operating system is permitted. The scan interval is 20 minutes. The exact timing depends on the cycle of the run, calculated as "cycle time + interval time."
+3. Choose "**Allow scan port**" if scanning for open ports is permitted. The scan interval is 5 minutes. The exact timing depends on the cycle of the run, calculated as "cycle time + interval time."

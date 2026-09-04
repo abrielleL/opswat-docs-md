@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/release-notes/version-2-1-0 -->
 
-Too many requests
-# You're going a little too fast.
+# Version 2.1.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Release Notes v2.1.0](/docs/md-ot-security/v.3.4.8/release-notes/version-2-1-0#release-notes-v210)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+| **Version** | **v2.1.0** |
+| --- | --- |
+| **Release date** | 19 January 2023 |
+| **Scope** | OT Network Security Analysis and Forensic |
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [New Features, Improvements and Enhancements](/docs/md-ot-security/v.3.4.8/release-notes/version-2-1-0#new-features-improvements-and-enhancements)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Frelease-notes%2Fversion-2-1-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  | **Details** |
+| --- | --- |
+| **Network Forensic** | - Add Network Security Analysis and Forensic feature. |
+| **Operating** | - Additional protocols detection: FINS, Vnet/IP. |
+| [**Enhancements**](/docs/md-ot-security/v.3.4.8/release-notes/version-2-1-0#enhancements) | - Enhance network map UI. - Add an option to configure the number of protocols displayed in stacked area charts. - Enhance license management. - Enhance USB interaction UI. - Add MetaDefender OT Security operation time information. - Add more options of time range loading for connection alerts. - Add "Severity level for syslog message" configuration table. - Include some minor enhancements for Archive data UI. |
+| **Performance** | - Enhance some features for better performance. |
+| **Etc.** | - Include some minor improvements for better user experience. |

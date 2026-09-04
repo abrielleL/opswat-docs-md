@@ -1,12 +1,36 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/okta-idp-mfa-setup-guidegyz -->
 
-Too many requests
-# You're going a little too fast.
+# Okta Identity Engine - IdP MFA Setup Guide
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Setup Steps](/docs/macloud-sdp/secure-access/okta-idp-mfa-setup-guidegyz#setup-steps)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. In MetaDefender IT-OT Access, navigate to Secure Access > Access Methods > IdP MFA, and Enable IdP MFA
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. Copy the Entity ID, Single Sign-On Url, and download the IdP Certificate. Then navigate to your Okta Administrator account.
+3. In Okta Admin, go to “Security > Identity Providers“ to setup OPWAT’s Compliance-Based IdP MFA
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fokta-idp-mfa-setup-guidegyz%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+4. Add Identity Provider, select “SAML 2.0 IdP“ and click "Next" button
+
+5. Fill in the information with the provided metadata from MetaDefender IT-OT Access
+
+6. Keep the default configurations in the Advanced Settings
+7. Download the SAML metadata of the new IdP
+
+ _
+
+8. **Upload** the Okta Metadata in MetaDefender IT-OT Access and **Save**
+
+9. In Okta, navigate to Security > Authenticators > Setup and click "Add authenticator"
+
+9. In the Security > Authenticators, select Enrollment tab and add a new MetaDefender IT-OT Access policy
+
+- It's recommended to assign **none-admin** group in this policy before testing all the configuration and flow.
+- Need to require "MetaDefender IT-OT Access (IdP)" and "Password" and disable other authenticators
+- Keep the default rule
+
+10. Configure your Global Session Policy.
+
+- It's recommended to assign to a **none-admin group** before testing the flow and policy
+- It's recommended to require MFA at every sign in
+
+11. Test your integration

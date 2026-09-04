@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/release-notes/release-notes -->
 
-Too many requests
-# You're going a little too fast.
+# Release Notes
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | 3.4.0 |
+| --- | --- |
+| **Release date** | 06 Feb 2025 |
+| **Scope** | Enhance current features and add new features. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/md-ot-security/v.3.4.0/release-notes/release-notes#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Frelease-notes%2Frelease-notes%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  | Details |
+| --- | --- |
+| **Patching for Siemens** | Integrated patching capabilities for firmware from Siemens vendor to streamline updates and manage vulnerabilities. |
+| **Extended Role-Based Access Control (RBAC)** | Provides granular access permissions and enhanced security controls. |
+| **User Activity Logging** | Tracks and logs user activities for auditing and compliance. |
+| **Enhanced Network Views** | Displays zones, conduits, and network maps, including visualization of routers with multiple interfaces. |
+| **Enrich Device Information** | Provides detailed insights into devices behind routers for better contextual understanding. |
+| **Bulk Asset Import** | Simplifies the process of importing and managing large sets of assets. |
+| **Basic MISP Integration** | Enables ingestion of threat intelligence through integration with MISP then fetching rules to Suricata Rules. |
+| **Excessive Login Attempt Detection** | Tracks and logs user activities for PLC Siemens |
+| **Online Signature Database Updates** | Ensures the latest threat coverage by enabling online updates for signature databases. |
+| **General Improvements** | Includes various performance optimizations and bug fixes to enhance reliability and user experience. |

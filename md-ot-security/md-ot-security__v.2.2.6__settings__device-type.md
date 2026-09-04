@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/settings/device-type -->
 
-Too many requests
-# You're going a little too fast.
+# Device Type
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [Device Type Setting is accessible under Investigate -->Settings --> Device Type.](/docs/md-ot-security/v.2.2.6/settings/device-type#device-type-setting-is-accessible-under-investigate---settings----device-type)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Note: Field Purdue models is view-only.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The device type setting page is where you can:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Fsettings%2Fdevice-type%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Set whether to **apply smart active scanning** to devices of that type, if yes then
+
+  - Choose if **scan for hardware** is allowed.
+  - Choose if **scan for OS** is allowed.
+  - Choose if **scan for open ports** is allowed.
+
+- Set criticality of alert on unauthorized devices of that type.
+
+- Set the allowed port and allowed protocol on that port (will make an alert if the device has open ports not on the list or communicate by protocol that is not allowed on a port)

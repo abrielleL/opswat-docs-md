@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/operating/assets-overview -->
 
-Too many requests
-# You're going a little too fast.
+# Assets Overview
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The list of devices tab is accessible under **Assets → Asset Overview.**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The asset overview provides the device status summary and number of devices in the system.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The list below indicates the number of devices by type filtered as cards.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Foperating%2Fassets-overview%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+User is able to search device type or click on Show Assets to see the list of devices by type.
+
+**Note**: The half pie chart is same with that is in dashboard.

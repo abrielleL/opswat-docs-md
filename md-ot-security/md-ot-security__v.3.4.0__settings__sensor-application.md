@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/settings/sensor-application -->
 
-Too many requests
-# You're going a little too fast.
+# Sensor - Application
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The interval setting is accessible under **Settings > Application.**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Operations](/docs/md-ot-security/v.3.4.0/settings/sensor-application#operations)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Chart](/docs/md-ot-security/v.3.4.0/settings/sensor-application#chart)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Fsettings%2Fsensor-application%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Configure chart display.
+
+Number of protocols displayed on charts (prioritize ICS protocols)
+
+### [Other](/docs/md-ot-security/v.3.4.0/settings/sensor-application#other)
+
+Every device in the network scanned into MetaDefender OT Security will be assigned a default compulsory learning hour. After finished the learning hours, if Anomaly detection mode is not turned on, MetaDefender OT Security will or will not keep learning the device behavior afterward.

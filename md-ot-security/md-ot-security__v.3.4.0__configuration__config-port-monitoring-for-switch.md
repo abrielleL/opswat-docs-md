@@ -1,12 +1,30 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/configuration/config-port-monitoring-for-switch -->
 
-Too many requests
-# You're going a little too fast.
+# Config port mirroring for Switch
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Currently, the MetaDefender OT Security Sensor usually runs with 3 NICs, one for **Active** scanning connected to a normal port on the switch, one for **Passive** scanning that connects to a mirror port, and one for connect to the Site manager server.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Below is the example basic setup for the system with MetaDefender OT Security Sensor.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Switch Port Mirroring](/docs/md-ot-security/v.3.4.0/configuration/config-port-monitoring-for-switch#switch-port-mirroring)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Fconfiguration%2Fconfig-port-monitoring-for-switch%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+On the switch, the user has to configure a mirror port to monitor all other ports. The mirror port will copy all traffic that goes through other ports and send it back to MetaDefender OT Security.
+
+If the user configures port Fa0/1 as a mirror port, one of MetaDefender OT Security network interface cards must be connected to this mirror port for passive scanning, the second interface card can be connected to others (normal/monitored port) for active scanning.
+
+**Note:** The switch OS version can supports LLDP is better. For Calalyst 2960, the OS version must be higher than 12.2(350)
+
+Example for configuring port mirroring on Cisco switch:
+
+PowershellCopySwitch#configure
+Configuring from terminal, memory, or network [terminal]?
+Enter configuration commands, one per line. End with CNTL/Z.
+Switch(config)#
+Switch(config)#no monitor session 1
+Switch(config)#monitor session 1 source interface Fa0/2 - 48
+Switch(config)#monitor session 1 destination interface Fa0/1
+Switch(config)#end
+Switch#copy running-config startup-config
+Destination filename [startup-config]?
+Building configuration...
+[OK]

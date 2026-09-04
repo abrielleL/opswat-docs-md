@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/release-notes/version-2-2-16vk -->
 
-Too many requests
-# You're going a little too fast.
+# Version 2.2.2
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | **v2.2.2** |
+| --- | --- |
+| **Release date** | 1 September 2023 |
+| **Scope** | Add some enhancements and profiling for B&R devices. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/md-ot-security/v.3.4.0/release-notes/version-2-2-16vk#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Frelease-notes%2Fversion-2-2-16vk%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  | **Details** |
+| --- | --- |
+| **Enhancements for MetaDefender Industrial Firewall & IPS integration.** | Allow versions greater 2.2.0, My OPSWAT integration, PCAP on web. |
+| **Update geographical IP DB, OUI DB.** |  |
+| **Support more protocols.** | (CC-Link, Synchrophasor, Profinet IO). |
+| **Enhance allowlist policy.** | Add an option to check/uncheck time period for a connection in connection policy. |
+| **Add Smart profiling asset.** | Profiling for B&R devices. |

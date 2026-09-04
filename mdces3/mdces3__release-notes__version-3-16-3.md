@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/mdces3/release-notes/version-3-16-3 -->
 
-Too many requests
-# You're going a little too fast.
+# 3.16.3
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+| Release date | Version |
+| --- | --- |
+| 23rd December 2025 | 3.16.3 |
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**MetaDefender** **Cloud Email Security**™ is an advanced solution that bolsters Microsoft 365’s native email defenses with industry-leading threat prevention. It is purpose-built to detect and neutralize malware, zero-day exploits, and embedded file-based threats before they reach the inbox.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdces3%2Frelease-notes%2Fversion-3-16-3%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This solution is powered by OPSWAT’s Metascan™ Multiscanning, adding more AV (antivirus) engines, and Deep CDR™ (Content Disarm & Reconstruction) against file-based threats. With multi-layered, proactive protection, email security goes beyond signature-based detection with advanced technologies against evolving threats. Designed for seamless integration, the solution deploys rapidly without disrupting mail flow.
+
+## [Improvements & Fixes](/docs/mdces3/release-notes/version-3-16-3#improvements--fixes)
+
+### [Operational & Platform Improvements](/docs/mdces3/release-notes/version-3-16-3#operational--platform-improvements)
+
+- User Actions wizard fixes

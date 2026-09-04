@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/using-the-opswat-hosted-gateway -->
 
-Too many requests
-# You're going a little too fast.
+# Using the OPSWAT Hosted Gateway
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This section guides you how to leverage OPSWAT Hosted Gateway to protect your applications or resources without deploying extra software in your network. You can select OPSWAT Hosted Gateway through the add a protected apps workflow. If you have done so, you can skip this.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+OPSWAT Hosted Gateway is only available for Premium MetaDefender IT-OT Access license.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fusing-the-opswat-hosted-gateway%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Log into MetaDefender IT-OT Access console.
+2. Navigate to **Secure Access > Access Methods**.
+3. Select the OPSWAT Hosed Gateway. *Note: the OPSWAT Hosted Gateway is an additional purchase*. If it’s not enabled on your account, **you need to contact us to upgrade your account**.
+4. You will need to update your proxy/firewall to only allow the OPSWAT Hosted Gateway’s IP can reach to your applications.
+5. Navigate to **Secure Access > Protected Apps**.
+6. Find the application you'd like OPSWAT Hosted to access, and select the OPSWAT Hosted Gateway on the approved Gateway list under that application.

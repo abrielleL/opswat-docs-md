@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/settings/site -->
 
-Too many requests
-# You're going a little too fast.
+# Site
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Site](/docs/md-ot-security/v.2.2.6/settings/site#site)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Site settings is accessible under **Settings > Site.**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+In this section, user can create a new site for the device. The site is set to device for management.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Fsettings%2Fsite%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+User can create a new site by clicking add Create site button.
+
+After create new site, user can set this site when create or edit the device.
+
+Note: Creating a duplicate site is not allowed in the system. The error message will be shown when creating site with duplicate site name.

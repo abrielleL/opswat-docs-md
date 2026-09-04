@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/configure-access-rules -->
 
-Too many requests
-# You're going a little too fast.
+# Configure Access Rules
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender IT-OT Access supports you configure conditions to block/allow a device from accessing specific applications or any applications based on device posture status and groups. You can configure multiple access rules like you do with access control list on Firewall. MetaDefender IT-OT Access processes access rules in order to make decision on granting an access.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender IT-OT Access sets up some default access rules for your account already. You can skip this step and go back later.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fconfigure-access-rules%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+You can follow the guideline [Access rules](/docs/macloud-sdp/secure-access/access-rules) to manage access rules on your account

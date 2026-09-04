@@ -1,12 +1,14 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/set-up-an-sdp-gateway -->
 
-Too many requests
-# You're going a little too fast.
+# Set up an Secure IT Access Gateway
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+You can choose either Private Gateways or OPSWAT Hosted Gateway to protect your applications. The below guidelines walk you through steps to deploy a private gateway or enable OPSWAT Hosted Gateway on your account.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- [Deploy a private gateway with an OVA file](/docs/macloud-sdp/secure-access/deploy-a-private-gateway-with-an-ova-file)
+- [Deploy SDP Private Gateway with an AMI](/docs/macloud-sdp/secure-access/deploy-sdp-private-gateway-with-an-ami)
+- [Using the OPSWAT Hosted Gateway](/docs/macloud-sdp/secure-access/using-the-opswat-hosted-gateway)
+- [Networking Requirements](https://docs.opswat.com/macloud-sdp/secure-access/networking-requirements-for-sdp)
+- [Maintaining Gateways](https://docs.opswat.com/macloud-sdp/secure-access/maintaining-sdp-gateways)
+- [Gateway Pools](https://docs.opswat.com/macloud-sdp/secure-access/gateway-pools)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fset-up-an-sdp-gateway%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+We recommend you should deploy multiple private gateways for each gateway pool for high availability and load balancing.

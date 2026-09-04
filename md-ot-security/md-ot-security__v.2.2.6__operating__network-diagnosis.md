@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/operating/network-diagnosis -->
 
-Too many requests
-# You're going a little too fast.
+# Network Diagnosis
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The **Network Diagnosis** is accessible under **Operation Monitoring → Network Diagnosis**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+User can use the **Network Diagnostics** menu options to run tests on the MetaDefender Industrial Firewall & IPS instance.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Ping Test](/docs/md-ot-security/v.2.2.6/operating/network-diagnosis#ping-test)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Foperating%2Fnetwork-diagnosis%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Click the **Ping Test** option to run a ping test. Enter the server IP address or hostname in the **Target Address** box and click the **Ping** button. The results from the ping display.
+
+## [Trace Route](/docs/md-ot-security/v.2.2.6/operating/network-diagnosis#trace-route)
+
+Click the **Trace Route** option to display the route and time the packet took to get to its destination. It will do a maximum of 30 hops at 60 bytes per packet. Enter an IP address or hostname in the **Target Address** box and click the **Trace** button. The route is displayed.

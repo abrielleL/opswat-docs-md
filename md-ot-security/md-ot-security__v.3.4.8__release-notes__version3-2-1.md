@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/release-notes/version3-2-1 -->
 
-Too many requests
-# You're going a little too fast.
+# Version 3.2.1
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | **v3.2.1** |
+| --- | --- |
+| **Release date** | 15 Sep 2024 |
+| **Scope** | Enhance current features and add new features |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/md-ot-security/v.3.4.8/release-notes/version3-2-1#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Frelease-notes%2Fversion3-2-1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  | **Details** |
+| --- | --- |
+| **Detect the configuration and security status of Siemens PLC devices** | This feature enables users to scan Siemens Programmable Logic Controllers (PLCs) to detect their configuration settings and assess the security status. By conducting a comprehensive scan, it retrieves detailed information about the device’s current setup |
+| **Policy: Add a new policy for firmware changes** | This feature introduces a new blocklist policy that monitors devices for firmware changes. Whenever a firmware update or modification is detected, the system automatically triggers an alert, ensuring users are promptly informed of any changes that could impact device functionality or security. This policy helps maintain control over asset integrity and reduces the risk of unauthorized or unintended firmware alterations. |
+| **Upgrade vulnerabilities detection** | Upgrade the ability to detect vulnerabilities in devices. |
+| **Smart asset profiling: Add PROFINET IO (DCE/RPC)** | We now support scanning PLCs using additional protocol **PROFINET IO (DCE/RPC)** to retrieve hardware and firmware information. |
+| **Show detailed command statistics for protocols: S7comm, S7commplus, Profinet IO, Profinet DCP** | We now support to display detailed command statistics for protocols: S7comm, S7commplus, Profinet IO, Profinet DCP |

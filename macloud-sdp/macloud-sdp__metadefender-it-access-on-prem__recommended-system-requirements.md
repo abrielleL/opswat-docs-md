@@ -1,12 +1,37 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/metadefender-it-access-on-prem/recommended-system-requirements -->
 
-Too many requests
-# You're going a little too fast.
+# Recommended System Requirements for MetaDefender IT Access On Prem
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Minimum Hardware Requirement](/docs/macloud-sdp/metadefender-it-access-on-prem/recommended-system-requirements#minimum-hardware-requirement)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+| RAM | 16GB |
+| --- | --- |
+| CPU | 8vCPU |
+| Hard disk | 100GB |
+| Network ports (minimum 1Gbs) | TCP: 22, 80, 443,5000 |
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Hardware Sizing](/docs/macloud-sdp/metadefender-it-access-on-prem/recommended-system-requirements#hardware-sizing)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fmetadefender-it-access-on-prem%2Frecommended-system-requirements%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The following table shows the required specification of one server node that imports MetaDefender IT Access On Prem.
+
+| Number of Device | Up to 10,000 | 10,000 to 20,000 |
+| --- | --- | --- |
+| CPU | 8vCPU | 16vCPU |
+| RAM | 16 GB | 32 GB |
+| Hard disk capacity | 100GB | 500GB |
+
+## [Ports used](/docs/macloud-sdp/metadefender-it-access-on-prem/recommended-system-requirements#ports-used)
+
+The table below shows the default port configuration of MAOP. The listed ports must be available to start MetaDefender IT Access On Prem
+
+| Component/ Service |  | Port | Notes |
+| --- | --- | --- | --- |
+| Web Management Console | Web Management Console | TCP: 80, 443 |  |
+| SFTP | Download log | TCP: 22 |  |
+| Trigger general log | Trigger general log | TCP: 5000 |  |
+
+## [Software Version](/docs/macloud-sdp/metadefender-it-access-on-prem/recommended-system-requirements#software-version)
+
+| Name | Version | Notes |
+| --- | --- | --- |
+| OVA hardware compatible version | ESXi 8.0 and later (VM version 20) | Enable 3D Support (3D Graphics) |

@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.8/knowledge-base/troubleshoots---common-issues -->
 
-Too many requests
-# You're going a little too fast.
+# Troubleshoots - Common issues
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [System time drift - Stuck at installing a component (Enterprise Manager, Site Bundle, Network Sensor) on the ESXi host](/docs/md-ot-security/v.3.4.8/knowledge-base/troubleshoots---common-issues#system-time-drift---stuck-at-installing-a-component-enterprise-manager-site-bundle-network-sensor-on-the-esxi-host)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+System time drift can lead to fail the installation of MDOTS components. The signal to recognize it is that the installation process is hanging out too long and stop at the screen below.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+When the user is stuck at this step, please make sure the current time of the ESXi host is correct.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.8%2Fknowledge-base%2Ftroubleshoots---common-issues%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If Users do not have NTP server, users must set the time correctly with the current UTC time or Local time.
+
+#### [IP address duplication - Unstable connection between MDOTS Components](/docs/md-ot-security/v.3.4.8/knowledge-base/troubleshoots---common-issues#ip-address-duplication---unstable-connection-between-mdots-components)
+
+The unstable connection between MDOTS Components often happens when the IP address of one of them is duplicated with another device in the same network subnet

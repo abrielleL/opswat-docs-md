@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/operating/alerts -->
 
-Too many requests
-# You're going a little too fast.
+# Alerts
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Alert list page includes 3 tabs: Connection Alerts list, Asset Alerts list and Alert Overview.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+An alert overview provides alert statistics at a certain point in time.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+User is able to filter the alert status All - Unacknowledged - Unexpected - Anticipated - Resolved.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Foperating%2Falerts%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The below Alert status is same with dashboard. Please refer "Dashboard" for more detail.

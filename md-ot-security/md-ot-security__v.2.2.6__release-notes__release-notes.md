@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/release-notes/release-notes -->
 
-Too many requests
-# You're going a little too fast.
+# Release Notes
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Version 2.2.6](/docs/md-ot-security/v.2.2.6/release-notes/release-notes#version-226)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+| **Version** | **v2.2.6** |
+| --- | --- |
+| **Release date** | 16 October 2024 |
+| **Scope** | Improvement |
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [New Features, Improvements and Enhancements](/docs/md-ot-security/v.2.2.6/release-notes/release-notes#new-features-improvements-and-enhancements)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Frelease-notes%2Frelease-notes%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  | **Details** |
+| --- | --- |
+| **Modbus protocol** | Improve parsing data from the Modbus protocol |

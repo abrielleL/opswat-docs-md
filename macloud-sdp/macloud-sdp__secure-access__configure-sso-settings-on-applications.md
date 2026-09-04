@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/configure-sso-settings-on-applications -->
 
-Too many requests
-# You're going a little too fast.
+# Configure SSO settings on applications
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This step updates IdP certificate on single sign-on settings of your application in order to the application can verify user authentication results from MetaDefender IT-OT Access. Otherwise, the application couldn't trust the authentications and not let your end-user login.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**1.** Log into the MetaDefender IT-OT Access console, navigate to **Secure Access** > **Protected Apps**.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**2.** Select an application you would like to configure, select SSO Setup Instructions tab and click Download Certificate to download a self-signed certificate MetaDefender IT-OT Access generated for your account.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fconfigure-sso-settings-on-applications%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**3.** Log into your application as administrator. Navigate to single sign-on settings on your application where you set up single sign-on settings
+
+**4.** Replace the IdP certificate with OPSWAT certificate you downloaded in step 2
+
+**5.** Save your changes

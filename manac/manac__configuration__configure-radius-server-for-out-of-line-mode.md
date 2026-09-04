@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/manac/configuration/configure-radius-server-for-out-of-line-mode -->
 
-Too many requests
-# You're going a little too fast.
+# Configure RADIUS Server for Out-of-Line Mode (Not Used)
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Step-by-step guide](/docs/manac/configuration/configure-radius-server-for-out-of-line-mode#step-by-step-guide)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+If the RADIUS Server will be configured for *Direct* or *Proxy* mode, this section can be skipped.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+In the top section of the RADIUS server configuration, set the following values:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmanac%2Fconfiguration%2Fconfigure-radius-server-for-out-of-line-mode%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- **Name:** A label to help describe this RADIUS server
+- **Mode:** Proxy
+
+Under ‘Vendors’, click the green add icon to add your wireless vendor. After choosing the Vendor from the list, select “COA” as the enforcement mode.
+
+Info
+
+**Aruba Wireless** is currently the only Vendor where Out-of-Line mode is supported.
+
+## [Related articles](/docs/manac/configuration/configure-radius-server-for-out-of-line-mode#related-articles)
+
+Error rendering macro 'contentbylabel' : parameters should not be empty

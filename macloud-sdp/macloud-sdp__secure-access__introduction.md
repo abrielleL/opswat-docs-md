@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/introduction -->
 
-Too many requests
-# You're going a little too fast.
+# Introduction
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT MetaDefender IT Access is a single integrated platform to address challenges and complexities in security management. It is uniquely positioned to ensure that wherever your data is located and wherever the user is located, the access and the device will be secure and meet your security policies. Implementing secure access for remote and on-prem users, and ensuring endpoint compliance for managed, BYOD and IoT devices can take months to a year requiring senior network engineers and administrators, as well as third party consultants . [Learn more](https://www.opswat.com/solutions/secure-device-access)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Remote workers, Bring Your Own Device (BYOD) acceptance, and applications hosted in the cloud are making managing and protecting important corporate information harder than ever. OPSWAT makes it easy for you to view and control the devices that access your cloud applications and tie users to devices' ownership.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+OPSWAT MetaDefender IT Access offers the widest set of access control options before gaining access to the networks and applications.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmacloud-sdp%2Fsecure-access%2Fintroduction%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- [How it works](/docs/macloud-sdp/secure-access/how-it-works)
+- [Software Defined Perimeter (SDP)](/docs/macloud-sdp/secure-access/guideline)

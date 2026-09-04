@@ -1,12 +1,64 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.2.2.6/operating/supply-chain-violation -->
 
-Too many requests
-# You're going a little too fast.
+# Supply Chain Violation
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The supply chain violation is accessible under **Policies → Asset Policies→ Supply Chain Violation.**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The supply chain violation page contains a list of assets with country of origin of NICs (COO) policies that are not allowed to connect to the system.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Any COO that are listed in this policy will make MetaDefender OT Security trigger an alert when the asset has that COO.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.2.2.6%2Foperating%2Fsupply-chain-violation%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Each record in the asset list also contains additional rules about:
+
+- The asset type/subtype or vendor.
+- The country of origin that is not allowed.
+
+Supply chain violation policies are added manually by the user.
+
+Note: The blocklist policy can be detected even user didn’t turn on Anomaly Detection.
+
+## Actions on Supply Chain Violation policies
+
+## 1. View policy
+
+**Supply Chain** page is paginated, each page contains *20 records*, the total number of policy records is displayed at the bottom of the list.
+
+Policies are displayed in a list; each record contains the following information:
+
+- *Asset*: asset type/subtype or vendor.
+- *COO:* country of origin of NICs.
+
+## 2. Create a new policy
+
+You can create a new policy by tapping on button “+” on the top right of the Policy screen, a policy creation pop-up will appear.
+
+| **Field** | **Type of input** | **Note** |
+| --- | --- | --- |
+| Asset | Choose from drop-down list Input asset name (support searching by asset's name and IP) |  |
+| *Enable/Disable policy option* | Tap to turn on policy. | Once disabled, the policy will not be applied. |
+| *COO* | Choose from drop-down list Input country name. |  |
+| *Criticality* | Choose from drop-down list | Alert criticality. |
+
+Note: Create duplicate policy is not allowed.
+
+## 3. Edit policy
+
+You can edit a policy by tapping on “Edit” button on the right of each policy record, a policy editing pop-up will appear.
+
+In the pop-up editing, you can see the detail policy. You can edit by clicking on the field to be edited and perform input operations like when creating a policy.
+
+Note: Field IP, MAC and Source of rule are non-editable.
+
+When finished editing, click “Save” to save the changes or “Cancel” to discard all.
+
+## 4. Search policy
+
+Searching feature for policy list is located at the top of the policy page.
+
+You can search on one or more fields of the policy, just input value onto one or more fields.
+
+Click the “Clear” button to clear the values in the filters.
+
+## 5. Remove policy
+
+You can remove a policy from the list by clicking the "Delete" button on each the policy record.
