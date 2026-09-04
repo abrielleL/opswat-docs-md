@@ -1,0 +1,10 @@
+<!-- source: https://www.opswat.com/docs/fenddiode/troubleshooting-and-support -->
+
+# LED Status Indicator Lights
+
+Both the input and output sections of the diode are equipped with separate LED status indicator lights that can be used when troubleshooting a diode. The LED lights are located in four groups and have different purposes as follows:
+
+1. Power Indicator – A solid green light means that the input or output side of the diode is powered on. No light means the side of the diode does not have power.
+2. Status Indicator – These banks have three colored LED lights (red, yellow, and green). At start-up all three LEDs will be lit. As the diode boots up, the LEDs will slowly turn off in sequence. During normal operation, the green LED in each of these banks will blink.. If an error occurs, the LEDs will light up displaying a pattern indicting the error. Bank A is the status indicator bank for the input side of the diode. Bank C is the status indicator bank for the output side of the diode. For a list of status indicator patterns, See [Appendix V: Status Indicator Light Patterns](https://www.opswat.com/docs/fenddiode/appendices/appendix-v-status-indicator-light-patterns)
+3. Secondary Communication Indicator – These banks are mainly used to show the communication status of the RS485 serial port. It is occasionally used for additional Ethernet statuses beyond those indicated by the built-in Ethernet LEDs. Bank B is the secondary communication indicator bank for the input side of the diode. Bank D is the secondary communication indicator bank for the output side of the diode. For a list of status indicator patterns, See [**Appendix VI: Secondary Communication Indicator Light Patterns**](https://www.opswat.com/docs/fenddiode/appendices/appendix-vi-secondary-communication-indicator-light-patterns)
+4. Ethernet Communication Indicators – These LED lights show the connection and transmit/receive status of the Ethernet port. The green LED signifies that a successful link has been made between two devices. The amber LED blanks to signify that a transmit/receive is in progress.
