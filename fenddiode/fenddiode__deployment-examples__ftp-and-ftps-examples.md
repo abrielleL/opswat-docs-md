@@ -72,10 +72,7 @@ To add additional data security, you may wish to select FTPS mode. In order to u
 
 The following example uses OpenSSL on Linux. The same commands can be used in any operating system using OpenSSL. To generate a private key and certificate for the input side diode TCP server perform the following 3 commands, replacing file names as desired.
 
-Example 1Example 2Copyopenssl genpkey -algorithm RSA -out example.key
-openssl req -new -key example.key -out csr.pem
-openssl req -x509 -days 365 -key example.key -in csr.pem -out example.crt# Non-interactive and 10 years expiration
-openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=CommonNameOrHostname"
+Example 1Example 2Copyopenssl genpkey -algorithm RSA -out example.keyopenssl req -new -key example.key -out csr.pemopenssl req -x509 -days 365 -key example.key -in csr.pem -out example.crt# Non-interactive and 10 years expirationopenssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=CommonNameOrHostname"
 
 The second command will prompt for a few questions, this information will be visible in the certificate generated. See below for a full example of the commands above.
 

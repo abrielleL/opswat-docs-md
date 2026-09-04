@@ -1,12 +1,14 @@
 <!-- source: https://www.opswat.com/docs/fenddiode/release-notes/fend-optical-diode-v3-0-1 -->
 
-Too many requests
-# You're going a little too fast.
+# Fend Optical Diode v3.0.1
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Released: 07/28/2023
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Features/Changes:](/docs/fenddiode/release-notes/fend-optical-diode-v3-0-1#featureschanges)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Added UDP client/server support.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Ffenddiode%2Frelease-notes%2Ffend-optical-diode-v3-0-1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Fixes:](/docs/fenddiode/release-notes/fend-optical-diode-v3-0-1#fixes)
+
+1. Fixed an issue with the handling of exception code messages in Modbus RTU that could cause the diode to require a reset.
+2. Fixed an input side TCP connection message showing an invalid IP.
