@@ -1,5 +1,12 @@
 <!-- source: https://www.opswat.com/docs/fenddiode/configuration-settings -->
 
-# Diode Configuration Basics
+Too many requests
+# You're going a little too fast.
 
-This section describes what each of the diode settings in the Fend Diode configuration interface does. **Remember to click the “Save and Exit” button after making settings changes to apply changes and reboot the diode into operational mode.**
+This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+
+ Try again  [Visit DeveloperHub.io](https://developerhub.io)
+
+Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+
+Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Ffenddiode%2Fconfiguration-settings%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.

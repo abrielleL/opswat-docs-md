@@ -1,20 +1,12 @@
 <!-- source: https://www.opswat.com/docs/fenddiode/release-notes/fend-optical-diode-v4-2-7 -->
 
-# Fend Optical Diode v4.2.7
+Too many requests
+# You're going a little too fast.
 
-Released: 05/31/2026
+This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
 
-## [Features/Changes:](/docs/fenddiode/release-notes/fend-optical-diode-v4-2-7#featureschanges)
+ Try again  [Visit DeveloperHub.io](https://developerhub.io)
 
-1. Added TLS 1.3 support
-2. Added the ability for users to sync the real-time clock (RTC) time on the diode via the configuration interface.
-3. Added a Target Modbus Port field to the Modbus Device configuration panel. This allows the diode to connect to a Modbus device on a TCP port other than the default of 502.
+Scraping this site with the project owner's permission? Request a project export from the site owner instead.
 
-## [Fixes:](/docs/fenddiode/release-notes/fend-optical-diode-v4-2-7#fixes)
-
-1. Fixed an issue causing some characters in text fields to be rejected in the configuration web UI.
-2. Fixed an issue that could cause the configuration web UI to fail to communicate with the diode during a session.
-3. Fixed an issue with configuration session handling when navigating away from the tab or page.
-4. Fixed the reboot LED pattern.
-5. Fixed the cellular connection mode LED pattern (now blinking green = connecting, solid green = connected).
-6. Fixed an issue that could cause a user's static NTP server to be overwritten when in DHCP mode.
+Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Ffenddiode%2Frelease-notes%2Ffend-optical-diode-v4-2-7%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.

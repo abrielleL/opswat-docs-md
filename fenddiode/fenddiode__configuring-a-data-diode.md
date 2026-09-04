@@ -1,21 +1,12 @@
 <!-- source: https://www.opswat.com/docs/fenddiode/configuring-a-data-diode -->
 
-# Configuring a Fend Data Diode
+Too many requests
+# You're going a little too fast.
 
-This section describes how to use a web browser to log into and configure a diode.
+This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
 
-### [Required Materials](/docs/fenddiode/configuring-a-data-diode#required-materials)
+ Try again  [Visit DeveloperHub.io](https://developerhub.io)
 
-1. Fend Data Diode
-2. Two (2) diode power supplies
-3. Ethernet cable
-4. Computer with a web browser and an Ethernet port.
+Scraping this site with the project owner's permission? Request a project export from the site owner instead.
 
-### [Supported Browsers](/docs/fenddiode/configuring-a-data-diode#supported-browsers)
-
-Fend Data Diodes are compatible with the following supported browsers:
-
-- Edge
-- Chrome
-- Firefox
-- Safari
+Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Ffenddiode%2Fconfiguring-a-data-diode%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.

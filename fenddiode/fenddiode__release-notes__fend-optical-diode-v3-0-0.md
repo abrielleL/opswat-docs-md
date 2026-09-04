@@ -1,14 +1,12 @@
 <!-- source: https://www.opswat.com/docs/fenddiode/release-notes/fend-optical-diode-v3-0-0 -->
 
-# Fend Optical Diode v3.0.0
+Too many requests
+# You're going a little too fast.
 
-Released: 07/10/2023
+This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
 
-## [Features/Changes:](/docs/fenddiode/release-notes/fend-optical-diode-v3-0-0#featureschanges)
+ Try again  [Visit DeveloperHub.io](https://developerhub.io)
 
-1. Simplified the startup LED sequence and expanded startup internal hardware checks
-2. Added a continuous slow-blinking green LED in banks A and C to indicate normal operation. Please refer to the user's manual for more details under appendix IV: Status Indicator Light Patterns
+Scraping this site with the project owner's permission? Request a project export from the site owner instead.
 
-## [Fixes:](/docs/fenddiode/release-notes/fend-optical-diode-v3-0-0#fixes)
-
-1. Fixed an issue where the diode would still attempt to connect to the diagnostic server when diagnostics were turned off
+Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Ffenddiode%2Frelease-notes%2Ffend-optical-diode-v3-0-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.

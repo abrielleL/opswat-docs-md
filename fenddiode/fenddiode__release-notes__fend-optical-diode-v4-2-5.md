@@ -1,14 +1,12 @@
 <!-- source: https://www.opswat.com/docs/fenddiode/release-notes/fend-optical-diode-v4-2-5 -->
 
-# Fend Optical Diode v4.2.5
+Too many requests
+# You're going a little too fast.
 
-Released: 5/5/2025
+This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
 
-## [Features/Changes:](/docs/fenddiode/release-notes/fend-optical-diode-v4-2-5#featureschanges)
+ Try again  [Visit DeveloperHub.io](https://developerhub.io)
 
-1. Updated UI with OPSWAT branding and color scheme
+Scraping this site with the project owner's permission? Request a project export from the site owner instead.
 
-## [Fixes:](/docs/fenddiode/release-notes/fend-optical-diode-v4-2-5#fixes)
-
-1. Fixed an issue where the initial boot-up FTP, FTPS, and SFTP connection verification would not work if logs were disabled
-2. Fixed an issue with relative pathing in SFTP mode
+Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Ffenddiode%2Frelease-notes%2Ffend-optical-diode-v4-2-5%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.

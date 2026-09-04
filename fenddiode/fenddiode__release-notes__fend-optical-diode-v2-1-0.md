@@ -1,19 +1,12 @@
 <!-- source: https://www.opswat.com/docs/fenddiode/release-notes/fend-optical-diode-v2-1-0 -->
 
-# Fend Optical Diode v2.1.0
+Too many requests
+# You're going a little too fast.
 
-Released: 11/15/2022
+This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
 
-## [Features/Changes:](/docs/fenddiode/release-notes/fend-optical-diode-v2-1-0#featureschanges)
+ Try again  [Visit DeveloperHub.io](https://developerhub.io)
 
-1. Improved diode throughput by 25%.
-2. Improved and expanded diagnostic messages, providing more useful information upfront. Updated message level descriptions to "Info", "Warning", and "Error".
-3. Added sequence numbers to Modbus TCP and RTU R/R JSON outputs (AWS and TCP/JSON).
-4. Added support for Modbus exception codes and timeout communications. The diode now sends exception codes and timeouts to the output side, displays an exception code when input side is down, displays exception codes when target device is down. Please refer to the user's manual for more details under "Example 2: Diode Settings for Modbus TCP Request/Response to Modbus TCP (Passthrough Mode)"
+Scraping this site with the project owner's permission? Request a project export from the site owner instead.
 
-## [Fixes:](/docs/fenddiode/release-notes/fend-optical-diode-v2-1-0#fixes)
-
-1. Fixed an issue where the Bank B green LED did not blink properly during data transmission in config mode.
-2. Improved the process for setting the factory restore point for users upgrading from FW 1.0.X. See user's manual section "Resetting your Diode (5-Series)" for more details.
-3. Fixed an issue with oversized certs and clearing of certs on both input and output side.
-4. Fixed an issue where the output side power LED would not clear properly.
+Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Ffenddiode%2Frelease-notes%2Ffend-optical-diode-v2-1-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.

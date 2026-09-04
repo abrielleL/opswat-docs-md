@@ -1,14 +1,12 @@
 <!-- source: https://www.opswat.com/docs/fenddiode/release-notes/fend-optical-diode-v4-0-3 -->
 
-# Fend Optical Diode v4.0.3
+Too many requests
+# You're going a little too fast.
 
-Released: 03/29/2024
+This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
 
-## [Fixes:](/docs/fenddiode/release-notes/fend-optical-diode-v4-0-3#fixes)
+ Try again  [Visit DeveloperHub.io](https://developerhub.io)
 
-1. Fixed a UI issue where the user could input a Modbus register count in increments that were not compatible with the selected data type.
-2. Added a UI warning that initiating a firmware update will cause any unsaved changes to settings to be lost.
-3. Added a UI warning if communication with diode fails or is lost during a session.
-4. Added a UI warning about the implications of changing the input side IP address from static to DHCP.
-5. Fixed an issue where rebooting only the output side of the diode while data was streaming from the input side could cause the output side to keep rebooting until the input side was also powered down. This no longer happens.
-6. Fixed an issue in the BACnet MSTCP JSON formatting.
+Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+
+Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Ffenddiode%2Frelease-notes%2Ffend-optical-diode-v4-0-3%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
