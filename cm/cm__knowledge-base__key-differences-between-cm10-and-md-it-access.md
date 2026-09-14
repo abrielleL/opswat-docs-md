@@ -2,7 +2,7 @@
 
 # Key Differences Between My OPSWAT Central Management and MetaDefender IT Access
 
-We are excited to introduce an enhanced version of MetaDefender IT Access: My OPSWAT Central Management. It is built upon the great features of all all predecessors, MetaDefender IT Access and previous Central Management platform, and brings several enhancements in performance, security, and management capabilities.
+We are excited to introduce an enhanced version of MetaDefender IT Access: **My OPSWAT Central Management**. It is built upon the great features of all all predecessors, MetaDefender IT Access and previous Central Management platform, and brings several enhancements in performance, security, and management capabilities.
 
 Here’s a comparison to help you understand the key differences between My OPSWAT Central Management and MetaDefender IT Access:
 
@@ -13,8 +13,8 @@ Here’s a comparison to help you understand the key differences between My OPSW
 
 **2. Enhanced Dashboards and Reports**
 
-- MetaDefender IT Access: The reporting and dashboard features were limited in secure access, device compliance and endpoint security.
-- My OPSWAT Central Management: Benefit from **enhanced dashboards and reporting capabilities**, offering a global view for solutions that you deployed. You can now easily visualize security risks and trends to make more informed decisions.
+- **MetaDefender IT Access:** The reporting and dashboard features were limited in secure access, device compliance and endpoint security.
+- **My OPSWAT Central Management**: Benefit from **enhanced dashboards and reporting capabilities**, offering a global view for solutions that you deployed. You can now easily visualize security risks and trends to make more informed decisions.
 
 **3. License Management**
 

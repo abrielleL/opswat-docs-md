@@ -6,7 +6,7 @@ My OPSWAT Central Management offers an integration with a 3rd-party Single Sign-
 
 My OPSWAT Central Management uses the secure and widely adopted industry standard Security Assertion Markup Language 2.0 (SAML 2.0), so that you can integrate easily with any large identity provider that supports SAML 2.0.
 
-**To get started, log into Microsoft Entral ID Portal and create an application for** **My OPSWAT Central Management** **. Details can be found **[**here**](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-single-sign-on-non-gallery-applications)**.**
+**To get started, log into Microsoft EntraID Portal and create an application for** **My OPSWAT Central Management** **. Details can be found **[**here**](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-single-sign-on-non-gallery-applications)**.**
 
 1. Log into Azure Portal as an administrator
 2. Navigate to **Azure Active Directory** > **Enterprise applications**
@@ -70,13 +70,9 @@ My OPSWAT Central Management uses the secure and widely adopted industry standar
 
 **Log in to the** **My OPSWAT Central Management** **Console from Microsoft Azure**
 
-Log in to the Azure portal using this link: [https://myapps.microsoft.com](https://myapps.microsoft.com). Click on the My OPSWAT Central Management application, which the admin previously configured, to access the MD IT-OT Access Console.
+Log in to the Azure portal using this link: [https://myapps.microsoft.com](https://myapps.microsoft.com). Click on the My OPSWAT Central Management application, which the admin previously configured, to access the My OPSWAT Central Management Console.
 
-![](https://uploads.developerhub.io/prod/97qW/wnts0fvnv5kugdca3r7glk23x6zrjyu2dmsrbzjui2nacmxp4aty94vzj86z5pxw.png)
-
-**DONE.**
-
-If You couldn't import the identity provider information from the IdP metadata file, you can get information from the Set up instruction page of the app and copy IdP certificate, Issuer, and IdP SSO URL to the My OPSWAT Central Management console.
+If you couldn't import the identity provider information from the IdP metadata file, you can get information from the Set up instruction page of the app and copy IdP certificate, Issuer, and IdP SSO URL to the My OPSWAT Central Management console.
 
 ### IDP Mappings
 

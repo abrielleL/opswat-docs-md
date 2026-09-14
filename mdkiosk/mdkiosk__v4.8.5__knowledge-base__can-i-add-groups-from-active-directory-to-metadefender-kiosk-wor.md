@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/can-i-add-groups-from-active-directory-to-metadefender-kiosk-wor -->
 
-Too many requests
-# You're going a little too fast.
+# Can I add groups from Active Directory to MetaDefender Kiosk Workflow Profiles?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Kiosk V4 releases deployed on Windows or Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Yes, you can.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To add user groups from **Active Directory** to MetaDefender Kiosk **Workflow Profiles**, please follow the instructions below.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fcan-i-add-groups-from-active-directory-to-metadefender-kiosk-wor%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Connect to an Active Directory via the **MetaDefender Kiosk Management Console>Workflows>Employee Workflows>User Authentication Method**, as illustrated in the screenshot below:
+
+Please Note:
+
+The user will need read/write rights on Active Directory in order to effect these changes.
+
+2. Create or edit a Workflow via the **MetaDefender Kiosk Management Console** > **Workflows** tab, as illustrated in the screenshot below:
+
+3. Add groups by selecting them from the list and clicking the **Add** button.
+
+Support:
+
+If you have followed all of the steps above but are still unable to **Add Groups from Active Directory to MetaDefender Kiosk Workflow Profiles**, please follow these instructions on [How To Create a Support Package](/docs/mdkiosk/v4.8.5/knowledge-base/how-do-i-create-a-support-package-for-metadefender-kiosk-), before [creating a support case or chatting with our support engineer](https://my.opswat.com/portal/support).

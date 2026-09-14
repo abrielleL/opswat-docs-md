@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/why-i-am-getting-error-removing-item-from-smb-server-when-using- -->
 
-Too many requests
-# You're going a little too fast.
+# Why I am getting error removing item from SMB server when using SMB pull job?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When executing an SMB pull job in MetaDefender Managed File Transfer (MFT) versions **3.8.1 to 3.9.1**, you may encounter the following error message in the job log: ”Error removing item: <filename>
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Error deleting files on source”
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2Fwhy-i-am-getting-error-removing-item-from-smb-server-when-using-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This occurs even if the SMB pull job itself is successful.
+
+## [Cause:](/docs/mdmft/v3.11.4/knowledge-base/why-i-am-getting-error-removing-item-from-smb-server-when-using-#cause)
+
+This issue is caused by a bug in MFT versions **3.8.1 to 3.9.1**, where the system fails to remove successfully transferred files from the SMB source as expected.
+
+## [Fix:](/docs/mdmft/v3.11.4/knowledge-base/why-i-am-getting-error-removing-item-from-smb-server-when-using-#fix)
+
+This issue has been identified and is scheduled to be fixed in MFT version 3.9.3, which is targeted for release by late April 2025.
+
+Support:
+
+If **Further Assistance** is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/support).

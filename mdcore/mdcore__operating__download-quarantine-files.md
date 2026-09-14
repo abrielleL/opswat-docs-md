@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mdcore/operating/download-quarantine-files -->
 
-Too many requests
-# You're going a little too fast.
+# Download quarantine files
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Please refer to this page for an overview of the [Quarantine](/docs/mdcore/configuration/quarantine) feature
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This section provides guidance on how to save or download quarantined files for further investigation.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Navigate to **History > Quarantine**, select the file you wish to download, and click the **“…”** button. You will be presented with the following options:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Foperating%2Fdownload-quarantine-files%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- **Save:** The file is downloaded directly in its original format without password protection. For example, if the file is a PDF, it will be downloaded as a standard PDF file.
+- **Save with Password:** The file is downloaded as a password-protected ZIP archive. You will be required to enter a password during the download process and use the same password to decrypt the file later. This option helps reduce the risk of accidental execution on the user’s machine and prevents unintended actions.
+
+Info
+
+Password only accept these characters (same as export settings) **Alphanumeric**: A-Z, a-z, 0-9 **Special characters**: `~`!@#$%^&*()-_=+[]{}':<>,".;?/\|` and space.
+
+Warning
+
+Please note that when using the **“Save with Password”** option, the file may take several minutes to complete the encryption process. During this time, please do not close the pop-up window. If the window is closed, the process will be interrupted, and you will need to restart it from the beginning when attempting to download the file again.

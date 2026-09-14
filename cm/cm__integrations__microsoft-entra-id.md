@@ -4,9 +4,9 @@
 
 My OPSWAT Central Management features an integration with Microsoft Entra ID (formerly Azure Active Directory) that can be found under **Secure Access > Access Methods > Microsoft Entra ID**.
 
-> **Check Your Product:**
+> **Check Your Product**
 >
-> The integration with Microsoft Entra ID applies to the current MetaDefender IT Access Console and MetaDefender Endpoint releases deployed on Windows, macOS and Linux systems.
+> The integration with Microsoft Entra ID applies to the current My OPSWAT Central Management Console and MetaDefender Endpoint releases deployed on Windows, macOS and Linux systems.
 
 When enabled, My OPSWAT Central Management facilitates the established integration to propagate the compliant status of devices assessed by our system to organizations' Microsoft Entra ID, ensuring secure access to Microsoft services.
 

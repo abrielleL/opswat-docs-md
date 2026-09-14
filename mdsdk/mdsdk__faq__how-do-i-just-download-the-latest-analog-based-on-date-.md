@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/faq/how-do-i-just-download-the-latest-analog-based-on-date- -->
 
-Too many requests
-# You're going a little too fast.
+# How do I just download the latest analog based on Date?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To download the latest file only if it has been modified since a specific date, use the `If-Modified-Since` command. Cache the previous date, and the server will download the file only if it has been updated since that date.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Note**: If the specified date is in the future, the file will always be downloaded. The date must fall between the current time and the file's last modified time.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Use the following `curl` command:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Ffaq%2Fhow-do-i-just-download-the-latest-analog-based-on-date-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+BashCopycurl -v -L -O -H "If-Modified-Since: Thu, 17 Jul 2024 16:00:00 GMT"

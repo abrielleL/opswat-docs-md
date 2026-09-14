@@ -1,12 +1,36 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/scan-files -->
 
-Too many requests
-# You're going a little too fast.
+# Scanning and Rescanning Files
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Scanning files can detect potential threats.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Automatic Scanning](/docs/mdmft/v3.11.4/end-user-guide/scan-files#automatic-scanning)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fscan-files%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+MetaDefender Managed File Transfer™ automatically scans uploaded files to detect potential threats.
+
+- Scanning occurs automatically during file uploads
+- Periodic rescans may also be performed by the MetaDefender® MFT application, depending on the system settings.
+
+During the scan process, the status will display as "Scanning" in the "Processing State" column.
+
+---
+
+### [Manual Rescanning](/docs/mdmft/v3.11.4/end-user-guide/scan-files#manual-rescanning)
+
+You can manually rescan files any time.
+
+Rescan suspicious files
+
+To ensure file security, rescan files manually that have been uploaded a long time ago or files you suspect may contain threats.
+
+1. Click on the three-dot menu and select "Rescan."
+
+2. A message and the "Processing State" column will indicate that the rescan has started.
+
+---
+
+Info
+
+The [scan results](/docs/mdmft/v3.11.4/end-user-guide/scan-results) will be displayed in the table and on the [File information](/docs/mdmft/v3.11.4/end-user-guide/file-information) page.

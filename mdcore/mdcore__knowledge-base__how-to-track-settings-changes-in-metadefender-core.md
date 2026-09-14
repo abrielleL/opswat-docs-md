@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/how-to-track-settings-changes-in-metadefender-core -->
 
-Too many requests
-# You're going a little too fast.
+# How to track Settings changes in MetaDefender Core
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Overview](/docs/mdcore/knowledge-base/how-to-track-settings-changes-in-metadefender-core#overview)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+This article explains how to track settings changes in MetaDefender Core.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fhow-to-track-settings-changes-in-metadefender-core%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+For example: enabling **Session timeout** in Settings > Security:
+
+## [Steps to Configure](/docs/mdcore/knowledge-base/how-to-track-settings-changes-in-metadefender-core#steps-to-configure)
+
+- Such changes can be tracked on the UI > History > [Configuration history](https://www.opswat.com/docs/mdcore/operating/dashboard#configuration-history):
+
+- Admins can also [setup a remote syslog server](https://www.opswat.com/docs/mdcore/configuration/advanced-log-configuration#syslog-settings), and this change will show up as:
+
+Value changed, key='/admin/config/session', parameter='absoluteSessionTimeout', old='0', new='300000', user='LOCAL/admin'
+## [Verify the Change](/docs/mdcore/knowledge-base/how-to-track-settings-changes-in-metadefender-core#verify-the-change)
+
+- After setting up syslog server, make some configuration changes and observe if the syslog server records these changes.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chat with our support engineer](https://my.opswat.com/support).

@@ -1,12 +1,32 @@
 <!-- source: https://www.opswat.com/docs/mdicap/v5.14.1/installation/general-cloud-considerations -->
 
-Too many requests
-# You're going a little too fast.
+# General Cloud Considerations
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+When deploying to any Cloud Service Provider (CSP), consider these general recommendations:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Roles/Permissions](/docs/mdicap/v5.14.1/installation/general-cloud-considerations#rolespermissions)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The Principle of Least Privilege (PoLP) is a foundational cybersecurity concept. It entails granting users, applications, and systems only the minimum access necessary to perform their tasks.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdicap%2Fv5.14.1%2Finstallation%2Fgeneral-cloud-considerations%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This approach minimizes the potential attack surface, mitigates risks associated with insider threats, and helps prevent privilege creep. When deploying OPSWAT products, **OPSWAT recommends** adhering to this principle.
+
+Regarding access to applications or API endpoints, generate **strong passwords** for UI access.
+
+Store the **API keys** required to access the API endpoints of the various products in a secure secrets manager.
+
+## [VPC/Networking](/docs/mdicap/v5.14.1/installation/general-cloud-considerations#vpcnetworking)
+
+OPSWAT recommends following networking best practices when deploying products:
+
+- Multi-AZ Deployment
+
+  - Distribute resources across multiple Availability Zones (AZs) to enhance fault tolerance and availability. OPSWAT products are designed to run in different AZs simultaneously.
+- Security Groups
+
+  - These act as virtual firewalls to control inbound and outbound traffic. Follow the system requirements for each OPSWAT product to open the necessary ports.
+- IP Address Planning
+
+  - Allocate CIDR blocks thoughtfully to avoid overlaps, especially when integrating with on-premises networks.
+- Subnet Segmentation
+
+  - Use distinct subnets to separate public-facing resources (MDSS UI) from private resources (MDSS PostgreSql database server).

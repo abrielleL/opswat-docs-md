@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/knowledge-base/how-to-differentiate-between-values--0-and-1--for-the--download- -->
 
-Too many requests
-# You're going a little too fast.
+# How to differentiate between values (0 and 1) for the "download" Parameter in the "GetLatestInstaller" Method?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The OPSWAT SDK includes patching capabilities to help ensure third-party applications remain secure and up to date. This document explains the two supported patching methods provided by the SDK, enabling developers and integrators to choose the approach that best fits their environment and update workflow.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Patching Methods](/docs/mdsdk/knowledge-base/how-to-differentiate-between-values--0-and-1--for-the--download-#patching-methods)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The patching functionality in the OPSWAT SDK is controlled by the `download` parameter, which determines how update packages are handled.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Fknowledge-base%2Fhow-to-differentiate-between-values--0-and-1--for-the--download-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+### [1. `download=0` – Link Only Mode](/docs/mdsdk/knowledge-base/how-to-differentiate-between-values--0-and-1--for-the--download-#1-download0--link-only-mode)
+
+This mode returns the download URL for the installer but does **not** download the file itself.
+
+- **Use Case**: When you want to manually handle the installer download or store the link for later use.
+- **Note**: This mode is **not supported for Microsoft Office products**. Attempting to use `download=0` with Office will result in an error response.
+
+*Result returned for non-MS Office product with download=0*
+
+*Error returned for MS Office product with download=0*
+
+### [2. `download=1` – Full Download Mode](/docs/mdsdk/knowledge-base/how-to-differentiate-between-values--0-and-1--for-the--download-#2-download1--full-download-mode)
+
+This mode fully retrieves the installer by downloading it along with any necessary update information.
+
+- **Use Case**: Recommended for most third-party applications where automatic downloading is required.
+- **Note**: This mode **is supported** for Microsoft Office products.
+
+By understanding these patching mechanisms, users can efficiently manage third-party application updates through the OPSWAT SDK depending on their usage requirements.

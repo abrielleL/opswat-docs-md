@@ -1,12 +1,28 @@
 <!-- source: https://www.opswat.com/docs/mdemail/operating/user-based-licensing -->
 
-Too many requests
-# You're going a little too fast.
+# User based licensing
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Email Gateway Security won’t apply any processing (not even bypassed disclaimers, for details see [Configuration/Policy](/docs/mdemail/configuration/policy)) to emails that are to be delivered to email addresses that are not licensed.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Synchronization to Active Directory](/docs/mdemail/operating/user-based-licensing#synchronization-to-active-directory)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+With synchronization users that have been removed from the Active Directory can get unlicensed from Email Gateway Security.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Foperating%2Fuser-based-licensing%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+### [Scheduled](/docs/mdemail/operating/user-based-licensing#scheduled)
+
+For details see [Configuration/Settings](/docs/mdemail/configuration/settings).
+
+### [On-demand](/docs/mdemail/operating/user-based-licensing#on-demand)
+
+To synchronize licensed users with Active Directory click the *Synchronize licensed users* button under **License**.
+
+## [Automated user management](/docs/mdemail/operating/user-based-licensing#automated-user-management)
+
+To manage users automatically in Email Gateway Security we recommend the following:
+
+1. Assign license to users automatically (for details see [Configuration/Settings](/docs/mdemail/configuration/settings))
+2. Synchronize licensed users with Active Directory (for details see [Configuration/Settings](/docs/mdemail/configuration/settings))
+
+User management in Active Directory
+
+Using the settings above users can be managed in Active Directory. Only the exceptions need to be managed in Email Gateway Security directly.

@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/newsletter/april-2026 -->
 
-Too many requests
-# You're going a little too fast.
+# April 2026
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [OPSWAT Endpoint Security Certification Awards April 2026](/docs/mdsdk/newsletter/april-2026#opswat-endpoint-security-certification-awards-april-2026)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+#### [Congratulations to the new Gold-certified partners for April!](/docs/mdsdk/newsletter/april-2026#congratulations-to-the-new-gold-certified-partners-for-april)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Fnewsletter%2Fapril-2026%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| **Vendor** | **Product** | **Platform** | **Version** | **Award Category** | **Award Level** |
+| --- | --- | --- | --- | --- | --- |
+| FortiNet | FortiClient | Windows | 7.4.6.2001 | Anti-malware | Gold |
+| Rapid7 | Rapid7 NGAV | macOS | 4.0.21.47 | Anti-malware | Gold |

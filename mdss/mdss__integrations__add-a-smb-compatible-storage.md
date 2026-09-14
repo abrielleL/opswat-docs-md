@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/mdss/integrations/add-a-smb-compatible-storage -->
 
-Too many requests
-# You're going a little too fast.
+# Add an SMB-Compatible Storage
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Product Specification Requirements | Version |
+| --- | --- |
+| Service Message Block (SMB) protocol | SMB 3.1.1 (or SMB3) SMB 2.0.2 (or SMB2) |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Integration with SMB Compatible Storage is currently accomplished via the Service Message Block (SMB) TCP protocol. Before you begin, you should ensure that this protocol is enabled on your computer.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fintegrations%2Fadd-a-smb-compatible-storage%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Please choose your deployment type:
+
+- [Add an SMB-Compatible unit in Windows deployments](/docs/mdss/integrations/add-an-smb-compatible-unit-in-windows-deployments)
+- [Add an SMB-Compatible unit in Linux deployments](/docs/mdss/integrations/how-to-add-a-smb-share-as-a-nfs-storage)

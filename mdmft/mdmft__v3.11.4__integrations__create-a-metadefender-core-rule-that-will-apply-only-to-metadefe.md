@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/integrations/create-a-metadefender-core-rule-that-will-apply-only-to-metadefe -->
 
-Too many requests
-# You're going a little too fast.
+# Creating a MetaDefender Core rule for MetaDefender Managed File Transfer
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To fine-tune the integration between MetaDefender Managed File Transfer™ and MetaDefender Core™, create a security rule in MetaDefender Core™ that applies to all files uploaded to MetaDefender Managed File Transfer™.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Creating a rule only for MetaDefender Managed File Transfer](/docs/mdmft/v3.11.4/integrations/create-a-metadefender-core-rule-that-will-apply-only-to-metadefe#creating-a-rule-only-for-metadefender-managed-file-transfer)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fintegrations%2Fcreate-a-metadefender-core-rule-that-will-apply-only-to-metadefe%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. In the "MetaDefender Core™ Management Console," go to "Policy" → "Security Rules" → "Workflow rules" → "Add new rule."
+2. Name the rule and choose your desired workflow.
+3. In the "Limit to specified user agents" field, enter "mft" and click "Add."
+4. Complete the other settings and click "Save."
+5. Reorder the rules so the new rule is at the top (each rule is processed in order).
+
+You can now upload files in MetaDefender Managed File Transfer™ and verify that they are processed using your new rule.

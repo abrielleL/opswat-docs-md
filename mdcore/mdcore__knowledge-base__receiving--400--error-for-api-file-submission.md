@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/receiving--400--error-for-api-file-submission -->
 
-Too many requests
-# You're going a little too fast.
+# Why am I receiving a “400” error for API file submission?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+When submitting files to a MetaDefender Core instance users might experience a 400 API error response. One of the reasons for this behavior might be related to an incomplete URL format.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Please make sure that you specify the port in your API call (default 8008 or whatever port is set-up on the deployment)**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+For additional information on API calls please use the documentation material below.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Freceiving--400--error-for-api-file-submission%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+[POST - Analyze File (Asynchronous mode)](/docs/mdcore/metadefender-core#fileanalysispost)
+
+Support
+
+If you are a **MetaDefender Core Custom** customer, OPSWAT highly recommends that you contact OPSWAT Support for expert guidance through the upgrade process. [Create a support case or chat with our support engineer](https://my.opswat.com/portal/support) to get in touch with our team.

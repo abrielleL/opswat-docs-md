@@ -41,19 +41,19 @@ https://gears.opswat.com/o/api/v2.6/devices/:value
 | Key | Datatype | Description |
 | ---- | ---- | ---- |
 | hwid | string | Hardware ID of the device |
-| status | int | Reports the health status of the device. This status is based on the defined policy within MetaAccess. Value could be: - **0** – the endpoint is in compliance with MetaAccess account’s policies - **1** – the endpoint is **not** in compliance with MetaAccess account’s policies - **3** – the endpoint is still sending information to MetaAccess and not yet completed |
-| critical_issue | int | This critical status is based on the defined policy within MetaAccess. This status apply for the whole device. Value could be: - **0** – the endpoint doesn't have critical issues - **1** – the endpoint has critical issues |
+| status | int | Reports the health status of the device. This status is based on the defined policy within My OPSWAT Central Management. Value could be: - **0** – the endpoint is in compliance with My OPSWAT Central Management     account’s policies - **1** – the endpoint is **not** in compliance with My OPSWAT Central Management account’s policies - **3** – the endpoint is still sending information to My OPSWAT Central Management and not yet completed |
+| critical_issue | int | This critical status is based on the defined policy within My OPSWAT Central Management. This status apply for the whole device. Value could be: - **0** – the endpoint doesn't have critical issues - **1** – the endpoint has critical issues |
 | total_issue | int | Number of issues were seen on the device |
 | total_critical_issue | int | Number of critical issues were seen on the device |
 | exempt | int | Exempt status of the device. Value could be: - **0** – Endpoint device is not exempted - **1** – Endpoint device is exempted |
 | agent_type | string | (optional) Agent type that runs on the device. Value can be **managed** or **guest** |
 | hostname | string | Hostname of the device. This field will be remove if it's a non-collectible to each fields which related to privacy. |
-| nickname | string | MetaAccess UI nickname for the device (admin editable) |
+| nickname | string | My OPSWAT Central Management UI nickname for the device (admin editable) |
 | country | string | Region where the device IP geographically represents |
 | machine_type | string | The type of devices |
-| agent_version | string | Local resident MetaAccess agent version |
+| agent_version | string | Local resident MetaDefender Endpoint version |
 | active | int | - 1: device is active - 0: device is deactive |
-| last_seen | string | The last timestamp when MetaAccess agent reports data to the Cloud, (GMT format) |
+| last_seen | string | The last timestamp when MetaDefender Endpoint reports data to the Cloud, (GMT format) |
 | user | string | Username of a group |
 | user_info | object | User information block |
 | user_info.username | string | username who currently logs in. This field will be removed if it's set as privacy |
@@ -61,7 +61,7 @@ https://gears.opswat.com/o/api/v2.6/devices/:value
 | remediation_link | string | remediation page URL of the given device |
 | applications | array<object> | Details of each posture category |
 | applications.category | string | category which the current block stands for |
-| applications.critical_status | int | This critical issue status is based on the defined policy within MetaAccess. This critical issue status apply for each category. Value could be: - **0** – good (blue) if this category is healthy AND the box in Configuration is checked - **1** – bad (red) if the category is healthy AND the box in Configuration is checked. - **-1** – If the box in Configuration is not checked |
+| applications.critical_status | int | This critical issue status is based on the defined policy within My OPSWAT Central Management. This critical issue status apply for each category. Value could be: - **0** – good (blue) if this category is healthy AND the box in Configuration is checked - **1** – bad (red) if the category is healthy AND the box in Configuration is checked. - **-1** – If the box in Configuration is not checked |
 | applications.has_issue | int | 0 - no issue, 1 - out of compliance |
 | applications.has_critical_issue | int | 0 - no critical issue, 1 - has critical issue |
 | applications.apps | array<object> | detailed products in a category |

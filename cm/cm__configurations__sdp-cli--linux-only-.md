@@ -21,7 +21,7 @@ This command will notify the user that SDP is **connecting**, and then when it c
 
 ## Local Users
 
-If the user is defined as an end-user directly in the MetaDefender IT-OT Access UI, they will need to use Cognito authentication.
+If the user is defined as an end-user directly in the My OPSWAT Central Management UI, they will need to use Cognito authentication.
 
 ```bash
 sdp connect cognito -s STAGE_URL -a ACCOUNT -u EMAIL [ -p PASSWORD ]
@@ -36,7 +36,7 @@ sdp connect cognito -s https://api-us.sdp.opswat.com -a AAAAAAAA -u example@exam
 - `STAGE_URL` is which MA/Secure IT Access stage is being targeted.
   - For most customers this is probably [https://api-us.sdp.opswat.com](https://api-us.sdp.opswat.com/)
   - For customers in the EU this is probably [https://api-eu.sdp.opswat.com](https://api-eu.sdp.opswat.com)
-- `ACCOUNT` is the MetaDefender IT-OT Access registration code.
+- `ACCOUNT` is the My OPSWAT Central Management registration code.
   - The registration code is listed in the MA UI under **Settings > Global > Account**
 - `EMAIL` is the email of the user
 - `PASSWORD` is required, but if omitted the user will be prompted at the command line such that the characters are obscured to avoid leaking plaintext passwords in the shell
@@ -59,7 +59,7 @@ After running this command, the user should be able to use the local cognito com
 
 ## Remediation Required
 
-The most common error is that the user is not compliant with all configured MetaDefender IT-OT Access policies. This results in status messages like:
+The most common error is that the user is not compliant with all configured My OPSWAT Central Management policies. This results in status messages like:
 
 ```bash
 Failure Reason=AccessBlocked

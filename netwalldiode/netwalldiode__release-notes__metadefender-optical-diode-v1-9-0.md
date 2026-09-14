@@ -1,12 +1,35 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/release-notes/metadefender-optical-diode-v1-9-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.9.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | Config: 1.9.0; OD-102: 1.0.2 |
+| --- | --- |
+| **Release date** | Apr 2025 |
+| **Scope** | File Transfer and Aveva PI improvements |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/netwalldiode/release-notes/metadefender-optical-diode-v1-9-0#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+|  | Details |
+| --- | --- |
+| **File Transfer improvement; Mixed protocols** | As long as the channel number is the same, user can choose any file transfer protocol we support in BLUE and RED. In the past this was forced to be same file transfer protocol for a given channel |
+| **FIle Tranfser; Distribute Files Shares support** | MetaDefender Optical Diode now supports DFS on the Windows Share file transfer protocol |
+| **File Transfer SFTP** | Added support to preserver timestamp |
+| **Aveva PI Improvements** | Several improvemnets have been added to Aveva PI support, like add Stats prepend field, to choose to prepend a unique value to stats and improvements on History |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Frelease-notes%2Fmetadefender-optical-diode-v1-9-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Bug fixes](/docs/netwalldiode/release-notes/metadefender-optical-diode-v1-9-0#bug-fixes)
+
+|  | Details |
+| --- | --- |
+| **Bugfixing** | Minor bugfixing |
+
+## [Security](/docs/netwalldiode/release-notes/metadefender-optical-diode-v1-9-0#security)
+
+|  | Details |
+| --- | --- |
+| **Security fixes** | Security fixes in the Web UI, in both BLUE and RED |
+
+## [Known limitations](/docs/netwalldiode/release-notes/metadefender-optical-diode-v1-9-0#known-limitations)
+
+N/A
+
+MetaDefender

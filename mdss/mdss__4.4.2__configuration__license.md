@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/license -->
 
-Too many requests
-# You're going a little too fast.
+# License
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+A MetaDefender Storage Security license contains the following fields
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Flicense%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| **Field** | **Description** |
+| --- | --- |
+| Deployment ID | A uniquely generated value that identifies your deployment. |
+| Product ID | A unique product identifier |
+| Expiration Date | The date until your license is valid |
+| Name | The name of the license |
+| Activation Key | The key with which the license is activated |

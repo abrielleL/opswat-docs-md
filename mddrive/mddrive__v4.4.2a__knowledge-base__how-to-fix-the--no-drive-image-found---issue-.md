@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/knowledge-base/how-to-fix-the--no-drive-image-found---issue- -->
 
-Too many requests
-# You're going a little too fast.
+# How to fix the "No drive image found " issue?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Overview**:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This error typically occurs when there is an issue downloading the MetaDefender Drive version. The image may become corrupted due to network-related problems, causing the download to fail or complete improperly.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Cause**:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fknowledge-base%2Fhow-to-fix-the--no-drive-image-found---issue-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The most common cause of this error is a corrupted image file, often resulting from network disruptions or instability during the download process.
+
+**Solution:**
+
+1. **Retry Downloading the MetaDefender Drive Image**:
+
+   - Attempt to download the MetaDefender Drive image again. Make sure your network connection is stable throughout the download process.
+2. **Use a Different Network:**
+
+   - If the issue persists, try downloading the image using a different network—such as switching from Wi-Fi to Ethernet or using another Wi-Fi source.
+   - A more stable network connection may help prevent image corruption due to intermittent connectivity issues.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support). Our support team will provide the necessary guidance to help resolve the issue.

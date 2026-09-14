@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/newsletter/september-2025 -->
 
-Too many requests
-# You're going a little too fast.
+# September 2025
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [OPSWAT Endpoint Security Certification Awards September 2025](/docs/mdsdk/newsletter/september-2025#opswat-endpoint-security-certification-awards-september-2025)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+#### [Congratulations to all the new Gold-certified partners for September!](/docs/mdsdk/newsletter/september-2025#congratulations-to-all-the-new-gold-certified-partners-for-september)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Fnewsletter%2Fseptember-2025%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| **Vendor** | **Product** | **Platform** | **Version** | **Award Category** | **Award Level** |
+| --- | --- | --- | --- | --- | --- |
+| Beachhead | BeachheadSecure | macOS | 6.10.4 | Encryption | Gold |
+| Beachhead | BeachheadSecure | Windows | 6.10.9 | Encryption | Gold |
+| Cybereason | Cybereason ActiveProbe | Windows | 25.1.24.1 | Anti-Malware | Gold |

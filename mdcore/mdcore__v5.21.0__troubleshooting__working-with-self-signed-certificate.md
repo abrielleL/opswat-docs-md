@@ -1,12 +1,14 @@
 <!-- source: https://www.opswat.com/docs/mdcore/v5.21.0/troubleshooting/working-with-self-signed-certificate -->
 
-Too many requests
-# You're going a little too fast.
+# Working with self-signed certificate
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+When setting up the webhook server for the callback URL, customers may want to configure HTTPS and use a self-signed certificate.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Since self-signed certificates are not trusted by the system by default, this error might occurs
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+MarkdownCopyThe certificate is self-signed and untrusted
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fv5.21.0%2Ftroubleshooting%2Fworking-with-self-signed-certificate%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The certificate must first be added to the Trusted Root Certificate store - both Windows and Linux:
+
+1. Add the certificate to the Trusted Root Certificate store.
+2. Restart the MetaDefender Core service for the changes to take effect.

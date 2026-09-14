@@ -1,12 +1,43 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/how-to-specify-sql-server-connection-details-with-windows-authen -->
 
-Too many requests
-# You're going a little too fast.
+# How to Specify SQL Server Connection Details with Windows Authentication During Installation?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When installing MD Managed File Transfer using *SQL Server with Windows Authentication*, follow these steps for configuration:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. In the installer, select "SQL Server with Windows Authentication." The following form will pop up:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2Fhow-to-specify-sql-server-connection-details-with-windows-authen%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+2. Fill out the following fields:
+
+**Server Name:** `Required: Yes`
+
+The server address (domain name or IP) and the SQL Server instance name. This MSSQL server instance can be a local or a remote server.
+
+- **Example #1**: Server address with default instance name: `mft.example.com`
+- **Example #2**: Server address with named instance: `mft.example.com\dbinstancename`
+
+**Port:** `Required: No`
+
+The port number on which the SQL Server instance is listening. This field has specific behaviors based on its value:
+
+- If *empty*, the application will use the *Shared Memory protocol* if the database server is *on the same computer*.
+- If *empty,* and the database server is *on a different computer*, the *setup is not possible*.
+- If *filled,* and the database server is *on the same computer*, *TCP/IP must be enabled*, even if the port is the default *1433*.
+
+**Domain:** `Required: Yes`
+
+The domain of the user account used for Windows Authentication.
+
+**Username:** `Required: Yes`
+
+The username of the account used for Windows Authentication.
+
+**Password:** `Required: Yes`
+
+The password for the specified account.
+
+**Notes**
+
+- Ensure that the SQL Server is configured to accept Windows Authentication.
+- Verify that the user account has permission to access the SQL Server instance.

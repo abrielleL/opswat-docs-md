@@ -4,38 +4,52 @@
 
 ###
 
- Release Notes - v5.2.0
+ v5.3.0
 
-## MetaDefender NDR v5.2.0 — Release Notes
+## MetaDefender NDR v5.3.0 — Release Notes
 
-**Release Date:** July 31, 2026
+**Release Date:** September 9, 2026
 
 ### Overview
 
-MetaDefender NDR v5.2.0 introduces six significant capability additions focused on enterprise integration, operational visibility, and deployment flexibility — particularly for air-gapped environments and organizations with mature identity and security operations infrastructure.
+MetaDefender NDR v5.3.0 introduces six significant capability additions focused on licensing flexibility, regulatory compliance, multi-tenant deployment, security operations integration, and long-term data governance.
 
-### What’s New
+### Key Customer Benefits
 
-#### Manual Threat Intelligence & Software Updates via UI
+#### Licensing & Entitlements Service
 
-Operators can now upload threat intelligence feeds and software update packages directly through the administration interface. This eliminates dependency on automated pipelines and external connectivity, enabling organizations in air-gapped, classified, or network-restricted environments to maintain current detection coverage and software versions without external access.
+- Added a dedicated licensing and entitlements service that centralizes license validation, feature entitlement checks, and usage tracking.
+- Provided a more reliable and auditable foundation for feature gating and subscription management across deployments.
 
-#### Multi-Sensor Behavioral Analytics
+#### Corsec FIPS Certification
 
-Behavioral analytics now support multi-sensor configuration, enabling a single MetaDefender NDR deployment to correlate detections and orchestrate response across distributed sensor infrastructure. Security teams gain centralized visibility and coordinated detection across multiple network segments from a single control plane.
+- Completed FIPS 140-2/140-3 validation work with Corsec.
+- Enabled deployment in federal, defense, and other regulated environments that require FIPS-validated cryptographic modules.
 
-#### OpenTelemetry Observability Integration
+#### Multitenancy Phase 1
 
-MetaDefender NDR now natively exports metrics, traces, and logs in OpenTelemetry format, compatible with any OTel-compliant observability backend (Prometheus, Grafana, Datadog, Splunk Observability, and others). This provides standardized operational telemetry without custom integrations or proprietary agents.
+- Added the first phase of multitenancy support, allowing a single MetaDefender NDR deployment to logically separate data, configuration, and access across multiple tenants.
+- Laid the groundwork for MSSPs and large enterprises that need to manage multiple business units or customers from a shared platform instance.
 
-#### Expanded Policy Administration
+#### D3 Security SOAR Integration
 
-Policy administration has been significantly expanded to support fleet-wide policy management. Security teams can now define, version, and distribute detection and response policies across all deployed sensors from a single administrative interface, simplifying governance in large or multi-site deployments.
+- Added native integration with D3 Security's SOAR platform.
+- Enabled automated alert forwarding, case creation, and orchestrated response workflows without custom middleware.
 
-#### Enterprise Identity Integration (SAML 2.0 / Microsoft Entra ID / Okta)
+#### UI/UX Enhancements
 
-MetaDefender NDR now supports single sign-on and identity federation via SAML 2.0, Microsoft Entra ID (Azure AD), and Okta. This enables seamless integration with enterprise IAM workflows, centralizes access control, and eliminates the need for local credential management for administrative users.
+- Delivered broad usability improvements across the hunting, dashboard, and administration interfaces.
+- Reduced the number of clicks needed for routine analyst and administrator tasks.
 
-#### SIEM Integration via Syslog
+#### Data Retention Management
 
-Out-of-the-box syslog forwarding enables NDR alerts and event
+- Added granular data retention policy configuration by data type.
+- Gave organizations finer control over storage costs and compliance with internal or regulatory data-retention requirements.
+
+### Upgrade Notes
+
+- Customers in regulated environments should validate their deployment against the new FIPS-validated cryptographic modules after upgrade.
+- Organizations planning multi-tenant deployments should review the Multitenancy Phase 1 documentation before enabling tenant separation.
+- Customers using SOAR platforms should review the new D3 Security integration configuration guide to enable automated case creation.
+- Administrators should review default data retention settings after upgrade, as new granular controls may change existing storage behavior.
+- A browser refresh may be required after upgrade to load the latest UI assets.

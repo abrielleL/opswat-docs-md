@@ -1,12 +1,32 @@
 <!-- source: https://www.opswat.com/docs/mdcloud/integrations/throttling -->
 
-Too many requests
-# You're going a little too fast.
+# Throttling
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Throttling refers to the practice of limiting requests to endpoints after a certain threshold is reached. Our throttling mechanism allows up to:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- 9 requests/hour for free users and a limit of 45 scans per day with a [personal license](https://metadefender.opswat.com/licensing?lang=en)
+- 75 requests/minute for paid users with a [standard license](https://metadefender.opswat.com/licensing)
+- 150 requests/minute for paid users with a [professional license](https://metadefender.opswat.com/licensing)
+- 500+ requests/minute for paid users with an [enterprise license](https://metadefender.opswat.com/licensing)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+There are certain endpoints in MetaDefender Cloud that can be throttled:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcloud%2Fintegrations%2Fthrottling%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- [Scanning a file by file upload](/docs/mdcloud/metadefender-cloud-api-v4#file-upload)
+- [Data Sanitization Request](/docs/mdcloud/metadefender-cloud-api-v4#file-sanitized)
+- [Retrieving scan reports for multiple data hashes](/docs/mdcloud/metadefender-cloud-api-v4#hash-bulklookup)
+- [Scanning list of IPs](/docs/mdcloud/metadefender-cloud-api-v4#ip-bulklookup)
+- [Scanning list of URLs](/docs/mdcloud/metadefender-cloud-api-v4#url-bulklookup)
+- [Scanning list of domains](/docs/mdcloud/metadefender-cloud-api-v4#domain-bulklookup)
+
+To the above endpoints. If a user exceeds the allowed values, the requests will be blocked, and an HTTP response code of 429 will be returned.
+
+"error": {
+"name": "ClientError",
+"messages": "Your request has been throttled, maximum requests per hour: 9 for free users",
+"code": 429001,
+"status": 429
+}
+
+In such cases, please limit the number of requests sent per minute.
+
+If you have inadvertently reached the limit and need assistance in identifying the cause of being throttled, please contact [OPSWAT Support](https://www.opswat.com/support).

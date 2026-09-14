@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/deleting-remotely-restarting-an-existing-metadefender-kiosk-inst -->
 
-Too many requests
-# You're going a little too fast.
+# Deleting/Remotely Restarting an existing MetaDefender Kiosk Windows instance
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to delete or remotely restart a MetaDefender Kiosk Windows instance from the OPSWAT Central Management console. In the case of restarting, the machine running the MetaDefender Kiosk Windows instance will be restarted.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Go to the **MetaDefender** **Kiosk** **Windows** management page under **Inventory** in the sidebar.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. Select the MetaDefender Kiosk Windows instance that you want to delete or restart.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fdeleting-remotely-restarting-an-existing-metadefender-kiosk-inst%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+3. Click the **ACTIONS** drop-down menu and choose the **Restart** or **Delete** option. If **Delete** is chosen, your request is immediately processed.
+
+4. If **Restart** is chosen, fill the proper inputs and click the **RESTART** button.
+
+- **Username, Password:** The credential used to access the product, i.e. the account used to log into its host machine
+
+Info
+
+After PIN verification, the management page will reload if the result is successful.

@@ -46,11 +46,11 @@ https://gears.opswat.com/o/api/v2.2/devices
 | hwid | string | Hardware ID of the device |
 | agent_type | string | Agent type that runs on the device. (optional) |
 | remediation_link | string | URL of remediation page for the given device |
-| status | int | Reports the compliance status of the endpoint. This status is based on the defined policy within MetaAccess. Status values are: - **0** – the endpoint is in compliance with MetaAccess account’s policies - **1** – the endpoint is **not** in compliance with MetaAccess account’s policies - **3** – the endpoint is still sending information to MetaAccess and not yet completed |
+| status | int | Reports the compliance status of the endpoint. This status is based on the defined policy within My OPSWAT Central Management. Status values are: - **0** – the endpoint is in compliance with My OPSWAT Central Management account’s policies - **1** – the endpoint is **not** in compliance with My OPSWAT Central Management account’s policies - **3** – the endpoint is still sending information to My OPSWAT Central Management and not yet completed |
 | hostname | string | Hostname of the device |
 | nickname | string | nickname for the device (admin editable) |
-| agent_version | string | Local resident MetaAccess agent version |
-| last_seen | string | The last timestamp in GMT format when MetaAccess agent reports its data to Cloud |
+| agent_version | string | Local resident MetaDefender Endpoint version |
+| last_seen | string | The last timestamp in GMT format when MetaDefender Endpoint reports its data to Cloud |
 | machine_type | string | The type of devices |
 | country | string | Region where the device IP geographically represents |
 | active | int | 1 - device is connected to Cloud, 0 - disconnected |
@@ -73,7 +73,7 @@ https://gears.opswat.com/o/api/v2.2/devices
 | network_info.ipv4_addr | string | IPV4 address of a network adapter |
 | network_info.ipv6_addr | string | IPV6 address of a network adapter |
 | total_critical_issue | int | Number of critical issues were seen on the device |
-| critical_status | int | This critical status is based on the defined policy within MetaAccess. This status apply for the whole device. Critical status values are: - **0** – the endpoint doesn't have critical issues - **1** – the endpoint has critical issues - **2** – the endpoint is not found |
+| critical_status | int | This critical status is based on the defined policy within My OPSWAT Central Management. This status apply for the whole device. Critical status values are: - **0** – the endpoint doesn't have critical issues - **1** – the endpoint has critical issues - **2** – the endpoint is not found |
 | exempt | int | Exempt status of the endpoint device. Exempt values are: - **0** – Endpoint device is not exempted - **1** – Endpoint device is exempted |
 
 ## Example

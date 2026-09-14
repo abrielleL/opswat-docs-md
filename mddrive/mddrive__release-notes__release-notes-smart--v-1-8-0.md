@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-smart--v-1-8-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive Smart Touch v1.8.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-notes-smart--v-1-8-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Apr 06, 2026** | This release includes new features and new user experiences |
+| **New Features** | - **Certificate Validation Cleanup**: Allow Secure File Storage users to delete certificate validation manifests via UI - **List files of Secure File Storage on Touch:** Enable file listing in Secure Storage on Touch so users can see what consumes space and decide what to keep or delete. - **Secure File Storage Space Visibility & Low-Space Alerts:** Users receive early notifications about available space, giving them clear visibility into total and remaining Secure File Storage capacity so they can take action before it becomes an issue. |
+| **Improvements** | **Only show "Ready To Scan" if Smart Touch is licensed:** Ensures Smart Touch only shows “Ready to Scan” when licensed, guiding users to activate before first use and preventing unlicensed scanning. |
+|  |  |
+|  |  |

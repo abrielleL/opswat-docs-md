@@ -1,12 +1,28 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/knowledge-base/how-can-i-customize-the-login-screen-of-metadefender-optical-dio -->
 
-Too many requests
-# You're going a little too fast.
+# How can I customize the login screen of MetaDefender Optical Diode?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to MetaDefender Optical Diode version 1.11.0 or higher.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender Optical Diode now offers the ability to add customized messages/labels to the login screen as follows:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- **System Name** - The name of the system that will appear at the top of every screen and the login screen.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Fknowledge-base%2Fhow-can-i-customize-the-login-screen-of-metadefender-optical-dio%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+  - ***Default***: BLUE/RED Server.
+  - ***Restrictions***: Only alphanumeric, spaces,hyphens, underscores, periods and commas are allowed. Maximum length is 50 characters.
+- **Pre-Login Screen** - This is the message that will show at the bottom of the login screen.
+
+  - ***Default***: Absent.
+  - ***Restrictions***: alphanumeric, spaces, line breaks, and .,?':;()_-+&/”!#%@. Maximum number of lines breaks is 50. Maximum length is 1500 characters.
+- **Post-Login Screen** - Message text that appears at the bottom of every screen after user logs in.
+
+  - ***Default***: Absent.
+  - ***Restrictions***: alphanumeric, spaces, line breaks, and .,?':;()_-+&/”!#%@. Maximum number of lines breaks is 50. Maximum length is 1500 characters.
+
+Navigate to Configuration > Settings > Login to set up:
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chat with our support engineer**](https://my.opswat.com/support).
+
+MetaDefender

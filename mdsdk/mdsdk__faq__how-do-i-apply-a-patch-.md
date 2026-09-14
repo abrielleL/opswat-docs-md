@@ -1,12 +1,5 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/faq/how-do-i-apply-a-patch- -->
 
-Too many requests
-# You're going a little too fast.
+# How do I apply a patch?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Ffaq%2Fhow-do-i-apply-a-patch-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+You can trigger the update of certain apps using two methods: GetLatestInstaller and InstallFromFile. GetLatestInstaller allows you to download the installer to update the app or simply get the download link. InstallFromFile uses the downloaded file to install the update on the device. Note: Installers are either hosted on the vendor site or obtained using the vendor's tool.

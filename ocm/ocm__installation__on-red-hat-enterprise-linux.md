@@ -1,12 +1,42 @@
 <!-- source: https://www.opswat.com/docs/ocm/installation/on-red-hat-enterprise-linux -->
 
-Too many requests
-# You're going a little too fast.
+# On Red Hat Enterprise Linux
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+On Red Hat Enterprise Linux system, please follow the below steps to install the OPSWAT Central Management package.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1/ Open the terminal.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2/ Install the rpm package:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2Finstallation%2Fon-red-hat-enterprise-linux%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+sudo yum install <path to .rpm file>Info
+
+For systems which enabled GPD check flag, use the install command below instead:
+
+**sudo yum install --nogpdcheck <path to .rpm file>**
+
+3/ In order for the OPSWAT Central Management systemd service to locate environment variables such as
+
+**http_proxy**, the **EnvironmentFile** setting must be specified in the service file located at /usr/lib/ocm/ocm.service.
+
+a/ Locate the commented out **EnvironmentFile** settings in **/usr/lib/ocm/ocm.service**
+
+#EnvironmentFile=/etc/ocmEnv.conf
+
+b/ Uncomment and point the settings to the environment file containing the environment variables. For example:
+
+EnvironmentFile=/etc/ocmEnv.conf
+
+4/ Please include the environment variables that the OPSWAT Central Management service should use in the content of the environment file. Below is an example of the environment file:
+
+#system proxy setting, optional
+http_proxy=proxy:3128
+
+5/ Reload OPSWAT Central Management service for the modification to take effect.
+
+sudo systemctl daemon-reload
+
+6/ Start OPSWAT Central Central Management: **sudo systemctl start ocm**
+
+Info
+
+In case of startup problems, please refer to the startup log in /var/log/ocm or systemd log.

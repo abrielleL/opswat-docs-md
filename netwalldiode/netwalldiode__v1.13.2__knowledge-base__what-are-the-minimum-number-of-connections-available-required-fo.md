@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/knowledge-base/what-are-the-minimum-number-of-connections-available-required-fo -->
 
-Too many requests
-# You're going a little too fast.
+# What are the minimum number of connections available required for FTP files transfer in Optical Diode appliance?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all versions of versions of Optical Diode.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Problem:](/docs/netwalldiode/v1.13.2/knowledge-base/what-are-the-minimum-number-of-connections-available-required-fo#problem)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Certain environments may restrict FTP traffic down to 1 connection allowed at the time from the server. This can cause issues when file transfer is enabled. With one connection configured, the Test button in the product would be able to list/check the files in the folder, but the transfer would not work.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Fknowledge-base%2Fwhat-are-the-minimum-number-of-connections-available-required-fo%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Background:](/docs/netwalldiode/v1.13.2/knowledge-base/what-are-the-minimum-number-of-connections-available-required-fo#background)
+
+A FTP Client normally uses 2 connections to transfer files:
+
+- A **Control Connection** that is used for sending commands and receiving responses from the FTP Server
+- A **Data Connection** that is used for transferring files between the client and the server
+
+## [Solution:](/docs/netwalldiode/v1.13.2/knowledge-base/what-are-the-minimum-number-of-connections-available-required-fo#solution)
+
+The Optical Diode Appliance needs at minimum 2 connections available for FTP file transfer to work properly.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chat with our support engineer**](https://my.opswat.com/support).
+
+MetaDefender

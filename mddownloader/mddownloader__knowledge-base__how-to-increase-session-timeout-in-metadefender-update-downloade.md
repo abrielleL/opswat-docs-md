@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/knowledge-base/how-to-increase-session-timeout-in-metadefender-update-downloade -->
 
-Too many requests
-# You're going a little too fast.
+# How to increase session timeout in MetaDefender Update Downloader via API?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To increase the session timeout on the Update Downloader console via API call you will need the following resources from the Update Downloader instance:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- An API key generated from the Update Downloader console.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- A valid URL from the Update Downloader instance we are trying to make this change.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Fknowledge-base%2Fhow-to-increase-session-timeout-in-metadefender-update-downloade%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Once we have the two items mentioned above we will need to use the following API call to make the change to the session timeout value:
+
+BashCopycurl --request PUT \ --url 'http://localhost:8028/admin/config/session' \ --header 'Content-Type: application/json' \ --header 'apikey: {apikey}' \ --data '{ "absoluteSessionTimeout": 0, "allowCrossIpSessions": true, "allowDuplicateSession": true, "sessionTimeout": 300000 }'
+
+The value for the highlighted images from above is set to milliseconds.
+
+Having the “0” value as can be seen in the image above will result in the timeout setting to be disabled.
+
+Support:
+
+If **Further Assistance** is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

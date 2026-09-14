@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/getting-started/getting-started-with-metadefender-drive -->
 
-Too many requests
-# You're going a little too fast.
+# Getting Started with MetaDefender Drive
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Drive comes as an out-of-the-box solution, with the latest software and scanning engine versions installed. During the first use, users will be guided by a few prompts as for the initial setup process.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Prerequisite
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+If your system's hardware is below the [recommended specifications](https://www.opswat.com/docs/mddrive/getting-started/system-requirements-and-compatibility), please expect slow processing and performance reduction.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fgetting-started%2Fgetting-started-with-metadefender-drive%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Caution
+
+If you insert MetaDefender Drive into the target device while this device is already booted, please DON'T format the Drive's partition if prompted by the operating system. Such formatting will erase MetaDefender Drive's software and prevent it from functioning.
+
+MetaDefender Drive is providing two different working modes
+
+- [Perform a Pre-Boot Scan](/docs/mddrive/v4.4.2a/getting-started/boot-from-metadefender-drive)
+- [Perform an In-Session Scan](/docs/mddrive/v4.4.2a/getting-started/scan-from-metadefender-drive-in-session)

@@ -95,10 +95,18 @@ Each license entry includes:
 | Status | Active, Expiring or Expired. |
 | Start Date (UTC) | License effective date |
 | Expiration Date (UTC) | License expiration date Please note License start and expiration dates are shown in UTC (UTC+0) for consistency across all environments and time zones. This may look different from other features of My OPSWAT Portal that use your local time zone. |
-| Deployed / Purchased | Number of deployed instances versus purchased limit. |
+| NewEntitlement | Maximum licensed instances. - **Regular license:** You purchase a fixed number of product instances, and each instance is activated individually against the OPSWAT Activation Server. Hover to see   - **Max Instances**: number of product instances the license covers   - **Deployed instances: **how many of those instances are currently activated - **Volume license:** A licensing model managed through OLMS (On-Premises License Management Server). Product instances connect to OLMS locally to obtain a license; when an instance stops, its license is automatically released and can be reused by another instance. Hover to see   - **Max Instances**: maximum concurrent instances that can hold a license   - **Max Offline Time**: maximum minutes an instance can continue using its license while disconnected from OLMS |
 | Type | Evaluation/Purchased - **Evaluated Licenses:** Temporary licenses used for evaluating a product. - **Purchased Licenses**: Licenses for on-premises products that have been purchased by the user account. |
 | Customer Note | Notes from end customer (read-only) |
 | Partner Note | Editable field for partner remarks (e.g., contract ID, location) |
+
+> **Entitlement Types**
+>
+> - **Regular license:** You purchase a fixed number of product instances, and each instance is activated individually against the OPSWAT Activation Server.
+> - **Volume license:** A licensing model managed through OLMS (On-Premises License Management Server). Product instances connect to OLMS locally to obtain a license; when an instance stops, its license is automatically released and can be reused by another instance. Main configurations:
+>   - **Max Instances** (maximum concurrent instances that can hold a license),
+>   - **Time Usage **(total licensed usage hours across all instances; -1 means unlimited)
+>   - **Max Offline Time** (maximum minutes an instance can continue using its license while disconnected from OLMS).
 
 > **License Display Rule:**
 >
@@ -106,7 +114,7 @@ Each license entry includes:
 
 ### Manage License Actions
 
-Select the three-dot menu associated with a license to see the actions available to you. Depending on your permission level on the **License Management – Customer Organizations** role object, you have access to different actions:
+Select the three-dot menu associated with a license to see the actions available to you. Depending on your permission level on the **License Management – Customer Organizations** role object, you have access to different actions:
 
 #### With *View Only* permission
 

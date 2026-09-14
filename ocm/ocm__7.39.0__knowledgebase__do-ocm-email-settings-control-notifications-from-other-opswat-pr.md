@@ -1,12 +1,33 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/knowledgebase/do-ocm-email-settings-control-notifications-from-other-opswat-pr -->
 
-Too many requests
-# You're going a little too fast.
+# Do OCM Email Settings Control Notifications from Other OPSWAT Products?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all OPSWAT Central Management V7.5.0+ releases deployed on Windows or Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+In **OCM v7**, configuring the mail (SMTP) server applies **only to OCM**. It does not control, forward, or centralize notifications from other products such as Core, ICAP,or any additional modules in your environment.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Each product is responsible for its own **independent email configuration** and notification behavior. If you want to receive alerts from Core, ICAP, or others, you must **manually configure SMTP settings** within each product.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fknowledgebase%2Fdo-ocm-email-settings-control-notifications-from-other-opswat-pr%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+### [**How Email Notifications Work**](/docs/ocm/7.39.0/knowledgebase/do-ocm-email-settings-control-notifications-from-other-opswat-pr#how-email-notifications-work)
+
+- **OCM** sends alerts only for its own events and operations.
+- Core, ICAP, and other modules send their own notifications **independently**.
+- There is **no shared or centralized** email system between OCM and other products.
+
+### [**Exception: MetaDefender Kiosk Windows**](/docs/ocm/7.39.0/knowledgebase/do-ocm-email-settings-control-notifications-from-other-opswat-pr#exception-metadefender-kiosk-windows)
+
+OCM provides deeper integration with **MetaDefender Kiosk Windows**, allowing limited centralized reporting and email capabilitie. For more information, you can refer to this support article: [MetaDefender Kiosk Windows Dashboard](https://www.opswat.com/docs/ocm/integrations/metadefender-kiosk-dashboard#overview-tab)
+
+### [**SMTP Server Exceptions**](/docs/ocm/7.39.0/knowledgebase/do-ocm-email-settings-control-notifications-from-other-opswat-pr#smtp-server-exceptions)
+
+If your SMTP server uses restrictions (e.g., firewalls, filters, or whitelisting), make sure to grant **separate access for each product**. Since they send emails individually, a rule for OCM alone will **not** cover Core, ICAP, or others.
+
+### [**Summary**](/docs/ocm/7.39.0/knowledgebase/do-ocm-email-settings-control-notifications-from-other-opswat-pr#summary)
+
+- Email settings in OCM **do not apply** to other products.
+- Each product must be **configured separately** to send alerts.
+- Notifications are **not routed through OCM**, except for **Kiosk reports**.
+
+Support:
+
+If Further Assistance is required, please proceed to [**create a support case or chat with our support engineer**](https://my.opswat.com/support).

@@ -6,9 +6,9 @@ The Patching Management tab is accessible under **Assets** → **Patching Manage
 
 This page is Integrated patching capabilities for firmware from Siemens vendor to streamline updates and manage vulnerabilities.
 
-### How to create a request Patching Transaction:
+### [How to create a request Patching Transaction:](/docs/md-ot-security/v.3.4.8/operating/patching-management#how-to-create-a-request-patching-transaction)
 
-#### Important before proceeding
+#### [Important before proceeding](/docs/md-ot-security/v.3.4.8/operating/patching-management#important-before-proceeding)
 
 Before proceeding, ensure that:
 
@@ -19,7 +19,7 @@ Ensure that the **selected NIC** for Patch Management is properly configured
 
 Ensure that **PLC Firmware** has already been downloaded
 
-#### **Detailed steps to create Patching Management**
+#### [**Detailed steps to create Patching Management**](/docs/md-ot-security/v.3.4.8/operating/patching-management#detailed-steps-to-create-patching-management)
 
 Step 1: Click **Request Patching Transaction.**
 

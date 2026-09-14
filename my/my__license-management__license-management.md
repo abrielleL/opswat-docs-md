@@ -32,7 +32,7 @@ Gain visibility into your organization’s OPSWAT hardware and easily track ship
 
 Partners, such as Distributors and Resellers, can view and manage licenses of their customer organizations.
 
-👉 [Customer License Management](https://www.opswat.com/docs/my/partner-guide/customer-licenses)
+👉 ][Customer License Management](https://www.opswat.com/docs/my/partner-guide/customer-licenses)
 
 ### 5. For Partners Customer Contracts
 

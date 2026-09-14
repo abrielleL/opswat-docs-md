@@ -1,12 +1,31 @@
 <!-- source: https://www.opswat.com/docs/mdcore/v5.21.0/troubleshooting/troubleshooting--scan-history-not-updating-after-upgrading-metad -->
 
-Too many requests
-# You're going a little too fast.
+# Troubleshooting: Scan history not updating after upgrading MetaDefender Core - Linux
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+### [Who this is for](/docs/mdcore/v5.21.0/troubleshooting/troubleshooting--scan-history-not-updating-after-upgrading-metad#who-this-is-for)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Administrators who upgraded MetaDefender Core (for example from an older release such as 5.1.7.x to a newer one such as 5.18.x) on Rocky Linux 9 using the **shared / bundle** installation, and then notice that new scans no longer appear in history (or related features that use the database fail).
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [What you might see](/docs/mdcore/v5.21.0/troubleshooting/troubleshooting--scan-history-not-updating-after-upgrading-metad#what-you-might-see)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fv5.21.0%2Ftroubleshooting%2Ftroubleshooting--scan-history-not-updating-after-upgrading-metad%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Scans seem to run, but results are missing from scan history.
+- Logs may contain messages similar to:
+
+  - `could not load library ".../pg_trgm.so"`
+  - `invoke failed, out='QMap(("error", QVariant(QString, "ERROR: could not load library`
+  - `Failed to insert new request`
+  - Other database-related errors that appear right after an upgrade, without you having changed configuration on purpose.
+
+### [Recommended fix](/docs/mdcore/v5.21.0/troubleshooting/troubleshooting--scan-history-not-updating-after-upgrading-metad#recommended-fix)
+
+After a major upgrade, the database and application must be using the same updated components. Restart the services in this order:
+
+1. Restart the PostgreSQL service used by MetaDefender Core (the bundled database).
+2. Restart the MetaDefender Core service.
+
+Wait until PostgreSQL has fully started before starting or restarting Core if your environment requires a strict order.
+
+Example (systemd — names can differ on your system):
+
+BashCopysudo systemctl restart ometascan-pg
+sudo systemctl restart ometascan

@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/mdemail/knowledge-base/what-to-do-if-sanitized-emails-are-displaying---------in-email-b -->
 
-Too many requests
-# You're going a little too fast.
+# What to do if sanitized emails are displaying “?” in email body?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+If you are using MetaDefender Email Gateway Security version older than 5.7.6 and facing an issue for some sanitized emails which are displaying character “?” at the beginning of email body, you must upgrade to MetaDefender Email Gateway Security version 5.7.6 and enable feature “`Prioritize header charset setting in HTML`”.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Support:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Fknowledge-base%2Fwhat-to-do-if-sanitized-emails-are-displaying---------in-email-b%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If **Further Assistance** is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

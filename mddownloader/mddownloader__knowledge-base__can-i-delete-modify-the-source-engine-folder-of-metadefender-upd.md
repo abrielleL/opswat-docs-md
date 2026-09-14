@@ -1,12 +1,40 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/knowledge-base/can-i-delete-modify-the-source-engine-folder-of-metadefender-upd -->
 
-Too many requests
-# You're going a little too fast.
+# Can I delete/modify the source engine folder of MetaDefender Update Downloader?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to **MetaDefender Update Downloader** deployment on **Windows** and **Linux** environment.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+With Post Actions, this feature is only available since **Update Downloader version 2.5.0**.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Overview](/docs/mddownloader/knowledge-base/can-i-delete-modify-the-source-engine-folder-of-metadefender-upd#overview)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Fknowledge-base%2Fcan-i-delete-modify-the-source-engine-folder-of-metadefender-upd%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This article addresses whether it is acceptable to configure an external transfer agent (such as a Data Diode) to delete files from the MetaDefender Update Downloader source directory immediately after transferring them to a secure zone.
+
+## [Recommended Configuration](/docs/mddownloader/knowledge-base/can-i-delete-modify-the-source-engine-folder-of-metadefender-upd#recommended-configuration)
+
+The recommended way is to **not remove files from the source folder.**
+
+The MetaDefender Update Downloader relies on the presence of existing files to track for incremental updates. If these files are deleted externally:
+
+- The Update Downloader cannot track the deletion, leading to potential conflicts.
+- The system will be forced to perform a **full re-download** of the entire database during every cycle, causing significant bandwidth usage and operational delays.
+
+## [Workaround](/docs/mddownloader/knowledge-base/can-i-delete-modify-the-source-engine-folder-of-metadefender-upd#workaround)
+
+If your architecture requires the transfer agent to delete files after ingestion (common with **Data Diodes**), you should decouple the download process from the transfer process using **Post Actions**.
+
+Instead of the Data Diode picking up files directly from the Download folder, configure the Update Downloader to copy the files to a secondary "Staging Folder" automatically.
+
+### [Steps:](/docs/mddownloader/knowledge-base/can-i-delete-modify-the-source-engine-folder-of-metadefender-upd#steps)
+
+1. **Create a Seperated Folder:** Create a separate directory for the Data Diode to monitor.
+2. **Configure Post Actions:** Use the MetaDefender Update Downloader **Post Actions** feature to trigger a script that copies the content from the Download folder to the Staging Folder.
+3. **Configure Data Diode:** Point the Data Diode to the **Seperated Folder**. It can now safely ingest and delete files from this location without affecting the Update Downloader.
+
+For detailed instructions on configuring this feature, please refer to our documentation:
+
+- [**Post Actions - MetaDefender Update Downloader**](https://www.opswat.com/docs/mddownloader/operating/post-actions)
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

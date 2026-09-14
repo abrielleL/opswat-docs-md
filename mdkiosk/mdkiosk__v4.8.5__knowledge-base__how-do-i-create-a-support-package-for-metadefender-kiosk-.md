@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/how-do-i-create-a-support-package-for-metadefender-kiosk- -->
 
-Too many requests
-# You're going a little too fast.
+# How do I create a support package for MetaDefender Kiosk?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Kiosk releases **after version 4.7.0**, deployed on both Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To create a MetaDefender Kiosk support package, open the Kiosk console (e.g., [http://localhost:8009](http://localhost:8009/)), go to the **Settings** tab, and under **Session History**, click **“Download Support Package”** in the top right corner.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Once the process is finished, it will result in the creation of a zip archive containing the necessary support logs.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fhow-do-i-create-a-support-package-for-metadefender-kiosk-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The support package contains the following elements:
+
+- Configuration files.
+- Log files.
+- System information
+- Directory and files information.
+- Registry key configuration
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chat with our support engineer](https://my.opswat.com/portal/support).

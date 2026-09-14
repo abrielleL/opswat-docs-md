@@ -1,12 +1,30 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-0-1 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.0.1
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | 1.0.1 |
+| --- | --- |
+| **Release date** | Dec 2022 |
+| **Scope** | Major release including OPC UA, Syslog and SMTP streaming, amongn other features |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-0-1#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+|  | Details |
+| --- | --- |
+| SMTP replication | User can replicate SMTP streams from BLUE to RED |
+| OPC UA replication | User can replicate OPC UA streams from BLUE to RED |
+| Syslog replication | User can replicate Syslog streams from BLUE to RED |
+| CLI - Added Telemetry command | We have implemented a CLI command to show the status of DPDK packets on RED/BLUE |
+| Firmware improvements | Several firmware improvements |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Frelease-notes%2Fnetwall-diode-v1-0-1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Bug fixes](/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-0-1#bug-fixes)
+
+|  | Details |
+| --- | --- |
+|  |  |
+
+## [Known limitations](/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-0-1#known-limitations)
+
+N/A
+
+MetaDefender

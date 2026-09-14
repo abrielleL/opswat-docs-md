@@ -1,12 +1,38 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/what-to-do-when-my-metadefender-core-instance-failing-to-load-wi -->
 
-Too many requests
-# You're going a little too fast.
+# What to do when my MetaDefender Core instance failing to load with error 'Extension setting up failed: extension: 'ekm', rc: '-610''?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article is applied to MetaDefender Core releases deployed on Windows systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Issue**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+MetaDefender Core instance fails to load with the error message: `Extension setting up failed: extension: 'ekm', rc: '-610'`.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhat-to-do-when-my-metadefender-core-instance-failing-to-load-wi%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**Root Cause** The issue occurs because the Archive Engine stores temporary files in the `resources` folder and fails to remove them under certain conditions. These residual files can prevent MetaDefender Core from starting correctly.
+
+**Affected Versions/Platforms**
+
+- MetaDefender Core: Versions prior to **5.11.0**
+- Archive Engine: Versions prior to **7.1**
+
+**Workaround** To restart the MetaDefender Core instance successfully, you must remove the leftover Archive Engine folders located in the Core's `resources` directory.
+
+**Steps**:
+
+1. Stop all MetaDefender Core services.
+2. Navigate to: `C:\Program Files\OPSWAT\MetaDefender Core\data\resources`
+3. Delete **all** files and subfolders related to Archive Engine. The folders might be named:
+
+- 7z_XX_windows_XXXXXX
+- compression_XX_windows_XXXXXX
+
+4. Start the MetaDefender Core service.
+
+**Recommendation** To prevent this issue from recurring:
+
+- Upgrade the **Archive Engine** to version **7.1** or later, where this cleanup issue is fixed.
+- Upgrade **MetaDefender Core** to version **5.11.0** or later, where additional handling was implemented to enhance stability.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

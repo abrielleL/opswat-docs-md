@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-deep-cdr-is-not-sanitizing-files-inside-a-zip- -->
 
-Too many requests
-# You're going a little too fast.
+# Why Deep CDR is not Sanitizing Files Inside a ZIP?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The .gif files are expected to be sanitized and converted to .jpeg format using Deep CDR rules. While this process worked for individual .gif files, when the files were inside a ZIP archive, the ZIP file returned with the original .gif files instead of the converted .jpeg files.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The issue was due to a missing configuration setting in the MetaDefender Core. Specifically, the "Enable archive sanitization" option was not activated, and the appropriate archive file types were not selected under "Enable for archive compression filetypes."
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Solution:](/docs/mdcore/knowledge-base/why-deep-cdr-is-not-sanitizing-files-inside-a-zip-#solution)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-deep-cdr-is-not-sanitizing-files-inside-a-zip-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To resolve this issue, follow these steps:
+
+1. Navigate to the MetaDefender Core UI.
+2. Go to the Workflows section and select the relevant workflow.
+3. Access the Compression tab.
+4. Ensure that "Enable archive sanitization" is turned on.
+5. Under "Enable for archive compression filetypes," select all relevant archive file types.
+
+Once these settings are correctly configured, Deep CDR should properly sanitize files inside ZIP archives as expected.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/portal/support).

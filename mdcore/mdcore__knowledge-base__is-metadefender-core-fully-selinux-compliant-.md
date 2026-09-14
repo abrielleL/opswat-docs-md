@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/is-metadefender-core-fully-selinux-compliant- -->
 
-Too many requests
-# You're going a little too fast.
+# Is MetaDefender Core Fully SELinux Compliant?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core releases deployed on RHEL 9.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+> **Issue:**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+MetaDefender Core is not currently SELinux compliant, although it functions on systems where SELinux is enabled. It does not adhere to full SELinux confinement policies or provide officially supported SELinux policy modules.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fis-metadefender-core-fully-selinux-compliant-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**Resolution:**
+
+At this time, OPSWAT does not provide or recommend SELinux confinement policies for MetaDefender Core. For full functionality, Core services should remain unconfined.
+
+**Workarounds:**
+
+Most Linux customers operate MetaDefender Core on RHEL systems with SELinux enabled without any issues, even when services run unconfined.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/maintenance/offline-update-for-smart-touch -->
 
-Too many requests
-# You're going a little too fast.
+# For Smart Touch
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article explains how to perform an **offline update** for MetaDefender Drive Smart Touch using a external USB storage device.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Engine Updates
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+For engines updates please follow the steps in <https://www.opswat.com/docs/mddrive/maintenance/for-metadefender-drive>
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fmaintenance%2Foffline-update-for-smart-touch%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+#### [Before you begin, prepare the following:](/docs/mddrive/v4.4.2a/maintenance/offline-update-for-smart-touch#before-you-begin-prepare-the-following)
+
+- A USB storage device formatted (**NOT ENCRYPTED**] as NTFS or FAT32 with at least 500MB space free
+- Download the Debian packag `.deb` package and its YAML descriptor`.yml` file.from published download URLs in My OPSWAT.
+
+- Create the `/updates` folder on the USB drive.
+- Copy the update files into the `/updates` folder.
+- Safely eject the USB storage from your computer.
+
+#### [Perform the offline update](/docs/mddrive/v4.4.2a/maintenance/offline-update-for-smart-touch#perform-the-offline-update)
+
+- Make sure Smart Touch is powered off. If Smart Touch is currently running, shut it down gracefully from the UI or power button before proceeding.
+- Insert the prepared USB storage into the USB-C port of the Smart Touch device
+- Power on Smart Touch, enter PIN code
+- After Smart Touch starts it will
+
+  - automatically detect the `/updates` folder on the USB storage
+  - automatically pick up the offline update package (`.deb` + `.yml`) and begin the update process.
+- The update will proceed without requiring user interaction until finish. Do not power off Smart Touch or remove the USB storage during this time.

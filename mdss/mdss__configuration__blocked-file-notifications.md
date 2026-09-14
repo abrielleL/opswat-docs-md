@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/mdss/configuration/blocked-file-notifications -->
 
-Too many requests
-# You're going a little too fast.
+# Blocked file notifications
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Blocked files notifications are sent for each blocked file that is found during an Instant, Scheduled or Real-Time processing.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To enable notifications for blocked file, select the option to **Blocked Files** from the **Email Notifications** section:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+You can choose to send this email to:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fconfiguration%2Fblocked-file-notifications%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- All MetaDefender Storage Security registered users
+- Only to the file owner
+- To the file owner and all MetaDefender Storage Security registered users
+
+Info
+
+Please note that the notification to the file owner could be sent only for OneDrive, Box and MFT integrations.
+
+The email contains the following information:
+
+- File name
+- File path
+- Storage unit type and name
+- The reason why the file is blocked
+- [Remediation](/docs/mdss/configuration/workflows) actions details (delete/move blocked files), when these are configured for the storage that is processed

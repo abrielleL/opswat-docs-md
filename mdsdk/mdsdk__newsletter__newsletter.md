@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/newsletter/newsletter -->
 
-Too many requests
-# You're going a little too fast.
+# Monthly Update
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+[This month's downloadable PDF (September 2026)](https://static.opswat.com/uploads/files/opswat-oesis-framework-release-announcement-september-2026.pdf)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+#### [Online Versions](/docs/mdsdk/newsletter/newsletter#online-versions)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Fnewsletter%2Fnewsletter%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- [September 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-september-2026)
+- [August 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-august-2026)
+- [July 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-july)
+- [June 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-june-2026)
+- [May 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-may-2026)
+- [April 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-april-2026)
+- [March 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-march-2026)
+- [February 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-february-2026)
+- [January 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-january-2026)
+- [December 2025](https://www.opswat.com/blog/oesis-framework-release-announcement-december-2025)
+- [November 2025](https://www.opswat.com/blog/metadefender-endpoint-security-sdk-release-announcement-november-2025)
+- [October 2025](https://www.opswat.com/blog/metadefender-endpoint-security-sdk-release-announcement-october-2025)
+- [September 2025](https://www.opswat.com/blog/metadefender-endpoint-security-sdk-release-announcement-september-2025)
+- [August 2025](https://www.opswat.com/blog/metadefender-endpoint-security-sdk-release-announcement-august-2025)
+- [July 2025](https://www.opswat.com/blog/metadefender-endpoint-security-sdk-release-announcement-july-2025)
+- [June 2025](https://www.opswat.com/blog/metadefender-endpoint-security-sdk-release-announcement-june-2025)
+- [May 2025](https://www.opswat.com/blog/sdk-news-may-2025)

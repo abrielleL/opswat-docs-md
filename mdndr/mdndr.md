@@ -4,7 +4,7 @@
 
 # NDR
 
-#### v5.2.0 [Latest]
+#### v5.3.0 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mdndr/release-notes)
 
@@ -28,6 +28,10 @@ Learn more](/docs/mdndr/deployment-guide/introduction-to-the-ndr-platform) [####
 
 ######
 
-Learn more](/docs/mdndr/integrations/new-page)
+Learn more](/docs/mdndr/integrations/new-page) [##### Configuration Guide
+
+######
+
+Learn more](/docs/mdndr/configuration-guide/administration-configuration-reference)
 
 ## References

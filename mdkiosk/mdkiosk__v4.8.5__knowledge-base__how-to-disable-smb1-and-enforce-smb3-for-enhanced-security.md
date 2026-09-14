@@ -1,12 +1,47 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/how-to-disable-smb1-and-enforce-smb3-for-enhanced-security -->
 
-Too many requests
-# You're going a little too fast.
+# How to disable SMB1 and enforce SMB3 for enhanced security
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Purpose](/docs/mdkiosk/v4.8.5/knowledge-base/how-to-disable-smb1-and-enforce-smb3-for-enhanced-security#purpose)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The purpose of this document is to provide guidance on disabling SMB1 on the client side (Kiosk) and enforcing secure communication using SMB3 only.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Why disable SMB1?](/docs/mdkiosk/v4.8.5/knowledge-base/how-to-disable-smb1-and-enforce-smb3-for-enhanced-security#why-disable-smb1)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fhow-to-disable-smb1-and-enforce-smb3-for-enhanced-security%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+SMB1 is an outdated protocol with known vulnerabilities that can expose systems to attacks such as ransomware. Disabling SMB1 significantly reduces the attack surface.
+
+Run the following PowerShell command with administrative privileges to disable SMB1 protocol at the client side (Kiosk)
+
+`Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol`
+
+This command will remove the SMB1 client component from the device (Kiosk)
+
+## [Why can't we disable SMB2 independently?](/docs/mdkiosk/v4.8.5/knowledge-base/how-to-disable-smb1-and-enforce-smb3-for-enhanced-security#why-cant-we-disable-smb2-independently)
+
+SMB2 and SMB3 share the same protocol stack in Windows. Disabling SMB2 alone is not possible because doing so would also disable SMB3 and impacting SMB3 functionality.
+
+## [How to enforce SMB3 connections only](/docs/mdkiosk/v4.8.5/knowledge-base/how-to-disable-smb1-and-enforce-smb3-for-enhanced-security#how-to-enforce-smb3-connections-only)
+
+If you want to ensure that only SMB3 protocol is used for the connections. There are two approaches
+
+#### [Approach 1: Enforce from the SMB server side](/docs/mdkiosk/v4.8.5/knowledge-base/how-to-disable-smb1-and-enforce-smb3-for-enhanced-security#approach-1-enforce-from-the-smb-server-side)
+
+On the SMB server, run the following PowerShell commands with administrative privileges to disable SMB1 protocol at the server side:
+
+`Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protoc`
+
+`Set-SmbServerConfiguration -EnableSMB2Protocol $false`
+
+When SMB1 and SMB2 are disabled on the server, only SMB3 connections are allowed. Clients (Kiosk) that support SMB3 will successfully negotiate and connect using the secure protocol. However, any clients (Kiosk) that only support SMB1 or SMB2 will fail to connect.
+
+#### [Approach 2: Enforce from the client side](/docs/mdkiosk/v4.8.5/knowledge-base/how-to-disable-smb1-and-enforce-smb3-for-enhanced-security#approach-2-enforce-from-the-client-side)
+
+On the SMB client (Kiosk), run the following PowerShell commands with administrative privileges to enforce allowing encrypted connection only
+
+`Set-SmbClientConfiguration -RequireEncryption $true`
+
+When encryption is required on the SMB client (Kiosk), SMB2 will never be used because it does not support encryption. If the server supports SMB3, the client (Kiosk) will successfully negotiate an encrypted SMB3 connection. However, if the server only supports SMB2, the connection will fail.
+
+Enforce encrypted connection only is not supported in Kiosk Hardened Image
+
+The command mentioned in approach 2 to enforce using encrypted connections only is not supported in Kiosk Hardened Image which is running Windows 10 IoT Enterprise LTSC

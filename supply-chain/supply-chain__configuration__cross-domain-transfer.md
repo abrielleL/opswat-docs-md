@@ -21,7 +21,7 @@ This is typically the development or less restricted environment.
 - Select "**Low Side**" to configure this as a Low Side environment.
 - Enable transfers using the **toggle switch**.
 - Enter the **Data Diode address**.
-- [Configuring an API Key](https://www.opswat.com/docs/supply-chain/configuration/configuring-an-api-key) from the **High Side **UI
+- [Configuring an API Key](https://www.opswat.com/docs/supply-chain/configuration/configuring-an-api-key) from the **High Side** UI
 - Enter the **API key** from the High Side as the **authorization token**.
 - Click on the "**Save**" button.
 
@@ -74,6 +74,36 @@ This capability supports organizations with strict data compartmentalization and
 - Additionally, a dedicated option allows organizations to block transfers whenever secrets are detected, adding an extra layer of protection against credential exposure in software supply chain assets.
 
 ---
+
+### **Supported Services**
+
+The following cross-domain transfer routes are supported:
+
+#### Source code
+
+| Source | Destination |
+| ---- | ---- |
+| ![](https://cdn.simpleicons.org/gitlab) GitLab | ![](https://cdn.simpleicons.org/gitlab) GitLab |
+| ![](https://cdn.simpleicons.org/gitlab) GitLab | ![](https://cdn.simpleicons.org/github) GitHub |
+| ![](https://cdn.simpleicons.org/github) GitHub | ![](https://cdn.simpleicons.org/gitlab) GitLab |
+| ![](https://cdn.simpleicons.org/github) GitHub | ![](https://cdn.simpleicons.org/github) GitHub |
+
+#### Containers
+
+| Source | Destination |
+| ---- | ---- |
+|  Amazon ECR | ![](https://cdn.simpleicons.org/harbor) Harbor |
+| ![](https://cdn.simpleicons.org/harbor) Harbor |  Amazon ECR |
+| ![](https://cdn.simpleicons.org/sonatype) Nexus Containers | ![](https://cdn.simpleicons.org/sonatype) Nexus Containers |
+
+#### Binaries
+
+| Source | Destination |
+| ---- | ---- |
+| ![](https://cdn.simpleicons.org/jfrog) JFrog Binary | ![](https://cdn.simpleicons.org/jfrog) JFrog Binary |
+| ![](https://cdn.simpleicons.org/jfrog) JFrog Binary | ![](https://cdn.simpleicons.org/sonatype) Nexus Binary |
+| ![](https://cdn.simpleicons.org/sonatype) Nexus Binary | ![](https://cdn.simpleicons.org/jfrog) JFrog Binary |
+| ![](https://cdn.simpleicons.org/sonatype) Nexus Binary | ![](https://cdn.simpleicons.org/sonatype) Nexus Binary |
 
 ### Operating
 

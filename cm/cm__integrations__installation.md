@@ -11,7 +11,7 @@ This Add-on is supported on all tiers of a distributed Splunk platform deploymen
 | Heavy Forwarders | Yes | Yes | This Add-on supports only heavy forwarder for data collection. |
 | Universal Forwarder | No | No | This Add-on contains Python Scripts to make API calls, hence not supported on Universal Forwarder |
 
-You can follow the below steps to install the OPSWAT MetaDefender IT Access Add-on for Splunk
+You can follow the below steps to install the OPSWAT Add-on for Splunk
 
 1. Download the Add-on from Splunkbase [here](https://splunkbase.splunk.com/app/5530/)
 2. Install the Add-on on your Search Heads and Heavy Forwarder of distributed deployment, you can also install it on IDM if you are on Splunk Cloud.

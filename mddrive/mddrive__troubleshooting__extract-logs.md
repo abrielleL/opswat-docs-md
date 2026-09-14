@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mddrive/troubleshooting/extract-logs -->
 
-Too many requests
-# You're going a little too fast.
+# Extract Log Files
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+On Linux systems, you can manually extract a collection of the most recent log files:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Insert MetaDefender Drive into the target device and run a file browser as an admin using the `sudo` command.
+2. Navigate to the /*persistence* folder in MetaDefender Drive partition and copy the logs files from the following folders:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- From the */media/your_user_account/persistence/rw/opt/ometadefender-drive* folder: copy the *Log* folder.
+- From the */media/your_user_account/persistence/rw/var* folder: copy the *crash* and *log* folders.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Ftroubleshooting%2Fextract-logs%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Log file location for manual extraction
+
+.

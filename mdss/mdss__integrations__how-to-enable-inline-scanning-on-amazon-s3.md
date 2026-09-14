@@ -1,12 +1,30 @@
 <!-- source: https://www.opswat.com/docs/mdss/integrations/how-to-enable-inline-scanning-on-amazon-s3 -->
 
-Too many requests
-# You're going a little too fast.
+# How to Enable Inline Scanning?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+In order to prevent access to files on AWS S3 that have not been scanned yet, a bucket policy can be used in combination with the [file tagging](/docs/mdss/configuration/file-tagging) feature in MDSS to only allow get requests on files with the "No Threat Detected" tag.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+For example, a bucket policy allowing full access just to scanned files would look like this:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+JsonCopy{
+"Effect": "Allow",
+"Principal": "*",
+"Action": [
+"s3:*"
+],
+"Resource": [
+"arn:aws:s3:::<BUCKET_NAME>/*",
+"arn:aws:s3:::<BUCKET_NAME>"
+],
+"Condition": {
+"StringEquals": {
+"s3:ExistingObjectTag/MetaDefenderResult": "No Threat Detected"
+}
+}
+}
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fintegrations%2Fhow-to-enable-inline-scanning-on-amazon-s3%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+In the above example `<BUCKET_NAME>` should be replaced with the S3 bucket name configured in MDSS or with the corresponding folder path that is subject to scanning.
+
+The "Action" list from the example above can also be customized to only allow specific actions on the objects in question. To allow just get operations on scanned objects the `s3:GetObject` action can be used instead of `s3:*` .
+
+This approach is particularly useful when using [event-based real time scanning](/docs/mdss/configuration/event-based-handling) as it prevents any uploaded file from being accessed while it's still processing in MDSS.

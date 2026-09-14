@@ -12,6 +12,6 @@ When users log into My OPSWAT Central Management, they will be directed to the O
 
 - Refresh - This tool allows the user to refresh the data displayed on the dashboard.
 - Edit Mode - This tool allows the user to access Edit mode of the dashboard. Here users can make change to the order of widgets and add/remove widgets.
-- Reset - This tool allows the user to amend all their customization and revert back to the initial MetaDefender IT Access dashboard.
+- Reset - This tool allows the user to amend all their customization and revert back to the initial My OPSWAT Central Management dashboard.
 - Cancel Changes - This will allow the user to discard changes made.
 - Save Changes - This will allow the user to save changes made.

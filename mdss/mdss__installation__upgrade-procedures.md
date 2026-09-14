@@ -84,7 +84,7 @@ The following steps only apply when MDSS is installed using the official install
 
 Info
 
-Instructions to be followed for upgrading after installing the product using the [Installing Offline on Linux documentation](https://www.opswat.com/docs/mdss/installation/installing-offline-on-linux)
+Instructions to be followed for upgrading after installing the product using the [Installing Offline on Linux documentation](/docs/mdss/installation/linux-offline-installation)
 
 1. Download the latest MetaDefender Storage Security **Installation Package** from [My OPSWAT](https://my.opswat.com/) portal.
 2. Download the latest MetaDefender Storage Security **Offline Docker Tool Kit** from [My OPSWAT](https://my.opswat.com/) portal.

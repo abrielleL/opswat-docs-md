@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/maintenance/eject-metadefender-drive -->
 
-Too many requests
-# You're going a little too fast.
+# Eject MetaDefender Drive
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To prevent data loss or potential damage, MetaDefender Drive must be safely ejected. Follow the steps below to ensure proper removal.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Navigate to **Create Multiple Drives** page
+2. Click the **Safe Removal** icon next to the MetaDefender Drive you wish to remove.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+3. Click **Yes** to safely eject the selected MetaDefender Drive.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fmaintenance%2Feject-metadefender-drive%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+4. After a successful ejection, a confirmation prompt will be displayed.

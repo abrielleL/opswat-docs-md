@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/how-can-i-create-or-edit-a-mft-guest-account-via-api-calls- -->
 
-Too many requests
-# You're going a little too fast.
+# How can I create or edit a MFT Guest account via API calls?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Users have the possibility of creating or editing a Guest MFT User via API calls by observing the documentation links below and taking note of the restrictions in place (as mentioned below):
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+New Guest MFT account -<https://docs.opswat.com/mdmft/metadefender-mft#postcreate-a-guest-account>
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2Fhow-can-i-create-or-edit-a-mft-guest-account-via-api-calls-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Edit a Guest account - <https://www.opswat.com/docs/mdmft/metadefender-mft#putmodify-a-guest-account>
+
+- through these endpoints, you can define; **pin_code** (guest identifier):
+- The length can be min 6 max 255 characters
+- cannot contain spaces.
+- **display_name** (guest nickname):
+- between 3 and 30 characters long
+- can only contain alphanumeric characters (A-Z, 0-9), dots(.), spaces( ), dashes (-), pluses(+) and underscores(_)
+- The special characters should not be put consecutively
+
+Support:
+
+If you encounter any issues or require further assistance, please contact OPSWAT support via My OPSWAT at: https://my.opswat.com/home
+
+Our support team will be able to provide you with the necessary guidance and resolution for any license-related concerns.

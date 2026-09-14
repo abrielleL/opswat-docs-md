@@ -50,23 +50,16 @@ Reference: [How to configure](https://www.dropbox.com/guide/admin/security/confi
 
 After configuring SSO, you should test it out to make sure that SSO works as expected.
 
-Now it's the time you can implement integration My OPSWAT Central Management with your Okta Dropbox by following the below steps. You can learn more details for each step here at [3.1.1. How to set it up?](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)
+Now it's the time you can implement integration My OPSWAT Central Management with your Okta Dropbox by following the below steps. You can learn more details for each step here at
 
-- [Step 1. Enable Access Control on your My OPSWAT Central Management account](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Dropbox.html#step-1-enable-access-control-on-your-metaaccess-account)
-- [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Dropbox.html#step-2-add-protected-applications-with-idp-method)
-- [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Dropbox.html#step-3-configure-access-rules)
-- [Step 4. Update Applications settings on Identity Provider](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Dropbox.html#step-4-update-applications-settings-on-identity-provider)
-- [Step 5. Configure SSO settings on applications](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Dropbox.html#step-5-configure-sso-settings-on-applications)
-- [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Dropbox.html#step-6-test-your-integration)
+## Step 1. Enable Secure Access on your My OPSWAT Central Management account
 
-## Step 1. Enable Access Control on your My OPSWAT Central Management account
+1. Login to the My OPSWAT Central Management console
+2. Navigate to **Secure Access** and then **Configurations**
+3. Check on the box **"Enable Secure Access"**
+4. Click **SAVE**
 
-1. Login to the My OPSWAT Central Management console.
-2. Navigate to **Access Control** and then **Configurations.**
-3. Check on the box **"****Enable access control****".**
-4. Click **SAVE**.
-
-![](https://uploads.developerhub.io/prod/97qW/qsrm2egbqivfxok7frv8hj1pzys3re1cqqb715m995pd8zfjy5if3bnums35q1xc.png)
+![](https://uploads.developerhub.io/prod/97qW/3xcvx8db4yjszpg6r6rz3k7ayx4p42u38pcmurj3vrj94h1bg6hcf3rv1olrynz5.png)
 
 ## Step 2. Add protected applications with IdP Method
 
@@ -82,7 +75,7 @@ Now it's the time you can implement integration My OPSWAT Central Management wit
 
 4.  Select the Dropbox application which you just added above
 
-5.  Go to **Sign On** tab and click **View Setup Instruction** **
+5.  Go to **Sign On** tab and click **View Setup Instruction**
 
 ![](https://uploads.developerhub.io/prod/97qW/b9sh2v0cn417bmbebdmalprd0opphb6jpfdte0bsmyz5tihyz4d3yndjaeeovrii.png)
 
@@ -122,13 +115,15 @@ Now it's the time you can implement integration My OPSWAT Central Management wit
       1. *Application*: application name, for example: Dropbox
       2. *Login URL*: application login URL which you have from Step 2.2
       3. *Logout URL*: application logout URL which you have from Step 2.3
-      4. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+      4. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications)
 
 ![](https://uploads.developerhub.io/prod/97qW/qzzzlw1bhq598znwvei1iowh26b53j9fq6f78uas2c8yr18ubui08h1kv7cp7vik.png)
 
 4.  Click **SAVE**
 
-6. After saving your changes sucessfully, click the **Setup Instructions** button of the Dropbox application you have just added and then copy the **URL** MetaAccess generated there. This URL is used to replace Dropbox login URL on Okta in Step 4.
+6. After saving your changes sucessfully, click the **Setup Instructions** button of the Dropbox application you have just added and then copy the **URL** My OPSWAT Central Management
+
+    generated there. This URL is used to replace Dropbox login URL on Okta in Step 4.
 
 ![](https://uploads.developerhub.io/prod/97qW/e3j308x494dan5ax36vhp9892ua7jae3h8piyhbbk6w8wyoc04ct7upjfizhzagg.png)
 
@@ -141,7 +136,7 @@ Note: you can add Dropbox application (step 2.5) when you add Okta IdP settings 
 3. With a new access rule, you need to specify how you would like to block/allow access a device from the application
    1. *Rule name*: a rule name, for example Block non-compliant devices
    2. *Action*: Block or Allow
-   3. Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+   3. Configure conditions to do the action. Details at [Configure Access Rules](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 4. Click **ADD RULE**
 
 ![](https://uploads.developerhub.io/prod/97qW/m7kqb803pxtpjl0vv4nwmns9u27fger6dngp9jzkwbu5qhjshex3d994sre2370z.png)
@@ -161,11 +156,8 @@ Note: you can add Dropbox application (step 2.5) when you add Okta IdP settings 
 
 ## Step 5. Configure SSO settings on applications
 
-1. On My OPSWAT Central Management console, navigate to **Access Control** > **Configurations**
+1. On My OPSWAT Central Management console, navigate to **Secure Access **> **Configurations**
 2. Download OPSWAT certificate
-
-![](https://uploads.developerhub.io/prod/97qW/5farz08xlwmm7zohss70oe5tsy58wt8ljouqnd3bl52jgn0pyz0u1vdshduvkh61.png)
-
 3. Login to Dropbox as an administrator
 4. Navigate to **Admin Console** > **Settings**, click **Single sign-on**
 
@@ -179,6 +171,4 @@ Note: you can add Dropbox application (step 2.5) when you add Okta IdP settings 
 
 ## Step 6: Test your integration
 
-Follow guideline at [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Step_6__Test_your_integration.html) to test your integration to verify if it works as your expectation.
-
-**DONE! CONGRATULATIONS.**
+Follow guideline at [Test Your Integration](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration) to verify if it works as your expectation.

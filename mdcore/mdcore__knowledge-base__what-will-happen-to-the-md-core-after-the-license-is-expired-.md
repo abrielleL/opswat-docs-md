@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/what-will-happen-to-the-md-core-after-the-license-is-expired- -->
 
-Too many requests
-# You're going a little too fast.
+# What will happen to the MD core after the license is expired?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When the license associated with MetaDefender Core reaches its expiration date, the licensed modules and engines will stop receiving updates. This may impact the effectiveness and security posture of your system, as engine definitions and threat intelligence become outdated.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [**Once the License Has Expired:**](/docs/mdcore/knowledge-base/what-will-happen-to-the-md-core-after-the-license-is-expired-#once-the-license-has-expired)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhat-will-happen-to-the-md-core-after-the-license-is-expired-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- **Engine Updates Will Cease** All associated engines—such as Metascan, Deep CDR, Threat Intelligence, and others—will no longer receive updates.
+- **License Expiration Banner** A red warning banner will appear in the MetaDefender Core UI (as shown in the image), indicating that the license has expired and prompting you to contact Sales.
+- **Manual Updates Restricted** Even if updates are attempted manually, engine or module updates will fail until a valid license is restored.
+- **Unable to Scan Files** Once the engines have expired, MetaDefender Core will be unable to scan any files until the license is renewed.
+
+### [**What to Do Next:**](/docs/mdcore/knowledge-base/what-will-happen-to-the-md-core-after-the-license-is-expired-#what-to-do-next)
+
+- Please contact our Sales team to renew or extend your license based on your usage needs.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/portal/support).

@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/polling-handling -->
 
-Too many requests
-# You're going a little too fast.
+# Polling handling
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The **Polling file discovery method** retrieves and processes new or modified files directly from the storage.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Key characteristics include:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Each identified file is processed independently.
+- Files are processed only once, preventing redundant scans.
+- The storage is checked for updates **every 10 seconds**, or immediately after a complete storage discovery cycle.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Fpolling-handling%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Note:
+
+Using the **Polling** method significantly increases the number of requests to the storage system, ensuring timely detection of file changes.
+
+### [Special considerations for Dell Isilon / SMB Compatible Storage](/docs/mdss/4.4.2/configuration/polling-handling#special-considerations-for-dell-isilon--smb-compatible-storage)
+
+#### [Dell Isillon / Smb Compatible](/docs/mdss/4.4.2/configuration/polling-handling#dell-isillon--smb-compatible)
+
+Real-time processing for Dell Isilon and SMB-compatible storage units employs a distinct approach compared to other storage types.
+
+The behavior of this processing mode is governed by environment variables.
+
+Refer to the [the custom configuration page](/docs/mdss/4.4.2/configuration/custom-configuration) for detailed information on these settings.

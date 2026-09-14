@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/what-can-i-do-when-i-forgot-the-bios-password-of-the-md-kiosk--- -->
 
-Too many requests
-# You're going a little too fast.
+# What can I do when I forgot the BIOS Password of the MD Kiosk - Dell
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Check Your Version:**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This article applies to the MetaDefender Kiosk Hardware that uses the Dell Model.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Using the BIOS Password is an advanced security feature that you can apply to the MD Kiosk hardware, depending on the organization’s policies.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fwhat-can-i-do-when-i-forgot-the-bios-password-of-the-md-kiosk---%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+When you forget the BIOS password, you can try the Dell support KB for this [How to Reset, Remove, or Recover BIOS Passwords | Dell US](https://www.dell.com/support/kbdoc/en-us/000131024/how-to-clear-the-bios-password)
+
+If the above Dell KB does not work, follow the steps below to obtain the error code, then provide it to OPSWAT Support via the support case.
+
+- Turn on your computer
+- Enter a wrong password 3-5 times until you see an error code
+- Write down the exact error code
+
+The error code will be similar to this: **“This computer system, #ABC123A-XXXX,….”**
+
+After receiving the unlock code from the support, you can try entering the provided password, then hold the **CTRL** key and press the **Enter** key twice.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chat with our support engineer](https://my.opswat.com/support).

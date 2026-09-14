@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/release-notes/metadefender-drive-v3-16-1 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v3.16.1
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Frelease-notes%2Fmetadefender-drive-v3-16-1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| [MetaDefender Drive v3.16.1](/docs/mddrive/v4.4.2a/release-notes/metadefender-drive-v3-16-1#metadefender-drive-v3161) Released on Sep 22, 2023 | This is a major release that has new features and improvements |
+| --- | --- |
+| **New Features** | Custom Scan with AV engines selection ON/OFF option. Previously in a custom scan, Drive will include all embedded AV engines as default. A user can now select how many engines to scan with. |
+| **Enhancements** | Certain large archive files, MetaDefender Drives 3.15.1 used to take prolong time to complete. In this release version, memory optimizations enhancements are applied to help with enhance and optimize scan time for large archive files. |
+| **Known Issues** | WiFi device is not recognized for mac Mini 2012. It will be fixed in our subsequent release. |

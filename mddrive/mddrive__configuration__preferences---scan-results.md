@@ -12,6 +12,7 @@ To enable this feature,
    1. **BIOS Vulnerabilities**
    2. **Skipped Files**
    3. **Cancelled Scans**
+   4. **Operator Skipped Files**
 
 3. Save the setting.
 

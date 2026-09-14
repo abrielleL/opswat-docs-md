@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/advanced-usages/ocm-selfsigned-certificates -->
 
-Too many requests
-# You're going a little too fast.
+# Boot from a File
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Mostly, legacy devices are unable to boot directly from MetaDefender Drive. A workaround is built into MetaDefender Drive to enable users to boot from a file.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The following steps demonstrate how to boot MetaDefender Drive from a file. The screenshots might differ based on your device manufacturer:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Power on your device and enter the Boot Menu by repeatedly clicking the boot menu button. This button depends on your device manufacturer. Usually, it is `F12` , `F9` , `F10` , or `esc` .
+2. Select **Enter Setup** from **Boot Manager**
+3. Select Boot From EFI File
+4. Locate the MetaDefender Drive file system and select it
+5. Select EFI
+6. Select **BOOT**
+7. Select **grubx64.efi**, then wait for MetaDefender Drive to boot
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fadvanced-usages%2Focm-selfsigned-certificates%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+.

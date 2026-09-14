@@ -3462,7 +3462,6 @@ Params:
 - page - (default: 1)
 - filter - match the given string to error message
 - sort - can be 'date', 'count' or 'note'
-
 Auth apiKeyQuery String
 
 | type |  | Default: client |  |
@@ -3517,7 +3516,6 @@ Params:
 
 - type - can be 'server' or 'client'
 - filter - match the given string to error message
-
 Auth apiKeyQuery String
 
 | type |  | Default: client |  |
@@ -3634,7 +3632,6 @@ Params:
 - page - (default: 1)
 - filter - match the given string to the 'key' and the beginning of the 'related_url' and 'note' fields
 - sort - can be 'date' or 'note'
-
 Auth apiKeyQuery String
 
 | page | integer | minimum: 1  Default: 1 |  |
@@ -3678,7 +3675,6 @@ Remove custom logs matching filter
 Params:
 
 - filter - match the given string to the 'key' and the beginning of the 'related_url' and 'note' fields
-
 Auth apiKeyQuery String
 
 | filter | string |  |  |

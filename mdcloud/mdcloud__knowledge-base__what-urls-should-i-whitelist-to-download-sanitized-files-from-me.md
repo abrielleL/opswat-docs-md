@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/mdcloud/knowledge-base/what-urls-should-i-whitelist-to-download-sanitized-files-from-me -->
 
-Too many requests
-# You're going a little too fast.
+# What URLs should I whitelist to download sanitized files from MetaDefender Cloud?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article is applied to MetaDefender Cloud.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Issue:** Users may be unable to download sanitized files from MetaDefender Cloud if the appropriate regional URLs are not allowed through firewall or security settings. These download URLs vary based on the region where the API call is made.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Resolution:** To ensure successful downloads of sanitized files, whitelist the following URLs according to the region where the MetaDefender Cloud API request is initiated:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcloud%2Fknowledge-base%2Fwhat-urls-should-i-whitelist-to-download-sanitized-files-from-me%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- **North America (United States, West coast)** `https://s3.us-west-2.amazonaws.com/sanitized.files.metadefender.com/*` `https://s3.us-east-2.amazonaws.com/sanitized.files.metadefender.com-useast2/*`
+- **Europe Central (Germany)** `https://s3.eu-central-1.amazonaws.com/sanitized.files.metadefender.com-eucentral1/*`
+- **Canada (Montreal)** `https://s3.ca-central-1.amazonaws.com/sanitized.files.metadefender.com-cacentral1/*`
+- **Australia (Sydney)** `https://s3.ap-southeast-2.amazonaws.com/sanitized.files.metadefender.com-apsoutheast2/*`
+- **Japan (Tokyo)** `https://prod-mdc-platform-sanitized-files-apnortheast1.s3.ap-northeast-1.amazonaws.com/*`
+- **India (Mumbai)** `https://prod-mdc-platform-sanitized-files-apsouth1.s3.ap-south-1.amazonaws.com/*`
+
+Make sure that **Port 443 (HTTPS)** is open for outbound connections to the above domains. All downloads are conducted securely over HTTPS.
+
+If your network uses additional security layers such as web proxies, content filters, or intrusion prevention systems, be sure to allow these URLs through those as well.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

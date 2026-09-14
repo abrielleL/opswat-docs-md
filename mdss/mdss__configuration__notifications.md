@@ -17,5 +17,5 @@ To enable notifications follow these steps:
    2. Webhook notifications, which can be sent:
 
       1. When a scan is completed. Please see [Scan completed Notifications](/docs/mdss/configuration/scan-completed-notifications)
-      2. When a file is completed. Please see [File scanned Notifications](/docs/mdss/metadefender-storage-security/4.3.0/configuration/file-scanned-notifications)
-   3. RabbitMQ notification which can be sent when a file is completed. Please see [File scanned RabbitMQ Notifications](/docs/mdss/metadefender-storage-security/4.3.0/configuration/file-scanned-rabbitmq-notifications)
+      2. When a file is completed. Please see [File scanned Notifications](/docs/mdss/configuration/file-scanned-notifications)
+   3. RabbitMQ notification which can be sent when a file is completed. Please see [File scanned RabbitMQ Notifications](/docs/mdss/configuration/file-scanned-rabbitmq-notifications)

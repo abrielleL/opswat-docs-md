@@ -1,12 +1,37 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/knowledge-base/how-to-install-metadefender-update-downloader-with-a-custom-inst -->
 
-Too many requests
-# You're going a little too fast.
+# How to install MetaDefender Update Downloader with a custom installation path?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Check Your Version:**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This article applies to all MetaDefender Update Downloader releases deployed on Windows systems.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [**Overview**](/docs/mddownloader/knowledge-base/how-to-install-metadefender-update-downloader-with-a-custom-inst#overview)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Fknowledge-base%2Fhow-to-install-metadefender-update-downloader-with-a-custom-inst%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+By default, Metadefender Update Downloader will be installed on the C drive when installed via the Wizard or the command line using the [ignition file](https://www.opswat.com/docs/mddownloader/installation/automation-deployment-via-ignition-file):
+
+To install Metadefender Update Downloader on a custom path, please follow the steps below:
+
+1. Install the product like normal
+2. Stop the “OPSWAT Metadefender Update Downloader” service
+
+3. Open the registry location: Computer\HKEY_LOCAL_MACHINE\SOFTWARE\OPSWAT\Metadownloader
+
+   Modify the string value for “InstallationFolder” to the desired path. For example, I created the K drive, and created the OPSWAT folder under Administrator privileges.
+
+4. Open the File explorer and copy the “MetaDefender Update Downloader” folder to the new location that matches the registry path.
+
+   - Copy “MetaDefender Update Downloader” folder from “C:\Program Files\OPSWAT\MetaDefender Update Downloader”
+
+   For Example, I copied the MetaDefender Update Downloader to the K:\OPSWAT\ directory
+5. Start the “OPSWAT Metadefender Update Downloader” service
+
+   If done correctly, the service will start like normal.
+6. Navigate to the browser, <http://localhost:8028> or http://<ipaddress>:8028 and configure. Setup users and other settings.
+7. For MetaDefender Core engine packages, please modify the path to store these in the custom path, if you do not want them in the C drive.
+
+We are planning on supporting a built in custom installation path for newer releases.
+
+**Support:**
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

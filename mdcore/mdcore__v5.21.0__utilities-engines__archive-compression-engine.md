@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/mdcore/v5.21.0/utilities-engines/archive-compression-engine -->
 
-Too many requests
-# You're going a little too fast.
+# Archive Compression Engine
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Archive Compression is commonly used in conjunction with the Deep CDR engine for sanitizing archive files. While the Deep CDR engine sanitizes the files within an archive, the Archive Compression engine compresses the sanitized files back into a new archive. For more detailed information, please refer to this page: [Archive Sanitization](/docs/mdcore/v5.21.0/deep-cdr/archive-sanitization).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Additionally, if you are using DLP without Deep CDR, you can configure Archive Compression to work with DLP. In this case, the compressed output file will contain both allowed files and files processed by Proactive DLP.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fv5.21.0%2Futilities-engines%2Farchive-compression-engine%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Archive Compression also includes the capability to retain the original password of the archive.

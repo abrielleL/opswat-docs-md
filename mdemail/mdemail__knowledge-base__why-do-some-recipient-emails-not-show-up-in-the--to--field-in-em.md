@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mdemail/knowledge-base/why-do-some-recipient-emails-not-show-up-in-the--to--field-in-em -->
 
-Too many requests
-# You're going a little too fast.
+# Why do some recipient emails not show up in the "To" field in email clients like Outlook although they appear in the EGS processing history?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all versions of MetaDefender Email Gateway Security.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When sending an email to multiple recipients through Email Gateway Security, all recipient addresses appear in the EGS processing history, and the email is successfully delivered to all of them. However, in some email clients like Microsoft Outlook, some of the recipient emails do not show up in the "To" field.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Explanation:** This behavior occurs because email delivery has two different layers of addressing:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Fknowledge-base%2Fwhy-do-some-recipient-emails-not-show-up-in-the--to--field-in-em%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. **SMTP Envelope (Transport Layer)**
+
+   - Contains the technical delivery information: `MAIL FROM` and `RCPT TO` fields.
+   - EGS displays the recipients listed in the **RCPT TO** field. These are the actual recipients that the mail server processes and delivers to.
+2. **MIME Headers (Content Layer)**
+
+   - Contains the display information: `To:`, `Cc:`, and `Bcc:` fields.
+   - Email clients like Microsoft Outlook and Thunderbird show these fields to end users.
+   - These headers are mostly cosmetic and may not always align with the SMTP envelope. For example, if a recipient is included in the SMTP envelope but not in the MIME headers, the email is still delivered, but that recipient will not appear in the Outlook "To" field.
+
+**In Summary:**
+
+- EGS shows the recipients from the SMTP envelope (true delivery list).
+- Email clients display the recipients from the MIME headers (cosmetic display list).
+- This difference can explain why some recipients are visible in EGS history but not in the Outlook "To" field, even though they still received the email.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

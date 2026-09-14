@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/is-metadefender-core-able-to-extract--detect-and-block-malicious -->
 
-Too many requests
-# You're going a little too fast.
+# Is MetaDefender Core able to extract, detect and block malicious embedded macros?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+In short, yes! MetaDefender Core can extract and block files if malicious macros are embedded.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Macro objects** are typically stored in Office Documents files such as **xlsm, docm, pptm** and so on, kindly make sure that the following option is enabled under your workflow, so that Core can extract Office Documents contents:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Workflow Management > Workflows > [any workflow] > Archive Tab > **Enable extraction of office documents**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fis-metadefender-core-able-to-extract--detect-and-block-malicious%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Using the MetaScan Engines, it can detect the infected files and directly block them. For a more proactive approach, the DeepCDR Engine ([What is CDR?](/docs/mdcore/deep-cdr/supported-file-types#what-is-cdr)) is able to deliver a clean version of the file by sanitizing/removing embedded data according to the configuration in place as per each file type, reconstructing the base file.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/portal/support).

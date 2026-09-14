@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdcore/v5.21.0/utilities-engines/file-type-engine -->
 
-Too many requests
-# You're going a little too fast.
+# File Type Verification Engine
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+With MetaDefender's file type verification technology, users can process files based on their true file types, so the system can take more precautions with risky file types like EXEs, perhaps setting different policies or rules based on file type. Spoofed file types indicate potentially malicious intent, so to mitigate this risk, MetaDefender offers functionality to block files with incorrect extensions, for example, prevents an instance of EXE file which is posed as TXT file from entering the organization. Also, more strict rules, like remediation steps can be applied. For example, Deep CDR is triggered as a post-action for the file type verification. This is highly configurable so that Deep CDR or any other secure processes can happen based on the target file name, file format and any other recognized file property data as well.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+#### [Configuration:](/docs/mdcore/v5.21.0/utilities-engines/file-type-engine#configuration)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Fallback file type detection to current extension if needed**: if this configuration is enabled, Deep CDR, Proactive DLP, Archive Extraction modules and Blocklist/Allowlist features will use the true file type from the file type engine to perform its job first; if it is failed, these modules and features will use the file extension as a backup.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fv5.21.0%2Futilities-engines%2Ffile-type-engine%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**Except on Deep CDR if the actual file type is not enabled or supported:** when ticked, file extension will not be used as backup if actual file type is not enabled or supported by Deep CDR module.
+
+**Skip processing if actual file type could not be detected:** if the File type engine is crashed/disabled/timeout/cancelled, MetaDefender Core will return "Not scanned".

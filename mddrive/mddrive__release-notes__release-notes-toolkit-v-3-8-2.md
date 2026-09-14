@@ -1,12 +1,8 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-toolkit-v-3-8-2 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive Toolkit v3.8.2
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-notes-toolkit-v-3-8-2%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Feb 6, 2026** | This release includes multiple improvements |
+| **Improvements** | - Improved handling the corrupted partitions and drives - Improved functionality of sending scan reports from MetaDefender Drive Toolkit to Central Management |

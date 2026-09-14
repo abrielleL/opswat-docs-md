@@ -1,12 +1,65 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/release-notes/august-13rd-2026 -->
 
-Too many requests
-# You're going a little too fast.
+# August 13rd, 2026
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Release Note](/docs/mdsdk/release-notes/august-13rd-2026#release-note)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+### [Release Date](/docs/mdsdk/release-notes/august-13rd-2026#release-date)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- 13/08/2026
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Frelease-notes%2Faugust-13rd-2026%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+### [SDK Version](/docs/mdsdk/release-notes/august-13rd-2026#sdk-version)
+
+- Windows: 4.3.6473.0
+- Mac: 4.3.5861.0
+
+### [Enhancement](/docs/mdsdk/release-notes/august-13rd-2026#enhancement)
+
+#### [Windows](/docs/mdsdk/release-notes/august-13rd-2026#windows)
+
+- N/A
+
+#### [Mac](/docs/mdsdk/release-notes/august-13rd-2026#mac)
+
+- N/A
+
+### [Bug Fix](/docs/mdsdk/release-notes/august-13rd-2026#bug-fix)
+
+#### [Windows](/docs/mdsdk/release-notes/august-13rd-2026#windows)
+
+- N/A
+
+#### [Mac](/docs/mdsdk/release-notes/august-13rd-2026#mac)
+
+- N/A
+
+### [New Application Support](/docs/mdsdk/release-notes/august-13rd-2026#new-application-support)
+
+#### [Windows](/docs/mdsdk/release-notes/august-13rd-2026#windows)
+
+- Add support for TrendAI™ Deep Security Agent 20.0.31108 (rebranded from Trend Micro Deep Security Agent)
+- Add support for Apex One Security Agent 14.0.20842 & 14.0.20898 & 14.0.20957 (rebranded from Trend Micro Apex One Security Agent)
+
+#### [Mac](/docs/mdsdk/release-notes/august-13rd-2026#mac)
+
+- Add support for TrendAI™ Security Agent 3.7.2050 (rebranded from Trend Micro Security)
+
+### [New Application Version Support](/docs/mdsdk/release-notes/august-13rd-2026#new-application-version-support)
+
+#### [Windows](/docs/mdsdk/release-notes/august-13rd-2026#windows)
+
+- N/A
+
+#### [Mac](/docs/mdsdk/release-notes/august-13rd-2026#mac)
+
+- N/A
+
+### [New Method Implementation](/docs/mdsdk/release-notes/august-13rd-2026#new-method-implementation)
+
+#### [Windows](/docs/mdsdk/release-notes/august-13rd-2026#windows)
+
+- N/A
+
+#### [Mac](/docs/mdsdk/release-notes/august-13rd-2026#mac)
+
+- N/A

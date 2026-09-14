@@ -1,12 +1,39 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-metadefender-core---s-nginx-ssl-conf-changed-to-ssl-mdcore-c -->
 
-Too many requests
-# You're going a little too fast.
+# Why MetaDefender Core’s nginx ssl.conf changed to ssl.mdcore.conf?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core versions starting with 5.13.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Starting with version 1.24.0 of Nginx, the ssl directive has been deprecated and can no longer be used for configuring SSL. To address this, MetaDefender Core updated the naming convention of **ssl.conf to ssl.mdcore.conf**.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+#### [Implications and limitations](/docs/mdcore/knowledge-base/why-metadefender-core---s-nginx-ssl-conf-changed-to-ssl-mdcore-c#implications-and-limitations)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-metadefender-core---s-nginx-ssl-conf-changed-to-ssl-mdcore-c%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The implications of this are that the **ssl, ssl_certificate** and **ssl_certificate_key** directives will be placed in the **ssl.mdcore.conf**. The current limitation is that the file does not support the following directives: **ssl_client_certificate, ssl_verify_client, ssl_verify_depth**.
+
+In this scenario, the configuration can be achieved as follows:
+
+**ssl.conf.mdcore file:**
+
+`ssl`
+
+`ssl_certificate`
+
+`ssl_certificate_key`
+
+**ssl.conf file:**
+
+`ssl_client_certificate`
+
+`ssl_verify_client`
+
+`ssl_verify_depth`
+
+Info:
+
+Starting with MetaDefender Core version 5.14.0, advanced configuration can be achieved directly via the User Interface, without the need of having an individual config file: [Enabling HTTPS](/docs/mdcore/configuration/enabling-https)
+
+This way the configurations are stored internally and not being exposed to an external file.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/portal/support).

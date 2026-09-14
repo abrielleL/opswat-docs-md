@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/mddrive/knowledge-base/how-do-i-request-a-trial-license-for-metadefender-drive- -->
 
-Too many requests
-# You're going a little too fast.
+# How do I request a trial license for MetaDefender Drive?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+If you’re interested in obtaining a trial license for MetaDefender Drive, please follow the steps below:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- Navigate to the OPSWAT Contact page via [This Link](https://www.opswat.com/contact)
+- Fill out the form with all of the required information.
+- Include additional details, as well as your reason for obtaining the trial license, in the Comments field.
+- Upon completion, click Submit, as highlighted in the screenshot below.
+- You should be contacted by the OPSWAT team shortly with a trial key for the requested product.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Should you receive no contact from OPSWAT within 48 hours of submitting the contact form, please follow the instructions below to request your trial via a support ticket:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fknowledge-base%2Fhow-do-i-request-a-trial-license-for-metadefender-drive-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Click [This Link](https://www.opswat.com/support) to visit our Support page and choose option “Contact Support Now”.
+- Click the Open a Case option, as highlighted in the first screenshot below.
+
+- When redirected to the OPSWAT Portal, register your free OPSWAT account to open a case.
+- Log into the OPSWAT Portal.
+- Click New, as highlighted in the second screenshot below.
+
+- Choose your product and fill out all the necessary fields included in the case form.
+- Finally, click Save on your support ticket and await your reply from OPSWAT
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

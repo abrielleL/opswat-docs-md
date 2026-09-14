@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mddrive/knowledge-base/how-do-i-download---update-the-metadefender-drive-image- -->
 
-Too many requests
-# You're going a little too fast.
+# How do I Download / Update the MetaDefender Drive Image?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+After the MD Drive Toolkit is initialized, the MD Drive image must be updated to the latest version.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Click the **gear icon** on the left panel. Navigate to **MD Drive Version Management → Update to Latest Version**. The image will begin downloading automatically.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Wait until the download process is complete.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fknowledge-base%2Fhow-do-i-download---update-the-metadefender-drive-image-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

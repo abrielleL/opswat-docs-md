@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/troubleshooting/managed-devices-are-unable-to-report-to-opswat-central-managemen -->
 
-Too many requests
-# You're going a little too fast.
+# Managed devices are unable to report to OPSWAT Central Management
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Term | Detail |
+| --- | --- |
+| Problem | Managed devices are unable to report to OPSWAT Central Management (Disconnected status) |
+| Cause | OPSWAT Central Management has had its address changed and the server URL setting does not reflect the change. |
+| Troubleshooting | Check if **Server Configuration > Device API > Server URL** is set correctly |
+| Solution | Correct **Server URL** and reinstall MetaDefender Endpoint on the affect devices. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+If managed devices previously connected to OPSWAT Central Management now display as **Disconnected,** the OPSWAT Central Management console may have had its address changed since the last time OPSWAT Client were installed on the affected devices. This can be caused by a change in the IP address assigned to the system OPSWAT Central Management is running on.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To correct the server URL attached to OPSWAT Client by OPSWAT Central Management, navigate to **Server Configuration > Device API > Server URL.**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Ftroubleshooting%2Fmanaged-devices-are-unable-to-report-to-opswat-central-managemen%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Finally, reinstall OPSWAT Client on the affected devices according to [Distribute OPSWAT Client to devices](/docs/ocm/7.39.0/operating/opswat-client#distribute-opswat-client-to-devices).

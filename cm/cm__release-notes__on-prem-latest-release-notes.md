@@ -2,6 +2,20 @@
 
 # On-Premise Release Notes
 
+### My OPSWAT Central Management v10.7.26080.2750
+
+| **Version** | v10.7.26080.2750 |
+| ---- | ---- |
+| **Release date** | September 9, 2026 |
+
+New Features** Supports Automatic Direction-Based Workflow for Peripheral Media Protection**
+
+Peripheral Media Protection now automatically applies the right scan workflow based on file transfer direction.
+
+Bug Fixes** Fixed Console Sign-In Loop After Upgrading to 10.7.26080.2744**
+
+Fixed an issue where users were redirected to the sign-in screen when logging into the console via custom domain names after upgrading to version 10.7.26080.2744.
+
 ### My OPSWAT Central Management v10.7.26080.2744
 
 | **Version** | v10.7.26080.2744 |
@@ -143,7 +157,7 @@ License keys covering multiple platform (e.g., Linux + Windows) now display as s
 
 Enhancements** Bundled Dependencies for On-premises RPM Installation Package**
 
-The On-premises RPM package now bundles all required dependencies, ensuring reliable installation without requiring external package repositories. See [RPM Installation for Bundled Dependencies](https://www.opswat.com/docs/cm/deployment/rpm-installation-for-bundled-dependencies) for details.
+The On-premises RPM package now bundles all required dependencies, ensuring reliable installation without requiring external package repositories. See [RPM Installation](https://www.opswat.com/docs/cm/deployment/rpm-installation) for details.
 
 Enhancements** Show Assigned Groups on the Users and Groups Page**
 

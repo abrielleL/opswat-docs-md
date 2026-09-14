@@ -1,12 +1,35 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/release-notes/netwall-diode-v1-2-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.2.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | 1.2.0 |
+| --- | --- |
+| **Release date** | Aug 2023 |
+| **Scope** | Major release including OSIPI, MQTT and FTPS support |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/netwalldiode/release-notes/netwall-diode-v1-2-0#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+|  | Details |
+| --- | --- |
+| OSI-PI database replication | Added support for OSI-PI database replication |
+| MQTT support | Added support for MQTT protocol streams |
+| FTPS | FTPS support added |
+| Filename of personality | Filename of personality has been changed to include OD-100 reference |
+| REDIS update | REDIS updated to v7.0.11 |
+| Password fields obfuscated | All password fields modified to show as * |
+| CLI information | When logging in CLI, software version is displayed, including OD-100 reference |
+| preserving timestamps, File Transfers | File Transfers updated to support preserving timestamps. |
+| Changes on File Transfer table | Enabled column included in File Transfer tables. Encryption column changed to Protocol. |
+| Health Information added | In RED GUI, some health information has been added, to check connectivity with BLUE and redundancy status. |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Frelease-notes%2Fnetwall-diode-v1-2-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Bug fixes](/docs/netwalldiode/release-notes/netwall-diode-v1-2-0#bug-fixes)
+
+|  | Details |
+| --- | --- |
+| bugfixing | several minor bugs fixed |
+
+## [Known limitations](/docs/netwalldiode/release-notes/netwall-diode-v1-2-0#known-limitations)
+
+N/A
+
+MetaDefender

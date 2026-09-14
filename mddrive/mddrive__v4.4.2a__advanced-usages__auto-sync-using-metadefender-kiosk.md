@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/advanced-usages/auto-sync-using-metadefender-kiosk -->
 
-Too many requests
-# You're going a little too fast.
+# Auto-Sync Using MetaDefender Kiosk
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Kiosk, v4.8.0 and above, supports direct integration with MetaDefender Drive. When a MetaDefender Drive is connected to a Kiosk, it automatically uploads stored scan reports to the enrolled My OPSWAT Central Management. This feature removes the need for separate SDK installation and configuration, and can be enabled from the Configuration page of a MetaDefender Kiosk.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Follow the steps to get the integration work.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. In MetaDefender Kiosk, go to server **Config page --> Configuration --> Integrations**
+2. Set the **Enable Drive Integration** to be **ON**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fadvanced-usages%2Fauto-sync-using-metadefender-kiosk%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+For more info, please refer to the MetaDefender Kiosk documentation ([*Windows*](https://www.opswat.com/docs/mdkiosk)) ([*Linux*](https://www.opswat.com/docs/mdkiosk-linux)).
+
+3. On a running Kiosk (that has the integration enabled), insert MetaDefender Drive (that has been enrolled)
+4. Wait for it to be detected and wait until the sync progress start then finish
+
+5. Safely remove the MetaDefender Drive

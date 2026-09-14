@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/custom-ca-certificates -->
 
-Too many requests
-# You're going a little too fast.
+# Custom CA certificates
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Custom certificates can be loaded in each MDSS container by placing them in the appropriate configuration directory depending on the host OS. If the directory does not exist, an empty one is created at startup. Any number of certificates can be placed in the directory and they will be loaded into MDSS.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Configuring custom certificates on Linux](/docs/mdss/4.4.2/configuration/custom-ca-certificates#configuring-custom-certificates-on-linux)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Certificates are loaded from the following path:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Fcustom-ca-certificates%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+BashCopy/etc/mdss/ca_certificates/
+### [Notes:](/docs/mdss/4.4.2/configuration/custom-ca-certificates#notes)
+
+- All certificates should be in .crt format
+- The full SSL certificate chain should be loaded in MDSS, especially if the certificate wasn't issued by a trusted CA
+- Root CAs and intermediate CAs can be loaded using the same procedure
+
+## [Configuring custom certificates on Windows](/docs/mdss/4.4.2/configuration/custom-ca-certificates#configuring-custom-certificates-on-windows)
+
+Certificates are loaded from the host certificate store. In order to add new CA certificates you'll need to do the following:
+
+- Obtain the CA Certificate: Get the root CA certificate file (usually a .cer or .crt file) from your CA administrator.
+- Open Certificate Manager:
+- Press the Windows Key + R, type certlm.msc, and press Enter. (This opens the local machine certificate store)
+- Import the Certificate:
+- Expand the Trusted Root Certification Authorities folder.
+- Right-click on Certificates.
+- Select All Tasks -> Import.
+- Follow the Certificate Import Wizard, browsing to the CA certificate file. Make sure to place the certificate in the Trusted Root Certification Authorities store

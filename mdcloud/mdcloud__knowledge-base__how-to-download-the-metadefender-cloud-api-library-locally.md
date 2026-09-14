@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdcloud/knowledge-base/how-to-download-the-metadefender-cloud-api-library-locally -->
 
-Too many requests
-# You're going a little too fast.
+# How to Download the MetaDefender Cloud API Library Locally?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+1. Navigate to the Documentation: Open your web browser and visit the MetaDefender Cloud API documentation by clicking [here](https://docs.opswat.com/mdcloud/metadefender-cloud-api-v4).
+2. Locate the OAS3 Button: Once the page is fully loaded, direct your attention to the top right-hand corner of the page.
+3. Download the Library: Click on the "OAS3" button. This will initiate the download process of the API library to your local system. The file is an .yml file that you can directly import into.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Tips
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Ensure you have the required permissions and enough storage space on your system to download and store the library.
+- Once downloaded, you can reference the local copy of the API library even when offline.
+Support
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcloud%2Fknowledge-base%2Fhow-to-download-the-metadefender-cloud-api-library-locally%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+For further information or technical support, you may refer back to the [official documentation](https://docs.opswat.com/mdcloud/metadefender-cloud-api-v4) or contact the support team.

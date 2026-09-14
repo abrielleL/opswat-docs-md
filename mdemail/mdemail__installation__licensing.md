@@ -1,12 +1,39 @@
 <!-- source: https://www.opswat.com/docs/mdemail/installation/licensing -->
 
-Too many requests
-# You're going a little too fast.
+# Licensing
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Product activation](/docs/mdemail/installation/licensing#product-activation)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The license must be activated so that Email Gateway Security can be used to process emails.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To activate the product:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Finstallation%2Flicensing%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Go to the **License** page and click *Activate*
+
+2. Select your activation method
+
+3. Follow the on-screen instructions to complete activation. For online activation provide your activation key and an optional description of the deployment.
+
+## [User counting](/docs/mdemail/installation/licensing#user-counting)
+
+The product can be licensed by the number of users, and licensed users are counted by MetaDefender Email Gateway Security.
+
+User limit exceeded
+
+When the license limit is exceeded then the emails of the exceeding users will be bypassed (for details see [Operating/Bypassing](/docs/mdemail/operating/bypassing)).
+
+Emails of licensed users will be processed normally.
+
+## [Licensed users](/docs/mdemail/installation/licensing#licensed-users)
+
+Licensed users may be added manually or discovered by machine learning techniques.
+
+To add a user manually:
+
+1. Go to the **License** page and click
+
+2. Provide the display name and user name of the user to add
+
+User name
+
+The user name is the [local part](https://tools.ietf.org/html/rfc5322#section-3.4.1) of the user’s email address.

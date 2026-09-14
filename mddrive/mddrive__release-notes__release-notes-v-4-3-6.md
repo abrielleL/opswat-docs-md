@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-v-4-3-6 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v4.3.6
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-notes-v-4-3-6%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Sep 25, 2025** | This release includes improvements on Version Compliance, Hardware Reporting and Broader Threat Protection |
+| **New Features** |  |
+|  | - **Version Policy Management**: Administrators can enforce alignment with organizational software upgrade policies by setting preferences that require updates before scans proceed, ensuring compliance and reliability. |
+|  |  |
+| **Improvements** |  |
+|  | - **Enhanced Hardware Reporting**: Improved reporting ensures accurate identification of Intel RST controllers, providing clearer visibility into system configurations. - **Expanded Threat Detection**: Identifies threats in VMDK images using GUID Partition Table, enhancing visibility in virtual environments. |

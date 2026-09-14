@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/configuration/preferences-----log-level -->
 
-Too many requests
-# You're going a little too fast.
+# Preferences → Log Level
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Drive saves a comprehensive set of logs by default, which can lead to a decrease in disk space over time. Lack of available disk space can impact scan performance and report management. MetaDefender Drive offers multiple log saving levels, enabling users to skip non-essential logs.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Preferences interface
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+There are two Log Level options:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fconfiguration%2Fpreferences-----log-level%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- **Default:** to save comprehensive logs for better support insights and full compliance.
+- **Optimized:** to save a set of essential logs, saving disk space.
+
+Log Level options
+
+Info
+
+In case of a suspected issue or malfunction that requires troubleshooting, keeping the **Log Level** setting at the **Default** option is recommended to include more system information and insights. You can learn more about troubleshooting, support packages, and log extraction [here](https://www.opswat.com/docs/mddrive/troubleshooting).
+
+.

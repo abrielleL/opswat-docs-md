@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/high-availability/configuration -->
 
-Too many requests
-# You're going a little too fast.
+# Configuration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To use multiple instances of MetaDefender MFT HA Controller™ in your setup you have to either set up the cluster mode using the HA Configuration Tool™ or edit the `appsettings.json` file focusing on the `Kestrel:Endpoints` and on the `ClusterSettings` sections.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+It is recommended that before using the MetaDefender MFT HA Controller™ in a clustered environment, make sure, that the single instance configuration works well. If it does, then continue the configuration with the cluster settings.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fhigh-availability%2Fconfiguration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Configuring the HA cluster consists of the following steps:
+
+1. Set up the nodes for the MetaDefender® MFT. (See [Initial Setup](/docs/mdmft/v3.11.4/high-availability/initial-setup) section).
+2. Test the failover (See [Manually triggered failover](/docs/mdmft/v3.11.4/high-availability/failover-scenarios#manually-triggered-failover) section)
+3. Configure the cluster:
+
+   1. by using MetaDefender MFT HA Controller™, see: [Configuration using Configuration Tool](/docs/mdmft/v3.11.4/high-availability/configuration-with-configurator), or
+   2. or by editing the appsettings.json, see: [Configuration in appsettings.json](/docs/mdmft/v3.11.4/high-availability/configuration-with-appsettings).

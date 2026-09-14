@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/knowledge-base/exceeded-archive-file-number -->
 
-Too many requests
-# You're going a little too fast.
+# Status: Exceeded Archive File Number
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Issue](/docs/mddrive/v4.4.2a/knowledge-base/exceeded-archive-file-number#issue)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Archive files are skipped during a scan with the status message: ***"Status: Exceeded Archive File Number"***
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Skipped scan results with the message: *"Status: Exceeded Archive File Number"*
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fknowledge-base%2Fexceeded-archive-file-number%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Cause](/docs/mddrive/v4.4.2a/knowledge-base/exceeded-archive-file-number#cause)
+
+Some of the archive files being scanned have more child files than the assigned maximum limit.
+
+Archive Handling default values
+
+## [Solution](/docs/mddrive/v4.4.2a/knowledge-base/exceeded-archive-file-number#solution)
+
+1. Go to **Settings** ***→*** **Preferences**.
+2. Open the **Archive Handling** settings.
+3. Increase the **Max number of files extracted** value.
+
+In the following example, the value was changed from the default value of 2000 to 20000:
+
+Change the value of the Max number of files extracted from the Archive Handling Settings
+
+.

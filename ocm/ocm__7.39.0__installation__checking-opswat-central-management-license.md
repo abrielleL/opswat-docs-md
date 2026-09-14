@@ -1,12 +1,14 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/installation/checking-opswat-central-management-license -->
 
-Too many requests
-# You're going a little too fast.
+# Checking OPSWAT Central Management license
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [License menu](/docs/ocm/7.39.0/installation/checking-opswat-central-management-license#license-menu)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To check the license status of your installation, go to **Settings > License** menu on the OPSWAT Central Management console.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The following information is available, listed according to the types of products that are being monitored:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Finstallation%2Fchecking-opswat-central-management-license%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| **Property** | **Description** |
+| --- | --- |
+| Monitored | The number of devices or OPSWAT Products managed by the current OPSWAT Central Management instance. |
+| Limit | The maximum number of devices and OPSWAT Products allowed by the license registered to the current OPSWAT Central Management instance. |

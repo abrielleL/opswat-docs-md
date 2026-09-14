@@ -1,12 +1,14 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/quick-start/installation -->
 
-Too many requests
-# You're going a little too fast.
+# Installation
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Before starting OPSWAT Central Management (OCM) installation, please make sure your server meets the [minimum system requirement](/docs/ocm/7.39.0/installation/recommended-system-requirements#minimum-hardware-requirement).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Installation steps](/docs/ocm/7.39.0/quick-start/installation#installation-steps)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Download the **OPSWAT Central Management** installer from [My OPSWAT](https://my.opswat.com/portal/products) to your server.
+2. Install the product by executing the downloaded installer.
+3. After installation finished, you can access the OPSWAT Central Management console via the OPSWAT Central Management shortcut created during installation on the desktop or at the address [http://<your_server_address:<port>](http://localhost:9000) (default is 9000) .
+4. The [configuration wizard](/docs/ocm/7.39.0/quick-start/configuration-wizard) will walk you through the basic setup of OPSWAT Central Management.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fquick-start%2Finstallation%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+For more information on the installation procedure, please refer to [Installing OPSWAT Central Management](/docs/ocm/7.39.0/installation/installing-opswat-central-management).

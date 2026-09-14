@@ -4,7 +4,7 @@
 
 # Drive
 
-#### v4.4.8 [Latest]
+#### v4.4.9 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mddrive/release-notes)
 

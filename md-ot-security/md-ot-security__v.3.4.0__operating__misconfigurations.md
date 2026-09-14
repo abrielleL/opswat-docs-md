@@ -2,7 +2,7 @@
 
 # Misconfigurations
 
-## **The misconfigurations tab is accessible under** **Assets -> Misconfigurations.**
+## [**The misconfigurations tab is accessible under** **Assets -> Misconfigurations.**](/docs/md-ot-security/v.3.4.0/operating/misconfigurations#the-misconfigurations-tab-is-accessible-under-assets---misconfigurations)
 
 This page contains misconfiguration ports of all devices in the system.
 
@@ -13,7 +13,7 @@ Each record contains:
 
 Note: you can sort a field in ascending or descending order by clicking on its name.
 
-## Filter
+## [Filter](/docs/md-ot-security/v.3.4.0/operating/misconfigurations#filter)
 
 We support searching and filtering on the device misconfigurations list:
 

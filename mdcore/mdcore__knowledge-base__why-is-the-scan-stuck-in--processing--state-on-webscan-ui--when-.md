@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-is-the-scan-stuck-in--processing--state-on-webscan-ui--when- -->
 
-Too many requests
-# You're going a little too fast.
+# Why is the scan stuck in "processing" state on WebScan UI, when the Core Processing History shows that it is already finished?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core V4 and V5 releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+If a file has been submitted for scan via WebUI, WebUI will make 999 queries as part of the polling process.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+If file analysis progress hasn’t reached 100% by the time the polling stops, the WebUI will appear to be frozen.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-is-the-scan-stuck-in--processing--state-on-webscan-ui--when-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Remedy:
+
+A simple webpage refresh will reset the query counter and allow the WebUI to continue fetching results.
+
+Support:
+
+If you have refreshed the webpage but the WebUI is still stuck in a **Processing** state, please follow these instructions on [How to Create Support Package With Bundle Tools?](/docs/mdcore/troubleshooting/how-to-create-support-package-), before [creating a support case or chatting with our support engineer](https://my.opswat.com/portal/support).

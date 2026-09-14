@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/high-availability/fine-tuning -->
 
-Too many requests
-# You're going a little too fast.
+# Fine tuning
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The following parameters can be changed in the MetaDefender MFT HA Controller™ `appsettings.json.`
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Optionally these settings can be set with the HA Configuration Tool™. See: [Settings Page](/docs/mdmft/v3.11.4/high-availability/settings-page)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fhigh-availability%2Ffine-tuning%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| Property name | Description | Default value |
+| --- | --- | --- |
+| HealthCheckInterval | Node health check interval. | “00:00:01” |
+| NumberOfFailedHealthChecksBeforeFailover | Number of failed health checks before failover to the other node. | 2 |
+| NodeManagerClientTimeout | Request timeout for node health check, activation and deactivation. | “00:00:30” |
+| ApplicationClientTimeout | Request timeout for forwarded requests to the application. | “00:02:00” |
+
+Info
+
+Configuration changes require service restart.

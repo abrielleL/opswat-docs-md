@@ -1,12 +1,33 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-7-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.7.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | Config: 1.7.0 OD-101: 1.0.1 |
+| --- | --- |
+| **Release date** | Sept 2024 |
+| **Scope** | New Connectors included; ICCP, FTP Server and SPAN port |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-7-0#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+|  | Details |
+| --- | --- |
+| ICCP Connector | ICCP Protocol support |
+| FTP Server Connector | Built-in FTP Server included in both sides, BLUE and RED |
+| Port Bonding | Link agregation feature included |
+| SPAN Connector | SPAN port connector support |
+| erasedisk command enhancement | _erasedisk command enhanced to show a list of options so the user can choose which disk to erase |
+| TPM info | TPM information included in the Dashboard |
+| DNP3 enhancements | User now can choose th DNP3 sync mode and also can enable/disable Unsolicited Responses on RED side |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Frelease-notes%2Fmetadefender-optical-diode-v1-7-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Bug fixes](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-7-0#bug-fixes)
+
+|  | Details |
+| --- | --- |
+|  |  |
+| Bugfixing | Minor bugfixing |
+
+## [Known limitations](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-7-0#known-limitations)
+
+N/A
+
+MetaDefender

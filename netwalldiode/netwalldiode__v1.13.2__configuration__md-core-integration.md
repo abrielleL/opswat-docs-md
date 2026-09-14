@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/configuration/md-core-integration -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Core Integration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The MetaDefender Optical Diode can be configured to integrate with an external instance of the MetaDefender Core Advanced Threat Prevention Solution. MD Core stops file-borne threats, including ransomware, zero-day exploits, and embedded malware, before they reach users or systems. It integrates seamlessly into existing infrastructure, securing uploads, downloads, email attachments, and file transfers without disrupting workflows. MD Core must be purchased separately from the Optical Diode.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The MetaDefender Optical Diode / MetaDefender Core integration is supported on the BLUE side only.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Fconfiguration%2Fmd-core-integration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+A security dongle must be inserted in the BLUE side to change configuration.
+
+## [Optical Diode BLUE](/docs/netwalldiode/v1.13.2/configuration/md-core-integration#optical-diode-blue)
+
+This section describes configuration of the Optical Diode BLUE to communicate with an external instance of MD Core.
+
+### [Initial Configuration](/docs/netwalldiode/v1.13.2/configuration/md-core-integration#initial-configuration)
+
+Navigate to **MetaDefender Core -> Connection**. Fill in the following fields:
+
+1. **URL:** Path to external MD Core
+2. **API Key:** API Key for authorized access to MD Core
+3. **Timeout**: the maximum duration the Optical Diode maintains an idle TCP connection in its state table before closing it. Default = 60.
+4. **Test Connection**: Press to confirm whether the connection to MD Core is successful.
+5. **Enabled:** Click check box to enable communication with MD Core.
+6. **Block Empty Files:** Block zero byte files
+7. **Submit:** Press Submit to save configuration.
+
+MetaDefender

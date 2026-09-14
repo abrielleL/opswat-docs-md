@@ -1,12 +1,31 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/installation/installing-update-downloader-using-the-command-line -->
 
-Too many requests
-# You're going a little too fast.
+# Installing Update Downloader using the Command Line
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Preliminary notes](/docs/mddownloader/installation/installing-update-downloader-using-the-command-line#preliminary-notes)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- If the Update Downloader package dependencies are not installed on your system you may need to have a working Internet connection or you may have to provide the Installation media during the installation. Consult your Operating System documentation on how to use Installation media as a package repository.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Debian package (.deb)](/docs/mddownloader/installation/installing-update-downloader-using-the-command-line#debian-package-deb)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Finstallation%2Finstalling-update-downloader-using-the-command-line%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+install cmdCopysudo dpkg -i <file name> || sudo apt-get install -f
+## [On Red Hat Enterprise Linux / CentOS package (.rpm)](/docs/mddownloader/installation/installing-update-downloader-using-the-command-line#on-red-hat-enterprise-linux--centos-package-rpm)
+
+install cmdCopysudo yum install <file name>
+## [Windows package (.msi)](/docs/mddownloader/installation/installing-update-downloader-using-the-command-line#windows-package-msi)
+
+On Windows systems it is possible to install the product by running the corresponding .msi file.
+
+From command line interface it is also possible to install the product by executing
+
+install cmdCopymsiexec /i <msi file name> <option key>=<option value>
+
+where the possible keys and their default values are the following:
+
+| Key | Default Value | Description |
+| --- | --- | --- |
+| RESTADDRESS | 0.0.0.0 | REST interface binding address |
+| RESTPORT | 8028 | REST interface binding port |
+| INSTALLFOLDER | C:\Program Files\OPSWAT\Metadefender Update Downloader\ | Custom installation folder path |
+
+For details on using msiexec please consult [Windows installer documentation](https://technet.microsoft.com/en-us/library/cc782896%28v=ws.10%29.aspx).

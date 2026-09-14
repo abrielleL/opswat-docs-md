@@ -70,7 +70,7 @@ Notes:
 | device_name | string | device name |
 | nickname | string | device nickname (editable on the cloud console) |
 | device_type | string | device type Values can be "desktop","laptop","phone","tablet","server","vm" |
-| last_seen | string | The last timestamp in GMT format when MetaAccess reports its data to Cloud |
+| last_seen | string | The last timestamp in GMT format when My OPSWAT Central Management reports its data to Cloud |
 | agent_version | string | agent version |
 | remediation_link | string | URL of remediation page for the given device |
 | group_name | string | Group name which a device is assigned to |
@@ -170,4 +170,4 @@ https://gears.opswat.com/o/api/v3/devices?access_token=TEST7P9ZMJ2LBF8AMOMJLFNPM
 | v2.3 | [Get Devices v2.3](https://www.opswat.com/docs/cm/developer-guidelines/get-devices-v2-3) |
 | v2.2 | [Get Devices v2.2](https://www.opswat.com/docs/cm/developer-guidelines/get-devices-v2-2) |
 | v2.1 | [Get Devices v2.1](https://www.opswat.com/docs/cm/developer-guidelines/get-devices-v2-1) |
-| v2.1 | [Search Devices v2.1](https://www.opswat.com/docs/cm/developer-guidelines/search-devices-v2-1).1 |
+| v2.1 | [Search Devices v2.1](https://www.opswat.com/docs/cm/developer-guidelines/search-devices-v2-1) |

@@ -1,12 +1,37 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/what-protocols-does-metadefender-core-use-for-active-directory-i -->
 
-Too many requests
-# You're going a little too fast.
+# What Protocols Does MetaDefender Core Use for Active Directory Integration?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core releases deployed on Windows/Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+> ## [Overview](/docs/mdcore/knowledge-base/what-protocols-does-metadefender-core-use-for-active-directory-i#overview)
+>
+> Metadefender Core integrates with Microsoft Active Directory (AD) using Lightweight Directory Access Protocol (LDAP). Unlike other authentication protocols such as Kerberos or NTLM, this application relies solely on LDAP/LDAPS for directory services and user authentication.
+>
+> ## [Protocols Not Used](/docs/mdcore/knowledge-base/what-protocols-does-metadefender-core-use-for-active-directory-i#protocols-not-used)
+>
+> ### [Kerberos:](/docs/mdcore/knowledge-base/what-protocols-does-metadefender-core-use-for-active-directory-i#kerberos)
+>
+> - Not used for authentication or Single Sign-On (SSO).
+> - No Kerberos ticket requests are generated.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [NTLM:](/docs/mdcore/knowledge-base/what-protocols-does-metadefender-core-use-for-active-directory-i#ntlm)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhat-protocols-does-metadefender-core-use-for-active-directory-i%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Not supported.
+- The application does not rely on NTLM hashes for authentication.
+
+## [Steps to Configure](/docs/mdcore/knowledge-base/what-protocols-does-metadefender-core-use-for-active-directory-i#steps-to-configure)
+
+Refer to the official documentation for detailed configuration steps: [User directories](/docs/mdcore/configuration/user-directories)
+
+## [Verify the Change](/docs/mdcore/knowledge-base/what-protocols-does-metadefender-core-use-for-active-directory-i#verify-the-change)
+
+Refer to the official documentation for verification steps: [User directories](/docs/mdcore/configuration/user-directories)
+
+## [Troubleshooting](/docs/mdcore/knowledge-base/what-protocols-does-metadefender-core-use-for-active-directory-i#troubleshooting)
+
+If you have queries, concerns, or issues regarding Metadefender Core AD integration methods, please open a Support Case with the OPSWAT team via phone, online chat, or form, or feel free to ask the community on our OPSWAT Expert Forum.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

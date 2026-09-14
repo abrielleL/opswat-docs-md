@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/how-can-an-administrator-password-be-changed -->
 
-Too many requests
-# You're going a little too fast.
+# How can an administrator password be changed?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To change the username, email, password, or enabled status for local administrator users, use the *UpdateCredentials* tool.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+You can find the tool in the "Tools" directory of your installation. The default location is at: *C:\Program Files\OPSWAT\MetaDefender Managed File Transfer\Tools*.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2Fhow-can-an-administrator-password-be-changed%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Info
+
+This tool must be run on the same machine where MetaDefender Managed File Transfer is installed.
+
+Only local administrator accounts can be changed.
+
+To change the local administrator account:
+
+1. Run the tool and login using the credentials of the administrator account you want to modify.
+2. If the password is correct you can enter a new username, email, or password, and change the enabled status.
+3. Click "Update credentials."
+4. Close the tool. You will now be able to log in using the updated username or password.

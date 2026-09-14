@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/installation/database-password-protection -->
 
-Too many requests
-# You're going a little too fast.
+# Database password protection
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The KIOSK database is password-protected to safeguard sensitive customer information and ensure secure KIOSK operations.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Each KIOSK has a unique database password, accessible only by the KIOSK services on that specific system. The password is generated using three components:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Hardware information specific to that KIOSK.
+- A KIOSK security salt.
+- User input provided during installation, adding an optional extra layer of security as outlined in [Installing MetaDefender Kiosk Using the Install Wizard](/docs/mdkiosk/v4.8.5/installation/installing-metadefender-kiosk-using-the-install-wizard).
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Finstallation%2Fdatabase-password-protection%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Info
+
+The password is created once and retained during KIOSK upgrades.
+
+The database password and the user-input encrypted key are both hashed and securely stored for internal usage at:
+
+- `C:\ProgramData\OPSWAT\Metadefender\blue`
+- `C:\ProgramData\OPSWAT\Metadefender\green`
+
+Warning
+
+Missing these files can lead to a critical failure of the KIOSK, as the system will be completely unable to authenticate to the database.

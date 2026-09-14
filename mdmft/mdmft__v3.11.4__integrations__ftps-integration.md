@@ -1,12 +1,32 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/integrations/ftps-integration -->
 
-Too many requests
-# You're going a little too fast.
+# FTPS Integration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Hosts reachable via FTPS can be integrated with MetaDefender Managed File Transfer for various use cases, such as file transfer automation. For example: [Introduction to File Transfer Automation](/docs/mdmft/v3.11.4/automated-file-transfer/automated-jobs).
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To manage integration instances, go to "Settings" ***→*** "Integrations" **→** "FTPS."
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fintegrations%2Fftps-integration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+FTPS integrations are globally shared, meaning every user with permissions to view them will see the same set of integrations.
+
+## [Configuration](/docs/mdmft/v3.11.4/integrations/ftps-integration#configuration)
+
+To add a new FTPS Integration, click the "Add FTPS Integration" button.
+
+In the pop-up modal, provide the following information:
+
+- **FTPS Name**: The display name, which can be anything. It will be used when selecting the integration instance.
+- **FTPS Address**: The IP address or FQDN of the host.
+- **FTPS Port**: The port on the host to connect using FTPS protocol.
+- **FTPS Encryption Method**: The FTPS encryption mode (the default mode is *Explicit*).
+
+## [Testing the Connection](/docs/mdmft/v3.11.4/integrations/ftps-integration#testing-the-connection)
+
+Users can test the connection to a configured integration. This test checks whether the configured port is accessible on the configured address.
+
+Info
+
+For security reasons, the "Test Connection" function only checks the address and port reachability.
+
+Your FTPS integration with MetaDefender® MFT is now complete. Learn how to configure Automated Jobs using the same integration [here](/docs/mdmft/v3.11.4/automated-file-transfer/spo-push-files).

@@ -51,13 +51,13 @@ The combination of the 2 values, both Policy and RegistrationKey, ensure that th
 1. Confirm that the  MetaDefender Endpoint is installed and running, look for the Process named opswat-gears-od.
 2. Validate compliance of the endpoint by checking the file
    1. Located at: Applications/OPSWAT GEARS Client/Policies
-   2. file named: GEARS_[*License Key*]_[*Policy Value*].txt, where [License Key] will be your account License Key, and [*Policy Value*] would be 1 if the device passes the policy defined in the MetaDefender IT-OT Access console.
+   2. file named: GEARS_[*License Key*]_[*Policy Value*].txt, where [License Key] will be your account License Key, and [*Policy Value*] would be 1 if the device passes the policy defined in the My OPSWAT Central Management console.
 
 This file includes a combination of 2 values, Policy and LicenseKey, to ensure that the client installed is assigned to the Account that manages the defined Polices.
 
-The endpoint compliance parameters are configured on your MetaDefender IT-OT Access account. Once the Policies are configured and the agents installed across all of the endpoints, you can begin using  MetaDefender Endpoint as part of the additional security and compliance enforcement.
+The endpoint compliance parameters are configured on your My OPSWAT Central Management account. Once the Policies are configured and the agents installed across all of the endpoints, you can begin using  MetaDefender Endpoint as part of the additional security and compliance enforcement.
 
-## On-demand  MetaDefender Endpoint
+## On-demand MetaDefender Endpoint
 
 ## Logging
 
@@ -75,7 +75,7 @@ All values are written to the following registry key:
 \\HKEY_CURRENT_USER\\SOFTWARE\\OPSWAT\\GEARS OnDemand\\Config
 ```
 
-To indicate whether an endpoint that On-demand  MetaDefender Endpoint ran on is compliant with a policy set by a MetaDefender IT-OT Access account that the client reported to, the following value gets written.
+To indicate whether an endpoint that On-demand  MetaDefender Endpoint ran on is compliant with a policy set by a My OPSWAT Central Management account that the client reported to, the following value gets written.
 
 Name: *Policy* Value:
 
@@ -92,11 +92,11 @@ All values are written to the following user location:
 /Users/username/Documents/OPSWAT/GEARS OnDemand
 ```
 
-To indicate whether an endpoint that On-demand  MetaDefender Endpoint ran on is compliant with a policy set by a MetaDefender IT-OT Access account that the client reported to, the following value gets written to a filename (NOTE: the value is in the file name, not the contents of the file).
+To indicate whether an endpoint that On-demand  MetaDefender Endpoint ran on is compliant with a policy set by a My OPSWAT Central Management account that the client reported to, the following value gets written to a filename (NOTE: the value is in the file name, not the contents of the file).
 
 Filename Format: GEARS_[*license key*]_[*Policy Value*].txt
 
 where:
 
 - *license key:* your account license key
-- *Policy Value* would be 1 if the device passes a policy defined in the MetaDefender IT-OT Access console
+- *Policy Value* would be 1 if the device passes a policy defined in the My OPSWAT Central Management console

@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-6-1 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.6.1
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | Config: 1.6.1 OD-101: 1.0.1 |
+| --- | --- |
+| **Release date** | May 2024 |
+| **Scope** | Release to solve a bug in Pi Connector GUI |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Bug fixes](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-6-1#bug-fixes)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+|  | Details |
+| --- | --- |
+| bugs | Bug in the GUI, causing that in some circumstances “None” string would be appended to all tags, has been fixed. |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Frelease-notes%2Fmetadefender-optical-diode-v1-6-1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Known limitations](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-6-1#known-limitations)
+
+N/A
+
+MetaDefender

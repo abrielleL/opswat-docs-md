@@ -9,7 +9,8 @@ Within My OPSWAT Central Management, there are 2 types of users
 
 Administrators have the ability to create users (both end-users and console users). This document covers how to provision console users who will access the My OPSWAT Central Management console.
 
-You can provision console users through
+You can provision console users:
 
 - [Through OPSWAT SSO](https://www.opswat.com/docs/cm/user-management/through-opswat-sso)
-- [Your own IdP](https://www.opswat.com/docs/cm/user-management/through-your-own-idp)
+- [Through your own IdP](https://www.opswat.com/docs/cm/user-management/through-your-own-idp)
+- [Map IdP groups](https://www.opswat.com/docs/cm/user-management/map-idp-groups)

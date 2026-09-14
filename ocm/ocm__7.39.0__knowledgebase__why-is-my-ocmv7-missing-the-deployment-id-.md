@@ -1,12 +1,31 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/knowledgebase/why-is-my-ocmv7-missing-the-deployment-id- -->
 
-Too many requests
-# You're going a little too fast.
+# Why is my OCMv7 missing the Deployment ID?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OCM relies on runtime components from the Microsoft **Visual C++ 2013 Redistributable (x64)**. If these libraries are not present—or are an earlier build—the component that renders the Deployment ID cannot load, leaving the field empty.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- Required package: **Visual C++ Redistributable Packages for Visual Studio 2013 (x64)**
+- Required version (minimum): **12.0.40664** (released April 2022)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Resolution**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fknowledgebase%2Fwhy-is-my-ocmv7-missing-the-deployment-id-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. **Download the redistributable**
+
+   1. Official Microsoft page: search for "Visual C++ Redistributable Packages for Visual Studio latest version".
+   2. Direct download (64‑bit): <https://aka.ms/highdpimfc2013x64enu>
+2. **Install the package**
+
+   1. Run vcredist_x64.exe and follow the on‑screen prompts.
+   2. A reboot is not usually required, but one is recommended if prompted.
+3. **Restart OPSWAT services**
+
+   1. Open **Services.msc**. Restart **OPSWAT Central Manager Service** (or restart the server during the optional reboot).
+   2. Restart **OPSWAT Central Manager Service** by right-clicking the tray Icon and select Restart
+4. **Verify**
+
+   1. Log back in to OCM.
+   2. Navigate to **Dashboard › License** and confirm that the **Deployment ID** now appears.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

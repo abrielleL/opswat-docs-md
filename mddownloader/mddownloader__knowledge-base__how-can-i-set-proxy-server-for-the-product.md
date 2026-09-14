@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/knowledge-base/how-can-i-set-proxy-server-for-the-product -->
 
-Too many requests
-# You're going a little too fast.
+# How can I set proxy server for the product?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Linux](/docs/mddownloader/knowledge-base/how-can-i-set-proxy-server-for-the-product#linux)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Set variables https_proxy in file `/etc/default/ometadownloader`
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Windows](/docs/mddownloader/knowledge-base/how-can-i-set-proxy-server-for-the-product#windows)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Fknowledge-base%2Fhow-can-i-set-proxy-server-for-the-product%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Under Windows use the netsh tool to set the proxy, e.g.: `netsh winhttp set proxy <ADDRESS>`
+
+In same cases setting the proxy with netsh is not sufficient. In that case set the proxy by starting Internet Explorer with SYSTEM rights and configure the proxy in the settings. To do this please follow this [article](http://social.technet.microsoft.com/wiki/contents/articles/13710.how-to-configure-proxy-settings-for-configuration-manager-primary-sites-that-manage-cloud-services.aspx).
+
+Info
+
+You might need to configure Windows proxy to bypass local addresses if you can't access Web Management Console from the host itself. Consult netsh documentation for additional configuration options.

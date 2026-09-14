@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/getting-started/architecture-and-components -->
 
-Too many requests
-# You're going a little too fast.
+# Architecture & Components
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**MetaDefender Storage Security (MDSS)** is built for flexibility. It uses containers, which let you customize and adapt your development to match your specific needs. Getting the sizing right is crucial for performance and reliability as your workload directly impacts sizing. Proper sizing ensures smooth operation. This guide will help you understand the key components and make informed decisions.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+High level architecture of MetaDefender Storage Security
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Shared Services](/docs/mdss/4.4.2/getting-started/architecture-and-components#shared-services)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fgetting-started%2Farchitecture-and-components%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+MDSS depends on the following stateful services to ensure high performance and data consistency:
+
+- **PostgreSQL (Database)** – Stores configuration, job metadata, and system state. Proper sizing ensures transactional integrity and I/O performance at scale.
+- **RabbitMQ (Message Broker)** – Coordinates communication across system components. It must be horizontally scalable to handle high volumes of concurrent file scan tasks.
+- **Redis (Cache)** Provides low-latency access to ephemeral data and scan results. Effective caching reduces load on other components and speeds up workflow processing.
+
+### [Why These Services Matter:](/docs/mdss/4.4.2/getting-started/architecture-and-components#why-these-services-matter)
+
+- **Scalability** – Each service must scale independently to accommodate varying workloads.
+- **Reliability** – As stateful services, downtime or data loss can impact the entire system’s operation.
+- **Performance** – Throughput and responsiveness of the system depend on proper resource allocation for these services.

@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/sign-in-as-local-user -->
 
-Too many requests
-# You're going a little too fast.
+# Signing In as a Local/Active Directory User
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+On the "Login" page, enter your credentials and click "Sign In." Ensure you’re on the "Sign In" tab, not the "Guest" tab. If you forget your password, click the [Forgot Password](/docs/mdmft/v3.11.4/end-user-guide/forgotten-password)  link to reset it.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Info
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fsign-in-as-local-user%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+External users can sign in the same way as local users.
+
+### [Signing in as an Active Directory User](/docs/mdmft/v3.11.4/end-user-guide/sign-in-as-local-user#signing-in-as-an-active-directory-user)
+
+Active Directory users have additional login options, allowing them to sign in with AD-specific formats. Besides using a standard username or email address, they can log in using either the "domain\username" or "username@domain" formats.
+
+For example, if "johndoe" is a user in the Active Directory "example.com," he can sign in using:
+
+- "example\johndoe" with the domain specified before the username
+- "[johndoe@example.com](mailto:johndoe@example.com)" with the User Principal Name (UPN) format

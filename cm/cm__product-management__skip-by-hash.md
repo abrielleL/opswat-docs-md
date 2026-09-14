@@ -26,7 +26,7 @@ You create hash lists, assign them to Core policies, and every Core instance gov
 
 ## Create a Hash List
 
-**Step 1**: Navigate to** Inventory → Skip By Hash**
+**Step 1**: Navigate to** File Security → Skip By Hash**
 
 1. Click **Create New List** on the Skip By Hash page
 2. Enter a Name and Description

@@ -1,12 +1,37 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/high-availability/troubleshooting -->
 
-Too many requests
-# You're going a little too fast.
+# Troubleshooting
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
+### [All controls are disabled](/docs/mdmft/v3.11.4/high-availability/troubleshooting#all-controls-are-disabled)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This occurs when `localpeer.json` is missing or has no valid API key. Only the close button remains functional. Fix the file and relaunch.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Node or peer shows "Unreachable" on Dashboard](/docs/mdmft/v3.11.4/high-availability/troubleshooting#node-or-peer-shows-unreachable-on-dashboard)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fhigh-availability%2Ftroubleshooting%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The health check endpoint could not be reached. Check that:
+
+- The node/peer is running and accessible from this machine.
+- The URL is correct (verify on the Nodes or Cluster page).
+- Firewall rules allow the connection.
+
+### [Save button stays disabled](/docs/mdmft/v3.11.4/high-availability/troubleshooting#save-button-stays-disabled)
+
+The **Save** button is only enabled when there are unsaved changes. Modify any field to enable it.
+
+### [Validation error: "Must be a valid positive TimeSpan"](/docs/mdmft/v3.11.4/high-availability/troubleshooting#validation-error-must-be-a-valid-positive-timespan)
+
+TimeSpan fields require the `HH:mm:ss` format. Examples:
+
+- 1 second: `00:00:01`
+- 30 seconds: `00:00:30`
+- 2 minutes: `00:02:00`
+- 1 hour: `01:00:00`
+
+### [Cluster settings disappear after saving](/docs/mdmft/v3.11.4/high-availability/troubleshooting#cluster-settings-disappear-after-saving)
+
+This is expected behavior when only the self peer exists. In standalone mode, the `ClusterSettings` and `Kestrel.Endpoints.Raft` sections are intentionally removed from `appsettings.json` to keep the configuration clean.
+
+### [Unmanaged JSON sections are being modified](/docs/mdmft/v3.11.4/high-availability/troubleshooting#unmanaged-json-sections-are-being-modified)
+
+The tool preserves all JSON sections it does not manage. If you notice unwanted changes, ensure you are using the tool (not a text editor) for all edits, and that `appsettings.json` is well-formed JSON before loading.

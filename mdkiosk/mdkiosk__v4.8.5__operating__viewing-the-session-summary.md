@@ -155,7 +155,7 @@ The following information is included in the printout.
 | **Files Failed to Download** | The list of files that failed to be retrieved. Each file will have the PATH listed. |
 | **Allowed Files** | The list of allowed files in the session. Each file will have the PATH, ATTRIBUTES and SHA-256 listed. |
 |  |  |
-| **Path** | The relative path to the given file |
+| **Path** | The relative path to the given file. For a file inside a disk image (VHD, VHDX, VMDK, Acronis TIB/TIBX, Clonezilla, or LVM) that has more than one partition, the path also shows which partition the file came from — for example, `VHD1.vhd\Partition3\filename.reg`. |
 | **Attributes** | Displays if a file has "Hidden" and/or "System" attributes enabled |
 | **SHA-256** | The hash value of the given file |
 | **Threat Name** | The name of the infection for the given file |
@@ -164,6 +164,30 @@ The following information is included in the printout.
 | **File Type Description** | The description of the detected file type |
 | **Reason** | The reason the file has been included in the current list |
 | **Process Server** | The server url the file was processed on |
+
+## [Disk Image Partition Details](/docs/mdkiosk/v4.8.5/operating/viewing-the-session-summary#disk-image-partition-details)
+
+When a scanned disk image (VHD, VHDX, VMDK, Acronis TIB/TIBX, Clonezilla, or LVM) contains more than one partition, the session report includes a short summary for that image:
+
+- The number of partitions found.
+- How many of those partitions were scanned, and how many could not be scanned — for example, because a partition failed to mount.
+- Basic information about each partition, such as its filesystem type, size, and volume label, where the disk image format provides it.
+
+Every file's path elsewhere in the report (see **Path** in the File Detail Columns table above) also identifies which partition it came from, so you can tell exactly where inside a multi-partition image a given file was found — for example, `E:\test.vhd\Partition2\evil.exe`.
+
+This applies to the on-disk session log, the printed report, and the emailed session report.
+
+Note
+
+A single-partition disk image continues to report the same way it always has — this detail only appears for images with more than one partition.
+
+Note
+
+For most disk image formats, a partition that can't be mounted is still counted as "not scanned" rather than being silently left out of the partition count. For a few formats, this count may only reflect partitions Kiosk can examine directly, so treat the not-scanned count as a lower bound rather than an exact figure for those formats.
+
+Note
+
+For Linux LVM-based volumes, the partition list may occasionally show the LVM container itself rather than the individual partition(s) it holds. OPSWAT is aware of this and is working on an improvement.
 
 ## [Viewing Blocked Files Inside an Archive](/docs/mdkiosk/v4.8.5/operating/viewing-the-session-summary#viewing-blocked-files-inside-an-archive)
 

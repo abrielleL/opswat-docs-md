@@ -9,7 +9,7 @@ By integrating My OPSWAT Central Management into HP Aruba ClearPass, administrat
 - **Vulnerabilities -** Detect vulnerabilities on endpoints in installed applications and operating systems.
 - **Enhanced Compliance** - Get greater visibility into the status of installed security applications such as hard disk encryption and system information such as password protection to ensure devices are compliant with existing policies.
 - **Unwanted Applications** - Detect and remove non-compliant or unwanted applications such as peer-to-peer applications from a remote device.
-- **Advanced Threat Detection** - Utilizing two methods of advanced threat detection, MetaDefender IT Access helps identify potential threats that existing anti-malware software might not protect against.
+- **Advanced Threat Detection** - Utilizing two methods of advanced threat detection, My OPSWAT Central Management helps identify potential threats that existing anti-malware software might not protect against.
 - **Portable media scanning and access control** - Protect organizations against threats from portable media on the endpoints, a common attack vector for malware.
 - **Anti-screen capture** - Prevent keyloggers and advanced malware from accessing sensitive data.
 - **Screen capture protection** - Prevent unauthorized or accidental screenshots and recording by users, VDI, web collaboration tools, and malicious applications.

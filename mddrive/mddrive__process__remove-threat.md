@@ -1,12 +1,32 @@
 <!-- source: https://www.opswat.com/docs/mddrive/process/remove-threat -->
 
-Too many requests
-# You're going a little too fast.
+# Remove Potential Threats
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+After the scan report has been generated, MetaDefender Drive's operators can sort and remove the data identified as potential threats from the target device.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Use the filters to sort the files based on the type of the potential threat:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Potentially Infected Files
+- Potential Vulnerability
+- Sensitive Data
+- Country of Origin
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fprocess%2Fremove-threat%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Caution
+
+Please exercise caution with the file removal step, as there is no way to recover your deleted data. If you are uncertain about the next step, please shut down your system, back up your data, perform the scan again, and then perform the file removal.
+
+1. Select the files you have decided to remove, and click **Remove Files**. Then, read the Warning and confirm that you understand the risks that come with removing the identified threats from your system, and click **Proceed**:
+
+FIle removal risk confirmation prompt
+
+2. Your disks will be mounted as WRITABLE to prepare for file removal. You can track the file removal progress displayed on the status bar at the bottom of the screen:
+
+File removal in progress
+
+3. When the file removal is complete, the system disks will be re-mounted as READ-ONLY again:
+
+Infected file removal confirmation
+
+4. After removal, deleted files are listed with a darker color
+
+Deleted files

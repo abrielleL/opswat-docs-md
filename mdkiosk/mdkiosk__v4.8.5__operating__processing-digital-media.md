@@ -27,8 +27,12 @@ Image: Total selected files and size on Kiosk UI (on the top right corner)
    2. Scanning duration: demonstrated by percentage number on USB icon, when the scanning is completed, the percentage number will be 100%.
    3. The number of files of processed out of the total number files to be processed
    4. Total elapsed time when scanning the files.
-   5. Total remaining time requirement for Kiosk to scan all the selected data and files on Kiosk.
+   5. Estimated remaining time for completion — Kiosk estimates the time remaining based on the files being scanned (their type and size) and your current engine configuration. The estimate updates periodically while the scan is running, and becomes more accurate over time as Kiosk learns from previous scans performed on that device.
    6. Which MetaDefender Core server (main or backup) is processing the session — shown briefly at the start of scanning
+
+Note
+
+This improved estimation currently applies to scans of USB and SSD media. Other media types — such as CD/DVD, floppy disks, and mobile devices — continue to use the standard estimation method. Scans that include many compressed or archive files (for example, ZIP or self-extracting EXE files) may show a less accurate estimate, since the time needed to expand and scan their contents is harder to predict in advance.
 
 Disable the estimated remaining time
 

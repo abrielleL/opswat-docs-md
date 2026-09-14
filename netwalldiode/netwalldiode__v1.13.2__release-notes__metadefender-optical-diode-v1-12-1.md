@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-12-1 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.12.1
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | **Config:** 1.12.1; OD-101: 1.0.1 (CC EAL4+ Certified, does not support High Availability)  **Config:** 1.12.1; OD-102:1.0.2 , (Supports High Availability) |
+| --- | --- |
+| **Release date** | February 6, 2026 |
+| **Scope** | Bug Fixes: File Transfer History, IEC104 Connector, UDP |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+AVEVA PI v4.2.1 connector needs MetaDefender Optical Diode v1.12.0 or 1.12.1 to operate correctly. Please, update accordingly.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Frelease-notes%2Fmetadefender-optical-diode-v1-12-1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Bug Fixes](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-12-1#bug-fixes)
+
+|  | Details |  |
+| --- | --- | --- |
+| File Transfer History | Addresses issue whereby File Transfer history tables are not created on new installations. |  |
+| IEC 104 Connector | Connector now allows reuse of origin/common address for entries with the same IP/Port. |  |
+| UDP Fragment Transmission | Addresses issue whereby large fragmented datagrams on the Optical Diode Blue Side are incorrectly transmitted on the Red Side. |  |
+
+## [Known Limitations](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-12-1#known-limitations)
+
+N/A
+
+MetaDefender

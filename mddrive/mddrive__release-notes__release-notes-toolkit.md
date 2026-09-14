@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-toolkit -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive Toolkit v3.8.9
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+|  |  |
+| --- | --- |
+| **Released on** **Sep 03, 2026** | This release includes improvements, bug fixes. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Improvements and Bug Fixes**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- With "remove report after synced" enabled, report files and their artifacts are cleared from the drive once synchronization completes, rather than accumulating in the report folder.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-notes-toolkit%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Engine updates in MetaDefender Drive Toolkit no longer lose the existing backup and fail partway through copying, and each module is named while it is still downloading.
+- Flashing several MetaDefender Drives in one session preserves each drive's stored scan hashes and logs, instead of silently discarding them when another drive is imaged at the same time.
+- Starting MetaDefender Drive Toolkit no longer raises a command prompt window full of graphics errors, on any machine it is installed on.
+- Drive Toolkit reports why a partition resize failed and retries the mount point rather than leaving the flash in an unusable state.

@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-does-metadefender-core-show----blocked----with-a-scan-result -->
 
-Too many requests
-# You're going a little too fast.
+# Why does MetaDefender Core show “Blocked” with a scan result of “Not Scanned” when no malware is detected?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core V4 and V5 releases deployed on Windows/Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [**Overview**](/docs/mdcore/knowledge-base/why-does-metadefender-core-show----blocked----with-a-scan-result#overview)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+This article explains the reason why files scanned through MetaDefender Core receive a “**Blocked**” status with a scan result of “**Not Scanned**” even when no malware is detected and suggests a solution.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-does-metadefender-core-show----blocked----with-a-scan-result%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Not Scanned Blocked
+
+## [**Reason**](/docs/mdcore/knowledge-base/why-does-metadefender-core-show----blocked----with-a-scan-result#reason)
+
+The issue occurred because no antivirus engine was available to scan the file. As a result, the scanning session was marked as “**Not Scanned**” This is expected behavior when no AV engine participates in the scanning process.
+
+## [**Solution**](/docs/mdcore/knowledge-base/why-does-metadefender-core-show----blocked----with-a-scan-result#solution)
+
+Allowing “Not Scanned” scan result
+
+After adding the **“Not Scanned”** scan result option to the enabled **Processing result to be classified as Allowed** setting under the **Process** section in the **General** tab of the workflow, files with a “Not Scanned” scan result will now be classified as *Allowed* instead of *Blocked*.
+
+### [Option 1: Example CDR](/docs/mdcore/knowledge-base/why-does-metadefender-core-show----blocked----with-a-scan-result#option-1-example-cdr)
+
+### [Option 2: Example DLP](/docs/mdcore/knowledge-base/why-does-metadefender-core-show----blocked----with-a-scan-result#option-2-example-dlp)
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [****support case or chatting with our support engineer****](https://my.opswat.com/support).

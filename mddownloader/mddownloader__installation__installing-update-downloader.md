@@ -1,12 +1,37 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/installation/installing-update-downloader -->
 
-Too many requests
-# You're going a little too fast.
+# Installing Update Downloader
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Before starting the installation please make sure your test computer or virtual machine meets the [minimum hardware and software requirements](/docs/mddownloader/installation/before-installation).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Installing Update Downloader on Ubuntu or Debian computers](/docs/mddownloader/installation/installing-update-downloader#installing-update-downloader-on-ubuntu-or-debian-computers)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Visit the [My OPSWAT](https://my.opswat.com/). Search for MetaDefender Core, navigate to section "Modules & Utilities", then you can find the product at "Update Downloader for Offline Environment".
+2. Make sure that you download the applicable package for Debian 12 / Ubuntu 22.04.
+3. Upload the installation package to your test computers.
+4. Install the product with sudo dpkg -i <filename>, where filename is the Update Downloader package you downloaded from our portal.
+5. If dpkg shows error messages about missing dependencies you should execute sudo apt-get install -f
+6. Open a web browser and point to http://<server name or IP>:8028
+7. Follow welcome wizard to create local admin user account and start working on Update Downloader
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Finstallation%2Finstalling-update-downloader%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Installing Update Downloader on Red Hat Enterprise or Rocky Linux computers](/docs/mddownloader/installation/installing-update-downloader#installing-update-downloader-on-red-hat-enterprise-or-rocky-linux-computers)
+
+1. Visit the [My OPSWAT](https://my.opswat.com/). Search for MetaDefender Core, navigate to section "Modules & Utilities", then you can find the product at "Update Downloader for Offline Environment".
+2. Make sure that you download the applicable package for Red Hat Enterprise Linux or Rocky Linux.
+3. Upload the installation package to your test computers
+4. Install the product with sudo yum install <filename>, where filename is the Update Downloader package you downloaded from our portal
+5. Open a web browser and point to http://<server name or IP>:8028
+6. Follow welcome wizard to create local admin user account and start working on Update Downloader
+
+## [Installing Update Downloader on Windows](/docs/mddownloader/installation/installing-update-downloader#installing-update-downloader-on-windows)
+
+1. Visit the [My OPSWAT](https://my.opswat.com/). Search for MetaDefender Core, navigate to section "Modules & Utilities", then you can find the product at "Update Downloader for Offline Environment".
+2. Make sure that you download the applicable package for Windows Server 2022.
+3. Upload the installation package to your test computers
+4. Install the product with executing the installer
+5. Open a web browser and point to http://<server name or IP>:8028
+6. Follow welcome wizard to create local admin user account and start working on Update Downloader
+
+To continue the basic setup, follow the license activation instructions on [Step 2. License activation](/docs/mddownloader/installation/license-activation)
+
+For more information on Installation procedures see [Installing Update Downloader](/docs/mddownloader/installation/installing-update-downloader)

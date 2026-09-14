@@ -49,11 +49,11 @@ https://gears.opswat.com/o/api/v2.1/devices/search
 | results | array<object> | Lists of devices which match to search criteria |
 | results.hwid | string | Hardware ID of the device |
 | results.remediation_link | string | URL on remediation page for given device |
-| results.status | int | Reports the health status of the endpoint device. This status is based on the defined policy within . Status values are: - **0** – the endpoint is in compliance with MetaAccess account’s policies - **1** – the endpoint is **not** in compliance with MetaAccess account’s policies - **3** – the endpoint is still sending information to and not yet completed |
+| results.status | int | Reports the health status of the endpoint device. This status is based on the defined policy within . Status values are: - **0** – the endpoint is in compliance with My OPSWAT Central Management account’s policies - **1** – the endpoint is **not** in compliance with My OPSWAT Central Management account’s policies - **3** – the endpoint is still sending information to and not yet completed |
 | results.hostname | string | Hostname of the device |
 | results.nickname | string | nickname for the device (admin editable) |
-| results.agent_version | string | Local resident MetaAccess agent version |
-| results.last_seen | string | The last timestamp in GMT format when MetaAccess agent reports its data to Cloud |
+| results.agent_version | string | Local resident MetaDefender Endpoint version |
+| results.last_seen | string | The last timestamp in GMT format when MetaDefender Endpoint reports its data to Cloud |
 | results.machine_type | string | The type of devices |
 | results.country | string | Region where the device IP geographically represents |
 | results.active | int | 1 - device is active, 0 - deactive |

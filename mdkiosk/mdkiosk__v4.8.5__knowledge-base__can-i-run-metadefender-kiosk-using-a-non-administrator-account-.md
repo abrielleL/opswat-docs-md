@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/can-i-run-metadefender-kiosk-using-a-non-administrator-account- -->
 
-Too many requests
-# You're going a little too fast.
+# Can I run MetaDefender Kiosk using a non-administrator account?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Starting Kiosk version 4.8.3, the Kiosk touch UI launches and runs under a standard (non-administrator) Windows account with no elevation prompt, the same as it does under an administrator account. This lets you avoid granting local administrator rights to the account that runs the Kiosk session day to day.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Administrator rights are still required for:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- **Installing MetaDefender Kiosk** and configuring most settings in the Kiosk Web Management Console.
+- **A small number of actions that need administrator rights to complete**, such as unlocking a Flash Security encrypted USB device. To keep these actions working when Kiosk is running under a standard account, an administrator can designate a Windows administrator account for Kiosk to use for this purpose, from **Settings > Security**, under **Administrator Privileges Required**. If this isn't configured, a standard-user session that hits one of these actions will see a message explaining that administrator privileges are required and to contact an administrator.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fcan-i-run-metadefender-kiosk-using-a-non-administrator-account-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Note
+
+Unlocking a Flash Security device using a designated administrator account currently only works for Kiosk sessions on the local machine. It does not work over a remote session, even when the account is configured correctly.
+
+For general host-hardening recommendations, see the [MetaDefender Kiosk Documentation](/docs/mdkiosk/v4.8.5/hardened-image/kiosk-hardening).

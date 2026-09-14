@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/how-to-generate-an-api-key-on-the-core-deployment- -->
 
-Too many requests
-# You're going a little too fast.
+# How to generate an API key on the Core deployment?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core V4 and V5 releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+In order to be able to generate an API key on the Core console the following steps are necessary:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Navigate to the core console (Console\User Management\Users and Groups)
+2. Select an available administrator type user.
+3. Navigate to the API key tab and click on the “generate” tab.
+4. Users can also input an API key as long as it has an accepted format.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fhow-to-generate-an-api-key-on-the-core-deployment-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Please note
+
+Must have exact 36 characters. Must contain numeric and lowercase letter characters only [0-9 a-f]. Must contain at least 10 lower case letter characters. Must contain at least 10 numeric characters. Not allowed to contain more than 3 consecutive numeric characters. Not allowed to contain more than 3 consecutive lower case letter characters.
+
+5. Once the key is generated you will need to click on the “Save changes” tab for the changes to take effect.
+
+Support:
+
+If **Further Assistance** is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

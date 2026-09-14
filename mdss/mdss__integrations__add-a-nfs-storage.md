@@ -1,12 +1,33 @@
 <!-- source: https://www.opswat.com/docs/mdss/integrations/add-a-nfs-storage -->
 
-Too many requests
-# You're going a little too fast.
+# Add an NFS Storage
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Network File System (NFS)** is a popular distributed file system protocol that allows a user on a client computer to access files over a network in a manner similar to how local storage is accessed. This document guides you through the process of integrating NFS storage with MetaDefender Storage Security.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+### [1. Understanding NFS Server and Client](/docs/mdss/integrations/add-a-nfs-storage#1-understanding-nfs-server-and-client)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+In a NFS setup, there are two primary components:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fintegrations%2Fadd-a-nfs-storage%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. **NFS Server**: This is the machine where your files are stored. It must be configured to share files using the NFS protocol.
+2. **NFS Client**: This is the machine where MetaDefender Storage Security is installed. It accesses the files stored on the NFS Server.
+
+### [2. Setting up the NFS Server machine](/docs/mdss/integrations/add-a-nfs-storage#2-setting-up-the-nfs-server-machine)
+
+Please make sure your files are shared via NFS protocol.
+
+To enable remediations capabilities of MetaDefender Storage Security (sanitization, file moving / deleting), we need to have write access to your shared folder. To allow write access, please choose the appropriate configuration for your server. More details [in this article](/docs/mdss/integrations/what-is-user-squashing-for-network-file-system-nfs).
+
+The next steps are tailored to your deployment type, please choose yours:
+
+- [Windows deployment](/docs/mdss/integrations/how-to-add-a-nfs-storage-in-windows-deployment)
+- [Linux deployment](/docs/mdss/integrations/how-to-add-a-nfs-storage-unit-in-linux-deployment)
+
+Info
+
+**Symlink Support:** MetaDefender Storage Security is able to follow all types of symbolic links (symlinks) and process the files they point to when integrating with NFS storage on both Linux and Windows deployments. This includes:
+
+- **Soft links (symbolic links)**
+- **Hard links**
+- **Junction points (on Windows)**
+
+For more details on this functionality, follow [this link](/docs/mdss/knowledge-base/does-metadefender-storage-security-support-symlinks-scanning-).

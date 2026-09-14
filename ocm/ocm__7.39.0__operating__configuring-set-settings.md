@@ -1,12 +1,28 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/operating/configuring-set-settings -->
 
-Too many requests
-# You're going a little too fast.
+# Configuring Set settings
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Set settings allow users to unify all OPSWAT Product instances in the same Set under the same settings for their product type. The Set settings are derived from a specific instance's settings.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The following guideline describes how to create Set settings and apply it to a Set of OPSWAT Product instances in OPSWAT Central Management.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. In **Set View,** click on the Set that needs to be configured.
+2. Choose the product instance that Set settings should be derived from by clicking on the gear icon and select **Choose as Set settings** from the drop-down menu.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Foperating%2Fconfiguring-set-settings%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Confirm before choosing this instance as your set settings
+
+3. Select **VIEW SET SETTINGS** to view and modify the current Set settings. In the newly opened page, select **APPLY SET SETTINGS** to apply it to all currently connected product instances in the Set.
+
+Warning
+
+Set settings will overwrite the individual settings of the OPSWAT Product instances in the set. You can choose which instance to apply set's settings.
+
+Warning
+
+Set settings are only applied to valid instance (for both Disconnected and Connected status)with the same version with this set. The users will need to reapply set settings for Set members that were disconnected when Set settings are applied or are newly added.
+
+Warning
+
+Certain set settings such as MetaDefender Core's **Restrict access to following roles** require that the selected objects- such as the user roles in this case- are available in all instances belonging to the set. If one or more instances do not have the selected objects, the set settings application process may fail.
+
+Please refer to [Set settings could not be applied to product instances, such as MetaDefender Core](/docs/ocm/7.39.0/troubleshooting/failed-to-apply-core-set-settings) for more information.

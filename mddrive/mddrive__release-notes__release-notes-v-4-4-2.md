@@ -1,12 +1,10 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-v-4-4-2 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v4.4.2
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-notes-v-4-4-2%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Feb 10, 2026** | This release includes new features and issue fixes |
+| **New Features** | - **MetaDefender Drive In-Session Scanning:** Scans devices while the system remains operational using 3 anti-malware engines including ESET, Bitdefender, and Predictive Alin AI - - Inspection of running processes and libraries in memory, local disks, boot sectors, and selected files or folders   - Ideal for critical environments where downtime is not acceptable   - Automatically sync scan reports to Central Management   - Located in the **Tools** directory of MetaDefender Drive |
+| **Improvements** |  |
+|  | - Scan engines start only when a scan begins, based on user selection - Scan progress and reporting improvements:    - More detailed information for the skipped files   - More precise elapsed time and progress for large scans   - Showing consistent background color for the items being scanned - MetaDefender Drive efficiently works when the storage consumption increases - Archive settings are now fully applied - Showing Disk Labels in Central Management reports |

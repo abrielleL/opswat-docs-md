@@ -2,15 +2,14 @@
 
 # How could I find an app ID of an application?
 
-The **App ID** of apps on both Android and iOS systems should be configured when an administrator adds SaaS applications. This is done in order to restrict access, enforce endpoint compliance, and integrate with MetaDefender IT Access via **Universal Link**.
+The **App ID** of apps on both Android and iOS systems should be configured when an administrator adds SaaS applications. This is done in order to restrict access, enforce endpoint compliance, and integrate with My OPSWAT Central Management via **Universal Link**.
 
-For more about **Access Control**, [Read This](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-integration-guide).
-
-For more about **Universal Link**, [Read This](https://www.opswat.com/docs/cm/developer-guidelines/universal-link).
+- Refer to [SAML SSO Integration Guide](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-integration-guide) for more details .
+- Refer to [Universal Link](https://www.opswat.com/docs/cm/developer-guidelines/universal-link) guidelines for more details.
 
 The App ID is an application URL scheme on iOS, and a package name on Android.
 
-> **Pro Tip:**
+> **Pro Tip**
 >
 > An application URL scheme is a way of referencing resources deep inside the app package, that allow for the app to open in a specified context whenever the URL is accessed.
 >

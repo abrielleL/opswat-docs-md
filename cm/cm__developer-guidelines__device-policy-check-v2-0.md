@@ -44,10 +44,10 @@ https://gears.opswat.com/o/api/v2/devices/:value/policy_check
 | location | string | (Not available, reserved for future) location in Policy manager. |
 | device_type | string | device type (laptop, desktop, vm, server, phone) of device. |
 | os_type | string | operating system type |
-| status | int | Device status. This status is based on the defined policy within MetaAccess. Status values are: - **0** – the endpoint is in compliance with MetaAccess account’s policies - **1** – the endpoint is **not** in compliance with MetaAccess account’s policies - **2** – the endpoint is not found, it means that the endpoint does not have the MetaAccess agent installed - **3** – the endpoint is still sending information to MetaAccess and not yet completed |
+| status | int | Device status. This status is based on the defined policy within My OPSWAT Central Management. Status values are: - **0** – the endpoint is in compliance with My OPSWAT Central Management account’s policies - **1** – the endpoint is **not** in compliance with My OPSWAT Central Management account’s policies - **2** – the endpoint is not found, it means that the endpoint does not have the MetaDefender Endpoint installed - **3** – the endpoint is still sending information to My OPSWAT Central Management and not yet completed |
 | total_issue | int | Number of issues were seen on the device |
 | total_critical_issue | int | Number of critical issues were seen on the device |
-| critical_status | int | This critical status is based on the defined policy within MetaAccess. This status apply for the whole device. Critical status values are: - **0** – the endpoint doesn't have critical issues - **1** – the endpoint has critical issues |
+| critical_status | int | This critical status is based on the defined policy within My OPSWAT Central Management. This status apply for the whole device. Critical status values are: - **0** – the endpoint doesn't have critical issues - **1** – the endpoint has critical issues |
 | last_seen | string | timestamp of the last time when the endpoint device sent a health report to the server. |
 | issues | array<object> | Lists any/all issues of given endpoint device. If a device is without issue, the issues array will appear blank (as shown in the example below). For those devices with issues, each issue will be listed out within *issue_text* (as shown in the example below). |
 | issues.<category_group> | array<object> | issues found in a category group on the device |
@@ -71,7 +71,7 @@ https://gears.opswat.com/o/api/v2/devices/:value/policy_check
 | infections.threats.ip_address | string | IP which a device connecting to |
 | infections.threats.status | string | indicates the scanning object is clear, dirty or in-progress |
 | infections.threats.details | array<object> | details of the IP connections |
-| infections.threats.details.source_name | string | Source of the feed, usually the domain where the feed is from (e.g., [example.com](http://example.com) ) |
+| infections.threats.details.source_name | string | Source of the feed, usually the domain where the feed is from (e.g., [example.com](http://example.com)) |
 | infections.threats.details.assessment | string | Type of threat detected |
 | infections.threats.details.confident | string | Represents the reliability of the detection based on several factors. The higher the score, the more reliable the result. |
 | infections.threats.geo_info | object | An object represents the geolocation of address |

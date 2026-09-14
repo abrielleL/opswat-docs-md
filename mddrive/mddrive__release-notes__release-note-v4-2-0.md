@@ -1,12 +1,34 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-note-v4-2-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v4.2.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [MetaDefender Drive v4.2.0](/docs/mddrive/release-notes/release-note-v4-2-0#metadefender-drive-v420)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+|  |  |
+| --- | --- |
+| Released on Jan 23, 2025 | A major release introducing new features and bug fixes. |
+| Improvements and Enhancements | **Auto-sync reports:** Automatically synchronize scan reports upon scan completion with OPSWAT Management Console.  **BitLocker Support for Windows 11 24H2:** Extend the detection and unlocking of BitLocker-encrypted partitions to include compatibility with Windows 11 24H2.  **Auto-rotation Mode:** Provide seamless auto-rotation between landscape and portrait display modes. |
+| Bug Fixes | Resolved scans from getting stuck while scanning damaged or partially corrupted files.  Fix and issue where incorrect file-checking logic led to a high number of skipped files during scans. |
+| Known Issues | MetaDefender Drive may run out of space under certain conditions. Clearing space by [removing outdated reports](https://www.opswat.com/docs/mddrive/configuration/preferences-----reports) or [reducing the log level](https://www.opswat.com/docs/mddrive/configuration/preferences-----log-level) is recommended. This issue is scheduled to be fixed in the next release. |
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [MetaDefender Drive Toolkit v3.6.0](/docs/mddrive/release-notes/release-note-v4-2-0#metadefender-drive-toolkit-v360)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-note-v4-2-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| Released on Jan 23, 2025 | A major release with a bug fix. |
+| New Features | Pre-configuration for connecting OPSWAT Management Console |
+| Bug Fixes | MetaDefender Drive was not detected by MetaDefender Toolkit on Windows 11 22H2. |
+
+_
+
+MetaDefender Drive - OPSWAT Management Console connection set up
+
+MetaDefender Drive - OPSWAT Management Console connection status
+
+OPSWAT Management Console view
+
+MetaDefender Drive in Portrait Mode
+
+MetaDefender Drive in Landscape Mode
+
+MetaDefender Drive Toolkit - Management Console pre-configuration

@@ -19,7 +19,7 @@ Since the number of connection may be huge after a day, you can choose the perio
 
 For the Modbus detail protocol, there is a button at the end of row to distinguish it from other protocols.
 
-## Filter
+## [Filter](/docs/md-ot-security/v.2.2.6/operating/connection-list#filter)
 
 We support searching and filtering on the list of connections:
 

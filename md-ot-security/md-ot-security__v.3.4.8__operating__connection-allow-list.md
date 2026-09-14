@@ -22,9 +22,9 @@ Policies in the allowlist will be created, updated or added more detail through:
 - Manually updated by the user (**When “Anomaly Detection” is ON**).
 - Automatically added when the user resolved a connection alert (Anticipated).
 
-## Actions on Connection Allow List
+## [Actions on Connection Allow List](/docs/md-ot-security/v.3.4.8/operating/connection-allow-list#actions-on-connection-allow-list)
 
-## 1. View policy
+## [1. View policy](/docs/md-ot-security/v.3.4.8/operating/connection-allow-list#1-view-policy)
 
 **Connection allowlist page** is paginated, each page contains *20 records*, the total number of policy records are displayed at the bottom of the list.
 
@@ -47,7 +47,7 @@ Note: Asset type will be displayed with green background, “Any” will be disp
 - *To*: Connection must not be available after this time.
 - *Enabled/Disabled*: Turn on/off policy.
 
-## 2. Create a new policy
+## [2. Create a new policy](/docs/md-ot-security/v.3.4.8/operating/connection-allow-list#2-create-a-new-policy)
 
 You can create a new policy by tapping on button “+” on the top right of the Policy screen, a policy creation pop-up will appear.
 
@@ -66,7 +66,7 @@ You can create a new policy by tapping on button “+” on the top right of the
 | *Allowed time to* | Choose time from the clock pop-up. |  |
 | *Alert option for allowed time period* | Check on check box to enable Uncheck to disable. | Once unchecked, MetaDefender OT Security will not alert if the connection violates the allowed time period. |
 
-## 3. Edit policy
+## [3. Edit policy](/docs/md-ot-security/v.3.4.8/operating/connection-allow-list#3-edit-policy)
 
 You can edit a policy by tapping on “Edit” button on the right of each policy record, a policy editing pop-up will appear.
 
@@ -74,7 +74,7 @@ In the pop-up editing, you can see the detail policy. You can edit by clicking o
 
 When finished editing, click “Save” to save the changes or “Cancel” to discard all.
 
-## 4. Filter policy
+## [4. Filter policy](/docs/md-ot-security/v.3.4.8/operating/connection-allow-list#4-filter-policy)
 
 Filter for policy list is located at the top of the policy page.
 
@@ -86,6 +86,6 @@ Click the “Clear” button to clear the values in the filters.
 
 Note: You can input asset name or IP into source device or destination device field, we support searching asset by both name and IP.
 
-## 5. Remove policy
+## [5. Remove policy](/docs/md-ot-security/v.3.4.8/operating/connection-allow-list#5-remove-policy)
 
 You can remove a policy from the list by clicking the "Delete" button on each the policy record.

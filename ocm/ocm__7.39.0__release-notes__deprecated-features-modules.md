@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/release-notes/deprecated-features-modules -->
 
-Too many requests
-# You're going a little too fast.
+# Deprecated Features/Modules
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+*Last Update: June 30, 2022*
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+From time to time, OPSWAT Central Management (OCM) product may determine it necessary to deprecate/remove specific features or modules.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+This page keeps track which OCM version removed or deprecated a specific features or modules.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Frelease-notes%2Fdeprecated-features-modules%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| Deprecated Date | Deprecated Version | Features/Modules | Notes |
+| --- | --- | --- | --- |
+| June 30, 2022 | 7.24 | OAuth API module | The OAuth API module provides APIs to retrieve device compliance information. |
+| June 30, 2022 | 7.24 | Access Control module | The Access Control module provides secure access for devices when a user accesses applications via SAML Single Sign-On method. |
+| March 15, 2023 | 7.27 | Support for Windows Server 2012 and 2012R2 |  |

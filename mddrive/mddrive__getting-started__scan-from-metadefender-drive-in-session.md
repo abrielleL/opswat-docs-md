@@ -8,17 +8,20 @@
 2. Navigate to the ***root*** folder inside the MetaDefender Drive partition and locate the ***MetaDefender Drive In-Sesion Scan.exe*** file
 
 3. When click it, In-Session will initialize with a splashing screen
-4. Then the application starts into **Deep Compliance** tab, checking for any issue in **Anti-Malware, Encryption** and **Operation System**
-5. Any compliant issues will be reported in **Deep Compliance** tab, and can be expanded to provide more details
-6. The issue will also be reflected in **Device Information** tab as well, along with other details about the device being checked.
+4. Then the application starts into **Overview** with option to run **Posture Check** which is a combination check where **Deep Compliance** will be triggered first and then **Malware scan** after
+
+3. **Deep Compliance** checks for any issue in **Anti-Malware, Encryption** and **Operation System**
+4. Any compliant issues will be reported in **Deep Compliance** tab, and can be expanded to provide more details
+5. The issue will also be reflected in **Device Information** tab as well, along with other details about the device being checked
 
 **View collected information of the scanned devices from Central Management**
 
 If MetaDefender Drive is enrolled and managed by Central Management, after reports are synced, from **Central Management**, navigate to **Solution → Portable Malware Scanning → Dashboard → Scanned Host.** Click a scanned host, the collected information will be shown under **System Information.**
 
-7. Click **Malware Scan** tab, you will see all of scan modes available for MetaDefender Drive In-Session
+7. After **Compliance Check** is done, you can also chose to **Proceed with Malware Scan**
+8. Click **Malware Scan** tab, you will see all of scan modes available for MetaDefender Drive In-Session
 
-Info
+Engines for In-Session
 
 Engines for In-Session scan will not be updated when In-Session is running. Engines must be updated in advanced by
 
@@ -26,6 +29,10 @@ Engines for In-Session scan will not be updated when In-Session is running. Engi
 - Engines update in MetaDefender Drive when booting it up, following the instructions [here](https://www.opswat.com/docs/mddrive/getting-started/boot-from-metadefender-drive#engines)
 
 8. Wait until all of the embedded engines display the **Ready** status. Click the **(i)** icon to see the embedded engines provided with the version. Those engines are only available after Drive has been updated either by Drive Toolkit or by Update from Drive's UI.
+
+Settings for In-Session
+
+The Malware Scan that follows up after **Compliance Check** is pre-defined in **Settings,**along with options for **Deep Compliance** and Malware Scan included for **Posture Check**.
 
 ## [Memory Scan](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#memory-scan)
 
@@ -53,3 +60,7 @@ To select specific partitions, folders, or files to scan:
 
    It will open a popup to view what directories are under scan session
 3. Once the scan is completed, the detailed results of the selected paths will be displayed, as in the following screenshot displaying scan results of C: and D: partitions on Windows 10
+
+## [**Device Final Verdict**](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#device-final-verdict)
+
+The device will be marked Unsafe when Deep Compliance or Malware check report any issue

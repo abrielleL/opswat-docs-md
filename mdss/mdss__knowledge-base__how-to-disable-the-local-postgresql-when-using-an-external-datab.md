@@ -1,12 +1,52 @@
 <!-- source: https://www.opswat.com/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab -->
 
-Too many requests
-# You're going a little too fast.
+# How to disable the Local PostgreSQL when using an external Database?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to MetaDefender Storage Security v4.x
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+### [**Overview**](/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab#overview)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+If you prefer to connect the MetaDefender Storage Security (MDSS) application to your own [remote PostgreSql](/docs/mdss/installation/windows-deployments#how-to-setup-an-external-postgresql-in-metadefender-storage-security) database server, you can disable the built-in PostgreSql container and its related references by editing the Docker Compose files. While the bundled PostgreSql service consumes minimal resources when idle, you can still reclaim those resources by following the steps below.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fknowledge-base%2Fhow-to-disable-the-local-postgresql-when-using-an-external-datab%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+---
+
+### [**Instructions**](/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab#instructions)
+
+#### [1. Stop the MDSS Application](/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab#1-stop-the-mdss-application)
+
+Before making any configuration changes, stop the MDSS services:
+
+PowershellCopysudo mdss -c stop
+
+---
+
+#### [2. Disable the Built-in PostgreSql Container](/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab#2-disable-the-built-in-postgresql-container)
+
+Open the following file in a text editor: `/etc/mdss/docker-compose.main.yml`
+
+Locate the `postgresql` service section and **add the following**:
+
+PowershellCopyprofiles:
+- disabled
+#### [3. Start the MDSS Application](/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab#3-start-the-mdss-application)
+
+Once all modifications are complete, start the MDSS services again:
+
+PowershellCopysudo mdss -c start
+
+---
+
+### [**Verification**](/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab#verification)
+
+After restarting, verify that:
+
+- MDSS is running without the internal PostgreSql container.
+- The application is successfully connected to your external PostgreSql server.
+
+You can check logs or test basic application functionality to ensure a proper connection.
+
+---
+
+Support:
+
+If you have followed all of the steps above but are still experiencing issues, please follow these instructions on [how to generate a Support Package](https://www.opswat.com/docs/mdss/where-to-get-help/how-to-generate-a-support-package) before [creating a support case or chatting with one of our support engineers.](https://my.opswat.com/support)

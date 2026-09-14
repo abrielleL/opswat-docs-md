@@ -17,13 +17,15 @@ To enable this feature, on My OPSWAT Management console
 - select devices that will perform the scan
 - click Save
 
+![](https://uploads.developerhub.io/prod/97qW/l5upx705wp4t2vpkslkfnqzevi12yax47ec3h8wr6ckwddvj3ipe678iryw10n1z.png)
+
 After enabling this feature, administrators are also given the option to check off **automatically monitor networks**.
 
 Administrators can then view all the subnets that the device discovery feature can detect. To monitor a subnet, an administrator must toggle on the **Monitor** switch. Administrators are also able to update the alias provided for that subnet.
 
 By selecting the settings icon for a given subnet, Administrators can set the assigned device group (any unknown device found in the subnet will be assigned to this group), and be prompted to select to either **manually** or **automatically** select a device to perform the discovery of unknown devices on the network. If there are devices that should not be used for discovery, it is suggested to utilize the **manually** option.
 
-Once a device is selected (either automatically or manually), administrators can show or hide the Network discovery UI on the endpoint's MetaDefender Endpoint. For endpoints to see Network discovery, it is also **required** to enable the **Make** **MetaDefender Endpoint** **user interface available to end-users** setting under **Settings > Global > Device Agents**.
+Once a device is selected (either automatically or manually), administrators can show or hide the Network discovery UI on the endpoint's MetaDefender Endpoint. For endpoints to see Network discovery, it is also **required** to enable the **Make** **MetaDefender Endpoint** **user interface available to end-users. Refer to** [Endpoint Clients](https://www.opswat.com/docs/cm/configurations/global-settings#endpoint-clients) guidelines.
 
 ## Reviewing discovered devices
 

@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/metadefender-core-and-its-protective-measures -->
 
-Too many requests
-# You're going a little too fast.
+# What is the Design of MetaDefender Core and Its Protective Measures?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Core functions to ensure the complete safety of the files you receive, preventing any potential activation or triggering upon reaching your machine.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+During the scanning process, files sent to MetaDefender Core are temporarily stored in a designated folder. These files are renamed randomly, and their extensions are removed to eliminate any risk of activation.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+MetaDefender Core scans the files as raw data, safeguarding against any potential activation during the scan. This method allows for comprehensive analysis without engaging any potentially harmful functions the files may contain.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fmetadefender-core-and-its-protective-measures%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Once the scanning process is complete, the files are immediately deleted. The duration of the scan can vary, typically ranging from a few milliseconds to several minutes, depending on the size and type of the files.
+
+This mechanism ensures the highest level of safety and reliability, as no files can be triggered or activated during their time on your system.

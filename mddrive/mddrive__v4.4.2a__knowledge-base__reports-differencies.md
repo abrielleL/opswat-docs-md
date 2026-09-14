@@ -1,12 +1,43 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/knowledge-base/reports-differencies -->
 
-Too many requests
-# You're going a little too fast.
+# Scan report differences when using MetaDefender Drive 64 GB vs MetaDefender Drive 2 1 TB
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [Overview](/docs/mddrive/v4.4.2a/knowledge-base/reports-differencies#overview)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When running a Full Threat Scan on the **same endpoint** and **same disks**, you may see differences in the scan report when using:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- **MetaDefender Drive – 64 GB**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fknowledge-base%2Freports-differencies%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**MetaDefender Drive 2 – 1 TB**
+
+Typical differences:
+
+- The **1 TB Drive 2 finishes the scan faster**
+- The **1 TB Drive 2 may process more data and/or show more findings**
+
+This is an **environment‑specific behavior** and is not considered a regression.
+
+#### [Why are the results different?](/docs/mddrive/v4.4.2a/knowledge-base/reports-differencies#why-are-the-results-different)
+
+The main reason is the **hardware difference** between the two drives:
+
+1. **Drive 2 is faster**
+
+   - MetaDefender Drive 2 (1 TB) uses **newer and faster flash chips and controller** than the older 64 GB drive.
+   - MetaDefender Drive reads engine databases, configuration, and temporary data from the USB drive while scanning.
+   - Because the 1 TB drive is faster, it can:
+
+     - Read/write data more quickly
+     - Stream files to the scanning engines more efficiently
+   - Result: **shorter scan time** for the same machine and same selected disks.
+2. **Drive 2 has larger storage capacity**
+
+   - The 1 TB drive has **much more available space** than the 64 GB drive.
+   - This allows:
+
+     - More room for engines, signatures, and temporary scan data
+     - Better support for **larger scans and log files** without running out of space
+   - In some environments, this can mean **more data can be fully scanned and logged**, which may lead to:
+
+     - More files processed
+     - More detections visible in the final report

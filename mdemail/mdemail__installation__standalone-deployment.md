@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdemail/installation/standalone-deployment -->
 
-Too many requests
-# You're going a little too fast.
+# Standalone deployment
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Overview](/docs/mdemail/installation/standalone-deployment#overview)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+In a standalone deployment each Email Gateway Security instance work on its own database.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Embedded database performance
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Finstallation%2Fstandalone-deployment%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The embedded PostgreSQL database is primarily designed for testing and low-volume deployments, and is not recommended for heavy load environments.
+
+For reliable and secure operation, a robust external PostgreSQL database cluster solution is recommended.
+
+## [Installation](/docs/mdemail/installation/standalone-deployment#installation)
+
+In the *Choose Database Setup Type* dialog select the *Standalone* option and complete the setup of the instance.
+
+Port may already be taken
+
+The default database port 5433 in case of a standalone deployment may already be taken by a running PostgreSQL instance (e.g. an other OPSWAT product's standalone database).
+
+This situation can lead to a broken installation. To avoid that, the target database port availability must be checked prior to the installation.

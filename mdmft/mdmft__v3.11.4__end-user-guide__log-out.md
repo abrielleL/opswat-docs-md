@@ -1,12 +1,7 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/log-out -->
 
-Too many requests
-# You're going a little too fast.
+# Logging Out
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code Log out to protect your files from unauthorized access!
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Flog-out%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If your browser saves passwords, you can quickly access your files without re-entering credentials on subsequent visits. However, if you share the computer with others, it's recommended to log out after each session to ensure your privacy and security.

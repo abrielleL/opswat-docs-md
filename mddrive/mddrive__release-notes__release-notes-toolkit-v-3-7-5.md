@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-toolkit-v-3-7-5 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive Toolkit v3.7.5
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-notes-toolkit-v-3-7-5%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Sep 4, 2025** | This release includes user interface improvements and bug fixes |
+| **New Enhancements** | - **Reliable Image Download after Interruption**: Users can now resume downloading MetaDefender Drive images without reinstalling Drive Toolkit, ensuring a seamless and efficient experience. - **Disk Space Notification:** Provides clear visibility into available disk space with warning messages so users can free storage for updates. |
+| **Bugs Fixed** | - Issue found where the User cancels a Drive download then can no longer download again (shows error “**No local image available**”) without reinstalling DTK. This has been fixed. |

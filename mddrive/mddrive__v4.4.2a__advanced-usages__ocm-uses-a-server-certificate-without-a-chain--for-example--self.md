@@ -1,12 +1,31 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/advanced-usages/ocm-uses-a-server-certificate-without-a-chain--for-example--self -->
 
-Too many requests
-# You're going a little too fast.
+# OCM Uses a Standalone Self-Signed Certificate
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This section shows how to generate a **self‑signed server certificate** (without an intermediate/root CA chain).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+In production, a self‑signed certificate is **not recommended** and is usually replaced by a certificate issued by your internal PKI or a public CA. The examples below are intended for **testing or lab environments** only.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [1. Generate a Self‑Signed Server Certificate](/docs/mddrive/v4.4.2a/advanced-usages/ocm-uses-a-server-certificate-without-a-chain--for-example--self#1-generate-a-selfsigned-server-certificate)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fadvanced-usages%2Focm-uses-a-server-certificate-without-a-chain--for-example--self%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+In this scenario, the server certificate is self‑signed and acts as its own CA. There is no separate root CA or intermediate CA.
+
+`openssl genrsa -out server.key 2048`
+
+`openssl req -x509 -new -key server.key -sha256 -days 825 \ -out server.crt \ -subj "/CN=myserver.local"`
+
+This creates:
+
+- `server.key` – private key used by the server
+- `server.crt` – self‑signed server certificate (no chain)
+
+> In a real deployment, replace `myserver.local` with the actual FQDN of your OCM server.
+>
+> ### [2. Use the Self‑Signed Certificate for OCM](/docs/mddrive/v4.4.2a/advanced-usages/ocm-uses-a-server-certificate-without-a-chain--for-example--self#2-use-the-selfsigned-certificate-for-ocm)
+>
+> After generating and verifying the self‑signed certificate:
+>
+> - Use `server.key`
+> - Use `server.crt`
+>
+> to configure the TLS/HTTPS certificate on your **OCM on‑prem server**.

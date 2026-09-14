@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/services-dont-start-after-install-sql-server-windows-auth -->
 
-Too many requests
-# You're going a little too fast.
+# Why don't the services start after installing MetaDefender Managed File Transfer with SQL Server using Windows authentication?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The services may fail to start if the service user account used to connect to the database lacks the *Log on as a service* permission. To resolve this issue:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2Fservices-dont-start-after-install-sql-server-windows-auth%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Open the "Local Security Policy" management console (`secpol.msc`).
+- Navigate to "Local Policies" → "User Rights Assignment."
+- Double-click on "Log on as a service."
+- Click "Add User or Group," enter the service user account name, and click "OK."
+- Restart the MetaDefender Managed File Transfer services in the Services management console (`services.msc`).

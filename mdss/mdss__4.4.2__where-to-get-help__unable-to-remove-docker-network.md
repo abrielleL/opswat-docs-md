@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/where-to-get-help/unable-to-remove-docker-network -->
 
-Too many requests
-# You're going a little too fast.
+# Unable to remove docker network
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+If you encounter some message regarding your network:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**network mdss_stack id xxx has active endpoints**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+while you tried to remove or update MDSS, please try to restart docker:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fwhere-to-get-help%2Funable-to-remove-docker-network%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+BashCopysystemctl restart docker

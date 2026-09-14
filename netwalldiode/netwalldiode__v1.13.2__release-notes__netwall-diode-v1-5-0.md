@@ -1,12 +1,30 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-5-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.5.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | Config: 1.5.0 OD-101: 1.0.1 |
+| --- | --- |
+| **Release date** | Dec 2023 |
+| **Scope** | Release to include Pi Collective support |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-5-0#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+|  | Details |
+| --- | --- |
+| Pi Collectives | Pi Collectives supported |
+| OPCUA certificates | Changes on how OPC UA certificates are managed |
+| Attribute filtering capabilities | Attribute filtering capabilities added to Pi Connector |
+| GUI changes | Minor GUI changes |
+| Syslog | Syslog Liveview through a proxy supported |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Frelease-notes%2Fnetwall-diode-v1-5-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Bug fixes](/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-5-0#bug-fixes)
+
+|  | Details |
+| --- | --- |
+| bugs | Several minor bugs fixed |
+
+## [Known limitations](/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-5-0#known-limitations)
+
+N/A
+
+MetaDefender

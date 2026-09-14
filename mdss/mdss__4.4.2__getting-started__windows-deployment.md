@@ -1,12 +1,44 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/getting-started/windows-deployment -->
 
-Too many requests
-# You're going a little too fast.
+# Windows deployment
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Supported Operating Systems](/docs/mdss/4.4.2/getting-started/windows-deployment#supported-operating-systems)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+| **OS** | **Version** | **Architecture** |
+| --- | --- | --- |
+| Windows Server | 2019, 2022, 2025 (latest) | 64-bit |
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Operating System Requirements and Licensing Considerations
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fgetting-started%2Fwindows-deployment%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Microsoft's licensing terms prohibit the use of Windows Desktop operating systems in server environments. As a result, MetaDefender Storage Security is not compatible with Windows Desktop editions.
+
+For organizations concerned about Windows Server licensing costs, we recommend deploying on Unix-based systems instead. Unix platforms deliver enterprise-level reliability and performance without additional licensing fees.
+
+## [Port Requirements](/docs/mdss/4.4.2/getting-started/windows-deployment#port-requirements)
+
+The following ports must be available for our services to listen on.
+
+Please ensure that no other services are using these ports before starting the installation. NGINX port can be customized during the [installation process](/docs/mdss/4.4.2/installation/installing-using-the-install-wizard).
+
+For the MDSS Windows deployment, every port in the below table is **TCP**, and the rule you need is an **inbound "Allow" rule** for each so the components can talk to each other and clients can reach the services. Open these before installing:
+
+| Component | Port |
+| --- | --- |
+| PostgreSQL | 5432 |
+| RabbitMQ | 5672 |
+| NGINX | 80 (and 443 if SSL enabled) |
+| API Gateway | 8005 |
+| Licensing Service | 5001 |
+| SMB Service | 6002, 6003, 6004, 6005, 6006, 7002, 7003, 7004, 7005, 7006 |
+| SFTP Service | 5003 |
+| NFS Service | 5004 |
+
+## [Installation components](/docs/mdss/4.4.2/getting-started/windows-deployment#installation-components)
+
+MetaDefender Storage Security automatically deploys the following components:
+
+| Name | Version | Type |
+| --- | --- | --- |
+| PostgreSQL | v17.0 | Database |
+| RabbitMQ | v3.13 | Message Broker |
+| NGINX | v1.23.3 | Web Server |

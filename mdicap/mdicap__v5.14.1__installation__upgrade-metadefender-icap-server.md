@@ -1,12 +1,8 @@
 <!-- source: https://www.opswat.com/docs/mdicap/v5.14.1/installation/upgrade-metadefender-icap-server -->
 
-Too many requests
-# You're going a little too fast.
+# Upgrade MetaDefender ICAP Server
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Before upgrading to the latest version of MetaDefender ICAP Server, it is needed to identify in which version you are currently running on.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdicap%2Fv5.14.1%2Finstallation%2Fupgrade-metadefender-icap-server%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- [Upgrade to MetaDefender ICAP Server older than v5.2.0 (Sqlite) to version 5.2.0 -> v5.6.0 (PostgreSQL)](/docs/mdicap/v5.14.1/installation/upgrade-from-version-older-5-2-0)
+- [Upgrade to MetaDefender ICAP Server v5.7.0 or newer](/docs/mdicap/v5.14.1/installation/upgrade-to-version-5-7-0-steps)

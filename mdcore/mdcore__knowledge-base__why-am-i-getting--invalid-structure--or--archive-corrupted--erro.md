@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-am-i-getting--invalid-structure--or--archive-corrupted--erro -->
 
-Too many requests
-# You're going a little too fast.
+# Why am I getting "invalid structure" or "archive corrupted" errors when extracting archives in Core?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article is applied to Core releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Issue:** Core encounters errors such as "invalid structure" or "archive corrupted" during archive extraction.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Resolution:** The issue might stem from the archive file itself being corrupted, rather than a problem with Core's extraction engine. To verify this, follow the steps below.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-am-i-getting--invalid-structure--or--archive-corrupted--erro%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**Steps to Diagnose:**
+
+- Test the archive using the standalone 7Zip application on a Windows system.
+- Attempt to extract the archive using 7Zip.
+- If 7Zip also fails to extract the file and reports similar errors, the archive is likely corrupted.
+
+**Example of 7Zip extraction issue message:**
+
+**Conclusion:** If 7Zip reports errors, the problem lies within the archive file and not with Core. You will need to obtain a valid, uncorrupted archive.
+
+Support:
+
+If 7Zip reports errors, the problem lies within the archive file and not with Core. You will need to obtain a valid, uncorrupted archive.

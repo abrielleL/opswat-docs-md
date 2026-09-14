@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-v-4-4-3 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v4.4.3
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-notes-v-4-4-3%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Mar 17, 2026** | This release includes new features and issue fixes |
+| **New Features** | - **Kiosk‑managed Drive image upgrades:** Extend integration between MetaDefender Kiosk and MetaDefender Drive (engine updates and report sync) to deliver the latest MetaDefender Drive images to connected Drives. - **Disk clean‑up to reclaim storage space:** Clean‑up feature to help quickly remove unneeded data and free MetaDefender Drive disk space. - **Drive ejection notification:** Clear notifcation message is diplayed if MetaDefender Drive is removed during operation. - **Improved engine status and color indicators:** Engine status and color indicators have been redesigned to be more intuitive and informative. |
+| **Improvements** |  |
+|  | - **Engine status wording and icon update:** Engine status no longer shows as **Disabled**. Instead, it shows as **Available** with a green icon when engines are ready to be used. - **Better discoverability for In‑Session Scan executable:** The In‑Session Scan executable have been moved from the **/tool** folder to the **root folder** of the Drive partition to make it easier for users to find and run the executable. - **Enhanced telemetry for troubleshooting:** Tracking more useful information relevant to user issues. - **More convenient Custom Scan selection:**    - Fix the inconvenience when all engines are not included by default for a custom scan.   - Selecting all engines now correctly includes them all |
+|  |  |

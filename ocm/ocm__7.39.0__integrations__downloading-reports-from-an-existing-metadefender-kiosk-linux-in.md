@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/downloading-reports-from-an-existing-metadefender-kiosk-linux-in -->
 
-Too many requests
-# You're going a little too fast.
+# Downloading reports from an existing MetaDefender Kiosk Linux instance
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to download reports from an existing MetaDefender Kiosk Linux instance.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Download latest reports from instance list:](/docs/ocm/7.39.0/integrations/downloading-reports-from-an-existing-metadefender-kiosk-linux-in#download-latest-reports-from-instance-list)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Go to the **MetaDefender Kiosk Linux** management page under **Inventory** in the sidebar.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fdownloading-reports-from-an-existing-metadefender-kiosk-linux-in%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+2. Select the MetaDefender Kiosk Linux instance that you want to download the report from.
+
+3. Select one of **Download latest report (json), Download latest report (pdf)** or **Download latest report (txt)**.
+
+## [View and download reports from a specific instance:](/docs/ocm/7.39.0/integrations/downloading-reports-from-an-existing-metadefender-kiosk-linux-in#view-and-download-reports-from-a-specific-instance)
+
+1. Go to the **MetaDefender Kiosk Linux** management page under **Inventory** in the sidebar.
+
+2. Click on a MetaDefender Kiosk Linux instance's entry to go to its details page.
+
+3. Select the report(s) to be downloaded by clicking their checkboxes. Select one of **Download report (json), Download report (pdf)** or **Download report (txt)** from the drop-down action menu.

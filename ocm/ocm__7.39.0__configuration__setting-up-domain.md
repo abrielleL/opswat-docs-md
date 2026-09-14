@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/configuration/setting-up-domain -->
 
-Too many requests
-# You're going a little too fast.
+# Server URL
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The server URL is a URL that you assign to your OPSWAT Central Management. This URL can be configured during the setup wizard for a fresh installation or later at Setting > Server Configuration > Security. However, we recommend that you should configure all security settings at early stage. The Server URL can be a domain, IPv4, or IPv6.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The Server URL will be used to:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- validate settings when you make changes on Server Configuration
+- embed into the MetaDefender Endpoint installers and executable files. MetaDefender Endpoint will use that URL and the MetaDefender Endpoint Recovery Key to talk to the OPSWAT Central Management server.
+- pass to managed MetaDefender Core instances. MetaDefender Core uses this URL to download engines' update packages.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fconfiguration%2Fsetting-up-domain%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Warning
+
+Please be advised that changing the Server URL of the OPSWAT Central Management server can cause devices that have installed MetaDefender Endpoint to NOT be able to connect to this server.
+
+This should be done before you distribute MetaDefender Endpoint to your devices to avoid any disruption.
+
+## [Via the setup wizard](/docs/ocm/7.39.0/configuration/setting-up-domain#via-the-setup-wizard)
+
+After a fresh installation, a setup wizard will be loaded to walk you through steps to set up your OPSWAT Central Management server. At the step #3, you can fill in a server URL you would like to set for your OPSWAT Central Management instance.
+
+## [Via the management console](/docs/ocm/7.39.0/configuration/setting-up-domain#via-the-management-console)
+
+The Server URL settings is located at **Settings** > **Server Configuration** > **Security**.

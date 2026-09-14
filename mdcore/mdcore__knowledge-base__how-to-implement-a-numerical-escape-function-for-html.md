@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/how-to-implement-a-numerical-escape-function-for-html -->
 
-Too many requests
-# You're going a little too fast.
+# How to implement a numerical escape function for HTML?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This knowledge base article provides step-by-step instructions on how to fix an issue related to Outlook and its HTML rendering engine. It seems that certain escaped characters are not rendered correctly in Outlook when specified using their HMTL entity name, for example:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+`&CloseCurlyQuote;`
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Original Email: Please find the summary of today’s meeting
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fhow-to-implement-a-numerical-escape-function-for-html%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Processed email: Please find the summary of today`&CloseCurlyQuote;`s meeting
+
+Note
+
+The fix is available starting with CDR engine version 6.8.0
+
+1. Navigate to the MD Core Web UI.
+2. Locate and choose the workflow associated with the EGS instance.
+3. Access the DeepCDR tab and proceed to the Advanced section.
+
+4. Under File Type Handling, select "Others" and specifically choose "HTML."
+
+5. Scroll down to find the option labeled "Use Numeric Entity" and activate it.
+
+6. Confirm your changes by clicking on the "OK" button, followed by "Save Changes."
+
+Support
+
+If you encounter any problems with this guide or if the steps provided do not work, proceed to log a [support case or chat with our support engineer](https://my.opswat.com/portal/support).

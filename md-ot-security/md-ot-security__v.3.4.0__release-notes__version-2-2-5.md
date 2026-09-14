@@ -7,7 +7,7 @@
 | **Release date** | 16 October 2024 |
 | **Scope** | Improvement |
 
-## New Features, Improvements and Enhancements
+## [New Features, Improvements and Enhancements](/docs/md-ot-security/v.3.4.0/release-notes/version-2-2-5#new-features-improvements-and-enhancements)
 
 |  |  | **Details** |
 | --- | --- | --- |

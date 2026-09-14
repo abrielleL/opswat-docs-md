@@ -65,7 +65,7 @@ See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 | device_name | string | device name |
 | nickname | string | device nickname (editable on the cloud console) |
 | device_type | string | device type Values can be "desktop","laptop","phone","tablet","server","vm" |
-| last_seen | string | The last timestamp in GMT format when MetaAccess reports its data to Cloud |
+| last_seen | string | The last timestamp in GMT format when My OPSWAT Central Management reports its data to Cloud |
 | last_reboot | string | The last timestamp in GMT format when device reboots |
 | agent_version | string | agent version |
 | remediation_link | string | URL of remediation page for the given device |

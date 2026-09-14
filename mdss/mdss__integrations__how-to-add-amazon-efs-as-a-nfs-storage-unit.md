@@ -1,12 +1,32 @@
 <!-- source: https://www.opswat.com/docs/mdss/integrations/how-to-add-amazon-efs-as-a-nfs-storage-unit -->
 
-Too many requests
-# You're going a little too fast.
+# How to add an Amazon EFS as an NFS storage unit
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Prerequisites:](/docs/mdss/integrations/how-to-add-amazon-efs-as-a-nfs-storage-unit#prerequisites)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. an Amazon EFS file storage.
+2. a Linux machine where MDSS is installed. This machine needs to be inside AWS and to have access to file storage from 1
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Step 1:](/docs/mdss/integrations/how-to-add-amazon-efs-as-a-nfs-storage-unit#step-1)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fintegrations%2Fhow-to-add-amazon-efs-as-a-nfs-storage-unit%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+On MDSS machine, please install the **cifs-utils** package
+
+### [Step 2:](/docs/mdss/integrations/how-to-add-amazon-efs-as-a-nfs-storage-unit#step-2)
+
+On machine where MetaDefender Storage Security is installed, create a new folder at the following path **/mnt/mdss/nfs/{my-new-folder}**
+
+### [Step 3:](/docs/mdss/integrations/how-to-add-amazon-efs-as-a-nfs-storage-unit#step-3)
+
+On machine where MetaDefender Storage Security is installed, mount the Amazon EFS file storage in the folder created at step 1. In our testing, we have used the following command, provided by Amazon:
+
+BashCopysudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-42f1fa845a1b23ece.efs.eu-central-1.amazonaws.com:/ /mnt/mdss/nfs/{my-new-folder}
+
+Please note the mount command has multiple parameters that can be configured in many ways. Feel free to adapt it to your needs. Any configuration works with our product, as long as the Amazon EFS file storage is mounted successfully and we have, at least, read access to it (to benefit from our remediation capabilities, we will need write access).
+
+### [Step 4:](/docs/mdss/integrations/how-to-add-amazon-efs-as-a-nfs-storage-unit#step-4)
+
+To ensure the mount is persistent, please add it in **/etc/fstab .** Otherwise, the mount will be lost when machine restarts.
+
+### [Step 5:](/docs/mdss/integrations/how-to-add-amazon-efs-as-a-nfs-storage-unit#step-5)
+
+From MetaDefender Storage Security user interface, add a NFS storage unit having the **Mount directory** the folder created at step 1.

@@ -1,12 +1,48 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/operations/onboarding -->
 
-Too many requests
-# You're going a little too fast.
+# Onboarding
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Once you’ve completed the installation you are ready to configure MetaDefender Storage Security. To begin, please navigate using your preffered browser to the MetaDefender Storage Security web interface which is located by default at http://<server>:80. You will see the following screen:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Create your account by filling the necessary information.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+When you are ready, click **Register**. And then login using your newly created account. You are now ready to begin the initial configuration wizard.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Foperations%2Fonboarding%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+In this step, you can start with a new configuration, or import an existing configuration so that all your saved settings are restored.
+
+The next step is to apply a license:
+
+Choose between the following options:
+
+- Online activation: your license will be online validated against OPSWAT’s activation server.
+- Offline activation: you will upload a file that you previously generated from [My OPSWAT](https://my.opswat.com/)
+- Trial: if you don’t have a license, please [contact OPSWAT](https://www.opswat.com/contact) in order to receive one.
+
+Once your instance of MetaDefender Storage Security is activated you can proceed to the next step.
+
+In the next step, you’ll be integrating MetaDefender Storage Security with MetaDefender Core or MetaDefender Cloud.
+
+MetaDefender Core is an advanced malware protection and detection system that offers high-speed multi-scanning, deep content disarm and reconstruction (Deep CDR), and file-based vulnerability assessment technologies, preventing zero-day attacks and unknown threats as well as providing close to 100% known threat detection, without affecting performance. [Click here to learn more about MetaDefender Core](https://www.opswat.com/products/metadefender/core).
+
+After choosing between MetaDefender Core or MetaDefender Cloud, you will be prompted with a form to complete the integration.
+
+After MetaDefender Core/Cloud integration is done, you can start configuring a storage integration.
+
+This is the final step. Choose a storage that you wish to secure and then follow the instructions on the screen to create an integration between your storage and MetaDefender Storage Security.
+
+For a detailed tutorial on how to integrate a specific storage unit, please visit [the Integrations section](/docs/mdss/4.4.2/integrations/storage-units).
+
+## [Browser Requirements for the Web Console](/docs/mdss/4.4.2/operations/onboarding#browser-requirements-for-the-web-console)
+
+The following browsers are suggested to view the MetaDefender for Secure Storage Web Console:
+
+- Microsoft Edge
+- Chrome
+- Firefox
+- Safari
+
+Chrome, Firefox, Safari, and Edge browsers are tested with the latest available version at the time of release.
+
+IMPORTANT
+
+Note that Internet Explorer is no longer supported. Please upgrade to another supported browser (listed in the **Installation** section) to access the MetaDefender Storage Security web interface.

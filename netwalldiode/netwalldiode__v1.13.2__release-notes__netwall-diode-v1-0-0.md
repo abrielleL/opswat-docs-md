@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-0-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.0.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | 1.0.0 |
+| --- | --- |
+| **Release date** | Aug 2022 |
+| **Scope** | Initial release including file transfer and TCP/UDP streaming |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-0-0#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+|  | Details |
+| --- | --- |
+| **File Transfer** | - FTP file transfer - WFS file transfer |
+| **Streaming** | - TCP/UDP streaming |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Frelease-notes%2Fnetwall-diode-v1-0-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Bug fixes](/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-0-0#bug-fixes)
+
+|  | Details |
+| --- | --- |
+|  |  |
+
+## [Known limitations](/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-0-0#known-limitations)
+
+N/A
+
+MetaDefender

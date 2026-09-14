@@ -1,12 +1,7 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/where-to-get-help/permission-denied-while-uninstalling-on-linux -->
 
-Too many requests
-# You're going a little too fast.
+# Permission denied while uninstalling on Linux
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+On some Linux distributions that have **SELinux (Security-Enhanced Linux)** enabled by default you may encounter a "Permission denied" message when uninstalling MDSS. The uninstall still completes successfully and only some docker containers might still be left running if `mdss -u clean` was not executed before the uninstall. This is due to SELinux policies and can be avoided by disabling SELinux temporarily before uninstalling by running:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fwhere-to-get-help%2Fpermission-denied-while-uninstalling-on-linux%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+BashCopysudo setenforce 0

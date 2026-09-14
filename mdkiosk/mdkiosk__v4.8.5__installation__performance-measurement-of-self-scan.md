@@ -1,12 +1,31 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/installation/performance-measurement-of-self-scan -->
 
-Too many requests
-# You're going a little too fast.
+# Performance measurement of Self Scan
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Environment](/docs/mdkiosk/v4.8.5/installation/performance-measurement-of-self-scan#environment)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Using the KIOSK devices in the local test environment.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+| **Model** | **CPU** | **Memory (GB)** | **Disk type** | **OS** |
+| --- | --- | --- | --- | --- |
+| Kiosk Desktop (Dell Pro 24) | Intel Core Ultra 9 285 Cores: 24 Logical processors: 24 Base speed: 2.50 GHz | 32 | SSD | Windows 10 IoT Enterprise LTSC  Version: 21H2 |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Finstallation%2Fperformance-measurement-of-self-scan%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Product Information](/docs/mdkiosk/v4.8.5/installation/performance-measurement-of-self-scan#product-information)
+
+- MetaDefender Kiosk 4.7.11.4940
+- MetaDefender Core 5.16.1
+- Engines:
+
+  - 8 AV engines: AhnLab, Avira, Bitdefender, ClamAV, ESET, K7, Quick Heal, Vir.IT eXplorer
+  - Archive: 7.0.1-4917
+
+## [Test Summary](/docs/mdkiosk/v4.8.5/installation/performance-measurement-of-self-scan#test-summary)
+
+| Status | Value |
+| --- | --- |
+| Duration | 1 hour 16 minutes |
+| Avg. CPU Usage | 74.5 |
+| Avg. Memory Usage | 42.6 |
+| Disk Speed (KB/s) | Read 14,081.3  Write 33,749.3 |
+| Throughput (objects/hour) | 591,441 |
+| Throughput (files/hour) | 168,806.7 |

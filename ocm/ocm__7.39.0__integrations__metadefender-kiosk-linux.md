@@ -1,12 +1,7 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/metadefender-kiosk-linux -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Kiosk L-Series (Linux)
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Kiosk L-Series (Linux) is the latest version of MetaDefender Kiosk. It is designed to be a self-contained, stateless appliance running on the Linux operating system. The configuration and management of MetaDefenderL-Series (Linux) appliances is done through OPSWAT Central Management.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fmetadefender-kiosk-linux%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Please note that OPSWAT Central Management requires a product license to manage MetaDefender Kiosk L-Series (Linux) instances. Please refer to [Activating OPSWAT Central Management license](/docs/ocm/7.39.0/installation/activating-license) for more information on license activation.

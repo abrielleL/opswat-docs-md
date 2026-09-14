@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mdicap/v5.14.1/installation/metadefender-icap-server-licensing -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender ICAP Server Licensing
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To activate your installation go to the **Settings > License** menu in the Web Management Console. If you have no valid license, you will only see your installation's Deployment ID. You will also see a warning in the Web Management Console header.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Press the *ACTIVATE* button to bring up the Activation menu, where you should choose from the available modes:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+   - Online: the product will contact the OPSWAT license server online, and acquire its license based on your Activation key and Deployment ID.
+   - Offline: you can upload a manually acquired license file.
+   - Request trial key online: if you want to try out the product first, you can receive a trial Activation key via email.
+2. Select the desired option
+3. Follow the on-screen instructions
+4. Finally press the *SEND* button
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdicap%2Fv5.14.1%2Finstallation%2Fmetadefender-icap-server-licensing%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+After successful activation the product will be available with all its functionality. For detailed license activation instructions see [2.4.1 Activating MetaDefender ICAP Server Licenses](/docs/mdicap/v5.14.1/installation/activating-metadefender-icap-server-licenses).
+
+Note
+
+When your hardware information changes, for example your mac address changes because the product runs in a virtual machine, the license will be automatically reactivated on the first update attempt if the server has an active internet connection.

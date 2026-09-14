@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/retrieving-username-using-an-api-key -->
 
-Too many requests
-# You're going a little too fast.
+# Retrieving Username Using an API Key
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+If the profile username has been lost, it may still be recovered using a valid **admin API key**, which can be used to send a **GET** Request to the **/admin/user** endpoint to list all the available users and identify the users
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Retrieve the list of users by sending a **GET request** to the `/admin/user` API endpoint.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+[**GET - List all users**](https://www.opswat.com/docs/mdcore/metadefender-core#userlist)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fretrieving-username-using-an-api-key%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**Example request:**
+
+curl --get \
+--url 'http://localhost:8008/admin/user' \
+--header 'apikey: {apikey}'
+
+From the response, identify the user associated with the provided API key and retrieve the corresponding **name**.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

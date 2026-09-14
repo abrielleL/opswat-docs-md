@@ -47,7 +47,7 @@ This section guides you how to deploy a SDP Private Gateway with an AMI
    - The gateway instance should be at least a t2.medium (2 CPU cores and 4 GB of memory).
    - Initial configuration requires SSH access to the EC2 instance. This means giving it a public IP address, or accessing it using its private IP address from another device within the same VPC. Note that you should not enable SSH access to the gateway from any source. It’s a good idea to lock down SSH (port 22) to just those sites you want to configure the gateway from (e.g. your organization’s home office).
    - AWS will request that you provide an SSH key, and this is required in order to connect to the gateway.
-   - Fill in the registration code from the MA UI in the **User data** section and set an appropriate stage. The **User data** should be formatted:`{ "accountName": "*", "stage": "*" }`. Available “stage” enumerations are `US`or `EU`The selected stage will determine which MetaDefender IT-OT Access Tenant the user connects to. You can get the registration code from the MA UI in **Settings > Global > Account**.
+   - Fill in the registration code from the MA UI in the **User data** section and set an appropriate stage. The **User data** should be formatted:`{ "accountName": "*", "stage": "*" }`. Available “stage” enumerations are `US`or `EU`The selected stage will determine which My OPSWAT Central Management Tenant the user connects to. You can get the registration code from the MA UI in **Settings > Global > Account**.
 3. Once the AMI is available, login to the instance with SSH. The default username is ec2-user.
 4. Accept and activate the gateway.
    - Login into My OPSWAT Central Management console.
@@ -111,7 +111,7 @@ The OPSWAT SDP Private Gateway is an offering in the Azure marketplace that allo
 
 - Here you’ll configure settings related to how to deploy this image.
 - For a private gateway the only part of this that will be relevant is to provide a registration code and stage to link it to your My OPSWAT Central Management account.
-- Fill in the registration code from the MA UI in the **Custom data** section and set an appropriate stage. The **Custom data** should be formatted:`{ "accountName": "*", "stage": "*" }`. Available “stage” enumerations are `US`or `EU`The selected stage will determine which MetaDefender IT Access Tenant the user connects to. You can get the registration code from the MA UI in **Settings > Global > Account**.
+- Fill in the registration code from the MA UI in the **Custom data** section and set an appropriate stage. The **Custom data** should be formatted:`{ "accountName": "*", "stage": "*" }`. Available “stage” enumerations are `US`or `EU`The selected stage will determine which My OPSWAT Central Management Tenant the user connects to. You can get the registration code from the MA UI in **Settings > Global > Account**.
 
 > **Info**
 >

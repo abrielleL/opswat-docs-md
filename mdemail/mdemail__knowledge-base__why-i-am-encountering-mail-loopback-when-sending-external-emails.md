@@ -1,12 +1,32 @@
 <!-- source: https://www.opswat.com/docs/mdemail/knowledge-base/why-i-am-encountering-mail-loopback-when-sending-external-emails -->
 
-Too many requests
-# You're going a little too fast.
+# Why I am Encountering Mail Loopback When Sending External Emails?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+When sending emails, an infinite email loop appears in the processing history of MetaDefender Email Gateway Security (EGS).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Cause](/docs/mdemail/knowledge-base/why-i-am-encountering-mail-loopback-when-sending-external-emails#cause)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The issue occurs when the SMTP relay server configured in EGS is the same as the mail server (MTA). This misconfiguration causes emails to be continuously relayed back to EGS, creating a loop.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Fknowledge-base%2Fwhy-i-am-encountering-mail-loopback-when-sending-external-emails%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Resolution](/docs/mdemail/knowledge-base/why-i-am-encountering-mail-loopback-when-sending-external-emails#resolution)
+
+To fix this issue, please update the SMTP relay server profile in EGS to use a dedicated relay server.
+
+If you do not set a dedicated SMTP relay server and continue using the same MTA for relaying, while sending an external email, the email flow will be as follows:
+
+**Mail Client (e.g., Outlook, Thunderbird) ⇄ Mail Server (MTA) ⇄ EGS ↔ Mail Server (As an SMTP Relay) ⇄ EGS** *(Loop occurs here)*
+
+This results in emails being stuck in an infinite loop.
+
+### [**Steps to Resolve:**](/docs/mdemail/knowledge-base/why-i-am-encountering-mail-loopback-when-sending-external-emails#steps-to-resolve)
+
+1. Check the EGS security rule settings and verify if the relay server is set as the same MTA.
+2. Modify the SMTP relay server profile in EGS to use a separate, dedicated relay server instead of the MTA. On EGS > go to **Settings** > **Server Profiles** > **SMTP server profile**
+
+3. Test email flow to confirm that the loop no longer occurs.
+
+By ensuring a dedicated relay server is used, emails will be processed correctly without looping.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chat with our support engineer](https://my.opswat.com/portal/support).

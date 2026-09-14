@@ -1,12 +1,32 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/how-do-i-configure-subdirectory-naming-by-username-when-handling -->
 
-Too many requests
-# You're going a little too fast.
+# How do I Configure Subdirectory Naming by Username When Handling Blocked or Allowed Files?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Kiosk releases deployed on Windows.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When using the feature to handle **Blocked** or **Allowed** files by sending them to a secondary directory, the UI provides limited options for naming subfolders — such as by **Session ID**, **Start Time**, or by **preserving the original structure**.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+If your Kiosk is integrated with Active Directory (AD) and you want to automatically create subdirectories named after the logged-in username, follow the instructions below.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fhow-do-i-configure-subdirectory-naming-by-username-when-handling%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+### [**Steps to Configure Username-Based Subdirectories**](/docs/mdkiosk/v4.8.5/knowledge-base/how-do-i-configure-subdirectory-naming-by-username-when-handling#steps-to-configure-username-based-subdirectories)
+
+Add the following variable to define the subdirectory naming:
+
+HtmlCopy%%%username%%%
+
+**Example:** If the logged-in user is `user1`, files will be copied to:
+
+HtmlCopy<Your Base Directory>/user1/
+
+This subdirectory will be created automatically during file handling.
+
+### [**Folder Permission Settings**](/docs/mdkiosk/v4.8.5/knowledge-base/how-do-i-configure-subdirectory-naming-by-username-when-handling#folder-permission-settings)
+
+You can define the access control behavior for these subdirectories:
+
+- **Inherited**: The subdirectory will inherit permissions from the parent folder.
+- **Restricted**: Only the AD user who created the subdirectory will have access to it. Other users will be denied access.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

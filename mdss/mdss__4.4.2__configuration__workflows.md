@@ -1,12 +1,28 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/workflows -->
 
-Too many requests
-# You're going a little too fast.
+# Workflows
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Workflows are configurable processing pipelines that define how files should be scanned, analyzed, and remediated. A workflow is required to be able to start a new scan with a specified set of rules. Each workflow consists of a set of remediation actions.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Remediation actions are automated post-processing tasks performed on files after they have been scanned. The following remediation options are currently available:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+| Name | Description | Documentation |
+| --- | --- | --- |
+| File Tagging | Adds metadata tags to files in S3-like storage units, providing processing information. | [File Tagging](/docs/mdss/4.4.2/configuration/file-tagging) |
+| Deep CDR | Applies OPSWAT’s Deep CDR (file sanitization) technology to files. | [Deep Content Disarm and Reconstruction (Deep CDR)](/docs/mdss/4.4.2/configuration/deep-content-disarm-and-reconstruction--deep-cdr-) |
+| Keep, copy, move or delete | Keeps, copies, moves or deletes files based on configured rules, such as blocked or sanitized status. | [Keep, Copy, Move or Delete Files](/docs/mdss/4.4.2/configuration/keep-or-move-or-copy-or-delete-files) |
+| Other remediations | Delete a directory if it is empty after remediation (does not delete if the folder was empty to begin with). | [Delete Empty Folders](/docs/mdss/4.4.2/configuration/delete-empty-folders) |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Fworkflows%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+REMEDIATION ACTION PROCESSING ORDER
+
+The following order is used when applying remediation actions:
+
+1. File Tagging
+2. Sanitized Files (Deep CDR, Move or Delete)
+3. Blocked Files (Keep, Copy, Move or Delete)
+4. Allowed Files (Keep, Copy, Move or Delete)
+NOTE
+
+If you require a post-processing action not listed above, please [let us know](https://www.opswat.com/support/contact-support).
+
+We may be able to add it in a future update.

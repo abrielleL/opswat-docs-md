@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdicap/v5.14.1/installation/production-considerations -->
 
-Too many requests
-# You're going a little too fast.
+# Production Considerations
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This section of the user guide focuses on essential production considerations. When deploying in a production environment, it is recommended to follow this guide to ensure optimal security and reliability. Key steps include:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. **Installation, Initialization & Configuration:** These are the 3 phases to have the application properly running. All of them can be done through a wizard experience on each OS or automating it using the ignition file.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+   1. [Installation using Wizard / Command lines](/docs/mdicap/v5.14.1/installation/installation-methods)
+   2. [Deployment automation support](/docs/mdicap/v5.14.1/installation/deployment-automation-supporthhj)
+2. **Choose the best database deployment option**: Instead of the built-in database, decide if an external database to handle your data will provide better performance and scalability.
+3. **Setting up HTTPS**: Ensure that HTTPS is configured to secure communication between clients and servers.
+4. **OS-Specific Tasks**: Perform operating system-specific tasks that enhance the security and reliability of your system.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdicap%2Fv5.14.1%2Finstallation%2Fproduction-considerations%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Following these guidelines will help you maintain a secure and efficient production environment.

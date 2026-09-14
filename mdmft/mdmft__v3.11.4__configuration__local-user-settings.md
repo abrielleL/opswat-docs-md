@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/local-user-settings -->
 
-Too many requests
-# You're going a little too fast.
+# Local User Settings
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
+###
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+### [Force Password Reset on Local User Creation](/docs/mdmft/v3.11.4/configuration/local-user-settings#force-password-reset-on-local-user-creation)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Enables the "Force password reset on next logon" option during local user creation. Administrators can override this global configuration.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Flocal-user-settings%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+### [Limit Login Attempts for Local Users](/docs/mdmft/v3.11.4/configuration/local-user-settings#limit-login-attempts-for-local-users)
+
+Enables the user lockout feature for local users. Locks out local users if they fail to authenticate within the maximum allowed login attempts. The lockout duration is set by the "Lock account for (minutes)" configuration field.
+
+| Setting | Description |
+| --- | --- |
+| Login attempts allowed before the account is locked | Number of failed login attempts allowed before the account is locked |
+| Lock account for (minutes) | Duration for which the account is locked if the number of failed login attempts exceeds the predefined limit |
+| Reset failed login attempts counter after (minutes) | Resets the failed login attempts counter after the specified duration; 0 - Counter is never reset; X - Counter resets after X minutes |

@@ -8,13 +8,7 @@ To get started with implementing My OPSWAT Central Management integration to enf
 
 After configuring SSO, you should test it out to make sure that SSO works as expected.
 
-Now it's the time you can integrate My OPSWAT Central Management with your G-Suite & AWS SSO by following the below steps. You can learn more details for each step here at [3.1.1. How to set it up?](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)
-
-- [Step 1. Enable Access Control on your MetaDefender IT Access account](https://onlinehelp.opswat.com/metaaccess/G-Suite_with_AWS_SSO.html#step-1-enable-access-control-on-your-metaaccess-account)
-- [Step 2. Add protected applications with IdP Method on MetaDefender IT Access](https://onlinehelp.opswat.com/metaaccess/G-Suite_with_AWS_SSO.html#step-2-add-protected-applications-with-idp-method-on-metaaccess)
-- [Step 3. Update Applications settings on G-Suite](https://onlinehelp.opswat.com/metaaccess/G-Suite_with_AWS_SSO.html#step-3-update-applications-settings-on-g-suite)
-- [Step 4. Configure SSO settings on AWS SSO](https://onlinehelp.opswat.com/metaaccess/G-Suite_with_AWS_SSO.html#step-4-configure-sso-settings-on-aws-sso)
-- [Step 5: Test your integration](https://onlinehelp.opswat.com/metaaccess/G-Suite_with_AWS_SSO.html#step-5-test-your-integration)
+Now it's the time you can integrate My OPSWAT Central Management with your G-Suite & AWS SSO by following the below steps. You can learn more details for each step here at [Configuration.](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-integration-configuration)
 
 ## Step 1. Enable Access Control on your My OPSWAT Central Management account
 
@@ -63,7 +57,7 @@ Now it's the time you can integrate My OPSWAT Central Management with your G-Sui
 - *IDP*: choose the IDP created in the previous step
 - *IdP Login URL*: fill with the link which you have from Step 2.5
 - *App ACS URL*: fill with the link which you have from Step 2.4
-- *Access Mode*: pick an access mode you prefer. See details on the access modes at [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+- *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications).
 
 8. Enter your pin then click **SAVE**
 9. After saving your changes successfully, it shows a popup, copy the **URL** My OPSWAT Central Management generated there and download                     Opswat Certificate.
@@ -74,7 +68,7 @@ Now it's the time you can integrate My OPSWAT Central Management with your G-Sui
 - With a new access rule, you need to specify how you would like to block/allow access a device from the application
   - *Rule name*: a rule name, for example Block non-compliant devices
   - *Action*: Block or Allow
-  - Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+  - Configure conditions to do the action. Details at [Configure Access Rules](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 - Click **ADD RULE**
 
 ![](https://uploads.developerhub.io/prod/97qW/lcuk0481irhknc8333mc3zvyugwy7jtd16uy9pn3vno6yg0pcndk6nrj5v87ajzv.png)
@@ -101,6 +95,4 @@ Now it's the time you can integrate My OPSWAT Central Management with your G-Sui
 
 ## Step 5: Test your integration
 
-Follow guideline at [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/G-Suite_with_AWS_SSO.html#src-5719139) to test your integration to verify if it works as your expectation.
-
-**DONE! CONGRATULATIONS.**
+Follow guideline at [Test Your Integration ](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration)to verify if it works as your expectation.

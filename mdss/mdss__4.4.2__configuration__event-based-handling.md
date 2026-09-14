@@ -1,12 +1,28 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/event-based-handling -->
 
-Too many requests
-# You're going a little too fast.
+# Event-based handling
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Event-based real-time processing triggers scans immediately upon file creation or modification notifications.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This method is supported for the following storage units: **Amazon S3**, **S3 Compatible**, **Azure Blob**, **Alibaba Cloud**, **Google Cloud**, **Box**, **SMB Compatible**, **NFS**, **SFTP, FTP**, **SharePoint Online** and **NetApp ONTAP**.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Generic Webhook Endpoint](/docs/mdss/4.4.2/configuration/event-based-handling#generic-webhook-endpoint)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Fevent-based-handling%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+MetaDefender Storage Security provides a generic webhook endpoint **http(s)://{baseurl}/api/webhook/realtime** for integration with serverless functions from AWS, Azure, Alibaba Cloud, and Google Cloud Platform.
+
+Important Note for BOX Integration
+
+For Box, the API endpoint is `https://{baseurl}/api/webhook/realtime/public/{storageClientId}.` The generic webhook endpoint is **NOT** compatible with BOX. Refer to the [Event-based handling for Box](/docs/mdss/4.4.2/configuration/event-based-handling-for-box) documentation for specific instructions.
+
+## [Integrating Cloud Provider Event Notifications](/docs/mdss/4.4.2/configuration/event-based-handling#integrating-cloud-provider-event-notifications)
+
+To integrate event notifications from AWS, Azure, Alibaba Cloud, and Google Cloud Platform with MetaDefender Storage Security's real-time processing, the following parameters must be included as request headers in the event payload:
+
+- `storageclientid` - Obtain this value from the Dashboard, once you select the Storage Unit desired
+
+- `apikey`- Generate an API key for authentication in MetaDefender Storage Security under "Settings" -> "Users" -> "User (More Options)." Refer to the "[Generate an API Key](/docs/mdss/4.4.2/configuration/generate-an-api-key)" documentation for detailed instructions.
+- `apiendpoint`- Use the generic real-time webhook endpoint: `http(s)://{baseurl}/api/webhook/realtime`
+
+For examples of the request format, please visit [this page](/docs/mdss/4.4.2/configuration/event-based-request-format).
+
+For detailed configuration instructions, please consult the [Event-Based Real-Time Cloud Functions Examples](/docs/mdss/4.4.2/configuration/event-based-real-time-cloud-functions-examples) documentation.

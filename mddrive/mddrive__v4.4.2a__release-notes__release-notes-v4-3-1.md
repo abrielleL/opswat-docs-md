@@ -1,12 +1,10 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/release-notes/release-notes-v4-3-1 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v4.3.1
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+|  |  |  |
+| --- | --- | --- |
+| **Released on Apr 25, 2025** | A release brings up to 50% faster boot time, improved scan reliability, and a smoother experience with Centralized Scanning Profile. |  |
+| **New Enhancements** | **Up to 50% Faster Boot Time**: Operators can start scans sooner thanks to multicore optimizations and parallel startup tasks.  [**Time Zone Agnostic Remote Approval**](https://www.opswat.com/docs/mddrive/release-notes#metadefender-drive-v430)**:** Remote approval now works with no BIOS time zone change - simplifying setup and saving time.  **Smarter Remote Approval**: The input screen for one-time passcode approval now clearly shows the last 6 digits of the MetaDefender Drive ID long with the Approver's name, for faster local scan change approval.    **Improved Scan Stability**: Enhancing scan stability help ensure scans complete smoothly, preventing stuck scans and improving reliability.  **Clearer Error Reports**: Skipped files now include more detailed error information for easier troubleshooting. |  |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Frelease-notes%2Frelease-notes-v4-3-1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+##

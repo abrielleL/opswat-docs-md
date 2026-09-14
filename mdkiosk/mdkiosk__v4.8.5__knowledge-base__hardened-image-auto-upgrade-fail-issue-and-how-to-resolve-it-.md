@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/hardened-image-auto-upgrade-fail-issue-and-how-to-resolve-it- -->
 
-Too many requests
-# You're going a little too fast.
+# Hardened Image Auto Upgrade fail issue and how to resolve it?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to the MetaDefender Kiosk Hardened Image using MD Kiosk 4.7.3 or above.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Starting with Kiosk Hardened Image version 25.01.0, a new feature has been introduced that allows the Kiosk to upgrade the OS bundle directly to the latest version without the need to reflash the entire instance. This ensures that existing configurations, databases, and settings are preserved.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+However, in MD Kiosk version 4.7.6 or earlier, an issue may occur during the upgrade process that causes the system to fail and roll back to the previous version.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fhardened-image-auto-upgrade-fail-issue-and-how-to-resolve-it-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Solution:](/docs/mdkiosk/v4.8.5/knowledge-base/hardened-image-auto-upgrade-fail-issue-and-how-to-resolve-it-#solution)
+
+- Download the new MD Kiosk 4.7.8 installer from the MyOPSWAT Portal.
+- Install the Kiosk installer 4.7.8 on the Kiosk computer.
+- After the Kiosk version upgrade, find the Auto-Upgrade feature and plan for the [Kiosk Hardened Image upgrade](https://www.opswat.com/docs/mdkiosk/hardened-image/auto-upgrade-kiosk-hardened-image).
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chat with our support engineer**](https://my.opswat.com/support).

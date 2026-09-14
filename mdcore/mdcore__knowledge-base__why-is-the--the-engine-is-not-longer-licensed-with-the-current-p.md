@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-is-the--the-engine-is-not-longer-licensed-with-the-current-p -->
 
-Too many requests
-# You're going a little too fast.
+# Why is the "The engine is not longer licensed with the current product key" message displayed for Threat Intelligence after license renewal?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+> **Issue:** After applying new activation keys for license renewal, the customer sees the message on the Inventory > Modules > Threat Intelligence screen: “The engine is not longer licensed with the current product key.” The customer is unsure if this message will automatically change after the license start date (October 1, 2025) or if further action is needed.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Resolution:** If the customer requires Threat Intelligence functionality, please contact the Sales team to discuss licensing options.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-is-the--the-engine-is-not-longer-licensed-with-the-current-p%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If the customer does not require Threat Intelligence, they can ignore the message or remove the Threat Intelligence engine module from their MetaDefender Core installation.
+
+**Workarounds:** If the customer does not require Threat Intelligence, they can ignore the message or remove the Threat Intelligence engine module from their MetaDefender Core installation.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-image-sanitization-doesn-t-report-any-object-in-details- -->
 
-Too many requests
-# You're going a little too fast.
+# Why image sanitization doesn't report any object in details?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The most common way attackers hide malicious code in images is through a technique called steganography, where they secretly embed code within the pixels. Later, they use a special method to extract and run the hidden code. Since it's almost impossible to spot this hidden code without knowing exactly how and where it's concealed, Deep CDR doesn't try to detect it. Instead, Deep CDR focuses on disrupting the image's pixel data so the attacker's method for retrieving the hidden code no longer works. In this process, Deep CDR doesn't remove or sanitize any object in the image.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+For more image attack vectors and how Deep CDR can help, please refer to this blog post: [How Emerging Image-Based Malware Attacks Threaten Enterprise Defenses](https://www.opswat.com/blog/how-emerging-image-based-malware-attacks-threaten-enterprise-defenses)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Support:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-image-sanitization-doesn-t-report-any-object-in-details-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If **Further Assistance** is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

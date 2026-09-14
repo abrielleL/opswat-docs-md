@@ -79,4 +79,4 @@ Using this method, all mdss commands (start, stop etc.) will need to be executed
 
 Info
 
-To update MetaDefender Storage Security while in offline mode the same steps can be followed but with the latest installer and offline package, detailed instructions are outlined in the [Offline Update Guide](https://www.opswat.com/docs/mdss/installation/upgrading-from-a-previous-version#offline-upgradeding-from-a-previous-version#offline-upgrade)
+To update MetaDefender Storage Security while in offline mode the same steps can be followed but with the latest installer and offline package, detailed instructions are outlined in the [Offline Update Guide](/docs/mdss/installation/upgrade-procedures#offline-upgrade)

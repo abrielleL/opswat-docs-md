@@ -1,12 +1,7 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/sign-in-as-sso--single-sign-on--user -->
 
-Too many requests
-# You're going a little too fast.
+# Signing In as an SSO (Single Sign-On) User
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fsign-in-as-sso--single-sign-on--user%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If MetaDefender® MFT is configured for Single Sign-On (SSO), you can log in without entering credentials by clicking the "Sign In with SSO" button on the login page. If not already authenticated, you may be redirected to your SSO provider's login page to enter your AD credentials.

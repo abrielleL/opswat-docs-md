@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/what-is-the-difference-between--fail--and--cancelled--scan-resul -->
 
-Too many requests
-# You're going a little too fast.
+# What is the difference between "fail" and "cancelled" scan result codes in MetaDefender Core?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Check Your Version:**
+This article applies to all MetaDefender Core releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Issue:**
+Customers are sometimes confused about the difference between the "fail" and "cancelled" scan result codes in MetaDefender Core scan results.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Resolution:**
+Here's a breakdown of the two scan result codes:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhat-is-the-difference-between--fail--and--cancelled--scan-resul%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- **Fail:** This means the scan completed, but a problem was detected. This could be due to malware being found or a processing failure during the scan.
+- **Cancelled:** This means the scan was stopped before it could finish. Therefore, no conclusive result is available.
+
+For further information, please refer to the official documentation: [Description of scan result codes](https://www.opswat.com/docs/mdcore/integration/description-of-scan-result-codes)
+
+ **Support:**
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

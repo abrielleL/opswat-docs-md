@@ -2,13 +2,7 @@
 
 # Overview
 
-Introducing My OPSWAT Central Management – The advanced version of MetaDefender IT Access
-
-The **OPSWAT MetaDefender IT Access** platform has now been rebranded and enhanced as **My OPSWAT Central Management**, bringing advanced security capabilities to protect critical infrastructure. The upgraded platform not only maintains its core IT access security functions but also introduces new features that further fortify organizations against cyber threats.
-
 My OPSWAT Central Management is a single pane of glass platform to manage OPSWAT products and solutions, collect real-time data, and generate comprehensive reports. It also enables administrators to perform operations globally, manage licenses, and simplify product updates. My OPSWAT Central Management streamlines your operations while enhancing visibility and control to safeguard your critical infrastructure.
-
-This enhancement marks the evolution of My OPSWAT Central Management into a next-generation central management platform, officially replacing all previous versions of "Central Management" introduced by OPSWAT.
 
 In this platform, customers can now manage multiple OPSWAT solutions including:
 
@@ -20,11 +14,7 @@ In this platform, customers can now manage multiple OPSWAT solutions including:
 
 My OPSWAT Central Management retains the foundational architecture, security controls, and operational policies established under MetaDefender IT Access, including the ISO 27001 certified Information Security Management System and SOC 2 Type II audited security controls.
 
-The MetaDefender IT Access version 3.5x.0 will remain available for a limited time before being fully transitioned. To ensure a seamless upgrade, all existing data and configurations from MetaDefender IT Access version 3.5x.0 is available on My OPSWAT Central Management, allowing users to continue managing their security operations without disruption.
-
-We encourage you to switch to My OPSWAT Central Management today and take advantage of these advanced features. You have the flexibility to explore My OPSWAT Central Management while retaining the option to revert to the previous version if needed.
-
-[[Learn More]](https://www.opswat.com/docs/cm/release-notes/release-notes-for-v10-2503)
+Refer to [Release Notes ](https://www.opswat.com/docs/cm/release-notes/latest-release-notes)for latest product version updates, new features, and enhancements.
 
 ## **Why My OPSWAT Central Management**
 

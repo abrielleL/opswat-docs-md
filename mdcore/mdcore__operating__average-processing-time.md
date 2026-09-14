@@ -1,12 +1,36 @@
 <!-- source: https://www.opswat.com/docs/mdcore/operating/average-processing-time -->
 
-Too many requests
-# You're going a little too fast.
+# Average processing time
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Overview](/docs/mdcore/operating/average-processing-time#overview)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The File Processing Time chart on the MetaDefender Core dashboard (Dashboard → System tab) shows how long each processing engine takes to handle files over the selected time period. Use it to compare engines, spot slow ones, and follow processing-time trends across your deployment.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [**Chart elements**](/docs/mdcore/operating/average-processing-time#chart-elements)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Foperating%2Faverage-processing-time%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| **Element** | Explanations |
+| --- | --- |
+| Metric selector | Drop-down at the top-right of the chart. Choose which value to plot: Average, Min, or Max processing time. |
+| Engine series | One coloured line (with a shaded area) per processing engine — for example the av engines (AhnLab, Avira, ClamAV, …), Deep CDR, Proactive DLP, File Type, and Extraction. Each line is that engine's processing time over time. |
+| Legend | Below the chart. Lists every engine shown, its colour, and its value for the selected period. |
+| Vertical axis | Processing time, in milliseconds (ms). |
+| Horizontal axis | Time. Points are grouped by hour, day, or month to match the dashboard time range you select. |
+| Tooltip | Hover over any point to see each engine's processing time at that moment. |
+
+## [**Metric** Values](/docs/mdcore/operating/average-processing-time#metric-values)
+
+| Definition | Explanations |
+| --- | --- |
+| Average | The arithmetic mean of processing times for all files during the reporting period. |
+| Max | The longest time any single file spent in a particular processing stage during the reporting period. |
+| Min | The shortest time any file spent in a particular processing stage during the reporting period. |
+
+### [How to calculate](/docs/mdcore/operating/average-processing-time#how-to-calculate)
+
+Average = Total processing time ÷ Number of files processed
+
+Example — an engine processes three files with processing times of 5 ms, 10 ms, and 12 ms:
+
+- Average = (5 + 10 + 12) / 3 = 9 ms
+- Max = 12 ms
+- Min = 5 ms

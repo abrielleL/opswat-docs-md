@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/advanced-usages/unlock-bitlocker-manually -->
 
-Too many requests
-# You're going a little too fast.
+# Unlock BitLocker Manually
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Unlock BitLocker using a Password or Recovery Key](/docs/mddrive/v4.4.2a/advanced-usages/unlock-bitlocker-manually#unlock-bitlocker-using-a-password-or-recovery-key)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Click the **Unlock Drive** Button.
+2. From the **Unlock Disk** window, select **BitLocker (Password)** or **BitLocker (Recovery Key)** from the drop-down menu.
+3. Enter the value of the selected type.
+4. Click the **Unlock** button.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fadvanced-usages%2Funlock-bitlocker-manually%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+.

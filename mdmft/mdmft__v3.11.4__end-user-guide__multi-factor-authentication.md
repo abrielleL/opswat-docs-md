@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/multi-factor-authentication -->
 
-Too many requests
-# You're going a little too fast.
+# Multi-Factor Authentication
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+If Multi-Factor Authentication (MFA) is enabled, local and guest users must set up an authenticator. The only exceptions are users authenticated through *SSO* or *RADIUS*. This process happens independently of OPSWAT® MetaDefender Managed File Transfer™.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [First-Time Setup](/docs/mdmft/v3.11.4/end-user-guide/multi-factor-authentication#first-time-setup)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fmulti-factor-authentication%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Enter your credentials on the login page then click "Sign In."
+
+You will be redirected to the "Multi-Factor Authentication" set up page. The first step is to download an authenticator application.
+
+Click "Continue." Scan the provided QR code or manually enter the "MFA Access Key" into your application.
+
+After adding MetaDefender MFT to your authenticator, it should appear as "OPSWAT® MetaDefender Managed File Transfer™" along with your user name. Enter your six-character one-time password from the application into the designated field and click "Continue."
+
+If successful, you will be redirected to the MFA setup success page, followed by the product's home page.
+
+## [Logging In with MFA](/docs/mdmft/v3.11.4/end-user-guide/multi-factor-authentication#logging-in-with-mfa)
+
+Enter your credentials and authenticate.
+
+You will be prompted to enter your one-time password/code from the authenticator app. Enter the one-time password and click "Sign In."
+
+If the code is correct, you will be redirected to the product's home page.

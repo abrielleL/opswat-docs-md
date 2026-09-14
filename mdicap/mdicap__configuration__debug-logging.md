@@ -4,7 +4,7 @@
 
 Debug logging can be used to identify issues with connections. It provides debug level details for each connections as well as the time each step took (e.g. parsing time, scan time, response time). It also tracks the number of active connections.
 
-## Important notes
+## [Important notes](/docs/mdicap/configuration/debug-logging#important-notes)
 
 Note
 
@@ -16,11 +16,11 @@ Note
 
 In each case below, both logfile and loglevel settings must be set for the changes to be active.
 
-## Step-by-step guide
+## [Step-by-step guide](/docs/mdicap/configuration/debug-logging#step-by-step-guide)
 
-## Windows
+## [Windows](/docs/mdicap/configuration/debug-logging#windows)
 
-### Enable debug logging
+### [Enable debug logging](/docs/mdicap/configuration/debug-logging#enable-debug-logging)
 
 Perform the following steps to enable debug logging:
 
@@ -37,7 +37,7 @@ Perform the following steps to enable debug logging:
 5. Start MetaDefender ICAP server
 
 > net start mdicapsrv
-### Disable debug logging
+### [Disable debug logging](/docs/mdicap/configuration/debug-logging#disable-debug-logging)
 
 Perform the following steps to disable debug logging:
 
@@ -54,9 +54,9 @@ Perform the following steps to disable debug logging:
 5. Start MetaDefender ICAP server
 
 > net start mdicapsrv
-## Linux (CentOS syntax)
+## [Linux (CentOS syntax)](/docs/mdicap/configuration/debug-logging#linux-centos-syntax)
 
-### Enable debug logging
+### [Enable debug logging](/docs/mdicap/configuration/debug-logging#enable-debug-logging)
 
 Perform the following steps to enable debug logging:
 
@@ -72,7 +72,7 @@ Perform the following steps to enable debug logging:
 5. Start MetaDefender ICAP server
 
 # service mdicapsrv start
-### Disable debug logging
+### [Disable debug logging](/docs/mdicap/configuration/debug-logging#disable-debug-logging)
 
 Perform the following steps to enable debug logging:
 

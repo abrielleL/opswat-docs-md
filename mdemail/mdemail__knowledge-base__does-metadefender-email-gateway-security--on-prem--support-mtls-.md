@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdemail/knowledge-base/does-metadefender-email-gateway-security--on-prem--support-mtls- -->
 
-Too many requests
-# You're going a little too fast.
+# Does MetaDefender Email Gateway Security (on-prem) support mTLS for SMTP connections?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Email Gateway Security instances deployed on Windows operating systems (on-premise).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**OPSWAT Email Gateway Security (EGS) On-Prem** supports **mutual TLS (mTLS)** for **outbound SMTP connections**. This allows the EGS server to authenticate with a remote SMTP server using a **client certificate** during the TLS handshake.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+First, the certificate needs to be added under **Settings > Certificates**:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Fknowledge-base%2Fdoes-metadefender-email-gateway-security--on-prem--support-mtls-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Then this certificate can be used for the outbound SMTP connection under **Settings > Server profiles**:
+
+However, **mTLS is not supported for inbound SMTP connections**. The inbound SMTP server in EGS does not perform **client certificate verification**, so mutual TLS cannot be enforced for incoming SMTP sessions.
+
+Support:
+
+If you have any questions, concerns or issues regarding MetaDefender NetWall products, please open a [**Support Case**](https://my.opswat.com/support-services) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [**OPSWAT Expert Forum**](https://go2.opswat.com/s/).

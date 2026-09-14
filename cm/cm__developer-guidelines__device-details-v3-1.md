@@ -47,9 +47,9 @@ https://gears.opswat.com/o/api/v3.1/devices/detail
 
 | Key | Datatype | Returned when | Description |
 | ---- | ---- | ---- | ---- |
-| device_id | string |  | Device ID which MetaAccess generates unique for a device |
-| status | string |  | status of device. Values are: - compliant: device is in compliance with a policy which the device is assigned to on your account - non-compliant: device is **not** in compliance with a policy which the device is assigned to on your account - exempted: device is exempted - out_of_license_usage: device is out of token usage. - unknown: device is not installed MetaAccess agent - ignored: device is not installed MetaAccess agent and ignored by an administrator - deleted: device is deleted - not-found: device is not found |
-| status_detail | object |  | status detail of device. Values are: - agent_installed :   - 1 : device is installed MetaAccess agent   - 2 : device is not installed MetaAccess agent but detected by Network Discovery or Domain Controller agent   - 3 : device is not installed MetaAccess agent but detected by Network Discovery or Domain Controller agent and ignored by an administrator - out_of_token:   - 0 :device is not out of token usage   - 1 :device is out of token usage - exempted:   - 0: device is not exempted   - 1: device is exempted - pending:   - 0: device reported to MetaAccess cloud   - 1: device has not been reported to MetaAccess cloud yet - compliant :   - 0: device is non-compliance with policy   - 1: device is in compliance with policy - quarantined :   - 0: device is not quarantined   - 1: device is quarantined |
+| device_id | string |  | Device ID which My OPSWAT Central Management generates unique for a device |
+| status | string |  | status of device. Values are: - compliant: device is in compliance with a policy which the device is assigned to on your account - non-compliant: device is **not** in compliance with a policy which the device is assigned to on your account - exempted: device is exempted - out_of_license_usage: device is out of token usage. - unknown: device is not installed MetaDefender Endpoint - ignored: device is not installed MetaDefender Endpoint and ignored by an administrator - deleted: device is deleted - not-found: device is not found |
+| status_detail | object |  | status detail of device. Values are: - agent_installed :   - 1 : device is installed MetaDefender Endpoint   - 2 : device is not installed MetaDefender Endpoint but detected by Network Discovery or Domain Controller agent   - 3 : device is not installed MetaDefender Endpoint but detected by Network Discovery or Domain Controller agent and ignored by an administrator - out_of_token:   - 0 :device is not out of token usage   - 1 :device is out of token usage - exempted:   - 0: device is not exempted   - 1: device is exempted - pending:   - 0: device reported to My    - 1: device has not been reported to My OPSWAT Central Management cloud yet - compliant :   - 0: device is non-compliance with policy   - 1: device is in compliance with policy - quarantined :   - 0: device is not quarantined   - 1: device is quarantined |
 | severity | string |  | Severity level. Values are - critical: device has critical issues - warning: device has warning issues - no-issues: device doesn't have any issues |
 | issue | object |  | Issue details on the device |
 | issue.total_issues | int |  | Total issues of device |
@@ -58,9 +58,9 @@ https://gears.opswat.com/o/api/v3.1/devices/detail
 | group_name | string |  | group name which a device is assigned to |
 | agent_type | string |  | Type of agent Values: managed – Managed device dc - Domain controller device |
 | device_name | string | verbose.system_info = 1 | Hostname of the device. It will get "<private>" value if it's a non-collectible to each fields which related to privacy. |
-| nick_name | string | verbose.system_info = 1 | a nickname for the device which an administrator can update on the MetaAccess console |
+| nick_name | string | verbose.system_info = 1 | a nickname for the device which an administrator can update on the My OPSWAT Central Management console |
 | device_type | string |  | The type of the device |
-| agent_version | string |  | Local resident MetaAccess agent version |
+| agent_version | string |  | Local resident MetaDefender Endpoint version |
 | oesis_version | string |  | SDK version which the agent is running |
 | last_seen | string |  | The last timestamp in GMT format when the agent reports data to the Cloud |
 | last_reboot | string |  | The last timestamp in GMT format when device reboots |
@@ -73,17 +73,17 @@ https://gears.opswat.com/o/api/v3.1/devices/detail
 | remediation_link | string |  | remediation page URL of the given device |
 | categories | array<object> |  | Details of each posture category |
 | categories.category_id | string |  | category ID which the current block stands for |
-| categories.issue | int |  | Severity of the category based on the defined policy on your MetaAccess account. Values are: - -1 - category is disabled - 0 – no issues - 1 – warning - 2 – critical |
+| categories.issue | int |  | Severity of the category based on the defined policy on your My OPSWAT Central Management account. Values are: - -1 - category is disabled - 0 – no issues - 1 – warning - 2 – critical |
 | categories.apps | array<object> |  | detailed products in a category |
 | categories.apps.id | string |  | Product ID |
 | categories.apps.name | string |  | Name of the product |
 | categories.apps.vendor | string |  | Name of the product vendor |
 | categories.apps.version | string |  | Product version |
 | categories.apps.ar_id | string |  | App remover ID of the product |
-| categories.apps.issue | int |  | Severity of the product based on the defined policy on your MetaAccess account Values are: - -1 - Not an approved product - 0 - no issues - 1 - warning - 2 - critical |
+| categories.apps.issue | int |  | Severity of the product based on the defined policy on your My OPSWAT Central Management account Values are: - -1 - Not an approved product - 0 - no issues - 1 - warning - 2 - critical |
 | categories.apps.health_status | array<object> |  | health information of the product |
 | categories.apps.health_status.status | string |  | product compliance details |
-| categories.apps.health_status.issue | int |  | Severity of the health_status based on the defined policy on your MetaAccess account Values are: - 0 - no issues - 1 - warning - 2 - critical |
+| categories.apps.health_status.issue | int |  | Severity of the health_status based on the defined policy on your My OPSWAT Central Management account Values are: - 0 - no issues - 1 - warning - 2 - critical |
 | unclassified | array<object> |  | Lists of unclassified products |
 | unclassified.id | string |  | product ID |
 | unclassified.name | string |  | product name |
@@ -120,16 +120,16 @@ https://gears.opswat.com/o/api/v3.1/devices/detail
 | mobile_apps.vendor | string |  | application vendor |
 | mobile_apps.community_rate | string |  | rating from community |
 | mobile_apps.community_reviewer | string |  | number of community reviewers who reviewed the application |
-| detected_processes | object |  | **Only applicable for Linux devices** Details about running processes on the device when the device reports data to MetaAccess cloud |
-| detected_processes.total | int |  | number of running processes on the device when the device reports data to MetaAccess cloud |
-| detected_processes.processes | array<object> |  | Lists of running processes on the device when the device reports data to MetaAccess cloud with details |
-| detected_packages | object |  | **Only applicable for Linux devices** Details about packages installed on the device when the device reports data to MetaAccess cloud |
-| detected_packages.total | int |  | number of packages installed on the device when the device reports data to MetaAccess cloud |
-| detected_packages.packages | array<object> |  | Lists of packages installed on the device when the device reports data to MetaAccess cloud |
-| detected_patches | object |  | Only applicable for Windows/macOS devices Details about missing patches on the device when the device reports data to MetaAccess cloud |
-| detected_patches.timestamp | string |  | timestamp in GMT format when the device reports data to MetaAccess cloud |
-| detected_patches.total | int |  | Total missing patches on the device when the device reports data to MetaAccess cloud |
-| detected_patches.patches | array<object> |  | Lists of missing patches on the device when the device reports data to MetaAccess cloud |
+| detected_processes | object |  | **Only applicable for Linux devices** Details about running processes on the device when the device reports data to My OPSWAT Central Management cloud |
+| detected_processes.total | int |  | number of running processes on the device when the device reports data to My OPSWAT Central Management cloud |
+| detected_processes.processes | array<object> |  | Lists of running processes on the device when the device reports data to My OPSWAT Central Management cloud with details |
+| detected_packages | object |  | **Only applicable for Linux devices** Details about packages installed on the device when the device reports data to My OPSWAT Central Management cloud |
+| detected_packages.total | int |  | number of packages installed on the device when the device reports data to My OPSWAT Central Management cloud |
+| detected_packages.packages | array<object> |  | Lists of packages installed on the device when the device reports data to My OPSWAT Central Management cloud |
+| detected_patches | object |  | Only applicable for Windows/macOS devices Details about missing patches on the device when the device reports data to My OPSWAT Central Management cloud |
+| detected_patches.timestamp | string |  | timestamp in GMT format when the device reports data to My OPSWAT Central Management cloud |
+| detected_patches.total | int |  | Total missing patches on the device when the device reports data to My OPSWAT Central Management cloud |
+| detected_patches.patches | array<object> |  | Lists of missing patches on the device when the device reports data to My OPSWAT Central Management cloud |
 | detected_patches.patches.category | string |  | The category of a missing patch: 'security_update', 'update_rollup', 'critical_update', 'update', 'driver', 'service_pack', 'unknown'. |
 | detected_patches.patches.titles | string |  | The title of a missing patch. |
 | detected_patches.patches.description | string |  | The description of a missing patch. |
@@ -141,7 +141,7 @@ https://gears.opswat.com/o/api/v3.1/devices/detail
 | infection | object |  | Details on threat detection |
 | infection.metascan | object |  | Only applicable for Windows/macOS/Linux devices Infection information block which is detected by [Metadefender Cloud](https://www.metadefender.com) |
 | infection.metascan.total | int |  | Total infections which is detected by [Metadefender Cloud](https://www.metadefender.com) |
-| infection.metascan.issue | int |  | Status of Daily [Metadefender Cloud](https://www.metadefender.com/) anti-malware scan based on a device policy on your MetaAccess account Values are: - -1 – category is disabled - 0 – category doesnot have issues - 1 – category has issues - 2 – category has critical issues |
+| infection.metascan.issue | int |  | Status of Daily [Metadefender Cloud](https://www.metadefender.com/) anti-malware scan based on a device policy on your My OPSWAT Central Management account Values are: - -1 – category is disabled - 0 – category doesnot have issues - 1 – category has issues - 2 – category has critical issues |
 | infection.metascan.threats | array<object> |  | Lists of found threats |
 | infection.metascan.threats.critical | int |  | Critical status of the threat Values are: - 0 – not critical - 1 – critical |
 | infection.metascan.threats.scan_time | string |  | timestamp when found the threat |
@@ -153,7 +153,7 @@ https://gears.opswat.com/o/api/v3.1/devices/detail
 | infection.metascan.threats.details.av_name | string |  | engine name |
 | infection.antivirus | object |  | Only applicable for Windows/macOS devices Repeated threat details detected by local anti-malware applications |
 | infection.antivirus.total | int |  | Total repeated threats which are detected by local anti-malware applications |
-| infection.antivirus.issue | int |  | Status of repeated threats based on a device policy on your MetaAccess account Values are: - -1 – category is disabled - 0 – category doesnot have issues - 1 – category has issues - 2 – category has critical issues |
+| infection.antivirus.issue | int |  | Status of repeated threats based on a device policy on your My OPSWAT Central Management account Values are: - -1 – category is disabled - 0 – category doesnot have issues - 1 – category has issues - 2 – category has critical issues |
 | infection.antivirus.threats | array<object> |  | Lists of repeated threats |
 | infection.antivirus.threats.critical | int |  | Critical status of the threat Values are: - 0 – not critical - 1 – critical |
 | infection.antivirus.threats.scan_time | string |  | Last timestamp when the threat was detected |
@@ -168,7 +168,7 @@ https://gears.opswat.com/o/api/v3.1/devices/detail
 | infection.antivirus.threats.action | string |  | The type of remediation ( unknown, cleaned, deleted, quarantined) |
 | infection.ip_scanning | object |  | Only applicable for LINUX/MOBILE devices Details of daily scan for suspicious IP connections |
 | infection.ip_scanning.total | int |  | Total of suspicious IPs |
-| infection.ip_scanning.issue | int |  | Status of the suspicious IP based on a device policy on your MetaAccess account Values are: - -1 – category is disabled - 0 – category doesnot have issues - 1 – category has issues |
+| infection.ip_scanning.issue | int |  | Status of the suspicious IP based on a device policy on your My OPSWAT Central Management account Values are: - -1 – category is disabled - 0 – category doesnot have issues - 1 – category has issues |
 | infection.ip_scanning.threats | array<object> |  | Lists of suspicious IPs |
 | infection.ip_scanning.threats.geo_info | object |  | An object represents the geolocation of the suspicious IP |
 | infection.ip_scanning.threats.geo_info.country_code | string |  | Region name of the network address (e.g., San Paulo) |

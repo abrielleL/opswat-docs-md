@@ -6,7 +6,7 @@ This section shows you steps to integrate with GSuite for SDP end-users authenti
 
 > **Info**
 >
-> These instructions assume that the MetaDefender Endpoint is installed, and that your device is part of a MetaDefender IT-OT Access group with SDP enabled.
+> These instructions assume that the MetaDefender Endpoint is installed, and that your device is part of a My OPSWAT Central Management group with SDP enabled.
 
 > **Info**
 >
@@ -17,12 +17,12 @@ This section shows you steps to integrate with GSuite for SDP end-users authenti
 
 ![](https://uploads.developerhub.io/prod/97qW/pf3y95fiavkulgxa6clh1sczzbgxyxoa12e484i5a4c3i6w17txf8ebwmfgkqfo0.png)
 
-- Give the new rule a name, like “MetaDefender IT-OT Access SDP Gateway” and click “Continue”.
+- Give the new rule a name, like “My OPSWAT Central Management SDP Gateway” and click “Continue”.
 
 ![](https://uploads.developerhub.io/prod/97qW/vka5w9ul3rzieh3wryzek409zp0d22xlahg7uyq55ag5frttpsji3thfo1050pxg.png)
 
 - Ensure the “Meets these conditions” radio button is selected, and click “Add attribute”.
-- From the left side pick menu, choose “IP Subnet”. On the right, enter the outside IPs of your MetaDefender IT-OT Access SDP Gateways, comma-delimited.
+- From the left side pick menu, choose “IP Subnet”. On the right, enter the outside IPs of your My OPSWAT Central Management SDP Gateways, comma-delimited.
 - If you are using the OPSWAT Hosted Gateway, enter the single IP, 52.14.220.48 instead.
 
 ![](https://uploads.developerhub.io/prod/97qW/hgawi41mnnrkipgk3ikgq5jvzbdeikztc68s3g6do74cybc4pyzdp5wcdpu748x7.png)
@@ -52,7 +52,7 @@ This section shows you steps to integrate with GSuite for SDP end-users authenti
 
 ![](https://uploads.developerhub.io/prod/97qW/xs2vmyiw1igbvpvgctwovdtednlad4kw96c1yfdjqr9f18stfyuun0jxe30g4n07.png)
 
-- Name your app, e.g. “MetaDefender IT-OT Access SDP” and click Continue.
+- Name your app, e.g. “My OPSWAT Central Management SDP” and click Continue.
 
 ![](https://uploads.developerhub.io/prod/97qW/xctdz2x0p74qyv6rif7mslam0hjudujaffarpx7s71i41duzw345otefrd2gumj8.png)
 
@@ -62,12 +62,12 @@ This section shows you steps to integrate with GSuite for SDP end-users authenti
 
 ![](https://uploads.developerhub.io/prod/97qW/kvxgopil7nrlqx2vdo9jj3fjwxoxk8wl7t4emyxynjw3ezfzvpasquihbsmk5fpz.png)
 
-- Open your [MetaDefender IT-OT Access console](http://gears.opswat.com/) and click on “User Management” > “SSO” > “SDP “.
+- Open your [My OPSWAT Central Management console](http://gears.opswat.com/) and click on “User Management” > “SSO” > “SDP “.
 
 ![](https://uploads.developerhub.io/prod/97qW/sy91qkqrqmj8ndzilkufis68imr09habw0vbym5bz844ugqx053mg8dbyj2ql6f8.jpg)
 
 - Next to “Import configuration from XML Metadata file“, click “Choose File” and upload the Google metadata.
-- Copy the URL next to “MetaDefender IT-OT Access Login URL“, enter “group” in the “Group Attributes” box, and click Save a the top right.
+- Copy the URL next to “My OPSWAT Central Management Login URL“, enter “group” in the “Group Attributes” box, and click Save a the top right.
 
 ![](https://uploads.developerhub.io/prod/97qW/ehs63wvunzd1267taik4ly4pfay61hhuvp3vb63fqnorwd8izr74qm7qx5e4ow7f.jpg)
 

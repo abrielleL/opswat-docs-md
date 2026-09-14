@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/configuration/automatic-update -->
 
-Too many requests
-# You're going a little too fast.
+# Automatic update
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Update settings are accessible under **Settings > Module Update** after successful login.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Update settings**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- **Automatic database updates**: Update Downloader will check for new updates according to this schedule.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Fconfiguration%2Fautomatic-update%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If you have installed or if you wish to use the MetaDefender Update Downloader in a restricted environment, you will have to allow access to the following hosts' for engines / databases download:
+
+- [https://update.dl.opswat.com](https://update.dl.opswat.com/)
+
+**Note:**
+
+IP address-based whitelisting on your firewall might probably fail after some time since OPSWAT uses CDN (Content Delivery Network) to faster delivery updates over the world, and IP address of edge servers might change over time.
+
+Even the OPSWAT update servers host updates for all of the available engines we support, sometimes the custom engines might try to connect to their own cloud for updates, but this can be disabled in firewall and they will be updated just from OPSWAT.
+
+- **Save packages to**: You can find exported update packages in this directory. For Metascan v4.x/Central Management you can find updates in the root of this directory. For Metascan v3.x updates are generated into a subdirectory called MetascanV3
+- **Automatically clean up packages older than**: Product will clean up target directory regularly and delete packages older than the specified age.
+- **Generate packages for**: Metascan v3 and v4 use different format of update packages. To save your system resources you can control what packages need to be generated. Central Management uses Metascan v4+ packages even the managed products under Central Management are v3.
+- **Update time**: configure when NOT to export packages.

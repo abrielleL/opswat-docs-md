@@ -35,13 +35,13 @@ See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 | ---- | ---- | ---- |
 | name | string | Account Name |
 | email | string | Owner email address |
-| last_login | string | The last date when the owner user logged into MetaAccess console |
+| last_login | string | The last date when the owner user logged into My OPSWAT Central Management console |
 | date_created | string | Date when the account was created |
 | devices_allowed | int | Maximal number of devices is allowed to be monitored by on the account |
 | devices_used | int | Number of monitored devices on the account |
 | license_key | string | Account license key |
 | devices_by_status | Array <object> |  |
-| devices_by_status.status | string | - compliant : device is compliance with policy - non-compliant : device is non-compliance with policy - exempted : device is exempted - unknown : device is not installed MetaAccess agent |
+| devices_by_status.status | string | - compliant : device is compliance with policy - non-compliant : device is non-compliance with policy - exempted : device is exempted - unknown : device is not installed MetaDefender Endpoint |
 | devices_by_status.number_of_devices | int | Number of devices by status |
 | devices_by_issue_severity | Array <object> |  |
 | devices_by_issue_severity.severity | string | - critical : device has critical issues - warning : device has warning issues - no_issue: device doesn't have any issues |

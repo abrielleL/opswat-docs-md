@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/mdcloud/integrations/v4-api -->
 
-Too many requests
-# You're going a little too fast.
+# V4 API
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+V4 API is the latest version of MetaDefender Cloud API. It was designed to be fast, modular, easy to use and to provide seamless integration between MetaDefender API and MetaDefender Cloud API.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Deprecation notice
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcloud%2Fintegrations%2Fv4-api%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+All previous version of the API (V1, V2, and V3) has been deprecated in **Feb 1st, 2020**. Please make sure to update your code to use the latest version of the API. V4 will be supported for a minimum of 3 years since the date of its announcement (March 2019).

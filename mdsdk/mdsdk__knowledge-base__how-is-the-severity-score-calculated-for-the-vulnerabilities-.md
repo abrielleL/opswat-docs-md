@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/knowledge-base/how-is-the-severity-score-calculated-for-the-vulnerabilities- -->
 
-Too many requests
-# You're going a little too fast.
+# How is the Severity Score calculated for the Vulnerabilities?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Term | Definition |
+| --- | --- |
+| **CVSSv2/CVSSv3** | CVSS score is still a primary input. |
+| **CVE Popularity** | Indicating the activity level of the vulnerability. |
+| **Compromised Risk Rate** | Indicating the number of devices on which the vulnerability has been confirmed - sourced from real life machine data. |
+| **CVE Lifecycle** | Indicating the time elapsed since this vulnerability was first reported (case 0). |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Fknowledge-base%2Fhow-is-the-severity-score-calculated-for-the-vulnerabilities-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Reference Online Documentation here: [What is OPSWAT Severity Score in our Vulnerability Scanning Technology? - MetaDefender IT-OT Access](https://docs.opswat.com/macloud-sdp/kb/what-is-opswat-severity-score-in-our-vulnerability-scanning-tech)

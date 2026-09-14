@@ -1,12 +1,7 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/telemetry -->
 
-Too many requests
-# You're going a little too fast.
+# Telemetry
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To enable telemetry in MetaDefender Storage Security, navigate to the Telemetry tab and switch the toggle to Active. Once enabled, the system will begin collecting operational data. At this time, only metrics are collected. Logs and traces are not yet included.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Ftelemetry%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+MetaDefender Storage Security supports also adding custom collectors when the telemetry is active by providing the metrics URL and the protocol (HTTP(s) / gRPC)

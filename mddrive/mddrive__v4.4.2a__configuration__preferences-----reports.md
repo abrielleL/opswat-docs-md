@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/configuration/preferences-----reports -->
 
-Too many requests
-# You're going a little too fast.
+# Preferences → Reports
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The increase in the locally stored reports can lead to decreased scan and report management performance. MetaDefender Drive offers multiple report preferences to optimize the experience. The reports preferences enable users to select the report formats, automatically delete the centrally synced reports, and manually delete reports.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- **Formats:** choose to save reports in one or more of the available 5 formats.
+- **Remove after synced**: to automatically remove reports after syncing with OPSWAT Central Management.
+- **Delete Reports:** to manually delete the locally saved reports.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Reports preferences interface
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fconfiguration%2Fpreferences-----reports%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Saved Reports Warning](/docs/mddrive/v4.4.2a/configuration/preferences-----reports#saved-reports-warning)
+
+MetaDefender Drive alerts users when the number of saved reports exceeds 100. This alert is a reminder that the increasing number of locally saved reports might impact scan performance.
+
+In this case, it is recommended to either remove any unneeded or outdated reports, or [sync reports with OPSWAT Central Management](https://www.opswat.com/docs/mddrive/configuration/settings---central-management) and activate the **Remove after synced** option.
+
+Reports exceeding 100 reminder
+
+.

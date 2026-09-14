@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/file-information -->
 
-Too many requests
-# You're going a little too fast.
+# Viewing File Information
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To view detailed information about a file, simply click on the file row in the table.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The "File Information" page will display scan results and technical details. You can also perform actions like "Rescan," "Download," or "Delete" from the menu in the top right corner.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Ffile-information%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+In the "SCAN REPORT" tab, you can see the detailed report from different scanning engines.
+
+In the "FILES LIST" tab, you can identify any malicious files included in the file.

@@ -6,12 +6,12 @@ My OPSWAT Central Management can be easily integrated with an existing Centrify 
 
 To get started with implementing My OPSWAT Central Management integration to enforce device compliance check before granting a device to access Dropbox with Centrify Single Sign On (SSO) service, you set up SSO between Centrify and Dropbox. If you haven't already done so, please follow the instruction [here](https://docs.centrify.com/en/centrify/appref/index.html?version=1507675723#page/cloudhelp%2Fa-f%2Fsaas_appref_dropbox.html%23) to set it up.
 
-## Step 1. Enable Access Control on your My OPSWAT Central Management account
+## Step 1. Enable Secure Access on My OPSWAT Central Management account
 
 1. Login to the  My OPSWAT Central Management console.
 2. Navigate to **Secure Access > Protected Apps.**
-3. Check on the box **"Enable Secure Access ".**
-4. Navigate to **Settings > Integrations** and then **Device Identity Tab**, and enable **Enable cross-domain API integration at port xxxx**
+3. Check on the box **"Enable Secure Access"**
+4. Navigate to **Settings > Integrations** and then **Device Identity Tab**, and enable **Enable cross-domain API integration at port xxxx**.
 
 ## Step 2. Add protected applications with IdP Method
 
@@ -48,14 +48,14 @@ To get started with implementing My OPSWAT Central Management integration to enf
    4. Then click **Add**
    5. After saving your changes successfully, click the **SSO Setup Instructions** button of the Dropbox application you have just added and then copy the **ACS URL in the IdP** generated there. This URL is used to replace Dropbox login URL on Centrify in **Step 4**.
 
-Step 3. Configure Access Rules
+## Step 3. Configure Access Rules
 
 1. On My OPSWAT Central Management console, navigate to **Secure Access > Rules**
 2. On **Rules** tab, click "**ADD NEW RULE**" to add a new rule for this application OR you can update existing access rules to add this application
 3. With a new access rule, you need to specify how you would like to block/allow access a device from the application:
    1. *Rule name*: a rule name, for example Block non-compliant devices
    2. *Action*: Block or Allow
-   3. Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+   3. Configure conditions to do the action. Details at [Configure Access Rules.](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 4. Click **ADD RULE**
 
 ## Step 4. Update Applications settings on Identity Provider
@@ -88,4 +88,4 @@ Step 3. Configure Access Rules
 
 ## Step 6: Test your integration
 
-Follow guideline at [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Step_6__Test_your_integration.html) to test your integration.
+Follow guideline at [Test Your Integration ](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration)to verify if it works as your expectation.

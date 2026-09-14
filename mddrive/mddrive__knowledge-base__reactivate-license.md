@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/mddrive/knowledge-base/reactivate-license -->
 
-Too many requests
-# You're going a little too fast.
+# License Reactivation
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [Overview:](/docs/mddrive/knowledge-base/reactivate-license#overview)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+In some cases where there is update in MetaDefender Drive that requires reactivation like
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Extend the expired license
+- New engine being added
+- Changing license tier
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fknowledge-base%2Freactivate-license%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+#### [Reactivate with MetaDefender Drive:](/docs/mddrive/knowledge-base/reactivate-license#reactivate-with-metadefender-drive)
+
+1. Navigate to Settings --> Preferences --> License
+2. Click **Apply New License**
+
+3. Enter the new license key, then click **Activate**
+
+#### [Reactivate with MetaDefender Drive Toolkit:](/docs/mddrive/knowledge-base/reactivate-license#reactivate-with-metadefender-drive-toolkit)
+
+1. Navigate to Activations
+2. Select the MetaDefender Drive that needs to be reactivated
+3. Enter the new license, click **Enter License**

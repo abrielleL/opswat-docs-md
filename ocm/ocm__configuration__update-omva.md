@@ -1,12 +1,7 @@
 <!-- source: https://www.opswat.com/docs/ocm/configuration/update-omva -->
 
-Too many requests
-# You're going a little too fast.
+# OPSWAT Media Validation Agent
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT Central Management provides a repository for the utility OPSWAT Media Validation Agent. The OPSWAT Media Validation Agent is a lightweight tool that is deployed on Windows endpoints to ensure that said endpoints cannot mount any media that has not been processed by a MetaDefender Kiosk instance.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2Fconfiguration%2Fupdate-omva%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This feature is located at **Server Configuration > Update Settings > OPSWAT UTILITIES.** Users can download a copy of OPSWAT Media Validation Agent via the **Download** button. Administrator can update the OPSWAT Media Validation Agent stored in OPSWAT Central Management by manually uploading a new version via the **Upload** button.

@@ -1,12 +1,31 @@
 <!-- source: https://www.opswat.com/docs/mdces3/release-notes/version-3-28 -->
 
-Too many requests
-# You're going a little too fast.
+# 3.28
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+| Release date | Version |
+| --- | --- |
+| 2nd September 2026 | 3.28 |
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**MetaDefender** **Cloud Email Security**™ is an advanced solution that bolsters Microsoft 365’s native email defenses with industry-leading threat prevention. It is purpose-built to detect and neutralize malware, zero-day exploits, and embedded file-based threats before they reach the inbox.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdces3%2Frelease-notes%2Fversion-3-28%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This solution is powered by OPSWAT’s Metascan™ Multiscanning, adding more AV (antivirus) engines, MetaDefender Aether Sandbox for advanced dynamic threat analysis, and Deep CDR™ (Content Disarm & Reconstruction) against file-based threats. By combining signature-based detection, behavioral sandboxing, and proactive content sanitization, email security extends beyond traditional defenses to identify and neutralize both known and zero-day threats. With multi-layered, proactive protection and advanced technologies designed to combat evolving attack techniques, the solution deploys rapidly and integrates seamlessly without disrupting mail flow.
+
+## [Enhancements](/docs/mdces3/release-notes/version-3-28#enhancements)
+
+- Added batch download for quarantined emails with optional password protection and skip-report support
+- Added "No Threat Detected" verdict policy option
+- Added AI-generated threat descriptions to event details
+- Added Label filter to Events advanced filtering
+- Added Origin information to Event and Quarantine details
+- Added optional Country/City column to Events list
+- Added icons for unsupported file types and sanitization failures within archives
+- Split Action Items into Pending and Done sections
+- Added audit history entries for Action Item Done/Reopened actions
+
+## [Bugs](/docs/mdces3/release-notes/version-3-28#bugs)
+
+- Fixed SMTP relay failing to relay emails with non-RFC-compliant Message-ID headers
+- Fixed missing allowlisted file in scan result details
+- Corrected "Blocked" label to "Detected" in the Threat Detection drawer

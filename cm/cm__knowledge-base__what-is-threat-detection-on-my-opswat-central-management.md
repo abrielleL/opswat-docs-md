@@ -8,12 +8,12 @@
 
 > **Please Note:**
 >
-> **Threat Detection** is powered by  [MetaDefender Technologies](https://www.opswat.com/products/metadefender), and is only available to OPSWAT customers who have:
+> **Threat Detection** is powered by [MetaDefender Technologies](https://www.opswat.com/products/metadefender), and is only available to OPSWAT customers who have:
 >
-> - A MetaDefender Endpoint license that includes **Module 1 for Advanced Endpoint Protection**, or access to **MetaDefender Cloud**. To learn more, [Read This](https://static.opswat.com/uploads/files/Product-Guide_compressed-1.pdf).
-> - Existing **MetaDefender Core** servers deployed (one or more), that can be added as scan sources for My OPSWAT Central Management. To learn more, [Read This](https://www.opswat.com/products/metadefender/core).
+> - A MetaDefender Endpoint license that includes **Module 1 for Advanced Endpoint Protection**, or access to **MetaDefender Cloud**. To learn more: [Read This](https://static.opswat.com/uploads/files/Product-Guide_compressed-1.pdf).
+> - Existing **MetaDefender Core** servers deployed (one or more), that can be added as scan sources for My OPSWAT Central Management. To learn more: [Read This](https://www.opswat.com/products/metadefender/core).
 >
-> **Threat Detection** can only be enabled once you have added one of the above  MetaDefender  servers as a scan source under policy. This article will cover setup and configuration of My OPSWAT Central Management’s threat detection  feature, including selection of your scan source.
+> **Threat Detection** can only be enabled once you have added one of the above  MetaDefender servers as a scan source under policy. This article will cover setup and configuration of My OPSWAT Central Management’s threat detection feature, including selection of your scan source.
 
 Via **Threat Detection**, My OPSWAT Central Management enables administrators to schedule and run full or custom multi-engine scans not only on all managed Client devices, but on removable media drives, CDs, DVDs and mobile devices connected to those endpoints too.
 
@@ -21,9 +21,7 @@ My OPSWAT Central Management’s threat detection offers organizations state-of-
 
 ## Configuring Threat Detection
 
-Most threat detection settings are accessible via **My OPSWAT Central Management** **Console>Policy Management>Policies>Relevant Policy>Settings>Enable Threat Detection**, as pictured below.
-
-To expand the settings, check the selection box alongside **Enable Threat Detection**.
+Most threat detection settings are accessible via **Policy Management > Policies > Select an instance > Setting** tab **>** Click **Enable Threat Detection**.
 
 ![](https://uploads.developerhub.io/prod/97qW/fmw45dncfezdsg4z9zn8ud9hxjg984retv85rmp8hcu1obo8b6ngiozxfsegz02r.png)
 
@@ -35,19 +33,19 @@ First, you will need to select a **Scan Source** as, without one, you will be un
 
 > **Pro Tip:**
 >
-> **Scan Source** refers to the MetaDefender server that you would like to associate with this policy for the purpose of running multi-engine scans and utilizing other threat detection features. Before you can select a scan source here, you will need to add one under **My OPSWAT Central Management** **Console>Settings>Global>MetaDefender Servers**.
+> **Scan Source** refers to the MetaDefender server that you would like to associate with this policy for the purpose of running multi-engine scans and utilizing other threat detection features. Before you can select a scan source here, you will need to add one under **Settings > Global > MetaDefender Servers**.
 >
 > ![](https://uploads.developerhub.io/prod/97qW/lct7sfhe2w4b73z6vcw6sxq7uaq435c4km9bagiqyqj1aqpbiy6va1rhp6mqe3jo.png)
 >
-> For detailed instructions on how to add a scan source, please [Read This](https://docs.opswat.com/macloud-sdp/kb/how-can-i-add-my-own-metadefender-api-servers-to-scan-threats-on).
+> For detailed instructions on how to add a scan source, please refer to [How can I add my own MetaDefender Core servers to scan threats on devices?](https://www.opswat.com/docs/cm/knowledge-base/how-can-i-add-my-own-metadefender-api-servers-to-scan-threats-on)
 
 Supported scan sources include:
 
-- **MetaDefender Cloud:** a cloud-based threat detection and prevention platform, powered by MetaDefender technologies, utilizing up to 30+ industry leading AV engines for comprehensive multi-scanning. For this option, trusted engines are configurable so that, if you so choose, you can select or unselect any of the engines available via your service option here, under the **Policy Settings>Enable Threat Detection** tab.
+- **MetaDefender Cloud:** a cloud-based threat detection and prevention platform, powered by MetaDefender technologies, utilizing up to 30+ industry leading AV engines for comprehensive multi-scanning. For this option, trusted engines are configurable so that, if you so choose, you can select or unselect any of the engines available via your service option here, under the **Policy Settings > Enable Threat Detection** tab.
 
 ![](https://uploads.developerhub.io/prod/97qW/cinl6p0h5tukja54o4hf4avwzpn7h6s8am64u2rskftnga48t415qez85awtwyf2.png)
 
-- **MetaDefender Core:** a highly customizable threat detection and prevention platform, powered by MetaDefender technologies, utilizing up to 30+ industry leading AV engines for comprehensive multi-scanning. For this option, you can use your own MetaDefender Core server to scan files on devices assigned to this policy, according to your specified **Workflow Rule** or **Agent**, which can be configured here, under the **Policy Settings>Enable Threat Detection**  tab.
+- **MetaDefender Core:** a highly customizable threat detection and prevention platform, powered by MetaDefender technologies, utilizing up to 30+ industry leading AV engines for comprehensive multi-scanning. For this option, you can use your own MetaDefender Core server to scan files on devices assigned to this policy, according to your specified **Workflow Rule** or **Agent**, which can be configured here, under the **Policy Settings > Enable Threat Detection**  tab.
 
 ![](https://uploads.developerhub.io/prod/97qW/vxe6pcr4nl4plr3hitcoqvn3ww914aw9qzx2caqt5srncylxley5fa861yrgkyrp.png)
 
@@ -79,7 +77,7 @@ While this method is the most comprehensive and secure, scan time will depend on
 >
 > This feature is only available for Windows.
 
-Windows users have the option to enable and configure remove media protection here, under the **Policy Settings>Enable Threat Detection** tab, by checking the selection box alongside **Enable Removable Media Protection**, as shown below.
+Windows users have the option to enable and configure remove media protection here, under the **Policy Settings > Enable Threat Detection** tab, by checking the selection box alongside **Enable Removable Media Protection**, as shown below.
 
 ![](https://uploads.developerhub.io/prod/97qW/0fio0lnuamn7e4o8g6fhvefpdi7v5zjdst00v4r2iiuvu7k77yn6dcxsd8eg1jrz.png)
 
@@ -112,7 +110,7 @@ Only files with no threats detected will be copied, and the drive will remain in
 
 > **Please note:**
 >
-> This feature is only available for Windows, when **Removable Media Protection>Allowed Actions** have been enabled, and when **Deep CDR** is enabled in a corresponding security rule in the MetaDefender server that is configured under this policy.
+> This feature is only available for Windows, when **Removable Media Protection > Allowed Actions** have been enabled, and when **Deep CDR** is enabled in a corresponding security rule in the MetaDefender server that is configured under this policy.
 
 Here, you can configure which files should be copied to your specified path (local drive) or to **MetaDefender Managed File Transfer** (to be configured in the next step).
 
@@ -173,7 +171,7 @@ If your organization has one or more MetaDefender Kiosks deployed, and a user ha
 >
 > Unless the **Block all files not found on the Media Manifest. Do not use the MetaDefender server results** option is checked, files that are not found on the media manifest will only be sanitized when **CDR** is enabled, and when **Deep CDR** is enabled in a corresponding security rule in the MetaDefender server that is configured under this policy.
 
-- Here, you can adjust the setting **X day(s) to trust Media Manifest. MetaAccess will not use any Media Manifest older than this many days** to your preference.
+- Here, you can adjust the setting **X day(s) to trust Media Manifest. My OPSWAT Central Managementwill not use any Media Manifest older than this many days** to your preference.
 - Finally, you will need to upload your signed **Certificate** (the same certificate that is used by the Kiosk) to be sent to the MetaDefender Endpoint for authorization purposes.
 
 ### Removable Media Protection: MetaDefender Managed File Transfer
@@ -207,7 +205,7 @@ This setting allows you to detect new and advanced threats on all managed device
 
 > **Please Note:**
 >
-> The following threat detection settings relate to on-demand threat scanning, and are accessible via the **MetaDefender IT Access** **Console>Inventory>Devices** page, or via the device details view at **MetaDefender IT Access >Inventory>Devices>Relevant Device**.
+> The following threat detection settings relate to on-demand threat scanning, and are accessible via the **My OPSWAT Central Management Console > Inventory > Devices** page, or via the device details view at** My OPSWAT Central Management > Inventory > Devices > Relevant Device**.
 
 ## On-Demand Threat Scan
 
@@ -215,9 +213,9 @@ Should you wish to run additional scans between scheduled scans, or should you c
 
 This setting is only applicable to managed devices running MetaDefender Endpoint releases subsequent to V7.6.222.0 + for Windows and V10.4.214.0 + for macOS.
 
-### From MetaDefender IT Access Console>Inventory>Devices
+### From My OPSWAT Central Management Console>Inventory>Devices
 
-- Navigate to **MetaDefender IT Access Console>Inventory>Devices**, then check the selection boxes alongside the devices for which you wish to perform an on-demand scan.
+- Navigate to **My OPSWAT Central Management Console>Inventory>Devices**, then check the selection boxes alongside the devices for which you wish to perform an on-demand scan.
 - From the **Action** drop-down menu in the upper right-hand corner of the screen, select the **Scan Threats** option, as illustrated below.
 
 ![](https://uploads.developerhub.io/prod/97qW/9fq47ysfcwhx360ndqh5w9ao77uszn8wv76cgtqn3u0et4ssewlv3e98vlr6bzt7.png)
@@ -230,11 +228,11 @@ This setting is only applicable to managed devices running MetaDefender Endpoint
 
 > **Pro Tip:**
 >
-> The system will now send a scan command to the MetaDefender Endpoint on each selected device. The results will be accessible as soon as each scan is complete, via the **MetaDefender IT Access** **Console>Inventory>Devices>Relevant Device>Events>Action Logs** tab.
+> The system will now send a scan command to the MetaDefender Endpoint on each selected device. The results will be accessible as soon as each scan is complete, via the **My OPSWAT Central Management Console>Inventory>Devices>Relevant Device>Events>Action Logs** tab.
 
-### From MetaDefender IT Access Console>Inventory>Devices>Relevant Device
+### From My OPSWAT Central Management Console > Inventory > Devices > Relevant Device
 
-- Navigate to **MetaDefender IT Access Console>Inventory>Devices** and locate the device on which you’d like to perform a scan.
+- Navigate to **Inventory>Devices** and locate the device on which you’d like to perform a scan.
 - Click on the device to open the **Device Details** view.
 - From the **Action** drop-down menu in the upper right-hand corner of the screen, select the **Scan Threats** option, as illustrated below.
 
@@ -248,14 +246,14 @@ This setting is only applicable to managed devices running MetaDefender Endpoint
 
 > **Pro Tip:**
 >
-> The system will now send a scan command to the MetaDefender Endpoint on the selected device. The results will be accessible as soon as each scan is complete, via the **MetaDefender IT Access** **Console>Inventory>Devices>Relevant Device>Events>Action Logs** tab.
+> The system will now send a scan command to the MetaDefender Endpoint on the selected device. The results will be accessible as soon as each scan is complete, via the **My OPSWAT Central Management Console > Inventory > Devices > Relevant Device > Events > Action Logs** tab.
 
 ## Scan Reports
 
 All scan reports are accessible via the device details view.
 
-- **On-Demand Scans:** scan reports are accessible via the **MetaDefender IT Access Console>Inventory>Devices>Relevant Device>Events>Action Logs** tab.
-- **Scheduled Scans:** the latest scan report is accessible under the **MetaDefender IT Access Console>Inventory>Devices>Relevant Device>Detailed Device Information>Malware Detection** tab. The system will only show the first 200 threats, if there are more than that, administrators can click the **Get Full Report** button. The report will be retrieved from the Client device by MetaDefender IT Access, and will be downloadable under the **MetaDefender IT Access Console>Inventory>Devices>Relevant Device>Events>Action Logs** tab.
+- **On-Demand Scans:** scan reports are accessible via the **Inventory>Devices>Relevant Device>Events>Action Logs** tab.
+- **Scheduled Scans:** the latest scan report is accessible under the **Inventory > Devices > Relevant Device > Detailed Device Information > Malware Detection** tab. The system will only show the first 200 threats, if there are more than that, administrators can click the **Get Full Report** button. The report will be retrieved from the Client device by My OPSWAT Central Management, and will be downloadable under the **Inventory > Devices > Relevant Device > Events > Action Logs** tab.
 
 The status of specific actions in the log may be any of the following:
 
@@ -266,4 +264,4 @@ The status of specific actions in the log may be any of the following:
 
 > **Support:**
 >
-> For further queries, concerns or issues regarding **MetaDefender IT Access** **Threat Detection Via MetaDefender Cloud or MetaDefender Core**, please open a [Support Case](https://my.opswat.com/support) with the OPSWAT team via phone, online chat or form
+> For further queries, concerns or issues regarding **My OPSWAT Central Management Threat Detection Via MetaDefender Cloud or MetaDefender Core**, please open a [Support Case](https://my.opswat.com/support) with the OPSWAT team via phone, online chat or form

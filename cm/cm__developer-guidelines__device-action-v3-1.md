@@ -30,7 +30,7 @@ https://gears.opswat.com/o/api/v3.1/devices/action
 | ids | array<string> | Body | Optional | Device IDs of devices to be applied the action. *The request body must have ids parameter or macs parameter, but not both.* |  |
 | macs | array<string> | Body | Optional | MAC addresses of devices to be applied the action *The request body must have ids parameter or macs parameter, but not both.* |  |
 | params | object | Body | Optional | Required parameters for a specific action. |  |
-| params.exempt_time | int | Body | Optional | Specify how long you want to exempt devices in hour. Value should be less than 65000 **if this parameter equals 0, MetaAccess will exempt devices forever** | 0 |
+| params.exempt_time | int | Body | Optional | Specify how long you want to exempt devices in hour. Value should be less than 65000 **if this parameter equals 0, My OPSWAT Central Management will exempt devices forever** | 0 |
 | params.group_id | string | Body | Optional | Specify which group (group id) you want to assign devices to This parameter should be specified when action type is assign_to_group | default |
 
 ## Response HTTP Code

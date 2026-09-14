@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/how-to-resolve--there-is-a-problem-with-this-windows-installer-p -->
 
-Too many requests
-# You're going a little too fast.
+# How to resolve "There is a problem with this Windows Installer Package" error during the installation of MetaDefender Core?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Check Your Version:**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This article applies to only Windows version of Metadefender Core
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Issue:**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fhow-to-resolve--there-is-a-problem-with-this-windows-installer-p%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+During the installation of MeteDefender Core on Windows environment, the installer popup window may appear and the MeteDefender application is not installed.
+
+**Root Cause:**
+
+One or more required prerequisite software packages are not installed on the Windows Server. The installer can’t proceed without them.
+
+**Solution:**
+
+Ensure the Windows Server has all the following required perquisites software installed before running the MeteDefender Core setup.
+
+Reference: <https://www.opswat.com/docs/mdcore/installation/recommended-system-configuration#windows-installation-details>
+
+To verified that all the third party dependencies are installed, type **appwiz.cpl** on the command line to open the installed programs list:
+
+After the verification of the required software are installed, proceed with the installation of MeteDefender Core again.
+
+**Support:**
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

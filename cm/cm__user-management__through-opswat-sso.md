@@ -15,7 +15,7 @@ In order to invite an additional user to manage your account:
 5. Enter an email address of the person you would like to invite to your account. Note that this user doesn't need to have an OPSWAT account at this moment, but (s)he is required to sign up an account with OPSWAT if (s)he has not done so before accepting the invitation
 6. Enter your PIN to confirm the action if required
 7. Click on the **Invite** button to send out the invitation.
-8. If the action is successful, the user will then receive an invitation email. The user can follow this [guideline](https://www.opswat.com/docs/cm/knowledge-base/how-could-i-manage-another-account-) to to accept your invitation and start managing your account.
+8. If the action is successful, the user will then receive an invitation email. The user can follow [How could I manage another account?](https://www.opswat.com/docs/cm/knowledge-base/how-could-i-manage-another-account-) guideline to accept your invitation and start managing your account.
 
 ## Update a console user
 

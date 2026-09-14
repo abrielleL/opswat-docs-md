@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/mdicap/v5.14.1/installation/deployments-overview -->
 
-Too many requests
-# You're going a little too fast.
+# Types of Installations
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Pre-Installation Checklist](/docs/mdicap/v5.14.1/installation/deployments-overview#pre-installation-checklist)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Before continue with the deployment of MetaDefender ICAP Server
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Verify prerequisites met (System, Network, Core, DB).
+2. Gather necessary credentials and OPSWAT license (Service accounts, API keys).
+3. Confirm chosen deployment architecture.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdicap%2Fv5.14.1%2Finstallation%2Fdeployments-overview%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Installation Options](/docs/mdicap/v5.14.1/installation/deployments-overview#installation-options)
+
+Aiming to facilitate the deployments of the OPSWAT´s products to different environments, there are documented examples of architectures and how to deploy and install them for the following options.
+
+- Deploy to your [On-premise environment](/docs/mdicap/v5.14.1/installation/on-premise-deployments-overview)
+- Deploy using [Cloud Service Providers](/docs/mdicap/v5.14.1/installation/csp-deployment-overview) services
+- Deploy using [Containerized technologies in all environments](/docs/mdicap/v5.14.1/installation/containerized-deployment-overview)

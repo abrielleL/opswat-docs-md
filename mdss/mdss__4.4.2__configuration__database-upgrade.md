@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/database-upgrade -->
 
-Too many requests
-# You're going a little too fast.
+# Database procedures
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Whether you use the internal PostgreSQL or an external one, the installed version should be 17.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender Storage Security includes an internal PostgreSQL instance by default, currently running on version 17.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Fdatabase-upgrade%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+For environments with high loads or where high availability is required, the internal PostgreSQL instance can be replaced with a cloud-managed alternative. Instructions for making this switch are provided here: [AWS RDS with PostgreSQL](/docs/mdss/4.4.2/configuration/documentdb-support)

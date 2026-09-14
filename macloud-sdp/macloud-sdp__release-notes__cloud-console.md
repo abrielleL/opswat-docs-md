@@ -2,7 +2,7 @@
 
 # Cloud console
 
-## Release Date: March 26, 2025
+## [Release Date: March 26, 2025](/docs/macloud-sdp/release-notes/cloud-console#release-date-march-26-2025)
 
 Console Version: 3.53.0
 
@@ -22,7 +22,7 @@ In this feature update, during the authentication process, once users successful
 
 The "Get Device" Detail APIs (Application Programming Interfaces) now include Public IP (Internet Protocol Address) information, improving network visibility and security monitoring. This update helps administrators track devices, detect unusual access patterns, and integrate data with security tools like Splunk. It also supports compliance auditing by providing better oversight of device activity. With this enhancement, IT teams can strengthen security, improve threat detection, and optimize network management.
 
-## Release Date: February 19, 2025
+## [Release Date: February 19, 2025](/docs/macloud-sdp/release-notes/cloud-console#release-date-february-19-2025)
 
 Console Version: 3.52.0
 
@@ -32,7 +32,7 @@ Console Version: 3.52.0
 2. Support for Ping Federate integration with OPSWAT Identity Provider Multi-factor authentication
 3. Enhancement and bug fixes.
 
-## **More details:**
+## [**More details:**](/docs/macloud-sdp/release-notes/cloud-console#more-details)
 
 **Few user Interface renamed on IT Access console**
 
@@ -58,7 +58,7 @@ In this release, This enhancement allows leveraging **Ping Federate's** authenti
 
 By integrating Ping Federate with OPSWAT IdP MFA, users will experience seamless authentication while benefiting from advanced security measures. This integration ensures that access control is more robust, reducing the risk of unauthorized access and vulnerable devices while maintaining a smooth user experience.
 
-## Release Date: January 20, 2025
+## [Release Date: January 20, 2025](/docs/macloud-sdp/release-notes/cloud-console#release-date-january-20-2025)
 
 Console Version: 3.51.0
 
@@ -80,7 +80,7 @@ Persistent Client for Debian-based Linux: 15.4.2501.150
 2. New user interface implemented for Removable Media Protection
 3. Enhancement and bug fixes.
 
-## **More details:**
+## [**More details:**](/docs/macloud-sdp/release-notes/cloud-console#more-details)
 
 **"Peripheral Media Protection" and "Secure File Download" tabs shifted up in the navigation pane**
 
@@ -95,7 +95,7 @@ In this release, Removable Media Protection (RMP) has a new User interface (UI) 
 - **Full blocked mode:** When a USB drive is connected to a computer with USB Protection enabled, the user access to the drive will be automatically blocked. The user will be notified that a new USB device has been detected, but cannot view or access files on the drive.
 - **Auto-blocked mode:** when a USB drive is connected, a user attempts to open or copy a file, the MetaDefender Endpoint will intercept this action and lock the file. This triggers a scanning pop-up to scan the file against the configured rules. The file is unlocked if the scan result is allowed, and remains locked if the scan result is blocked.
 
-## Release Date: December 18, 2024
+## [Release Date: December 18, 2024](/docs/macloud-sdp/release-notes/cloud-console#release-date-december-18-2024)
 
 Console Version: 3.50.0
 
@@ -120,15 +120,15 @@ Persistent Client for Debian-based Linux: 15.4.2412.149
 5. Allow admins to add local engines option for scanning
 6. Enhancement and bug fixes.
 
-## **More details:**
+## [**More details:**](/docs/macloud-sdp/release-notes/cloud-console#more-details)
 
-## **1.** **Improved Entra ID Integration.**
+## [**1.** **Improved Entra ID Integration.**](/docs/macloud-sdp/release-notes/cloud-console#1-improved-entra-id-integration)
 
 Improved Entra ID integration with IT Access. Administrators can customize the Entra-Company Branding page with a pre-defined URL from the OPSWAT Admin Console. This URL will be displayed on the Entra ID login or error page for users who are unable to log in. Users can access the remediation page to get the remediation instructions.
 
-## **Copy pre-defined URL from** ***MD IT Access > Microsoft Entra ID***
+## [**Copy pre-defined URL from** ***MD IT Access > Microsoft Entra ID***](/docs/macloud-sdp/release-notes/cloud-console#copy-pre-defined-url-from-md-it-access--microsoft-entra-id)
 
-## **Updated Company Branding at Entra Admin > Sign-in page’s Configuration**
+## [**Updated Company Branding at Entra Admin > Sign-in page’s Configuration**](/docs/macloud-sdp/release-notes/cloud-console#updated-company-branding-at-entra-admin--sign-in-pages-configuration)
 
 **2. Improved Syslog Integration**
 
@@ -150,15 +150,15 @@ Messages to notify users in syslog settings
 
 In this release, this feature helps to show a warning message if the current usage is over the contractual limit.
 
-## **4.** **Improved SSO Integration**
+## [**4.** **Improved SSO Integration**](/docs/macloud-sdp/release-notes/cloud-console#4-improved-sso-integration)
 
 Improve SSO - SP initiated flow between 3rd party Identity Provider and IT Access Console.
 
-## **5.** **Allow admins to add local engines option for scanning**
+## [**5.** **Allow admins to add local engines option for scanning**](/docs/macloud-sdp/release-notes/cloud-console#5-allow-admins-to-add-local-engines-option-for-scanning)
 
 Add support for local scanning engine to MetaDefender Endpoint, enhancing scanning capabilities and allowing for a more customized scanning environment tailored to specific needs.
 
-## Release Date: November 14, 2024
+## [Release Date: November 14, 2024](/docs/macloud-sdp/release-notes/cloud-console#release-date-november-14-2024)
 
 Console Version: 3.49.0
 
@@ -180,19 +180,19 @@ Persistent Client for Debian-based Linux: 15.4.2411.147
 2. Support Global & Group settings to show and hide the client features.
 3. Enhancement and bug fixes.
 
-## **More details:**
+## [**More details:**](/docs/macloud-sdp/release-notes/cloud-console#more-details)
 
-## **1.** **Support S3 Log Storage and Syslog on SIEM Integration.**
+## [**1.** **Support S3 Log Storage and Syslog on SIEM Integration.**](/docs/macloud-sdp/release-notes/cloud-console#1-support-s3-log-storage-and-syslog-on-siem-integration)
 
 In this release, there is a new integration with syslog server. All the device events get saved in the syslog server.
 
-## **2.** **Flexible Global & Group settings to increase Client Functionality**
+## [**2.** **Flexible Global & Group settings to increase Client Functionality**](/docs/macloud-sdp/release-notes/cloud-console#2-flexible-global--group-settings-to-increase-client-functionality)
 
 Global Setting
 
 In this release, this feature allows clients to tailor their requirements based on specific needs, improving efficiency and the overall client experience.
 
-## Release Date: October 9, 2024
+## [Release Date: October 9, 2024](/docs/macloud-sdp/release-notes/cloud-console#release-date-october-9-2024)
 
 Console Version: 3.48.0
 
@@ -215,9 +215,9 @@ Persistent Client for Debian-based Linux: 15.4.2410.146
 3. Bump OAuth API gets device details to version 3.11 and returns the domain controller, device model and device manufacturer details.
 4. Enhancement and bug fixes.
 
-## **More details:**
+## [**More details:**](/docs/macloud-sdp/release-notes/cloud-console#more-details)
 
-## **1. Added support process "Application Control" in the SOH report**
+## [**1. Added support process "Application Control" in the SOH report**](/docs/macloud-sdp/release-notes/cloud-console#1-added-support-process-application-control-in-the-soh-report)
 
 Enhancing the Patch Management (PM) processor to process "Application Control" checks on PM products mentioned in the SOH reports (applicable to Win and Mac)**
 
@@ -225,11 +225,11 @@ Policy setting
 
 Device detail
 
-## **2. Added** **OS up-to-date posture check for Ubuntu Linux**
+## [**2. Added** **OS up-to-date posture check for Ubuntu Linux**](/docs/macloud-sdp/release-notes/cloud-console#2-added-os-up-to-date-posture-check-for-ubuntu-linux)
 
 **3. Bump OAuth API gets device details to version 3.11 and returns the domain controller, device model and device manufacturer details**
 
-## Release Date: September 10, 2024
+## [Release Date: September 10, 2024](/docs/macloud-sdp/release-notes/cloud-console#release-date-september-10-2024)
 
 Console Version: 3.47.0
 
@@ -255,7 +255,7 @@ In this release, the MD license expiration date is now clearly visible on the UI
 
 **License expire soon**
 
-## Release Date: August 20, 2024
+## [Release Date: August 20, 2024](/docs/macloud-sdp/release-notes/cloud-console#release-date-august-20-2024)
 
 Console Version: 3.46.0
 
@@ -295,7 +295,7 @@ Imminent issues will be shown on the Remediation Page to remind users before the
 
 Now, Administrators can collect the "device manufacturer" and "device model" information.
 
-## Release Date: July 16, 2024
+## [Release Date: July 16, 2024](/docs/macloud-sdp/release-notes/cloud-console#release-date-july-16-2024)
 
 Console Version: 3.45.0
 
@@ -336,7 +336,7 @@ When enabling the setting and defining domains, all non-corporate devices will a
 
 **Added support to enable/disable bad USB protection**
 
-## Release Date: June 18, 2024
+## [Release Date: June 18, 2024](/docs/macloud-sdp/release-notes/cloud-console#release-date-june-18-2024)
 
 Console Version: 3.44.0
 
@@ -394,7 +394,7 @@ OPSWAT no longer supports CVSS 2.0 score on vulnerability policy rules.
 
 **Added support Secure File Download for Chrome browser.**
 
-## Release Date: May 22, 2024
+## [Release Date: May 22, 2024](/docs/macloud-sdp/release-notes/cloud-console#release-date-may-22-2024)
 
 Console Version: 3.43.0
 
@@ -464,7 +464,7 @@ Enable this from MetaDefender IT Access console:
 
 Once enabled, you will be able to see file details from MetaDefender Endpoint.
 
-## Release Date: Apr 17, 2024
+## [Release Date: Apr 17, 2024](/docs/macloud-sdp/release-notes/cloud-console#release-date-apr-17-2024)
 
 Console Version: 3.42.0
 
@@ -553,7 +553,7 @@ We've improved your action logs to provide richer device information for exporte
 
 The MetaDefender Endpoint System Tray is now available for Ubuntu Linux users. This addition provides basic functionalities.
 
-## Release Date: Mar 19, 2024
+## [Release Date: Mar 19, 2024](/docs/macloud-sdp/release-notes/cloud-console#release-date-mar-19-2024)
 
 Console Version: 3.41.0
 
@@ -877,7 +877,7 @@ OPSWAT Client
 
 Users can now remove unwanted files before initiating the scan.
 
-## Release Date Sep 20, 2023
+## [Release Date Sep 20, 2023](/docs/macloud-sdp/release-notes/cloud-console#release-date-sep-20-2023)
 
 Console Version: 3.35.0
 
@@ -980,7 +980,7 @@ Once administrators configure Removable Media Protection, the OPSWAT Client will
 
 On September 28, we deployed a hotfix that updated the device name from 'Hostname-Laptop' to 'Hostname's Laptop' and also included the 'host_name' as 'hostname-Laptop'.
 
-## Release Date: Aug 16, 2023
+## [Release Date: Aug 16, 2023](/docs/macloud-sdp/release-notes/cloud-console#release-date-aug-16-2023)
 
 Console Version: 3.34.0
 
@@ -1115,7 +1115,7 @@ Administrators can fetch device log from OPSWAT Client to support request, even 
 
 To allow admins to validate the downloaded file before distribution , hash file info will be displayed in the client's Download page.
 
-## Release Date: June 20, 2023
+## [Release Date: June 20, 2023](/docs/macloud-sdp/release-notes/cloud-console#release-date-june-20-2023)
 
 Console Version: 3.32.0
 
@@ -1284,7 +1284,7 @@ SDP Gateway: 1.6.4
 2. SDP: Windows and Mac clients support SAML users with very large numbers of groups defined in the IDP.
 3. SDP: Various bug fixes related to have too many resources available to a client.
 
-## MetaAccess 3.28.0 - February 21, 2023
+## [MetaAccess 3.28.0 - February 21, 2023](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3280---february-21-2023)
 
 **1. Improve onboarding experience.**
 
@@ -1316,7 +1316,7 @@ SDP Gateway: 1.6.4
 
 **7.** **Fix several bugs**
 
-## MetaAccess 3.27.0 - January 17, 2023
+## [MetaAccess 3.27.0 - January 17, 2023](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3270---january-17-2023)
 
 **1.** **Policy**
 
@@ -1338,7 +1338,7 @@ SDP Gateway: 1.6.4
 
 **5. Fixed several bugs**
 
-## MetaAccess 3.26.0 - December 20, 2022
+## [MetaAccess 3.26.0 - December 20, 2022](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3260---december-20-2022)
 
 **1.** **Dashboard**
 
@@ -1369,7 +1369,7 @@ SDP Gateway: 1.6.4
 
 **6.** **Fixed several bugs**
 
-## MetaAccess 3.25.0 - November 15, 2022
+## [MetaAccess 3.25.0 - November 15, 2022](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3250---november-15-2022)
 
 **1.** **Account Summary Report**
 
@@ -1391,7 +1391,7 @@ SDP Gateway: 1.6.4
 
 **5.** **Fixed several bugs**
 
-## MetaAccess 3.24.0 - October 18, 2022
+## [MetaAccess 3.24.0 - October 18, 2022](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3240---october-18-2022)
 
 **1.** **Policy**
 
@@ -1415,7 +1415,7 @@ SDP Gateway: 1.6.4
 
 **6.Fixed several bugs**
 
-## MetaAccess 3.23.0 - September 20, 2022
+## [MetaAccess 3.23.0 - September 20, 2022](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3230---september-20-2022)
 
 **1.** **Customizable disclaimer**
 
@@ -1445,7 +1445,7 @@ SDP Gateway: 1.6.4
 
 **7.Fixed several bugs**
 
-## MetaAccess 3.22.0 - August 16, 2022
+## [MetaAccess 3.22.0 - August 16, 2022](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3220---august-16-2022)
 
 **1. Policy Management**
 
@@ -1469,7 +1469,7 @@ SDP Gateway: 1.6.4
 
 **6.Fixed several bugs**
 
-## MetaAccess 3.21.0 - July 19, 2022
+## [MetaAccess 3.21.0 - July 19, 2022](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3210---july-19-2022)
 
 **1. Policy Management**
 
@@ -1488,7 +1488,7 @@ SDP Gateway: 1.6.4
 
 **4. Fixed several bugs**
 
-## MetaAccess 3.20.0 - June 21, 2022
+## [MetaAccess 3.20.0 - June 21, 2022](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3200---june-21-2022)
 
 **1. Policy Management**
 
@@ -1505,7 +1505,7 @@ SDP Gateway: 1.6.4
 
 **3. Fixed several bugs**
 
-## MetaAccess 3.19.0 - May 17, 2022
+## [MetaAccess 3.19.0 - May 17, 2022](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3190---may-17-2022)
 
 **1. Report**
 
@@ -1525,7 +1525,7 @@ SDP Gateway: 1.6.4
 
 **4. Fixed several bugs**
 
-## MetaAccess 3.18.0 - April 19, 2022
+## [MetaAccess 3.18.0 - April 19, 2022](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3180---april-19-2022)
 
 **1. Policy**
 
@@ -1537,7 +1537,7 @@ SDP Gateway: 1.6.4
 
 - Support Device Group filtering
 
-## MetaAccess 3.17.0 - March 15, 2022
+## [MetaAccess 3.17.0 - March 15, 2022](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3170---march-15-2022)
 
 **1. Admin Events**
 
@@ -1549,7 +1549,7 @@ SDP Gateway: 1.6.4
 
 **3. Fixed several bugs**
 
-## MetaAccess 3.16.0 - February 15, 2022
+## [MetaAccess 3.16.0 - February 15, 2022](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3160---february-15-2022)
 
 **1. Policy**
 
@@ -1565,7 +1565,7 @@ SDP Gateway: 1.6.4
 
 **4. Fixed several bugs**
 
-## MetaAccess 3.15.0 - January 18, 2022
+## [MetaAccess 3.15.0 - January 18, 2022](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3150---january-18-2022)
 
 **1. Report**
 
@@ -1589,7 +1589,7 @@ SDP Gateway: 1.6.4
 
 **6. Fixed several bugs**
 
-## MetaAccess 3.14.0 - December 21, 2021
+## [MetaAccess 3.14.0 - December 21, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3140---december-21-2021)
 
 **1. Agent Setting**
 
@@ -1611,7 +1611,7 @@ SDP Gateway: 1.6.4
 
 - Fixed several bugs
 
-## MetaAccess 3.13.0 - November 16, 2021
+## [MetaAccess 3.13.0 - November 16, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3130---november-16-2021)
 
 **1. Rebranding**
 
@@ -1643,7 +1643,7 @@ SDP Gateway: 1.6.4
 
 - Fixed several bugs
 
-## MetaAccess 3.12.0 - October 19, 2021
+## [MetaAccess 3.12.0 - October 19, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3120---october-19-2021)
 
 **1. Rebranding**
 
@@ -1674,7 +1674,7 @@ SDP Gateway: 1.6.4
 - Can not open OPSWAT Client on iOS - Salesforce Application
 - The device is still non-compliant although matched with the default rule (set as compliant)
 
-## MetaAccess 3.11.0 - September 21, 2021
+## [MetaAccess 3.11.0 - September 21, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3110---september-21-2021)
 
 **1. User Roles**
 
@@ -1692,7 +1692,7 @@ SDP Gateway: 1.6.4
 
 - Device displayed multiple times in Console
 
-## MetaAccess 3.10.0 - August 24, 2021
+## [MetaAccess 3.10.0 - August 24, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-3100---august-24-2021)
 
 **1. Policy**
 
@@ -1710,7 +1710,7 @@ SDP Gateway: 1.6.4
 
 - Device detail API should return a non-compliant device if a MAC address in the query has been used by multiple devices and at least one device is non-compliant
 
-## MetaAccess 3.9.0 - July 27, 2021
+## [MetaAccess 3.9.0 - July 27, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-390---july-27-2021)
 
 **1. Secure Access**
 
@@ -1748,11 +1748,11 @@ SDP Gateway: 1.6.4
 - A device changed status to non-compliant each day if policy rule considers a device as non-compliant based on the agent version condition
 - A device was marked as a virtual machine when a device enrolled to the account and has not reported compliance data to the system
 
-## MetaAccess 3.8.1 - June 27, 2021
+## [MetaAccess 3.8.1 - June 27, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-381---june-27-2021)
 
 1. Fixed an issue where users couldn't log into protected apps via IdP workflow on mobile devices.
 
-## MetaAccess 3.8.0 - June 15, 2021
+## [MetaAccess 3.8.0 - June 15, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-380---june-15-2021)
 
 - Introduced a new view of the remediation page.
 
@@ -1780,7 +1780,7 @@ This helps users focus on required issues to get their device back to compliant 
 
 - The system did not send an email notification for the event Admin Logged On if an admin logged on MetaAccess console with a customer's own IdP.
 
-## MetaAccess 3.7.1 - June 01, 2021
+## [MetaAccess 3.7.1 - June 01, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-371---june-01-2021)
 
 **1. Secure Access**
 
@@ -1797,7 +1797,7 @@ This helps users focus on required issues to get their device back to compliant 
 - A user couldn't upload the metadata file to configure Single Sign On for admins and SDP users.
 - The system did not request the OPSWAT Client to not report patch management and other applications when the application privacy setting is turned on and those are not enabled on a policy.
 
-## MetaAccess 3.7.0 - April 21, 2021
+## [MetaAccess 3.7.0 - April 21, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-370---april-21-2021)
 
 1. **Security Enhancement**
 
@@ -1833,13 +1833,13 @@ Admins can configure a device status based on
 - The console showed an session extension popup even when a user was inactive on a page for a long time sometimes
 - An access token for an OAuth app was not reset even when a user reset a client key and client secret for that app.
 
-## MetaAccess 3.6.1 - April 8, 2021
+## [MetaAccess 3.6.1 - April 8, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-361---april-8-2021)
 
 **Bugs fixed:**
 
 - Fixed an issue that multiple devices may share the same device ID in some cases
 
-## MetaAccess 3.6.0 - March 16, 2021
+## [MetaAccess 3.6.0 - March 16, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-360---march-16-2021)
 
 **1. Policies:**
 
@@ -1880,7 +1880,7 @@ Admins can configure a device status based on
 - The system didn't update last login time for an admin user correctly when the admin switches to a managed account
 - The system didn't send out an email notification when an admin updates a group's settings.
 
-## MetaAccess 3.5.0 - February 02, 2021
+## [MetaAccess 3.5.0 - February 02, 2021](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-350---february-02-2021)
 
 1. **Group Settings:**
 
@@ -1918,7 +1918,7 @@ Admins can configure a device status based on
 - An admin could not update/add a protected app if (s)he configures iOS and Android package schema.
 - No email was sent to a user who submitted a support ticket from MetaAccess console
 
-## MetaAccess 3.3.0 - December 22, 2020
+## [MetaAccess 3.3.0 - December 22, 2020](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-330---december-22-2020)
 
 1. Support **Anti-keylogger** in policies: MetaAccess prevents keyloggers and advanced malware from  accessing  sensitive data by intercepting and encrypting keystrokes. This module requires an additional license.
 
@@ -1971,7 +1971,7 @@ Admins can configure a device status based on
 - A user couldn't add a protected app if an URL contains two hyphen characters (--)
 - Admin event logs didn't show admin's email sometimes.
 
-## MetaAccess 3.2.0 - October 29, 2020
+## [MetaAccess 3.2.0 - October 29, 2020](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-320---october-29-2020)
 
 1. User authentication for MetaAccess management console is switched to a new OPSWAT Single Sign-on (SSO) system (<https://id.opswat.com>) . A user has to reset his/her password on the new OPSWAT SSO system. This only impacts users who log into MetaAccess console through OPSWAT SSO, if you are logging into MetaAccess console through your own SSO, it will not be impacted.
 2. Enhanced account summary report which is sent daily/weekly/monthly based on email report settings (Settings > Reports > Email Reports).
@@ -1984,7 +1984,7 @@ Admins can configure a device status based on
 - A user was switched back to his/her own account when his/her session reached timeout
 - A user couldn't download the OPSWAT On-demand Client for macOS devices sometimes
 
-## MetaAccess 3.1.1 - October 13, 2020
+## [MetaAccess 3.1.1 - October 13, 2020](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-311---october-13-2020)
 
 1. Bugs fixed:
 
@@ -1993,7 +1993,7 @@ Admins can configure a device status based on
 - A user couldn't add a protected app with the application type as Other
 - The system did not update MAC address of network adapters when local IP address is enabled on Privacy Settings
 
-## MetaAccess 3.1.0 - September 29, 2020
+## [MetaAccess 3.1.0 - September 29, 2020](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-310---september-29-2020)
 
 1. The MetaAccess console will be hosted in different domains. The system will auto-redirect you to the new domain when you access the old domain.
 
@@ -2040,7 +2040,7 @@ Admins can configure a device status based on
 - The system couldn't load devices when a user navigated to the last pages in some cases.
 - The Get Devices API returned error when the page parameter is set to last pages in some cases.
 
-## MetaAccess 2.8.2 - August 18, 2020
+## [MetaAccess 2.8.2 - August 18, 2020](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-282---august-18-2020)
 
 1. Administrators can now indicate what privilege OPSWAT Client should run a custom script with. By default, OPSWAT Client runs custom script as system on Windows or user on macOS.
 2. Allow admins to export selected devices only instead of all devices which match to search/filter criteria.
@@ -2050,7 +2050,7 @@ Admins can configure a device status based on
 - The system false alerted to users who log into MetaAccess through 3rd-party single sign-on service that their account runs out of license.
 - The remediation page showed all vulnerable applications instead of only vulnerable applications which violates a policy's criteria.
 
-## MetaAccess 2.8.1 - July 07, 2020
+## [MetaAccess 2.8.1 - July 07, 2020](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-281---july-07-2020)
 
 1. Administrators now can audit files a user copied from local drives to a removable media by enabling the *Report a copy result when a user copies files from local drives to a removable media* setting under Removable Media Protection.
 2. MetaAccess customers can now leverage more commercial engines for Advanced Threat Detection with MetaDefender Cloud. New engines are available for both existing and new policies. They are un-selected by default for existing policies, administrators have to update policies manually.
@@ -2059,7 +2059,7 @@ Admins can configure a device status based on
 
 - Missing authentication header in the callback.
 
-## MetaAccess 2.8.0 - June 02, 2020
+## [MetaAccess 2.8.0 - June 02, 2020](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-280---june-02-2020)
 
 1. Updated Threat Detection with MetaDefender Cloud based-on [MetaAccess Tiers](https://www.opswat.com/products/metaaccess#option_table). If an account is a Free account, MetaDefender Cloud is not available for multi-scanning feature, and a policy, that configured a scan source for Threat Detection as MetaDefender Cloud, will be considered as an invalid policy. However, you can use your own MetaDefender Core servers for this feature.
 
@@ -2069,7 +2069,7 @@ Admins can configure a device status based on
 - Administrators will see an error banner notification that indicates what policies are invalid.
 - The Policies page also marks invalid policies with a red dot
 
-2. Added more options to a rebranding package to allow administrators to customize the below information on remediation pages. Detailed guidelines can be found [here](/kb/how-can-i-customize-remediation-pages-for-a-group-)
+2. Added more options to a rebranding package to allow administrators to customize the below information on remediation pages. Detailed guidelines can be found [here](/docs/macloud-sdp/kb/how-can-i-customize-remediation-pages-for-a-group-)
 
 - *customcheck_output_message:* when this element is set, an output message from a custom script will be exposed to end-users on the remediation page when a device failed the script. Otherwise ("customcheck_output_message":""), the output message will not be shown to the end-users.
 - *device_info:* administrators can show any device information by setting a value for an element in the device_info object or leaving it blank to hide it_._
@@ -2085,7 +2085,7 @@ Admins can configure a device status based on
 - Device Inventory report format was broken if a device's system information has special characters
 - Vulnerabilities assessment was wrong for Cisco Jabber product on macOS.
 
-## MetaAccess 2.7.1 - April 28, 2020
+## [MetaAccess 2.7.1 - April 28, 2020](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-271---april-28-2020)
 
 1. Administrators can now export a policy to a json file.
 2. Administrators can enable/disable showing a notification when a user installs a new applications on Android phone at ***Settings > Global Settings > Device Agents > Notifications to users***. By default, this setting is enabled. This is only applicable for Android agent version 2.55.33 or newer.
@@ -2099,13 +2099,13 @@ Admins can configure a device status based on
 - Device name was not updated accordingly when a device reports a new hostname even no admins manually update the device name.
 - A free account couldn't enable cross-domain API setting.
 
-## MetaAccess 2.7.0 - March 25, 2020 - Hotfix
+## [MetaAccess 2.7.0 - March 25, 2020 - Hotfix](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-270---march-25-2020---hotfix)
 
 Changes in this hotfix:
 
 - Device Policy Check v2.2 API : updated to POST method instead of GET method. This fixes an VMWare UAG integration issue.
 
-## MetaAccess 2.7.0 - March 24, 2020
+## [MetaAccess 2.7.0 - March 24, 2020](/docs/macloud-sdp/release-notes/cloud-console#metaaccess-270---march-24-2020)
 
 1. Administrators can enable webhook on MetaAccess to report device status when an event is triggered to a defined callback URL. MetaAccess supports the events below:
 
@@ -2172,8 +2172,8 @@ Notes:
 1. Administrators can now perform an on-demand compliance check on devices from the management console
 2. Added new APIs:
 
-- [Account Config](/developer-guide/account-config) enable administrators to retrieve a registration code for mobile devices
-- [Get Remediation Link](/developer-guide/get-remediation-link) v3.0 to return "remediation_link" when a device has no issue
+- [Account Config](/docs/macloud-sdp/developer-guide/account-config) enable administrators to retrieve a registration code for mobile devices
+- [Get Remediation Link](/docs/macloud-sdp/developer-guide/get-remediation-link) v3.0 to return "remediation_link" when a device has no issue
 
 3. Administrators can now monitor the progress of an on-demand threat scan from the management console
 4. Bugs fixed
@@ -2208,8 +2208,8 @@ Notes:
 3. The system will not send a threat summary report if the system doesn't detect any threat in the last report duration.
 4. Added new OAuth APIs:
 
-- [Device Action](/developer-guide/device-action) supports a new action , scan_threats, to allow administrators to send an on-demand threat scan to devices
-- [Get Reports](/developer-guide/get-reports) supports administrators to retrieve a result for on-demand threat scan action.
+- [Device Action](/docs/macloud-sdp/developer-guide/device-action) supports a new action , scan_threats, to allow administrators to send an on-demand threat scan to devices
+- [Get Reports](/docs/macloud-sdp/developer-guide/get-reports) supports administrators to retrieve a result for on-demand threat scan action.
 
 5. Bug fixed: the system didn't send a request to the agent to open a remediation page if the device reports issues in N consecutive reports and N is greater than the non-compliant threshold.
 6. Minor enhancement:
@@ -2263,7 +2263,7 @@ Notes:
 
 1. MetaAccess now enables administrators to detect advanced threats within file systems in addition to active running processes powered by MetaDefender technologies. Administrators can schedule scans with multiple options such as a Full System Scan or a Custom Scan (memory, system volume, additional volumes, a specific path).
 2. Administrators can also perform an on-demand scan on selected devices and obtain a threat report remotely.
-3. Added oAuth API [Device Information](/developer-guide/device-information) return pre-processing data for a device.
+3. Added oAuth API [Device Information](/docs/macloud-sdp/developer-guide/device-information) return pre-processing data for a device.
 
 **MetaAccess 1.3.3.0: February 26, 2019**
 

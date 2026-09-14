@@ -1,12 +1,28 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-am-i-getting--no-rows-to-show--when-using-a-proxy-without-au -->
 
-Too many requests
-# You're going a little too fast.
+# Why Am I Getting "No Rows to Show" When Using a Proxy Without Authentication in Browser Settings?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Problem**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When you set the proxy without authentication in Edge or Chrome, it typically applies to the system proxy settings. However, the MetaDefender Update Downloader relies on WinHTTP instead of WinINet, meaning it does not inherit the browser's proxy settings.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+As a result, you may encounter the error: "No rows to show."
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-am-i-getting--no-rows-to-show--when-using-a-proxy-without-au%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**Solution**
+
+Since the MetaDefender Update Downloader currently does not provide a UI option to configure proxy settings, you need to set the WinHTTP proxy manually using the `netsh` command:
+
+1. Open Command Prompt as Administrator:
+
+   - Press `Win + R`, type `cmd`, and press `Ctrl + Shift + Enter`.
+2. Set the WinHTTP Proxy:
+
+   - Run the following command, replacing `<proxy_ip>:<port>` with your actual proxy details: `netsh winhttp set proxy <proxy_ip>:<port>`
+   - Example: `netsh winhttp set proxy 192.168.1.100:8080`
+3. Refresh the Update Downloader web console and click "Update All."
+
+4. Check if the page now displays correctly.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/portal/support).

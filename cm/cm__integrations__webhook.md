@@ -21,6 +21,8 @@ To create a new webhook group, administrators can use the following steps:
 3. Fill in the required fields. *Note: You must assign as least one webhook to a group and at least one event to trigger the API call.*
 4. Enter your PIN, and select **Save**.
 
+![](https://uploads.developerhub.io/prod/97qW/xdwmt5889c09czdxna2trub7s98c0db2zzny2pyzqumjm4mliuqcroymkz2mo815.png)
+
 ## Updating Webhooks
 
 Administrators are able to activate/deactivate webhooks and update the webhook fields. To do so:

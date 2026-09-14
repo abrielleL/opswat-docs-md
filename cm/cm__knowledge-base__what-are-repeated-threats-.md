@@ -10,7 +10,7 @@
 >
 > Repeated-threat detection is distinct from threat detection via integration with MetaDefender Cloud or MetaDefender Core API, and is available for all free and paid My OPSWAT Central Management users.
 >
-> For more about **My OPSWAT Central Management** **Threat Detection**, please [Read This](https://www.opswat.com/docs/cm/kb/what-is-threat-detection-on-metaaccess-) .
+> For more information, please read [What is Threat Detection on My OPSWAT Central Management](https://www.opswat.com/docs/cm/knowledge-base/what-is-threat-detection-on-my-opswat-central-management)
 
 My OPSWAT Central Management reviews the history of threats detected by your installed, local anti-malware software, to pinpoint and flag repeated occurrences of the same threat.
 

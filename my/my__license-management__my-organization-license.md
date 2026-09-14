@@ -47,14 +47,16 @@ Below the overview chart, you’ll find a detailed list of your organization’s
 
 **2. On-Premises Product Licenses**: Each license entry includes:
 
+![](https://uploads.developerhub.io/prod/JYvy/04osq0zm4zk06sx3qpzwo4ah3c5nh9mx5pmaxqlu3ayymkyarrmienm2o2ls0wbz.png)
+
 | Field | Description |
 | ---- | ---- |
-| Product | Name of the OPSWAT product. |
+| Product Name | Name of the OPSWAT product. |
 | License Key | License keys associated with the OPSWAT Product. |
 | Status | Active, Expiring or Expired. |
 | Start Date (UTC) | The date when the license becomes effective. |
 | Expiration Date (UTC) | The expiration date of the license. Please note License start and expiration dates are shown in **UTC (UTC+0)** for consistency across all environments and time zones. This may look different from other features of My OPSWAT Portal that use your local time zone. |
-| Deployed / Purchased | Number of deployed instances versus purchased limit. |
+| NewEntitlement | Maximum licensed instances. - **Regular license:** You purchase a fixed number of product instances, and each instance is activated individually against the OPSWAT Activation Server. Hover to see   - **Max Instances**: number of product instances the license covers   - **Deployed instances: **how many of those instances are currently activated - **Volume license:** A licensing model managed through OLMS (On-Premises License Management Server). Product instances connect to OLMS locally to obtain a license; when an instance stops, its license is automatically released and can be reused by another instance. Hover to see   - **Max Instances**: maximum concurrent instances that can hold a license   - **Max Offline Time**: maximum minutes an instance can continue using its license while disconnected from OLMS |
 | Type | Evaluation/Purchased - **Evaluated Licenses:** Temporary licenses used for evaluating a product. - **Purchased Licenses**: Licenses for on-premises products that have been purchased by the user account. |
 | Note | Custom remarks for each license key. |
 

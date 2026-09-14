@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/knowledge-base/what-port-does-drive-toolkit--dtk--use- -->
 
-Too many requests
-# You're going a little too fast.
+# What Port Does Drive Toolkit (DTK) Use?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [Overview:](/docs/mddrive/v4.4.2a/knowledge-base/what-port-does-drive-toolkit--dtk--use-#overview)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Drive Toolkit (DTK) utilizes a specific port for communication purposes. This article provides details on the port used and a recommended workaround if port conflicts occur.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+#### [Port Information:](/docs/mddrive/v4.4.2a/knowledge-base/what-port-does-drive-toolkit--dtk--use-#port-information)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fknowledge-base%2Fwhat-port-does-drive-toolkit--dtk--use-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- **Port Used:** 8081
+- Purpose: DTK relies on port **8081** for communication.
+- **Customizability**: Currently, there is no option for customers to change the port.
+
+#### [Workaround for Port Conflicts:](/docs/mddrive/v4.4.2a/knowledge-base/what-port-does-drive-toolkit--dtk--use-#workaround-for-port-conflicts)
+
+If port **8081** is already in use by another application, it must be unbound before using DTK.
+**Note:**
+
+If you have further questions or need additional support, please contact OPSWAT Support.
+
+Our support team will be able to provide you with the necessary guidance and resolution for any license-related concerns.

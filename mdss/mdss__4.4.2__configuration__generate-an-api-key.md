@@ -1,12 +1,38 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/generate-an-api-key -->
 
-Too many requests
-# You're going a little too fast.
+# Generate an API Key
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Storage Security users can generate **one API Key** for their user account. This key can be used as an alternative method to authenticate REST API requests to MetaDefender Storage Security — with the exception of user and API key management operations.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To generate an API key, follow these steps:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. From the top bar, click on the **User** icon and navigate to **Profile Information**.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Fgenerate-an-api-key%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+2. Navigate to **Configure API Key** and select **Generate API Key**
+
+3. Click the copy button and store your API Key somewhere secure. Afterwards, click on **Save changes**.
+
+Information
+
+The API key can be copied only at this step and is saved only after clicking the save changes button. If an API Key already exists, it can be deleted or updated to a freshly generated one.
+
+Warning
+
+API keys of a user are invalidated on a password change or reset operation.
+
+Warning
+
+The following operations are not allowed using an API key:
+
+- Generate an API key: **GET /api/apikey/generate**
+- Retrieve an API key: **GET /api/apikey**
+- Add an API key: **POST /api/apikey**
+- Update an API key: **PUT /api/apikey**
+- Delete an API key: **DELETE /api/apikey/{id}**
+- Enumerate active users: **GET /api/user/active/{startIndex}/{count}**
+- Create an user: **POST /api/user/create**
+- Update user role: **PUT /api/user/role**
+- Enumerate user requests: **GET /api/user/requests**
+- Remove a user: **DELETE /api/user/{userId}**
+- Update user: **PUT /api/user**
+- Validate password: **POST /api/user/validation**

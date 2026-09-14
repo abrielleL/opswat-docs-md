@@ -1,12 +1,7 @@
 <!-- source: https://www.opswat.com/docs/mdcloud/integrations/how-to-use-opswat-file-security-for-chrome -->
 
-Too many requests
-# You're going a little too fast.
+# How to use OPSWAT File Security for Chrome
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+On any web page, right click on the download link for the file you would like to scan for malware. In the context menu, select 'Scan with OPSWAT'. OPSWAT File Security for Chrome will begin analyzing the file at the selected URL, and results will be available on the Scan History page. Last 3 scans are also visible in the extension popup.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcloud%2Fintegrations%2Fhow-to-use-opswat-file-security-for-chrome%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To access the OPSWAT File Security for Chrome extension settings page, right click on the 'OPSWAT File Security for Chrome' button in the Chrome top bar and select 'Options' from the drop down menu.

@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/advanced-usages/unlock-bitlocker -->
 
-Too many requests
-# You're going a little too fast.
+# Unlock BitLocker
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT MetaDefender Drive includes built-in support for unlocking BitLocker encrypted disks.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Detect and Unlock BitLocker Encrypted Partitions](/docs/mddrive/v4.4.2a/advanced-usages/unlock-bitlocker#detect-and-unlock-bitlocker-encrypted-partitions)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+If a BitLocker protected disk is detected during a scan, you will be notified by MetaDefender Drive to skip or unlock this disk. The notification box will show on the lower-right corner of the screen, with the steps needed to unlock the protected drive. You can Unlock BitLocker protected disks in the following 3 ways:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fadvanced-usages%2Funlock-bitlocker%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- [Manually using a Password or a Recovery Key](https://www.opswat.com/docs/mddrive/advanced-usages/unlock-bitlocker-manually)
+- [Using Automatically from MetaDefender Drive](https://www.opswat.com/docs/mddrive/advanced-usages/unlocking-bitlocker-automatically-using-opswat-tool)
+- [Automatically Using a Windows Recovery Key](https://www.opswat.com/docs/mddrive/advanced-usages/unlocking-bitlocker-automatically-using-windows-recovery-key)
+
+Windows 11 Home Device Encryption is not supported.
+
+It is necessary to turn off Device Encryption before proceeding to scan disks on devices running Windows 11 Home. Decrypting the default Device Encryption of Windows 11 Home isn't yet supported by MetaDefender Drive.
+
+Follow the guidelines on the following page to disable disk encryption on Windows 11 Home: <https://www.windowscentral.com/how-enable-device-encryption-windows-10-home>.
+
+.

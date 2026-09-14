@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/change-password -->
 
-Too many requests
-# You're going a little too fast.
+# Changing Your Password
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+You can change your password anytime by clicking the "User" icon in the top-right corner of the application and selecting "User Preferences." Pay attention to the [password strength](/docs/mdmft/v3.11.4/end-user-guide/password-strength)  indicator for extra security.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Enter your **Current Password**, then provide and confirm a **New Password**. The password strength indicator updates as you type.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fchange-password%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Your new password must meet all of the following requirements:
+
+- At least **12 characters** long
+- Not a commonly used password
+- A minimum strength score of **3 out of 4** on the strength meter
+
+The change is saved only when you click "Save". If your current password is incorrect the server will reject the request and display an error.

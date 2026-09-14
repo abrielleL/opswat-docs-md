@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/configuration/client-recovery-key -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Endpoint Recovery Key
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The MetaDefender Endpoint Recovery Key is used to authenticate the MetaDefender Endpoint managed by OPSWAT Central Management. If you reinstall OPSWAT Central Management, you must register the same MetaDefender Endpoint Recovery Key in the configuration wizard.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This key can only be entered in the configuration wizard. You can view the MetaDefender Endpoint Recovery Key at **Setting > Global Settings > Account.**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Warning
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fconfiguration%2Fclient-recovery-key%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Please do not use the same MetaDefender Endpoint Recovery Key for multiple OPSWAT Central Management server. You should save this key for data recovery purpose.
+
+## [Via the setup wizard](/docs/ocm/7.39.0/configuration/client-recovery-key#via-the-setup-wizard)
+
+After a fresh installation, a setup wizard will be loaded to walk you through steps to set up your OPSWAT Central Management server. At step #3, you can leave the MetaDefender Endpoint recovery key as default OR fill in a key that you already have from a previous installation to make sure MetaDefender Endpoint installed on your devices with that key can authenticate with your server.
+
+## [Via the management console](/docs/ocm/7.39.0/configuration/client-recovery-key#via-the-management-console)
+
+The MetaDefender Endpoint Recovery Key is located at **Setting > Global Settings > Account > Account Settings.**

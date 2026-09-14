@@ -40,7 +40,7 @@ https://gears.opswat.com/o/api/v3.2/cves
 
 ## Response HTTP Code
 
-[this page](https://www.opswat.com/docs/cm/my-opswat-central-management/10.0.2506/developer-guidelines/apis)
+Refer to [APIs](https://www.opswat.com/docs/cm/developer-guidelines/apis) guidelines for more details.
 
 ## Response Parameters
 

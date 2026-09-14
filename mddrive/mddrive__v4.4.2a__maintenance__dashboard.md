@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/maintenance/dashboard -->
 
-Too many requests
-# You're going a little too fast.
+# Dashboard
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The MetaDefender Drive Toolkit Dashboard is the first page to show after imitation. It shows a summary of the following:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- The number of the inserted MetaDefender Drives
+- The number of MetaDefender Drives with outdated software or possible malfunctions
+- The number of active drives and the number of expired or about to expire licenses
+- The software version status, and if a new MetaDefender Drive software version (Drive Image) or MetaDefender Drive Toolkit version is available
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fmaintenance%2Fdashboard%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## .

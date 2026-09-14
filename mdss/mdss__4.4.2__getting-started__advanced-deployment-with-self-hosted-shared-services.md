@@ -1,12 +1,35 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/getting-started/advanced-deployment-with-self-hosted-shared-services -->
 
-Too many requests
-# You're going a little too fast.
+# Advanced Deployment with Self-Hosted Shared Services
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This deployment is for high-performance needs, using multiple MDSS and MD Core instances and self-hosted shared services (database, cache, message broker). It's significantly more complex than the basic setups but offers superior performance and reliability.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This setup is like building a powerful engine. You're running multiple MDSS and MD Cores and managing the database, cache, and communication hub yourself. This gives you high performance, but it's also more complex to set up and maintain.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+#### [Suitable For](/docs/mdss/4.4.2/getting-started/advanced-deployment-with-self-hosted-shared-services#suitable-for)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fgetting-started%2Fadvanced-deployment-with-self-hosted-shared-services%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- High-Throughput Environments, organizations processing large volumes of files.
+- Organizations with Strong IT Infrastructure as it requires in-house expertise to manage the complexity.
+
+#### [Key Components & Their Roles](/docs/mdss/4.4.2/getting-started/advanced-deployment-with-self-hosted-shared-services#key-components--their-roles)
+
+- Multiple MDSS Core Instances - allows parallel processing for higher throughput.
+- PostgreSQL (Database) - stores data.
+- Redis (Cache) - speeds up data access.
+- RabbitMQ (Message Broker) - manages communication between components.
+
+#### [Key Points](/docs/mdss/4.4.2/getting-started/advanced-deployment-with-self-hosted-shared-services#key-points)
+
+- Requires more planning and technical expertise.
+- Can handle up to 100,000 files per hour with sufficient resources.
+- You are responsible for installing, configuring, and maintaining all components.
+- Allows scaling through multiple MDSS Core instances and shared services.
+- Achieved through database replication and careful configuration.
+
+#### [Important Considerations](/docs/mdss/4.4.2/getting-started/advanced-deployment-with-self-hosted-shared-services#important-considerations)
+
+- Requires significant hardware resources for all components.
+- Effective monitoring is essential due to the increased complexity.
+- While better than basic setups, careful planning is needed to avoid single points of failure.
+- Our testing showed 2 MDSS instances with 4 MDSS Core instances yielded substantial performance improvements.
+- Once all services are deployed and ready to be used, please follow [Installation Methods](/docs/mdss/4.4.2/installation/installation-methods) to connect MDSS to them.

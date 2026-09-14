@@ -1,12 +1,47 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/knowledge-base/metadefender-downloader-uninstallation-guide-for-windows-and-lin -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Downloader Uninstallation Guide for Windows and Linux
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Check Your Version:**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This article applies to All version of Metadefender Downloader Windows and Linux version
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Issue:**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Fknowledge-base%2Fmetadefender-downloader-uninstallation-guide-for-windows-and-lin%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This article provides the commands and directory locations required to fully uninstall MetaDefender Downloader from Windows and Linux environments, including the removal of application files, configuration files, services, and residual data.
+
+**Solution:**
+
+To completely uninstall MetaDefender Downloader and ensure a clean removal of all application components by follow the instructions below:
+
+**Uninstall on a Window’s Deployment:**
+
+1. Go to **Add or Remove Program** under the search menu
+
+Find the **MetaDefender Update Downloader** and Press the Uninstall button to uninstall application.
+
+2. Click the Uninstall button to uninstall the MetaDefender Downloader application.
+3. To completely remove all MetaDefender Downloader related data, logs and configuration files, please deleted all the directories reference in this article: [What are the installation directories for MetaDefender Update Downloader?](https://opswat.atlassian.net/wiki/spaces/~71202072e168519b204f5db27c73bcb68cc135/pages/5016814171)
+
+**Uninstall Linux Environment:**
+
+The command line to uninstall the downloader is as follows:
+
+1. Stop and Disabled MetaDefender Downloader Core services.
+
+sudo systemctl stop ometadownloader
+sudo systemctl disable ometadownloader
+
+2. For Debian-based Systems (Ubuntu, Debian):
+
+sudo apt-get remove --purge ometadownloader
+
+For RPM-Based Systems (Rocky Linux, CentOS, RHEL):
+
+sudo dnf remove ometadownloader
+
+3. To completely remove all MetaDefender Downloader related data, logs and configuration files, please deleted all the directories reference in this article: [What are the installation directories for MetaDefender Update Downloader?](https://opswat.atlassian.net/wiki/spaces/~71202072e168519b204f5db27c73bcb68cc135/pages/5016814171)
+
+**Support:**
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

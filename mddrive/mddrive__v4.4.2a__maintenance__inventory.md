@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/maintenance/inventory -->
 
-Too many requests
-# You're going a little too fast.
+# Inventory
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The **Inventory** page shows a general overview of each drive's usage by displaying stats about the **number of scans,** **infected files found**, **vulnerabilities detected**, **potential data leaks** (files with sensitive data), and **Country of Origin** non-compliant files.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+You can view more details about the scan history performed on a specific drive by clicking the **View Reports** button next to this drive:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+You can save the scan reports from any drive on your local device's storage by clicking the **download icon**:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fmaintenance%2Finventory%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+.

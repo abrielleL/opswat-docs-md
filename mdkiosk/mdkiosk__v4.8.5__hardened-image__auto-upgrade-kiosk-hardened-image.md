@@ -58,6 +58,35 @@ Windows Account Field Required to Restore Existing Credential
 
 If **Windows account** field is left empty, Kiosk will not restore existing account and will instead apply [**default Kiosk credential**](https://www.opswat.com/docs/mdkiosk/secure-image/guideline---deploying-kiosk-hardened-imagej6q#step-4-post-installation-actions)
 
+## [Run a Pre-Upgrade Health Check](/docs/mdkiosk/v4.8.5/hardened-image/auto-upgrade-kiosk-hardened-image#run-a-pre-upgrade-health-check)
+
+Before starting a Hardened Image upgrade, you can run a health check to confirm your Kiosk is ready. From the Hardened Image Upgrade tab, click **Run Pre-Check**.
+
+The check reviews conditions such as:
+
+- Whether MetaDefender Core is reachable, licensed, and running a compatible version
+- Connectivity to Central Management, if the Kiosk is enrolled
+- Whether a scan session is currently in progress
+- Available disk space
+- Whether BitLocker drive encryption is enabled
+- Whether the Kiosk is currently being accessed remotely
+- Windows administrator accounts on the device
+- Proxy configuration, if one is in use
+
+Each item reports whether it passed, deserves a warning worth reviewing, or needs attention before you upgrade. If a result depends on MetaDefender Core and no Core instance is configured, the related Core checks are simply marked as skipped rather than failed.
+
+Note
+
+If any check reports that it needs attention, clicking **Upgrade Now** shows a summary of the items found so you can review them. You can still choose to proceed with the upgrade after reviewing — the check is meant to inform your decision, not to lock you out.
+
+Run results are cleared once an upgrade completes, so run the check again before your next upgrade.
+
+### [Example messages you may see](/docs/mdkiosk/v4.8.5/hardened-image/auto-upgrade-kiosk-hardened-image#example-messages-you-may-see)
+
+- **Disk space:** "Not enough disk space. Available: 12 GB. Required: 25 GB. Free at least 13 GB on drive C:."
+- **BitLocker:** "BitLocker encryption is enabled on drive C:. Suspend BitLocker protection before upgrading."
+- **Multiple Windows accounts:** "Multiple administrator accounts detected. After the upgrade, only the default KioskUser account will be retained and other accounts may be removed. Configure the Windows Account Password in Upgrade Settings before proceeding."
+
 ## [Release Notifications](/docs/mdkiosk/v4.8.5/hardened-image/auto-upgrade-kiosk-hardened-image#release-notifications)
 
 To be notified in the Console when a new Kiosk Hardened Image or Kiosk Application version becomes available, go to **Upgrades** and turn on **Show release notifications**.
@@ -113,7 +142,7 @@ To check the limitations of the Kiosk Hardened Image, please refer to
 - Limitations of previous versions - [Archive release notes](https://www.opswat.com/docs/mdkiosk/hardened-image/release-notesee0)
 ## [Upgrade process overview](/docs/mdkiosk/v4.8.5/hardened-image/auto-upgrade-kiosk-hardened-image#upgrade-process-overview)
 
-- **Initiation:** The upgrade begins either when the scheduled time is reached or when the "Upgrade Now" button is clicked. The Kiosk system automatically downloads the latest version of the Kiosk Hardened Image. The download time may vary depending on the Internet speed.
+- **Initiation:** The upgrade begins either when the scheduled time is reached or when the "Upgrade Now" button is clicked. The Kiosk system automatically downloads the latest version of the Kiosk Hardened Image. The download time may vary depending on the Internet speed. Before clicking **Upgrade Now**, it's recommended to run the pre-upgrade health check described above so you know about any potential issues in advance. When you click **Upgrade Now**, you'll also see a notice confirming that the upgrade may take several hours to complete and that the Kiosk must remain powered on until it finishes — you'll need to confirm this before the upgrade starts.
 - **Backup and preparation:** The Kiosk system backs up the required configurations and settings before proceeding. Administrators will see a warning message indicating that the system will restart several times to perform the upgrade.
 - **Upgrade execution:** The system prepares the environment and a separate partition will be created to store a snapshot of the current state. Ensure that the system has at least 40% free storage space available to accommodate the snapshot creation and upgrade process.
 
@@ -124,6 +153,17 @@ To benefit from the latest backup and restore reliability improvements, update M
 If an issue occurs during the upgrade process, Kiosk will automatically restore the system using the created snapshot to ensure continuity
 
 From **Upgrade History** section, administrators can click on the **rollback icon** to revert to a previous version of success upgrade if desired
+
+## [Post-Upgrade Validation](/docs/mdkiosk/v4.8.5/hardened-image/auto-upgrade-kiosk-hardened-image#post-upgrade-validation)
+
+After a Hardened Image upgrade completes, Kiosk automatically checks that everything came back up correctly. From **Upgrade History**, click **View Details** on the relevant entry to see:
+
+- Kiosk and Core service status
+- Kiosk and Core database connectivity
+- Connectivity from Kiosk to Core and to Central Management
+- Kiosk and Core license status
+
+If something didn't come back up as expected, this summary is the first place to check before contacting support.
 
 ## [Troubleshooting](/docs/mdkiosk/v4.8.5/hardened-image/auto-upgrade-kiosk-hardened-image#troubleshooting)
 

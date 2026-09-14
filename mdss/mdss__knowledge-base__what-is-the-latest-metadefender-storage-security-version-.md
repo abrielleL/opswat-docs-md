@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/mdss/knowledge-base/what-is-the-latest-metadefender-storage-security-version- -->
 
-Too many requests
-# You're going a little too fast.
+# What is the latest MetaDefender Storage Security version?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Storage Security releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Browse MetaDefender Storage Security [Release Notes](https://www.opswat.com/docs/mdss/release-notes) for details on the latest version, version history, version comparisons and release notes.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Alternatively, go directly through the [My OPSWAT](https://my.opswat.com/portal) for a list of available downloads.:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fknowledge-base%2Fwhat-is-the-latest-metadefender-storage-security-version-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Login to My OPSWAT portal
+2. Click on “MetaDefender Storage Security”
+
+3. Click on “Download” button
+
+4. In the new window opened, always the version from the top is the latest version
+
+Pro Tip: 
+
+OPSWAT highly recommends that users upgrade to the latest version of MetaDefender Storage Security. Current versions incorporate state-of-the-art features and necessary bug fixes, and are freely available for all license holders to download.
+
+Support:
+
+Feel free to contact OPSWAT support for further guidance through your Upgrade process. Please follow these instructions on [How To Create a Support Package](https://docs.opswat.com/mdcore/troubleshooting/how-to-create-support-package-), before logging a [Support Ticket](https://www.opswat.com/support) with the OPSWAT team.

@@ -25,17 +25,17 @@ Here are steps to provision end-users from your own IdP
 2. In an existing production IdP, you will likely already have a number of user accounts organized into groups. For a test IdP, you will need to create one or more users and assign them to groups
 3. In your IdP, create an application. If there is a catalogue of common SP applications, you will **NOT** want to use those options. You will want to create a custom app.
 4. Give the new app a label.
-5. Configure the SP Entity IDs. If required, you may also need to fill in an IdP EntityID, but most IdPs specify this for you. These are identifiers the two ends are going to use to verify that authentication attempts are coming from and going to the right places. It doesn’t really matter what they are, just remember them for later when configuring MetaDefender IT Access.
+5. Configure the SP Entity IDs. If required, you may also need to fill in an IdP EntityID, but most IdPs specify this for you. These are identifiers the two ends are going to use to verify that authentication attempts are coming from and going to the right places. It doesn’t really matter what they are, just remember them for later when configuring My OPSWAT Central Management.
 6. In some IdPs, you will also need to configure an IDP URL.
 7. Assign one or more existing Users or Groups to access the new application.
-8. Enable group attributes for the application. Some IdPs will **NOT** let you pick a group attribute (Microsoft Azure for example). In this case, you will need to determine your IdP’s group attribute. Whatever your group attribute, you will need to remember it later for entry into MetaDefender IT Access.
+8. Enable group attributes for the application. Some IdPs will **NOT** let you pick a group attribute (Microsoft Azure for example). In this case, you will need to determine your IdP’s group attribute. Whatever your group attribute, you will need to remember it later for entry into My OPSWAT Central Management.
 
-**NOTE:** Some IdPs will not allow you to assign groups attributes at this point. For those providers, you will need to wait until after you configure My OPSWAT Central Management. As such, a couple of these steps will be repeated below. Please ignore them if you have already done the work here!
+Note Some IdPs will not allow you to assign groups attributes at this point. For those providers, you will need to wait until after you configure My OPSWAT Central Management. As such, a couple of these steps will be repeated below. Please ignore them if you have already done the work here!
 
 9. Export the IdP metadata that you will later load into the My OPSWAT Central Management Console. In some cases your IdP will require you to save the application first and go to a different part of the UI to export the metadata.
 10. Navigate to the My OPSWAT Central Management administration console. Enable single sign-on for SDP.
 
-**Note: that there are two kinds of SAML SSO setup here. The “Console” setup is for logging into the** **My OPSWAT Central Management** **administration console itself. The “SDP” setup is for logging in end-users to the SDP product. We’re setting up SDP here.**
+Note** **There are two kinds of SAML SSO setup here. The “Console” setup is for logging into the My OPSWAT Central Management administration console itself. The “SDP” setup is for logging in end-users to the SDP product. We’re setting up SDP here.
 
 ![](https://uploads.developerhub.io/prod/97qW/hncykvq7xip4a05pvmfx5msnz9h7tepuuv978jz2m6fn1ny4mobsw5v1mtn3sem4.png)
 

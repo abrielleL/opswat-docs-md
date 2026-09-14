@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/how-to-remove-infected-child-files-from-archives-in-metadefender -->
 
-Too many requests
-# You're going a little too fast.
+# How to Remove Infected Child Files from Archives in MetaDefender Core
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Use case
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Core scans an archive or container file, and one or more of the child files inside the archive are detected as infected. The desired result is to return a modified archive where the infected child file has been removed, rather than returning the original archive with the infected child file(s) sanitized.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Resolution
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fhow-to-remove-infected-child-files-from-archives-in-metadefender%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To remove infected child files from an archive, configure the workflow’s Compression and Deep CDR settings:
+
+| Workflow area | Setting | Value |
+| --- | --- | --- |
+| Deep CDR | Enable Deep CDR | Status: Active |
+| Compression | Enable archive sanitization | Enabled |
+| Compression | Enable for archive compression filetypes | Select the required archive/container types |
+| Compression | Skip Malicious Items | Enabled; configure the verdicts that should be treated as malicious |
+| Compression | Include sanitized version of blocked child files | Disabled |
+| Compression | Add tombstone file during archive process / archive sanitization | Optional, recommended for keeping track of infected files |
+| Deep CDR | Enable for filetypes | Optional: enable for supported child file types if clean child files should be sanitized |

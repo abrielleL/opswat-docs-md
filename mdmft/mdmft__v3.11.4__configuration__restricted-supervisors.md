@@ -1,12 +1,33 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/restricted-supervisors -->
 
-Too many requests
-# You're going a little too fast.
+# Restricted Supervisors
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The final step in setting up the supervisor approval process is to add or edit restricted supervisors.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Restricted supervisors do not have access to view the content of supervised files, as file download and preview functionalities are disabled for them.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Frestricted-supervisors%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+When this feature is enabled, supervisors are divided into two groups:
+
+- **Restricted Supervisors**: Supervisors who cannot download/preview the supervised files.
+- **Regular Supervisors**: Supervisors who can download/preview the supervised files.
+
+### [Setting Up Restricted Supervisors](/docs/mdmft/v3.11.4/configuration/restricted-supervisors#setting-up-restricted-supervisors)
+
+Use the control buttons to move supervisors:
+
+- Add All
+- Add Selected
+- Remove Selected
+- Remove All
+
+The selected supervisors are restricted once the "Supervisor Setup Draft" is activated by clicking "Activate Draft".
+
+### [Defining Restricted Supervisors](/docs/mdmft/v3.11.4/configuration/restricted-supervisors#defining-restricted-supervisors)
+
+All supervisors can be restricted except administrators and Helpdesk administrators.
+
+### [Supervisor Delegates](/docs/mdmft/v3.11.4/configuration/restricted-supervisors#supervisor-delegates)
+
+Delegated supervisors will inherit the restriction from their creators.

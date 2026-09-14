@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/advanced-usages/unlocking-bitlocker-automatically-using-windows-recovery-key -->
 
-Too many requests
-# You're going a little too fast.
+# Unlock BitLocker Automatically Using Windows Recovery Key
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To unlock BitLocker protected disks for MetaDefender Drive using Microsoft's built-in Recover Keys, users must boot Windows and then insert the OPSWAT MetaDefender Drive.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Add BitLocker Recovery Keys to MetaDefender Drive](/docs/mddrive/v4.4.2a/advanced-usages/unlocking-bitlocker-automatically-using-windows-recovery-key#add-bitlocker-recovery-keys-to-metadefender-drive)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+If you already have BitLocker's Recovery Key files saved on your device, copy them to the MetaDefender Drive partition under the folder *Tools/BitLocker* and reboot your device from the MetaDefender Drive.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fadvanced-usages%2Funlocking-bitlocker-automatically-using-windows-recovery-key%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Generate BitLocker Recovery Keys and Add them to MetaDefender Drive](/docs/mddrive/v4.4.2a/advanced-usages/unlocking-bitlocker-automatically-using-windows-recovery-key#generate-bitlocker-recovery-keys-and-add-them-to-metadefender-drive)
+
+If you don't have the BitLocker Recovery Keys for your encrypted disk, follow these steps:
+
+1. Plug your MetaDefender Drive into a running Windows device.
+2. Right-click on the locked disk you intend to unlock, and select **Manage BitLocker**.
+
+3. Select **Save to a file** and save the Recovery Key to a secure folder on your device. Repeat this step for every encrypted disks on the computer.
+4. Copy the Recovery Key file/s to the MetaDefender Drive partition under the *tools/bitlocker* folder.
+
+5. Reboot your system from MetaDefender Drive.

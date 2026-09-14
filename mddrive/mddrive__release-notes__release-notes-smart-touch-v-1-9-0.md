@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-smart-touch-v-1-9-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive Smart Touch v1.9.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-notes-smart-touch-v-1-9-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Jun 1, 2026** | This release includes new features and new user experiences |
+| **New Features** | - **Enroll MetaDefender Drive with Smart Touch into Centralized Scanning Profile directly from the Smart Touch :** Administrators can now enroll Smart Touch's embedded Drive into OTP-based lock management via Smart Touch User Interface, ensuring only approved users with 2-FA Authenticator can unlock the Drive for non-full-scan operations or settings changes - **Button to Network settings for Smart Touch:** users can now tap a dedicated Wi-Fi settings button directly within the app, eliminating the need to find the hidden system slider. - **Separated buttons for Copy and Scan filess:** Introduces an explicit buttons, replacing auto-detection with a user-driven workflow that clearly guides operators when it's safe to transfer files via Secure File Storage — reducing confusion and preventing exposure of unscanned files before Kiosk connection is confirmed. |
+| **Bug Fixes** | - Fixed the issue that caused error **'SIM Tray Detached'** after upgraded - **Secure File Storage** is made more stable with bugs fixed |
+| **Improvements** | - **Extend NTFS partition on MetaDefender Drive with Smart Touch:** MetaDefender Drive with Smart Touch now has 64 GB of NTFS storage |
+|  |  |

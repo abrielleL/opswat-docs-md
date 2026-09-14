@@ -1,12 +1,14 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/metadefender-email-gateway-security -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Email Gateway Security
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Email Gateway Security enhances existing email security gateways by offering:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fmetadefender-email-gateway-security%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Anti-spam and anti-phishing using one of the best anti-spam engines with the lowest false positive rate.
+- Proactive Phishing Prevention using MetaDefender Cloud or the Deep Content Disarm and Reconstruction technology.
+- Zero-Day Malware Prevention with OPSWAT’s Deep Content Disarm and Reconstruction technology.
+- Disarm Password-Protected Attachments giving the opportunity to recipients to decrypt the files.
+- Prevent Sensitive Data Loss while still delivering emails with our Proactive Data Loss Prevention technology.
+- Advanced Threat Prevention with more than 30 anti-malware engines (leveraging both heuristics and signature-based detection).
+- Intelligent Threat Prevention with machine learning anti-malware techniques.
+- Secure Retrieval of Attachments for Outbreak Prevention when integrated to MetaDefender Managed File Transfer.

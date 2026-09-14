@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/how-to-install-multiple-managed-file-transfers-servers-on-the-sa -->
 
-Too many requests
-# You're going a little too fast.
+# How to install multiple Managed File Transfer servers on the same Remote SQL server?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender Managed File Transfer supports the configuration of multiple servers using the same Remote SQL server.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2Fhow-to-install-multiple-managed-file-transfers-servers-on-the-sa%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Install an additional SQL instance on the SQL Server or SQL Cluster
+2. Ensure that the new instance supports TCP/IP and has a unique port (Failing to set a unique port will prevent the process from starting)
+3. In MetaDefender Managed File Transfer, when prompted to enter the path to the SQL server, use the following format: Server name: <IP address>,<Port for the instance><Instance name>

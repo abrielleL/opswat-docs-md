@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/newsletter/october-2025 -->
 
-Too many requests
-# You're going a little too fast.
+# October 2025
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [OPSWAT Endpoint Security Certification Awards October 2025](/docs/mdsdk/newsletter/october-2025#opswat-endpoint-security-certification-awards-october-2025)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+### [Congratulations to the new certified partners for the month of October!](/docs/mdsdk/newsletter/october-2025#congratulations-to-the-new-certified-partners-for-the-month-of-october)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Fnewsletter%2Foctober-2025%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| Vendor | Product | Platform | Version | Award Category | Award Level |
+| --- | --- | --- | --- | --- | --- |
+| Intego | VirusBarrier | macOS | 10.9.100 | Anti-Malware | Gold |
+| PRIM'X | CRYHOD | Windows | 2025.3.6 | Encryption | Platinum |

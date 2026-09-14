@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/mdcore/metascan-engines/av-engine-return-code -->
 
-Too many requests
-# You're going a little too fast.
+# AV engine return code
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following values are available for ***scan_results.scan_details.<engine name>.scan_result_i***
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fmetascan-engines%2Fav-engine-return-code%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| Returned Code | Description |
+| --- | --- |
+| 0 | No threat detected |
+| 1 | Infected |
+| 2 | Suspicious |
+| 3 | Failed to scan |
+| 10 | Not scanned |
+| 19 | Cancelled |
+| 22 | PUA/PUP detected |
+| 23 | File format not supported |

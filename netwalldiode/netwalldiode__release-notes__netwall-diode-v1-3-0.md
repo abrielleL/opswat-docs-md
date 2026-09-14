@@ -1,12 +1,32 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/release-notes/netwall-diode-v1-3-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.3.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | Config: 1.3.0 OD-100: 1.0.1 |
+| --- | --- |
+| **Release date** | Oct 2023 |
+| **Scope** | Major release including OCM integration and 10Gbps support |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/netwalldiode/release-notes/netwall-diode-v1-3-0#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+|  | Details |
+| --- | --- |
+| OCM integration | OPSWAT Central Management console integrated with NetWall products |
+| Syslog live view | Syslog is refreshed automatically |
+| Intel DPDK 22.11.3 LTS | Intel DPDK library updated to version 22.11.3 LTS |
+| Redis v7.0.12 | Redis updated to version 7.0.12 |
+| Diode Receive Reconfigured | Streams recofigured in the RED side |
+| 10 Gbps support | Added support for throughputs up to 10Gbps |
+| GUI changes | minor GUI changes |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Frelease-notes%2Fnetwall-diode-v1-3-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Bug fixes](/docs/netwalldiode/release-notes/netwall-diode-v1-3-0#bug-fixes)
+
+|  | Details |
+| --- | --- |
+| bugfixing | several minor bugs fixed |
+
+## [Known limitations](/docs/netwalldiode/release-notes/netwall-diode-v1-3-0#known-limitations)
+
+N/A
+
+MetaDefender

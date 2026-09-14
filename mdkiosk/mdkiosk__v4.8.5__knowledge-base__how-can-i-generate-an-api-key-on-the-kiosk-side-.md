@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/how-can-i-generate-an-api-key-on-the-kiosk-side- -->
 
-Too many requests
-# You're going a little too fast.
+# How can I generate an API key on the Kiosk side?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Kiosk releases **after version 4.7.0**, deployed on both Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+In order to generate an API key on the KIOSK side (necessary for different OPSWAT product integrations) you will need to take the following steps:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Navigate to the **User Management** tab.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fhow-can-i-generate-an-api-key-on-the-kiosk-side-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+2. Select the user for whom you want to generate an API key, then click the three dots > **Edit**.
+
+3. Click **Generate** to create the API key.
+
+4. After generating the API key, click **Update User** to apply the changes.
+
+Once all the steps above have been completed the API key will be saved for the selected user and can be used in different integrations. (The API key does not have an expiration date).
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/portal/support).

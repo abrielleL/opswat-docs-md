@@ -2,23 +2,23 @@
 
 # Initial configuration for Site Manager & Network Sensor - Bundle 2 in 1 on local management console application
 
-## About this task
+## [About this task](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#about-this-task)
 
 Use this procedure for Site Manager & Network Sensor - Bundle 2 in 1 Configuration Login and Network Configuration for the Site Manager & Network Sensor - Bundle 2 in 1 on the local management console application
 
-## Before you begin
+## [Before you begin](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#before-you-begin)
 
 - Ensure that you completed the installation for the Site Manager & Network Sensor - Bundle 2 in 1 on the local management console application.
 
 Prepare display screen, keyboard and mouse physically attached to the Site Manager & Network Sensor - Bundle 2 in 1 server to serve during the configuration process
 
-## Procedure
+## [Procedure](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#procedure)
 
 After installation, the MetaDefender OT Security Site Manager & Network Sensor - Bundle 2 in 1 on local management console application is starting
 
-## Site Manager & Network Sensor - Bundle 2 in 1 Configuration Login
+## [Site Manager & Network Sensor - Bundle 2 in 1 Configuration Login](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#site-manager--network-sensor---bundle-2-in-1-configuration-login)
 
-### 1. Login with the default username/password
+### [1. Login with the default username/password](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#1-login-with-the-default-usernamepassword)
 
 Steps:
 
@@ -27,7 +27,7 @@ Steps:
 
 Login with the default credentials
 
-### 2. Reset the password on the first login
+### [2. Reset the password on the first login](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#2-reset-the-password-on-the-first-login)
 
 After successfully logging in with the default username and password, it is necessary to reset the password. Steps:
 
@@ -37,11 +37,11 @@ After successfully logging in with the default username and password, it is nece
 
 Reset Password
 
-## Site Manager & Network Sensor - Bundle 2 in 1 Network Settings
+## [Site Manager & Network Sensor - Bundle 2 in 1 Network Settings](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#site-manager--network-sensor---bundle-2-in-1-network-settings)
 
 Overview Site Manager & Network Sensor - Bundle 2 in 1 Network Settings
 
-### 1. Checking Network Interface
+### [1. Checking Network Interface](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#1-checking-network-interface)
 
 During this step, our application will detect the Network Interface Cards (NICs) that are currently plugged into your computer. This allows our application to determine which NICs are available for use with our software.
 
@@ -57,9 +57,9 @@ Enable/Disable Network Interface
 
 Click on the **Save** button to save the changes.
 
-### 2. Select NIC using for Enterprise Connectivity and scanning
+### [2. Select NIC using for Enterprise Connectivity and scanning](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#2-select-nic-using-for-enterprise-connectivity-and-scanning)
 
-#### **2.1. Select NIC using for Enterprise connectivity**
+#### [**2.1. Select NIC using for Enterprise connectivity**](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#21-select-nic-using-for-enterprise-connectivity)
 
 The purpose of this is to select a specific NIC for connecting between the Site Manager & Network Sensor - Bundle 2 in 1 and the Enterprise.
 
@@ -69,7 +69,7 @@ This list displays all the NICs we enabled earlier, and we only need to select o
 
 Select NIC using for Enterprise Connectivity
 
-#### **2.2. Select NIC using for scanning**
+#### [**2.2. Select NIC using for scanning**](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#22-select-nic-using-for-scanning)
 
 You can set up discovery settings for each NIC by selecting either "**Passive discovery**" or "**Smart active discovery**". The system will do the scanning based on the network configuration for NICs that you set up (for both active and passive scanning). Particularly:
 
@@ -81,7 +81,7 @@ Select NIC for Passive Discovery
 
 Select NIC for Active Discovery
 
-### 3. Select NIC using for External Sensor Connectivity
+### [3. Select NIC using for External Sensor Connectivity](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#3-select-nic-using-for-external-sensor-connectivity)
 
 The purpose of this is to select a specific NIC for connecting between the Site Manager & Network Sensor - Bundle 2 in 1 and the Sensor.
 
@@ -91,7 +91,7 @@ This list displays all the NICs we enabled earlier, and we only need to select o
 
 Select NIC using for Sensor Connectivity
 
-### 4. Select NIC using for Patch Management
+### [4. Select NIC using for Patch Management](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#4-select-nic-using-for-patch-management)
 
 This aims to select a specific NIC for Integrated patching capabilities for firmware from Siemens vendor to streamline updates and manage vulnerabilities.
 
@@ -99,7 +99,7 @@ Click “**Select a NIC**” under “**Using for Patch Management**” to choos
 
 Select NIC using for Patch Management
 
-### 5. Configure Network Interfaces
+### [5. Configure Network Interfaces](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#5-configure-network-interfaces)
 
 In this step, you can access and configure a list of available network interfaces (NICs). To configure a NIC, click on the “**Edit**” button to access the configuration options of the NIC selected in the previous step.
 
@@ -121,13 +121,13 @@ Finally, save your configuration, simply click on the **Save** button located at
 
 Click on the **Save** button to save the configuration
 
-## Network Connectivity - Site Manager & Network Sensor - Bundle 2 in 1 and Enterprise Manager/NetworkSensor communication
+## [Network Connectivity - Site Manager & Network Sensor - Bundle 2 in 1 and Enterprise Manager/NetworkSensor communication](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#network-connectivity---site-manager--network-sensor---bundle-2-in-1-and-enterprise-managernetworksensor-communication)
 
 Based on your organization's security rules, it's important to select the appropriate communication method for MetaDefender OT Security when setting up connectivity between the Site Manager & Network Sensor - Bundle 2 in 1 and the Enterprise Manager or Network Sensors.
 
 *Note: Make sure to select the matching communication model between all components involved: Site Manager & Network Sensor - Bundle 2 in 1, Enterprise Manager, and Network Sensors. This ensures consistent and reliable communication across the system.
 
-### 1. Site Manager & Network Sensor - Bundle 2 in 1 and Network Sensor communication
+### [1. Site Manager & Network Sensor - Bundle 2 in 1 and Network Sensor communication](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#1-site-manager--network-sensor---bundle-2-in-1-and-network-sensor-communication)
 
 - **Model #1. Bi-directional (from Sensor to Site and vice versa)**
 
@@ -137,7 +137,7 @@ Two-way (inbound + outbound) communications between components
 
 One-way (outbound) communication to the upper component.
 
-### 2. Site Manager & Network Sensor - Bundle 2 in 1 and Enterprise Manager communication
+### [2. Site Manager & Network Sensor - Bundle 2 in 1 and Enterprise Manager communication](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#2-site-manager--network-sensor---bundle-2-in-1-and-enterprise-manager-communication)
 
 - **Model #1. Bi-directional (from Site to Enterprise and vice versa)**
 
@@ -153,11 +153,11 @@ When selecting this communication method, you'll need to:
 2. **Input the Current Site Name**: Provide the name of the site that corresponds to the Site Manager & Network Sensor - Bundle 2 in 1.
 3. **Save and Establish Connection**: Once you've entered the required information, click on **Save and Establish Connection**. This action will save the configuration and add the Site Manager & Network Sensor - Bundle 2 in 1 to the Enterprise Manager system.
 
-## Time Settings
+## [Time Settings](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#time-settings)
 
 Configuring the system time can be done using two methods: manual time setting and synchronizing time via an NTP (Network Time Protocol) server. You can choose the most suitable option based on your system’s requirements.
 
-### **1. Manual Time Setting**
+### [**1. Manual Time Setting**](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#1-manual-time-setting)
 
 In this method, users can manually set the system's time and select the appropriate timezone.
 
@@ -187,7 +187,7 @@ In the **Date** and **Time** fields, manually input the current date and time.
 
 **Verify the Changes**: Ensure that the system reflects the correct date, time, and timezone on the interface.
 
-### **2. NTP Servers**
+### [**2. NTP Servers**](/docs/md-ot-security/v.3.4.0/configuration/initial-configuration-for-mdots-site-bundle-on-local-application#2-ntp-servers)
 
 NTP (Network Time Protocol) is a protocol designed to synchronize the clocks of networked devices to a global standard time, usually via online servers. This method ensures that the system time is accurate and automatically updated.
 

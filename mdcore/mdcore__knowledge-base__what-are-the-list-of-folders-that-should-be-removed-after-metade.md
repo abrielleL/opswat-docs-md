@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/what-are-the-list-of-folders-that-should-be-removed-after-metade -->
 
-Too many requests
-# You're going a little too fast.
+# What are the List of folders that should be removed after MetaDefender Core uninstallation on Windows?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core V4 and V5 releases deployed on Windows systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Please find below the list of folders that should be removed after performing a clean uninstallation of MetaDefender Core on Windows:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+HtmlCopyC:\Program Files\OPSWAT\MetaDefender Core
+C:\Windows\Temp\ometascan
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhat-are-the-list-of-folders-that-should-be-removed-after-metade%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If you have set a custom `tempdirectory` in Registry, please also try to remove that folder as well.
+
+Support:
+
+If **Further Assistance** is required, please proceed to [**create a support case or chat with our support engineer**](https://my.opswat.com/support).

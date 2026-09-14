@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdemail/knowledge-base/how-is-password-data-from-password-protected-attachments-process -->
 
-Too many requests
-# You're going a little too fast.
+# How is password data from password-protected attachments processed by MetaDefender Email Gateway Security?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Email Gateway Security V4 and V5 releases deployed on Windows Systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The passwords for password-protected email attachments are sent to MetaDefender Core via a header, so provided the connection between MetaDefender Email Gateway Security and MetaDefender Core is secured with HTTPS, this should be sufficient.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+These passwords are only temporarily stored in memory by MetaDefender Email Gateway Security.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Fknowledge-base%2Fhow-is-password-data-from-password-protected-attachments-process%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+These passwords are never stored permanently, in any folder or in any database on the MetaDefender Email Gateway Security or MetaDefender Core side.
+
+Once the email process workflow is completed, which is usually within a few seconds, the password is permanently deleted from memory.
+
+Support:
+
+For further queries, concerns or issues regarding **How MetaDefender Email Gateway Security Processes Password Protected Attachments**, please open a [Support Case](https://www.opswat.com/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go.opswat.com/OPSWATCommunity/s/).

@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/mdcore/v5.21.0/utilities-engines/yara-engine -->
 
-Too many requests
-# You're going a little too fast.
+# YARA Engine
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [Rule sources](/docs/mdcore/v5.21.0/utilities-engines/yara-engine#rule-sources)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Under **Inventory/Modules** menu it is possible to configure custom **YARA sources.**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To add new source, click on **Add new source** button. You can specify the type of the source, and the URL itself. The product supports 2 types of YARA sources: local directory and network source (HTTP/HTTPS). A network source must be a zip file. The content of the zip file will be used by the YARA engine. As a local directory, you can set a local path on the computer. This path must point to a directory. A copy of this directory will be used by the YARA engine.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fv5.21.0%2Futilities-engines%2Fyara-engine%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To generate a package, click on the **Generate package** button. This will start the process, and the start time will be shown next to the buttons. Next to the sources, you can enable or disable the sources. Disabled sources will not be used when generating the next package.
+
+Sources can be modified by clicking the row and removed by clicking the trash icon on the right side of the rows.
+
+Please note that the included YARA modules are the following:
+
+- [Magic](https://yara.readthedocs.io/en/v3.8.1/modules/magic.html)
+- [Hash](https://yara.readthedocs.io/en/v3.8.1/modules/hash.html)
+- [Dotnet](https://yara.readthedocs.io/en/v3.8.1/modules/dotnet.html)
+- Macho
+- Dex
+- [Cuckoo](https://yara.readthedocs.io/en/v3.8.1/modules/cuckoo.html)
+- [Androguard](https://docs.koodous.com/yara/androguard/)
+
+For more details, check [YARA modules documentation](https://yara.readthedocs.io/en/v3.8.1/modules.html).

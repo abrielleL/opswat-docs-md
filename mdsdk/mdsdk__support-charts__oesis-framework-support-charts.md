@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/support-charts/oesis-framework-support-charts -->
 
-Too many requests
-# You're going a little too fast.
+# OESIS Framework Support Charts
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+These are the OESIS Framework SDK API Support Charts, updated weekly:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Fsupport-charts%2Foesis-framework-support-charts%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- [Windows Support Chart](https://www.opswat.com/products/oesis-framework/support-charts?platform=windows)
+- [macOS Support Chart](https://www.opswat.com/products/oesis-framework/support-charts?platform=mac)
+- [Linux Support Chart](https://www.opswat.com/products/oesis-framework/support-charts?platform=linux)

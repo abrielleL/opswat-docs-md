@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/what-does--potentially-vulnerable-file--result-mean- -->
 
-Too many requests
-# You're going a little too fast.
+# What does "Potentially Vulnerable File" result mean?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core V4 and V5 releases deployed on Windows or Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Potentially Vulnerable File**s are files associated with vulnerable components or applications identified by OPSWAT’s File-Based Vulnerability Assessment technology.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Pro Tip:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhat-does--potentially-vulnerable-file--result-mean-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Our File-Based Vulnerability Assessment technology allows IT administrators to:
+
+- Check certain types of software for known vulnerabilities before installation
+- Scan systems for known vulnerabilities when devices are at rest
+- Quickly examine running applications and their loaded libraries for vulnerabilities.
+
+This technology correlates vulnerabilities to software components, product installers, firmware packages, and many other types of binary files, which are collected from a vast community of users and enterprise customers. To learn more, [Read This](https://www.opswat.com/technologies/vulnerability-assessment).
+
+Support:
+
+If you require assistance regarding **Potentially Vulnerable File** results or our **File-Based Vulnerability Assessment** technology, please follow these instructions on [How to Create Support Package With Bundle Tools?](/docs/mdcore/troubleshooting/how-to-create-support-package-), before [creating a support case or chatting with our support engineer](https://my.opswat.com/portal/support).

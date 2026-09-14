@@ -2,9 +2,9 @@
 
 # How do I use the My OPSWAT Central Management Testing Harness?
 
-> **Check Your Product:**
+> **Check Your Product**
 >
-> This article applies to the current My OPSWAT Central Management oAuth Portal and MetaAccess API.
+> This article applies to the current My OPSWAT Central Management oAuth Portal and My OPSWAT Central Management API.
 
 The **My OPSWAT Central Management** **API Testing Harness** is accessible via the My OPSWAT Central Management oAuth Portal,
 
@@ -16,4 +16,4 @@ The **My OPSWAT Central Management** **API Testing Harness** is accessible via t
 
 > **Support:**
 >
-> If you have further queries, concerns or issues regarding **How do I use the** **My OPSWAT Central Management** **API Testing Harness,** please open a [Support Case](https://my.opswat.com/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+> If you have further queries, concerns or issues regarding **How do I use the** **My OPSWAT Central Management** **API Testing Harness,** please open a [Support Case](https://my.opswat.com/support) with the OPSWAT team via phone, online chat or form.

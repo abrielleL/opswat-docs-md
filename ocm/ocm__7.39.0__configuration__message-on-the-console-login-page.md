@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/configuration/message-on-the-console-login-page -->
 
-Too many requests
-# You're going a little too fast.
+# Message on the console login page
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+From the version 7.22, administrators can now add a custom message to the login page of the management console like the image below.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Here are the steps to add a custom message to the login page:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1/ Locate the **gears-onpremise_definition.properties** file in the configuration folder.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fconfiguration%2Fmessage-on-the-console-login-page%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Windows: <System Drive>\ProgramData\OPSWAT\Central\gears-onpremise_definition.properties
+- RedHat/Ubuntu: /etc/opt/ocm/gears-onpremise_definition.properties
+
+2/ Add or modify the **disclaimer.message** variable.
+
+#Other settings here
+disclaimer.message=This is a custom message.
+
+3/ Restart OPSWAT Central Management for the change to take effect.
+
+Warning
+
+If the disclaimer message contains special characters that require Unicode format (such as non-Roman characters), these characters must be converted to the UTF-16.
+
+For example, the value of disclaimer.message to show this message *こんにちは"* should be
+
+**disclaimer.message=\u3053\u3093\u306b\u3061\u306f**

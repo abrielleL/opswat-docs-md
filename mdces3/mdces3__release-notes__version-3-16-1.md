@@ -12,15 +12,15 @@ Summarize Page
 
 This solution is powered by OPSWAT’s Metascan™ Multiscanning, adding more AV (antivirus) engines, and Deep CDR™ (Content Disarm & Reconstruction) against file-based threats. With multi-layered, proactive protection, email security goes beyond signature-based detection with advanced technologies against evolving threats. Designed for seamless integration, the solution deploys rapidly without disrupting mail flow.
 
-## Improvements & Fixes
+## [Improvements & Fixes](/docs/mdces3/release-notes/version-3-16-1#improvements--fixes)
 
-### Email Protection & Policy Enforcement
+### [Email Protection & Policy Enforcement](/docs/mdces3/release-notes/version-3-16-1#email-protection--policy-enforcement)
 
 - Fixed an issue where policies were not correctly applied to group recipients, ensuring the intended policies are enforced consistently.
 - Improved OTP validation to support secondary domains and email aliases.
 - Resolved issues with certain attachment types incorrectly failing analysis.
 
-### Reporting & Dashboard
+### [Reporting & Dashboard](/docs/mdces3/release-notes/version-3-16-1#reporting--dashboard)
 
 - Fixed discrepancies between Dashboard metrics and report data for prevented threats and event counts.
 - Improved accuracy of Dashboard event counters for released and quarantined messages.
@@ -28,12 +28,12 @@ This solution is powered by OPSWAT’s Metascan™ Multiscanning, adding more AV
 - Improved report filtering and field availability in Quarantine Reports.
 - Enhanced date handling in Quarantine Reports.
 
-### Search & Event Visibility
+### [Search & Event Visibility](/docs/mdces3/release-notes/version-3-16-1#search--event-visibility)
 
 - Improved email search reliability when From: header information differs from the SMTP envelope sender.
 - Improved audit trail completeness for message rescans and related events.
 
-### SIEM / SOAR Enhancements
+### [SIEM / SOAR Enhancements](/docs/mdces3/release-notes/version-3-16-1#siem--soar-enhancements)
 
 - Improved SIEM/SOAR configuration experience with clearer guidance and safer handling of sensitive fields.
 - Expanded SIEM/SOAR event coverage to include:
@@ -42,6 +42,6 @@ This solution is powered by OPSWAT’s Metascan™ Multiscanning, adding more AV
   - Login and logout events (successful and failed)
 - Added configurable filtering to control which events are sent to SIEM/SOAR platforms.
 
-### Operational & Platform Improvements
+### [Operational & Platform Improvements](/docs/mdces3/release-notes/version-3-16-1#operational--platform-improvements)
 
 - General performance, reliability, and maintainability improvements across the platform.

@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/how-can-i-create-a-new-workflow- -->
 
-Too many requests
-# You're going a little too fast.
+# How can I create a new workflow?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Kiosk releases **after version 4.7.0**, deployed on both Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Our MetaDefender Kiosk product has some built-in workflows for Employees and Guests after a fresh install, but new workflows can be created by following the steps mentioned below:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Navigate to the workflows tab and select the desired option (Employees or Guests).
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fhow-can-i-create-a-new-workflow-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+2. Enter the Name for the workflow and description. At this stage, you can also select the users that will be a part of this workflow.
+
+3. Navigate through all the highlighted tabs and configure the user questions, allowed media types, processing flow, file handling after scan, printing, reporting and logging as well as MFT retrieval. Once all settings are configured, click the Save button. The workflow will then be created and visible in the console.
+
+4. Workflows can be enabled/disabled or reordered at any time from the Workflows section.
+
+Support:
+
+If **Further Assistance** is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

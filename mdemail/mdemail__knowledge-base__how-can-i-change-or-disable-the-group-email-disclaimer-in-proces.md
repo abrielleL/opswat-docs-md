@@ -1,12 +1,33 @@
 <!-- source: https://www.opswat.com/docs/mdemail/knowledge-base/how-can-i-change-or-disable-the-group-email-disclaimer-in-proces -->
 
-Too many requests
-# You're going a little too fast.
+# How Can I Change or Disable the Group Email Disclaimer in Processed Emails?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+After an email has been scanned and sanitized, a blue bar with an information icon appears, displaying the message: "Your email has been processed and modified." You want to change the displayed text or disable this notification.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Cause**: The blue bar with the message is called the Group Email Disclaimer, which is a default feature ensuring that disclaimers about email processing actions remain short yet informative.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Steps to Disable the Group Email Disclaimer:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Fknowledge-base%2Fhow-can-i-change-or-disable-the-group-email-disclaimer-in-proces%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Log in to the EGS Console.
+2. Navigate to Security Rule.
+3. Select the rule you want to edit.
+4. Go to Advanced Settings.
+5. Locate Group Disclaimer Setting.
+6. Toggle off Group Disclaimer.
+7. Click Save to apply the changes.
+
+Steps to Change the Displayed Text on the Group Disclaimer:
+
+1. Modify the XSLT files used by the product.
+2. The default file location is:
+
+- C:\Program Files\OPSWAT\MetaDefender Email Security\mailagenthost\xslt\style_group.xsl
+
+3. Open the file using Notepad or another text editor.
+4. Edit the disclaimer text within the file.
+5. Save the file and restart the service.
+6. View the provided screenshot for further details.
+
+Support:
+
+If Further Assistance is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

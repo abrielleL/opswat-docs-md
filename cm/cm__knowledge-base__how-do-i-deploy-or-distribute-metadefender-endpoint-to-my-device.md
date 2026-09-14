@@ -11,7 +11,7 @@ This article will cover the most common methods, including:
 
 Other common methods include:
 
-- Adding Client directly to your Golden Image for new systems. For instructions on how to create a Golden Image containing the MetaDefender Endpoint, please [Read This](https://www.opswat.com/docs/cm/kb/can-opswat-client-be-distributed-using-a-golden-image--cloned-vm).
+- Adding Client directly to your Golden Image for new systems. For instructions on how to create a Golden Image containing the MetaDefender Endpoint, refer to [Can MetaDefender Endpoint be distributed using a golden image, cloned VMs or AMIs?](https://www.opswat.com/docs/cm/knowledge-base/can-metadefender-endpoint-be-distributed-using-a-golden-image--c)
 - Distributing MetaDefender Endpoint with your software deployment/distribution tool.
 
 ## Installing MetaDefender Endpoint directly
@@ -44,7 +44,7 @@ Other common methods include:
 5. Log into Active Directory’s **Group Policy Management Console**.
 6. From the GPMC, create a **GPO** with appropriate scope, then link it to an **OU**.
 7. Create your software installation for **Computer Configuration** and/or **User Configuration**, providing the full **UNC path** to the MetaDefender Endpoint package file.
-8. Enable and deploy the policy via Active Directory. For further instructions, please [Read This](https://www.opswat.com/docs/cm/kb/can-i-use-active-directory-to-distribute--enforce-or-audit-opswa).
+8. Enable and deploy the policy via Active Directory. For further instructions, please refer to [How can I synchronize devices from Active Directory to My OPSWAT Central Management account?](https://www.opswat.com/docs/cm/knowledge-base/how-can-i-synchronize-devices-from-active-directory-to-my-opswat)
 
 > **Expand:**
 >

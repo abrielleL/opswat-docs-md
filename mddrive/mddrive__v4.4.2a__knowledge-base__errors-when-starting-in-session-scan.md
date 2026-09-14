@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/knowledge-base/errors-when-starting-in-session-scan -->
 
-Too many requests
-# You're going a little too fast.
+# Errors when starting In-Session Scan
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [Overview:](/docs/mddrive/v4.4.2a/knowledge-base/errors-when-starting-in-session-scan#overview)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+On a new or newly upgrade MetaDefender Drive, when running **MetaDefender Drive In-Session Scan,** there is no engines available with 3 errors
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+#### [Solutions:](/docs/mddrive/v4.4.2a/knowledge-base/errors-when-starting-in-session-scan#solutions)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fknowledge-base%2Ferrors-when-starting-in-session-scan%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The reason of this is because there is no engines for it to run. To solve it, please use update engines and definitions by following guidance for [Drive](https://www.opswat.com/docs/mddrive/getting-started/boot-from-metadefender-drive#engines) and [Drive Toolkit](https://www.opswat.com/docs/mddrive/maintenance/update-engines).

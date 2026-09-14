@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/mdicap/v5.14.1/installation/uninstall -->
 
-Too many requests
-# You're going a little too fast.
+# Uninstall
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [CentOS](/docs/mdicap/v5.14.1/installation/uninstall#centos)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+BashCopysudo yum remove mdicapsrv
+## [Debian](/docs/mdicap/v5.14.1/installation/uninstall#debian)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+BashCopysudo apt remove mdicapsrv
+## [Windows](/docs/mdicap/v5.14.1/installation/uninstall#windows)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdicap%2Fv5.14.1%2Finstallation%2Funinstall%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+uninstall the MD ICAP Server application
+
+## [Delete below folders if exist after uninstall](/docs/mdicap/v5.14.1/installation/uninstall#delete-below-folders-if-exist-after-uninstall)
+
+- - Linux:
+
+    - /var/lib/mdicapsrv/pg_data
+    - /usr/lib/mdicapsrv/postgres
+    - /usr/lib/mdicapsrv/postgres-old
+  - Windows:
+
+    - C:\Program Files\OPSWAT\Metadefender ICAP Server\data\pg_data
+    - C:\Program Files\OPSWAT\Metadefender ICAP Server\postgres
+    - C:\Program Files\OPSWAT\Metadefender ICAP Server\postgres-old

@@ -27,10 +27,14 @@ The available settings in the **Scan Settings** window are:
 
 Baseline Hash Valid Period (in days)
 
-This value only allow 3 days on the MetaDefender Drive 64 GB.
+- This value only allow 3 days on the MetaDefender Drive 64 GB.
+- Baseline hashes are not backed up when upgrading or re-flashing
 
-Note
+For more details about how to use **Differential Scan**, please refer to [Speeding Up Scans with Differential Scan](/docs/mddrive/knowledge-base/speeding-up-scans-with-differential-scan)
 
-Baseline hashes are not backed up when upgrading or reflashing.
+- **Enable Operator Skip Files**
 
-For more details about how to use Differential Scan, please refer to [Speeding Up Scans with Differential Scan](/docs/mddrive/knowledge-base/speeding-up-scans-with-differential-scan)
+  - **Disabled** [unchecked]: Operator **WILL NOT** be able to skip files during scan
+  - **Enabled** [checked]: Operator **WILL** be able to skip files during scan
+
+For more details about how to make use of option **Skip Files**, please refer to [Configure MetaDefender Drive and Perform Pre-Boot Scans](/docs/mddrive/process/processing-your-device-with-metadefender-drive)

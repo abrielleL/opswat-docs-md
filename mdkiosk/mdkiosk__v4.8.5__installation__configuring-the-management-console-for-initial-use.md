@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/installation/configuring-the-management-console-for-initial-use -->
 
-Too many requests
-# You're going a little too fast.
+# Configuring the Management Console for initial use
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The Management Console can be accessed by navigating to `http://localhost:8009`
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+An administrator user must be created to log into the Management Console after installing Kiosk for the first time. When navigating to the Management Console a configuration wizard will be presented:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Follow the directions to accept the EULA, create an administrator user and activate the product license. After successful completion, the newly created user will be logged in.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Finstallation%2Fconfiguring-the-management-console-for-initial-use%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Each time the Management Console is accessed, the login screen will be displayed.
+
+On **Kiosk version 4.7.2 or newer**, Administrators can configure Kiosk directly from the Kiosk UI without exiting the application.
+
+To access the Kiosk WebMC directly from the Kiosk UI, click on the gear icon on the top right corner of the screen. An interface will be shown allow Administrators to configure Kiosk and Core.
+
+*Embedded Kiosk WebMC on Kiosk UI*
+
+Info
+
+Embedded Kiosk and Core WebMC on Kiosk UI is only available on Kiosk version 4.7.2 or newer

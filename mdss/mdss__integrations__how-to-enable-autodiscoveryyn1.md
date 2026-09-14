@@ -1,12 +1,56 @@
 <!-- source: https://www.opswat.com/docs/mdss/integrations/how-to-enable-autodiscoveryyn1 -->
 
-Too many requests
-# You're going a little too fast.
+# How to Enable Autodiscovery
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [This guide provides step-by-step instructions for enabling Autodiscovery for Google Cloud storage in MetaDefender Storage Security.](/docs/mdss/integrations/how-to-enable-autodiscoveryyn1#this-guide-provides-step-by-step-instructions-for-enabling-autodiscovery-for-google-cloud-storage-in-metadefender-storage-security)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Autodiscovery automatically detects and adds GCP buckets as storage units, saving time and reducing configuration errors.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Prerequisites](/docs/mdss/integrations/how-to-enable-autodiscoveryyn1#prerequisites)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fintegrations%2Fhow-to-enable-autodiscoveryyn1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Before enabling Autodiscovery, ensure you have:
+
+1. Valid GCP credentials file with sufficient permissions
+2. Permissions as stated in [Add a Google Cloud Storage](/docs/mdss/integrations/add-a-google-cloud-storage)
+
+#### [Method 1: Enable Autodiscovery During Storage Unit Addition](/docs/mdss/integrations/how-to-enable-autodiscoveryyn1#method-1-enable-autodiscovery-during-storage-unit-addition)
+
+- Navigate to **Storage Units** page
+- Click **Add Storage Unit** button
+- Select **Google Cloud** Storage Type
+- Select **Storage Discovery** and click **Continue**
+
+- Fill out the form with valid GCP credentials and click **Continue**
+
+- In the next step, select your integration method. You have two choices: Autodiscovery and Manual Selection.
+
+  - **Autodiscovery** for convenience, this option automatically adds all the buckets MDSS finds
+  - **Manual Selection** for precise control, this option lets users choose specific buckets from the discovered list to integrate.
+
+To learn more about each integration type, please consult the [Autodiscovery](/docs/mdss/operations/autodiscovery) documentation.
+
+NO BUCKETS FOUND
+
+If there were no buckets found, you will be presented with a third option - **Add Individually** - which will reveal the credentials form to manually add the storage by using the bucket name.
+
+- If selecting **Autodiscovery** option:
+
+  - Click **Continue** and an informative message will be displayed that the autodiscovery process has started in the background. You can safely close the modal and the storages will be added in background to the Storage Units page
+
+- If selecting **Manual Selection** option:
+
+  - Click **Continue**
+  - Select the buckets you want to add from the discovered list
+  - Click **Continue**
+
+ERROR ADDING A STORAGE THAT WAS SELECTED DURING MANUAL SELECTION
+
+In case there was an error while trying to add your storage, you will see the error message in the Storage card while hovering over the (i) icon.
+
+#### [Method 2: Enable Autodiscovery for an Existing Account](/docs/mdss/integrations/how-to-enable-autodiscoveryyn1#method-2-enable-autodiscovery-for-an-existing-account)
+
+- Navigate to **Storage Units** page
+- Identify a storage that's using the account you want to start autodiscovery for
+- Click on the 3-dots button from the storage's card and select **Manage Storage Unit**
+- From the top toggle, select **Change account info**
+- Turn on autodiscovery by toggling the **Enable storage autodiscovery** switch

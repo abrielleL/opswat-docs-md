@@ -17,9 +17,9 @@ Supply chain violation policies are added manually by the user.
 
 Note: The blocklist policy can be detected even user didn’t turn on Anomaly Detection.
 
-## Actions on Supply Chain Violation policies
+## [Actions on Supply Chain Violation policies](/docs/md-ot-security/v.2.2.6/operating/supply-chain-violation#actions-on-supply-chain-violation-policies)
 
-## 1. View policy
+## [1. View policy](/docs/md-ot-security/v.2.2.6/operating/supply-chain-violation#1-view-policy)
 
 **Supply Chain** page is paginated, each page contains *20 records*, the total number of policy records is displayed at the bottom of the list.
 
@@ -28,7 +28,7 @@ Policies are displayed in a list; each record contains the following information
 - *Asset*: asset type/subtype or vendor.
 - *COO:* country of origin of NICs.
 
-## 2. Create a new policy
+## [2. Create a new policy](/docs/md-ot-security/v.2.2.6/operating/supply-chain-violation#2-create-a-new-policy)
 
 You can create a new policy by tapping on button “+” on the top right of the Policy screen, a policy creation pop-up will appear.
 
@@ -41,7 +41,7 @@ You can create a new policy by tapping on button “+” on the top right of the
 
 Note: Create duplicate policy is not allowed.
 
-## 3. Edit policy
+## [3. Edit policy](/docs/md-ot-security/v.2.2.6/operating/supply-chain-violation#3-edit-policy)
 
 You can edit a policy by tapping on “Edit” button on the right of each policy record, a policy editing pop-up will appear.
 
@@ -51,7 +51,7 @@ Note: Field IP, MAC and Source of rule are non-editable.
 
 When finished editing, click “Save” to save the changes or “Cancel” to discard all.
 
-## 4. Search policy
+## [4. Search policy](/docs/md-ot-security/v.2.2.6/operating/supply-chain-violation#4-search-policy)
 
 Searching feature for policy list is located at the top of the policy page.
 
@@ -59,6 +59,6 @@ You can search on one or more fields of the policy, just input value onto one or
 
 Click the “Clear” button to clear the values in the filters.
 
-## 5. Remove policy
+## [5. Remove policy](/docs/md-ot-security/v.2.2.6/operating/supply-chain-violation#5-remove-policy)
 
 You can remove a policy from the list by clicking the "Delete" button on each the policy record.

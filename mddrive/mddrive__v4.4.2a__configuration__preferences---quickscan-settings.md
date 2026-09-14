@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/configuration/preferences---quickscan-settings -->
 
-Too many requests
-# You're going a little too fast.
+# Settings → Quick Scan
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+In addition to the general **Scan Settings**, MetaDefender Drive enables you to adjust the settings specific to **Quick Scan**.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Go to Settings → Preferences → Quick Scan, and click Edit Settings:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Quick Scan settings in the Settings menu
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fconfiguration%2Fpreferences---quickscan-settings%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+2. From the Quick Scan Settings menu, you can select the filesystem paths to be included the next time you start a Quick Scan, such as /program, /users__, /system, or all of the available paths.
+
+By default, only the */system* path is included in the **Quick Scan** since it contains the most important files and folders of a Windows system, and it is targeted the most by attackers.
+
+Selecting Quick Scan paths
+
+Important Note
+
+The estimated time for a Windows laptop with SSD storage to scan an individual path is 30 minutes or less. A scan of all of the suggested paths would take approximately 1 hour and a half.
+
+..

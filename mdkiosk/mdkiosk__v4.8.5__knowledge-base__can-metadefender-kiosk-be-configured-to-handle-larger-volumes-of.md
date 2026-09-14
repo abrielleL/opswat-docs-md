@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/can-metadefender-kiosk-be-configured-to-handle-larger-volumes-of -->
 
-Too many requests
-# You're going a little too fast.
+# Can MetaDefender Kiosk be configured to handle large volumes of scans more quickly?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Kiosk V4 releases deployed on Windows or Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Yes, it can.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The performance and configuration of the associated MetaDefender Core instance can drastically limit the performance of your MetaDefender Kiosk solution.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fcan-metadefender-kiosk-be-configured-to-handle-larger-volumes-of%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Please Note:
+
+MetaDefender Core is greatly affected by its host hardware’s specifications.
+
+Standard Kiosk units are intended to be portable, convenient and easy to set up; as a result, these units are limited in size and airflow, making them more suitable for standard usage with medium traffic.
+
+Customers requiring high volume scans and faster performance should consider a distributed configuration where the MetaDefender Kiosk module is maintained on the Kiosk and the MetaDefender Core module is maintained on a powerful remote server.
+
+The diagram below illustrates the distributed configuration:
+
+Support:
+
+If you are having difficulty **Setting Up a Distributed Configuration for MetaDefender Kiosk**, please follow these instructions on [How To Create a Support Package](https://docs.opswat.com/mdkiosk/troubleshooting#creating-the-package), before [creating a support case or chatting with our support engineer](https://my.opswat.com/portal/support).

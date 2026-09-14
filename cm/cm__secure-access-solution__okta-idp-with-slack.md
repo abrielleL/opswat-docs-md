@@ -4,25 +4,18 @@
 
 My OPSWAT Central Management can be easily integrated with an existing Okta Slack integration to ensure that a device is compliant with the organization's security policy before it is granted access to Slack. This ensures that the device is not only authenticated by the IdP, but also tested for risks and vulnerabilities such as infections or unpatched versions of operating systems, BEFORE it access an organization's cloud services.
 
-o get started with implementing My OPSWAT Central Management integration to enforce device posture check before granting a device to access Salesforce with Okta Single Sign On (SSO) service, you need to have SSO set up between Okta and Salesforce. If you haven't already done so, please follow the instructiosn [here](http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Slack.html) to set it up.
+o get started with implementing My OPSWAT Central Management integration to enforce device posture check before granting a device to access Salesforce with Okta Single Sign On (SSO) service, you need to have SSO set up between Okta and Salesforce. If you haven't already done so, please follow the instruction [here](http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-for-Slack.html) to set it up.
 
-You can learn more details for each step here at [3.1.1. How to set it up?](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)
+You can learn more details for each step here at [Configuration.](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-integration-configuration)
 
-- [Step 1. Enable Access Control on your My OPSWAT Central Management account](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Slack.html#step-1-enable-access-control-on-your-metaaccess-account)
-- [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Slack.html#step-2-add-protected-applications-with-idp-method)
-- [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Slack.html#step-3-configure-access-rules)
-- [Step 4. Update Applications settings on Identity Provider](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Slack.html#step-4-update-applications-settings-on-identity-provider)
-- [Step 5. Configure SSO settings on applications](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Slack.html#step-5-configure-sso-settings-on-applications)
-- [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Slack.html#step-6-test-your-integration)
-
-## Step 1. Enable Access Control on your My OPSWAT Central Management account
+## Step 1. Enable Secure Access on your My OPSWAT Central Management account
 
 1. Login to the My OPSWAT Central Management console.
 2. Navigate to **Access Control** and then **Configurations**
-3. **Check on the box **"**Enable access control**"  and configure a port for the cross-domain API. Note that you must select a port which no applications on endpoints is running.
+3. Select "**Enable Secure Access**"  and configure a port for the cross-domain API. Note that you must select a port which no applications on endpoints is running.
 4. Click **SAVE**.
 
-![](https://uploads.developerhub.io/prod/97qW/s0kqlgbngner2xphzmnqdy6jczyzatng2agtstqcv5xq08lywi9qxk7lu7xfn747.png)
+![](https://uploads.developerhub.io/prod/97qW/3xcvx8db4yjszpg6r6rz3k7ayx4p42u38pcmurj3vrj94h1bg6hcf3rv1olrynz5.png)
 
 ## Step 2. Add protected applications with IdP Method
 
@@ -77,13 +70,13 @@ You can learn more details for each step here at [3.1.1. How to set it up?](http
       1. *Application*: application name, for example: Slack
       2. *Login URL*: application login URL which you have from Step 2.2
       3. *Logout URL*: application logout URL which you have from Step 2.3
-      4. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+      4. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications)
 
 ![](https://uploads.developerhub.io/prod/97qW/gi66soedvfesjc99l7usvuunswlne1jc4hpujic4hoqgcmxz0e8ljmjt4dkwrar7.png)
 
 4.  Click **SAVE**
 
-6. After saving your changes sucessfully, click the **Setup Instructions** button of the Slack application you have just added and then copy the **URL** MetaAccess generated there. This URL is used to replace Slack domain on Okta in Step 4.
+6. After saving your changes sucessfully, click the **Setup Instructions** button of the Slack application you have just added and then copy the **URL** My OPSWAT Central Management generated there. This URL is used to replace Slack domain on Okta in Step 4.
 
 ![](https://uploads.developerhub.io/prod/97qW/zls5vlljrv7eu4zzicjhoiwqij3uict33nf9rxo2kcpi5kjliy793m8lm9387xt6.png)
 
@@ -96,7 +89,7 @@ Note: you can add Slack application (step 2.5) when you add Okta IdP settings.
 3. With a new access rule, you need to specify how you would like to block/allow access a device from the application
    1. *Rule name*: a rule name, for example Block non-compliant devices
    2. *Action*: Block or Allow
-   3. Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+   3. Configure conditions to do the action. Details at [Configure Access Rules](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 4. Click **ADD RULE**
 
 ![](https://uploads.developerhub.io/prod/97qW/cqn38bvo4csmxug2c4tfir1ht6qr17u85urzy7wkjazp3yuk94g9aytu6my9zi2o.png)
@@ -134,10 +127,8 @@ Note: you can add Slack application (step 2.5) when you add Okta IdP settings.
 
 ## Step 6: Test your integration
 
-Follow guideline at [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Step_6__Test_your_integration.html) to test your integration to verify if it works as your expectation.
-
-**DONE! CONGRATULATIONS.**
+Follow guideline at [Test Your Integration](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration) to verify if it works as your expectation.
 
 **Known issues**
 
-- MetaAccess couldn't do on-going monitor if a user logs into Slack by Slack app
+- My OPSWAT Central Management couldn't do on-going monitor if a user logs into Slack by Slack app

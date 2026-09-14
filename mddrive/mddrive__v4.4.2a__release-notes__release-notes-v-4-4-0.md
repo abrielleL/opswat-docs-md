@@ -1,12 +1,10 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/release-notes/release-notes-v-4-4-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v4.4.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Frelease-notes%2Frelease-notes-v-4-4-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Dec 16, 2025** | This release includes new features and improvements |
+| **New Features** | - **OPSWAT AI-Predictive Threat Detection Added Across All Engine Tiers**: A new AI-predictive engine is now integrated into all MetaDefender Drive engine tiers, detecting and preventing malicious behavior before execution. License reactivation is required to enable this engine. Please follow the instruction <https://www.opswat.com/docs/mddrive/knowledge-base/reactivate-license> - **New Settings for Unsafe Device Determination Based on BIOS, Skipped Files, or Cancelled Scans:** Allows administrators to define unsafe conditions that determine whether a device is allowed to connect to critical systems in air-gapped environments. |
+| **Improvements** |  |
+|  | - Providing more comprehensive message with details on an error during scanning |

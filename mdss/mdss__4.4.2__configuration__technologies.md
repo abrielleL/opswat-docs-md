@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/technologies -->
 
-Too many requests
-# You're going a little too fast.
+# Technologies
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MDSS monitors the status of the following technologies from MetaDefender Core:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- Data Loss Prevention
+- Deep CDR
+- Sandbox
+- Metascan
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+These monitoring is done every 5 minutes to see what changes are done on MetaDefender Core for these technologies. A manual refresh is available as well to have this check done on demand
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Ftechnologies%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This is not available on MetaDefender Cloud
+
+Technology Status
+
+There are three statuses for the technologies:
+
+- **Enabled**
+
+  - A valid ApiKey was provided for the scan pool and the technology is **available** in the MetaDefender Core instance.
+- **Disabled**
+
+  - A valid ApiKey was provided for the scan pool and the technology is **unavailable** in the MetaDefender Core instance.
+  - This will prevent allowing to set up actions that are not available in the MetaDefender Core instance.
+- **Unknown**
+
+  - No ApiKey was provided for the scan pool. The status of the technology from MetaDefender Core instance is unknown.

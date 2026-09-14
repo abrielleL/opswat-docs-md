@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/installation/how-many-models-of-metadefender-kiosk-are-there- -->
 
-Too many requests
-# You're going a little too fast.
+# How many models of MetaDefender Kiosk are there?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Apart from our Kiosk software product, we can also deliver “Software + Hardware” packages.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Customers can choose between our K or L series of Kiosks. More information for each respective version can be found on our site.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+K series - <https://www.opswat.com/products/metadefender/kiosk/k-series>
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Finstallation%2Fhow-many-models-of-metadefender-kiosk-are-there-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+L series - <https://www.opswat.com/products/metadefender/kiosk/l-series>
+
+Mobile Kiosk - <https://www.opswat.com/products/metadefender/kiosk/mobile-kiosk>
+
+Brochure - <https://static.opswat.com/uploads/files/MetaDefender-Kiosk-Brochure-EN.pdf>
+
+For more information on the available version feel free to contact our sales team - <https://www.opswat.com/get-started>
+
+Support
+
+If **Further Assistance** is required, please proceed to log a [Support Ticket](https://www.opswat.com/support) with the OPSWAT team.

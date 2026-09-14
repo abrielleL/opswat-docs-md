@@ -1,12 +1,10 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/signing-in-with-windows -->
 
-Too many requests
-# You're going a little too fast.
+# Signing In with Windows
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+If MetaDefender® MFT is set up to use Active Directory with Integrated Windows Authentication, you can sign in quickly using your Windows account.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fsigning-in-with-windows%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- If your computer is joined to the Active Directory domain and you are already logged in with your domain account, simply click Sign In with Windows on the login page, no need to re-enter your credentials.
+- If you are not already authenticated, your browser may ask for a username and password. In this case, enter your Active Directory account details to continue.

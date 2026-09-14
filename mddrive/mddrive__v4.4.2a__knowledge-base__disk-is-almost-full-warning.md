@@ -1,12 +1,33 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/knowledge-base/disk-is-almost-full-warning -->
 
-Too many requests
-# You're going a little too fast.
+# "Disk Is Almost Full. Used: 100%" on the 64GB Thumb Drive
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Issue](/docs/mddrive/v4.4.2a/knowledge-base/disk-is-almost-full-warning#issue)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The notification bar shows the following message: *"Disk is almost full. Used: 100%"*
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+It has been reported that after showing this message, MetaDefender Drive takes longer than expected to perform a scan, and in some cases, it fails to boot.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fknowledge-base%2Fdisk-is-almost-full-warning%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Cause](/docs/mddrive/v4.4.2a/knowledge-base/disk-is-almost-full-warning#cause)
+
+After using MetaDefender Drive for long scans or with large archive files, the temporary working space of the drive becomes full. MetaDefender Drive can't function properly if the *temp* data isn't flushed.
+
+Error
+
+This issue has been reported for the OPSWAT MetaDefender Drive USB version, which has a working space of around 21 GB.
+
+## [Solution](/docs/mddrive/v4.4.2a/knowledge-base/disk-is-almost-full-warning#solution)
+
+You need to fix your MetaDefender Drive using MetaDefender Drive Toolkit. This will flash your Drive with its current or latest software version and keep your previous scan reports.
+
+Please follow the instructions to download and use the MetaDefender Drive Toolkit: <https://docs.opswat.com/mddrive/advanced-usages/drive-toolkit>.
+
+## [**To prevent the issue from happening in the future:**](/docs/mddrive/v4.4.2a/knowledge-base/disk-is-almost-full-warning#to-prevent-the-issue-from-happening-in-the-future)
+
+Since MetaDefender Drive USB has 21 GB available for the temporary working space, please plan your scans with less than 21GB of data per session.
+
+You can also adjust the [**Archive Handling**](https://docs.opswat.com/mddrive/configuration/preferences---archive-handling) and [**Scan Settings**](https://docs.opswat.com/mddrive/configuration/preferences---scan-settings) from **Preferences** ***→*** **Settings** to achieve optimal performance and reduce the chances of this issue happening:
+
+Adjust how MetaDefender Drive handles archive files
+
+Adjust the settings for max file sizes and timeouts

@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/configuration/change-user-password -->
 
-Too many requests
-# You're going a little too fast.
+# Change user password
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The current user can change the password by hovering on the right corner, User icon
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Changing password**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Important notes](/docs/mddownloader/configuration/change-user-password#important-notes)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Fconfiguration%2Fchange-user-password%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Warning
+
+As long as TLS is not configured for the Web Management Console, passwords are sent clear-text over the network. To set up TLS see [Configuring TLS](https://onlinehelp.opswat.com/icap/3.2_Configuring_TLS.html).

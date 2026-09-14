@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/mdcloud/knowledge-base/what-does--file-whitelisted-by-nist-mean--- -->
 
-Too many requests
-# You're going a little too fast.
+# What does the 'File allowlisted by NIST' message mean following a scan?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all active MetaDefender Cloud license holders - whether your product is paid for or issued for evaluation purposes.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Sometimes, after scanning a file through MetaDefender Cloud, your scan results may include a notification that the file has been **Allowlisted by NIST** (the National Institute of Standards and Technology).
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+This is because NIST’s hash database has been synced with Metadefender Cloud’s, enabling an extra *check by file hash* and serving as an extra line of defense.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcloud%2Fknowledge-base%2Fwhat-does--file-whitelisted-by-nist-mean---%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Should this situation arise, there is nothing to worry about, as it represents ideal feedback regarding your file.
+
+Please Note:
+
+Sometimes, a file may be allowlisted by NIST, but there are no scan results to show. This is because MetaDefender Cloud does not have the full file from NIST in its possession. Provided the file is available to you, you can then upload it to get the full scan report.
+
+Support:
+
+For any queries or concerns regarding **NIST Allowlisting And MetaDefender Cloud’s Check By File Hash Feature**, please open a [Support Case](https://my.opswat.com/portal/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).

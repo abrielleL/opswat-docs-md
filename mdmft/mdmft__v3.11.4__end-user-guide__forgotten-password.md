@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/forgotten-password -->
 
-Too many requests
-# You're going a little too fast.
+# Forgotten Passwords
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To reset a forgotten password:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Warning
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fforgotten-password%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Guests and third-party users, including AD and SSO users, will not be able to reset their passwords this way.
+
+1. Click "Forgot Password?" on the login page.
+
+2. Enter your username or email address and click "Submit."
+
+3. You will receive an email with a password reset link.
+4. Follow the link, enter your new password twice, and click "Submit."
+
+5. Sign in with your new password.

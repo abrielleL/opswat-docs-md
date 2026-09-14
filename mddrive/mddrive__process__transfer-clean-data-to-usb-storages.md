@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mddrive/process/transfer-clean-data-to-usb-storages -->
 
-Too many requests
-# You're going a little too fast.
+# Transfer Clean Data to External USB Storages
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+After a successful scan, MetaDefender Drive users can back up the clean data into an external USB drive. The file transfer can be performed from the scan report page.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Transferring Clean Files to External USB Storage](/docs/mddrive/process/transfer-clean-data-to-usb-storages#transferring-clean-files-to-external-usb-storage)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Open the **Clean Files** tab, and select the files you want to back up. Then, click the **Transfer Clean Files** button:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fprocess%2Ftransfer-clean-data-to-usb-storages%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Before you copy clean data to external USBs
+
+MetaDefender Drive only supports transferring data to unencrypted USB drives formatted in FAT, exFAT, NTFS, ext2, ext3, and ext4 filesystems.
+
+2. When prompted, insert the external USB drive into your target device:
+
+3. Choose the destination USB disk and the file path, then click Confirm:
+
+4. You can track the data transfer progress in the status bar at the bottom of the screen:
+
+5. After the transfer is completed, safely remove your external USB drive.
+
+Warning
+
+The file transfer will fail if the destination USB drive runs out of space while the transfer is in progress. To prevent any interruption, please ensure your external drive has enough storage space before initiating the transfer.
+
+Data transfer to an external USB drive failure prompt
+
+.

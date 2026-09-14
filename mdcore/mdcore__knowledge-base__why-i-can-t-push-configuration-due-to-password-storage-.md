@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-i-can-t-push-configuration-due-to-password-storage- -->
 
-Too many requests
-# You're going a little too fast.
+# Why I can't push configuration due to password storage?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to versions OCM 7.x, Core 5.11 and above on both Windows and Linux platforms.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Introduction**:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+This knowledge base article provides details regarding Core Versions in OCM
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-i-can-t-push-configuration-due-to-password-storage-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Details:
+
+If you have older versions of MD Core connected to OCM that do not have the Password Storage feature and you upgrade to a version that has the feature, you must remove the Core from OCM and re-add the core for the settings to take effect. Otherwise, you will receive the following error when you try to push the set settings:
+
+""err": "Invalid item for type: rule", "err_details": {"errors": [{"error":"Contains none-existing item","key":"archive.archive_ handling.password_storage.storage","value":[1737987671157]}], "name": "Email Policy - Default"}"
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/portal/support).

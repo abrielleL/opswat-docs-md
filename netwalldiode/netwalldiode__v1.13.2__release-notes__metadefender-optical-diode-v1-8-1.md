@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-8-1 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.8.1
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | Config: 1.8.1; OD-102: 1.0.2 |
+| --- | --- |
+| **Release date** | Mar 2025 |
+| **Scope** | Bugfixing |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-8-1#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+|  | Details |
+| --- | --- |
+|  |  |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Frelease-notes%2Fmetadefender-optical-diode-v1-8-1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Bug fixes](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-8-1#bug-fixes)
+
+|  | Details |
+| --- | --- |
+| **Bugfixing** | Addresses issue whereby red-side NetWall client locks when connecting to a Windows File Share in a High Availability configuration. |
+
+## [Known limitations](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-8-1#known-limitations)
+
+N/A
+
+MetaDefender

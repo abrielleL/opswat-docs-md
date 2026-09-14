@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-does-metadefender-core-not-quarantine-the-same-malicious-fil -->
 
-Too many requests
-# You're going a little too fast.
+# Why does MetaDefender Core not quarantine the same malicious file twice?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Behavior:**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+When scanning a known malicious file on MetaDefender Core, and quarantine blocked file is enabled, the first instance is quarantined successfully.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-does-metadefender-core-not-quarantine-the-same-malicious-fil%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+However, when scanning the same known blocked file again, the second instance is not quarantined because the original instance is already present in the MetaDefender Core quarantine.
+
+**Explanation:**
+
+Before adding a file to the quarantine, a hash lookup is performed to avoid adding duplicate files. Thus, if a file with the same hash already exists in the quarantine, it won't be added again.
+
+Note:
+
+This only works if **hash calculation** is enabled in the workflow. If hash calculation is disabled, the same duplicate file will be added to quarantine again, since the hash is unknown and cannot be compared.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chat with our support engineer](https://my.opswat.com/support).

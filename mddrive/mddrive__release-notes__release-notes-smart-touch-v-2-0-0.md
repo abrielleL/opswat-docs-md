@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-smart-touch-v-2-0-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive Smart Touch v2.0.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-notes-smart-touch-v-2-0-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Jul 2, 2026** | This release includes new features and new user experiences |
+| **New Features** | - **Enroll CM from Smart Touch** Enroll MetaDefender Drive in Central Management directly from Smart Touch, without having to boot the Drive on a PC. Once connected, enrollment is reflected across Smart Touch, Drive, and DTK, and settings and reports begin syncing with cloud or on-premises Central Management. For more details, refer to [Enroll MetaDefender Drive to Central Management Server from MetaDefender Drive with Smart Touch](/docs/mddrive/configuration/enroll-cm-from-smart-touch) - **Show File Details In Secure File Storage** View detailed metadata for clean, unsafe, and unscanned files in Secure File Storage, helping users confirm file identity, understand its source, and make more informed decisions before taking action. For more details, refer to [MetaDefender Drive with Smart Touch Operations - Secure File Storage](/docs/mddrive/process/smart-touch-secure-storage) |
+| **Improvements** | - **Media Validation Agent now allows access to Secure File Storage** Use MetaDefender Drive with Media Validation Agent through the existing shared manifest validation setup, allowing files shared from the Drive to be accessed on protected endpoints. - **Activate Smart Touch with Drive Toolkit** Smart Touch now can be activated using Drive Toolkit |
+| **Bug Fixes** | - **WiFi Management & Network Connectivity Improvements:** Enables operators to fully manage WiFi on SMC in air-gapped environments (forget networks, connect hidden SSIDs). Fixes false-negative WiFi status on SMC when external ping targets are unreachable in restricted networks. - Resolved an issue that caused Smart Touch license activation to loop indefinitely on first attempt. - Fixed an issue where Smart Touch constantly updates all engines |
+|  |  |

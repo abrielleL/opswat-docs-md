@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/configuration/preferences---archive-handling -->
 
-Too many requests
-# You're going a little too fast.
+# Preferences → Archive Handling
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Drive's archive handling settings enable administrators to adjust how archive files will be handled during a scan. Since a scan's performance depends on the number of files included and the total size of the dataset, the archive handling settings can be used to optimize the scan time whenever needed.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To edit the Archive Handling settings, go to **Settings** → **Preferences** → **Archive Handling**, and click **Edit Settings**:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- **Enable Archive Handling:** Enable MetaDefender Drive to scan the contents of archive files. If unchecked, all the archive file contents will be skipped.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fconfiguration%2Fpreferences---archive-handling%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Info
+
+When the **Enable Archive Handling** option is enabled, MetaDefender Drive will extract the archive using the 7-Zip library, and then recursively scan each individual file.
+
+- **Max Recursion Level:** This option decides the number of layers of archives MetaDefender Drive. If an archive file has more layers than the value set here, the scan will fail.
+
+For instance, the following archive file, *Sample*, is 4 layers deep:
+
+- **Max Number of Files Extracted:** The scan will fail if the number of files inside an archive file exceeds this value.
+- **Max Total Size of Extracted Files:** The scan will fail if the total size of all files extracted from an archive exceeds this value.
+- **Enable Scan of Original Unextracted Archive:** Enable MetaDefender Drive to scan the archive file itself before starting the extraction process, in addition to scanning the files within the archive.

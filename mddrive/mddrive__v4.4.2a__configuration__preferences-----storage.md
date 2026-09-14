@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/configuration/preferences-----storage -->
 
-Too many requests
-# You're going a little too fast.
+# Preferences → Storage
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+For optimized performance and smoother operations, the Storage preference settings show the available space on MetaDefender Drive and enable users to clean up logs and unused data to free up space.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To access this feature, go to **Preferences** → **Storage**, click **Clean-up,** then **Confirm.**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Info
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fconfiguration%2Fpreferences-----storage%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Temporary files are now automatically deleted after a scan completes, without needing to clean them up from the Storage preference.

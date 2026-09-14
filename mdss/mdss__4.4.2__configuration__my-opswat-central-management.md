@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/my-opswat-central-management -->
 
-Too many requests
-# You're going a little too fast.
+# My OPSWAT Central Management
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Central Management is a centralized console that lets you manage multiple MetaDefender products & instances of the same product from a single platform. Customers get improved data flows visibility and provide better reports for each product and entire account. It also provides critical information like product instance health, license, and connection status, report history, license, and audit trails.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This scope of this topic is to describe how to enroll into MetaDefender Storage Security into My OPSWAT Central Management.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Info
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Fmy-opswat-central-management%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+MetaDefender Storage Security currently supports integration with Central Management v8

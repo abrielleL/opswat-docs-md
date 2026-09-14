@@ -2,12 +2,12 @@
 
 # Accounts
 
-The OPSWAT MetaDefender IT Access Add-on for Splunk supports multiple accounts and the user needs to select an appropriate account when creating a new input.
+OPSWAT Add-on for Splunk supports multiple accounts and the user needs to select an appropriate account when creating a new input.
 
 Follow the steps below to configure an account:
 
 1. Login to Splunk Web UI.
-2. Go to the **Configuration** page of the OPSWAT MetaDefender IT Access Add-on.
+2. Go to the **Configuration** page of OPSWAT Add-on for Splunk.
 3. Click on the Account tab and start adding account details
 4. Fill in required information.
 

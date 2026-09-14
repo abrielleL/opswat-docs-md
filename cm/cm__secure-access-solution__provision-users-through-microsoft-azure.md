@@ -35,7 +35,7 @@ __
 
 __
 
-6. Download Azure metadata for the SDP app. This data will be used to upload to MetaDefender IT-OT Access to enable single sign on for your users. Select Single sign-on on the left navigation, scroll down to SAML Signing Certificate section and and click on "Federation Metadata XML" to download IDP metadata file.
+6. Download Azure metadata for the SDP app. This data will be used to upload to My OPSWAT Central Management to enable single sign on for your users. Select Single sign-on on the left navigation, scroll down to SAML Signing Certificate section and and click on "Federation Metadata XML" to download IDP metadata file.
 
 ![](https://uploads.developerhub.io/prod/97qW/jwwdwj8948t1htiiur9onw66nelu0vdqjomij0ga21wgf58ngudqcnxdqt6b96jc.png)
 
@@ -53,11 +53,11 @@ __
 
 ![](https://uploads.developerhub.io/prod/97qW/ah913b6l44fselbxsbtju6zb25cnsdkzuxrlovxlja7mfepcv552x15v2jsn1ywf.png)
 
-8. Assign your users/groups you want to allow log into SDP on MetaDefender IT-OT Access to this application.
+8. Assign your users/groups you want to allow log into SDP on My OPSWAT Central Management to this application.
 
-## [Step 2. Configure SSO SDP on MetaDefender IT-OT Access](https://www.opswat.com/docs/macloud-sdp/secure-access/provision-users-through-your-microsoft-azure#step-2-configure-sso-sdp-on-metadefender-it-ot-access)
+## [Step 2. Configure SSO SDP on My OPSWAT Central Management](https://www.opswat.com/docs/macloud-sdp/secure-access/provision-users-through-your-microsoft-azure#step-2-configure-sso-sdp-on-metadefender-it-ot-access)
 
-1. Log into the [MetaDefender IT-OT Access console](https://gears.opswat.com/console).
+1. Log into the [My OPSWAT Central Management](gears.opswat.com).
 2. Navigate to User Management > SSO > SDP and check “Enable Single Sign On”.
 
 ![](https://uploads.developerhub.io/prod/97qW/h1cayi4y35aqek5ytcm1t68d1y6v4y5iqlsqlmsvtqmir6a4xzbki9ktaeymaig8.jpg)
@@ -72,11 +72,11 @@ __
 ![](https://uploads.developerhub.io/prod/97qW/q8k7cw92pg4d80epbq9hvx7dyg9qrybg1vcyjg0mt6oi9sylhuix3cgbd1oaq2sy.png)
 
 6. Scroll to the top of the page, click “Save” and enter your PIN.
-7. At the bottom of the page you will see a new value called “MetaDefender IT-OT Access Login URL”.
+7. At the bottom of the page you will see a new value called “My OPSWAT Central Management Login URL”.
 
 ![](https://uploads.developerhub.io/prod/97qW/25lgysh7t47h0fejpsi1myv88btlknuvjpgdkuuf7vppctcfe08jbskh0x391sjw.png)
 
-8. Copy new value called “MetaDefender IT-OT Access Entity ID“
+8. Copy new value called “My OPSWAT Central Management Entity ID“
 
 ![](https://uploads.developerhub.io/prod/97qW/4az4wcdkpnao8mmyxy24ct8htm90ptxj49yrx8dyo4heuu6n8z5n9vizhnfp6tcl.png)
 
@@ -88,14 +88,14 @@ __
 4. Select the SDP application.
 5. Select Single sign-on.
 6. Click the edit icon (pencil icon) on Basic SAML Configuration section.
-7. Replace Identifier with value got from Step 2.8. Replace Reply URL with the MetaDefender IT-OT Access URL which you got from Step 2.7.
+7. Replace Identifier with value got from Step 2.8. Replace Reply URL with the My OPSWAT Central Management URL which you got from Step 2.7.
 8. Click **Save.**
 
 ![](https://uploads.developerhub.io/prod/97qW/6ckpccpevio3hogqi9qu86yf2o4gqqvewd3sime5egoya8u7e5q7bya2zwphkvcf.png)
 
-## [Step 4. Configure IDP Groups on MetaDefender IT-OT Access](https://www.opswat.com/docs/macloud-sdp/secure-access/provision-users-through-your-microsoft-azure#step-4-configure-idp-groups-on-metadefender-it-ot-access)
+## [Step 4. Configure IDP Groups on My OPSWAT Central Management](https://www.opswat.com/docs/macloud-sdp/secure-access/provision-users-through-your-microsoft-azure#step-4-configure-idp-groups-on-metadefender-it-ot-access)
 
-1. Navigate to the MetaDefender IT-OT Access console at metaaccess.com, then go to User Management > IdP Groups, and click “Add”.
+1. Navigate to the My OPSWAT Central Management console, then go to User Management > IdP Groups, and click “Add”.
 2. Fill in a group name from your Azure, enter your PIN and choose Add. Your new group will show up in the “IdP Groups” section.
 
 ![](https://uploads.developerhub.io/prod/97qW/ldbc5hqaak5rdh3z4bruv8mbslesgxut66r56nhoqjqf72z8254dkhnzrh82gjsd.jpg)

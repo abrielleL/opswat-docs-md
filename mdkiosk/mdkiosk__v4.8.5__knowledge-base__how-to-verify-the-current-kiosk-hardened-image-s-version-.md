@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/how-to-verify-the-current-kiosk-hardened-image-s-version- -->
 
-Too many requests
-# You're going a little too fast.
+# How to verify the current Kiosk Hardened Image's version?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to the OPSWAT Kiosk Image 25.01.0 or later
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Starting with Kiosk Hardened Image version 25.01.0, you can check the current Hardened Image version by the following methods:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [1. Windows Registry:](/docs/mdkiosk/v4.8.5/knowledge-base/how-to-verify-the-current-kiosk-hardened-image-s-version-#1-windows-registry)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fhow-to-verify-the-current-kiosk-hardened-image-s-version-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Registry location: HKLM\SOFTWARE\WOW6432Node\OPSWAT\MD4M
+
+Registry key: hardened_image_ version
+
+## [2. Support Package:](/docs/mdkiosk/v4.8.5/knowledge-base/how-to-verify-the-current-kiosk-hardened-image-s-version-#2-support-package)
+
+File name: MetadefenderRegKey.reg
+
+## [3. Kiosk console (from Hardened Image 25.06.0 or above)](/docs/mdkiosk/v4.8.5/knowledge-base/how-to-verify-the-current-kiosk-hardened-image-s-version-#3-kiosk-console-from-hardened-image-25060-or-above)
+
+From Console > Settings > About > Device information
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

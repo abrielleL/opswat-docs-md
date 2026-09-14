@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-are-pdf-documents-being-flagged-as-false-positives-by-virusb -->
 
-Too many requests
-# You're going a little too fast.
+# Why are PDF documents being flagged as false positives by VirusBlokAda?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [Issue:](/docs/mdcore/knowledge-base/why-are-pdf-documents-being-flagged-as-false-positives-by-virusb#issue)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+PDF files, including official letters or documents with standard formatting, are sometimes flagged as suspicious by the VirusBlokAda engine
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+#### [Cause:](/docs/mdcore/knowledge-base/why-are-pdf-documents-being-flagged-as-false-positives-by-virusb#cause)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-are-pdf-documents-being-flagged-as-false-positives-by-virusb%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The issue is often related to the **Heuristic Scan** feature, which can mistakenly classify normal PDF structures as threats. **Resolution / Workaround:**
+
+1. Verify that the flagged PDF is from a trusted source.
+2. If confirmed safe, adjust the VirusBlokAda settings:
+
+- Disable **Heuristic Scan**, or
+- Set **Heuristic Scan Level** to **Level 1** to reduce unwanted detections.
+
+**Note**: Disabling or lowering heuristic scanning may reduce detection sensitivity, so only adjust this setting if false positives are persistent.
+
+Support:
+
+If Further Assistance is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

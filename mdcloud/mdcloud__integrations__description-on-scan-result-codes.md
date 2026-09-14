@@ -1,12 +1,45 @@
 <!-- source: https://www.opswat.com/docs/mdcloud/integrations/description-on-scan-result-codes -->
 
-Too many requests
-# You're going a little too fast.
+# Description of Scan Result Codes
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+These are the possible values returned for file scans. These values appear in *scan_all_result_i* and *scan_all_result_a*:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Not all codes will be returned by MetaDefender Cloud. Some codes are only returned by the [on-premise](https://www.opswat.com/products/metadefender) version.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcloud%2Fintegrations%2Fdescription-on-scan-result-codes%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| Value | Short description | Long description |  |
+| --- | --- | --- | --- |
+| 0 | No Threats Found | No threat detection or the file is empty. |  |
+| 1 | Infected/Known | A threat is found. |  |
+| 2 | Suspicious | Classified as a possible threat but not identified as a specific threat. |  |
+| 3 | Failed To Scan | Scanning is not fully performed (for example, invalid file or no read permission). If no engine is included and scan is enabled, this will be the final result. |  |
+| 5 | Unknown | Unknown signature. NOTE: this is only used in multiple hash lookup. For single hash lookup, scan_result_* are not returned as a response. see [3.1 Retrieving scan reports using a data](https://onlinehelp.opswat.com/mdcloud/3.1_Retrieving_scan_reports_using_a_data_hash.html) hash for more details. |  |
+| 7 | Skipped Clean | Scan is skipped because this file type is on the allowlist. |  |
+| 8 | Skipped Infected | Scan is skipped because this file type is on the blocklist. |  |
+| 9 | Exceeded Archive Depth | Threat is not found but there are more archive levels which were not extracted. |  |
+| 10 | Not Scanned / No scan results | Scan is skipped by the engine either due to update or other engine specific reason. If the scan is disabled, this will be the final result. |  |
+| 11 | Aborted | The current scan was stopped due to an issue with OPSWAT servers |  |
+| 12 | Encrypted | File/buffer is not scanned because the file type is detected as encrypted (password-protected). |  |
+| 13 | Exceeded Archive Size | The extracted archive is too large to scan. |  |
+| 14 | Exceeded Archive File Number | There are more files in the archive than configured on the server. |  |
+| 15 | Password Protected Document | A document that is protected by a password [e.g., Office documents or PDFs that require a password to view its contents]. If a file is password protected document, no sanitization will be applied. MetaDefender Cloud supports detecting password-protected document for: PDF, DOCX, DOC, DOCM, DOTX, DOTM, DOT, PPTX, PPT, POT, POTM, POTX, PPS, PPSM, PPSX, PPTM, PPTX, XLSX, XLS, XLSM, XLSB,XLS, XLTX, XLTM, XLT, XLAM, XLA. |  |
+| 16 | Exceeded Archive Timeout | The archive process reached the given timeout value (pre-defined value of 30 minutes) |  |
+| 17 | Mismatch | The file's extension does not match the detected file type. *Currently not supported by MD Cloud, feature coming soon* |  |
+| 18 | Potentially Vulnerable File | Possible vulnerability detected for the applied file. |  |
+| 19 | Canceled | The file scan was canceled because it failed to scan too many times |  |
+| 23 | Filetype not supported | The engine does not support scanning this file type. Certain engines only scan specific file types such as executable files or documents. |  |
+| 26 | Suspicious Verdict by Sandbox | When Adaptive Sandbox labels a file with a "Suspicious" verdict, it means that the file exhibited behaviors or characteristics that are commonly associated with malware or other malicious activity but are not conclusively harmful. |  |
+| 27 | Likely Malicious Verdict by Sandbox | Adaptive Sandbox has identified behaviors or characteristics in the file that strongly suggest it is harmful, but the evidence is not entirely conclusive to label it as definitely malicious. |  |
+| 28 | Malicious Verdict by Sandbox | Adaptive Sandbox has definitively determined that the file is harmful. |  |
+| 30 | Blocked Verdict by Deep CDR | Blocked Verdict by Deep CDR |  |
+| 32 | Vulnerable Verdict by SBOM | This indicates that software components contain known vulnerabilities that could potentially be exploited and therefore may require attention or remediation. Please note that this case may also include a License Risk Found. You should check the SBOM details for more information. |  |
+| 34 | Blocked Verdict by SBOM | This indicates that the SBOM has determined that software components have security weaknesses or risks and need to be blocked by the Core. This verdict appears when the item is blocked but does not fall under any of the predefined verdicts. The result also depends on the configuration for the SBOM. |  |
+| 45 | License Risk Verdict by SBOM | This indicates that the software components present one or more license risks. Please note that this case may have Vulnerabilities Found, but they do not meet the pre-configured threshold to impact the decision to block the file. You should check the SBOM details for more information. |  |
+| 63 | AI Content Detected | The analysis engine did find sufficient evidence that the content was generated by artificial intelligence. |  |
+| 252 | Empty File | The scan was not completed because the file content was empty. |  |
+| 253 | Not Scanned | Rate limit exceeded, retry after the limit is reset. Limit: <no. of> requests / day |  |
+| 254 | In queue | The file has been added to the scan queue and is waiting to be processed |  |
+| 255 | In progress | The scanning is in progress |  |
+| 1019 | Weak-vulnerable Verdict by SBOM | Software component is flagged for a potential security flaw, but its actual exploitability in your specific runtime environment remains unverified or low-risk. |  |
+| 1024 | Weak-license Risk Verdict by SBOM | Components carrying permissive or weak copyleft licenses (like LGPL, MPL, or EPL) that may impose specific obligations or create legal uncertainty regarding proprietary code integration. |  |

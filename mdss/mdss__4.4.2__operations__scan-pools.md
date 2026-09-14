@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/operations/scan-pools -->
 
-Too many requests
-# You're going a little too fast.
+# Scan Pools
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Storage Security uses scan pools to group instances of MetaDefender Core or MetaDefender Cloud.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+These two types of scan pools can be used to balance the load of scan requests.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+MD Core API Endpoints and Permissions
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Foperations%2Fscan-pools%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To learn more about the required permissions and the endpoints used by MDSS for MD Core, please read the following KB article: [Which API endpoints from MD Core does MDSS utilize?](/docs/mdss/4.4.2/knowledge-base/what-endpoints-from-mdcore-does-mdss-call)
+
+MD Cloud Private Processing
+
+MD Cloud instances use private processing by default to ensure maximum data privacy and security. Therefore, a non-Community API key must be used when integrating in MDSS. With private processing:
+
+- All submitted files are automatically deleted immediately after analysis completion
+- Scan results are only accessible to the original API key owner

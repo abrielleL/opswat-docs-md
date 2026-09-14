@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/integrations/mft-integrations -->
 
-Too many requests
-# You're going a little too fast.
+# MFT Integration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Remote MetaDefender Managed File Transfer™ instances can be registered as integrations for various use cases, such as file transfer automation. For further details, visit the [Introduction to File Transfer Automation](/docs/mdmft/v3.11.4/automated-file-transfer/automated-jobs) section.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To manage integration instances, go to "Settings" ***→*** "Integrations" ***→*** "MFT."
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fintegrations%2Fmft-integrations%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+MetaDefender Managed File Transfer integrations are globally shared, meaning every user with permissions to view them will see the same set of integrations.
+
+## [Configuration](/docs/mdmft/v3.11.4/integrations/mft-integrations#configuration)
+
+To configure an MFT integration, provide the following information:
+
+- **MFT Name:** The display name which can be anything. It will be used when selecting the integration instance.
+- **MFT URL**: The HTTP or HTTPS URL to the remote instance.
+- **Ignore Certificate Warnings**: Option to ignore HTTPS issues when connecting to this instance.
+
+## [Testing the Connection](/docs/mdmft/v3.11.4/integrations/mft-integrations#testing-the-connection)
+
+Users can test the connection to a configured integration. This test checks whether the configured MFT instance is accessible.

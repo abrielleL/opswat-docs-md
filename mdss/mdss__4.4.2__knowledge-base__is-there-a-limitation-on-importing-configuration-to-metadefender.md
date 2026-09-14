@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/knowledge-base/is-there-a-limitation-on-importing-configuration-to-metadefender -->
 
-Too many requests
-# You're going a little too fast.
+# Is there a limitation on importing configuration to MetaDefender Storage Security?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Storage Security releases deployed on Windows or Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Yes. We encountered multiple compatibility issues when attempting to import configurations into an already configured MetaDefender Storage Security . These issues can lead to system instability and conflicts.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To address this, we have decided to offer the import functionality exclusively for fresh installations. This ensures a smooth migration of your configuration to a new deployment without the risk of compatibility problems.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fknowledge-base%2Fis-there-a-limitation-on-importing-configuration-to-metadefender%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Support:
+
+If **Further Assistance** is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support-services).

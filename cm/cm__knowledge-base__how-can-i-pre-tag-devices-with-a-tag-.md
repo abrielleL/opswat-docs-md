@@ -25,9 +25,9 @@ This can be done by appending the device installer filename with a device tag na
 
 ### For Android and iOS devices
 
-This can be done by adding a tag to the **Group ID** when you enroll a device to a My OPSWAT Central Management account in advanced mode. For detailed instructions, please [Read This](https://www.opswat.com/docs/cm/kb/how-do-i-register-a-mobile-device-to-a-metaaccess-account-).
+This can be done by adding a tag to the **Group ID** when you enroll a device to a My OPSWAT Central Management account in advanced mode.
 
-> **Pro Tip:**
+> **Pro Tip**
 >
 > When you assign a Group ID to a mobile device that’s being added to your  account, the device will be assigned to that group as soon as it connects to the Cloud.
 
@@ -86,8 +86,8 @@ So, the format will be ***hostname-tagname***.
 This nickname will then be searchable via the **Console** or via **API**.
 
 - **Console**: go to **Inventory>Devices** and enter the tag name into the search field, then click **Search**.
-- **API**: conduct a search or use the **Get device API** search parameter to retrieve devices with a specific tag name. For detailed instructions, [Read This](https://www.opswat.com/docs/macloud-sdp/developer-guide/get-devices) .
+- **API**: conduct a search or use the **Get device API** search parameter to retrieve devices with a specific tag name. For detailed instructions, refer to [Get Devices](https://www.opswat.com/docs/cm/developer-guidelines/get-devices) guidelines.
 
-> **Support:**
+> **Support**
 >
-> If you have followed the instructions above but are having difficulty **Pre-tagging Your Managed Endpoint Devices**, please open a [Support Case](https://my.opswat.com/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+> If you have followed the instructions above but are having difficulty **Pre-tagging Your Managed Endpoint Devices**, please open a [Support Case](https://my.opswat.com/support) with the OPSWAT team via phone, online chat or form.

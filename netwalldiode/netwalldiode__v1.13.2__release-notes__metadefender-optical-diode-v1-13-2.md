@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-13-2 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.13.2
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | **Config:** 1.13.2; OD-101: 1.0.1 (CC EAL4+ Certified, Does not support High Availability)  **Config:** 1.13.2; OD-102:1.0.2 , (Supports High Availability) |
+| --- | --- |
+| **Release Date** | May 15, 2026 |
+| **Scope** | Bug Fix |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+AVEVA PI v4.2.1 connector needs MetaDefender Optical Diode v1.12.0 or higher to operate correctly. Please, update accordingly.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Frelease-notes%2Fmetadefender-optical-diode-v1-13-2%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Bug Fixes](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-13-2#bug-fixes)
+
+|  | Details |  |
+| --- | --- | --- |
+| Installer | Addresses issue whereby a user specified management IP Address is assigned to an incorrect interface. |  |
+
+## [Known Limitations](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-13-2#known-limitations)
+
+N/A
+
+MetaDefender

@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/mdemail/knowledge-base/what-are-the-email-gateway-security-instance-upgrade-steps- -->
 
-Too many requests
-# You're going a little too fast.
+# What are the Email Gateway Security instance upgrade steps?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article only applies to MetaDefender Email Gateway Security up to and including version 5.7.6.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+In order to perform a MetaDefender Email Gateway Security upgrade the following steps should be observed:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Before taking any steps, please make sure that you take a back-up of the machine in the form of a VM snapshot whenever possible.
+- As an additional backup step please use the information mentioned in the docs material below and export a configuration file. <https://www.opswat.com/docs/mdemail/configuration/configuration-import-or-exporthttps://www.opswat.com/docs/mdemail/configuration/configuration-import-or-export>
+- Navigate to our product resource portal and download the latest EGS installer. https://my.opswat.com/home/metadefender-email-gateway-security
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Fknowledge-base%2Fwhat-are-the-email-gateway-security-instance-upgrade-steps-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Move the downloaded installer to the EGS machine.
+- Simply Run the installer and go through the necessary steps as illustrated below
+
+- One the installation process is finished you should be able to observe the new EGS version in the product console.
+
+Support:
+
+If you encounter any issues or require further assistance, please contact OPSWAT support via [My OPSWAT](https://my.opswat.com/portal/support).
+
+Our support team will be able to provide you with the necessary guidance and resolution for any license-related concerns.

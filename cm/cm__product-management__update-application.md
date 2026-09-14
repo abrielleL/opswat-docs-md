@@ -15,18 +15,14 @@ To create a rollback job, refer to our dedicated [Roll Back Application](https:/
 
 Remote Application Update supports the following products:
 
-- **MetaDefender Kiosk Windows**:  Version 4.8.0.xxxx or later
-- **MetaDefender Kiosk** **Hardened Image**:  Version 4.8.3.xxxx or later
-- **MetaDefender Core**: Version 5.20.x or later. The Automatic Application Upgrade setting must be enabled within the individual MetaDefender Core instance.
+- **MetaDefender Kiosk Windows**:  Version 4.8.0.xxxx or later.
+- **MetaDefender Kiosk** **Hardened Image**:  Version 4.8.3.xxxx or later.
+- **MetaDefender Core**: Version 5.20.x or later. Only supports standalone mode.
 - **MetaDefender Industrial Firewall**: Version 3.4.1.xxxx or later. The Automatic Application Upgrade setting must be enabled within the individual MetaDefender Industrial Firewall instance.
 
 ## Importing Target Versions
 
-Before you can update any instances, the target versions must be downloaded and imported to My OPSWAT Central Management.
-
-Note All target versions are downloaded directly from **My OPSWAT Portal**.
-
-![](https://uploads.developerhub.io/prod/97qW/9qfsna9pockn0byalxjbnc03bgygdahs9nn30j5fobrxd8oh9pd40z43z9y3gx0c.png)
+Before you can update any instances, the target versions must be imported to My OPSWAT Central Management.![](https://uploads.developerhub.io/prod/97qW/sc9pyks65xcbg7z6iqjxlne9obge94mqlbl2wkld5cj4dr60eylfu67yoiog6zq0.png)
 
 ### **Online Import**
 
@@ -37,7 +33,9 @@ To use this method, ensure your environment has internet connectivity.
 - Click **Check new versions.**
 - In the dialog, select the target version you need and click **Import.** The system will automatically download and import the package from My OPSWAT Portal.
 
-![](https://uploads.developerhub.io/prod/97qW/e7m6l7lnp43tx5mtd28cjkg22ssy9rz5mr46w4rn8khvxg2gmhsdhzfrvdgl83xy.png)
+![](https://uploads.developerhub.io/prod/97qW/hdj7q08zf9sxd4ge4p8bk31wxcbjcdg5czymvcnpbuix1hch5u52vyl2f4fz1mpr.png)
+
+Note You'll receive a real-time notification for application download failures, including failure reasons and suggested actions.
 
 ### **Manual Import**
 
@@ -52,7 +50,7 @@ You'll need to manually download the target version from My OPSWAT Portal and tr
 - Search or scroll for specific product to open its details page.
 - Click **Download**, then select the specific system and version you need.
 
-![](https://uploads.developerhub.io/prod/97qW/yhubjnl63inzf4iu21pdvp9s1yjqp7y7t2u0udddrdskcb4dl3lycsmpq5287t3j.png)
+![](https://uploads.developerhub.io/prod/97qW/fo64wzihbi5m84ehew7rjcb7ai3mgi73adl8hqjclrqx48fz78p7rhz9kkkpdhcm.png)
 
 **Step 2: Import target version to My OPSWAT Central Management**
 
@@ -61,7 +59,7 @@ You'll need to manually download the target version from My OPSWAT Portal and tr
 
 Note Please ensure the file size is under 20GB limit.
 
-![](https://uploads.developerhub.io/prod/97qW/xwa9phsinw02ad69i3b10bx10h1v2cjx90v6pkf2nyrhz929ss210hnedq9wmumv.png)
+![](https://uploads.developerhub.io/prod/97qW/kpk19vvszm84sdxdtlsbvv4jc7atsj2eugsigwezv92zxo2t9bfei3lufkcyq2ec.png)
 
 ### Package Storage & Cleanup
 
@@ -69,7 +67,7 @@ Note Please ensure the file size is under 20GB limit.
 2. **On-Premises**: Update packages are stored on My OPSWAT Central Management server machine after being downloaded or manually uploaded by administrators.
    1. Example Path: C:\Program Files\OPSWAT\MOCM\data-agent\volumes\fusion-updater
 
-![](https://uploads.developerhub.io/prod/97qW/622l6krquweuudsa5vvpy1cjldevexkomfo9ovpc1sgmt6tic2u34o92nc7m5kua.png)
+![](https://uploads.developerhub.io/prod/97qW/rob8q21z6jwph7goaiacmve1am2o3lc5q7nxo2adim5vciuytm7y405qybzui097.png)
 
 3. **Package retention & cleanup**
    1. My OPSWAT Central Management does not automatically delete downloaded update packages. Package retention and cleanup are managed by administrators.
@@ -77,13 +75,13 @@ Note Please ensure the file size is under 20GB limit.
 
 Please Note Only delete packages after all update jobs have completed successfully or have been stopped. Deleting a package while an update job is running may cause errors.
 
-![](https://uploads.developerhub.io/prod/97qW/9mkxt9im16q7g3vrk5x5esekifh551mgvzda6tf9g1u102mmfg3m84ysz4imabnf.png)
+![](https://uploads.developerhub.io/prod/97qW/fp8ned12zztwhlkveemu36fwoarqa264vb2i2ynkq08rr1az0a1c8tibs6o5arh9.png)
 
 ### **Import Status**
 
 The Import Status column reflects whether a target version is ready for use in an update job.
 
-![](https://uploads.developerhub.io/prod/97qW/letkeiaqxnilztcc608oxmbfoyx3vlqrdyst7bnld8r4vwafoco459emkh68n985.png)
+![](https://uploads.developerhub.io/prod/97qW/5kazohcgqmk1a88auqmedm7qmgyizz4k8nir0m6ktb8jutlrxrszm8saqk4nsvkf.png)
 
 - **In Progress**: The target version is currently being processed. Wait for it to complete before proceeding
 - **Completed**: Target version is ready for deployment
@@ -116,13 +114,13 @@ To create an update, navigate to **Updates >** **Software > For Application.**
 - Select the product you wish to update and click the **Job** tab.
 - Click **Create Update Job**.
 
-![](https://uploads.developerhub.io/prod/97qW/2v6koztz28pqoepoofh9u7kpailpl97oungresut7lvhvcaxx2gpcckzfke1omrk.png)
+![](https://uploads.developerhub.io/prod/97qW/p2mo9cmgezjr27ms6a04ihk6clcieicp1y477t25vyi6f0vczl4gdudnngmyk06i.png)
 
 ### **Step 1: Update Job Information**
 
 Provide a name and description to identify and track the job.
 
-![](https://uploads.developerhub.io/prod/97qW/zdu4kyoo7x7ba1ne4otmh0k74npd64opus86un17htopmhs7k6wc1hidux1lkohe.png)
+![](https://uploads.developerhub.io/prod/97qW/ogg6b5i7gbryk4dczf5n2it23kvyrxpoysdycgye0acfhj2bn0j6m11tpaznrhvo.png)
 
 - **Name**: A short, recognizable label for the job,
 - **Description**: Briefly note the target instances, purpose, and expected outcome.
@@ -133,7 +131,7 @@ Provide a name and description to identify and track the job.
 
 Define which instances will receive the update. You can target by group or by individual instance.
 
-![](https://uploads.developerhub.io/prod/97qW/aqaywpe3yz07y6vsg8d8wzjtreq9m4dozlemzq9702u2tqf0bw066pwpa00a8zuz.png)
+![](https://uploads.developerhub.io/prod/97qW/5u9i63b7s1kbxum2q1vkcb6cwnl44gs7u329b7ze6dcdwfbt2zo8ndldzwxgg48j.png)
 
 - **Specific Groups**: The update applies to all instances within the selected groups.
 - **Specific Instance**: The update applies only to the individually selected instances.
@@ -142,7 +140,7 @@ Define which instances will receive the update. You can target by group or by in
 
 Once you've defined the target, select the Target Version from the dropdown.
 
-![](https://uploads.developerhub.io/prod/97qW/q7op2s1dbfuahfa6nmilqdue9xec9yojisti1177i9pwii6vfh3m6hzl8a8j5fwj.png)
+![](https://uploads.developerhub.io/prod/97qW/d7hiwlritpxw2ismfc1x11qlx1beul4pe77b7srms4r6d4yr54u8hct2qrt8g895.png)
 
 ### **Step 3: Update Settings**
 
@@ -152,7 +150,7 @@ Update jobs are split into two distinct phases: **Update Preparation** and **Mai
 
 Defines when instances begin downloading the target version in the background.
 
-![](https://uploads.developerhub.io/prod/97qW/hyy90lkbiff1u7fu2e9b7pzdxzfpnqz1coxasdt403p2p7o5nh6lhgfhcpg2m8ah.png)
+![](https://uploads.developerhub.io/prod/97qW/szu2kmkaayzqlh6zdblz5svqv4leo7b6eanmktcsbz113qylvcp5bypq66avm7j4.png)
 
 - **Start Time**: When instances begin downloading target version.
 - **End Time (Optional)**: When the download window closes.
@@ -167,7 +165,7 @@ Tips Set a wide preparation window (one to two days) to ensure instances that ar
 
 Defines when instances execute the actual application update.
 
-![](https://uploads.developerhub.io/prod/97qW/8ypjbaosdgiejb60pjyls1ys06l0tleyy8uf4evk6qz2thew0j92zyw4q3a80avc.png)
+![](https://uploads.developerhub.io/prod/97qW/94bklnjduhqzoy8fep3pdo4yvlauz71umingb7havf9getli8qzjg8htwbicmhs7.png)
 
 - **Recurrence**: Choose Daily or Weekly.
   - **Daily**: Update can occur any day
@@ -181,7 +179,7 @@ Defines when instances execute the actual application update.
 
 Fine-tune rollout behavior to maintain network stability and system health.
 
-![](https://uploads.developerhub.io/prod/97qW/87im4livgv5c7qk8jvvytvv1tez2eb2g9oiovu8wzwtlhpdaoqwlywzji34j5cmn.png)
+![](https://uploads.developerhub.io/prod/97qW/1n37hyr1decubyrkt1s149k6ydeexsl2l1k15omckcy1punmxws8jd597de3kbkx.png)
 
 - **Concurrency**: Update all instances simultaneously, or cap the number updated at a time. For fleets of 100 or more, a concurrency limit of 10–20 is recommended to reduce network load.
 - **Stop On Failure**: When enabled, the entire job halts if any single instance fails.
@@ -193,7 +191,7 @@ Please note This step is only applicable for for **MetaDefender Kiosk Hardened I
 
 Provide your folder path and check the option to "Run command line script" if required for your setup.
 
-![](https://uploads.developerhub.io/prod/97qW/ffjleguw0kw7jhkvlvnea19cst3ybzfanp310vz6ndr1w0r32c3vnrkfmmo94fj0.png)
+![](https://uploads.developerhub.io/prod/97qW/f4sa9rvojp0cajtvle7b2usy8rt8rp60koku3q9le2nesr8trjh1gf3iq1x0osly.png)
 
 ### **Step 6: Report**
 
@@ -202,15 +200,15 @@ Add one or more email addresses to receive automated alerts when:
 - The job completes.
 - Any individual instance fails.
 
-![](https://uploads.developerhub.io/prod/97qW/8fxoh7zae0iyintyni2kdxjfomzohxqqw2chc936it4fuyv58x4upu2dn6xwdnbm.png)
+![](https://uploads.developerhub.io/prod/97qW/5odk5zge4je9p5pd8s1uu72x5kztyc5hpmfgted0dhzu5sg19zjbk5824z2k1rmi.png)
 
-![](https://uploads.developerhub.io/prod/97qW/r28lvwbsgmqbt90mhpggdcpnt3m5zrgc91a440n6pcd4g8irxzpkl783bh0wgcak.png)
+![](https://uploads.developerhub.io/prod/97qW/whsic125ciwgx2a95mzcmiu7ex9b0vlflb9kkr9a9skbfda8708jpbptnb8lp1pp.png)
 
 ## Monitoring Update Job
 
 After creating a job, you can track its progress and manage it from the **Jobs** tab. To get there, navigate to **Updates >** **Software** and select **Jobs**.
 
-![](https://uploads.developerhub.io/prod/97qW/l58ano0qa7ij1e46dtik7lu07pojswizcri64fa679kssfeintkuqg6q234l13ar.png)
+![](https://uploads.developerhub.io/prod/97qW/9wlm467xm99srtyvb6f2pcs4jzxevwnkf2ck2x9ixlaywn9fupxhhbjmax6ntm5u.png)
 
 ### **Job Details**
 
@@ -220,7 +218,7 @@ Click any update job in the table to open its detailed view.
 
 The top panel provides a high-level summary of the update job.
 
-![](https://uploads.developerhub.io/prod/97qW/k9j2tchtgt332bp7d61k7iauryig1vkl0paq0e48zqop7mw7ch8hb20teu54sp59.png)
+![](https://uploads.developerhub.io/prod/97qW/4jlkfi0evmnpntl3fol74bq2vn9a9ju6qqe8oe42vlhadkv7mnxfv1w3rkc2mcp0.png)
 
 - **General information** including Job Status, Description, Created By, Target, Update Preparation schedule, Maintenance Window, Update Options, and notification recipients.
 - **Job Status**:
@@ -242,7 +240,7 @@ Below the summary panel, you can filter instances by their update status.
   - **In Progress**: Instances currently processing the update job.
   - **Failed**: Instances where the download or installation failed.
 
-![](https://uploads.developerhub.io/prod/97qW/glisvcgbgrtnxps5olg6y3k2dfx1qecu6lk8csxstzx7q405g8l07ybjlei34lkk.png)
+![](https://uploads.developerhub.io/prod/97qW/dokuey6fjqqmgexsw6xwfdbus3136b7xruj937r7qwy6s7xm2ycw8n5nn5rdqx9y.png)
 
 - View detailed information like Update Status. Name, Group, Platform, Current Version, Target Version, Activity, Last Update.
 - **Instance Update Status:** Each instance has its own granular status that reflects exactly where it is in the update process:

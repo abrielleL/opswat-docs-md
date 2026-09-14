@@ -69,6 +69,8 @@ Beside the primary report, Kiosk will create a folder named session ID to gather
 
 The primary report contains the final result of the disk image file selected by the user. Meanwhile, Kiosk will generate a separate report for the child files. This additional report will be named as the original file and will follow the same format as the primary report.
 
+Starting in version 4.8.5, a disk image's PDF report uses the same modern layout as the main session log — a clear summary of the scan result, distinct sections for device and scan details, and numbered file entries that are easy to scan through. This applies to both the report for the disk image you selected and the report generated for any nested disk image found inside it. Unlike the main session log, a disk image report does not include a blank first page.
+
 Image: Detailed result of child file insde test.TIB
 
 ### [5. Post processing actions](/docs/mdkiosk/v4.8.5/operating/processing-disk-image-files#5-post-processing-actions)
@@ -107,5 +109,9 @@ VMDK files with Windows and Linux filesystems are supported, including Linux par
 Note
 
 A VMDK's XFS partition may not be readable if it was created using a newer Linux disk-formatting toolchain (this is the default on some Linux distributions released in 2024 or later). When that happens, the individual files on that partition aren't listed, but the VMDK file itself is still scanned as a whole. If you run into this, try creating the disk image from an earlier release of the source Linux distribution, or reformat the XFS partition using its legacy timestamp option before exporting the VMDK. An XFS partition nested inside another XFS partition is also not currently supported.
+
+Note
+
+In earlier versions, generating the PDF report for a disk image could fail if a scanned file's name contained certain non-Latin characters (for example, Chinese or Devanagari script), producing an empty report file. This is resolved as of version 4.8.5.
 
 If a single device contains more than one Clonezilla backup, all of them are mounted and scanned within the same session. Clonezilla backups from disks that use non-standard (extended/logical) MBR partitioning are not currently supported; only GPT disks and standard MBR disks with primary partitions are recognized.

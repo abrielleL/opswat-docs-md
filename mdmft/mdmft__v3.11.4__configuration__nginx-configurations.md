@@ -1,12 +1,70 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/nginx-configurations -->
 
-Too many requests
-# You're going a little too fast.
+# Nginx configurations
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
+## [Restrictions](https://www.opswat.com/docs/mdmft/knowledge-base/is-metadefender-managed-file-transfer-compatible-with-a-windows-#restrictions)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Only allow access to our domain only**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Only requests to example.in, www.example.in, or images.example.in are allowed. All other requests are dropped silently, reducing exposure to unauthorized traffic and preventing domain spoofing.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Fnginx-configurations%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+if ($host !~ ^(example.in|www.example.in|images.example.in)$ ) {
+return 444;
+}
+
+**Deny certain user-agents**
+
+Requests from specified user-agents are blocked, reducing abuse from automated tools and bots.
+
+## Block download agents ##
+if ($http_user_agent ~* LWP::Simple|BBBike|wget) {
+return 403;
+}
+##
+## Block robots ##
+if ($http_user_agent ~* msnbot|scrapbot) {
+return 403;
+}
+##
+
+**Block referral spam**
+
+Requests with referrers containing these keywords are blocked, reducing referral spam and abuse. Only direct access or requests from legitimate sources are allowed.
+
+## Deny certain Referers ###
+if ( $http_referer ~* (babes|forsale|girl|jewelry|love|nudit|organic|poker|porn|sex|teen) ) {
+return 403;
+}
+##
+
+**Block particular APIs**
+
+Requests to /admin/config/session are blocked, preventing unauthorized access to this API.
+
+## Block particular api ###
+location ~ "^/admin/config/session$" {
+return 403;
+}
+##
+
+**How to configure**
+
+**Step 1: Create a .conf file under** ***<Installation Directory>*****\WebServer\conf**
+
+Here is sample .conf file. Choose what meets to your scenario and update .conf file
+
+if ($host !~ ^(example.in|www.example.in|images.example.in)$ ) {
+return 444;
+}
+if ($http_user_agent ~* LWP::Simple|BBBike|wget) {
+return 403;
+}
+if ($http_user_agent ~* msnbot|scrapbot) {
+return 403;
+}
+if ( $http_referer ~* (babes|forsale|girl|jewelry|love|nudit|organic|poker|porn|sex|teen) ) {
+return 403;
+}
+
+**Step 2: A restart of the "MetaDefender Managed File Transfer™" services are required.**

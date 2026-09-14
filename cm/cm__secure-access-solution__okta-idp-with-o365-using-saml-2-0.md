@@ -62,14 +62,14 @@ Now it's the time you can integrate My OPSWAT Central Management with your Okta 
 - [Step 5. Configure SSO settings on Office 365](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_O365_using_SAML_2.0.html#step-5-configure-sso-settings-on-office-365)
 - [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_O365_using_SAML_2.0.html#step-6-test-your-integration)
 
-## Step 1. Enable Access Control on your My OPSWAT Central Management account
+## Step 1. Enable Secure Access on your My OPSWAT Central Management account
 
 1. Login to the My OPSWAT Central Management console.
 2. Navigate to **Access Control** and then **Configurations.**
-3. Check on the box **"****Enable access control****"** and configure a port for the cross-domain API. Note that you must select a port which no applications on endpoints is running.
+3. Check on the box **"****Enable ****Secure Access"** and configure a port for the cross-domain API. Note that you must select a port which no applications on endpoints is running.
 4. Click **SAVE**.
 
-![](https://uploads.developerhub.io/prod/97qW/uu21jbinojpahoic7j31949lf7g5uvxi8fnlx4lrk25nkzyhxd8ge98qoomp6p5b.png)
+![](https://uploads.developerhub.io/prod/97qW/3xcvx8db4yjszpg6r6rz3k7ayx4p42u38pcmurj3vrj94h1bg6hcf3rv1olrynz5.png)
 
 ## Step 2. Add protected applications with IdP Method
 
@@ -119,7 +119,7 @@ Now it's the time you can integrate My OPSWAT Central Management with your Okta 
       2. *IDP Login URL*: application login URL which you have from Step 2.2
       3. *Login URL*: [https://login.microsoftonline.com/login.srf](https://login.microsoftonline.com/login.srf)
       4. *Logout URL*: [https://login.microsoftonline.com/logout.srf](https://login.microsoftonline.com/logout.srf)
-      5. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+      5. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications)
 
 ![](https://uploads.developerhub.io/prod/97qW/hlayswdj4mflj283dsa1yzprwu1rfrgud6itvdoomgriyxdiqunyfns80545ayn8.png)
 
@@ -138,7 +138,7 @@ Note: you can add O365 application (step 2.4) when you add Okta IdP settings.
 3. With a new access rule, you need to specify how you would like to block/allow access a device from the application
    1. *Rule name*: a rule name, for example Block non-compliant devices
    2. *Action*: Block or Allow
-   3. Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+   3. Configure conditions to do the action. Details at [Configure Access Rules](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 4. Click **ADD RULE**
 
 ![](https://uploads.developerhub.io/prod/97qW/0p53nso26rtphwmsjdxezar3c0l58annrjc7juy5ezkzp8cysmf7ku9j1js244oe.png)
@@ -150,7 +150,7 @@ Note: you can add O365 application (step 2.4) when you add Okta IdP settings.
 3. Select O365 application
 4. On **General** tab, click Edit on the SAML Settings box
 5. Click **Next** at the first step
-6. Replace **Single sign on URL** with the MetaAccess URL which you got from Step 2.5
+6. Replace **Single sign on URL** with the My OPSWAT Central Management URL which you got from Step 2.5
 
 ![](https://uploads.developerhub.io/prod/97qW/old9nmqj8nexybv0kr0qgajjmrezlxs1spo96i0fvfpp63sfhlc7zlec7qy1j1zs.png)
 
@@ -169,7 +169,7 @@ Note: you can add O365 application (step 2.4) when you add Okta IdP settings.
 
 _
 
-2. Click **Download OPSWAT certificate** to download a self-signed certificate MetaAccess generated for your account
+2. Click **Download OPSWAT certificate** to download a self-signed certificate My OPSWAT Central Management generated for your account
 
 ![](https://uploads.developerhub.io/prod/97qW/muhfkxyp3c2w195utos4kpkm0jvyhyrqlow4unyd0u7mlpql8ptklqour64faoiu.png)
 
@@ -207,6 +207,4 @@ C:\Windows\system32>Get-MsolDomainFederationSettings -DomainName <Your Domain>
 
 ## Step 6: Test your integration
 
-Follow guideline at [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Step_6__Test_your_integration.html) to test your integration to verify if it works as your expectation.
-
-**DONE! CONGRATULATIONS.**
+Follow guideline at [Test Your Integration](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration) to verify if it works as your expectation.

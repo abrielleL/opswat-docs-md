@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/create-folders -->
 
-Too many requests
-# You're going a little too fast.
+# Creating Folders
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To create a new folder:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Click the "New folder" button.
+2. Enter the folder name in the text box.
+3. Click "Create folder."
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fcreate-folders%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Info
+
+Folders can also be created during [uploads](/docs/mdmft).
+
+Move files
+
+You can [move](/docs/mdmft/v3.11.4/end-user-guide/delete-move-rename) files into these folders later.
+
+Case sensitivity
+
+Folder names are case-sensitive, meaning that *images* and *IMAGES* can coexist in the same location. Pay attention to capitalization to correctly identify each folder.

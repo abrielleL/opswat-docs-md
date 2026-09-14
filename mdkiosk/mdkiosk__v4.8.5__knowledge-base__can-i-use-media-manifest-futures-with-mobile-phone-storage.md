@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/can-i-use-media-manifest-futures-with-mobile-phone-storage -->
 
-Too many requests
-# You're going a little too fast.
+# Can I use Media Manifest futures with mobile phone storage
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MD Kiosk versions
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The **Media Manifest** feature is a valuable tool for verifying whether a device has been scanned by the MetaDefender Kiosk. It ensures that only scanned and approved files are accessible for use.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+However, this feature is **not currently supported for mobile phone storage**, as the MetaDefender Kiosk is unable to generate a manifest file on mobile devices after scanning. Since the **validation agent relies on the presence of this manifest file** to determine access, verification on mobile storage is not possible at this time.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fcan-i-use-media-manifest-futures-with-mobile-phone-storage%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If the **OMVA** is installed, the mobile phone storage **will be allowed** by default.
+
+If the **MDE Validation** is installed, the mobile phone storage **will be blocked** by default.
+
+Support
+
+If **Further Assistance** is required, please proceed to log a [**support case or chat with our support engineer**](https://my.opswat.com/support).

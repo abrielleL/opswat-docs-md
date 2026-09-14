@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/where-to-get-help/enable-debug-logs-for-script-commands -->
 
-Too many requests
-# You're going a little too fast.
+# Enable debug logs for script commands
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+In order to troubleshoot please run :
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+UnixWindowsCopysudo LOG_LEVEL=7 [mdss-command]PS> .\mdss.ps1 [mdss-command] -log_level=7
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+where **mdss-command** is the command that has an issue. For example, if MetaDefender Storage Security cannot be started please run the following command:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fwhere-to-get-help%2Fenable-debug-logs-for-script-commands%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+UnixWindowsCopysudo LOG_LEVEL=7 mdss -c startPS> .\mdss.ps1 -c start -log_level 7

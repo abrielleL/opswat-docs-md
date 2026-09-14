@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdemail/operating/recipient-look-ahead -->
 
-Too many requests
-# You're going a little too fast.
+# Recipient look-ahead
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Email Gateway Security is a forward only SMTP server, it was designed to not store emails (except the quarantined ones).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To avoid the situation that emails stuck on Email Gateway Security due to forwarding failures, the product can be configured to check whether it will be able to forward the email based on the current recipient settings. If it will be able to forward, then the email gets accepted accepts. But if there is no SMTP relay that would accept the recipient, so Email Gateway Security would not be able to forward the email to the next hop, then the email gets rejected on the SMTP level.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+In this case the message *No policy for recipient* is returned to the sender’s email client.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Foperating%2Frecipient-look-ahead%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+For details see [Configuration/Recipient verification](/docs/mdemail/configuration/recipient-verification).

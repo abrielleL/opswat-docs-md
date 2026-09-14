@@ -12,7 +12,7 @@
 | Requests per rate limit | 10/min |
 | Response Format | JSON |
 
-MetaAccess records events on your accounts. There are 2 types of event logs: admin event logs and device event logs. To retrieve event logs on your account, you can use this API. You can set filters in parameters to filter event logs you concern.
+My OPSWAT Central Management records events on your accounts. There are 2 types of event logs: admin event logs and device event logs. To retrieve event logs on your account, you can use this API. You can set filters in parameters to filter event logs you concern.
 
 ## API URL
 

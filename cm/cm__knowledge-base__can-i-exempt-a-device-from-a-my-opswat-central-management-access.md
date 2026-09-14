@@ -43,7 +43,7 @@ There are two options for exempting devices from a policy.
 
 ### Option 2:
 
-Here, you will use the **Device Action API** to program and manage each device’s exemption state. To learn more, [Read This](https://www.opswat.com/docs/cm/developer-guide/device-action) .
+Here, you will use the **Device Action API** to program and manage each device’s exemption state. To learn more, refer to [Device Action](https://www.opswat.com/docs/cm/developer-guidelines/device-action) guidelines.
 
 ## Reversing an exemption
 

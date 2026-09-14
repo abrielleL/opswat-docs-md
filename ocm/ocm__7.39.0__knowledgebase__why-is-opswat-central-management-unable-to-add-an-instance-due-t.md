@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/knowledgebase/why-is-opswat-central-management-unable-to-add-an-instance-due-t -->
 
-Too many requests
-# You're going a little too fast.
+# Why is OPSWAT Central Management unable to add an instance due to domain name restrictions?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+After enabling HTTPS for OPSWAT products with underscore in a domain name, OPSWAT Central Management returns “Could not reach the server”.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+If the OCM UI displays the error message **"Could not reach the server"** and the domain name contains an underscore (`_`), it means that OCM does not support domain names with underscores.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+This is because OCM uses a library to validate domain names according to the **DNS standard** — which only permits:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fknowledgebase%2Fwhy-is-opswat-central-management-unable-to-add-an-instance-due-t%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- **Letters** (a-z)
+- **Numbers** (0-9)
+- **Hyphens** (-)
+
+While modern web browsers may allow URLs with underscores in domain names, the validation library used by OCM strictly follows DNS specifications, resulting in an error if an underscore is detected.
+
+To resolve this issue, ensure the domain name follows standard DNS naming rules, avoiding the use of underscores.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/portal/support).

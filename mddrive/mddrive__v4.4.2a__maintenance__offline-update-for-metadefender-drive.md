@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/maintenance/offline-update-for-metadefender-drive -->
 
-Too many requests
-# You're going a little too fast.
+# For MetaDefender Drive
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Offline Engine Updates for MetaDefender Drive](/docs/mddrive/v4.4.2a/maintenance/offline-update-for-metadefender-drive#offline-engine-updates-for-metadefender-drive)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+If you don't have access to MetaDefender Drive Toolkit, follow these steps to add the downloaded engine definition packages directly to MetaDefender Drive:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Download the MetaDefender Drive engine package files from Update Downloader.
+2. Open the NTFS partition MetaDefender Drive and extract the *.zip* files into the */update/defs/* folder. Make sure to place each *engine.yml* and *engine.zip* file is in the root of */update/defs/*.
+3. Delete any files with extensions other than *.zip* or *.yml*.
+4. Restart your system and boot from the MetaDefender Drive to install the engine updates.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fmaintenance%2Foffline-update-for-metadefender-drive%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Engine Updates
+
+After following the steps above, the engine definitions will **only be copied** to MetaDefender Drive. The engines will be fully installed and initiated with the next boot.
+
+__
+
+.

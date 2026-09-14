@@ -20,7 +20,7 @@ Until you see the green status, click the folder icon to open the folder and loc
 
 ### [Drive Toolkit Logs](https://www.opswat.com/docs/mddrive/maintenance/drive-toolkit#drive-toolkit-logs)
 
-In the ***"C:**__****ProgramData\MetaDefender\MetaDefenderDriveToolkit\Log"*** folder, you will find the *MetaDefenderDriveToolkit.log* file. This file includes debugging information. If you face any issues while creating or upgrading a MetaDefender Drive, please attach this log file with your support request.
+In the *"****C:\ProgramData\MetaDefender\MetaDefenderDriveToolkit\Log****"* folder, you will find the *MetaDefenderDriveToolkit.log* file. This file includes debugging information. If you face any issues while creating or upgrading a MetaDefender Drive, please attach this log file with your support request.
 
 Info
 

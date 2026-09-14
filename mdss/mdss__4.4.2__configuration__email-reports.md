@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/email-reports -->
 
-Too many requests
-# You're going a little too fast.
+# Email reports
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Email reports can be generated after a storage process completes. The report contains vital information about multi-scanning results, potential compliance violations as well as detected vulnerabilities or other issues.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+You can choose to send the email report:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Only to the owner - the user that started the process
+- All registered users - all MetaDefender Storage Security users
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Femail-reports%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+An email report contains the following information:
+
+- A list of top risk accounts or files
+- Compliance violations
+- Engine versions for Deep CDR and Vulnerability engine
+- Details engine information for multi-scanning engines

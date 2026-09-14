@@ -15,20 +15,13 @@ To get started integrating My OPSWAT Central Management to enforce device postur
 
 Configuring, installing ADFS server and enabling SSO are beyond the scope of this tutorial. This tutorial uses screenshots from Server 2016, but similar steps should be possible on other versions.
 
-Now it's the time you can integrate My OPSWAT Central Management with your ADFS by following below steps. You can learn more details for each step here at [3.1.1. How to set it up?](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)
+Now it's the time you can integrate My OPSWAT Central Management with your ADFS by following below steps. You can learn more details for each step here at [Configuration.](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-integration-configuration)
 
-- [Step 1. Enable Access Control on your MetaAccess account](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_VDI.html#step-1-enable-access-control-on-your-metaaccess-account)
-- [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_VDI.html#step-2-add-protected-applications-with-idp-method)
-- [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_VDI.html#step-3-configure-access-rules)
-- [Step 4. Create new Relying Party Trust For VDI in ADFS Server](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_VDI.html#step-4-create-new-relying-party-trust-for-vdi-in-adfs-server)
-- [Step 5. Edit SSO settings on Office 365](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_VDI.html#step-5-edit-sso-settings-on-office-365)
-- [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_VDI.html#step-6-test-your-integration)
-
-## Step 1. Enable Access Control on your My OPSWAT Central Management account
+## Step 1. Enable Secure Access on your My OPSWAT Central Management account
 
 1. Login to the My OPSWAT Central Management console.
 2. Navigate to **Access Control** and then **Configurations**
-3. Check on the box **"****Enable access control****"** and configure a port for the cross-domain API. Note that you must select a port which no applications on endpoints is running.
+3. Check on the box **"Enable Secure Access"** and configure a port for the cross-domain API. Note that you must select a port which no applications on endpoints is running.
 
 ![](https://uploads.developerhub.io/prod/97qW/izg5tc3k3ux8v2el9sa5j7jyvlj5jtadgekb4ynbdn119xnk64sh4bk7w2jrso9z.png)
 
@@ -74,7 +67,7 @@ Now it's the time you can integrate My OPSWAT Central Management with your ADFS 
       2. *IDP Login URL*: application login URL which you have from Step 2.2
       3. *Login URL*: [https://login.microsoftonline.com/login.srf](https://login.microsoftonline.com/login.srf)
       4. *Logout URL*: [https://login.microsoftonline.com/logout.srf](https://login.microsoftonline.com/logout.srf)
-      5. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+      5. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications).
 
 ![](https://uploads.developerhub.io/prod/97qW/z43ln9j88f715vr34ifr7zb9t30aa9lxeut7kifw69uo0s28cv064jb6oe20f7kd.png)
 
@@ -93,7 +86,7 @@ Note: you can add VDI application (step 2.4) when you add ADFS IdP settings.
 3. With a new access rule, you need to specify how you would like to block/allow access a device from the application
    1. *Rule name*: a rule name, for example Block non-compliant devices
    2. *Action*: Block or Allow
-   3. Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+   3. Configure conditions to do the action. Details at [Configure Access Rules](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 4. Click **ADD RULE**
 
 ![](https://uploads.developerhub.io/prod/97qW/1zrfexhyakd68iqodu6hdb19571zqw1mu4qr6xnno5efc5ypd1j4yb6eq9eouios.png)
@@ -169,6 +162,4 @@ C:\Windows\system32>Get-MsolDomainFederationSettings -DomainName <Your Domain>
 
 ## Step 6: Test your integration
 
-Follow guideline at [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Step_6__Test_your_integration.html) to test your integration to verify if it works as your expectation.
-
-**DONE! CONGRATULATIONS.**
+Follow guideline at [Test Your Integration ](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration)to verify if it works as your expectation.

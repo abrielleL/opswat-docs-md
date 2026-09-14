@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/how-to-select-a-specific-metadefender-core-instance-in-a-postgre -->
 
-Too many requests
-# You're going a little too fast.
+# How to Select a Specific MetaDefender Core Instance in a PostgreSQL Database with Multiple Instances?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article is applied to MetaDefender Core releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Issue**:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+When connecting MetaDefender Core to a PostgreSQL database that contains multiple MetaDefender Core instances, there is currently no option within the Core installation interface to select a specific instance. In a Shared Database configuration, MetaDefender Core will connect to and use the first available MetaDefender Core shared instance found within the database. The selection is made automatically by the application and cannot be overridden.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fhow-to-select-a-specific-metadefender-core-instance-in-a-postgre%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**Resolution**:
+
+If it is mandatory to use a database with multiple instances, use the Docker or Kubernetes environments, where this option is available. For example, in a docker deployment, the environmental variable `MDCore_DB_NAME` can be used to point to a specific database instance.
+
+Support:
+
+Support: If Further Assistance is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

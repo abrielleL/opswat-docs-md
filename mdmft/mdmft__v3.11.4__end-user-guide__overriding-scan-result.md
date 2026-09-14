@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/overriding-scan-result -->
 
-Too many requests
-# You're going a little too fast.
+# Overriding Scan Result
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Some roles have the option to override the 'Blocked' status of a file, essentially unblocking it and making it available.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Override Blocked Status](/docs/mdmft/v3.11.4/end-user-guide/overriding-scan-result#override-blocked-status)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Foverriding-scan-result%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The **Override Blocked Status** option allows to make a file available even if it was originally flagged and blocked by MetaDefender Core™.
+
+- When applied, the file status changes from **Blocked** → **Available - overridden**.
+- Once overridden, the file will be handled as any other Available file, e.g. a shared user can download it.
+- This can only be done on the **Processing History** page.
+
+### [Restore Blocked Status](/docs/mdmft/v3.11.4/end-user-guide/overriding-scan-result#restore-blocked-status)
+
+The **Restore Blocked Status** option allows to revert an overridden file back to its original blocked state.
+
+- When applied, the file status changes back to **Blocked.**
+- Once restored, the file is treated again as Blocked and cannot be accessed or downloaded by regular users .
+
+Info
+
+When performing either action, the user is required to provide a reason. Both the action and the reason are recorded in the audit log for traceability and compliance purposes.

@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/product-information -->
 
-Too many requests
-# You're going a little too fast.
+# Product Information
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+For more details on MetaDefender® MFT, click the "?" icon in the top right corner of the web page. This menu includes:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- MetaDefender MFT documentation
+- Privacy Policy
+- Terms of Service
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fproduct-information%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Info
+
+This feature may be disabled by your administrator. If you do not see the "?" icon, refer to the provided guide for more detailed information.

@@ -1,12 +1,39 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/role-mapping-for-groups -->
 
-Too many requests
-# You're going a little too fast.
+# Role Mapping for Groups
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+User role mapping allows fine-tuning of how active directory synchronization is performed. Administrators and read-only administrators are synchronized according to your user directory structure.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Role Mapping Options:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Frole-mapping-for-groups%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| Role | Description |
+| --- | --- |
+| Auditor | Users in specified groups will be licensed as Auditors |
+| Global Supervisor | Users in specified groups will be licensed as Global Supervisors |
+| Administrator | Users in specified groups will be licensed as Administrators |
+| Readonly Administrator | Users in specified groups will be licensed as Readonly Administrators |
+| Helpdesk Administrator | Users in specified groups will be licensed as Helpdesk Administrators |
+| Automation Coordinator | Users in specified groups will be licensed as Automation Coordinator |
+| Restricted Administartor | Users in specified groups will be licensed as Restricted Administrator |
+
+Info
+
+The Local Administrator account is also Supervisor to ensure one active supervisor at all times.
+
+If a user belongs to multiple groups mapped to different roles, the following precedence is applied:
+
+- Administrator
+- Readonly Administrator
+- Restricted Administrator
+- Helpdesk Administrator
+- Auditor
+- Global Supervisor
+- Automation Coordinator
+
+Example: Active directory group A is mapped to the administrator role while group B is mapped to the auditor role. An active directory user who is member of both groups will have the assigned MetaDefender Managed File Transfer role of Administrator.
+
+---
+
+Click "Continue" to [Organizational Unit, Security Group and User Filtering Configuration](/docs/mdmft/v3.11.4/configuration/organizational-units-and-groups-configuration) after customizing the information as required.

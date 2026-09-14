@@ -1,12 +1,38 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-11-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.11.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | Config: 1.11.0; OD-101: 1.0.1 (CC EAL4+ certified, no High Availability support) |
+| --- | --- |
+|  | Config: 1.11.0; OD-102: 1.0.2 (High Availability support) |
+| **Release date** | Sep 2025 |
+| **Scope** | Back to Back Mode |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Warning
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+AVEVA PI 4.2.0 connector needs MetaDefender Optical Diode v1.11.0 to operate correctly. Please, update accordingly
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Frelease-notes%2Fmetadefender-optical-diode-v1-11-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [New Features, Improvements and Enhancements](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-11-0#new-features-improvements-and-enhancements)
+
+|  | Details |
+| --- | --- |
+| Back to Back mode | Users now have the capability to configure two MetaDefender Optical Diodes to set up a Back to Back Diode |
+| New login page | New login page with customizable banners |
+| New field in TCP/UDP Streams | New Bind IP field in TCP/UDP streams |
+| Redis Update | Redis updated to version 8.0.2 |
+| MDCore support | An external MDCore instance can be configured to work together with MetaDefender Optical Diode |
+| Multiple VIPs | Multiple VIPs supported |
+| SMB enhancements | Support for spaces in SMB share paths |
+
+## [Bug fixes](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-11-0#bug-fixes)
+
+|  | Details |
+| --- | --- |
+| AVEVA PI bugfixing | Minor bugfixing in AVEVA Pi Connector |
+| Bugfixing | minor bugfixing |
+
+## [Known limitations](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-11-0#known-limitations)
+
+N/A
+
+MetaDefender

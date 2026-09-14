@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-smart-touch-v-1-4-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive Smart Touch v1.4.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-notes-smart-touch-v-1-4-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on December 08, 2025** | This release includes new features and new user experiences |
+| **New Features** | - **License Activation in Smart Touch**: Users now can activate license directly on MetaDefender Drive with Smart Touch through a guided flow, making setup easier and enabling a more efficient operation experience. - **Side Navigation Bar for Easier Access to Device Scanning, and Settings:** Side navigation bar allows users to quickly and intuitively switch between key features. |
+| **Improvements** | - Stability has been improved |

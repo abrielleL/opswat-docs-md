@@ -38,7 +38,7 @@ The Settings page is organized into the following sections:
   - This tab allows you to configure Single Sign-On (SSO) integration with your organization's identity provider. You can enable SSO and specify the necessary settings to allow users to authenticate using their existing credentials.
 - Security
 
-  - This tab allows you to generate a new master encryption key that will re-encrypt all sensitive data. You can find more information on [this page](/docs/mdss/metadefender-storage-security/4.0.0/configuration/security---encryption-keys).
+  - This tab allows you to generate a new master encryption key that will re-encrypt all sensitive data. You can find more information on [this page](/docs/mdss/configuration/security---encryption-keys).
 - Access Control
 
   - This tab allows you to view the roles defined in your system and the permissions associated with each. You can browse all roles, inspect their Read, Write, and Delete permissions per resource, and use the search bar to locate a specific role by name quickly

@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/troubleshooting/ochelper-unc -->
 
-Too many requests
-# You're going a little too fast.
+# OCHelper.exe reported the error "Attempting to perform the InitializeDefaultDrives operation on the 'Filesystem' provider failed"
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Type | Detail |
+| --- | --- |
+| Problem | Upon launching OPSWAT Central Management (such as on system startup), an error dialog for OCHelper.exe pops up. The error is "Attempting to perform the InitializeDefaultDrives operation on the 'Filesystem' provider failed" |
+| Cause | PowerShell detectes that one or more mapped drives are not currently reachable. |
+| Troubleshooting | Check if a system has one or more disconnected mapped drives. |
+| Solution | Reconnect or disconnect the mapped drives. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When OPSWAT Central Management is launched, specifically its tray icon process OCHelper.exe, an error dialog like in the image below pops up.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+OCHelper is a PowerShell-based scripted process used to generate a tray icon GUI. The error "Attempting to perform the InitializeDefaultDrives operation on the 'Filesystem' provider failed" is a known PowerShell issue where it attempts to initialize connections to all mapped drive in the system before executing the main script but there are one or more mapped drives that cannot be reached. However, this error does not actually impede OCHelper.exe's function.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Ftroubleshooting%2Fochelper-unc%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To stop this error dialog, you must either resolve any issues that cause the mapped drives to be disconnected in the first place or just disconnect the problematic drives from the system.
+
+Alternatively, as OCHelper.exe only functions as a tray icon and is otherwise not vital to OPSWAT Central Management's operation, you can end this process via Windows's task manager. OPSWAT Central Management's service can still be managed via Windows Service management console (services.msc).

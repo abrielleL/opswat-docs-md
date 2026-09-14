@@ -58,7 +58,7 @@ Find the configuration entry containing the current port used by Mongodb and edi
 net:
 port: 27017
 
-**Nginx port (9000)** Port 9000 is already supported to be configurable prior to version 7.10. [Please follow the guide here.](/configuration/port-configuration)
+**Nginx port (9000)** Port 9000 is already supported to be configurable prior to version 7.10. [Please follow the guide here.](/docs/ocm/configuration/port-configuration)
 
 **Up port (9026 by default):**
 

@@ -1,12 +1,41 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-are-metadefender-core-engines-permanently-failed- -->
 
-Too many requests
-# You're going a little too fast.
+# Why are MetaDefender Core engines permanently failed?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [**Introduction:**](/docs/mdcore/knowledge-base/why-are-metadefender-core-engines-permanently-failed-#introduction)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This knowledge base article provides details regarding the Core AV engines
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+#### [**Details:**](/docs/mdcore/knowledge-base/why-are-metadefender-core-engines-permanently-failed-#details)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-are-metadefender-core-engines-permanently-failed-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+We found that the issue is coming from an environmental activity which deleted the /var/tmp folder after 30 days, thus preventing MD Core's internal tasks to update the engines because the oms_testfile is deleted. We have performed the below steps to resolve the issue:
+
+- we have checked the current configuration of the automatic cleanup task with below command:
+
+`cat usr/lib/tmpfiles.d/tmp.conf`
+
+- We have then proceed with modifying the file using below command:
+
+`sudo vim usr/lib/tmpfiles.d/tmp.conf`
+
+- Inside the config file, we have disabled the following parameters by adding a comment sign "#" in front of them:
+
+`# v /tmp 1777 root root 10d ->` deletes the folder /tmp after 10 days
+
+`# v /vat/tmp 1777 root root 30d ->` deletes the folder /var/tmp after 30 days -> Here MD Core creates it's temporary files and these files and folders should not be deleted during functionality
+
+- after this activity has been completed, save the document, using the command
+
+`:wq`
+
+- We have implemented these changes by restarting the cleanup service using the below command
+
+`systemctl stop systemd-tmpfiles-setup.service systemd-tmpfiles-clean.timer`
+
+`systemctl start systemd-tmpfiles-setup.service systemd-tmpfiles-clean.timer`
+
+Once the above activities have been completed, the cleanup services should not affect MD Core functionality.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/portal/support).

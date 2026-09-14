@@ -1,12 +1,10 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/installation/metadefender-update-downloader-documentation -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Update Downloader Documentation
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The users can consult this web page or, alternatively, they can download the manual in pdf format from the link below:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**MetaDefender Update Downloader manual**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Finstallation%2Fmetadefender-update-downloader-documentation%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- [Download link](https://metascanbucket.s3.us-west-1.amazonaws.com/Metadefender/Update_Downloader/docs/MetaDefender%20Update%20Downloader%20-%20v3.5.0.pdf)
+- SHA256: B139A5F3D75C197D8A2A5BFBAE9B1CAA546F2F979F0B580E8A26E35B7CF7FE5A

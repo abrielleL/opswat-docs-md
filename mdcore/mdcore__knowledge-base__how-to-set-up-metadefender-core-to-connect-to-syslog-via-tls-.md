@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/how-to-set-up-metadefender-core-to-connect-to-syslog-via-tls- -->
 
-Too many requests
-# You're going a little too fast.
+# How to Set Up MetaDefender Core to Connect to Syslog via TLS?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to MetaDefender Core version **5.15.1** releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**In this version, MetaDefender Core introduces a user interface for configuring syslog settings** (refer to the [Release notes](/docs/mdcore/release-notes/release-notes)).
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Your Splunk server is configured to listen on a TLS port and is using a self-signed certificate.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fhow-to-set-up-metadefender-core-to-connect-to-syslog-via-tls-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+You can easily set up the syslog integration through the MetaDefender Core web UI:
+
+1. Access the **Web Dashboard**.
+2. Navigate to **Settings > Logs** to begin the configuration.
+
+3. Next, click on “Edit” to modify the syslog settings.
+
+4. You will now see an option in the settings to allow the use of self-signed certificates.
+
+5. Once enabled, the syslog connection status will show as “Connected,” indicating that MetaDefender Core has successfully established a connection with the syslog server.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

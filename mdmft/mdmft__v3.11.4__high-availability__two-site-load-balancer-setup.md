@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/high-availability/two-site-load-balancer-setup -->
 
-Too many requests
-# You're going a little too fast.
+# Load Balancer Setup
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
+### [Health Endpoint](/docs/mdmft/v3.11.4/high-availability/two-site-load-balancer-setup#health-endpoint)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The MetaDefender® MFT service exposes a dedicated health check endpoint designed for load balancer integration. Your load balancer can periodically poll this endpoint and use the HTTP response code to decide whether to route traffic to each node.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+| Property | Value |
+| --- | --- |
+| URL | `http://your-mft-server:8010/node_manager/health/ready` |
+| Method | GET |
+| Authentication | None required (publicly accessible) |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fhigh-availability%2Ftwo-site-load-balancer-setup%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+### [Routing Logic](/docs/mdmft/v3.11.4/high-availability/two-site-load-balancer-setup#routing-logic)
+
+- **Healthy**: Any `2xx` response means the node is ready to handle traffic.
+- **Unhealthy**: Any `5xx` response or request timeout means the node is not ready — traffic should be routed to other healthy nodes.

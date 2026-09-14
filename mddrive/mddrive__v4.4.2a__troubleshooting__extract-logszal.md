@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/troubleshooting/extract-logszal -->
 
-Too many requests
-# You're going a little too fast.
+# Generate a Drive Image
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+As an alternative to generating support packages and extracting log files, a MetaDefender Drive image can be generated from a Linux machine via terminal commands.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+### [Generate a MetaDefender Drive Image](/docs/mddrive/v4.4.2a/troubleshooting/extract-logszal#generate-a-metadefender-drive-image)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Insert the MetaDefender Drive that you want to clone into a running Linux machine.
+2. Launch the terminal, and run the following command:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Ftroubleshooting%2Fextract-logszal%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+lsblk -o name,serial,mountpoint
+
+3. Identify the drive you want to clone by the `serial` value, then copy its `name`. In the sample image below, the drive to be cloned is `/dev/sdb`
+
+A Linux terminal window showing all the mounted Drives
+
+4. Run the following command after replacing`/dev/sdx` with your drive's `name` and `/path/to/img/Drive.img.gz4` with the filesystem location and the file name where you want the image saved.
+
+sudo dd if=/dev/sdx bs=1024 status=progress | gzip -c > /path/to/img/Drive.img.gz4. fd
+
+.

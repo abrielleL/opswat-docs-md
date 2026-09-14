@@ -1,12 +1,41 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/netwall-diode-license/netwall-diode-license -->
 
-Too many requests
-# You're going a little too fast.
+# License Activation
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Before activating a license, users must be registered on my.opswat.com. Registration is free.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender Optical Diode (hereinafter Optical Diode) needs to be licensed to be operational. In this section we will show how to get a valid license file and how to apply it to the Optical Diode system.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Info
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Fnetwall-diode-license%2Fnetwall-diode-license%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+A license is only required on the Optical Diode BLUE side. There is no need to apply a license on the RED side.
+
+#### [Activating the Optical Diode](/docs/netwalldiode/v1.13.2/netwall-diode-license/netwall-diode-license#activating-the-optical-diode)
+
+First thing is to check the **Deployment ID**. This ID can be found in **Configuration -> License**. Deployment ID needs to be copied as we will need it to get a valid license file.
+
+Then browse to <my.opswat.com>and login with your user/password. Once correctly logged in, click on License Activation and fill in the following fields:
+
+- **Package:** Select MetaDefender NetWall from the dropdown.
+- **Activation Key:** Insert the Activation Key that your OPSWAT sales representative has provided you with.
+- **Deployment ID:** Paste the Deployment ID you've copied in the previous step
+- **Optional description:** In this optional field, a description for the license key can be included.
+
+Once filled in click on **Request Unlock Key** button and then click on **Download Unlock Key** to get the license file.
+
+Once you have the Unlock Key file, we need to come back to the Optical Diode UI to activate the key. Go to C**onfiguration -> License** and click on **Activate**.
+
+Click on **Select File** and browse to the Activation Key we have stored in the previous step. Then click on **Activate**. Once Active, you will be able to see new information in the fields Product ID, Product Name and Expiration.
+
+#### [Deactivating the Optical Diode](/docs/netwalldiode/v1.13.2/netwall-diode-license/netwall-diode-license#deactivating-the-optical-diode)
+
+Deactivation needs to be done in two steps:
+
+1. The Optical Diode needs to be deactivated from the GUI interface
+2. The deployment needs to be deactivated from the Activation Key (**This is done by OPSWAT Support Team**)
+
+Info
+
+To fully deactivate the Optical Diode please contact OPSWAT Support Team to assist.
+
+MetaDefender

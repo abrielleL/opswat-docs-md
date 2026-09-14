@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/installation/installing-metadefender-kiosk-from-the-command-line -->
 
-Too many requests
-# You're going a little too fast.
+# Installing MetaDefender Kiosk from the Command Line
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Command line options](/docs/mdkiosk/v4.8.5/installation/installing-metadefender-kiosk-from-the-command-line#command-line-options)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The following command line options are available with MetaDefender Kiosk. All arguments are case sensitive.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Finstallation%2Finstalling-metadefender-kiosk-from-the-command-line%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| Command Line Option | Description | Example |
+| --- | --- | --- |
+| /install | Install MetaDefender Kiosk | C:\MetaDefender_Kiosk.exe /install |
+| /uninstall | Uninstall MetaDefender Kiosk | C:\MetaDefender_Kiosk.exe /uninstall |
+| /log <log-file-name> | Create installation log file | C:\MetaDefender_Kiosk.exe /log c:\omsinst.log |
+| /quiet | Run MetaDefender Kiosk installation/uninstallation silently | C:\MetaDefender_Kiosk.exe /quiet C:\MetaDefender_Kiosk.exe /uninstall /quiet |
+| INSTALLLOCATION=<install-path> | Sets the installation location for MetaDefender Kiosk | C:\MetaDefender_Kiosk.exe /i INSTALLLOCATION="C:\MetaDefender" |

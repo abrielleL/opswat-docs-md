@@ -64,9 +64,17 @@ It is required to accept OPSWAT EULA, in order to use MetaDefender Drive.
 
 ## [**Engines**](/docs/mddrive/getting-started/boot-from-metadefender-drive#engines)
 
-- MetaDefender Drive will automatically update the engines if an active internet connection is enabled.
+- MetaDefender Drive will automatically update the engines if an active internet connection is enabled, and if it has not been provisioned with Drive Toolkit and has not had engines copied.
+
+For provisining Drive with Toolkit
+
+Please refer the documentation [MetaDefender Drive Toolkit](/docs/mddrive/getting-started/drive-toolkit)
+
 - You may see the message *Required engines are initializing* right below the engines list. MetaDefender Drive requires a minimum subset of initiated engines to function. As a result, it is required to wait for the engines initialization to finish before you can start performing any scan.
-- It is highly recommended that you update your engines regularly via an online connection, from [OPSWAT Central Management](https://docs.opswat.com/mddrive/configuration/settings---central-management) or using the Update Downloader tool for Offline Environment.
+- It is highly recommended that you regularly
+
+  - [Download Engine Updates](/docs/mddrive/getting-started/update-engines) for Internet Connected Environment or
+  - [Update Engines In Air-Gapped Environment](/docs/mddrive/advanced-usages/update-engines-in-airgapped-environment)
 
 Engine Update Minimum Requirements
 

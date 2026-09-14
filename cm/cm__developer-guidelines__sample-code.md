@@ -2,7 +2,7 @@
 
 # Sample Code
 
-We have enclosed sample applications to help you get started with the MetaDefender IT Access APIs as quickly as possible. You can read further documentation on the APIs within the guidance, or click on the Package to pull down the sample code. If you have any questions about the documentation or sample code contact us directly - we love to hear from our developer community.
+We have enclosed sample applications to help you get started with the My OPSWAT Central Management APIs as quickly as possible. You can read further documentation on the APIs within the guidance, or click on the Package to pull down the sample code. If you have any questions about the documentation or sample code contact us directly - we love to hear from our developer community.
 
 | 1 | Java | [Guidance 3.0](https://onlinehelp.opswat.com/metaaccess/attachments_5719849_1_OPSWAT-MetaAccess-JavaClientExample-v0.3.pdf) | [Package](https://onlinehelp.opswat.com/metaaccess/attachments_5719848_1_OPSWAT-MetaAccess-JavaClientExample.zip) |
 | ---- | ---- | ---- | ---- |

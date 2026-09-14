@@ -1,12 +1,30 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-4-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.4.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | Config: 1.4.0 OD-100: 1.0.1 |
+| --- | --- |
+| **Release date** | Nov 2023 |
+| **Scope** | Major release to include TPM suppor and encryption at rest |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [New Features, Improvements and Enhancements](/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-4-0#new-features-improvements-and-enhancements)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+|  | Details |
+| --- | --- |
+| Encryption at rest | Encrypt sensitive data at rest |
+| Mosquitto v2.0.18 | Mosquitto updated to version v2.0.18 |
+| MQTT Encryption support | MQTT support for encrypt/decrypt added |
+| OPC UA Encryption support | OPC UA support for encrypt/decrypt added |
+| GUI changes | Minor GUI changes |
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Frelease-notes%2Fnetwall-diode-v1-4-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Bug fixes](/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-4-0#bug-fixes)
+
+|  | Details |
+| --- | --- |
+| bugs | Several minor bugs fixed |
+
+## [Known limitations](/docs/netwalldiode/v1.13.2/release-notes/netwall-diode-v1-4-0#known-limitations)
+
+N/A
+
+MetaDefender

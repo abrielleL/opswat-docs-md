@@ -2,11 +2,11 @@
 
 # NGINX Ingress Controller Integration
 
-## OMetaScan NGINX Ingress Controller Configuration
+## [OMetaScan NGINX Ingress Controller Configuration](/docs/mdicap/integrations/ingress-solutions#ometascan-nginx-ingress-controller-configuration)
 
 **This document covers the new approach** using the OPSWAT-customised image on top of the NGINX Ingress Controller Helm chart ([maintained by NGINX Org](https://github.com/nginx/kubernetes-ingress)). For the Kubernetes Ingress Controller (EOL March 2026), starting from version of the controller 5.4.2 will be compatible with the Ingress Controller provided by NGINX Org.
 
-### ConfigMaps
+### [ConfigMaps](/docs/mdicap/integrations/ingress-solutions#configmaps)
 
 ConfigMaps allow you to decouple configuration artifacts from image content to keep containerized applications portable.
 
@@ -16,7 +16,7 @@ The ConfigMap API resource stores configuration data as key-value pairs. The dat
 | --- | --- | --- | --- |
 | enable-ometascan | bool | “false” | Enable or Disable ometascan module globally  **Note**: You must enable this config to use ometascan module |
 
-### Annotations
+### [Annotations](/docs/mdicap/integrations/ingress-solutions#annotations)
 
 | **Name** | **Type** | **Default** | **Usage** |
 | --- | --- | --- | --- |
@@ -42,9 +42,9 @@ The ConfigMap API resource stores configuration data as key-value pairs. The dat
 
 You can add these Kubernetes annotations to specific Ingress objects to customize their behavior.
 
-## OMetaScan NGINX Ingress on Minikube
+## [OMetaScan NGINX Ingress on Minikube](/docs/mdicap/integrations/ingress-solutions#ometascan-nginx-ingress-on-minikube)
 
-### Requirement
+### [Requirement](/docs/mdicap/integrations/ingress-solutions#requirement)
 
 - Minikube: <https://minikube.sigs.k8s.io/docs/>
 - NGINX Ingress with OMetascan module images on [Docker Hub](https://hub.docker.com/r/opswat/nginx-ingress)
@@ -53,11 +53,11 @@ You can add these Kubernetes annotations to specific Ingress objects to customiz
 
     - latest image: opswat/nginx-ingress
     - or specify the tag: opswat/nginx-ingress:controller-5.4.1_ometascan-1.5.0_r1
-- MD ICAP Server at least version v5.1.0, which has already enabled NGINX integration [NGINX Integration Configurations](/configuration/enable-integration-with-nginx)
+- MD ICAP Server at least version v5.1.0, which has already enabled NGINX integration [NGINX Integration Configurations](/docs/mdicap/configuration/enable-integration-with-nginx)
 
-### Pre-setup
+### [Pre-setup](/docs/mdicap/integrations/ingress-solutions#pre-setup)
 
-#### Enable Nginx ingress on Minikube
+#### [Enable Nginx ingress on Minikube](/docs/mdicap/integrations/ingress-solutions#enable-nginx-ingress-on-minikube)
 
 - Start minikube
 
@@ -75,7 +75,7 @@ The output is similar to:
 
 NAME CONTROLLER PARAMETERS AGE
 nginx nginx.org/ingress-controller <none> 10m
-#### Change the default Nginx Ingress image to Nginx Ingress with the OMetascan module image
+#### [Change the default Nginx Ingress image to Nginx Ingress with the OMetascan module image](/docs/mdicap/integrations/ingress-solutions#change-the-default-nginx-ingress-image-to-nginx-ingress-with-the-ometascan-module-image)
 
 - Update the default image to opswat/nginx-ingress using the following command:
 
@@ -104,7 +104,7 @@ The output is similar to:
 
 NAME READY STATUS RESTARTS AGE
 nginx-ingress-controller-785746b95c-djcjx 1/1 Running 0 119s
-#### Enable OMetascan Module
+#### [Enable OMetascan Module](/docs/mdicap/integrations/ingress-solutions#enable-ometascan-module)
 
 - Set **enable-ometascan: "true"** to turn on the OMetascan module on ConfigMaps of ingress-nginx-controller:
 
@@ -126,7 +126,7 @@ helm.sh/chart: nginx-ingress-2.5.1
 name: nginx-ingress
 namespace: default
 EOF
-#### Deploy Echo Server as Service A
+#### [Deploy Echo Server as Service A](/docs/mdicap/integrations/ingress-solutions#deploy-echo-server-as-service-a)
 
 refer to: <https://github.com/Ealenn/Echo-Server#kubernetes>
 
@@ -175,7 +175,7 @@ type: ClusterIP
 selector:
 app: echoserver
 EOF
-#### Example:
+#### [Example:](/docs/mdicap/integrations/ingress-solutions#example)
 
 - `/path1` rewrite to `/subpathA` (use ometascan)
 - `/path2` rewrite to `/subpathB` (use ometascan)
@@ -249,9 +249,9 @@ name: echoserver
 port:
 number: 80
 EOF
-## OMetaScan NGINX Ingress on Kubernetes
+## [OMetaScan NGINX Ingress on Kubernetes](/docs/mdicap/integrations/ingress-solutions#ometascan-nginx-ingress-on-kubernetes)
 
-### Requirements
+### [Requirements](/docs/mdicap/integrations/ingress-solutions#requirements)
 
 - An existing K8S cluster
 - Helm CLI
@@ -260,15 +260,15 @@ EOF
 # pull latest image
 docker pull opswat/nginx-ingress
 #or specific the tag
-docker pull opswat/nginx-ingress:controller-5.4.1_ometascan-1.5.0_r1
+docker pull opswat/nginx-ingress:controller-5.6.1_ometascan-1.5.1_r1
 
 - An existing MD ICAP Server on Kubernetes
 
-### Instructions
+### [Instructions](/docs/mdicap/integrations/ingress-solutions#instructions)
 
 Example:
 
-#### 1. Install NGINX Ingress Controller via Helm Chart
+#### [1. Install NGINX Ingress Controller via Helm Chart](/docs/mdicap/integrations/ingress-solutions#1-install-nginx-ingress-controller-via-helm-chart)
 
 To use the NGINX Ingress Controller with the Ometascan module, we need to change the image to OPSWAT's NGINX Ingress Controller image <https://hub.docker.com/r/opswat/nginx-ingress/tags>
 
@@ -278,12 +278,12 @@ controller:
 # Custom OPSWAT build
 image:
 repository: opswat/nginx-ingress
-tag: "controller-5.5.0_ometascan-1.5.0_r1"
+tag: "controller-5.6.1_ometascan-1.5.1_r1"
 
 Install Nginx Ingress via Helm
 
 helm install nginx-ingress oci://ghcr.io/nginx/charts/nginx-ingress \
---version 2.6.0 -f values.yaml
+--version 2.7.1 -f values.yaml
 
 Output:
 
@@ -313,7 +313,7 @@ nginx-ingress-controller-69fbfb9f44-frjgg 1/1 Running 0 69sInfo
 
 Make sure your nginx install with status of the pod nginx-ingress is running!
 
-#### 2. Enable Ometascan
+#### [2. Enable Ometascan](/docs/mdicap/integrations/ingress-solutions#2-enable-ometascan)
 
 Create the file `update-configmap-ingress-controller.yml`
 
@@ -328,7 +328,7 @@ enable-ometascan: "true"kubectl apply -f update-configmap-ingress-controller.yml
 Output:
 
 BashCopyconfigmap/nginx-ingress configured
-#### 3. Deploy A Service To Test with MetaDefender ICAP Server
+#### [3. Deploy A Service To Test with MetaDefender ICAP Server](/docs/mdicap/integrations/ingress-solutions#3-deploy-a-service-to-test-with-metadefender-icap-server)
 
 3.1. Create deployment sample:
 

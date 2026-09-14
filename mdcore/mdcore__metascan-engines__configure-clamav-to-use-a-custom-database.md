@@ -1,12 +1,32 @@
 <!-- source: https://www.opswat.com/docs/mdcore/metascan-engines/configure-clamav-to-use-a-custom-database -->
 
-Too many requests
-# You're going a little too fast.
+# Configure ClamAV to use a custom database
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+ClamAV allows you to create your own database to improve the detection, please see [this page](https://docs.clamav.net/manual/Signatures.html#creating-signatures-for-clamav) to lean more about how to create a custom database.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To use the custom database in MetaDefender Core:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- go to Inventory > Modules > Metascan > ClamAV
+- Enable Custom Database, set Custom Database Path to the custom database folder
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fmetascan-engines%2Fconfigure-clamav-to-use-a-custom-database%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+After saving the configuration, you can verify if the Metascan Core uses the new file or not by checking the ClamAV folder in **<MetaDefender Core installation folder>\data\engines\clamav_********_**\database**, if there is an file started with **EXT_** which means the configuration was set successfully.
+
+A simple test to validate this feature
+
+- Create a text file with this format: <**md5>**:<**file size>**:<**malware name>,** for example**:** 385141700748a2cfa2d746fb8899efe6:35:My_Malware_Name**,** save it with **.hdb** extension to a folder
+- Set the ClamAV custom database path to that folder
+- Scan the file which has the same MD5 in text file, ClamAV should detect the file as infected with "<malware name>.UNOFFICIAL" as a threat name
+
+### [Custom Database Example](/docs/mdcore/metascan-engines/configure-clamav-to-use-a-custom-database#custom-database-example)
+
+Disclaimer
+
+This information is provided for general informational purposes only. OPSWAT is not responsible for the accuracy or reliability of any information provided. The examples mentioned are for illustration only and do not constitute an endorsement by OPSWAT.
+
+- SecuriteInfo [<https://www.securiteinfo.com>]
+- Sanesecurity [<https://sanesecurity.com/>]
+- URLhaus [<https://urlhaus.abuse.ch/api/#clamav>]
+- PhishTank [<https://phishtank.com/>]
+- Interserver [<https://www.interserver.net/>]
+- Linux Malware Detect [<https://www.rfxn.com/projects/linux-malware-detect/>]
+- OpenPhish [<https://openphish.com/>]

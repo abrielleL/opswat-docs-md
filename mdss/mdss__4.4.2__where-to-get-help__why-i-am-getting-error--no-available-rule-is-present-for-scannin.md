@@ -1,12 +1,42 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/where-to-get-help/why-i-am-getting-error--no-available-rule-is-present-for-scannin -->
 
-Too many requests
-# You're going a little too fast.
+# Why I am getting error "No available rule is present for scanning"
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+When triggering a scan, you may encounter a scan failure with the following error message:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Error
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+opswat.mdcs.scanning.ScanFailedException: InitiateScanCommandHandler: Scan request for object failed. StatusCode: InternalServerError Error: No available rule is present for scanning.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fwhere-to-get-help%2Fwhy-i-am-getting-error--no-available-rule-is-present-for-scannin%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Cause](/docs/mdss/4.4.2/where-to-get-help/why-i-am-getting-error--no-available-rule-is-present-for-scannin#cause)
+
+This error typically occurs when the workflow name configured in MetaDefender for Secure Storage (MDSS) does not match the workflow name set in MetaDefender Core.
+
+MetaDefender Storage Security
+
+MetaDefender Core
+
+## [Steps to Resolve:](/docs/mdss/4.4.2/where-to-get-help/why-i-am-getting-error--no-available-rule-is-present-for-scannin#steps-to-resolve)
+
+1. **Log into MetaDefender Core**
+
+   - Navigate to Workflows.
+   - Identify the workflow associated with MDSS.
+   - The workflow name should be either: "MetaDefender Storage Security" or "MetaDefender for Secure Storage"
+2. **Verify and Update the Workflow in MDSS**
+
+   - If the workflow name in Core is "MetaDefender Storage Security", log into MDSS Configuration.
+   - Go to **Workflows** and click on your workflow
+
+- Edit the scan configuration and update the rule name to "MetaDefender Storage Security".
+
+- Ensure the workflow name exactly matches the one in Core.
+
+3. **Apply Changes and Restart the Service**
+
+- Click “Save” to save the configuration.
+- Restart the scanning service if necessary and retry the scan to verify if the issue is resolved.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/active-active-configuration -->
 
-Too many requests
-# You're going a little too fast.
+# Active-Active configuration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This guide explains how to configure an active-active deployment of MDSS where multiple instances can use the same shared external services for improved performance and scalability.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Overview](/docs/mdss/4.4.2/configuration/active-active-configuration#overview)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+In an active-active deployment, multiple MDSS instances work together using shared external components (RabbitMQ, PostgreSql, and Redis) to distribute workload, add redundancy and improve throughput. This configuration is particularly useful when handling large volumes of files.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Factive-active-configuration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Active-Active Configuration Behavior](/docs/mdss/4.4.2/configuration/active-active-configuration#active-active-configuration-behavior)
+
+In an active-active configuration, file processing operations are distributed dynamically across available instances:
+
+- **File Discovery** - any available MDSS instance can detect and identify files requiring processing
+- **File Scanning** - any available MDSS instance can perform the security scanning operation
+- **Remediation** - any available MDSS instance can execute the remediation actions
+
+#### [**Key Points**](/docs/mdss/4.4.2/configuration/active-active-configuration#key-points)
+
+- Operations may be handled by different instances (distributed processing) or by the same instance (consolidated processing)
+- The actual distribution depends on which instance processes the message first
+- This design ensures optimal load balancing and high availability across your deployment
+
+This approach maximizes system efficiency while maintaining consistent security coverage regardless of which specific instances handle each operation.
+
+## [External Services Deployment Options](/docs/mdss/4.4.2/configuration/active-active-configuration#external-services-deployment-options)
+
+External services are required for this type of deployment, a deployment and configuration guide is available here: [External Services Configuration](/docs/mdss/4.4.2/installation/external-services-configuration)

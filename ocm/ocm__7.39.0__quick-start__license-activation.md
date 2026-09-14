@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/quick-start/license-activation -->
 
-Too many requests
-# You're going a little too fast.
+# License Activation
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To activate your OPSWAT Central Management, navigate to the **Settings -> License** in the Web Management Console. If you have no valid license, you will only see your installation's Deployment ID.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Click on the **ACTIVATE** button to bring up the **Activation** menu, where you should choose from the available options:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fquick-start%2Flicense-activation%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Online Activation: The server will make a request to the OPSWAT license server for a license with your Activation key and Deployment ID.
+- Offline Activation: You can upload a license file that you manually activate your activation key from [My OPSWAT](https://my.opswat.com/portal/products).
+- Request Trial Key : If you don't have any activation key and you would like to evaluate Device Management feature, please contact our sales team at <https://www.opswat.com/contact>.

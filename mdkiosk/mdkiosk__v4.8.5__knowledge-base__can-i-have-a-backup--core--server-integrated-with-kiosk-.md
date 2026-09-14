@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/can-i-have-a-backup--core--server-integrated-with-kiosk- -->
 
-Too many requests
-# You're going a little too fast.
+# Can I have a backup (Core) server integrated with Kiosk?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Kiosk releases **after version 4.7.0**, deployed on both Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+In order to set up a back-up Core server from the Kiosk side you will have to take the following steps:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. In the Kiosk console, go to the **Configuration** section from the sidebar. Then, under the **Integration** tab, click on **"Backup MetaDefender Core Server."**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fcan-i-have-a-backup--core--server-integrated-with-kiosk-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+2. Click **“Add New Backup Server”**, then enter the required information: the **Server URL** and **API key** from your MetaDefender Core deployment. After that, click the **check icon** to verify the server connection.
+
+3. You’ll see a **“Connected”** notification, indicating that the backup server has been successfully set up.
+
+Support:
+
+If Further Assistance is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

@@ -2,13 +2,13 @@
 
 # API Client v1
 
-## [Overall](/docs/md-ot-security/v4.0.0/configuration/api-client#overall)
+## Overall
 
-## [Workflow overview](/docs/md-ot-security/v4.0.0/configuration/api-client#workflow-overview)
+## Workflow overview
 
-## [MetaDefender OT Security Configuration](/docs/md-ot-security/v4.0.0/configuration/api-client#metadefender-ot-security-configuration)
+## MetaDefender OT Security Configuration
 
-### [Create a MetaDefender OT Security User](/docs/md-ot-security/v4.0.0/configuration/api-client#create-a-metadefender-ot-security-user)
+### Create a MetaDefender OT Security User
 
 MetaDefender OT Security will utilize multiple APIs to communicate with its products. Access to the API is validated via a combination of credentials (Token). This user requires a minimum access level; do not use a Super Administrator account.
 
@@ -16,7 +16,7 @@ Create a user from **Enterprise** -> **User Management** → **User** → **Crea
 
 Clicking on the Save button → Create user successfully → Copy this API-Client Token to be used for authentication
 
-## [API](/docs/md-ot-security/v4.0.0/configuration/api-client#api)
+## API
 
 1. [Device] Get the server IP address
 
@@ -54,7 +54,7 @@ JavascriptCopy{
 }
 ]
 }
-### [2. [Device] Get device list](/docs/md-ot-security/v4.0.0/configuration/api-client#2-device-get-device-list)
+### 2. [Device] Get device list
 
 | Title | [Device] Get device list |
 | --- | --- |
@@ -226,7 +226,7 @@ JsonCopy{
 }
 ]
 }
-### [3. [Device] Get a device list by site id](/docs/md-ot-security/v4.0.0/configuration/api-client#3-device-get-a-device-list-by-site-id)
+### 3. [Device] Get a device list by site id
 
 | Title | [Device] Get device list by site id |
 | --- | --- |
@@ -313,7 +313,7 @@ JsonCopy{
 ]
 }
 }
-### [4. [Device] Get a device alert list](/docs/md-ot-security/v4.0.0/configuration/api-client#4-device-get-a-device-alert-list)
+### 4. [Device] Get a device alert list
 
 | Title | [Device] Get a device alert list |
 | --- | --- |
@@ -381,7 +381,7 @@ JsonCopy{
 "remainingPage": "1"
 }
 }
-### [5. [Device] Get the connection alert list](/docs/md-ot-security/v4.0.0/configuration/api-client#5-device-get-the-connection-alert-list)
+### 5. [Device] Get the connection alert list
 
 | Title | [Device] Get the connection alert list |
 | --- | --- |
@@ -429,7 +429,7 @@ JavascriptCopy{
 "remainingPage": "1"
 }
 }
-### [6. [Device] Get the Suricata alert list](/docs/md-ot-security/v4.0.0/configuration/api-client#6-device-get-the-suricata-alert-list)
+### 6. [Device] Get the Suricata alert list
 
 | Title | [Device] Get the Suricata alert list |
 | --- | --- |
@@ -505,7 +505,7 @@ JavascriptCopy{
 "remainingPage": "1"
 }
 }
-### [7. [Device] Get CVE list](/docs/md-ot-security/v4.0.0/configuration/api-client#7-device-get-cve-list)
+### 7. [Device] Get CVE list
 
 | Title | [Device] Get the list of CVEs for the device |
 | --- | --- |
@@ -574,7 +574,7 @@ JavascriptCopy{
 ]
 }
 }
-### [8. [Device] Get the list of CVEs for the device by site id](/docs/md-ot-security/v4.0.0/configuration/api-client#8-device-get-the-list-of-cves-for-the-device-by-site-id)
+### 8. [Device] Get the list of CVEs for the device by site id
 
 | Title | [Device] Get the list of CVEs for the device by site id |
 | --- | --- |
@@ -663,7 +663,7 @@ JavascriptCopy{
 }
 ]
 }
-### [9. [Components] Get component info](/docs/md-ot-security/v4.0.0/configuration/api-client#9-components-get-component-info)
+### 9. [Components] Get component info
 
 | Title | [Components] Get the list of Site and Sensor infor |
 | --- | --- |
@@ -713,7 +713,7 @@ JavascriptCopy{
 }
 ]
 }
-### [10. [Components] Get sites address](/docs/md-ot-security/v4.0.0/configuration/api-client#10-components-get-sites-address)
+### 10. [Components] Get sites address
 
 | Title | [Device] Get sites address |
 | --- | --- |
@@ -758,15 +758,15 @@ JavascriptCopy{
 }
 ]
 }
-## [API Patching PLC Device](/docs/md-ot-security/v4.0.0/configuration/api-client#api-patching-plc-device)
+## API Patching PLC Device
 
-### [Enterprise Manager - Update PLC Firmware by getting from the Cloud Repo or uploading Manualy](/docs/md-ot-security/v4.0.0/configuration/api-client#enterprise-manager---update-plc-firmware-by-getting-from-the-cloud-repo-or-uploading-manualy)
+### Enterprise Manager - Update PLC Firmware by getting from the Cloud Repo or uploading Manualy
 
 Navigate to the Enterprise Manager → Settings → Update Signatures & Definitions → PLC Firmware
 
 **Get from Cloud Repo**: we can filter by a specific **Article/Part No**.
 
-### [1.[Device Firmware File] Get available version](/docs/md-ot-security/v4.0.0/configuration/api-client#1device-firmware-file-get-available-version)
+### 1.[Device Firmware File] Get available version
 
 | Title | [Device Firmware File] Get available version |
 | --- | --- |
@@ -822,7 +822,7 @@ JavascriptCopy{
 }
 ]
 }
-### [2. [Device] Get the *device ID* for patching](/docs/md-ot-security/v4.0.0/configuration/api-client#2-device-get-the-device-id-for-patching)
+### 2. [Device] Get the *device ID* for patching
 
 | Title | [Device] Get the ***device ID*** for patching |
 | --- | --- |
@@ -943,7 +943,7 @@ JavascriptCopy{
 }
 ]
 }
-### [3. [Device] Get the list of CVEs for device](/docs/md-ot-security/v4.0.0/configuration/api-client#3-device-get-the-list-of-cves-for-device)
+### 3. [Device] Get the list of CVEs for device
 
 | Title | [Device] Get the list of CVEs for the device |
 | --- | --- |
@@ -1043,7 +1043,7 @@ JavascriptCopy{
 }
 ]
 }
-### [4. [Request Patching] Get list](/docs/md-ot-security/v4.0.0/configuration/api-client#4-request-patching-get-list)
+### 4. [Request Patching] Get list
 
 | Title | [Request Patching] Get list |
 | --- | --- |
@@ -1135,7 +1135,7 @@ JavascriptCopy{
 }
 ]
 }
-### [5. [Request Patching] Get detail](/docs/md-ot-security/v4.0.0/configuration/api-client#5-request-patching-get-detail)
+### 5. [Request Patching] Get detail
 
 | Title | [Request Patching] Get detail |
 | --- | --- |
@@ -1219,7 +1219,7 @@ JavascriptCopy{
 }
 ]
 }
-### [6. [Request Patching] Create request](/docs/md-ot-security/v4.0.0/configuration/api-client#6-request-patching-create-request)
+### 6. [Request Patching] Create request
 
 | Title | [Request Patching] Create request |
 | --- | --- |
@@ -1322,7 +1322,7 @@ JavascriptCopy{
 }
 ]
 }
-### [7. [Request Patching] Update request](/docs/md-ot-security/v4.0.0/configuration/api-client#7-request-patching-update-request)
+### 7. [Request Patching] Update request
 
 | Title | [Request Patching] Create request |
 | --- | --- |
@@ -1427,7 +1427,7 @@ JavascriptCopy{
 }
 ]
 }
-### [8. [Request Patching] Approve request](/docs/md-ot-security/v4.0.0/configuration/api-client#8-request-patching-approve-request)
+### 8. [Request Patching] Approve request
 
 | Title | [Request Patching] Approve request |
 | --- | --- |
@@ -1506,7 +1506,7 @@ JavascriptCopy{
 }
 ]
 }
-### [9. [Request Patching] Reject request](/docs/md-ot-security/v4.0.0/configuration/api-client#9-request-patching-reject-request)
+### 9. [Request Patching] Reject request
 
 | Title | [Request Patching] Reject request |
 | --- | --- |
@@ -1585,7 +1585,7 @@ JavascriptCopy{
 }
 ]
 }
-### [10. [Request Patching] Delete request](/docs/md-ot-security/v4.0.0/configuration/api-client#10-request-patching-delete-request)
+### 10. [Request Patching] Delete request
 
 | Title | [Request Patching] Delete request |
 | --- | --- |

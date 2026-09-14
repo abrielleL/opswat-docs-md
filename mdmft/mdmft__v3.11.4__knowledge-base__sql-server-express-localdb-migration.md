@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/sql-server-express-localdb-migration -->
 
-Too many requests
-# You're going a little too fast.
+# What to do if you are using SQL Server Express LocalDB
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Our product supports installation with SQL Server Express LocalDB, however, this database is intended for testing purposes only and is not recommended for production use.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+If you have installed the application using LocalDB and need to migrate to a full SQL Server instance for production use, our support team is here to help.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2Fsql-server-express-localdb-migration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+For assistance with migration, please contact our customer support team.
+
+Info
+
+When your application instance runs on SQL Server Express LocalDB, a warning banner appears for administrators, indicating that LocalDB is not recommended for production use. This banner can be dismissed but will reappear after one week as a reminder.
+
+SQL Server Express LocalDB Migration Warning Banner

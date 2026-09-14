@@ -1,12 +1,8 @@
 <!-- source: https://www.opswat.com/docs/ocm/installation/opswat-central-management-licensing -->
 
-Too many requests
-# You're going a little too fast.
+# OPSWAT Central Management licensing
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+By default, OPSWAT Central Management can manage up to 500 instances of each OPSWAT Products. However, a valid license is required for OPSWAT Central Management to manage certain OPSWAT products. These include:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2Finstallation%2Fopswat-central-management-licensing%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- User devices via MetaDefender Endpoint
+- MetaDefender Kiosk L-Series (Linux)

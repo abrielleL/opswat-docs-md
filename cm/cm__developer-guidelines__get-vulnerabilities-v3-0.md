@@ -28,7 +28,7 @@ https://gears.opswat.com/o/api/v3/cves
 | search | string | Body | Optional | A key word to search vulnerabilities. |  |
 | filter | object | Body | Optional | Specify filter criteria |  |
 | filter.severity | array | Body | Optional | Specify the severity of the vulnerabilities used for filtering. Value can be: "critical", "important", "moderate", "low", "unknown" |  |
-| filter.score | double | Body | Optional | Specify a score to filter vulnerabilities. MetaAccess returns vulnerabilities that have a score greater or equal to this value. You need to specify what score type in the field *filter.score_type;* otherwise, the error code 400 is returned |  |
+| filter.score | double | Body | Optional | Specify a score to filter vulnerabilities. My OPSWAT Central Management returns vulnerabilities that have a score greater or equal to this value. You need to specify what score type in the field *filter.score_type;* otherwise, the error code 400 is returned |  |
 | filter.score_type | string | Body | Optional | Specify what score type used to filter along with the field *filter.score* Value can be: "opswat_score", "cvss2_score", "cvss3_score" | opswat_score |
 | sort | object | Body | Optional | Specify how to sort devices in result-set By default: sort by CVE-ID in ASC order. |  |
 | sort.order | string | Body | Optional | Specify how to sort vulnerabilities in result-set Value can be: "asc", "desc" | asc |
@@ -38,7 +38,7 @@ https://gears.opswat.com/o/api/v3/cves
 
 ## Response HTTP Code
 
-See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
+See [APIs guidelines.](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 
 ## Response Parameters
 

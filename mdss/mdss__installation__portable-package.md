@@ -6,7 +6,7 @@ This guide provides instructions on how to deploy MetaDefender Storage Security 
 
 Info
 
-It's recommended to have the same dependencies as the ones required for the [offline installation](https://www.opswat.com/docs/mdss/installation/installing-offline-on-linux#installing-binary-packages) preinstalled on the target host machine.
+It's recommended to have the same dependencies as the ones required for the [offline installation](/docs/mdss/installation/linux-offline-installation#installing-binary-packages) preinstalled on the target host machine.
 
 ## [Downloading the portable toolkit](/docs/mdss/installation/portable-package#downloading-the-portable-toolkit)
 

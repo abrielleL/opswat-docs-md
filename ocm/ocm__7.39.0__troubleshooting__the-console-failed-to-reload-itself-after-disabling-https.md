@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/troubleshooting/the-console-failed-to-reload-itself-after-disabling-https -->
 
-Too many requests
-# You're going a little too fast.
+# The console failed to reload after disabling HTTPS in Secure Connection settings
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Type | Detail |
+| --- | --- |
+| Problem | After disabling HTTPS mode in [Secure Connection](/docs/ocm/7.39.0/configuration/enabling-https) settings, the console failed to load with an error related to a secure connection. |
+| Cause | The [Server URL](/docs/ocm/7.39.0/configuration/setting-up-domain) has not updated to **http://**. |
+| Troubleshooting | Can access the management console with **http://** prefix |
+| Solution | Manually change the Server URL prefix to **http://.** |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+After disabling HTTPS mode in [Secure Connection](/docs/ocm/7.39.0/configuration/enabling-https) settings without manually updating Server URL to HTTP, the console failed to reload .
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+For instance, you may see the error "This site can't provide a secure connection" on Google Chrome.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Ftroubleshooting%2Fthe-console-failed-to-reload-itself-after-disabling-https%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+One possible cause is that upon disabling HTTPS mode, the Server URL's protocol prefix was not updated to **http://** manually**.** By default, the console will be reloaded with the configured Server URL. In other words, it will be reloaded with https and as a result, the OCM instance cannot provide a secure connection, the web browser will encounter an error.
+
+You need to manually change the console URL to http on your web browser to able to access the console and follow the document [here](/docs/ocm/7.39.0/configuration/setting-up-domain) to update the Server URL to http.

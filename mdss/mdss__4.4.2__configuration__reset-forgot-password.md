@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/reset-forgot-password -->
 
-Too many requests
-# You're going a little too fast.
+# Reset/forgot password
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This functionality is available only when SMTP is configured and enabled. [How to configure SMTP here](/docs/mdss/4.4.2/configuration/smtp)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. From the Sign in page, click on **Forgot password?**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. This will redirect you to a page where you can provide either the **username** or the **email address** associated with the account you want to change the password for. To continue, please click **Submit**.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Freset-forgot-password%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+3. If the request is successful, an informative message will appear on the screen.
+
+4. An email will be sent to the email address associated with the account. By clicking on the **Reset password** button or directly on the link, you will be redirected to a new tab in browser to continue with the password reset.
+
+5. In the new tab, you are asked to provide the new password and to confirm it. Please click on **Submit** to finish the password reset.
+
+6. After resetting the password, you will be redirected to the login page and a confirmation email will be sent to your email address.

@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/ocm/integrations/adding-a-metadefender-kiosk-linux-instance -->
 
-Too many requests
-# You're going a little too fast.
+# Adding a MetaDefender Kiosk Linux instance
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to add a MetaDefender Kiosk Linux instance to OPSWAT Central Management.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+[A MetaDefender Kiosk Linux license](/docs/ocm/installation/activating-license)  must be activated for the OPSWAT Central Management server.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2Fintegrations%2Fadding-a-metadefender-kiosk-linux-instance%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. In the MetaDefender Kiosk Linux instance's user interface, navigate to **Network Configuration**. Fill in the required fields.
+
+- **Hostname:** The server URL of the OPSWAT Central Management server. The Server URL can be found in **Settings > Server Configuration > DEVICE API** under **Server URL.**
+
+- **Registration code:** The integration secret of the OPSWAT Central Management server. The registration code can be found in **Settings > Global Settings > ACCOUNT** under **Registration Code .**
+
+2. Select **Connect.** If successful, the MetaDefender Kiosk Linux should then show up in the OPSWAT Central Management console.
+
+Info
+
+The status of the MetaDefender Kiosk Linux instance changes to **Connected** once its version information is successfully fetched.

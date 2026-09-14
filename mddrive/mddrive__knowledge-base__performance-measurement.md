@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/mddrive/knowledge-base/performance-measurement -->
 
-Too many requests
-# You're going a little too fast.
+# Performance Metrics
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT can't guarantee the same performance in your environment. The scan performance varies significantly based on the size of the datasets and the hardware specifications of the target device.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This documentation page aims to demonstrate the relation between the hardware specifications and performance (throughput: files, GB, or MB per minute) when using MetaDefender Drive.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Test Info](/docs/mddrive/knowledge-base/performance-measurement#test-info)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fknowledge-base%2Fperformance-measurement%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Dell Latitude 7430
+
+  - BIOS: 1.19.2 (type: UEFI)
+  - Processor: 12th Gen Intel® Core™ i7-1270P (16 CPUs), ~2.2GHz
+  - RAM: 32 GB
+  - Hard Drive (BitLocker): SKHynix_HFS001TEJ9X115N
+- Test Data:
+
+  - Total files: **66,979** files
+  - Total size: **8376.32** MB
+- Drive version: 4.0.1 and 4.0.2, Tier: **ADVANCED**
+- Settings: **DEFAULT**
+
+### [Test Results 1: USB 64GB](/docs/mddrive/knowledge-base/performance-measurement#test-results-1-usb-64gb)
+
+### [Test Results 2: NVMe 1TB, Rev2](/docs/mddrive/knowledge-base/performance-measurement#test-results-2-nvme-1tb-rev2)

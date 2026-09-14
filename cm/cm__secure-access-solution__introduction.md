@@ -38,4 +38,4 @@ The diagram below explains how SDP works at a high-level:
 
 > **Info**
 >
-> For more detail, including an option to download a whitepaper, visit the [Secure ](https://www.opswat.com/products/metaaccess/metaaccess-sdp)[Access ](https://www.opswat.com/products/metadefender/it-ot-access/secure-access-it)[for IT](https://www.opswat.com/products/metaaccess/metaaccess-sdp) on [opswat.com](http://opspwat.com).
+> For more detail, including an option to download a whitepaper, visit the [My OPSWAT Central Management](https://www.opswat.com/products/metaaccess/metaaccess-sdp) on [opswat.com](http://opspwat.com).

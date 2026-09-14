@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/installation/metadefender-kiosk-documentation -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Kiosk Documentation
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [MetaDefender KIOSK Documentation](https://docs.opswat.com/netwall/netwall#metadefender-security-gateway-documentation)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The users can consult this web page or, alternatively, they can download the manual in pdf format from the link below:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**MetaDefender Kiosk Manual**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Finstallation%2Fmetadefender-kiosk-documentation%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- [Download link](https://metascanbucket.s3.us-west-1.amazonaws.com/kiosk/docs/MetaDefender+Kiosk+-+v4.8.3.pdf)
+- SHA256: 9BB644060CE8A8FE92645EAD93B20D6BA6E3D81239DAAD0EA322147C6AC6C780.
+
+**OPSWAT MetaDefender AGD Documentation_v1.9**
+
+- [Download link](https://metascanbucket.s3.us-west-1.amazonaws.com/Metadefender/Core/docs/OPSWAT%20MetaDefender%20AGD%20Documentation_v1.9.pdf)
+- SHA256: EEDDE2A51E95779986204CBB764878B339D2C3E15952D50A15FC8FF60BAD855C

@@ -2,6 +2,12 @@
 
 # Set Up Gateways
 
-To create load-balancing across your network, you should deploy multiple gateways within a gateway pool. You can use OPSWAT hosted gateways or private gateways
+You can choose either Private Gateways or OPSWAT Hosted Gateway to protect your applications. The below guidelines walk you through steps to deploy a private gateway or enable OPSWAT Hosted Gateway on your account.
 
-To enable seamless access, multiple gateways added to a gateway pool must be granted the same access permissions to your protected applications.
+- [Networking Requirements](https://www.opswat.com/docs/cm/secure-access-solution/networking-requirements)
+- [Private Gateway](https://www.opswat.com/docs/cm/secure-access-solution/private-gateway)
+- [OPSWAT Hosted Gateway](https://www.opswat.com/docs/cm/secure-access-solution/opswat-hosted-gateway)
+- [Maintaining SDP Gateways](https://www.opswat.com/docs/cm/secure-access-solution/maintaining-sdp-gateways)
+- [Gateway Pools](https://www.opswat.com/docs/cm/secure-access-solution/gateway-pools)
+
+We recommend you should deploy multiple private gateways for each gateway pool for high availability and load balancing.

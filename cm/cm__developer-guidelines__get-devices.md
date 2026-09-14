@@ -36,7 +36,7 @@ Notes:
 
 ## Response HTTP Code
 
-See details in the Response HTTP Code section in [this page](https://www.opswat.com/docs/cm/developer-guidelines/apis)
+See details in the Response HTTP Code section in [APIs](https://www.opswat.com/docs/cm/developer-guidelines/apis) guidelines.
 
 ## Response Parameters
 

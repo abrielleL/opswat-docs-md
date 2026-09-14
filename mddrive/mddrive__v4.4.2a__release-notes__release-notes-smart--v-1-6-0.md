@@ -1,12 +1,8 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/release-notes/release-notes-smart--v-1-6-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive Smart Touch v1.6.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Frelease-notes%2Frelease-notes-smart--v-1-6-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Feb 10, 2025** | This release includes new features and new user experiences |
+| **New Features** | - **About box**: Provide quick and comprehensive info. - **Improved engines update experience:** with auto retrying failed downloads silently and resuming partial downloads. - **Improved user experience** in cases:    - No SD Card found   - SD Card gets full or improperly formatted - **Improved Secure File Storage**: so that dirty files will only expose when plugged into a KIOSK |

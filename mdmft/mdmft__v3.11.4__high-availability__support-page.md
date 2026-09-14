@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/high-availability/support-page -->
 
-Too many requests
-# You're going a little too fast.
+# Support Page
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The Support page allows you to generate a diagnostic support package for troubleshooting.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Generating a Support Package](/docs/mdmft/v3.11.4/high-availability/support-page#generating-a-support-package)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fhigh-availability%2Fsupport-page%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. **Output Folder** — by default, a system-appropriate temporary directory is used. You can:
+
+   - Type a custom path directly into the text field.
+   - Click **Browse** to open a folder picker dialog.
+   - Click **Reset to Default** to restore the default output folder.
+2. Click **Create Support Package** to generate a ZIP file containing logs, configuration files, and diagnostic information.
+3. After generation:
+
+   - A **success banner** shows the file path and an **Open in Explorer** button to reveal the file in your system's file manager.
+   - If the operation fails, an **error banner** with details is displayed.

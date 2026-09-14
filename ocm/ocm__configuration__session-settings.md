@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/ocm/configuration/session-settings -->
 
-Too many requests
-# You're going a little too fast.
+# Session
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Administrators can set a user session timeout at **Settings > Server Configuration > Security > Session** to force users to re-log into OPSWAT Central Management console after their user sessions expire **.**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Session Timeout](/docs/ocm/configuration/session-settings#session-timeout)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2Fconfiguration%2Fsession-settings%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The user session timeout is a strict timeout limit for user sessions on the management console. When a user session reaches the defined timeout limit, it will become invalid regardless of the current user's activity status and the user is required to log into the management console again. The timeout value can be from 5 minutes to 1440 minutes.

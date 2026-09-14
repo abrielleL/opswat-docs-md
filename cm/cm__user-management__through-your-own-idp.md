@@ -10,7 +10,9 @@ My OPSWAT Central Management offers an integration with a 3rd-party Single Sign-
 
 My OPSWAT Central Management uses the secure and widely adopted industry standard Security Assertion Markup Language 2.0 (SAML 2.0), so that you can integrate easily with any large identity provider that supports SAML 2.0.
 
-To get started, go to your identity provider's site and follow the instructions to configure a SSO application for My OPSWAT Central Management. **Note: that** **My OPSWAT Central Management** **only accepts username as email address so that you have to configure user identify on IdP as email**
+To get started, go to your identity provider's site and follow the instructions to configure a SSO application for My OPSWAT Central Management.
+
+Note** My OPSWAT Central Management** **only accepts username as email address, so you have to configure user identify on IdP as email.**
 
 To integrate My OPSWAT Central Management with your own SSO service,
 
@@ -24,14 +26,13 @@ To integrate My OPSWAT Central Management with your own SSO service,
 8. Enter the IdP Log out URL and Error URL you got earlier from the identity provider if any
 9. Click the **Save** button.
 10. After you save your changes successfully, My OPSWAT Central Management generates a *My OPSWAT Central Management Login URL* and *My OPSWAT Central Management Entity ID.* In your identity provider, open the SSO application for My OPSWAT Central Management and update the following values: Postback SSO URL (also called the Assertion Consumer Service URL) with *My OPSWAT Central Management Login URL* and SP Entity ID with *My OPSWAT Central Management Entity ID*.
-11. Create IdP Mappings from your external provider in My OPSWAT Central Management (more information [here](https://docs.opswat.com/macloud-sdp/configuration---management/idp-method)) and assign users/groups you allow them to log into My OPSWAT Central Management console to that application on your IdP. Note that, you don't need to invite those users to My OPSWAT Central Management console under User Management; whenever they log into My OPSWAT Central Management console, their account will be set up and assigned to your account as a Read-Only user. You can update their role after that.
+11. Create IdP Mappings from your external provider in My OPSWAT Central Management (more information [here)](https://www.opswat.com/docs/cm/secure-access-solution/introduction) and assign users/groups you allow them to log into My OPSWAT Central Management console to that application on your IdP. Note that, you don't need to invite those users to My OPSWAT Central Management console under User Management; whenever they log into My OPSWAT Central Management console, their account will be set up and assigned to your account as a Read-Only user. You can update their role after that.
 
-Note: You can import information from step #5 through #8 from the IdP metadata file that you got earlier from the identity provider if it's available
+Note You can import information from step #5 through #8 from the IdP metadata file that you got earlier from the identity provider if it's available
 
-You can find detailed setup guideline for some identity providers below
+You can find detailed setup guideline for some identity providers below:
 
-[Microsoft Entra ID](https://www.opswat.com/docs/cm/user-management/with-azure)
-
-[PingOne](https://www.opswat.com/docs/cm/user-management/with-pingone)
-
-[Okta](https://www.opswat.com/docs/cm/user-management/with-okta)
+- [Provision console users via Microsoft EntraID](https://www.opswat.com/docs/cm/user-management/with-azure)
+- [Provision console users via Okta](https://www.opswat.com/docs/cm/user-management/with-okta)
+- [Provision console users via PingOne](https://www.opswat.com/docs/cm/user-management/with-pingone)
+- [Provision console users via ADFS](https://www.opswat.com/docs/cm/user-management/with-adfs)

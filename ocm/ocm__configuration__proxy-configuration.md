@@ -29,7 +29,7 @@ Supported bypass list format:
 
 **Note:** Each entry should be separated by the semi-colon character ';'.
 
-## System proxy settings
+## [System proxy settings](/docs/ocm/configuration/proxy-configuration#system-proxy-settings)
 
 In the setup wizard after a fresh installation, OPSWAT Central Management will attempt to locate the current system proxy settings and bypass list:
 

@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/what-is-the-retry-mechanism-for-metadefender-core-connecting-to- -->
 
-Too many requests
-# You're going a little too fast.
+# What is the retry mechanism for MetaDefender Core connecting to the remote Postgres Database?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core V4 and V5 releases deployed on Windows or Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender Core will automatically attempt to reconnect to the remote PostgreSQL database server in the event of a failure. The retry mechanism is configured to initiate a new attempt every 500 milliseconds, continuing until either a 180,000 millisecond timeout is reached or a maximum of 120 retries is completed.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Support:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhat-is-the-retry-mechanism-for-metadefender-core-connecting-to-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If **Further Assistance** is required then please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

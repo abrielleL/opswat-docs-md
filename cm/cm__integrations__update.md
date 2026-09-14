@@ -23,4 +23,4 @@
 
 > **Note:**
 >
-> After upload latest file is successfully. Please restart Splunk for update the new version on OPSWAT MetaAccess Add-on for Splunk.
+> After upload latest file is successfully. Please restart Splunk for update the new version on OPSWAT Add-on for Splunk.

@@ -2,6 +2,16 @@
 
 # Proactive DLP release notes
 
+## [v3.4.2](/docs/mdcore/release-notes/proactive-dlp-release-notes#v342)
+
+Release date: 9/10/2026
+
+- Added 42 new predefined sensitive information types across multiple countries and regions, including national identification numbers, tax identifiers, social security numbers, healthcare identifiers, and IPv6 addresses. Each new type includes validation rules, contextual keyword support, and parser test coverage to improve detection accuracy and reduce false positives (The full list can be found here: [LINK](https://www.opswat.com/docs/mdcore/proactive-dlp/detect-sensitive-information) )
+- Added the optional `engine.build_time` and `engine.support_duration_months` fields to the package manifest. MetaDefender Core can use this information to determine an engine’s lifecycle status and alert administrators when an engine is approaching or has reached end of support
+- Added detection response handling and support for the new file type ID used for MISP-tagged files identified by FTA
+- Fixed an issue with MetaDefender Core 5.18.1 where disabling the DLP engine could incorrectly generate crash notifications in the event log
+- Fixed a Windows concurrency issue during custom regex TSV file reloads that could cause `engineprocess.exe` to crash and trigger repeated engine recovery or installation attempts
+
 ## [v3.4.1](/docs/mdcore/release-notes/proactive-dlp-release-notes#v341)
 
 Release date: 8/10/2026

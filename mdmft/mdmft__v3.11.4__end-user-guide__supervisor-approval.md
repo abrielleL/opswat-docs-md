@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/supervisor-approval -->
 
-Too many requests
-# You're going a little too fast.
+# Supervisor Approval
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Supervisor approval adds an extra layer of security by requiring a supervisor or designated authority to approve file transfers or data sharing activities before they proceed.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+If "Pending" appears in the "Supervisor Approval Status" column, the file is awaiting supervisor's approval. Once approved, it will be set to "Approved."
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fsupervisor-approval%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Info
+
+Files in "Pending Supervisor Approval" state **cannot be downloaded** but can be deleted or shared. However, shared files will still require approval before other users can download them.
+
+For more information about a specific file's approval status, click on the three-dot menu and select "Supervisor Approval."

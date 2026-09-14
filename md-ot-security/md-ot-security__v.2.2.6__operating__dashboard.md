@@ -10,7 +10,7 @@ With its expertise and customization, the dashboard is also suitable for profess
 
 Overview is a collection of widgets. On dashboard, basic system statistics such as the number of devices by type (ICS devices and others), the number of connections by protocol types, the individual devices with their traffic and alert status are displayed as graphs and numbers.
 
-## General operations with widgets
+## [General operations with widgets](/docs/md-ot-security/v.2.2.6/operating/dashboard#general-operations-with-widgets)
 
 - Show more widgets: press button Add widgets to choose which widgets you want to show.
 - Hide widgets: press “X” button on the top of widget that you want to hide.
@@ -18,7 +18,7 @@ Overview is a collection of widgets. On dashboard, basic system statistics such 
 - Change widget location: hold the title of widget to drag the widget and drop at wanted location.
 - Choose different time intervals: On the top right of dashboard screen, tap on the REPORT button and the drop down list appear to choose a different time intervals.
 
-## Device status - Half pie chart
+## [Device status - Half pie chart](/docs/md-ot-security/v.2.2.6/operating/dashboard#device-status---half-pie-chart)
 
 Each half pie chart represents for a device type and the number of devices are being active or inactive on that type.
 
@@ -35,7 +35,7 @@ There are 3 colors that can be displayed on the half pie chart:
 
 You can click on the half pie chart or its name to go the assets page that display more detail information about device of that type.
 
-## Device type/Connections/Alerts - Full pie chart
+## [Device type/Connections/Alerts - Full pie chart](/docs/md-ot-security/v.2.2.6/operating/dashboard#device-typeconnectionsalerts---full-pie-chart)
 
 Type of device with a corresponding percentage base on the total number of devices will be displayed on the pie chart, each type is a different color.
 
@@ -44,7 +44,7 @@ The same with another pie chart:
 - Active internal/external connections percentage follow by protocols type,
 - Alerts for device and connection follow by alert criticality.
 
-## Connection with protocols - Line chart
+## [Connection with protocols - Line chart](/docs/md-ot-security/v.2.2.6/operating/dashboard#connection-with-protocols---line-chart)
 
 Each line chart will show the number of connections with that protocol in a certain time period.
 
@@ -54,7 +54,7 @@ You can choose to have the line chart show the change in quantity of the number 
 
 You can go to the connection list page of the respective protocol by tapping on the line chart or its name.
 
-## Summary of device and connection
+## [Summary of device and connection](/docs/md-ot-security/v.2.2.6/operating/dashboard#summary-of-device-and-connection)
 
 Each device followed by a graph showing its communication and statistics of alerts related to that device.
 
@@ -77,7 +77,7 @@ You can click on the icon or name of a specific device to see more detailed info
 
 On the left of device list is a slider that allows you to select the type of device (Controller, AWS/Historian, SCADA/HMI…) so that the list can be displayed.
 
-## Device Management
+## [Device Management](/docs/md-ot-security/v.2.2.6/operating/dashboard#device-management)
 
 Device management widget displays statistics about:
 
@@ -99,7 +99,7 @@ The Device Status may have 4 colors:
 
 **Note**: Tap on each device type will navigate to the assets of that device type.
 
-## Network Map
+## [Network Map](/docs/md-ot-security/v.2.2.6/operating/dashboard#network-map)
 
 Network widget is a map - it visualizes the real graph with all devices and connections.
 
@@ -107,11 +107,11 @@ On this widget, there is a status line that notify you about the overall status 
 
 Note: You can tap on Network widget to navigate to Network map visualization page.
 
-## Current Active Connection
+## [Current Active Connection](/docs/md-ot-security/v.2.2.6/operating/dashboard#current-active-connection)
 
 This widget shows the total number of devices in the system and the percentage of devices by type.
 
-## Internal Connections
+## [Internal Connections](/docs/md-ot-security/v.2.2.6/operating/dashboard#internal-connections)
 
 This widget shows the number of connections ***between internal devices*** grouped by ICS protocols (S7comm, DNP3, Modbus, Ethernet/IP, profinet, enip) and other protocols in general.
 
@@ -119,7 +119,7 @@ The line chart is divided into time points based on selecting time interval. (1h
 
 You can choose to hide/show the statistics line of the protocols by clicking on their names in the legends section.
 
-## External Connections
+## [External Connections](/docs/md-ot-security/v.2.2.6/operating/dashboard#external-connections)
 
 This widget shows the number of connections ***between devices in the system with remote hosts*** grouped by ICS protocols (S7comm, DNP3, Modbus, Ethernet/IP, profinet, enip) and other protocols in general.
 
@@ -127,15 +127,15 @@ The line chart is divided into time points based on selecting time interval (1h,
 
 You can choose to hide/show the statistics line of the protocols by clicking on their names in the legends section.
 
-## Total Internal Connections
+## [Total Internal Connections](/docs/md-ot-security/v.2.2.6/operating/dashboard#total-internal-connections)
 
 This widget shows the user the total number of active connections between ***internal devices*** and the percentage of connections with the ICS protocols + other protocols base on the total number of connections.
 
-## Total Connections with External
+## [Total Connections with External](/docs/md-ot-security/v.2.2.6/operating/dashboard#total-connections-with-external)
 
 This widget shows the user the total number of active connections between ***between devices in the system with remote hosts*** and the percentage of connections with the ICS protocols + other protocols base on the total number of connections.
 
-## Device Alerts Matrix
+## [Device Alerts Matrix](/docs/md-ot-security/v.2.2.6/operating/dashboard#device-alerts-matrix)
 
 This widget displays statistics about the number of alerts for internal connections based on device criticality and alert criticality.
 
@@ -143,7 +143,7 @@ You can set up for device criticality by setting device type criticality for eve
 
 Alert criticality can be set up in policy page while creating a policy.
 
-## Connection Alerts Matrix
+## [Connection Alerts Matrix](/docs/md-ot-security/v.2.2.6/operating/dashboard#connection-alerts-matrix)
 
 This widget displays statistics about the number of alerts for external connections based on device criticality and alert criticality.
 
@@ -151,7 +151,7 @@ You can set up for device criticality by setting device type criticality for eve
 
 Alert criticality can be set up in policy page while creating a policy.
 
-## Total number of alerts
+## [Total number of alerts](/docs/md-ot-security/v.2.2.6/operating/dashboard#total-number-of-alerts)
 
 This widget summarizes the alert status within 1h, 6h, 12h, 24h base on alert criticality (medium/high/severe).
 

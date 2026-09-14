@@ -1,12 +1,41 @@
 <!-- source: https://www.opswat.com/docs/mdemail/installation/wizard -->
 
-Too many requests
-# You're going a little too fast.
+# Wizard
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+When the installation is complete (for details see [Installation/Installation](/docs/mdemail/installation/installation)), MetaDefender Email Gateway Security icon is placed on your desktop.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The configuration wizard will guide you through the most important setup steps to have Email Gateway Security up and running. For a more comprehensive setup see Configuration section.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To proceed with the configuration wizard:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Finstallation%2Fwizard%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Double click Email Gateway Security icon on your desktop
+
+2. The wizard gets started. The wizard language may be selected on the starting page
+
+3. Accept the terms in the license agreement
+
+4. Optionally activate the product (activation may be performed later, for details about activation see [Installation/Licensing](/docs/mdemail/installation/licensing)) Best is to activate online immediately directly in the wizard.
+
+5. Set up and administrator account. This account will be the only one having access to the system initially.
+
+5. Perform a basic (only the bare necessary settings) or advanced (some more options atop the necessary settings) configuration
+
+## [Basic configuration](/docs/mdemail/installation/wizard#basic-configuration)
+
+With basic configuration provide the SMTP server URI (mail server or email gateway) where emails will be forwarded after processing on Email Gateway Security
+
+## [Advanced configuration](/docs/mdemail/installation/wizard#advanced-configuration)
+
+1. Select deployment mode (for details see [Installation/Evaluation](/docs/mdemail/installation/evaluation))
+
+1. Configure server profiles (for details see [Configuration/Server profiles](/docs/mdemail/configuration/server-profiles)):
+2. Provide the SMTP server URI (mail server or email gateway) where emails will be forwarded after processing on Email Gateway Security
+3. Enable or disable Zero-Day Malware Prevention (for details see [Configuration/Policy](/docs/mdemail/configuration/policy))
+4. Enable or disable Proactive Data Loss Prevention (for details see [Configuration/Policy](/docs/mdemail/configuration/policy))
+5. Provide the Active Directory server where users for licensing and groups for policy enforcement will be found
+
+After the wizard has been completed, Email Gateway Security needs to be inserted into the email flow to do email processing (for details see [Installation/Insertion](/docs/mdemail/installation/insertion)).
+
+Further reading
+
+For further setup possibilities see Configuration section.

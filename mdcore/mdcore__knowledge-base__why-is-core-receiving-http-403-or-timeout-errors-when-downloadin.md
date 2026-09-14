@@ -1,12 +1,30 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-is-core-receiving-http-403-or-timeout-errors-when-downloadin -->
 
-Too many requests
-# You're going a little too fast.
+# Why Is Core Receiving HTTP 403 or Timeout Errors when downloading engine updates from OCM?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [Issue](/docs/mdcore/knowledge-base/why-is-core-receiving-http-403-or-timeout-errors-when-downloadin#issue)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+You may see log messages similar to the following in your Core system:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+HtmlCopy[WARNING] 2025.04.10 18:23:40.925: (common.communication) Error while downloading file, url='QUrl("http://XXXXX:9000/console/core/metadescriptor?version=5.13.3&deployment=XXXXX&serial=0")', http_status='0', error='UnknownNetworkError', errorDetails='Connection timed out' [msgid: 485]
+[ERROR ] 2025.04.10 18:23:40.925: (common.update) Error parsing metadescriptor, message='Could not download metadescriptor' [msgid: 282]
+[WARNING] 2025.04.10 18:23:51.796: (common.communication) Error while downloading file, url='QUrl("http://XXXXX:9000/console/core/metadescriptor?version=5.13.3&deployment=XXXXX&serial=0")', http_status='403', error='ContentAccessDenied', errorDetails='Error transferring http://XXXXX:9000/console/core/metadescriptor?... - server replied: Forbidden' [msgid: 485]
+#### [**Cause**](/docs/mdcore/knowledge-base/why-is-core-receiving-http-403-or-timeout-errors-when-downloadin#cause)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-is-core-receiving-http-403-or-timeout-errors-when-downloadin%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+These messages usually mean that Core is having trouble connecting to OCM (OPSWAT Central Management). It may be caused by:
+
+- Network timeout or proxy issues
+- Port 9000/tcp being blocked
+- Restrictions in your firewall or proxy
+
+#### [Solution](/docs/mdcore/knowledge-base/why-is-core-receiving-http-403-or-timeout-errors-when-downloadin#solution)
+
+Please check the following:
+
+1. **Proxy or Network Settings** Make sure your network allows Core to connect to the OCM server. If you're using a proxy, verify that it allows traffic to the OCM address on port **9000/tcp**.
+2. **Firewall Rules** Ensure port **9000/tcp** is open between Core and OCM. This is required for downloading updates and descriptors.
+3. **More Info on Ports** For a full list of ports used by OCM, see the documentation here: [Recommended System Requirements - OPSWAT Central Management v7 - Legacy](https://www.opswat.com/docs/ocm/installation/recommended-system-requirements#ports-used).
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/portal/support).

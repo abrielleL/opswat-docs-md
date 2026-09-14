@@ -1,12 +1,30 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/supervisors-setup -->
 
-Too many requests
-# You're going a little too fast.
+# Default Supervisor Setup
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Default Supervisors can be assigned by selecting from a list or by using filters. These supervisors are authorized to approve files uploaded by any user from any container (OU or group).
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Warning
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Fsupervisors-setup%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If "Group Supervision" is enabled along with "Disable Group Supervision for Default Supervisors," Default Supervisors can only approve files from users who do not belong to a supervised container or group.
+
+Warning
+
+Active Directory synchronization must be enabled to configure default supervisors using OU filters.
+
+Files uploaded by local users can only be approved by supervisors defined in this section.
+
+Step-Based Approval: Supervisors assigned to specific approval levels can only approve or revoke files at their assigned level.
+
+Info
+
+Guests and external users cannot be assigned as Supervisors.
+
+Info
+
+Active Directory configuration for groups:
+
+1. Groups only: The "Setup Supervisors" page displays only the explicitly included groups.
+2. Groups and OUs: The page displays all groups from the connected Active Directory. This ensures visibility for users who belong to an OU but are not part of an explicitly included group.

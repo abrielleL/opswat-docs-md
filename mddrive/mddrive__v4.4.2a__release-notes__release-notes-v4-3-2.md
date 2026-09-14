@@ -1,12 +1,8 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/release-notes/release-notes-v4-3-2 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v4.3.2
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Frelease-notes%2Frelease-notes-v4-3-2%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |  |
+| --- | --- | --- |
+| **Released on June 11, 2025** | This release includes enhancements focused on improving performance, increasing visibility, simplifying report syncing, and ensuring scan environments meet the recommended hardware specifications. |  |
+| **New Enhancements** | **- Auto-Syncing** **Report via MetaDefender Kiosk:** For offline deployments, automatically upload scan reports to My OPSWAT Central Management server via MetaDefender Kiosk  **- Efficient Large File Handling :** Expanded internal storage to ensure robust scans for large files and complex archives  **- USB Port Speed Visibility for Performance Awareness :** Display the USB port type (e.g., USB 2.0 or 3.0) used during boot for better visibility into the physical connection  **-Improved File Path Readability on Scan Reports:** Scan reports now display clear, more readable paths, even when original file names contain invalid or non-standard characters  **- Self-Signed Chain Certificates Support :** Connect to My OPSWAT Central Management via trusted internal TLS/SSL certificates |  |

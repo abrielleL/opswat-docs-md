@@ -81,16 +81,16 @@ Detailed information of dataset below will be used for testing:
 
 Product versions:
 
-- MetaDefender Core version 5.21.0
+- MetaDefender Core version 5.22.0
 - Engines:
 
   - Metascan 5: Ahnlab, Bitdefender, ClamAV, ESET, K7
   - Metascan 10: Metascan 5 + Avira, Varist, IKARUS, Quick Heal, TACHYON
   - Metascan MAX: Metascan 10 + Lionic, CMC, CrowdStrike Falcon ML, Aurora, Trellix, Xcitium, RocketCyber, Sophos, Webroot SMD, Xvirus Anti-Malware
-  - Deep CDR: 8.0.1
-  - Proactive DLP: 3.4.0
-  - Archive: 8.0.2
-  - File type analysis: 8.0.2
+  - Deep CDR: 8.0.3
+  - Proactive DLP: 3.4.1
+  - Archive: 8.0.3
+  - File type analysis: 8.0.3
   - File-based vulnerability assessment: 4.57-236
   - Adaptive Sandbox: 3.2.0
 
@@ -141,7 +141,7 @@ Product versions:
 | **Network usage** |  |
 | **Disk usage** |  |
 
-**MetaDefender Core with Metascan MAX + Deep CDR + Proactive DLP + Vulnerability + Sandbox:**
+**MetaDefender Core with Metascan 20 + Deep CDR + Proactive DLP + Vulnerability + Sandbox:**
 
 |  | Utilization charts |
 | --- | --- |

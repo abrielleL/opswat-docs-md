@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-note-v4-2-1 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v4.2.1
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [MetaDefender Drive v4.2.1](/docs/mddrive/release-notes/release-note-v4-2-1#metadefender-drive-v421)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-note-v4-2-1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Feb 21, 2025** | A minor release with enhanced user experience, improved file calculation accuracy, and optimized disk management. |
+| **New Enhancements** | **Enhanced Disk Status Visibility**: Improved UI/UX for the Disks interface, providing clearer insights into disk status.    **Improved File Calculation During Scans**: The scan process now displays a *Calculating* message instead of showing the number 0 during file counting.  **Optimized Log Level Settings**: To prevent full disk issues, the *Optimized* option is now the default setting. |
+| **Bug Fix** | **SAS Hard Drive Scanning Freeze**: Resolved the issue of scanning process freezing while scanning SAS hard drives, ensuring a smoother and reliable scanning experience. |
+| **Known Issue** | MetaDefender Drive may run out of space under certain conditions. Clearing space by [removing outdated reports](https://www.opswat.com/docs/mddrive/configuration/preferences-----reports) or [reducing the log level](https://www.opswat.com/docs/mddrive/configuration/preferences-----log-level) is recommended. This issue is scheduled to be fixed in the next release. |

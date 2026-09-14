@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/password-strength -->
 
-Too many requests
-# You're going a little too fast.
+# Password strength
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code Always use strong passwords!
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When changing your password, a strength indicator will show colored bars. Aim for a strong (green) password by following these guidelines:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fpassword-strength%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Use at least 12 characters
+- Avoid repeating words or characters
+- Use uncommon words
+- Include special characters and numbers

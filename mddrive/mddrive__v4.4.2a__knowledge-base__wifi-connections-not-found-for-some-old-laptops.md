@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/knowledge-base/wifi-connections-not-found-for-some-old-laptops -->
 
-Too many requests
-# You're going a little too fast.
+# No Wi-Fi Adapter Found
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Issue](/docs/mddrive/v4.4.2a/knowledge-base/wifi-connections-not-found-for-some-old-laptops#issue)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+While booting, no Wi-Fi networks are detected, and the error message *"No Wi-Fi Adapter Found"* is displayed.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+“No Wi-fi Adapter Found” message
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fknowledge-base%2Fwifi-connections-not-found-for-some-old-laptops%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Cause](/docs/mddrive/v4.4.2a/knowledge-base/wifi-connections-not-found-for-some-old-laptops#cause)
+
+MetaDefender Drive operating system can't detect Wi-Fi drivers on older devices.
+
+## [Solution](/docs/mddrive/v4.4.2a/knowledge-base/wifi-connections-not-found-for-some-old-laptops#solution)
+
+Use an Ethernet cable or a USB Wi-Fi dongle.
+
+The following are the Wi-Fi dongles tested by OPSWAT's engineering team and confirmed to be detected by MetaDefender Drive:
+
+- Ralink Technology MT7601U Wireless Adapter
+- D-link Wireless‑N Nano USB Adapter DWA‑131
+- Lb-link 150mbps Mini USB 802.11n/g/b
+- TPLink TL-WN725N

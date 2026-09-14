@@ -1,12 +1,57 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/information-regarding-how-files-are-processed-and-db-usage-by-co -->
 
-Too many requests
-# You're going a little too fast.
+# Information regarding how files are processed and DB usage by Core
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+# [**File Processing Workflow and DB Query Behavior**](/docs/mdcore/knowledge-base/information-regarding-how-files-are-processed-and-db-usage-by-co#-file-processing-workflow-and-db-query-behavior)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [**Initial Request Handling**](/docs/mdcore/knowledge-base/information-regarding-how-files-are-processed-and-db-usage-by-co#-initial-request-handling)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Upon receiving a new file processing request, Metadefender Core performs the following:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Finformation-regarding-how-files-are-processed-and-db-usage-by-co%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- **Query Type:** `INSERT`
+- **Purpose:** Log the initial state of the request in the primary request table
+- **Timing:** Triggered as soon as a request enters the processing queue
+
+This ensures traceability and readiness for downstream scanning actions.
+
+## [**AV Engine Full Scan Integration**](/docs/mdcore/knowledge-base/information-regarding-how-files-are-processed-and-db-usage-by-co#av-engine-full-scan-integration)
+
+Once we receive the complete scan report from **Metascan AV engines**, a secondary insert operation is performed:
+
+- **Query Type:** `INSERT` (into a different table)
+- **Purpose:** Store AV scan results associated with the file
+- **Timing:** Executed immediately after all AV engines finish scanning
+
+This result set is stored separately from the initial request metadata.
+
+## [**Final State Update**](/docs/mdcore/knowledge-base/information-regarding-how-files-are-processed-and-db-usage-by-co#-final-state-update)
+
+After all processing stages are completed—including but not limited to:
+
+- Filetype validation engine
+- AV engines
+- CDR (Content Disarm & Reconstruction), if applicable
+- DLP (Data Loss Prevention)
+
+We finalize the request:
+
+- **Query Type:** `UPDATE`
+- **Purpose:** Reflect the final status of the request in the DB
+- **Timing:** Triggered after successful completion of all components
+
+## [**Summary**](/docs/mdcore/knowledge-base/information-regarding-how-files-are-processed-and-db-usage-by-co#summary)
+
+Typical file processing involves **three DB queries**:
+
+| Stage | DB Operation | Purpose |
+| --- | --- | --- |
+| Request received | `INSERT` | Record initial request state |
+| AV scan results completed | `INSERT` | Store detailed AV findings |
+| All stages finalized | `UPDATE` | Mark the request as complete |
+
+## [**MD Core & Reader Instances: Not Compatible**](/docs/mdcore/knowledge-base/information-regarding-how-files-are-processed-and-db-usage-by-co#-md-core--reader-instances-not-compatible)
+
+We’ve evaluated using **reader instances** in the database layer to potentially optimize performance. However:
+
+- **Why we can't use them:** Our system requires frequent `INSERT` and `UPDATE` operations that reader instances typically do not support.
+- **Implication:** MD Core must interact with write-enabled database instances to maintain data consistency and support real-time updates.

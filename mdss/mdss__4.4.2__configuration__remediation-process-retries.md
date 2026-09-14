@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/remediation-process-retries -->
 
-Too many requests
-# You're going a little too fast.
+# Remediation Process Retries
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The remediation process includes automatic retry functionality to handle transient failures. When processing each file, the system will attempt up to **3 retries** if the initial remediation attempt fails. There is a **30-second interval** between each retry attempt to allow for temporary issues to resolve.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The retry interval is configurable through the `POLLY_POST_ACTION_RETRY_TIME` environment variable, allowing you to adjust the timing based on your specific requirements and infrastructure constraints.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Configuration Example](/docs/mdss/4.4.2/configuration/remediation-process-retries#configuration-example)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Fremediation-process-retries%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To extend the retry interval to 60 seconds, add the following to your `customer.env` file (instructions [here](/docs/mdss/4.4.2/configuration/custom-configuration)):
+
+BashCopyPOLLY_POST_ACTION_RETRY_TIME=60

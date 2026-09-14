@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/knowledge-base/restoring-metadefender-drive -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive Fails to Boot
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Issue](/docs/mddrive/v4.4.2a/knowledge-base/restoring-metadefender-drive#issue)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender Drive fails to boot, and/or the operating system detects it as a corrupted storage partition.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Solution](/docs/mddrive/v4.4.2a/knowledge-base/restoring-metadefender-drive#solution)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fknowledge-base%2Frestoring-metadefender-drive%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To recover a possibly corrupted MetaDefender Drive, you can try the following methods:
+
+### [1. Using MetaDefender Drive Toolkit](/docs/mddrive/v4.4.2a/knowledge-base/restoring-metadefender-drive#1-using-metadefender-drive-toolkit)
+
+**If you can't boot your MetaDefender Drive or you do not have access to the internet:** Follow the instructions to [create and flash a drive using MetaDefender Drive Toolkit](https://www.opswat.com/docs/mddrive/maintenance/drive-toolkit).
+
+**If you can boot your MetaDefender Drive with internet access:** Check if an update is available for the Drive software by going to **Settings** → **Update** and clicking **Check for Updates**.
+
+### [2. Using a Bootable USB Drive Creation Tool](/docs/mddrive/v4.4.2a/knowledge-base/restoring-metadefender-drive#2-using-a-bootable-usb-drive-creation-tool)
+
+If the issue wasn't resolved using MetaDefender Drive Toolkit, there is a high chance that your MetaDefender Drive is corrupted. You can use a bootable USB drive creation tool, such as [Rufus](https://rufus.ie/en), to recreate the corrupted MetaDefender Drive into a bootable USB drive. Then, you can repeat the process of using MetaDefender Drive Toolkit to restore your MetaDefender Drive.
+
+Recreating a bootable USB drive using Rufus

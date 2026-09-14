@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-am-i-getting-an-error-when-installing-metadefender-core-on-l -->
 
-Too many requests
-# You're going a little too fast.
+# Why am I getting an error when installing MetaDefender Core on Linux in an air-gap environment?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core releases deployed on Linux.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+#### [Issue:](/docs/mdcore/knowledge-base/why-am-i-getting-an-error-when-installing-metadefender-core-on-l#issue)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- When installing the MetaDefender Core package on a Linux machine via the `dnf`, `yum`, or `apt` command in an air-gap environment, you may encounter an error.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-am-i-getting-an-error-when-installing-metadefender-core-on-l%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+#### [Main cause:](/docs/mdcore/knowledge-base/why-am-i-getting-an-error-when-installing-metadefender-core-on-l#main-cause)
+
+- When performing an installation via a package manager (`dnf`, `yum`, `apt`), the system attempts to reach out to a package repository to obtain information about the package being installed. In an air-gap environment, if a local repository is not configured, the download or upgrade process via the package manager will fail.
+
+#### [Resolution:](/docs/mdcore/knowledge-base/why-am-i-getting-an-error-when-installing-metadefender-core-on-l#resolution)
+
+- Install the package using a local installation method, such as the native `rpm` or `dpkg` command.
+
+Support:
+
+If the problem still persist, please proceed to [**create a support case or chat with our support engineer.**](https://my.opswat.com/portal/support-services) for futher assistant.

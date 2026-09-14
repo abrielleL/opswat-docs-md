@@ -1,12 +1,42 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/newsletter/linux -->
 
-Too many requests
-# You're going a little too fast.
+# Linux
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [**Linux Applications**](/docs/mdsdk/newsletter/linux#linux-applications)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**These are the applications recently added to our catalog. For a full listing of the catalog, please go to:**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+[**Linux Support Chart**](https://software.opswat.com/OESIS_V4/Linux/docs/support_charts/support_charts.html)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Fnewsletter%2Flinux%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| **Vendor** | **Application** | **Version** | **Platform** | **Disc** | **Mgn** | **AR** | **Vuln** | **PD** | **AP** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Tanium | Tanium Enforce 7.6 |  |  | **o** | **o** |  |  |  |  |
+| Cato Networks | Cato Client | <= | x64, ARM | **o** | **o** |  |  |  |  |
+| Flatpak | Flatpak |  |  | **o** | **o** |  |  |  |  |
+
+**KEY CHART:**
+
+**Platform**: which platform does this apply to:
+
+- x64, UWP, ARM on Windows OS devices
+- Intel, Mx on macOS devices
+
+**Disc**.: Discovery of the application is supported.
+
+**Mgn**.: Manageability of the application is supported.
+
+**AR**: Removal of the application is supported.
+
+**Vuln**.: Vulnerability Assessment of the application is supported.
+
+**PD**: Patch Detection of the application is supported.
+
+**AP**: Auto-Patching of the application is supported.
+
+---
+
+**✓- Supported**
+
+**++ - Recently Added**
+
+**o - Coming soon**

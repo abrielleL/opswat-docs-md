@@ -1,12 +1,35 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/supported-cab-files-for-deep-cdr -->
 
-Too many requests
-# You're going a little too fast.
+# What CAB files are Supported/Non-Supported by MetaDefender’s Deep CDR?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core V5 and V4 releases deployed on Windows or Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Please Note:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+It is important to note that, among the archive files with a **.cab** filename extension, there are actually two distinct file formats, one of which is supported by Metadefender’s Deep CDR, and one of which is not.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fsupported-cab-files-for-deep-cdr%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The differences between the two **.cab** formats are outlined below.
+
+| Type ID | **Description** | **Support to extract** |
+| --- | --- | --- |
+| CAB | Microsoft Cabinet Archive | **YES** |
+| InstallShieldCAB | InstallShield Cabinet Archive | **NO** |
+
+### [1. Microsoft Cabinet, Signature: MSCF](/docs/mdcore/knowledge-base/supported-cab-files-for-deep-cdr#1-microsoft-cabinet-signature-mscf)
+
+- **Cabinet** (or **CAB**) is a Microsoft Windows archive-file format that supports lossless data compression and embedded digital certificates that are used for maintaining archive integrity.
+- **Cabinet** files have **.cab** filename extensions.
+- **Cabinet** files are recognized by their first 4 bytes: **MSCF**.
+- *Cabinet** files were originally known as **Diamond** files.
+
+### [2. InstallShield Cabinet, Signature: ISC](/docs/mdcore/knowledge-base/supported-cab-files-for-deep-cdr#2-installshield-cabinet-signature-isc)
+
+- **InstallShield CAB** files are also archive files, but they are used by the installer program, InstallShield for its own proprietary archiving formats. Hence, they are distinct from **Microsoft Cabinet** files.
+- **InstallShield CAB** files also have .**cab** file name extensions.
+- **InstallShield CAB** file headers are not the same as **Microsoft CAB** files, so they are incompatible and cannot be manipulated or edited with the programs that are made to interact with the standard **Cabinet** format - including MetaDefender Core’s Deep CDR.
+- There are actually numerous other (Non-Microsoft) installers that use the **.cab** extension for their proprietary archiving formats, but **InstallShield CAB** files are the most common.
+- *InstallShield CAB** files are recognized by their first 3 bytes: **ISC**.
+
+Support:
+
+For further guidance regarding supported and non-supported **Cabinet** files, please follow these instructions on [How to Create Support Package With Bundle Tools?](/docs/mdcore/troubleshooting/how-to-create-support-package-), before [creating a support case or chatting with our support engineer](https://my.opswat.com/portal/support).

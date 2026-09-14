@@ -1,12 +1,32 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/knowledge-base/mapping-values-between-GetVersion-and-patching-metadata -->
 
-Too many requests
-# You're going a little too fast.
+# Mapping Architecture Values Between Compliance Output and Patching Metadata
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to MetaDefender Endpoint Security SDK releases deployed on Windows, Linux, MacOS.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Overview](/docs/mdsdk/knowledge-base/mapping-values-between-GetVersion-and-patching-metadata#overview)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+This article explains how to map the `architecture.name` value returned from the SDK’s GetVersion to the `arch` field in `patch_associations.json` and the `architecture` field in the `download_links` array of `patch_aggregation.json`. This mapping ensures that patch selection and download processes work correctly across different platforms and architectures.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Fknowledge-base%2Fmapping-values-between-GetVersion-and-patching-metadata%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Table mapping](/docs/mdsdk/knowledge-base/mapping-values-between-GetVersion-and-patching-metadata#table-mapping)
+
+| `architecture.name` **from GetVersion** **output** | `arch` **from** `patch_associations.json` | `download_links[].architecture` **from** `patch_aggregation.json` |
+| --- | --- | --- |
+| `aarch64` | `arm64` | `arm64` |
+| `arm64` | `arm64` | `arm64` |
+| `arm` | `arm`(*) | `arm`(*) |
+| `Intel Itanium` | `Intel Itanium`(*) | `Intel Itanium`(*) |
+| `i386` | `32-bit` | `32-bit` |
+| `i386:x86-64` | `i386:x86-64`(*) | `i386:x86-64`(*) |
+| `n/a` | Cannot map | Cannot map |
+| `N/A` | Cannot map | Cannot map |
+| `x32` | `32-bit` | `32-bit` |
+| `x64` | `64-bit` | `64-bit` |
+| `x86` | `32-bit` | `32-bit` |
+| `x86_64` | `64-bit` or `x86_64` | `64-bit` |
+
+(*) This value is not present in the current JSON file as there are no supported products for patching at this time. However, this field may be populated in future releases when additional products become available for patching support.
+
+Support
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

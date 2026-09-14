@@ -71,7 +71,7 @@ terraform apply
 
 Before starting with the installation, Storage Security needs that MetaDefender Core is installed, if you haven´t already installed it please follow this page
 
-For having MetaDefender Storage Security in a Single Compute Engine VM as showed in [Single Instance VM Architecture](/docs/mdss/metadefender-storage-security/4.3.0/installation/architecture-examples-in-csps) for GCP, it is needed to follow the next steps:
+For having MetaDefender Storage Security in a Single Compute Engine VM as showed in [Single Instance VM Architecture](/docs/mdss/installation/architecture-examples-in-csps) for GCP, it is needed to follow the next steps:
 
 #### [1. Create Resource Group](/docs/mdss/installation/deploy-using-google-compute-engines#1-create-resource-group)
 

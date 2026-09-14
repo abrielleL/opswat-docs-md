@@ -1,12 +1,37 @@
 <!-- source: https://www.opswat.com/docs/mdcore/v5.21.0/troubleshooting/windows-temporary-folder-path-changes-for-system-account -->
 
-Too many requests
-# You're going a little too fast.
+# Windows Temporary Folder Path Changes for SYSTEM Account
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Overview](/docs/mdcore/v5.21.0/troubleshooting/windows-temporary-folder-path-changes-for-system-account#overview)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Microsoft has recently (Feb 2026) introduced security improvements that change the default temporary folder location for services and applications running under the **SYSTEM** account.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+This is a Windows operating system change and is not related to any changes in MetaDefender Core product.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fv5.21.0%2Ftroubleshooting%2Fwindows-temporary-folder-path-changes-for-system-account%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [What Changed?](/docs/mdcore/v5.21.0/troubleshooting/windows-temporary-folder-path-changes-for-system-account#what-changed)
+
+Microsoft introduced a new secure temporary folder location called `C:\Windows\SystemTemp` specifically for processes running as the SYSTEM account. This folder has stricter security permissions to prevent path redirection attacks.
+
+### [Previous Behavior](/docs/mdcore/v5.21.0/troubleshooting/windows-temporary-folder-path-changes-for-system-account#previous-behavior)
+
+- SYSTEM account temp folder: `C:\Windows\Temp`
+
+### [New Behavior](/docs/mdcore/v5.21.0/troubleshooting/windows-temporary-folder-path-changes-for-system-account#new-behavior)
+
+- SYSTEM account temp folder: `C:\Windows\SystemTemp`
+
+**Note:** This change only affects applications running as the **SYSTEM** account. Applications running under user accounts are not affected and will continue to use their existing temp folder locations.
+
+### [What You Might Observe](/docs/mdcore/v5.21.0/troubleshooting/windows-temporary-folder-path-changes-for-system-account#what-you-might-observe)
+
+If your environment is affected, you may notice:
+
+- Temporary files being created in `C:\Windows\SystemTemp` instead of `C:\Windows\Temp` .
+- Applications that hardcode the path to `C:\Windows\Temp` may not find expected temporary files.
+- Increased disk usage in the `C:\Windows\SystemTemp` directory.
+
+For example, the temporary folder for NGINX now will be in `C:\Windows\SystemTemp\ometascan\`
+
+## [Impact on MetaDefender Core](/docs/mdcore/v5.21.0/troubleshooting/windows-temporary-folder-path-changes-for-system-account#impact-on-metadefender-core)
+
+Currently, there is no known impact on MetaDefender Core services. However, if you experience any issues related to this Windows change, please contact OPSWAT Support for assistance.

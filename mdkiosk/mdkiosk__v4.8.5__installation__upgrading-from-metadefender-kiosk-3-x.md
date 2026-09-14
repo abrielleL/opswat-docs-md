@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/installation/upgrading-from-metadefender-kiosk-3-x -->
 
-Too many requests
-# You're going a little too fast.
+# Upgrading from MetaDefender Kiosk 3.X
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Migrating a deployment from MetaDefender Kiosk 3.X to MetaDefender Kiosk 4.X requires additional steps because of the differences in Kiosk 3.X and 4.X. In addition to the standard upgrade procedure, be aware of the following when upgrading from MetaDefender Kiosk 3.X to MetaDefender Kiosk 4.X.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+#### [Upgrade Considerations](/docs/mdkiosk/v4.8.5/installation/upgrading-from-metadefender-kiosk-3-x#upgrade-considerations)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Finstallation%2Fupgrading-from-metadefender-kiosk-3-x%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. MetaDefender Kiosk 4.X uses a different licensing mechanism than MetaDefender Kiosk 3.X. Please contact OPSWAT to obtain your replacement license for MetaDefender Kiosk 4.X
+2. MetaDefender Kiosk backup configurations from 3.X cannot be imported to 4.X
+3. MetaDefender Kiosk 4.X requires MetaDefender Core 4.8.1 or later
+4. MetaDefender Kiosk 4.X only supports installation on 64-bit operating systems

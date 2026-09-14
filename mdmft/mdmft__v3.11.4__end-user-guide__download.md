@@ -1,12 +1,36 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/download -->
 
-Too many requests
-# You're going a little too fast.
+# Downloading Files
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+You can download files and folders individually or as a package.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Downloading a Single File](/docs/mdmft/v3.11.4/end-user-guide/download#downloading-a-single-file)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fdownload%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Click the "action" menu (three dots) next to the file on the right.
+2. Select "Download."
+
+### [Downloading Multiple Files](/docs/mdmft/v3.11.4/end-user-guide/download#downloading-multiple-files)
+
+1. Select the files using the checkboxes.
+2. Click "Download" from the menu above the file list.
+
+Info
+
+The three-dot menu is designed for downloading individual files and does not support group download.
+
+Info
+
+When you select multiple files, they will be downloaded as a single ZIP file, which you must extract before using the files.
+
+---
+
+### [Password-Protected (encrypted) Download](/docs/mdmft/v3.11.4/end-user-guide/download#password-protected-encrypted-download)
+
+MetaDefender MFT may require password protection for downloads, depending on the settings configured by your administrator:
+
+- **Disabled :** Files download immediately without encryption. You cannot password protect your downloaded files.
+- **Enabled :** You have the option to enable password protection (encryption) on your downloaded file(s).
+
+- **Enforced :** You must enter a password to protect (encrypt) your downloaded files.

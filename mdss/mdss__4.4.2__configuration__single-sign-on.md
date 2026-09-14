@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/single-sign-on -->
 
-Too many requests
-# You're going a little too fast.
+# Single Sign On
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+In order to configure Single Sign On:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Navigate to **Settings -> Single Sign On**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. **Enable** the Single Sign On toggle
+3. Select the desired **Single Sign On Provider**
+4. Select the desired **Single Sign On Type**
+5. Enter the **Client ID**
+6. Enter the **Client Secret**
+7. Enter the **Authority URL**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Fsingle-sign-on%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Info
+
+For the purpose of secure authentication, when configuring any SSO provider, either HTTPS need to be enabled for MDSS, or the web interface needs to be accessed through **localhost** instead of the deployment machine's IP.

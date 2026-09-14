@@ -6,21 +6,15 @@ My OPSWAT Central Management can be easily integrated with an existing Okta Acce
 
 To get started with implementing My OPSWAT Central Management integration to enforce device posture check before granting a device to access protected applications with Okta Access Gateway, you need to have your protected app configured on Okta Access Gateway and [configured Okta tenant as an IdP for Okta Access Gateway](https://help.okta.com/en/prod/Content/Topics/Access-Gateway/configure-idp-okta.htm). If you haven't already done so, please follow the instructions [on Okta Help Center](https://help.okta.com/en/prod/Content/Topics/Access-Gateway/admin-ui-console-overview.htm) to add your applications to Okta Access Gateway.
 
-**Note: Please be aware that this integration needs to **[**update SAML settings of the protected app on Okta**](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_a_protected_app_through_Okta_Access_Gateway.html#step-4-update-applications-settings-on-identity-provider)**, and you need to re-do that if you make any changes of the app on Okta Access Gateway to make sure that a connection between Okta and OPSWAT MetaAccess still exists.**
+Note** Please be aware that this integration needs to **[Configure SSO Settings on Applications](https://www.opswat.com/docs/cm/secure-access-solution/configure-sso-settings-on-applications)**, and you need to re-do that if you make any changes of the app on Okta Access Gateway to make sure that a connection between Okta and My OPSWAT Central Management still exists.**
 
-You can learn more details for each step here at [3.1.1. How to set it up?](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)
+You can learn more details for each step here at [Configuration.](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-integration-configuration)
 
-- [Step 1. Enable Access Control on your My OPSWAT Central Management account](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_a_protected_app_through_Okta_Access_Gateway.html#step-1-enable-access-control-on-your-metaaccess-account)
-- [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_a_protected_app_through_Okta_Access_Gateway.html#step-2-add-protected-applications-with-idp-method)
-- [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_a_protected_app_through_Okta_Access_Gateway.html#step-3-configure-access-rules)
-- [Step 4. Update Applications settings on Identity Provider](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_a_protected_app_through_Okta_Access_Gateway.html#step-4-update-applications-settings-on-identity-provider)
-- [Step 5: Test your integration](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_a_protected_app_through_Okta_Access_Gateway.html#step-5-test-your-integration)
-
-## Step 1. Enable Access Control on your My OPSWAT Central Management account
+## Step 1. Enable Secure Access on your My OPSWAT Central Management account
 
 1. Login to the My OPSWAT Central Management console.
 2. Navigate to **Access Control** and then **Configurations**
-3. Check on **"****Enable access control****"** and configure a port for the cross-domain API. Note that you must select a port which no applications on endpoints are running.
+3. Check on **"Enable Secure Access"** and configure a port for the cross-domain API. Note that you must select a port which no applications on endpoints are running.
 4. Click **SAVE**.
 
 ![](https://uploads.developerhub.io/prod/97qW/94cgl7pcmlg975qqwiper9wes5xa0xvkmwexn83lurdqrlozpyvg9d9oeubl5sgt.png)
@@ -39,11 +33,9 @@ You can learn more details for each step here at [3.1.1. How to set it up?](http
 
 4.  Select your application
 
-5.  Go to **Sign On** tab and click **View Setup Instruction** **
+5.  Go to **Sign On** tab and click **View Setup Instruction**
 
 ![](https://uploads.developerhub.io/prod/97qW/qjhlt8bhaqfpjfi726vziri6d7joxaeba95f1abqrto3otg77e2qi5gq29crmnjo.png)
-
-**
 
 6.  Click **Download certificate** to download Okta certificate
 
@@ -82,7 +74,7 @@ You can learn more details for each step here at [3.1.1. How to set it up?](http
   - *Application*: application name, for example, Protected Application
   - *IdP Login URL: IdP SSO login URL which you have from step 2.2*
   - *Application Login URL*: application login URL which you have from Step 2.2
-  - *Access Mode*: pick an access mode you prefer. See details on the access modes at [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+  - *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications).
 
 ![](https://uploads.developerhub.io/prod/97qW/l04bf96gpjv403kcbvf6z8up1c3k6pyoaj2t3sw21eio98m58me31k0ffyw2zmbt.png)
 
@@ -101,7 +93,7 @@ Note: you can add your application (step 2.5) when you add Okta IdP settings.
 3. With a new access rule, you need to specify how you would like to block/allow access a device from the application
    1. *Rule name*: a rule name, for example Block non-compliant devices
    2. *Action*: Block or Allow
-   3. Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+   3. Configure conditions to do the action. Details at [Configure Access Rules](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 4. Click **ADD RULE**
 
 ![](https://uploads.developerhub.io/prod/97qW/w11rrum4143uqfonb5duktg5dg62ksnvu0tqbipr1sol7xuyyu75rv84h7mn5tv2.png)
@@ -127,6 +119,4 @@ Note: you can add your application (step 2.5) when you add Okta IdP settings.
 
 ## Step 5: Test your integration
 
-Follow guideline [here](https://onlinehelp.opswat.com/metaaccess/Step_6__Test_your_integration.html) to test your integration to verify if it works as your expectation.
-
-**DONE! CONGRATULATIONS.**
+Follow guideline at [Test Your Integration ](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration)to verify if it works as your expectation.

@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/configuration/preferences---dlp-settings -->
 
-Too many requests
-# You're going a little too fast.
+# Preferences → DLP Settings
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT's Proactive DLP™ (Data Loss Prevention) can help prevent potential data breaches and regulatory compliance violations by detecting sensitive and confidential data. From MetaDefender Drive's settings, you can adjust the following settings:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- **Enable/Disable Proactive DLP**
+- **Timeout to Proactive Analysis:** Set the timeout for each Proactive DLP file operation
+- **Detection:** Select which type of data is to be detected, including Social Security Number (SSN), Credit Card Number (CCN), IPV4, CIDR, and custom regular expression
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To adjust the Data Loss Prevention (DLP) settings, please navigate to **Settings** → **Preferences** → **Data Loss Prevention**, and click **Edit Settings:**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fconfiguration%2Fpreferences---dlp-settings%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Proactive DLP settings
+
+*Find more details on OPSWAT Proactive DLP on [this page](https://www.opswat.com/docs/mdcore/v5.13.0/proactive-dlp/detect-sensitive-information).
+
+**You can find more information about the best practices of using regular expression with OPSWAT Proactive DLP on [this page](https://www.opswat.com/docs/mdcore/proactive-dlp/regular-expressions).

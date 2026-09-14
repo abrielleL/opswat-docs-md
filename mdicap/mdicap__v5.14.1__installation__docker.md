@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdicap/v5.14.1/installation/docker -->
 
-Too many requests
-# You're going a little too fast.
+# Docker
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Starting with MetaDefender ICAP Server 4.13.0, we will support you to deploy and run the product on the docker containerization environment, comes with various options:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. OPSWAT docker images hosted on our docker hub repository. The docker images are bundled with MetaDefender ICAP Server latest official release builds [Docker image published on OPSWAT Docker Hub](/docs/mdicap/v5.14.1/installation/docker-image-published-on-opswat-docker-hubd93)
+2. Provide a build toolkit (with docker file and licensing auto deactivation scripts), use them as a deployment support with your own docker image [Using build tool kit with your own docker image](/docs/mdicap/v5.14.1/installation/using-build-tool-kit-with-your-own-docker-imaged4m)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Supported platforms
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdicap%2Fv5.14.1%2Finstallation%2Fdocker%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- CentOS / RedHat
+- Debian / Ubuntu

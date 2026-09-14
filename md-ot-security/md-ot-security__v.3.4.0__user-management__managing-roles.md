@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/md-ot-security/v.3.4.0/user-management/managing-roles -->
 
-Too many requests
-# You're going a little too fast.
+# Managing Roles
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To manage roles in **MetaDefender OT Security**, navigate to: **User Management → Roles** in the Web Management interface.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Default Roles](/docs/md-ot-security/v.3.4.0/user-management/managing-roles#default-roles)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+User Roles & Permissions in MetaDefender OT Security
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmd-ot-security%2Fv.3.4.0%2Fuser-management%2Fmanaging-roles%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| **Role** | **Description** |
+| --- | --- |
+| Super Admin | Has **full permissions** within the application, including **user management**. |
+| Admin | Has **full permissions**, except for **user management**. |
+| Operator | Has **full permissions**, except for **user management, network settings, and general settings**. |
+| APIClient | Has **specific API permissions** as defined. |
+
+Can create roles manually in **MetaDefender OT Security** by following these steps:
+
+## [Steps to Create a Custom Role](/docs/md-ot-security/v.3.4.0/user-management/managing-roles#steps-to-create-a-custom-role)
+
+1. **Navigate to User Management** Go to **User Management > Roles** in the Web Management interface.
+2. **Create a New Role** Click on the **"Create Role"** button. Enter a **Role Name** (e.g., "Custom Operator"). Provide a **Description** (optional).
+3. **Assign Permissions** Select the specific **permissions** for the role. You can allow or restrict access to features like **User Management, Network Settings, API Access, and General Settings**.
+4. **Confirm** Click **"Confirm"** to create the role. The new role can now be **assigned to users**.
+
+#**Note:** Only **Super Admins** can create and manage roles manually.

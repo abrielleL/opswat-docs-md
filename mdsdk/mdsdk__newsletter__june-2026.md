@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/newsletter/june-2026 -->
 
-Too many requests
-# You're going a little too fast.
+# June 2026
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [OPSWAT Endpoint Security Certification Awards June 2026](/docs/mdsdk/newsletter/june-2026#opswat-endpoint-security-certification-awards-june-2026)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+#### [Congratulations to June's Gold-certified partner!](/docs/mdsdk/newsletter/june-2026#congratulations-to-junes-gold-certified-partner)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Fnewsletter%2Fjune-2026%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| **Vendor** | **Product** | **Platform** | **Version** | **Award Category** | **Award Level** |
+| --- | --- | --- | --- | --- | --- |
+| WatchGuard | WatchGuard Endpoint Security Basic | Windows | 8.00.26.0001 | Anti-malware | Gold |
+| WatchGuard | WatchGuard Endpoint Security 360 | Windows | 8.00.26.0001 | Anti-malware | Gold |

@@ -1,12 +1,33 @@
 <!-- source: https://www.opswat.com/docs/mdss/knowledge-base/is-the-scheduled-scan-in-metadefender-storage-security-based-on- -->
 
-Too many requests
-# You're going a little too fast.
+# Is the Scheduled Scan in MetaDefender Storage Security Based on OS Time or an Internal Timer?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article is applied to MetaDefender Storage Security deployments.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Overview](/docs/mdss/knowledge-base/is-the-scheduled-scan-in-metadefender-storage-security-based-on-#overview)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+This article explains how the **scheduled scan timing** works in **MetaDefender Storage Security**, specifically whether it relies on the operating system’s time or an internal timer mechanism within the product.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fknowledge-base%2Fis-the-scheduled-scan-in-metadefender-storage-security-based-on-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+---
+
+### [Question](/docs/mdss/knowledge-base/is-the-scheduled-scan-in-metadefender-storage-security-based-on-#question)
+
+There may be uncertainty about how **scheduled scans** are triggered in MetaDefender Storage Security — specifically whether the scheduling is determined by the **operating system’s local time** or by an **internal timer** within the product.
+
+---
+
+### [Clarification](/docs/mdss/knowledge-base/is-the-scheduled-scan-in-metadefender-storage-security-based-on-#clarification)
+
+- The **scheduled scan** in MetaDefender Storage Security runs according to the **operating system’s local time**.
+- For example, if a scheduled scan is configured to run **every 1 hour**, and the system time is currently **4:03**, the next scan will initiate at **5:03 (OS time)**.
+
+---
+
+### [Additional Notes](/docs/mdss/knowledge-base/is-the-scheduled-scan-in-metadefender-storage-security-based-on-#additional-notes)
+
+- Ensure that the **system clock** and **timezone settings** on the host operating system are accurate, as these directly affect the timing of scheduled scans.
+- Any drift or misconfiguration in system time may result in delayed or early scan execution.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/session-settings -->
 
-Too many requests
-# You're going a little too fast.
+# Session Settings
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+### [Absolute Session Timeout Period](/docs/mdmft/v3.11.4/configuration/session-settings#absolute-session-timeout-period)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+For example, with default values, a user who logs in at 9 AM would be able to stay signed in until 10 AM. If a file uploaded happens before 10 AM (i.e at 9:45 AM) the session is automatically extended until 10:45 AM.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Fsession-settings%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This can happen over and over again until the user signs out (at which point the session is terminated) or a day has passed (default absolute timeout).
+
+Absolute session timeout period can range from a minimum of 5 minutes to a maximum of 7 days.
+
+Defines an absolute timeout for a session. A session is extended while the user interacts with the web application but will not be extended beyond the absolute timeout.
+
+### [Idle Session Timeout Period](/docs/mdmft/v3.11.4/configuration/session-settings#idle-session-timeout-period)
+
+Sets an idle timeout for user sessions. If there is no user interaction within this timeframe, the session expires, leading to an automatic logout.
+
+- Example: If the idle session timeout is set to 1 hour, a user who logs in at 9 AM and leaves the application untouched until 10 AM will experience an expired session. Interaction with the application will extend the session until it reaches the absolute session timeout.
+
+The idle session timeout has a minimum value of 1 minute and a maximum value of 2 hours.

@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdemail/knowledge-base/does-metadefender-email-gateway-security--egs--support-span-tap- -->
 
-Too many requests
-# You're going a little too fast.
+# Does MetaDefender Email Gateway Security (EGS) support SPAN/TAP?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Email Gateway Security releases deployed on Windows systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender EGS can integrate with an external tool that extracts emails from raw network traffic and forwards them to EGS.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+No additional configuration is required on the EGS side.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Fknowledge-base%2Fdoes-metadefender-email-gateway-security--egs--support-span-tap-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If you need this external tool, please contact **OPSWAT Support**. We will provide detailed instructions and the installer.
+
+**Alternative Approach:** Instead of using SPAN, customers can configure **BCC** on their email gateway, since BCC is typically more stable and easier to manage than SPAN.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

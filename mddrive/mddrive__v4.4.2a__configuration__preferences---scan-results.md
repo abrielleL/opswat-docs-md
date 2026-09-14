@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/configuration/preferences---scan-results -->
 
-Too many requests
-# You're going a little too fast.
+# Preferences → Scan Results
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+These system policy settings enables MetaDefender Drive administrator to align with and enforce organizational software upgrade policies. These Scan Results preferences enables defining the allowed dates since the last version update.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To enable this feature,
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Go to **Settings** → **Preferences** → **Scan Results**.
+2. Choose which of the following checkboxes you need to enable:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fconfiguration%2Fpreferences---scan-results%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+   1. **BIOS Vulnerabilities**
+   2. **Skipped Files**
+   3. **Cancelled Scans**
+
+3. Save the setting.
+
+After a scan is completed, if any of the scan results matches the settings, the device will be marked as **UNSAFE**, as in the following example.

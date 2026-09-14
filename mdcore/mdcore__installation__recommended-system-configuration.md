@@ -165,7 +165,7 @@ The resources listed below (CPU, RAM, disk space) are the minimum recommended fo
 - libcurl4
 - tar (Ubuntu/Debian)
 - lsb_release (Rocky Linux 9.x/Red Hat 9.x)
-- postgresql:
+- postgresql - only applicable when using a pre-installed PostgreSQL server running remotely
 
   - From 14.5 to 14.23
   - From 15.7

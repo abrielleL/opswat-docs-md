@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/configuration/security---encryption-keys -->
 
-Too many requests
-# You're going a little too fast.
+# Security & Encryption Keys
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To enhance your system's security, you can generate a new master encryption key. This action will re-encrypt all sensitive data—such as storage credentials, API keys, and others—and securely retire the previous key.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+You can start this process by navigating to **Settings** and selecting the **Security** tab. Here, click the **Generate new encryption key** button.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+A confirmation dialog will appear to ensure you understand the consequences. Please note that this action is irreversible and will immediately log out all active users from the application. To proceed, click **Generate**.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fconfiguration%2Fsecurity---encryption-keys%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+While the key rotation is in progress, the system prioritizes data integrity. To prevent data corruption, any operations that access or modify encrypted information will be temporarily unavailable. For example, you will not be able to add or edit storage configurations or user accounts during this time. The process is designed to be as fast as possible, but the total duration will depend on the amount of data stored in your system. We recommend performing this critical security operation during a planned maintenance window or a period of low system activity to minimize disruption for your users.

@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/operating/create-new-group -->
 
-Too many requests
-# You're going a little too fast.
+# Create New Group
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to add a new Group to OPSWAT Central Management.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. In the Product Groups page, select **CREATE NEW GROUP**.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. In the **General Information** page, fill out the required information of the new Group. Select **ASSIGN SET TO GROUP** to continue.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Foperating%2Fcreate-new-group%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- **Name:** The name of the new Group, must be unique.
+
+- **Description:** The description of the new Group.
+
+- **Group operators:** Assign users with the **Operator** role to manage this group. Users with **Administrator** role can access all groups regardless of this setting.
+
+3. In the **Assign Set to Group** page, select the Sets you wish to include in the new group by clicking their checkboxes. Select **CREATE** to finalize the new Group's creation.
+
+4. The new Group will be displayed in the Product Groups page.
+
+Warning
+
+Adding a Set belonging to another existing Group will remove it from that Group.

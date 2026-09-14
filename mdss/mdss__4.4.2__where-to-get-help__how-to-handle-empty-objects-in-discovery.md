@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/where-to-get-help/how-to-handle-empty-objects-in-discovery -->
 
-Too many requests
-# You're going a little too fast.
+# How to handle empty objects in Discovery?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To skip the discovery of empty objects, please add the following property in your `customer.env` file:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+BashCopyDISCOVERY_SERVICE_IGNORE_EMPTY_OBJECTS=1
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+By default, this value is set to 0, which means we will **not** ignore empty objects.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fwhere-to-get-help%2Fhow-to-handle-empty-objects-in-discovery%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+After the property is added in your `customer.env` file, please restart MetaDefender Storage Security for changes to take effect.

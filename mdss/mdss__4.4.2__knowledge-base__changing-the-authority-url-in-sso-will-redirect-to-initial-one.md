@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/knowledge-base/changing-the-authority-url-in-sso-will-redirect-to-initial-one -->
 
-Too many requests
-# You're going a little too fast.
+# Changing the Authority URL in SSO will redirect to initial one
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to Metadefender Storage Security V4.2.0
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Issue:** Once you update the **Authority URL** in the MetaDefender Storage Security SSO configuration page, save your changes, sign out, and then try logging in again via SSO. The system continues to redirect to the previous Authority URL.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Solution:**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fknowledge-base%2Fchanging-the-authority-url-in-sso-will-redirect-to-initial-one%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. After changing the SSO configuration page with the new Authority URL and related data, save the settings.
+2. **Restart MDSS:**
+
+**Windows :** Restart the OPSWAT MetaDefender Security Storage service under Windows Services.
+
+**Linux:** Restart the Metadefender Storage Security using the following command:
+
+`MDSS -c restart`
+
+Restarting the MDSS service clears the previously cached URL and forces MDSS to load the newly saved configuration.
+
+Please note that this is fixed in MDSS V4.3.0.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

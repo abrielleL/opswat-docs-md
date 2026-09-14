@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/mdcore/v5.21.0/utilities-engines/upgrading-from-yara-to-yara-x -->
 
-Too many requests
-# You're going a little too fast.
+# Upgrading from YARA to YARA-X
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Differences between YARA and YARA-X](/docs/mdcore/v5.21.0/utilities-engines/upgrading-from-yara-to-yara-x#differences-between-yara-and-yara-x)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+YARA-X introduces several changes and enhancements compared to traditional YARA. These differences can affect how rules are written, interpreted, and executed.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+For a detailed comparison, refer to the official documentation: 🔗 [YARA-X vs YARA Rule Differences](https://virustotal.github.io/yara-x/docs/writing_rules/differences-with-yara/)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fv5.21.0%2Futilities-engines%2Fupgrading-from-yara-to-yara-x%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This resource outlines key distinctions in syntax, behavior, and supported features.
+
+## [Mitigating issues](/docs/mdcore/v5.21.0/utilities-engines/upgrading-from-yara-to-yara-x#mitigating-issues)
+
+If there are any problems with the uploaded YARA rules, they will be indicated in the **Core UI**.
+
+To investigate the issue further, you can:
+
+- Check the **YARA engine log files** (accessible via the [**Logs**](https://www.opswat.com/docs/mdcore/knowledge-base/what-is-included-in-the-metadefender-core-support-package-#enginelogs-folder) section).
+- Use the [**YARA-X CLI tool**](https://virustotal.github.io/yara-x/) for detailed diagnostics.
+
+#### [Resolution Steps](/docs/mdcore/v5.21.0/utilities-engines/upgrading-from-yara-to-yara-x#resolution-steps)
+
+1. **Fix the identified issues** in your YARA rules.
+2. **Re-upload the corrected rules** to the system.
+3. **Restart the engine** by disabling and then re-enabling it. This will trigger a new rule validation check.

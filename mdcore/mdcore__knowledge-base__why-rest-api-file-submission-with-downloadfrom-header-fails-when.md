@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-rest-api-file-submission-with-downloadfrom-header-fails-when -->
 
-Too many requests
-# You're going a little too fast.
+# Why REST API File Submission with downloadfrom Header Fails When Using RAMDISK for Temp Directory?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Check Your Version:** This article applies to all MetaDefender Core releases deployed on Windows and Linux systems after 5.11.1.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [**Issue:**](/docs/mdcore/knowledge-base/why-rest-api-file-submission-with-downloadfrom-header-fails-when#issue)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+When configuring a RAMDISK as the temporary directory using IMDisk, file submissions through the browser interface function correctly; however, submissions via the REST API fail due to issues with the `downloadfrom` header.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-rest-api-file-submission-with-downloadfrom-header-fails-when%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+### [**Error Details:**](/docs/mdcore/knowledge-base/why-rest-api-file-submission-with-downloadfrom-header-fails-when#error-details)
+
+The following error is logged:
+
+> [WARNING] 2025.11.03 20:50:22.994: (common.workflow) Workflow block ended with exception, block='ErrorRestResponse', workflow_id='', error='Cannot send message to Frontend' [msgid: 97]
+
+You may encounter the message 'Cannot send message to Frontend' in `core.log`, while the REST API request returns an error: `“err”: “File download rejected due to insufficient disk space”`.
+
+## [**Resolution:**](/docs/mdcore/knowledge-base/why-rest-api-file-submission-with-downloadfrom-header-fails-when#resolution)
+
+Until a fix is available, consider using a physical disk path for the temporary directory instead of a RAMDISK when submitting files via the REST API with the `downloadfrom` header.
+
+ **Support:**
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

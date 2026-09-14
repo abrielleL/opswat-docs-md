@@ -34,13 +34,11 @@ The node logs `==== START ====` but never progresses to a ready state. The deadl
 
 ## [**Root Cause**](/docs/mdcore/v5.21.0/knowledge-base/why-is-a-metadefender-core-node-stuck-in-starting-state-in-a-sha#root-cause)
 
-When a MetaDefender Core node starts up, it executes a one-time database operation that grants schema-level privileges to its internal user. This operation updates many rows in the PostgreSQL system catalog (`pg_class`).
+When a MetaDefender Core node starts up, it performs a one-time database initialization as part of its startup sequence. At the same time, other active nodes in the cluster continuously run background maintenance jobs to keep internal statistics and dashboards up to date.
 
-Concurrently, the other active nodes in the cluster run a periodic background job—`warehouse.refresh()`—that rebuilds dashboard and statistics materialized views. This job also touches `pg_class` as part of its execution plan.
+In versions prior to 5.21.0, these two operations can conflict when they run at the same time, causing the database to cancel the startup transaction. The node then retries, but under sustained cluster activity, the conflict can repeat — keeping the node stuck in Starting state.
 
-When both operations lock overlapping rows in `pg_class`, PostgreSQL detects a deadlock and cancels one of the two transactions. By default, the startup `GRANT` is cancelled as the victim, and the node retries. Under sustained load on the other nodes, the refresh job runs frequently enough that it continually re-enters the deadlock window, causing startup to fail repeatedly.
-
-This is an inherent limitation of the **shared-database architecture** in versions prior to 5.21.0. It is more likely to occur when the other nodes are under high scanning load or have a high scan queue depth, which keeps the `warehouse.refresh` job running frequently.
+This is a known limitation of the shared-database architecture in affected versions and is resolved by upgrading to 5.21.0 or later
 
 ## [**Resolution**](/docs/mdcore/v5.21.0/knowledge-base/why-is-a-metadefender-core-node-stuck-in-starting-state-in-a-sha#resolution)
 

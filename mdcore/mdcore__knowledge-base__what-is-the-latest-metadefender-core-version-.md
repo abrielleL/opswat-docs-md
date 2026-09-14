@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/what-is-the-latest-metadefender-core-version- -->
 
-Too many requests
-# You're going a little too fast.
+# What is the latest MetaDefender Core version?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core V5 releases deployed on Windows or Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Browse MetaDefender Core [Release Notes](https://docs.opswat.com/mdcore/release-notes) for details on the latest version, version history, version comparisons and release notes.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Alternatively, go directly through the [My OPSWAT](https://my.opswat.com/portal) for a list of available downloads.:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhat-is-the-latest-metadefender-core-version-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Login to My OPSWAT portal
+2. Click on MetaDefender Core
+
+3. Click on “Download” button
+
+4. In the new window opened, always the version from the top is the latest version
+
+Pro Tip:
+
+OPSWAT highly recommends that users upgrade to the latest version of MetaDefender Core. Current versions incorporate state-of-the-art features and necessary bug fixes, and are freely available for all license holders to download.
+
+Support:
+
+Feel free to contact OPSWAT support for further guidance through your Upgrade process. Please follow these instructions on [How To Create a Support Package](https://docs.opswat.com/mdcore/troubleshooting/how-to-create-support-package-), before logging a [Support Ticket](https://www.opswat.com/support) with the OPSWAT team.

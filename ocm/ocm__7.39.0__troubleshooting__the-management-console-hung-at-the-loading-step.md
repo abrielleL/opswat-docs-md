@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/troubleshooting/the-management-console-hung-at-the-loading-step -->
 
-Too many requests
-# You're going a little too fast.
+# The management console hung at the loading step
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Term | Detail |
+| --- | --- |
+| Problem | The management console hung at the loading step for more than 5 mins. |
+| Cause | The loading page is not redirected properly due to one of the following issues   - Missing Visual C++ Redistributable Packages for Visual Studio 2013 - Java environment variable is not defined correctly |
+| Troubleshooting | Refresh the page. Check the tomcat log file. The log should report certain errors. |
+| Solution | - Install Visual C++ Redistributable Packages for Visual Studio 2013 - Install JRE 11 and set the JRE_HOME system environment variable to the JRE's installation path. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+If the loading step hangs for more than 5 minutes, please first try refreshing the page.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+If the problem persists, please check the tomcat log file.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Ftroubleshooting%2Fthe-management-console-hung-at-the-loading-step%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- On Windows, in C:\ProgramData\OPSWAT\Central\Logs, check catalina_out<timestamp>.txt and catalina_error<timestamp>.txt on Windows.
+- On Linux, /var/log/ocm/catalina<timestamp>.out.
+
+There should be some error messages.
+
+### [Missing Visual C++ Redistributable Packages for Visual Studio 2013](/docs/ocm/7.39.0/troubleshooting/the-management-console-hung-at-the-loading-step#missing-visual-c-redistributable-packages-for-visual-studio-2013)
+
+In order to fix this error, as noted in [Software Requirement](/docs/ocm/7.39.0/installation/recommended-system-requirements#software-requirement), please install the Visual C++ Redistributable Packages for Visual Studio 2013. Then restart OPSWAT Central Management.
+
+### [Java environment variable is not defined correctly](/docs/ocm/7.39.0/troubleshooting/the-management-console-hung-at-the-loading-step#java-environment-variable-is-not-defined-correctly)
+
+In order to fix this error, please install JRE or JDK version 11 and set either the JRE_HOME or JAVA_HOME environment variables to the correct installation path. Restart OPSWAT Central Management service for the changes to take effect. Please refer to the [Java configuration guideline](/docs/ocm/7.39.0/configuration/java-configuration) for more detail on setting up the environment variables.

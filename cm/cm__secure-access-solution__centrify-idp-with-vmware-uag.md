@@ -26,7 +26,7 @@ You can learn more details for each step [here](https://docs.opswat.com/macloud-
 
 3. Click on **Download Certificate** to download the Centrify certificate.
 4. Collect Single Sign On URL:
-   1. Go to **Trust**** ****> Identity Provider Configuration***.* Then click on **Manual**** ****Configuration**
+   1. Go to **Trust > Identity Provider Configuration***.* Then click on **Manual Configuration**
    2. Copy **Single Sign On** URL field
 5. Add the Centrify Identity Provider. If you already have Centrify IdP settings on your My OPSWAT Central Management account, go to step 6 to add VMware UAG application.
    1. Login to the My OPSWAT Central Management console.
@@ -41,9 +41,9 @@ You can learn more details for each step [here](https://docs.opswat.com/macloud-
    1. *Application*_:_ application name, for example: UAG
    2. *IdP__Login URL*: login UAG Portal URL, for example: https://<UAG port domain:port>/portal_Application_
    3. *ACS URL*: URL which you have from Step 2.4
-   4. *Access Mode*: pick an access mode you prefer. See details on the[ access modes](https://docs.opswat.com/macloud-sdp/secure-access/add-protected-applications-with-idp-method)
+   4. *Access Mode*: pick an access mode you prefer. See details on the[ ](https://docs.opswat.com/macloud-sdp/secure-access/add-protected-applications-with-idp-method)[Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications)
    5. Click **Save.**
-7. After saving your changes successfully, click the **Setup Instructions** button of the VMware UAG application you have just added and then copy the **URL** MetaAccess generated there.
+7. After saving your changes successfully, click the **Setup Instructions** button of the VMware UAG application you have just added and then copy the **URL** My OPSWAT Central Management generated there.
 8. Download the OPSWAT Certificate as you will need this for later.
 
 ![](https://uploads.developerhub.io/prod/97qW/6drj5q5ak8n065w0zawxknzkd40om79nr0jotyb255kl2b7gsu78kprc1v1aqise.png)
@@ -57,7 +57,7 @@ You can learn more details for each step [here](https://docs.opswat.com/macloud-
 3. With a new access rule, you need to specify how you would like to block/allow access a device from the application
    1. *Rule name*: a rule name, for example Block non-compliant devices
    2. *Action*: Block or Allow
-   3. Configure conditions to do the action. Details at [Configure Access Rules](https://docs.opswat.com/macloud-sdp/secure-access/access-rules)
+   3. Configure conditions to do the action. Details at  [Configure Access Rules](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 4. Click **ADD RULE**
 
 ![](https://uploads.developerhub.io/prod/97qW/cktlvpd0pbr7r9bbgi80t4xrwtpseoalkne51e4376s84jsv1ae9ulfunipzmpx5.png)
@@ -69,7 +69,7 @@ You can learn more details for each step [here](https://docs.opswat.com/macloud-
 3. Navigate to Apps
 4. Select VMware UAG application
 5. Go to **Trust > Service Provider Configuration***,* select **Manual Configuration**
-6. Replace **Assertion Consumer Service (ACS) URL** with the URL MetaAccess generated for your app.
+6. Replace **Assertion Consumer Service (ACS) URL** with the URL My OPSWAT Central Management generated for your app.
 
 ![](https://uploads.developerhub.io/prod/97qW/z6mahgwgc9kut70el4hw7qxa26evgiej2pju6wm7r6wa2lic9q5wixsjucmq9qba.png)
 
@@ -91,4 +91,4 @@ You can learn more details for each step [here](https://docs.opswat.com/macloud-
 
 ## Step 6: Test your integration
 
-Follow guideline at [Step 6: Test your integration](https://docs.opswat.com/macloud-sdp/secure-access/test-your-integration) to test your integration.
+Follow guideline at [Test Your Integration ](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration)to verify if it works as your expectation.

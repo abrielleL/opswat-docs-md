@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/how-does-metadefender-managed-file-transfer-protect-against-inje -->
 
-Too many requests
-# You're going a little too fast.
+# How does MetaDefender Managed File Transfer protect against injection attacks?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
+### [How We Prevent SQL Injection](/docs/mdmft/v3.11.4/knowledge-base/how-does-metadefender-managed-file-transfer-protect-against-inje#how-we-prevent-sql-injection)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+We design the system so that anything you type is treated as harmless data, not as instructions to the database. Here are the safeguards working for you:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Safe database access: We use placeholders ("parameters") so your input never becomes a command.
+- Approved search and sort options: Only known, whitelisted choices are allowed; unexpected values are ignored or sanitized.
+- Server-built queries: Flexible queries are assembled from validated pieces on the server, not directly from user-entered text.
+- Modern frameworks: Our data access frameworks automatically send your input separately from the SQL instructions.
+- Safe error handling: Error messages avoid exposing details about the database or internal systems.
+- Ongoing protection: We regularly review, test, and improve these safeguards to keep them effective.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2Fhow-does-metadefender-managed-file-transfer-protect-against-inje%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+What this means for you: special characters (like quotes or symbols) won’t turn into harmful commands, and your actions are processed safely without requiring you to do anything special.

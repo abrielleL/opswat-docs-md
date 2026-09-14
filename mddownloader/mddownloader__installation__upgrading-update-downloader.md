@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/installation/upgrading-update-downloader -->
 
-Too many requests
-# You're going a little too fast.
+# Upgrading Update Downloader
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To upgrade from a former version of Update Downloader a simple [installation](/docs/mddownloader/installation/installing-update-downloader) of the latest version is enough.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+All existing Update Downloader configuration and data will be kept during the upgrade.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Info
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Finstallation%2Fupgrading-update-downloader%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+For customers who already activated and used Update Downloader older version, and now upgrading to version 2.4.0, Update Downloader will auto create an entry the product will support to automatically migrate the configurations, and keep all licensed engine packages remained. See screenshot below as an example of upgrading from Update Downloader older version to version 2.4.0 and above.

@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/how-to-resolve-disk-partition-visibility-issues-caused-by-omva- -->
 
-Too many requests
-# You're going a little too fast.
+# How to resolve Disk Partition visibility issues caused by OMVA?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all OMVA versions lower than 2.0.9 deployed on Windows.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+### [Problem Summary:](/docs/mdkiosk/v4.8.5/knowledge-base/how-to-resolve-disk-partition-visibility-issues-caused-by-omva-#problem-summary)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+On Windows system, the OPSWAT OMVA agent caused an issue where Disk Management could not list disk partitions.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fhow-to-resolve-disk-partition-visibility-issues-caused-by-omva-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The OMVA agent version older than **2.0.9** introduced a compatibility issue with Windows Disk Management. This interference prevented the system from recognizing disk partitions, leading to backup application failures.
+
+The issue was resolved in OMVA agent version **2.0.9 or later**, which restored compatibility with Disk Management.
+
+### [Resolution Steps: Upgrade OMVA Agent to Version 2.0.9](/docs/mdkiosk/v4.8.5/knowledge-base/how-to-resolve-disk-partition-visibility-issues-caused-by-omva-#resolution-steps-upgrade-omva-agent-to-version-209)
+
+1. Download the latest OMVA agent (v2.0.9) from your MetaDefender Kiosk console management
+2. On the affected Windows system:
+
+   - Uninstall the existing OMVA agent.
+   - Install the OMVA version **v2.0.9** or later
+3. Reboot the system after installation to ensure the changes take effect.
+4. Confirm that Disk Management now properly lists all disk partitions.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

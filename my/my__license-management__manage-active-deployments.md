@@ -27,6 +27,9 @@ You can
 - Export selected deployment IDs to excel file *(not applicable for* *Expired* *licenses)*
 - Select one or multiple Deployment IDs and deactivate them (see below).
 
+> **NOTE**
+> **'Manage Active Deployments'** is not available for Volume licenses.
+
 ## Deactivate Deployments
 
 > **NOTE**

@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/does-managed-file-transfer-support-restricting-ad-groups-from-ac -->
 
-Too many requests
-# You're going a little too fast.
+# Does Managed File Transfer support restricting AD groups from accessing Managed File Transfer?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Active Directory groups or users belonging to AD groups can be restricted from being shared with a file by denying them access to MetaDefender Managed File Transfer.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To deny access:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2Fdoes-managed-file-transfer-support-restricting-ad-groups-from-ac%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Go to "Managed File Transfer Settings" → "Active Directory" → "Configure"
+2. In STAGE 5, include the *security groups* that require access
+
+3. Exclude the security group that should not be shared with a file.
+
+4. Finish the setup.
+
+List of available groups to share a file with:

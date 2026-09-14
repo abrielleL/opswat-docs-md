@@ -4,9 +4,9 @@
 
 My OPSWAT Central Management console can be easily integrated with an existing F5 BIG-IP & Salesforce integration to ensure that a device is compliant with the organization's security policy before it is granted access to Salesforce. This ensures that the device is not only authenticated by the IdP, but also checked for security risks and vulnerabilities such as encryption, infections or unpatched versions of operating systems, BEFORE it access an organization's cloud services.
 
-You can learn more details for each step here at [How to set it up?](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)
+You can learn more details for each step here at[ ](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)[Configuration.](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-integration-configuration)
 
-## Step 1.Enable Secure Access on your My OPSWAT Central Management Account
+## Step 1. Enable Secure Access on your My OPSWAT Central Management Account
 
 1. Log into the My OPSWAT Central Management console
 2. Navigate to **Secure Access > Protected Apps**
@@ -17,8 +17,8 @@ You can learn more details for each step here at [How to set it up?](https://onl
 
 Note: If you already enabled single sign-on on F5 BIG-IP APM and integrated Salesforce app there, you can jump to downloading a certificate which you configured for Salesforce app on F5 BIG-IP APM for later use. You can refer [F5 - Module 1: SAML Identity Provider](https://f5-agility-labs-iam.readthedocs.io/en/latest/class4/module1/module1.html) for more details.
 
-1. Log into your F5 BIG-IP console.
-2. Go to **Access** → **Federation** → **SAML**** ****Identity Provider** → **Local IDP Service** then click **Create**
+1. Log into your F5 BIG-IP console
+2. Go to **Access** → **Federation** → **SAML Identity Provider** → **Local IDP Service** then click **Create**
    1. **General Settings:**
       1. *IDP Service Name*: an unique name, for ex: F5_AS_IDP
       2. *Idp Entity ID*: uniqe ID, for ex: https:<ip address>/F5_AS_IDP
@@ -32,7 +32,7 @@ Note: If you already enabled single sign-on on F5 BIG-IP APM and integrated Sale
 
 ![](https://uploads.developerhub.io/prod/97qW/zajkc3m8wkjhkwcrstgorygh27ncjkipbgrgsqwcd8bffq9lb7arjx4omc060ttg.png)
 
-4. **Security Settings:** Choose your *Singing Key* and *Signing** **Certificate*, we use default key and value for this demo.
+4. **Security Settings:** Choose your *Singing Key* and *Signing Certificate*, we use default key and value for this demo.
 
 ![](https://uploads.developerhub.io/prod/97qW/t2zvml0dv51v62oui9udrau6xc5d1ia39m870zo1zcegfllyxj14aatp2q0afrot.png)
 
@@ -53,7 +53,7 @@ Note: If you already enabled single sign-on on F5 BIG-IP APM and integrated Sale
 ![](https://uploads.developerhub.io/prod/97qW/ne79uihwwr5li8ifmecv5dzu9kqye1v6ldnhy18154vgrwe3ecb2f80f8dimcwlx.png)
 
 10. **Authentication:** F5 BIGIP provides many authentication methods like Kerberos, Active Directory, LDAP,... We use Local User DB for this demo.
-11. Go to **Access** → **Profiles**** ****/ Policies** → **Access Profiles** then click on
+11. Go to **Access** → **Profiles / Policies** → **Access Profiles** then click on
     1. *Create Name:* an unique name, for ex: F5_AS_IDP
     2. *Profile Type*: All
 
@@ -97,14 +97,14 @@ Note: If you already enabled single sign-on on F5 BIG-IP APM and integrated Sale
 
 19. Click **Finished**.
 20. Download the certification, as you will need to upload this into My OPSWAT Central Management later.
-21. Go to **System** → **Certificate Management** → **Traffic**** ****Certificate management** → **SSL Certificate List**
+21. Go to **System** → **Certificate Management** → **Traffic Certificate management** → **SSL Certificate List**
 22. Choose certificate that is used to singing SAML data. We use *default* certificate for demo purpose.
 
 ![](https://uploads.developerhub.io/prod/97qW/jnl0ie2n3blegwh1ebkcqy6tmpuzbkx2so88jtwpuii42g32qnlp4fqhhhy6c0f2.png)
 
 23. Click **Export**.
 
-## Step 3. Add Application on My OPSWAT Central Management
+## Step 3. Add Protected Application on My OPSWAT Central Management
 
 1. Log into the My OPSWAT Central Management Console.
 2. Navigate to **Secure Access > Protected Apps**.
@@ -118,7 +118,7 @@ Note: If you already enabled single sign-on on F5 BIG-IP APM and integrated Sale
    1. *Application*: application name, for example: Dropbox
    2. *Login URL*: https://<BIGIP host>/saml/idp/res=?id=/<SAML Resource path>/ <SAML Resource name>. For ex: [https://10.0.4.83](https://10.0.4.83/) /saml/idp/res=/Common/Saleforce
    3. *App ACS URL* : URL that is provided in Step 6.
-   4. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+   4. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications).
 8. Click **Add**.
 9. After saving your changes successfully, navigate to the  **Setup Instructions** of the Salesforce application you have just added and then copy the **URL** My OPSWAT Central Management generated there. This URL is used to replace Salesforce login URL on BIG-IP APM.
 
@@ -126,9 +126,9 @@ Note: If you already enabled single sign-on on F5 BIG-IP APM and integrated Sale
 
 1. On My OPSWAT Central Management console, navigate to **Secure Access > Protected Apps**.
 2. Select the Salesforce app and follow the SSO instructions, you should be prompted to download the **OPSWAT Certificate**.
-3. Go to **Local IDP Services** in BIGIP and choose the one created in Step 2.2 Click on **Export**** ****Metadata**
+3. Go to **Local IDP Services** in BIGIP and choose the one created in Step 2.2 Click on **Export Metadata**
 4. Log into Salesforce as an administrator
-5. Navigate to **Setup > Security**** ****Controls > Single Sign-On Settings** , click on **New from Metadata File** then choose the file get from above step.
+5. Navigate to **Setup > Security Controls > Single Sign-On Settings** , click on **New from Metadata File** then choose the file get from above step.
 
 ![](https://uploads.developerhub.io/prod/97qW/97pt615kq9poi2g5ayna2zlf0r32w0oi8ozjijd4c7cfydt2h37ky86ylhg6gvyn.png)
 
@@ -148,13 +148,13 @@ Note: If you already enabled single sign-on on F5 BIG-IP APM and integrated Sale
 3. With a new access rule, you need to specify how you would like to block/allow access a device from the application:
    1. *Rule name*: a rule name, for example Block non-compliant devices
    2. *Action*: Block or Allow
-   3. Configure conditions to do the action. Details at [Configure Access Rules](https://docs.opswat.com/macloud-sdp/secure-access/access-rules)
+   3. Configure conditions to do the action. Details at [Configure Access Rules](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 4. Click **ADD RULE**.
 
 ## Step 6. Update Applications settings on Identity Provider
 
 1. Log into your F5 BIG-IP console.
-2. Go to **Access** → **Federation** → **SAML Identity Provider** → **External**** ****SP Connector** then click Create to create new **SP Connector**
+2. Go to **Access** → **Federation** → **SAML Identity Provider** → **External SP Connector** then click Create to create new **SP Connector**
    1. *Service__Provider Name*: an unique service name
    2. *Service__Provider Entity ID*: an unique entity ID
    3. _ACS URL:_specific URL user will be redirected after login to BIG-IP
@@ -173,4 +173,4 @@ Note: If you already enabled single sign-on on F5 BIG-IP APM and integrated Sale
 
 ## Step 7. Test your integration
 
-Follow guideline at [Test your integration](https://docs.opswat.com/macloud-sdp/secure-access/test-your-integration) to test your integration to verify if it works as your expectation.
+Follow guideline at [Test Your Integration](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration) to verify if it works as your expectation.

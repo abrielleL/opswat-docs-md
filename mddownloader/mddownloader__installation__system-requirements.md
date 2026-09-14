@@ -1,12 +1,44 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/installation/system-requirements -->
 
-Too many requests
-# You're going a little too fast.
+# System Requirements
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT will discontinue support for the following OS in MetaDefender Update Downloader:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- Windows 10 after **October 2025**.
+- Windows Server 2016 after **October 2025**.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+You can stay with these OS and would not see negative impacts during your operation and usage. However, we suggest you move on to newer OS for good measure.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Finstallation%2Fsystem-requirements%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**Only 64-bit platforms are supported.**
+
+- Operating System:
+
+  - Rocky Linux 9.4
+  - Debian 12
+  - Ubuntu 22.04
+  - Windows 11
+  - Windows Server 2019, 2022
+- Hardware requirements
+
+  - RAM: min. 2 GB
+  - HDD: 2 GB + ~500MB * [number of managed scan engines]
+
+    - Note: some engines might have a bigger file size than others, for example: SBOM, Adaptive Sandbox engine will take more than 1GB.
+- Third party dependency:
+
+  - Microsoft Visual C++ Redistributable for Visual Studio 2015-2022; x64 version.
+- Internet connection required to be able to connect to OPSWAT update servers.
+
+Allowlisting URLs
+
+If you have installed or plan to use the MetaDefender Update Downloader in a restricted environment, you must allow access to the following hosts for engine and database downloads:
+
+- [https://update.dl.opswat.com](https://update.dl.opswat.com/)
+
+**Note:** *IP address-based allowlisting on your firewall may fail over time because OPSWAT uses CDN (AWS Cloudfront) to accelerate global update delivery, and the IP address of edge servers may change periodically.*
+
+*Depending on your location, connections to OPSWAT's cloud-based servers may be forwarded to specific AWS Cloudfront edge locations, each assigned its own unique IP address ranges. You may also need to allow the corresponding* *AWS Cloudfront* *IP address ranges by referring to* [*https://ip-ranges.amazonaws.com/ip-ranges.json*](https://ip-ranges.amazonaws.com/ip-ranges.json)
+
+Warning
+
+Although OPSWAT update servers host updates for all supported engines, some custom engines may attempt to connect to their own cloud for updates. However, this can be blocked at the firewall, ensuring that updates are retrieved exclusively from OPSWAT.

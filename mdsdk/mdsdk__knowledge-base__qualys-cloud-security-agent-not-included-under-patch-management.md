@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/knowledge-base/qualys-cloud-security-agent-not-included-under-patch-management -->
 
-Too many requests
-# You're going a little too fast.
+# Why Qualys Cloud Security Agent is not included under Patch Management category when calling DetectProducts
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article is applied to OESIS Framework releases on **Windows** when interacting with **Qualys Cloud Security**.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [**Overview**](/docs/mdsdk/knowledge-base/qualys-cloud-security-agent-not-included-under-patch-management#overview)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+When executing `DetectProducts` with the **Patch Management** category (ID `12`) selected, OESIS Framework may fail to detect **Qualys Cloud Security Agent**.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Fknowledge-base%2Fqualys-cloud-security-agent-not-included-under-patch-management%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This behavior occurs because **Qualys Agent** protects its related files using a privileged user. If our SDK runs **without** **elevated permissions**, it cannot inspect the Qualys directory structure to verify if the Patch Management capability is present.
+
+## [**Solution**](/docs/mdsdk/knowledge-base/qualys-cloud-security-agent-not-included-under-patch-management#solution)
+
+Suggestion
+
+**Admin permissions are required** for SDK to detect whether the **Patch Management** module of Qualys Agent is installed on the endpoint.
+
+To resolve this, ensure the SDK is executed with **Administrator/Sudo** privileges. Elevated access is necessary for the SDK to interact with the Qualys Agent and successfully report the agent under the **Patch Management** category for `DetectProducts` method.
+
+Support
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

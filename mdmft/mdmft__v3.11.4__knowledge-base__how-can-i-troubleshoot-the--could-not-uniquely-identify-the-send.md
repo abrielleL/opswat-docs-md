@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/how-can-i-troubleshoot-the--could-not-uniquely-identify-the-send -->
 
-Too many requests
-# You're going a little too fast.
+# How can I troubleshoot the 'Could not uniquely identify the sender' error when Kiosk or Email Gateway attempts to upload files to MetaDefender MFT?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+A possible root cause of this issue is the presence of duplicate user accounts in MetaDefender Managed File Transfer™ with the same username. For example, there may be a third-party local user named **john.doe** and an Active Directory user with the same username also present in MetaDefender Managed File Transfer™. In such cases, deleting the third-party local user typically resolves the error.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2Fhow-can-i-troubleshoot-the--could-not-uniquely-identify-the-send%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Please note that deleting the third-party local user will move any associated files to the administrator's trash folder. Be sure to review and handle these files appropriately before proceeding with the deletion. These files cannot be restored to the corresponding user account.

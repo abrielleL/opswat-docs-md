@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/knowledge-base/which-interface-does-syslog-use-for-transmission- -->
 
-Too many requests
-# You're going a little too fast.
+# Which Interface Does Syslog Use for Transmission?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender NetWall devices.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Syslog streams in MetaDefender network devices (such as USG NetWall) are designed to use the data interface for transmission.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+However, the actual interface used depends on the routing configuration of the device.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Fknowledge-base%2Fwhich-interface-does-syslog-use-for-transmission-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If the Syslog server is reachable through both the management (MGMT) and data interfaces, the device will select the interface based on the system routing table. This means that the interface associated with the route to the Syslog server’s network will be used, regardless of whether it’s the MGMT or data interface.
+
+#### [**Example Scenario**](/docs/netwalldiode/v1.13.2/knowledge-base/which-interface-does-syslog-use-for-transmission-#example-scenario)
+
+Syslog Server: 40.40.40.40
+
+In this example, the Syslog server is located on a network (40.40.40.x) that is not directly reachable from either the MGMT or data subnets.
+
+Since the device has a default gateway configured on the MGMT interface (20.20.20.1), it will use that interface to reach the Syslog server. As a result, Syslog traffic will go through the MGMT interface even though the Syslog process is logically associated with the data interface.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).
+
+MetaDefender

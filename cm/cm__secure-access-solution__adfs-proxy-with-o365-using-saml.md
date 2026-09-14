@@ -15,14 +15,7 @@ To get started with implementing My OPSWAT Central Management integration to enf
 
 Configuring, installing ADFS server and enabling SSO to Office 365 is beyond the scope of this tutorial. This tutorial uses screenshots from Server 2012R2, but similar steps should be possible on other versions.
 
-Now it's the time you can integrate My OPSWAT Central Management with your ADFS by following below steps. You can learn more details for each step here at [3.1.1. How to set it up?](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)
-
-- [Step 1. Enable Access Control on your MetaDefender IT Access account](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_O365_using_SAML.html#step-1-enable-access-control-on-your-metaaccess-account)
-- [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_O365_using_SAML.html#step-2-add-protected-applications-with-idp-method)
-- [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_O365_using_SAML.html#step-3-configure-access-rules)
-- [Step 4. Update Office 365 Relying Party Trusts in AD FS Server](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_O365_using_SAML.html#step-4-update-office-365-relying-party-trusts-in-ad-fs-server)
-- [Step 5. Edit SSO settings on Office 365](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_O365_using_SAML.html#step-5-edit-sso-settings-on-office-365)
-- [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/ADFS_Proxy_with_O365_using_SAML.html#step-6-test-your-integration)
+Now it's the time you can integrate My OPSWAT Central Management with your ADFS by following below steps. You can learn more details for each step here at [Configuration.](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-integration-configuration)
 
 ## Step 1. Enable Access Control on your My OPSWAT Central Management account
 
@@ -66,7 +59,7 @@ Now it's the time you can integrate My OPSWAT Central Management with your ADFS 
       2. *IDP Login URL*: application login URL which you have from Step 2.2
       3. *Login URL*: [https://login.microsoftonline.com/login.srf](https://login.microsoftonline.com/login.srf)
       4. *Logout URL*: [https://login.microsoftonline.com/logout.srf](https://login.microsoftonline.com/logout.srf)
-      5. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+      5. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications).
       6. Click **Add**
       7. After saving your changes successfully, click the **Setup Instructions** button of the O365 application you have just added             and then copy the **URL** My OPSWAT Central Management generated there. This URL is used to replace O365 login URL on ADFS.
       8. Download the Note: you can add O365 application (step 2.4) when you add ADFS IdP settings.
@@ -78,7 +71,7 @@ Now it's the time you can integrate My OPSWAT Central Management with your ADFS 
 3. With a new access rule, you need to specify how you would like to block/allow access a device from the application
    1. *Rule name*: a rule name, for example Block non-compliant devices
    2. *Action*: Block or Allow
-   3. Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+   3. Configure conditions to do the action. Details at [Configure Access Rules.](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 4. Click **ADD RULE**
 
 ## Step 4. Update Office 365 Relying Party Trusts in AD FS Server
@@ -179,6 +172,4 @@ C:\Windows\system32>Get-MsolDomainFederationSettings -DomainName <Your Domain>
 
 ## Step 6: Test your integration
 
-Follow guideline at [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Step_6__Test_your_integration.html) to test your integration to verify if it works as your expectation.
-
-**DONE! CONGRATULATIONS.**
+Follow guideline at [Test Your Integration ](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration)to verify if it works as your expectation.

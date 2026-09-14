@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mdcore/v5.21.0/troubleshooting/troubleshooting-metadefender-core -->
 
-Too many requests
-# You're going a little too fast.
+# Troubleshooting MetaDefender Core
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+In this section you can find solutions for generic issues with MetaDefender Core
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Installation issues](/docs/mdcore/v5.21.0/troubleshooting/troubleshooting-metadefender-core#installation-issues)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- [Inaccessible Management Console](/docs/mdcore/v5.21.0/troubleshooting/inaccessible-management-console)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fv5.21.0%2Ftroubleshooting%2Ftroubleshooting-metadefender-core%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Where are the Metadefender Core logs located?](/docs/mdcore/v5.21.0/troubleshooting/troubleshooting-metadefender-core#where-are-the-metadefender-core-logs-located)
+
+MetaDefender Core generates log files to **/var/log/ometascan** under Linux and to Windows Event Log under Windows.
+
+The server and node logs are collected separately and are plain text files. For more information on how to read the logs, go to [How to Read the Metadefender Core Log?](/docs/mdcore/v5.21.0/troubleshooting/how-to-read-the-metadefender-core-log-)
+
+## [How can I create a support package?](/docs/mdcore/v5.21.0/troubleshooting/troubleshooting-metadefender-core#how-can-i-create-a-support-package)
+
+To ensure the best help from OPSWAT support, you can create a support package with a tool that comes with MetaDefender Core.
+
+For more information on how to create a support package, go to [How to Create Support Package?](/docs/mdcore/v5.21.0/troubleshooting/how-to-create-support-package-)

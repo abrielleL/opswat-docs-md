@@ -1,12 +1,28 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/advanced-usages/configure-firewall-and-network-proxy -->
 
-Too many requests
-# You're going a little too fast.
+# Configure Firewall and Network Proxy
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Depending on organizations' policies, MetaDefender Drive might fail to connect to OPSWAT Central Management or to download updates using MetaDefender Drive Toolkit due to firewall or network proxy configuration. In case of such connection failure, specific hosts must be allowed by the firewall, and proxy settings might need to be configured accordingly.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Hosts to Allow](/docs/mddrive/v4.4.2a/advanced-usages/configure-firewall-and-network-proxy#hosts-to-allow)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Your network admin must allow access to the following hosts for MetaDefender Drive and MetaDefender Drive Toolkit to work:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fadvanced-usages%2Fconfigure-firewall-and-network-proxy%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| **Host** | **Function** |
+| --- | --- |
+| [**https://activation.dl.opswat.com**](https://activation.dl.opswat.com/) | To activate licenses online |
+| [**https://update.dl.opswat.com**](https://update.dl.opswat.com/) | To download scanning engine updates |
+| [**https://installer-cdn.opswat.com/MD_Drive_Toolkit/3.0/update_infra/main/**](https://installer-cdn.opswat.com/MD_Drive_Toolkit/3.0/update_infra/main/MetaDefenderDriveToolkit.zip) | To download MetaDefender Drive Toolkit’s new version |
+| [**https://installer-cdn.opswat.com/MD_Drive/3.0/update_infra/main/**](https://installer-cdn.opswat.com/MD_Drive/3.0/update_infra/main/) | To download MetaDefender Drive’s new software releases |
+
+## [Editing Network Proxy](/docs/mddrive/v4.4.2a/advanced-usages/configure-firewall-and-network-proxy#editing-network-proxy)
+
+The following are the steps to follow on a Linux operating system to configure network proxy:
+
+1. Open the system settings.
+2. Navigate to the **Network** settings from the left pane or use the search function.
+3. Click the **Gear Icon** in the Network Proxy section.
+4. Select the **Manual** option.
+5. Enter the proxy server details as instructed by your organization’s IT specialists.
+
+Network Proxy settings on Linux

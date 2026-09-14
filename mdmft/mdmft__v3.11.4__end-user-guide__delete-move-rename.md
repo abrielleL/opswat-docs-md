@@ -1,12 +1,49 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/delete-move-rename -->
 
-Too many requests
-# You're going a little too fast.
+# Deleting, Moving, and Renaming Files
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+You can perform common file operations such as deleting, moving, and renaming files and folders.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Single File Operations](/docs/mdmft/v3.11.4/end-user-guide/delete-move-rename#single-file-operations)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fdelete-move-rename%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Click the action menu (three dots) next to the file.
+2. Select "Delete," "Move," or "Rename" as needed.
+
+3. If moving files, select the target folder from the list and click "Move."
+
+Info
+
+Deleted files are sent to the Recycle Bin and can be [restored later](/docs/mdmft/v3.11.4/end-user-guide/restore-deleted-files). To permanently delete files, use the "Delete files permanently" option (explained below).
+
+Info
+
+Deleted folders are not sent to the Recycle Bin—only their files are moved there.
+
+---
+
+### [Managing Multiple Files Simultaneously](/docs/mdmft/v3.11.4/end-user-guide/delete-move-rename#managing-multiple-files-simultaneously)
+
+1. Check the boxes next to the files you want to delete or move.
+2. A menu will appear above the file list.
+3. Click "Delete" or "Move."
+
+4. For moves, select the target folder and click "Move Here."
+
+---
+
+### [Deleting Files Permanently](/docs/mdmft/v3.11.4/end-user-guide/delete-move-rename#deleting-files-permanently)
+
+If MetaDefender® MFT is configured to allow permanent file deletion:
+
+- A "Permanently Delete" option will appear in the three-dot menu or after right-clicking on multiple selected items.
+- Use this option as you would the standard delete.
+
+Important!
+
+Permanently deleted files cannot be restored.
+
+### [Moving Files with Drag and Drop](/docs/mdmft/v3.11.4/end-user-guide/delete-move-rename#moving-files-with-drag-and-drop)
+
+On the My Files page, you can move selected files or folders by dragging them to a visible folder or to the parent folder. Simply drag and drop the selected items onto the desired destination.

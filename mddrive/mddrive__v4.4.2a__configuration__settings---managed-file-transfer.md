@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/configuration/settings---managed-file-transfer -->
 
-Too many requests
-# You're going a little too fast.
+# Settings → Managed File Transfer
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Managed File Transfer (formerly MD Vault) is a secure solution to transfer your sensitive data across your critical infrastructure networks. You can set up an integration between MetaDefender Drive and MetaDefender Managed File Transfer to securely transfer and store the safe files after a completed scan by MetaDefender Drive.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Before you start, you need to deploy a MetaDefender Managed File Transfer instance for your organization using the following [MetaDefender Managed File Transfer Installation Instructions](https://docs.opswat.com/mdmft).
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fconfiguration%2Fsettings---managed-file-transfer%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Setting Up Managed File Transfer Integration](/docs/mddrive/v4.4.2a/configuration/settings---managed-file-transfer#setting-up-managed-file-transfer-integration)
+
+1. Go to Settings → MetaDefender MFT. The MetaDefender MFT page will show if there are any MetaDefender Managed File Transfer instances connected to the currently plugged drive.
+
+2. Click Add MFT Instance, and enter the MFT URL and API Key in the Add a New MetaDefender MFT instance window, then press Add MFT.
+
+Info
+
+One MetaDefender Drive can connect to multiple instances of MetaDefender Managed File Transfer.
+
+3. After a successful connection, you can toggle the **Transfer as Guest** option to **NO**, and you will be able to transfer files as administrator and set the expiration time. By default, MetaDefender Drive transfers data to newly connected Managed File Transfer instances as a **Guest**.
+
+If you transfer the clean data as a **Guest**, your data will be securely stored for a specified amount of time and cleared afterward. The provided **Guest ID** can be used to log in to MetaDefender Managed File Transfer and retrieve your files.
+
+..

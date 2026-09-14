@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mddrive/process/skipped--files -->
 
-Too many requests
-# You're going a little too fast.
+# Skipped Files in Results
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+[Manually Skipped Files](https://app.developerhub.io/metadefender-drive/v4.4.9/process/processing-your-device-with-metadefender-drive#manually-skip-files-during-scan)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Files can be skipped during a scan for multiple reasons.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Info
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fprocess%2Fskipped--files%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Skipped files result in a **UNSAFE DEVICE** final verdict, even when there are no detected files under **Potential Infection**, **Potential Vulnerabilities**, **Sensitive Data**, **Data Integrity** or **Country of Origin** lists.
+
+You can find a list of the skipped files under the **Skipped Files** tab:
+
+To determine the reason for skipping files, click any of the skipped items to check the details on why the file was skipped. Here are some examples:
+
+[File Size Exceeded Scan Limit](/docs/mddrive/knowledge-base/exceeded-maximum-size-permitted)
+
+[Manually Skipped Files](https://app.developerhub.io/metadefender-drive/v4.4.9/process/processing-your-device-with-metadefender-drive#manually-skip-files-during-scan)
+
+[Skip By Hash](/docs/mddrive/configuration/preferences-----skip-by-hash)

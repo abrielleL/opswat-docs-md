@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/mdemail/operating/audit-log -->
 
-Too many requests
-# You're going a little too fast.
+# Audit Log
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Audit > Audit Log** lists audit relevant actions that were performed in the system.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Relation to Configuration History
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Email Gateway Security versions before 5.6.7 had **Audit > Configuration History**. This entry was redesigned to be the audit log and renamed to **Audit > Audit Log**.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Foperating%2Faudit-log%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The following event categories are logged in the Audit Log:
+
+- Web management console logins and logouts;
+- Configuration changes;
+- Quarantine operations having impact on emails.
+
+## [Actions](/docs/mdemail/operating/audit-log#actions)
+
+| Icon | Action |  |
+| --- | --- | --- |
+|  | Event Details | Show relevant details about the logged action. |
+|  | Go to Email | Show the email in the Quarantine or in the Email History on which this action was performed on. |

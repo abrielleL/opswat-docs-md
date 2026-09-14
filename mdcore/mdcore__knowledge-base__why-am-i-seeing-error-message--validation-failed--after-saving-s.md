@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-am-i-seeing-error-message--validation-failed--after-saving-s -->
 
-Too many requests
-# You're going a little too fast.
+# Why am I seeing error message "Validation failed" after saving Sandbox module settings?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+In the Sandbox module settings, clicking **"Save changes"** triggers an error message—**"Validation failed"**—which appears in the top-right corner of the screen.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This behavior is expected in MetaDefender Core versions prior to 5.7.1. It occurs because the content within the **ChatGPT prompt** exceeds the character limit supported by the Sandbox engine.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The issue has been resolved in MetaDefender Core version 5.7.1 and later.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-am-i-seeing-error-message--validation-failed--after-saving-s%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/portal/support).

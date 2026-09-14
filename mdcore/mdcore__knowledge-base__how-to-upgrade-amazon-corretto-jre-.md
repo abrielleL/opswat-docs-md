@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/how-to-upgrade-amazon-corretto-jre- -->
 
-Too many requests
-# You're going a little too fast.
+# How to upgrade Amazon Corretto JRE?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+If the Sandbox engine is installed and relies on Amazon Corretto JRE, we strongly recommend upgrading to Amazon Corretto 17 to ensure system security and compatibility.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Upgrade Instructions:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Download the latest version of Amazon Corretto 17 from the official AWS website: [Amazon Corretto 17](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html)
+2. Follow the installation instructions provided on the [download page](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/windows-install.html).
+3. For detailed guidance, refer to the MetaDefender Core Sandbox engine system requirements documentation: [Sandbox Dependencies](/docs/mdcore/sandbox/system-requirements#dependencies)
+4. Upon upgrading, the preflight script of the Sandbox engine will no longer display a warning about using an outdated Corretto version.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fhow-to-upgrade-amazon-corretto-jre-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Support:
+
+If **Further Assistance** is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

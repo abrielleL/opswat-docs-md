@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/configuration/preferences---scan-settings -->
 
-Too many requests
-# You're going a little too fast.
+# Preferences → Scan Settings
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Drive enables users to adjust general scan settings, including the file sizes and scan timeouts. To adjust these settings, navigate to **Settings** → **Preferences** → **Scan Settings** page, and click **Edit Settings.**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The available settings in the **Scan Settings** window are:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- **Max File Size to scan** [in megabytes]:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fconfiguration%2Fpreferences---scan-settings%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+  - The default maximum size of a single file per scan is set to 200MB
+  - The maximum file size per scan depends on the available space of the MetaDefender Drive.
+- **Max Minutes to Scan a File** [in minutes]
+- **Max Minutes per Engine to Scan a File** [in minutes]
+
+Scan settings window
+
+.

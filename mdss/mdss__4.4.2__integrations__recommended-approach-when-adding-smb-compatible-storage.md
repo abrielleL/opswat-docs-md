@@ -1,12 +1,40 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/integrations/recommended-approach-when-adding-smb-compatible-storage -->
 
-Too many requests
-# You're going a little too fast.
+# Recommended approach when adding SMB-Compatible Storage
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+For production environments, we recommend using **OS-level SMB/CIFS mounts** instead of application-level connections.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This approach provides:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Better stability under high load
+- Improved file descriptor management
+- Enhanced performance
+- More reliable connections
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fintegrations%2Frecommended-approach-when-adding-smb-compatible-storage%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Success
+
+Many of our enterprise customers have already migrated to OS-level SMB mounts and are experiencing significantly improved stability and performance in their production environments.
+
+## [Why We Recommend This Approach](/docs/mdss/4.4.2/integrations/recommended-approach-when-adding-smb-compatible-storage#why-we-recommend-this-approach)
+
+Through extensive testing and production deployments, we've identified challenges with the **3rd-party SMB client library** that we are using when handling:
+
+- **High concurrent workloads**: connection drops intermittently
+- **Large file descriptor usage**: the SMB client library may open excessive file descriptors, leading to system resource exhaustion
+- **Connection stability**: Network interruptions can cause SMB connections created from the SMB client library to become stale or unresponsive
+
+## [Technical Background](/docs/mdss/4.4.2/integrations/recommended-approach-when-adding-smb-compatible-storage#technical-background)
+
+OS-level mounts leverage the operating system's native **SMB/CIFS** **client**, which:
+
+- **Handles connection pooling automatically**: The OS manages connection lifecycle and recovery
+- **Manages file descriptors more efficiently**: Kernel-level implementation prevents descriptor leaks
+- **Provides better fault tolerance**: Built-in retry logic and connection recovery
+- **Reduces application-level overhead**: Direct kernel I/O without library abstraction layers
+
+This configuration has been validated across multiple production deployments with varying workloads and is now our recommended best practice for enterprise installations.
+
+## [Choose Your Platform](/docs/mdss/4.4.2/integrations/recommended-approach-when-adding-smb-compatible-storage#choose-your-platform)
+
+- **Linux Deployment**: [[Linux] How to Expose an SMB Share as an NFS Storage Unit](/docs/mdss/4.4.2/integrations/how-to-add-a-smb-share-as-a-nfs-storage)
+- **Windows Deployment**: [[Windows] How to Expose an SMB Share as an NFS Storage Unit](/docs/mdss/4.4.2/integrations/windows-deployment--how-to-add-a-smb-share-as-a-nfs-storage-unit)

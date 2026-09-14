@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/installation/custom-certificates-on-k8s -->
 
-Too many requests
-# You're going a little too fast.
+# Custom certificates on K8S
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Custom certificates need to be loaded in MDSS when connecting to services that use a private TLS/SSL certificate like MD Core, storage units, external databases etc. These certificates need to be loaded into the K8S cluster as a secret which can be mounted into the appropriate services by adding the following section to the values file:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+YamlCopymdss_components:
+<SERVICE_NAME>:
+update_ca: true
+customMounts:
+- mountPath: "/usr/local/share/ca-certificates/my-custom-cert.crt"
+name: my-cert
+subPath: cert-data
+customVolumes:
+- name: my-cert
+secret:
+secretName: my-custom-cert
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Finstallation%2Fcustom-certificates-on-k8s%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+An example values file where certificates are loaded into multiple MDSS services can be found on our GitHub repo here: <https://github.com/OPSWAT/metadefender-k8s/blob/main/helm_charts/mdss-custom-certs-example.yml>

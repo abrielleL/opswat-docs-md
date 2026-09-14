@@ -4,7 +4,7 @@
 
 Temporary access allows an end user to gain access to remediation resources when they are not able to immediately meet policy requirements. There are situations, such as installing anti-virus software, where an end user will need network access to meet policy requirements. Prior to access requests, a user would have to call the help desk, where they would then be placed in Open Access by a help desk representative. With temporary access requests, this process can be automated, therefore reducing help desk calls. The purpose of this guide is to introduce you to the configuration and operation of the temporary access feature in NAC. This guide provides all the information needed to fully configure temporary access, and details how an end user will request access and receive subsequent notifications. Let's get started!
 
-## Step-by-step guide
+## [Step-by-step guide](/docs/manac/configuration/configuring-temporary-access-request#step-by-step-guide)
 
 Configuring and Enabling Temporary Access:
 
@@ -76,7 +76,7 @@ If you want to use the attached anti-virus file, simply download it, navigate to
 
 ##
 
-## Related articles
+## [Related articles](/docs/manac/configuration/configuring-temporary-access-request#related-articles)
 
 For environments using the classic web-messages, see the attached document.
 

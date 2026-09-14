@@ -1,12 +1,53 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/managing-metadefender-email-gateway-security-license -->
 
-Too many requests
-# You're going a little too fast.
+# Managing MetaDefender Email Gateway Security License
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to activate or deactivate the license of a MetaDefender Email Gateway Security instance remotely.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Go to the **MetaDefender** **Email Gateway Security** management page under **Inventory** in the sidebar.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. Select **License Information** for the Email Gateway Security instance you wish to configure .
+3. If the current instance does not have an active license, select **ADD LICENSE** to activate one.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fmanaging-metadefender-email-gateway-security-license%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If it does have an active license, select **REMOVE LICENSE** to deactivate it or **UPDATE LICENSE** to switch to a different license.
+
+4. If either adding or updating is chosen in the previous step, please choose a license activation method in the newly opened dialog.
+
+## [Online product activation](/docs/ocm/7.39.0/integrations/managing-metadefender-email-gateway-security-license#online-product-activation)
+
+The following guideline describes how to activate the MetaDefender Email Gateway Security license online.
+
+1. Select the **Online Activation** option.
+
+2. Enter the key.
+
+3. The dialog will be closed and the management page will be reloaded automatically if the result is successful.
+
+## [Offline product activation](/docs/ocm/7.39.0/integrations/managing-metadefender-email-gateway-security-license#offline-product-activation)
+
+The following guideline describes how to activate the MetaDefender Email Gateway Security license offline.
+
+1. Select the **Offline** **Activation** option.
+
+2. The **Offline Activation** menu will be opened.
+
+## [Offline Activation details](/docs/ocm/7.39.0/integrations/managing-metadefender-email-gateway-security-license#offline-activation-details)
+
+1. Log into [https://my.opswat.com](https://my.opswat.com/)
+2. Select Activate New License on the sidebar
+3. Select MetaDefender Email Security for **MetaDefender Package.**
+4. Fill in the requested information about your deployment.
+
+- **Activation Key:** The activation key of MetaDefender Email Gateway Security that you have received.
+
+- **Deployment ID:** The deployment ID shown in the previous section.
+
+- **Optional description:** The description for this deployment.
+
+4. Click the **Request Unlock Key** button. The **Download Unlock Key** link will appear.
+
+5. Click the **Download Unlock Key** link and save the activation file.
+
+6. Go back to OPSWAT Central Management's Web Management Console. Browse for the activation file and click the **ACTIVATE** button.
+
+7. The dialog will be closed and the management page will be reloaded automatically if the result is successful.

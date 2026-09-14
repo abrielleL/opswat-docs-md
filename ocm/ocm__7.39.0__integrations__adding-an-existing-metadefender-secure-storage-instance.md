@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/adding-an-existing-metadefender-secure-storage-instance -->
 
-Too many requests
-# You're going a little too fast.
+# Adding an existing MetaDefender Storage Security instance
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to add an existing MetaDefender Storage Security instance to OPSWAT Central Management.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Go to the **MetaDefender** **Storage Security** management page under **Inventory** in the sidebar.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. Click the **ADD NEW INSTANCE** button in the right top panel.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fadding-an-existing-metadefender-secure-storage-instance%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+3. The dialog **Add An Existing Instance** will be opened. Fill in the proper inputs. You can click the **TEST CONNECTION** button to check the connection status.
+
+- **Name:** The name you want to assign to the new instance
+
+- **Username:** The account's username of the instance that should be used to authenticate the request
+
+- **Password:** The account's password of the instance that should be used to authenticate the request
+
+- **Server Address:** The address of the instance
+
+4. After checking the connection status, the button **ADD** is enabled.
+
+5. The dialog will be closed and the page will be reloaded automatically if the result is successful.
+
+Info
+
+The status of the new instance is **Connected** after fetching its version successfully.

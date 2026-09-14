@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/how-to-manual-update-microsoft-edge-in-kiosk-hardened-image -->
 
-Too many requests
-# You're going a little too fast.
+# How to manual update Microsoft Edge in Kiosk Hardened Image
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The purpose of this document is to provide instructions on how to manually update Microsoft Edge in Kiosk device with Kiosk Hardened Image.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Step 1.** Close the Microsoft Edge application
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Step 2.** Uninstall the current version of Microsoft Edge
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fhow-to-manual-update-microsoft-edge-in-kiosk-hardened-image%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Click Start, search for Control Panel > Uninstall to uninstall programs
+- Select Microsoft Edge, click on Uninstall
+
+**Step 3.** Download ([link](https://www.microsoft.com/en-us/edge/business/download)) and run the offline installer for Microsoft Edge to perform the installation
+
+- Once the install was completed successfully, open Microsoft Edge > Settings > About Microsoft Edge to verify the version
+
+Info
+
+This guide was created based on Kiosk Hardened Image version 25.10.0. Behavior may differ on other versions.

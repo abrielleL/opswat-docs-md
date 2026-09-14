@@ -1,12 +1,8 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/knowledge-base/how-to-upload-packages-to-offline-products -->
 
-Too many requests
-# You're going a little too fast.
+# How to upload packages to offline products
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Please read the appropriate documentation for your product to learn how to use the update packages downloaded by the Update Downloader.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Fknowledge-base%2Fhow-to-upload-packages-to-offline-products%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- [**MetaDefender Core v5**](https://docs.opswat.com/mdcore/operating/inventory-management#manual-updates)
+- [**Central Management v7**](https://docs.opswat.com/ocm/configuration/update-settings-core-modules)

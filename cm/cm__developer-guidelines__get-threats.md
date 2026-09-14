@@ -41,7 +41,7 @@ See details in the Response HTTP Code section in [this page](https://www.opswat.
 | Key | DataType | Returned when | Description |
 | ---- | ---- | ---- | ---- |
 | antimalware_scan | array<object> | verbose. antimalware_scan =1 | An array of threats detected by daily anti-malware scan |
-| antimalware_scan.critical | int |  | Indicate if the threat is critical based on the defined policy on MetaDefender IT Access console Values are: - 0 – not critical - 1 – critical |
+| antimalware_scan.critical | int |  | Indicate if the threat is critical based on the defined policy on My OPSWAT Central Management console Values are: - 0 – not critical - 1 – critical |
 | antimalware_scan .scan_time | string |  | timestamp when found the threat |
 | antimalware_scan .file | string |  | File was found the threat |
 | antimalware_scan .hash | string |  | Indicates the hash code of the scanning object if the object is a file or process |

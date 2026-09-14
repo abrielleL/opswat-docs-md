@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/installation/does-metadefender-kiosk-support-multiple-languages-or-customisat -->
 
-Too many requests
-# You're going a little too fast.
+# Does MetaDefender Kiosk support multiple languages or customisation?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Kiosk supports multiple languages, allowing users to display the interface in their preferred language and administrators to configure language settings as needed
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The default languages included are:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- English; Arabic; Chinese (Traditional); French; German; Hebrew; Italian; Japanese; Korean; Spanish; Turkish; Vietnamese
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Finstallation%2Fdoes-metadefender-kiosk-support-multiple-languages-or-customisat%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Each supported display language also has a matching on-screen keyboard layout available, so users can type in that language directly on the kiosk touchscreen. For example, Turkish is available both as a display language and as a Turkish-Q on-screen keyboard layout.
+
+If you wish to add a language to the MetaDefender Kiosk UI or edit the translations of any of the existing languages, click View and edit languages.
+
+Starting from Kiosk version 4.7.9, administrators can export and import pre-defined (translated) language packs, making it easier to backup and reuse custom translation across devices. To export the languages pack, click on "**Export**" button, the exported file "<language>.json" can be used to import later.
+
+Support
+
+If **Further Assistance** is required, please proceed to log a [Support Ticket](https://www.opswat.com/support) with the OPSWAT team.

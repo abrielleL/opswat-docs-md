@@ -15,4 +15,4 @@ Please check the file gears_product_service.log in the folder "C:\Program Files\
 
 Look for the section that starts with **"Testing connection to <target machine>"** to find the remote installation's error message. If the log includes the line **"Install failed"**, a possible cause is that the target machine did not satisfy the OPSWAT Product's system requirements. Please ensure that the target machine does meet the system requirements and try again.
 
-If the log has one or more error messages **"ExitStatus: 1"** instead of **"ExitStatus: 0"**, it is possible that OpenSSH server has not been enabled correctly on the target machine. Please refer to [Remote Install OPSWAT Products](/docs/ocm/7.39.0/operating/remote-install-opswat-products) to correct its configuration.
+If the log has one or more error messages **"ExitStatus: 1"** instead of **"ExitStatus: 0"**, it is possible that OpenSSH server has not been enabled correctly on the target machine. Please refer to [Remote Install OPSWAT Products](/operating/remote-install-opswat-products) to correct its configuration.

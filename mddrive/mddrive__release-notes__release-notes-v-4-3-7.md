@@ -1,12 +1,10 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-v-4-3-7 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v4.3.7
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-notes-v-4-3-7%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Oct 24, 2025** | This release streamlines Centralized Scanning Profile management, improves scanning experience, and accurate license validation |
+|  |  |
+| **Improvements** |  |
+|  | - **Enhanced Centralized Scanning Profile Management**: Improved reliability to prevent unexpected profile lockouts. - **Improved Scanning Experience on Low-Memory Systems:** Scans now complete using available engines to incease the reliabliability within resource-limited environments. - **Refined License Validation:** Current license details now displays accurately at startup. |

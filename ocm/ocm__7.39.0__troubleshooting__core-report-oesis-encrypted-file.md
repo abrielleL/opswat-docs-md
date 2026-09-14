@@ -1,12 +1,14 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/troubleshooting/core-report-oesis-encrypted-file -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Core reports that the OPSWAT Central Management installer package contains encrypted files
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| Type | Detail |
+| --- | --- |
+| Problem | When scanning the OPSWAT Central Management installer package with MetaDefender Core, the scan result shows that the package contains encrypted files. |
+| Cause | Certain files in the installer packages are encrypted |
+| Troubleshooting | MetaDefender Core scan result reports that the installer package contains encrypted files |
+| Solution | If scan reports for the encrypted files are needed, please contact OPSWAT support team. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When scanning the OPSWAT Central Management installer package with MetaDefender Core, the scan result shows that the package contains encrypted files.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Ftroubleshooting%2Fcore-report-oesis-encrypted-file%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This is because the installer package contains MetaDefender Endpoint SDK modules that are encrypted. To receive the scan reports for these files, please contact OPSWAT support team.

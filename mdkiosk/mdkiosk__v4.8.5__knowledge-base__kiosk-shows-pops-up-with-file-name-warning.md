@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/kiosk-shows-pops-up-with-file-name-warning -->
 
-Too many requests
-# You're going a little too fast.
+# Kiosk shows warning popup for unexpected “C:\Program” File
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+### [Issue](/docs/mdkiosk/v4.8.5/knowledge-base/kiosk-shows-pops-up-with-file-name-warning#issue)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- When starting the Kiosk device, a popup with a file name warning may appear. This warning message can also occur during other stages of Kiosk operation.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Some features may not work as expected. For example, errors may occur when downloading the support package, and RFID smart cards or encrypted drives may not function properly
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fkiosk-shows-pops-up-with-file-name-warning%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+### [Cause](/docs/mdkiosk/v4.8.5/knowledge-base/kiosk-shows-pops-up-with-file-name-warning#cause)
+
+A packaging issue in YARA engine version **5.0.0 (released 4 Sept 2025)** may create a **zero-byte file named C:\Program** on Windows systems. This file can trigger a Windows warning about potential application conflicts.
+
+### [Solution](/docs/mdkiosk/v4.8.5/knowledge-base/kiosk-shows-pops-up-with-file-name-warning#solution)
+
+To resolve the issue and prevent the warning from appearing, please following the instruction to update the YARA engine to version **(5.0.2 or later)**
+
+- From the **Core Admin Console**, navigate to **Inventory** > **Modules** > **Update All** to trigger the engine update of the Yara engine to version **5.0.2 or later.** Yara engine will automatically delete the C:\Program file
+
+  - If your device is in airgap environment, please follow this KB to update the engine [link](https://www.opswat.com/docs/mdcore/knowledge-base/how-do-i-deploy-metadefender-core-to-an-offline-windows-envir#d-applying-offline-updates)
+
+Alternatively, you can manually rename or delete the C:\Program file if required.

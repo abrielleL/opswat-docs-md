@@ -28,7 +28,7 @@ https://gears.opswat.com/o/api/v2/account
 
 ## Response HTTP Code
 
-See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
+See [APIs guidelines.](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 
 ## Response Parameters
 
@@ -36,7 +36,7 @@ See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 | ---- | ---- | ---- |
 | name | string | Account Name |
 | email | string | Owner email address |
-| last_login | string | The last date when the owner user logged into MetaAccess console |
+| last_login | string | The last date when the owner user logged into My OPSWAT Central Management console |
 | date_created | string | Date when the account was created |
 | devices_allowed | int | Maximal number of devices is allowed to be monitored by on the account |
 | devices_used | int | Number of monitored devices on the account |

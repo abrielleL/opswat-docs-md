@@ -1,12 +1,43 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/configuration/update-client-oesis-vul -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Endpoint, OESIS, and the vulnerability database
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT Central Management provides administrators with the ability to update its MetaDefender Endpoint installers, OESIS packages, and vulnerability database, which are all components of the Device Management feature suite. The update interface is located at **Server Configuration > Update Settings > AGENT UPDATE.**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+There are 3 options available for update sources:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- **Internet:** OPSWAT Central Management automatically downloads the latest updates from the OPSWAT server once they are available.
+- **Folder:** OPSWAT Central Management automatically searches for updates in a folder designated by the administrators. The update files must be manually copied to this folder.
+- **Manual:** Administrators manually upload the update files through the OPSWAT Central Management’s interface.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fconfiguration%2Fupdate-client-oesis-vul%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Internet:](/docs/ocm/7.39.0/configuration/update-client-oesis-vul#internet)
+
+OPSWAT Central Management automatically downloads the latest updates from the OPSWAT server once they are available.
+
+- **Update Processing Schedule**: The frequency of the automatic update process.
+- **Update Pause (Optional):** Select a time period when updates should not be performed.
+
+## [Folder:](/docs/ocm/7.39.0/configuration/update-client-oesis-vul#folder)
+
+OPSWAT Central Management automatically searches for updates in a folder designated by the administrators. The update files must be manually copied to this folder.
+
+- **Pick up updates from:** The folder that OPSWAT Central Management should search for the update files in.
+
+  - **Delete files after import**: Delete the update files after the update process completes.
+- **Update Schedule**: The frequency of the automatic update process.
+- **Update Now:** Immediately trigger the update process
+
+Info
+
+From 7.29.0, UNC path format is supported when selecting a folder.
+
+## [Manual:](/docs/ocm/7.39.0/configuration/update-client-oesis-vul#manual)
+
+Administrators manually upload the update files through the OPSWAT Central Management’s interface.
+
+The below guidelines describe how to manually update a component.
+
+1. Select the **Upload** icon to begin the process.
+2. Select the update files (usually 2 files: one .zip and one .yml) in the file browser.
+
+3. Once the upload completes, select **Save** at the top of the page to complete the update process.

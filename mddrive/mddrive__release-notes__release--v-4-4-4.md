@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release--v-4-4-4 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive v4.4.4
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease--v-4-4-4%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on Apr 24, 2026** | This release includes new features and issue fixes |
+| **New Features** | - **Recommend Engine based on Hardware:** MetaDefender Drive now automatically recommends the optimal scan configuration based on the machine’s hardware resources, fully replacing the legacy Lite Mode with a smarter, hardware‑aware experience. - **Extend NTFS partition from 12G to 64GB:** For Drive 2, Digital Display, and Smart Touch (not supported on 64GB Drive), reflashing to the latest version using DTK expands reporting and engine update space from 12GB to 64GB, enabling storage of more reports and In-Session engines |
+| **Improvements** |  |
+|  | - **Improved stability:** by prioritizing the UI so it remains responsive during CPU-intensive scans - **Improved In-Session UX and Stability:**    - Making it more friendly especially when a previous session is running.   - Showing splash while In-Session is loading   - Reducing mis-scans and support overhead by making the chosen scan path immediately visible during in-session scanning.   - Enables quick identification of the physical Drive via its serial number and faster lookup of its related reports in CM. |
+| **Bug fixed** |  |
+|  | - Drive can't connect to OCM with HTTPS enabled using self-signed certificate chain - AV engines sometimes not showing on Drive - Report Sync hang with spinner forever - Scan Error message not reflected in scan report |

@@ -51,7 +51,7 @@ The above Rule will assign a `IoT`_Unknow_Server`` access profile to Device(s) t
 
 ![](https://uploads.developerhub.io/prod/97qW/05nz3aay1kl2b7c8kkk79t9touuttxr85ituvyaf7jvroavmf53ij3id6e2duaci.png)
 
-- RADIUS NAC can enforce the Unknown Device by mapping the Device's information with multiple conditions in RADIUS NAC Rules. We will use the same [Device Enrollment Configuration](https://www.opswat.com/docs/cm/secure-access-solution/device-enrollment#configuration)[ ](https://www.opswat.com/docs/cm/manac/nac-cloud/device-enrollment#configuration)for this scenario.
+- RADIUS NAC can enforce the Unknown Device by mapping the Device's information with multiple conditions in RADIUS NAC Rules. We will use the same [Configuration](https://www.opswat.com/docs/cm/secure-access-solution/device-enrollment#configuration) for this scenario.
 
 - On the template spreadsheet, fill in additional information for the Device
 

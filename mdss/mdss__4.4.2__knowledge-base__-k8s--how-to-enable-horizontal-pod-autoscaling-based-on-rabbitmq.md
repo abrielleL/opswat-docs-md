@@ -1,12 +1,212 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/knowledge-base/-k8s--how-to-enable-horizontal-pod-autoscaling-based-on-rabbitmq -->
 
-Too many requests
-# You're going a little too fast.
+# [K8s] How to enable Horizontal Pod Autoscaling based on RabbitMQ queue metrics
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This guide outlines the process of setting up Horizontal Pod Autoscaling (HPA) for the Scanning service based on RabbitMQ queue size metrics. This configuration automatically scales the number of scanning pods up or down in response to the number of messages in the scan queue.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+This documentation provides a general implementation approach that will need to be adapted to your specific environment. The exact commands, configurations, and values presented here should be reviewed and modified according to your organization's specific Kubernetes infrastructure, network architecture, and operational requirements.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fknowledge-base%2F-k8s--how-to-enable-horizontal-pod-autoscaling-based-on-rabbitmq%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Prerequisites](/docs/mdss/4.4.2/knowledge-base/-k8s--how-to-enable-horizontal-pod-autoscaling-based-on-rabbitmq#prerequisites)
+
+- Kubernetes cluster with HPA support
+- If using an external RabbitMQ instance:
+
+  - RabbitMQ version 3.8.0 or higher
+  - RabbitMQ Prometheus plugin must be enabled
+  - Port 15692 must be accessible for metrics scraping
+  - The RabbitMQ management interface must be available
+- Basic understanding of Kubernetes and Prometheus
+
+## [1. Install Prometheus (if not already deployed)](/docs/mdss/4.4.2/knowledge-base/-k8s--how-to-enable-horizontal-pod-autoscaling-based-on-rabbitmq#1-install-prometheus-if-not-already-deployed)
+
+If Prometheus is not already deployed in your cluster, install it using Helm:`
+
+BashCopyhelm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm install prometheus prometheus-community/prometheus --namespace default
+## [2. Configure Prometheus to Scrape RabbitMQ Metrics](/docs/mdss/4.4.2/knowledge-base/-k8s--how-to-enable-horizontal-pod-autoscaling-based-on-rabbitmq#2-configure-prometheus-to-scrape-rabbitmq-metrics)
+
+Add the following scrape configuration to your Prometheus ConfigMap to collect metrics from RabbitMQ:
+
+YamlCopy- job_name: rabbitmq
+kubernetes_sd_configs:
+- role: service
+namespaces:
+names:
+- default
+relabel_configs:
+- action: keep
+source_labels: [__meta_kubernetes_service_name]
+regex: rabbitmq
+- action: keep
+source_labels: [__meta_kubernetes_service_port_name]
+regex: 15692
+- action: labelmap
+regex: __meta_kubernetes_service_label_(.+)
+- source_labels: [__meta_kubernetes_namespace]
+target_label: kubernetes_namespace
+- source_labels: [__meta_kubernetes_service_name]
+target_label: kubernetes_service_name
+metrics_path: /metrics
+
+Apply the updated ConfigMap and restart Prometheus to apply the changes.
+
+Info
+
+**Note for External RabbitMQ**: If using an external RabbitMQ instance, you'll need to modify the scrape configuration to target your external instance instead of using Kubernetes service discovery.
+
+## [3. Install Prometheus Adapter (if not already deployed)](/docs/mdss/4.4.2/knowledge-base/-k8s--how-to-enable-horizontal-pod-autoscaling-based-on-rabbitmq#3-install-prometheus-adapter-if-not-already-deployed)
+
+The Prometheus Adapter is required to expose Prometheus metrics to the Kubernetes metrics API:
+
+Info
+
+Please update `prometheus.url` and `prometheus.port` according to your environment
+
+BashCopyhelm install adapter prometheus-community/prometheus-adapter \
+--set prometheus.url=http://prometheus-server.default.svc \
+--set prometheus.port=80
+## [4. Configure Prometheus Adapter](/docs/mdss/4.4.2/knowledge-base/-k8s--how-to-enable-horizontal-pod-autoscaling-based-on-rabbitmq#4-configure-prometheus-adapter)
+
+Update the Prometheus Adapter ConfigMap to expose the RabbitMQ queue metric:
+
+YamlCopydata:
+config.yaml: |
+rules:
+- seriesQuery: '{__name__="rabbitmq_queue_messages_ready",kubernetes_namespace!=""}'
+seriesFilters: []
+resources:
+overrides:
+kubernetes_namespace: {resource: "namespace"}
+name:
+matches: "rabbitmq_queue_messages_ready"
+as: "rabbitmq_scan_queue_messages"
+metricsQuery: sum(rabbitmq_queue_messages_ready{queue=~"object_ready_for_scan_queue_(Low|Medium|High)"}) by (<<.GroupBy>>)
+
+This configuration:
+
+- Queries metrics with name "rabbitmq_queue_messages_ready"
+- Associates metrics with Kubernetes namespaces
+- Renames the metric to "rabbitmq_scan_queue_messages"
+- Filters for scan queues with Low, Medium, and High priorities
+- Sums the total number of messages across these queues
+
+After modifying the ConfigMap, restart the adapter:
+
+BashCopykubectl rollout restart deployment adapter-prometheus-adapter
+## [5. Verify the Custom Metric](/docs/mdss/4.4.2/knowledge-base/-k8s--how-to-enable-horizontal-pod-autoscaling-based-on-rabbitmq#5-verify-the-custom-metric)
+
+Check that the metric is properly exposed to the Kubernetes API:
+
+BashCopykubectl get --raw /apis/custom.metrics.k8s.io/v1beta1/ | jq
+
+You should see "rabbitmq_scan_ queue_messages" listed in the output.
+
+BashCopy$ kubectl get --raw /apis/custom.metrics.k8s.io/v1beta1/ | jq
+{
+"kind": "APIResourceList",
+"apiVersion": "v1",
+"groupVersion": "custom.metrics.k8s.io/v1beta1",
+"resources": [
+{
+"name": "namespaces/rabbitmq_scan_queue_messages",
+"singularName": "",
+"namespaced": false,
+"kind": "MetricValueList",
+"verbs": [
+"get"
+]
+}
+]
+}
+
+To get the metric value:
+
+BashCopy$ kubectl get --raw /apis/custom.metrics.k8s.io/v1beta1/namespaces/default/metrics/rabbitmq_scan_queue_messages | jq
+
+You should see the actual value of the queue size:
+
+BashCopy$ kubectl get --raw /apis/custom.metrics.k8s.io/v1beta1/namespaces/default/metrics/rabbitmq_scan_queue_messages | jq
+{
+"kind": "MetricValueList",
+"apiVersion": "custom.metrics.k8s.io/v1beta1",
+"metadata": {},
+"items": [
+{
+"describedObject": {
+"kind": "Namespace",
+"name": "default",
+"apiVersion": "/v1"
+},
+"metricName": "rabbitmq_scan_queue_messages",
+"timestamp": "2025-03-28T11:37:19Z",
+"value": "4994",
+"selector": null
+}
+]
+}
+## [6. Create a Horizontal Pod Autoscaler](/docs/mdss/4.4.2/knowledge-base/-k8s--how-to-enable-horizontal-pod-autoscaling-based-on-rabbitmq#6-create-a-horizontal-pod-autoscaler)
+
+Create an HPA resource that uses the custom metric to scale the Scanning service:
+
+YamlCopyapiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+name: scanningservice-hpa
+namespace: default # Change if your deployment is in a different namespace
+spec:
+scaleTargetRef:
+apiVersion: apps/v1
+kind: Deployment
+name: scanningservice
+minReplicas: 1 # Minimum number of pods
+maxReplicas: 10 # Maximum number of pods
+metrics:
+- type: Object
+object:
+metric:
+name: rabbitmq_scan_queue_messages
+describedObject:
+apiVersion: v1
+kind: Namespace
+name: default # Or the namespace where your RabbitMQ is running
+target:
+type: Value
+value: 5000 # 5000 is the maximum number of messages in the queue set by default in MDSS
+
+Apply the HPA:
+
+BashCopy$ kubectl apply -f scanningservice-hpa.yaml
+## [7. Monitor the HPA](/docs/mdss/4.4.2/knowledge-base/-k8s--how-to-enable-horizontal-pod-autoscaling-based-on-rabbitmq#7-monitor-the-hpa)
+
+Check the status of your HPA:
+
+BashCopykubectl get hpa scanningservice-hpa
+kubectl describe hpa scanningservice-hpa
+## [Scaling Behavior](/docs/mdss/4.4.2/knowledge-base/-k8s--how-to-enable-horizontal-pod-autoscaling-based-on-rabbitmq#scaling-behavior)
+
+- When the total number of messages in the scan queues exceeds 5000, the HPA will scale up the number of scanning pods (up to the maximum of 10).
+- When the number of messages decreases, the HPA will gradually scale down the number of pods.
+
+## [Troubleshooting](/docs/mdss/4.4.2/knowledge-base/-k8s--how-to-enable-horizontal-pod-autoscaling-based-on-rabbitmq#troubleshooting)
+
+If the HPA isn't working as expected:
+
+1. Verify Prometheus is collecting RabbitMQ metrics:
+
+BashCopykubectl port-forward svc/prometheus-server 9090:80
+
+Then visit [http://localhost:9090](http://localhost:9090/) and query:
+
+`rabbitmq_queue_messages_ready{queue=~"object_ready_for_scan_queue_(Low|Medium|High)"}`
+
+2. Check that the Prometheus Adapter can access the metrics:
+
+BashCopykubectl logs -l app.kubernetes.io/name=prometheus-adapter
+
+3. Verify the custom metric is available:
+
+BashCopykubectl get --raw /apis/custom.metrics.k8s.io/v1beta1/namespaces/default/metrics/rabbitmq_scan_queue_messages
+
+4. Ensure the HPA is targeting the correct deployment and namespace.

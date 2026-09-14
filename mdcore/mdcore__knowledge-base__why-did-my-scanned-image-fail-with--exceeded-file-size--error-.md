@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-did-my-scanned-image-fail-with--exceeded-file-size--error- -->
 
-Too many requests
-# You're going a little too fast.
+# Why did my scanned image fail with "exceeded file size" error?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Issue**: When scanning a large JPG image, the following error appears in the logs:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+sanitized: FAILED
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+result: "_{"output_file_path":"","process_details":{"details":"Decompressed image size would be 1314979770 bytes, exceeding size limit of 268435456 bytes.","failure_category":"exceeded file size_"}
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-did-my-scanned-image-fail-with--exceeded-file-size--error-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**Cause**: The decompressed image size (≈1.3 GB) exceeds the configured Image Size Limit (256 MB by default).
+
+**Resolution**: Update the Image Size Limit configuration to allow processing of larger images.
+
+**Notes**:
+
+- Always set the limit slightly higher than the failing image size to avoid repeat issues.
+- Increasing this value may require additional memory and disk resources—adjust system capacity as needed.
+
+Support:
+
+If Further Assistance is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

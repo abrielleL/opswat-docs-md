@@ -4,23 +4,16 @@
 
 My OPSWAT Central Management can be easily integrated with an existing Microsoft Azure & legacy OPSWAT SDP integration to ensure that a device is compliant with the organization's security policy before it is granted access to OPSWAT SDP. This ensures that the user is not only authenticated by Microsoft Azure, but also a device the user uses to access SaaS applications tested for risks and vulnerabilities such as infections or outdated operating systems, BEFORE it access an organization's cloud services.
 
-Follow below steps to integrate My OPSWAT Central Management with your Microsoft Azure & Legacy OPSWAT SDP. You can learn more details for each step here at [3.1.1. How to set it up?](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)
+Follow below steps to integrate My OPSWAT Central Management with your Microsoft Azure & Legacy OPSWAT SDP. You can learn more details for each step here at [Configuration.](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-integration-configuration)
 
-- [Step 1. Enable Access Control on your MetaAccess account](https://onlinehelp.opswat.com/metaaccess/Microsoft_Azure_with_OPSWAT_SDP.html#step-1-enable-access-control-on-your-metaaccess-account)
-- [Step 2. Create SDP app on Microsoft Azure](https://onlinehelp.opswat.com/metaaccess/Microsoft_Azure_with_OPSWAT_SDP.html#step-2-create-sdp-app-on-microsoft-azure)
-- [Step 3. Configure Application and Access Rules on MetaAccess](https://onlinehelp.opswat.com/metaaccess/Microsoft_Azure_with_OPSWAT_SDP.html#step-3-configure-application-and-access-rules-on-metaaccess)
-- [Step 4. Configure SSO settings on SDP](https://onlinehelp.opswat.com/metaaccess/Microsoft_Azure_with_OPSWAT_SDP.html#step-4-configure-sso-settings-on-sdp)
-- [Step 5. Update Applications settings on Identity Provider](https://onlinehelp.opswat.com/metaaccess/Microsoft_Azure_with_OPSWAT_SDP.html#step-5-update-applications-settings-on-identity-provider)
-- [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Microsoft_Azure_with_OPSWAT_SDP.html#step-6-test-your-integration)
+## Step 1. Enable Secure Access on your My OPSWAT Central Management account
 
-## Step 1. Enable Access Control on your My OPSWAT Central Management account
-
-1. Log into the My OPSWAT Central Management console.
+1. Log into the My OPSWAT Central Management console
 2. Navigate to **Secure Access** > **Protected Apps**
-3. Check **"****Enable Secure Access****".**
-4. Click **SAVE**.
+3. Check **"****Enable Secure Access"**
+4. Click **SAVE**
 
-![](https://uploads.developerhub.io/prod/97qW/4f7eu5wx494bdnkroje3cl5udvkeg7gec8u29u094s7hytb1wd8c3om7616ql4n3.png)
+![](https://uploads.developerhub.io/prod/97qW/3xcvx8db4yjszpg6r6rz3k7ayx4p42u38pcmurj3vrj94h1bg6hcf3rv1olrynz5.png)
 
 ## Step 2. Create SDP app on Microsoft Azure
 
@@ -47,16 +40,11 @@ The Enterprise applications blade
 
 6. Add group claim for SAML Response
    1. Click *Edit* on section _User Attributes & Claims
+   2. Click on "Add a group claim", choose "All groups" options(or you can choose what group you want to include in the SAML response) then click **Save**
 
 ![](https://uploads.developerhub.io/prod/97qW/xb7i8479fdlv0mlvusk50c9nw2ze7r14bk0pexc50silu8tie7j8pcxxpqj4zaj3.png)
 
-_
-
-2.  Click on "Add a group claim", choose "All groups" options(or you can choose what group you want to include in the SAML response) then click **Save
-
 ![](https://uploads.developerhub.io/prod/97qW/c3p26egtnc13ztl809i8wmzuqq3pdf2vl4q6vjipmdk1264r0g9iyn1jtur5i4i0.png)
-
-**
 
 7. Download Azure Certificate: this allows My OPSWAT Central Management to verify users signing though a trusted Azure. Each identity provider has a unique X.509 certificate Select Single sign-on on the left navigation, scroll down to SAML Signing Certificate section and and click "Certificate (Base64)" to download the Azure certificate. You need to upload this cert to My OPSWAT Central Management console later.
 
@@ -86,10 +74,9 @@ _
    5. Select Add new IdP if you have not added your IdP or select your IdP from existing IdP
       1. *IdP Name*: an IdP name, for example: Azure
       2. *IdP Certificate*: upload Azure certificate you downloaded in Step 2.7
+   6. Click **Continue**
 
-![](https://uploads.developerhub.io/prod/97qW/i95ehxiw7oohdicfzo4z3cvbuvzyksw9bztbwhb3yh5f0m8508259mgdi4eagcc8.png)
-
-6.  Click **Continue**
+![](https://uploads.developerhub.io/prod/97qW/6ojwyakcgrml65439im5dqj1k4dnwmoztukm7t0l4h9ygco7rkla64ifqqjb4l4q.png)
 
 2. Add SDP application:
    1. Expand the Azure IdP settings you have just added in Step 3.1 above.
@@ -98,11 +85,10 @@ _
       1. *Application*: application name, for example: Demo App
       2. *IdP Login URL*: Embedded " *User access URL* " which you have from Step 2.10
       3. *Application ACS URL*: Embedded "Login URL" which you have from Step 2.9
-      4. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+      4. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications).
+      5. Click **SAVE** and confirm the change with your PIN
 
-![](https://uploads.developerhub.io/prod/97qW/97r7jlp6xd35o66pmvm9pkxt2e1f9sakcc8d6ny1m0t5d35ll7lvui38g7un5uio.png)
-
-4.  Click **SAVE** and confirm the change with your PIN
+![](https://uploads.developerhub.io/prod/97qW/qz23723tachcgq3j8rwuch2197li7x1fdholz2qj2tinld4k0tsw7d4ia2ycsu8h.png)
 
 3. After saving your changes successfully, a SSO setup instruction will be shown, copy the **ACS URL** My OPSWAT Central Management generated there and download OPSWAT Certificate. Note that this information can be found in the protected app's details later.
 
@@ -113,7 +99,7 @@ _
    2. With a new access rule, you need to specify how you would like to block/allow access a device from the application
       1. *Rule name*: a rule name, for example Block non-compliant devices
       2. *Action*: Block or Allow
-      3. Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+      3. Configure conditions to do the action.  Details at [Configure Access Rules.](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
    3. Click **ADD RULE**
 
 ![](https://uploads.developerhub.io/prod/97qW/pxxtndizpxi5o9vfe2imzvod187799emz41vrnh0yj1oji9sicmb7xr2tag07ji7.png)
@@ -130,22 +116,20 @@ _
 
 ![](https://uploads.developerhub.io/prod/97qW/femic1x29r1oow4qnyu3i72tt9jmhn7xjxs46jwwkdkp5dd66cnmfswk2ixxym3z.png)
 
-4. Choose **Custom IDP** then Click **Next.
+4. Choose **Custom IDP** then Click **Next**.
 
 ![](https://uploads.developerhub.io/prod/97qW/rnki9muk3y9j9s6lun3kq9crklo7bkeko5d0wasj37365vdf8fl5n2zoihku99kk.png)
 
-**
-
-5. On this the Provide SP details to SAML Identity Provide screen, copy value of " Audience / SP Identity" for later use t hen click **Next**
+4. On this the Provide SP details to SAML Identity Provide screen, copy value of " Audience / SP Identity" for later use t hen click **Next**
 
 ![](https://uploads.developerhub.io/prod/97qW/3ynkfw7gmtnxjh7z2pi5un30ux6ttyyas57u33r9ph9zpnwirmg45r84trhfq8xy.png)
 
-6. Upload the modified Azure metadata for SDP app file, you prepared in the step 4.2 then click **Next**
+5. Upload the modified Azure metadata for SDP app file, you prepared in the step 4.2 then click **Next**
 
 ![](https://uploads.developerhub.io/prod/97qW/27xl3nbbtzkb5grp73hjdtzl7s88q8c4jcbzuz2yf6odxobyurcch1jcippxszez.png)
 
-7. Enter "[http://schemas.microsoft.com/ws/2008/06/identity/claims/groups](http://schemas.microsoft.com/ws/2008/06/identity/claims/groups)" for Group Attribute then click **Next**
-8. Click **Create**
+6. Enter "[http://schemas.microsoft.com/ws/2008/06/identity/claims/groups](http://schemas.microsoft.com/ws/2008/06/identity/claims/groups)" for Group Attribute then click **Next.**
+7. Click **Create.**
 
 ## Step 5. Update Applications settings on Identity Provider
 
@@ -155,7 +139,7 @@ _
 4. Select the SDP application
 5. Select Single sign-on.
 6. Click the edit icon (pencil icon) on Basic SAML Configuration section
-7. Replace **Identifier** with value got from step 4.6. Replace **Reply URL** with the MetaAccess URL which you got from Step 3.3
+7. Replace **Identifier** with value got from step 4.6. Replace **Reply URL** with the My OPSWAT Central Management URL which you got from Step 3.3
 
 ![](https://uploads.developerhub.io/prod/97qW/yl59toku0qf6muera80bzg5kcn6205xjetz7w3jgdd67cl4x7yuri98ci07x22cm.png)
 
@@ -163,6 +147,4 @@ _
 
 ## Step 6: Test your integration
 
-Follow guideline at [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Microsoft_Azure_with_OPSWAT_SDP.html#src-5718880) to test your integration to verify if it works as your expectation.
-
-**DONE! CONGRATULATIONS.**
+Follow guideline at [Test Your Integration ](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration)to verify if it works as your expectation.

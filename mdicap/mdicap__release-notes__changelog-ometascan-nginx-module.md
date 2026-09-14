@@ -2,6 +2,18 @@
 
 # Ometascan NGINX module Release Notes
 
+## [Version 1.5.1](/docs/mdicap/release-notes/changelog-ometascan-nginx-module#version-151)
+
+Release date: Sep 14, 2026
+
+Enhancements and new features:
+
+- Support debug logging to troubleshoot integration issues. Load the debug version of the module and set the NGINX error log level to debug
+
+  load_module modules/ngx_http_ometascan_module-debug.so;
+  error_log /var/log/nginx/error.log debug;
+- To disable debug logging, load the standard module ngx_http_ometascan_module.so and restore the previous error_log level.
+
 ## [Version 1.5.0](/docs/mdicap/release-notes/changelog-ometascan-nginx-module#version-150)
 
 Release date: May 8, 2026

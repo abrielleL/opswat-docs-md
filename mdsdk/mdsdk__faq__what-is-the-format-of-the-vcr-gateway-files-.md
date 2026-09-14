@@ -1,12 +1,5 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/faq/what-is-the-format-of-the-vcr-gateway-files- -->
 
-Too many requests
-# You're going a little too fast.
+# What is the format of the VCR Gateway files?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Ffaq%2Fwhat-is-the-format-of-the-vcr-gateway-files-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The VCR Gateway files follow the format specified in [this link](https://vcr.opswat.com/gw/file/download/%3CFILE_TO_BE_DOWNLOADED%3E%3E?type=1&token=%3CCUSTOMER_ISSUED_TOKEN%3E). Tokens are issued on a per-customer basis.

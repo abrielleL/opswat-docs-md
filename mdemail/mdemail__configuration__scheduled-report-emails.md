@@ -1,12 +1,35 @@
 <!-- source: https://www.opswat.com/docs/mdemail/configuration/scheduled-report-emails -->
 
-Too many requests
-# You're going a little too fast.
+# Scheduled report emails
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+MetaDefender Email Gateway Security supports reporting the most essential processing results in a well organized, printing ready format (for details see [Reporting](/docs/mdemail/operating/reporting)). These reports can be delivered as attachments to scheduled emails.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Configuration](/docs/mdemail/configuration/scheduled-report-emails#configuration)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Common report settings](/docs/mdemail/configuration/scheduled-report-emails#common-report-settings)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Fconfiguration%2Fscheduled-report-emails%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The
+
+- SMTP server profile (through which report emails are to be delivered),
+- Sender email address, and
+- Whether to digitally sign report emails
+
+can be set as common settings for all the report emails under **Settings > Alerts & Reports / Alerts & Reports**.
+
+Failures
+
+When the SMTP servers of the SMTP server profile set for Alerts & Reports are down, the report email enters the configured retry schedule. For details see [Retry](/docs/mdemail/configuration/settings#retry).
+
+If the report email can not be delivered even after the retries, it ends up *Failed* in email history.
+
+### [Report specific settings](/docs/mdemail/configuration/scheduled-report-emails#report-specific-settings)
+
+The
+
+- Reporting frequency (how often the report email is generated and delivered),
+- Subject of the report email, and
+- Recipients of the report email
+
+can be set for each report under **Reports**.
+
+The  icon in the list of reports represents that the particular report has a schedule set up.

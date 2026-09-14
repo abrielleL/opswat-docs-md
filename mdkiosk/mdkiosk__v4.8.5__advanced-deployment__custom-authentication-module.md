@@ -24,7 +24,7 @@ The system requirements for implementing custom authentication are as follows:
 
 The steps necessary to deploy custom authentication are as follows:
 
-1. Obtain a custom authentication template package from the [My OPSWAT](https://portal.opswat.com/sample-code/metadefender-kiosk-custom-authentication-module) downloads
+1. Obtain a custom authentication template package from the [My OPSWAT](https://my.opswat.com/portal/home/metadefender-kiosk) downloads
 2. Implement the custom authentication interface & build the custom authentication module (`authenticationModule.dll`)
 3. Deploy the custom authentication module
 4. Configure MetaDefender Kiosk to use the custom authentication

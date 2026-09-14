@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/where-to-get-help/why-is-the-scan-stuck-in-the--processing--state-on-the-smb-servi -->
 
-Too many requests
-# You're going a little too fast.
+# Scan stuck in the "processing" state on the SMB Service
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Symptom](/docs/mdss/4.4.2/where-to-get-help/why-is-the-scan-stuck-in-the--processing--state-on-the-smb-servi#symptom)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The log appears to be stuck with the following entries:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+`Starting processing server. Listening on 127.0.0.1:6002`
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fwhere-to-get-help%2Fwhy-is-the-scan-stuck-in-the--processing--state-on-the-smb-servi%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+`Starting health server. Listening on 127.0.0.1:7002`
+
+`Using configured transport receive timeout of: 600 Starting worker`
+
+Under normal conditions, the system should continuously log events in all `600x` files instead of remaining stuck at this stage.
+
+## [Possible Cause](/docs/mdss/4.4.2/where-to-get-help/why-is-the-scan-stuck-in-the--processing--state-on-the-smb-servi#possible-cause)
+
+SMB Service process stuck due to insufficient CPU resources The `psutil.open_files()` function hangs or freezes for several minutes, issue occurs specifically on Windows.
+
+## [Solution](/docs/mdss/4.4.2/where-to-get-help/why-is-the-scan-stuck-in-the--processing--state-on-the-smb-servi#solution)
+
+The issue was fixed starting with Version 3.5.2
+
+Support:
+
+If Further Assistance is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/support).

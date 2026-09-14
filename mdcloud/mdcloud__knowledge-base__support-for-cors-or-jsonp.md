@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdcloud/knowledge-base/support-for-cors-or-jsonp -->
 
-Too many requests
-# You're going a little too fast.
+# Does MetaDefender Cloud support CORS or JSONP?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all active MetaDefender Cloud license holders - whether your product is paid for or issued for evaluation purposes.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+No, MetaDefender Cloud API does not support CORS or JSONP calls from the client side.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+OPSWAT has elected not to enable CORS in current or future releases because it could lead to the practice of including the MetaDefender Cloud API key in client codes, which would expose it to all site visitors.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcloud%2Fknowledge-base%2Fsupport-for-cors-or-jsonp%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Please Note:
+
+Support for CORS and JSONP will not be enabled in the future, so the only solution is to defer calling the API through a backend solution.
+
+Support:
+
+For more information on how to **Defer Calling The API Through A Backend Solution**, please open a [Support Case](https://my.opswat.com/portal/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s/).

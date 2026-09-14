@@ -1,12 +1,35 @@
 <!-- source: https://www.opswat.com/docs/mddrive/knowledge-base/side-loading-metadefender-drive-image-and-engines -->
 
-Too many requests
-# You're going a little too fast.
+# Side-loading MetaDefender Drive Image and Engines for Drive Toolkit
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [Overview:](/docs/mddrive/knowledge-base/side-loading-metadefender-drive-image-and-engines#overview)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender Drive image and engines have been downloaded and updated completely from a Toolkit that has internet access. There is the need to copy the image and engines from that online Toolkit to another Drive Toolkit running on an air-gapped workstation.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+#### [MetaDefender Drive Image location:](/docs/mddrive/knowledge-base/side-loading-metadefender-drive-image-and-engines#metadefender-drive-image-location)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fknowledge-base%2Fside-loading-metadefender-drive-image-and-engines%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Navigate to the location where MetaDefender Drive Toolkit is extracted
+- Find the "*../../MetaDefenderDriveToolkit/current*" folder (1)
+- Make sure there are the following files
+
+  - *release-note.html*
+  - *mdd-dd.yml*
+  - *mdd-pkg.dd*
+  - *partition-layout-info*
+
+#### [MetaDefender Drive engines location:](/docs/mddrive/knowledge-base/side-loading-metadefender-drive-image-and-engines#metadefender-drive-engines-location)
+
+- Navigate to the location where MetaDefender Drive Toolkit is extracted
+- Find the "*../../MetaDefenderDriveToolkit/engines*" folder (1)
+- There are the engines definitions and databases (2) that will be used for Boot Scan session
+
+- Navigate to "*../../MetaDefenderDriveToolkit/win_defs*" folder (1)
+- There are databases for In-Session scan (2)
+
+#### [Side loading Image and Engines:](/docs/mddrive/knowledge-base/side-loading-metadefender-drive-image-and-engines#side-loading-image-and-engines)
+
+After finding the location of MetaDefender Drive Image and its engines, you can simply use an secure USB storage to copy them to the isolated MetaDefender Drive Toolkit, under the corresponding directories
+
+- *"../../MetaDefenderDriveToolkit/current":* this directory is for the Image
+- *"../../MetaDefenderDriveToolkit/engines":* this directory is for the Boot Scan engines
+- *"../../MetaDefenderDriveToolkit/win_defs":* this directory is for the In-Session engines

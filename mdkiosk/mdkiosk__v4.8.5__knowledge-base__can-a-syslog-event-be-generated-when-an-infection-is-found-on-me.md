@@ -1,12 +1,28 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/can-a-syslog-event-be-generated-when-an-infection-is-found-on-me -->
 
-Too many requests
-# You're going a little too fast.
+# Can a Syslog event be generated when an infection is found by MetaDefender Kiosk?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Overview](/docs/mdkiosk/v4.8.5/knowledge-base/can-a-syslog-event-be-generated-when-an-infection-is-found-on-me#overview)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender Kiosk does support the generation of **Syslog events** when infected files are detected during processing. This integration enables centralized monitoring and response by forwarding security-relevant events to a designated Syslog server.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Pro Tip:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fcan-a-syslog-event-be-generated-when-an-infection-is-found-on-me%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Syslog, also known as System Logging Protocol, is designed to send system log and event messages from a network of devices to a centralized syslog server for monitoring, review and remediation.
+
+---
+
+## [Configuration](/docs/mdkiosk/v4.8.5/knowledge-base/can-a-syslog-event-be-generated-when-an-infection-is-found-on-me#configuration)
+
+To enable Syslog event generation in MetaDefender Kiosk:
+
+1. Open the **Kiosk Management Console**.
+2. Navigate to **Settings > Logs > Syslog.**
+3. Click **Add New Server** to add a Syslog destination.
+4. Enter the required server details as illustrated in the configuration interface.
+
+Once configured, MetaDefender Kiosk will automatically log events related to file infections and other relevant actions.
+
+Support:
+
+If you have followed all of the steps above but are still unable to **Generate a Syslog Event When an Infection is Found by MetaDefender Kiosk**, please follow these instructions on [How To Create a Support Package](/docs/mdkiosk/v4.8.5/knowledge-base/how-do-i-create-a-support-package-for-metadefender-kiosk-), before [creating a support case or chatting with our support engineer](https://my.opswat.com/portal/support).

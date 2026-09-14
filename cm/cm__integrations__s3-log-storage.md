@@ -10,14 +10,16 @@ When enabled, My OPSWAT Central Management utilizes the established S3 buckets t
 
 To set up the SIEM integration, administrators should proceed with the following steps:
 
-- Log into My OPSWAT Central Management. Navigate to **Settings > Integrations > SIEM Integration.**
-- Select **Enable Log Storage**.
+- Log into My OPSWAT Central Management. Navigate to **Settings > Integrations > S3 Log Storage.**
+- Select **Enable AWS S3 Log Storage Endpoint**.
 - Fill in the required fields based on the associated AWS account (For more information on setting this up, please review [here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/example-walkthroughs-managing-access-example1.html)).
 - Select the desired format for the logs (JSON or SYSLOG).
 - Select the events that will trigger an email notification. To save this configuration, it is required to select at least one event.
 - When completed, select **Save**.
 
 *Note: The sync of data between* *My OPSWAT Central Management and the S3 bucket is scheduled for every 5 minutes.*
+
+![](https://uploads.developerhub.io/prod/97qW/rg3vl7c7klhbeg7etc709b12dlo1rhslw7af9lkrhhlr2ks36xhmxpt3ktse31hb.png)
 
 ## Receiving Logs
 

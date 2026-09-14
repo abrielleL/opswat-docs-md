@@ -1,12 +1,58 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/organizational-units-and-groups-configuration -->
 
-Too many requests
-# You're going a little too fast.
+# Organizational Unit, Security Group and User Filtering Configuration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code Info
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Users in security groups added during role mapping are licensed with the corresponding role.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+If role mapping is configured without any filters, MetaDefender Managed File Transfer™ will license all AD users and assign roles accordingly.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Forganizational-units-and-groups-configuration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Warning
+
+All users will be licensed by MetaDefender Managed File Transfer™ within the active directory if no filters are defined.
+
+### [Include/Exclude Organizational Units](/docs/mdmft/v3.11.4/configuration/organizational-units-and-groups-configuration#includeexclude-organizational-units)
+
+| Settings | Description |
+| --- | --- |
+| Included OU (organizational units) | Users within these OUs will be licensed as Users. |
+| Excluded OU (organizational units) | Users within these OUs will be ignored during licensing. |
+
+Warning
+
+If no specific organizational units are included, the system will automatically include all available organizational units within the active directory.
+
+---
+
+Click "Continue" to [Include/Exclude Security Groups](/docs/mdmft/v3.11.4/configuration/organizational-units-and-groups-configuration#includeexclude-security-groups) after completing customization.
+
+### [Include/Exclude Security Groups](/docs/mdmft/v3.11.4/configuration/organizational-units-and-groups-configuration#includeexclude-security-groups)
+
+| Settings | Description |
+| --- | --- |
+| Included groups | Users or groups listed here will be licensed as Users. Included groups override excluded OUs. |
+| Excluded groups | Users or groups listed here will be excluded from licensing. Excluded groups override included OUs. |
+
+Warning
+
+If no groups are explicitly included, all available groups within the Active Directory will be considered included by default.
+
+---
+
+Click "Continue" to [Include/Exclude Users](/docs/mdmft/v3.11.4/configuration/organizational-units-and-groups-configuration#includeexclude-users) after completing customization.
+
+### [Include/Exclude Users](/docs/mdmft/v3.11.4/configuration/organizational-units-and-groups-configuration#includeexclude-users)
+
+| Settings | Description |
+| --- | --- |
+| Included Users | Users listed here will be licensed as Users. Included users override excluded OUs and Security Groups. |
+| Excluded Users | Users listed here will be ignored during licensing. Excluded users override included OUs and Security Groups. |
+
+Warning
+
+If no users are explicitly included, licensing will be based on the previously configured OU and Security Group filters.
+
+---
+
+Click "Continue" to [Preview Filter Configuration](/docs/mdmft/v3.11.4/configuration/preview-filter-configuration) after applying all customizations.

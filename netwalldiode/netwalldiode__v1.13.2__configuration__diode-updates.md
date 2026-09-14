@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/configuration/diode-updates -->
 
-Too many requests
-# You're going a little too fast.
+# Software Updates
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+A security dongle must be inserted in the BLUE and RED servers to change configuration. Both BLUE and RED sides are updated independently.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+You can easily update the software from the management UI.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Login using right credentials in the management UI
+2. Go to Configuration-> Device Updates
+3. Click on Upload button
+4. Select a valid personality and click on Upload Package
+5. Then click on Apply button, the system needs to reboot to apply the personality, continue by clicking on Apply and Reboot
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Fconfiguration%2Fdiode-updates%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+MetaDefender

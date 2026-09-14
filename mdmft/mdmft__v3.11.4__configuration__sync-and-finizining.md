@@ -1,12 +1,28 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/sync-and-finizining -->
 
-Too many requests
-# You're going a little too fast.
+# Synchronization and Finalizing Active Directory Setup
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
+## [Starting Synchronization](/docs/mdmft/v3.11.4/configuration/sync-and-finizining#starting-synchronization)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Click "Start synchronization" to start the synchronization process. This may take a while.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Over-Licensing Situation](/docs/mdmft/v3.11.4/configuration/sync-and-finizining#over-licensing-situation)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Fsync-and-finizining%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If over-licensing occurs, contact [OPSWAT Sales](https://www.opswat.com/contact) for a license upgrade or exclude more users from the [Role Mapping for Groups](/docs/mdmft/v3.11.4/configuration/role-mapping-for-groups) step.
+
+Warning
+
+Over-licensing can occur if new users are continuously added to your user directory. If this happens, a notification will appear, and an email notification will be sent to all administrators. New users will be unable to log in until the over-licensed state is resolved by either removing some users from the "Role Mapping For Groups" or requesting a license upgrade. Existing users can log in and upload files normally as long as they are not over-licensed.
+
+Info
+
+Refer to the [license page](/docs/mdmft/v3.11.4/configuration/license) to determine the permitted user count allowed by the license.
+
+## [Run in Background](/docs/mdmft/v3.11.4/configuration/sync-and-finizining#run-in-background)
+
+MetaDefender Managed File Transfer™ allows the user synchronization process to run in the background. Click "Run in background," and a progress popup will be displayed until the operation is complete.
+
+## [Active Directory List](/docs/mdmft/v3.11.4/configuration/sync-and-finizining#active-directory-list)
+
+After successfully configuring one or more user directories, the list will be displayed as follows:

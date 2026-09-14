@@ -1,12 +1,10 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/knowledge-base/-linux--how-to-download-docker-images-from-alternate-location- -->
 
-Too many requests
-# You're going a little too fast.
+# [Linux] How to download docker images from alternate location?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+If Docker Hub is inaccessible during installation, you can proceed with either an [Linux Offline Installation](/docs/mdss/4.4.2/installation/linux-offline-installation) or by specifying an alternative container registry. To configure an alternate registry, add the necessary details to the `customer.env` file.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fknowledge-base%2F-linux--how-to-download-docker-images-from-alternate-location-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+BashCopyMDSS_REPO=public.ecr.aws/v2f5u9p9/opswat-mdss
+POSTGRES_IMAGE=public.ecr.aws/v2f5u9p9/opswat-mdss/postgres
+RABBITMQ_IMAGE=public.ecr.aws/v2f5u9p9/opswat-mdss/rabbitmq
+REDIS_IMAGE=public.ecr.aws/v2f5u9p9/opswat-mdss/garnet-alpine

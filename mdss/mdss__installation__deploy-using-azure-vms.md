@@ -69,7 +69,7 @@ BashCopyterraform init
 terraform apply
 ### [Deploy using Azure portal](/docs/mdss/installation/deploy-using-azure-vms#deploy-using-azure-portal)
 
-For having MetaDefender Core in a Single Azure VM as showed in [Single Instance VM Architecture](/docs/mdss/metadefender-storage-security/4.3.0/installation/architecture-examples-in-csps) for Azure, it is needed to follow the next steps:
+For having MetaDefender Core in a Single Azure VM as showed in [Single Instance VM Architecture](/docs/mdss/installation/architecture-examples-in-csps) for Azure, it is needed to follow the next steps:
 
 #### [1. Create Resource Group](/docs/mdss/installation/deploy-using-azure-vms#1-create-resource-group)
 

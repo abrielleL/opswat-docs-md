@@ -4,26 +4,18 @@
 
 My OPSWAT Central Management can be easily integrated with an existing Okta - Access Gateway integration to ensure that a device is compliant with the organization's security policy before it is granted access to applications. This ensures that the device is not only authenticated by the IdP, but also tested for risks and vulnerabilities such as infections or unpatched versions of operating systems BEFORE it accesses an organization's cloud services.
 
-To get started with implementing My OPSWAT Central Management integration to enforce device posture check before granting a device to access applications with Access Gateway with Okta Inbound SAML, you need to have Access Gateway configured with Okta Inbound SAML. If you haven't already done so, please follow the instructions [on Okta Help Center](https://help.okta.com/en/prod/Content/Topics/Access-Gateway/configure-spgw-okta-inbound-saml.htm) to set it up.
+To get started with implementing My OPSWAT Central Management integration to enforce device posture check before granting a device to access applications with Access Gateway with Okta Inbound SAML, you need to have Access Gateway configured with Okta Inbound SAML.
 
-You can learn more details for each step here at [3.1.1. How to set it up?](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)
+You can learn more details for each step here at [Configuration.](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-integration-configuration)
 
-- [Step 1. Enable Access Control on your MetaAccess account](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Access_Gateway.html#step-1-enable-access-control-on-your-metaaccess-account)
-- [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Access_Gateway.html#step-2-add-protected-applications-with-idp-method)
-- [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Access_Gateway.html#step-3-configure-access-rules)
-- [Step 4. Update Applications settings on Identity Provider](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Access_Gateway.html#step-4-update-applications-settings-on-identity-provider)
-- [https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Access_Gateway.html#](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Access_Gateway.html#)
-- [Step 5. Configure SSO settings on applications](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Access_Gateway.html#Step5.ConfigureSSOsettingsonapplications)
-- [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Access_Gateway.html#step-6-test-your-integration)
-
-## Step 1. Enable Access Control on your My OPSWAT Central Management account
+## Step 1. Enable Secure Access on your My OPSWAT Central Management account
 
 1. Login to the My OPSWAT Central Management console.
-2. Navigate to **Access Control** and then **Configurations.**
-3. Check on **"****Enable access control****"** and configure a port for the cross-domain API. Note that you must select a port which no applications on endpoints is running.
+2. Navigate to **Secure Access > Protected Apps.**
+3. Check on **"****Enable Secure Access****"** and configure a port for the cross-domain API. Note that you must select a port which no applications on endpoints is running.
 4. Click **SAVE**.
 
-![](https://uploads.developerhub.io/prod/97qW/c1w2hiy2dc29vpk0vrc2stoel3ofkaelkofpyjrzyhrapzu9zdrnyd9ophf8ztt2.png)
+![](https://uploads.developerhub.io/prod/97qW/3xcvx8db4yjszpg6r6rz3k7ayx4p42u38pcmurj3vrj94h1bg6hcf3rv1olrynz5.png)
 
 ## Step 2. Add protected applications with IdP Method
 
@@ -88,13 +80,13 @@ b. Expand the Okta Inbound SAML you configured for the Access Gateway. Then copy
   - *Application*: application name, for example, Access Gateway
   - *IdP Login URL: IdP SSO login URL which you have from step 2.3*
   - *Application Login URL*: application login URL which you have from Step 2.2
-  - *Access Mode*: pick an access mode you prefer. See details on the access modes at [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+  - *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications).
 
 ![](https://uploads.developerhub.io/prod/97qW/betbwgqpictg04h2h8mkn9t6rqbaltykzwze4bcamulhi1f9b3rbqll8lxbzc8m9.png)
 
 - Click **SAVE CHANGES**
 
-6. After saving your changes successfully, click the **Setup Instructions** button of the Access Gateway application you have just added and then copy the **URL** MetaAccess generated there. This URL is used to replace Single sign on URL of the Access Gateway app on Okta in Step 4.
+6. After saving your changes successfully, click the **Setup Instructions** button of the Access Gateway application you have just added and then copy the **URL** My OPSWAT Central Management generated there. This URL is used to replace Single sign on URL of the Access Gateway app on Okta in Step 4.
 
 ![](https://uploads.developerhub.io/prod/97qW/82x3kl3g90g9wqciq27qky2njb5tsoezwnzpvmnk4vtqkuxmot708qe83zdqowhu.png)
 
@@ -107,7 +99,7 @@ Note: you can add Access Gateway application (step 2.5) when you add Okta IdP se
 3. With a new access rule, you need to specify how you would like to block/allow access a device from the application
    1. *Rule name*: a rule name, for example Block non-compliant devices
    2. *Action*: Block or Allow
-   3. Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+   3. Configure conditions to do the action. Details at [Configure Access Rules](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 4. Click **ADD RULE**
 
 ![](https://uploads.developerhub.io/prod/97qW/x77te1v498zdm2w2tc2kgwn6a7cemg0vioxt56vzltlwtbbx4p7uygaz1db6d8rh.png)
@@ -161,6 +153,4 @@ Note: you can add Access Gateway application (step 2.5) when you add Okta IdP se
 
 ## Step 6: Test your integration
 
-Follow guideline at [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Step_6__Test_your_integration.html) to test your integration to verify if it works as your expectation.
-
-**DONE! CONGRATULATIONS.**
+Follow guideline at [Test Your Integration ](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration)to verify if it works as your expectation.

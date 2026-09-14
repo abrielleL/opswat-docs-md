@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/installation/updating-and-upgrading -->
 
-Too many requests
-# You're going a little too fast.
+# Upgrading MetaDefender Managed File Transfer
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
+## [Before upgrading](/docs/mdmft/v3.11.4/installation/updating-and-upgrading#before-upgrading)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+It's highly encouraged that you [create a backup manually](/docs/mdmft/v3.11.4/installation/updating-metadefender-managed-file-transfer).
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Upgrading](/docs/mdmft/v3.11.4/installation/updating-and-upgrading#upgrading)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Finstallation%2Fupdating-and-upgrading%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Download the installer from My OPSWAT™ from MetaDefender Managed File Transfer™ section.
+2. Launch the installer on a computer with an existing installation by using the [Command Line](/docs/mdmft/v3.11.4/installation/installing-from-command-line) or the [Install Wizard](/docs/mdmft/v3.11.4/installation/installing-using-the-install-wizard).

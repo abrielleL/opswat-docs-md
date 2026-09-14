@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/configuration/settings-----preferences -->
 
-Too many requests
-# You're going a little too fast.
+# Settings → Preferences
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The preferences section is where most of MetaDefender Drive's interface and scan configurations are adjusted:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fconfiguration%2Fsettings-----preferences%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- [Language](https://www.opswat.com/docs/mddrive/configuration/preferences---localization)
+- [Reports sync and deletion](https://www.opswat.com/docs/mddrive/configuration/preferences-----reports)
+- [Anti-Malware Engine settings](https://www.opswat.com/docs/mddrive/configuration/preferences---av-engines-policy)
+- [Log Level](https://www.opswat.com/docs/mddrive/configuration/preferences-----log-level)
+- [Scan settings](https://www.opswat.com/docs/mddrive/configuration/preferences---scan-settings)
+- [Quick Scan settings](https://www.opswat.com/docs/mddrive/configuration/preferences---quickscan-settings)
+- [Auto Run](https://www.opswat.com/docs/mddrive/configuration/preferences-----auto-run)
+- [Archive files handling](https://www.opswat.com/docs/mddrive/configuration/preferences---archive-handling)
+- [Vulnerability settings](https://www.opswat.com/docs/mddrive/configuration/preferences---vulnerability-settings)
+- [Data Loss Prevention settings](https://www.opswat.com/docs/mddrive/configuration/preferences---dlp-settings)
+- [Country of Origin settings](https://www.opswat.com/docs/mddrive/configuration/preferences---country-of-origin)

@@ -1,12 +1,9 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/release-notes/release-notes-toolkit-v-3-7-3 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive Toolkit v3.7.3
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Frelease-notes%2Frelease-notes-toolkit-v-3-7-3%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |
+| --- | --- |
+| **Released on July 9, 2025** | MetaDefender Drive Toolkit v3.7.3 brings in better update alerts, improved support package generating guidance and cleaner user interface |
+| **New Enhancements** | - **New Version Notification:** Clickable notification will be displayed as soon as a new MetaDefender Drive Toolkit version is available - **Improved Support Package Guidance:** Detailed instructions to help users generate and share support packages for faster troubleshooting - **Cleaner Drive Toolkit Startup:** Fixed the issue of the appearance of a black box at launch for a smoother launch experience   **Note:** If you receive an error about missing DLL files (such as MSVCP140.dll or VCRUNTIME140.dll) please download and install the latest [Visual C++ Redistributable from Microsoft](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) |
+|  |  |

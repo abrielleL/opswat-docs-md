@@ -1,12 +1,52 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/managing-metadefender-vault-license -->
 
-Too many requests
-# You're going a little too fast.
+# Managing MetaDefender Managed File Transfer License
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to activate or deactivate the license of a MetaDefender Managed File Transferinstance remotely.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Go to the **MetaDefender** **Managed File Transfer** management page under **Inventory** in the sidebar.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. Select **License Information** for the MetaDefender Managed File Transfer you wish to configure .
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fmanaging-metadefender-vault-license%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+3. If you want to activate a license, click the **ADD LICENSE** button and go the next step. If you want to deactivate a license, click the **Activated** switch to change it to **Deactivated** then close License Information dialog.
+
+4. If **ADD LICENSE** is chosen, the dialog **MetaDefender Managed File Transfer Activation** will be opened.
+
+## [Online product activation](/docs/ocm/7.39.0/integrations/managing-metadefender-vault-license#online-product-activation)
+
+The following guideline describes how to activate the MetaDefender Managed File Transfer license online.
+
+1. Select the **Online Activation** option.
+
+2. Enter the key.
+
+3. The dialog will be closed and the MetaDefender Managed File Transfer page will be reloaded automatically if the result is successful.
+
+## [Offline product activation](/docs/ocm/7.39.0/integrations/managing-metadefender-vault-license#offline-product-activation)
+
+The following guideline describes how to activate the MetaDefender Managed File Transfer license offline.
+
+1. Select the **Offline Activation** option.
+
+2. The **Offline Activation** menu will be opened.
+
+## [Offline Activation details](/docs/ocm/7.39.0/integrations/managing-metadefender-vault-license#offline-activation-details)
+
+1. Log into [https://my.opswat.com](https://my.opswat.com/)
+2. Select **Activate License** on the sidebar
+3. Select MetaDefender Managed File Transfer as **MetaDefender Package.**
+4. Fill in the requested information about your deployment.
+
+- **Activation Key:** The activation key of MetaDefender Managed File Transfer that you have received.
+
+- **Deployment ID:** The deployment ID shown in the previous section.
+
+- **Optional description:** The description for this deployment.
+
+4. Click the **Request Unlock Key** button. The **Download Unlock Key** link appears.
+
+5. Click the **Download Unlock Key** link and save the activation file.
+
+6. Go back to OPSWAT Central Management's Web Management Console. Browse for the activation file and click the **ACTIVATE** button.
+
+7. The dialog will be closed and the Managed File Transfer page will be reloaded automatically if the result is successful.

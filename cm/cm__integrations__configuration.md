@@ -2,7 +2,7 @@
 
 # Configuration
 
-This section guides you how to configure the add-on to collect data from your MetaDefender IT Access accounts.
+This section guides you how to configure the add-on to collect data from your My OPSWAT Central Management accounts.
 
 ## Pre-requisites
 

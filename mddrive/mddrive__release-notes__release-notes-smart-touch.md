@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-smart-touch -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive Smart Touch v2.2.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+|  |  |
+| --- | --- |
+| **Released on** **Sep 08, 2026** | This release includes new features, improvements, bug fixes. |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**New Features**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- **Reset from SmartTouch:** Administrators can reset a Smart Touch back to its previous known working state from the device itself, recovering units stuck in activation loops or with a corrupted image. Refer to [Reset MetaDefender Drive Image with Smart Touch](/docs/mddrive/maintenance/reset-smart-touch).
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-notes-smart-touch%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**Improvements and Bug Fixes**
+
+- A Drive that cannot reach an update server still lists the engines it holds in System Settings, rather than reporting none.
+- Starting a second scan after a reboot without reconnecting the cable no longer strips MetaDefender Drive of its engines or its OPSWAT Central Management enrollment.
+- Engine transfers that stop because the wireless connection was switched off report the lost connection, so an operator reconnects and retries rather than flashing the drive again.
+- When the connected network reports a time zone, syncing the clock adopts it automatically, so scan timestamps match local time without an operator selecting the zone by hand.
+- Importing a certificate authority certificate for Wi-Fi follows the same full-screen prompt-and-result flow as the Kiosk and Secure Storage imports, bringing the consistency in user experience.
+- Faster Secure Storage experience with fewer delays when disconnecting from a Kiosk, while keeping file counts accurate

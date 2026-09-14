@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/knowledge-base/are-cad-diagrams-available-for-the-opswat-netwall-din-rail-and-1 -->
 
-Too many requests
-# You're going a little too fast.
+# Are CAD diagrams available for the OPSWAT NetWall DIN Rail and 1U models?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender NetWall products and is relevant for all supported releases.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+CAD diagrams for the OPSWAT DIN Rail and 1U NetWall are available for download from the links below:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- [**OTfuse R4 (ASM)**](https://kb-hosting-cs.s3.us-east-1.amazonaws.com/KB/Optical-Diode/CAD+diagram/00_202113-R4-OTfuse_ASM_.EASM)
+- [**Netwall 1U (ASM)**](https://kb-hosting-cs.s3.us-east-1.amazonaws.com/KB/Optical-Diode/CAD+diagram/202118-Netwall+1U+system_ASM-20231221.EASM)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Fknowledge-base%2Fare-cad-diagrams-available-for-the-opswat-netwall-din-rail-and-1%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Support:
+
+If you have any questions, concerns or issues regarding MetaDefender NetWall products, please open a [**Support Case**](https://my.opswat.com/support-services) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [**OPSWAT Expert Forum**](https://go2.opswat.com/s/).
+
+MetaDefender

@@ -1,12 +1,37 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-12-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Optical Diode v1.12.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| **Version** | Config: 1.12.0; OD-101: 1.0.1 (CC EAL4+ Certified, does not support High Availability) Config: 1.12.0; OD-102:1.0.2 , does not support High Availability) |
+| --- | --- |
+| **Release date** | January 16, 2026 |
+| **Scope** | Digital Signature, OPC UA Multi-server, UDP Multicast |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+AVEVA PI 4.2.1 connector needs MetaDefender Optical Diode v1.12.0 to operate correctly. Please, update accordingly.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Frelease-notes%2Fmetadefender-optical-diode-v1-12-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [New Features, Improvements and Enhancements](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-12-0#new-features-improvements-and-enhancements)
+
+| Feature | Details |
+| --- | --- |
+| Configuration via Config File | Provides the ability to do "basic" system configuration via a configuration file. Saves time when commissioning multiple devices. |
+| Digital Signature and Signature Verification | For File Transfers, system can now be configured to sign outgoing files and verify signature for incoming files. |
+| Modbus Connector | Response timeout value parameter is now configurable. |
+| OPC UA Multi-server Support | Supports connecting to multiple (up to 5) OPC UA servers. Enables up to 5 instances of the OPC UA Connector to run concurrently. Supports a 1:1 relationship between a source and destination OPC server/client. |
+| OPC UA Connector | OPC Foundation / OPC UA Libraries .NETStandard updated to v1.5.375.457. |
+| OPC UA Connector | .NET updated to version 8.0 |
+| Optical Diode Din Rail / MD Core Integration | MetaDefender Optical Diode Din Rail form factor now integrates with an externally installed instance of MetaDefender Core. |
+| UDP Multicast | Now supports UDP Multicast |
+
+## [Bug Fixes](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-12-0#bug-fixes)
+
+|  | Details |
+| --- | --- |
+| Bug Fixes | Minor bug fixes |
+
+## [Known Limitations](/docs/netwalldiode/v1.13.2/release-notes/metadefender-optical-diode-v1-12-0#known-limitations)
+
+N/A
+
+MetaDefender

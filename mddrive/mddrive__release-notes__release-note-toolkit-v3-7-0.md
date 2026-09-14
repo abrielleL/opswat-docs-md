@@ -1,12 +1,10 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-note-toolkit-v3-7-0 -->
 
-Too many requests
-# You're going a little too fast.
+# MetaDefender Drive Toolkit v3.7.0
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Frelease-notes%2Frelease-note-toolkit-v3-7-0%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+|  |  |  |
+| --- | --- | --- |
+| **Released on Mar 14, 2025** | A major release introducing new features. |  |
+| **New Features** | Starting from v3.7.0, MetaDefender Drive Toolkit now supports the setup, enrollment & unenrollment of MetaDefender Drive for **Centralized Scanning Profile**. |  |
+| Enrollment for MetaDefender Drive | After booting MetaDefender Drive to be enrolled, the administrators open MetaDefender Drive Toolkit:   1. Go to **Settings** tab (1) 2. Select **Lock MD Drive Software** (2) 3. Click **Set up Lock** (3).     Administrator Setup:   1. Install **Google Authenticator App** on their mobile device. 2. Once installed, click **Next.**     Assign an Approver:   1. Enter name or alias of an authorized approver. 2. Click **Next.**     Complete MetaDefender Drive Enrollment, you have two options:   1. **Scan the QR Code**: Open the Google Authenticator app and scan the QR code displayed on the Drive Toolkit dashboard.      2. **Manual Entry**: Manually input the credential (account name and key) into your Google Authenticator app’s fields, then select **Time-based.**     Once accomplished, click **Done.**    Successfully lock MetaDefender Drive Confirmation: A prompt will appear upon completion. |  |
+| Unenrollment for MetaDefender Drive | After booting the MetaDefender Drive the administrators wish to unenroll:   1. Go to **Settings** tab (1) 2. Select **Lock MD Drive Software** (2) 3. Click **on icon** (3).     Administrators can directly unenroll on Drive Toolkit by clicking **Unenroll Device.**    Click **Yes.**    A prompt will appear upon completion. |  |

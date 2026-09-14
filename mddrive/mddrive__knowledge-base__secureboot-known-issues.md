@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/mddrive/knowledge-base/secureboot-known-issues -->
 
-Too many requests
-# You're going a little too fast.
+# SecureBoot Known Issues
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [Overview](/docs/mddrive/knowledge-base/secureboot-known-issues#overview)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+MetaDefender Drive is designed to boot on a wide range of UEFI‑based systems with Secure Boot enabled. On the majority of devices (laptops, desktops and workstations from major vendors such as Dell, HP, Lenovo, Siemens, etc.), the device recognizes MetaDefender Drive as a valid EFI boot option and starts it without any additional configuration.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+#### [Manual Selection If Necessary](/docs/mddrive/knowledge-base/secureboot-known-issues#manual-selection-if-necessary)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fknowledge-base%2Fsecureboot-known-issues%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Some vendor implements Secure Boot, key management, and boot menus differently, a small subset of systems may require manual boot selection or specific firmware settings. On those UEFI systems, the firmware does not automatically prioritize the default boot loader used on MetaDefender Drive (for example, the “Grub X64 (OPSWAT MetaDefender)” entry). In those cases:
+
+- The USB device may not appear as a normal boot option, **or**
+- Selecting the “Grub X64 (OPSWAT MetaDefender)” entry may result in a boot failure, even though Secure Boot is enabled and working for other devices.
+
+However, the same firmware typically still allows the user to:
+
+- Use **“Boot from File”** (or a similar menu entry) in the BIOS/UEFI setup, then
+- Manually browse to the MetaDefender Drive USB and select the EFI binary directly (usually `BOOTX64.EFI`).
+
+Once the correct file is selected and booted at least once, many systems will remember this boot entry and boot MetaDefender Drive normally in subsequent sessions.
+
+#### [Known Issues](/docs/mddrive/knowledge-base/secureboot-known-issues#known-issues)
+
+There is a known issue with Surface devices, where Microsoft utilizes proprietary UEFI/BIOS locks on Surface devices that often obstruct Linux boot loaders, requiring complex workarounds like disabling Secure Boot.
+
+There are no other known issues at this time.

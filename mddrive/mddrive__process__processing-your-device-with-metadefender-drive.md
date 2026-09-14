@@ -50,6 +50,8 @@ If the target machine has 8GB of memory or less, it is recommended to select ***
 
 *A scan in progress with 19* ***Country of Origin*** *suspected files detected*
 
-## [**Skip files during scan**](/docs/mddrive/process/processing-your-device-with-metadefender-drive#skip-files-during-scan)
+## [**Manually skip files during scan**](/docs/mddrive/process/processing-your-device-with-metadefender-drive#manually-skip-files-during-scan)
 
 If **Operator Skip Files** is enabled in [Preferences → Scan Settings](/docs/mddrive/configuration/preferences---scan-settings), during a scan session, the operator can select a file still in Processing, click to skip it, and pick a predefined skip reason. The file is reported as skipped for this scan only; files that finish processing are reported normally with their actual verdict.
+
+After scan finishes, the manually skipped files will be listed under Skipped Files tab with reason

@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/mdss/knowledge-base/what-is-the-expected-metadefender-storage-security-remediation-b -->
 
-Too many requests
-# You're going a little too fast.
+# What is the expected MetaDefender Storage Security Remediation Behavior Behind F5 Load Balance?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Storage Security versions.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Issue:](/docs/mdss/knowledge-base/what-is-the-expected-metadefender-storage-security-remediation-b#issue)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+When F5 is configured with cookie-based persistence, MetaDefender Storage Security remediation could fail. This could occur if the XML provided was not well-formed or was not valid during initial communication. **cookie-based persistence on F5** causes inconsistent routing of related S3 API requests during remediation workflows.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fknowledge-base%2Fwhat-is-the-expected-metadefender-storage-security-remediation-b%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Description](/docs/mdss/knowledge-base/what-is-the-expected-metadefender-storage-security-remediation-b#description)
+
+When persistence is enabled, the F5 load balancer modifies the headers cookies of API requests from MetaDefender Storage Security to the S3 compatible storage, causing API responses to get corrupted and not being processed by our MetaDefender Storage Security. While switching F5 to source address persistence seems the least invasive there is no guarantee that it will not modify the headers for tracking.
+
+## [Mitigation:](/docs/mdss/knowledge-base/what-is-the-expected-metadefender-storage-security-remediation-b#mitigation)
+
+1. Disable persistence for the virtual server handling S3 traffic, OR
+2. Create a separate virtual server with FastL4 profile for S3 connections
+
+Info:
+
+S3 API calls are stateless and don't require session affinity - persistence only adds processing overhead that corrupts the XML payloads.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

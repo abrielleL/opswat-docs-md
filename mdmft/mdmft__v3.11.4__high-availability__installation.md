@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/high-availability/installation -->
 
-Too many requests
-# You're going a little too fast.
+# Installation
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This guide introduces the components required for setting up HA cluster and outlines the installation flow.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Before beginning the installation, ensure that the [Requirements](/docs/mdmft/v3.11.4/high-availability/requirements) are met.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fhigh-availability%2Finstallation%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Installation steps](/docs/mdmft/v3.11.4/high-availability/installation#installation-steps)
+
+1. Download both installers from My OPSWAT™ in MetaDefender Managed File Transfer™ section.
+2. Install MetaDefender® MFT on two different hosts ([more details](/docs/mdmft/v3.11.4/high-availability/install-mft-nodes)).
+3. Install MetaDefender MFT HA Controller™ on the third host ([more details](/docs/mdmft/v3.11.4/high-availability/install-ha-controller)).
+4. Configure MetaDefender MFT HA Controller™ ([more details](/docs/mdmft/v3.11.4/high-availability/controller)).
+
+Once the MetaDefender MFT HA Controller™ is configured, verify its connectivity with all nodes to ensure failover capabilities. It's recommended to perform a simulated failover test to validate the high availability setup. Finally, ensure that all components are updated to the latest version to benefit from security patches and improvements.

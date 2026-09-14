@@ -4,11 +4,16 @@
 
 | **Version** | 4.8.5 |
 | --- | --- |
-| **Release date** | 31 August 20206 |
+| **Release date** | 31 August 2026 |
 | **Scope** | This release introduces advanced device threat attack detection, giving Kiosk visibility into hardware- and firmware-level USB attacks that traditional file scanning can't see. It also adds dedicated integration workflows for connected OPSWAT hardware, expands scanning flexibility with multi-device sessions and pre-upgrade health checks, and strengthens credential security through BeyondTrust Password Safe integration and centrally managed autologon/RDP passwords. The release further improves network diagnostics, scan reporting accuracy, encrypted USB and language support, alongside a range of reliability and MFT connectivity fixes. |
 
-| Kiosk 4.8.5.9268 | |
+| Kiosk 4.8.5.9349 | |
 | --- | --- |
+| **Release date** | 8 Sept 2026 |
+| **Bug Fixes** |  |
+| Partially sanitized archives silently dropped when Only Copy Remediated Files is enabled | Fixed an issue where an archive that MetaDefender Core could only partially sanitize was treated as if it had not been sanitized at all, so it was silently dropped instead of copied when a workflow's File Handling settings for Blocked Files used Copy to Secondary Location with Only Copy Remediated Files enabled. |
+| Kiosk 4.8.5.9268 |  |
+| **Release date** | 31 August 2026 |
 | **New Features** |  |
 | Advanced Device Threat Attack Detection | Kiosk can now detect hardware- and firmware-level device attacks that traditional file scanning cannot see — including BadUSB-style device impersonation, keystroke-injection tools (e.g. Rubber Ducky), rogue network-adapter emulation, USB Killer power-surge attacks, and autorun-based threats. These attacks bypass antivirus entirely because they exploit the USB hardware itself rather than a file, making them one of the hardest classes of physical-access threats to catch. This gives administrators a critical new detection layer, extending Kiosk's protection beyond file-based scanning to the device layer itself. |
 | Dedicated Integration Workflow for Connected OPSWAT Products (IFW, MD Drive) | Kiosk now supports a dedicated, product-specific workflow for connected OPSWAT hardware such as the Industrial Firewall (IFW) and MD Drive. When a supported device is connected, Kiosk authenticates the user and launches the product's own configuration screen, exchanging configuration, reports, and file transfers with Central Management (CM10) through a workflow designed to extend to future product integrations. |

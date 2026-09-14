@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdcloud/knowledge-base/what-to-do-in-case-my-ip-is-blocked-because-of-abuse- -->
 
-Too many requests
-# You're going a little too fast.
+# What do I do if my IP is blocked because of abuse?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all paid MetaDefender Cloud license holders. For more information on our range of licensing and evaluation options, please [Read This](https://metadefender.opswat.com/licensing).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Please Note:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+As a measure of security against brute force attacks, in which hackers attempt to penetrate the system by guessing the API key, MetaDefender Cloud blocks users who send multiple requests with the wrong API key.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcloud%2Fknowledge-base%2Fwhat-to-do-in-case-my-ip-is-blocked-because-of-abuse-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+In the event that you inadvertently send multiple requests with the wrong API key, your IP address will be blocked for a period of one hour.
+
+The HTTP response code will be **403**, with the response content as illustrated in the screenshot below.
+
+The solution is either to wait for an hour until the restriction is lifted, or to contact OPSWAT support and request that your IP be unblocked earlier.

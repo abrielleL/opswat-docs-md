@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mddrive/v4.4.2a/maintenance/activate-license -->
 
-Too many requests
-# You're going a little too fast.
+# Activate License
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The **Activate MetaDefender Drive** page enables users to manually activate single or multiple drives without having to boot Drives up.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Select the MetaDefender Drives you intend to activate, and click the **Enter License** button.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. Paste the license, and click the **Enter License** button.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddrive%2Fv4.4.2a%2Fmaintenance%2Factivate-license%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+3. If you have an active internet connection and the license key you entered is valid, the status will change to **License Copied Successfully** and your drive will be fully activated with the next boot.
+
+.

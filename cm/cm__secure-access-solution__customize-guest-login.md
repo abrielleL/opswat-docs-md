@@ -2,12 +2,12 @@
 
 # Customize Guest login
 
-You can download a default rebranding package from MetaDefender IT Access console and start customizing the logo and text in the package. Please make sure you follow the instructions below while you create a new rebranding package. MetaDefender IT Access will not show a detailed error if you do not follow the below guideline today.
+You can download a default rebranding package from My OPSWAT Central Management console and start customizing the logo and text in the package. Please make sure you follow the instructions below while you create a new rebranding package. My OPSWAT Central Management will not show a detailed error if you do not follow the below guideline today.
 
 - **Don't alternate filenames** in the default package
 - **Don't alternate field names** in all JSON file
 - All JSON files must be **saved in UTF-8** format
-- **Don't delete variables and html**, for example MetaDefender IT Access, in JSON files
+- **Don't delete variables and html**, for example My OPSWAT Central Management, in JSON files
 - The zip file should contain both logo.png and all JSON file **in the root folder**.
 
 The screenshots and tables below show you how to customize color and logo for each section on the remediation page.

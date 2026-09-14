@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/installation/installing---upgrading-metadefender-kiosk -->
 
-Too many requests
-# You're going a little too fast.
+# Installing / Upgrading MetaDefender Kiosk
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Before you begin the installation, you should ensure that [system requirements](/docs/mdkiosk/v4.8.5/installation/kiosk-system-requirements) are met. You can install MetaDefender Kiosk by either using the embedded Install Wizard or from the Windows command line.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Once you finish installation and [harden the Kiosk](/docs/mdkiosk/v4.8.5/hardened-image/kiosk-hardening), you can [deploy and launch the Kiosk UI](/docs/mdkiosk/v4.8.5/operating/opswat-media-validation-agent) for usage.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Info
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Finstallation%2Finstalling---upgrading-metadefender-kiosk%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This section does not cover installation of MetaDefender Core or Managed File Transfer. Refer to each product's respective user guide for more information.

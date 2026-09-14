@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-am-i-getting--we-couldn---t-analyze-this-file-because-no-spe -->
 
-Too many requests
-# You're going a little too fast.
+# Why am I getting "We couldn’t analyze this file because no specific configuration is applied" with an OPSWAT Predictive Alin AI license?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Issue:**
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Users may encounter the error message **“We couldn’t analyze this file because no specific configuration is applied”** when attempting to analyze files, even when an OPSWAT Predictive AI license is being used.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-am-i-getting--we-couldn---t-analyze-this-file-because-no-spe%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**Cause:**
+
+The OPSWAT Predictive Alin AI is not activated/enabled under **Inventory > Modules > Metascan™**
+
+**Steps to Resolve:**
+
+1. Navigate to **Inventory > Modules > Metascan™**.
+2. Ensure that **OPSWAT Predictive Alin AI** is enabled.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

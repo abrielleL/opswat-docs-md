@@ -43,6 +43,31 @@ Removing a distributed certificate
 
 If you no longer want a certificate assigned to a device, open the certificate's details page, go to its **Distribution** tab, and choose **Unassign**. If the device can't be reached to confirm the change, use **Force Unassign** instead — this removes the assignment immediately and keeps the certificate available locally on that device rather than deleting it.
 
+## [Keeping a device's own certificate instead of the group's](/docs/mdkiosk/v4.8.5/operating/managing-and-distributing-certificates-from-central-management#keeping-a-devices-own-certificate-instead-of-the-groups)
+
+If several Kiosk devices share a group policy, that policy can only carry one certificate — so applying it pushes the same certificate to every device in the group, replacing any certificate that device already had. This is usually fine when one certificate (for example, a wildcard certificate covering multiple hostnames) is meant to be shared across the group, but it becomes a problem if even one device in that group needs its own, individually-issued certificate instead.
+
+To let a specific device keep its own certificate while continuing to receive the rest of the group's settings normally:
+
+1. Open the group's policy and go to its **Security** settings.
+2. Turn on **Do not apply this configuration to the device**.
+3. Apply the policy to the group as usual.
+4. On the device that needs its own certificate, open it under **Inventory > Devices**, go to its **Settings** tab, and turn off **Automatically sync settings from the group's policy**.
+5. Configure that device's own certificate under its **Security** settings, following the HTTPS steps below.
+
+Every other setting in the group's policy still applies to this device as normal — this only affects the Security/certificate settings.
+
+Do this before the group's certificate is ever applied to the device
+
+"Do not apply this configuration to the device" only stops a *future* policy sync from overwriting the device's certificate — it does not undo a certificate the group policy already pushed. If the device already received the group's certificate before you turned this setting on, turning it on afterward won't bring back the device's previous certificate. In that case, simply reconfigure the device's own certificate directly (step 5 above); once you've done that, it will be preserved on every future sync.
+
+### [Reverting a device back to the group's certificate](/docs/mdkiosk/v4.8.5/operating/managing-and-distributing-certificates-from-central-management#reverting-a-device-back-to-the-groups-certificate)
+
+To have a device go back to using the group's shared certificate:
+
+1. Open the group's policy, go to its **Security** settings, and turn off **Do not apply this configuration to the device**.
+2. Apply the policy again. On the next sync, the group's certificate replaces the device's individual certificate.
+
 ## [Using a distributed certificate for HTTPS](/docs/mdkiosk/v4.8.5/operating/managing-and-distributing-certificates-from-central-management#using-a-distributed-certificate-for-https)
 
 Once a certificate has been distributed to a Kiosk device, it becomes available in that device's own **Choose Certificate** setting.

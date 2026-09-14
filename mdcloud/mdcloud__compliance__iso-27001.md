@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdcloud/compliance/iso-27001 -->
 
-Too many requests
-# You're going a little too fast.
+# ISO 27001
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [What is ISO 27001:2022?](/docs/mdcloud/compliance/iso-27001#what-is-iso-270012022)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+ISO/IEC 27001 is an international standard on how to manage information security. The standard was originally published jointly by the International Organization for Standardization and the International Electrotechnical Commission in 2005 and then revised in 2022.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+ISO 27001 certification demonstrates **that your organization has invested in the people, processes, and technology** (e.g. tools and systems) to protect your organization's data and provides. an independent, expert assessment of whether your data is sufficiently protected.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcloud%2Fcompliance%2Fiso-27001%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [OPSWAT ISO 27001 Certification](/docs/mdcloud/compliance/iso-27001#opswat-iso-27001-certification)
+
+OPSWAT has achieved ISO/IEC 27001:2022 certification. An independent examination of the OPSWAT Information Security Management System (ISMS) and OPSWAT MetaDefender and MetaAccess services by Schellman & Company, LLC confirmed our commitment to security and regulatory compliance as part of the certification evaluation.

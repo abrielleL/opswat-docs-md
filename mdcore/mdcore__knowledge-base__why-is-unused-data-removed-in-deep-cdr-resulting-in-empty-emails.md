@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-is-unused-data-removed-in-deep-cdr-resulting-in-empty-emails -->
 
-Too many requests
-# You're going a little too fast.
+# Why is unused data removed in Deep CDR resulting in empty emails being received?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+#### [Issue description:](/docs/mdcore/knowledge-base/why-is-unused-data-removed-in-deep-cdr-resulting-in-empty-emails#issue-description)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The end user reports receiving empty emails from a specific client. Analysis of the scan results indicates that the associated .HTML file contained 'unused data,' which was sanitized during processing.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+#### [Solution:](/docs/mdcore/knowledge-base/why-is-unused-data-removed-in-deep-cdr-resulting-in-empty-emails#solution)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-is-unused-data-removed-in-deep-cdr-resulting-in-empty-emails%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To ensure proper sanitization in the Deep CDR engine, enable the Include Documents Without HTML Tag option. This setting is required for files with invalid or missing HTML structures, allowing the engine to process them correctly.
+
+We are already aware of this scenario and have provided this configuration to help users bypass the issue.
+
+Support:
+
+If you encounter any issues or require further assistance, please contact OPSWAT support via My OPSWAT at: https://my.opswat.com/home
+
+Our support team will be able to provide you with the necessary guidance and resolution for any license-related concerns.

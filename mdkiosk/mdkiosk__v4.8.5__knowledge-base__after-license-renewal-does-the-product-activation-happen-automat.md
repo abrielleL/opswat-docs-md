@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/after-license-renewal-does-the-product-activation-happen-automat -->
 
-Too many requests
-# You're going a little too fast.
+# After license renewal does the product activation happen automatically (if the license key is the same)?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+In special situations where the renewal process is completed and the license values regarding products and expiration dates are changed (but the license key remains the same), new license information will be updated after the customer uses the same activation key for the Kiosk deployment. The license activation is not done automatically.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+For offline environments, users will need to go through the activation steps and generate a new .yml file.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Support:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fafter-license-renewal-does-the-product-activation-happen-automat%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If **Further Assistance** is required, please proceed to log a [support case or chat with our support engineer](https://my.opswat.com/portal/support).

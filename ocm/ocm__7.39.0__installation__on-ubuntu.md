@@ -1,12 +1,42 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/installation/on-ubuntu -->
 
-Too many requests
-# You're going a little too fast.
+# On Ubuntu
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Preliminary notes**
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- If the OPSWAT Central Management package dependencies are not installed on your system you may need to have a working Internet connection or you may have to provide the Installation media during the installation.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+On Ubuntu system, please follow the below steps to install the OPSWAT Central Management package.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Finstallation%2Fon-ubuntu%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1/ Open the terminal.
+
+2/ Enter the install command (requires sudo privilege):
+
+sudo dpkg -i <path to .deb file> || sudo apt-get install -f
+
+3/ In order for the OPSWAT Central Management systemd service to locate environment variables such as
+
+**http_proxy**, the **EnvironmentFile** setting must be specified in the service file located at /usr/lib/ocm/ocm.service.
+
+a/ Locate the commented out **EnvironmentFile** settings in **/usr/lib/ocm/ocm.service**
+
+#EnvironmentFile=/etc/ocmEnv.conf
+
+b/ Uncomment and point the settings to the environment file containing the environment variables. For example:
+
+EnvironmentFile=/home/currentUser/environment.conf
+
+4/ Please include the environment variables that the OPSWAT Central Management service should use in the content of the environment file. Below is an example of the environment file:
+
+#system proxy setting, optional
+http_proxy=proxy:3128
+
+5/ Reload OPSWAT Central Management service for the modification to take effect.
+
+sudo systemctl daemon-reload
+
+6/ Start OPSWAT Central Central Management via the command (requires sudo privilege):
+
+sudo systemctl start ocmInfo
+
+In case of startup problems, please refer to the startup log in /var/log/ocm or systemd log.

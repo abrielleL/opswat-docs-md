@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/knowledge-base/why-does-metadefender-storage-security-reset-the-rtp-starttime-e -->
 
-Too many requests
-# You're going a little too fast.
+# Why does MetaDefender Storage Security reset the RTP StartTime every day?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Storage Security v4.2.0 deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Issue:** MetaDefender Storage Security resets the Real-Time Processing (RTP) Start Time every day.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Resolution:** The reason for this behavior is enabling “Enable RTP history retention” under **Settings > Data Retention**.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fknowledge-base%2Fwhy-does-metadefender-storage-security-reset-the-rtp-starttime-e%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This issue will be fixed in version 4.4.0.
+
+**Workaround:** Currently, the workaround is to disable “Enable RTP history retention.”
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

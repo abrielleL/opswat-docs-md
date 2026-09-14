@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/login-page-customization -->
 
-Too many requests
-# You're going a little too fast.
+# Login Page Customization
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Customize your login page experience.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Transparent Theme](/docs/mdmft/v3.11.4/configuration/login-page-customization#transparent-theme)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Flogin-page-customization%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Makes the login page's central box background color transparent and removes the border.
+
+### [Minimal Theme](/docs/mdmft/v3.11.4/configuration/login-page-customization#minimal-theme)
+
+Hides the secondary logo and the copyright text on the login page as well as the authentication method tabs if only one authentication is enabled at the [Trusted Network List](/docs/mdmft/v3.11.4/configuration/trusted-network-list).
+
+No secondary logo and copyright text
+
+Border is transparent
+
+### [Customizing the Background Image](/docs/mdmft/v3.11.4/configuration/login-page-customization#customizing-the-background-image)
+
+Accepted file types: SVG, PNG, JPG and JPEG
+
+Recommended ratio: 16:9.
+
+Full HD image, size below 2 Mb.
+
+The image is used solely for the login page.

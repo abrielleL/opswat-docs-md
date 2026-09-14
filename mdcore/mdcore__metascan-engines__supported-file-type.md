@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/mdcore/metascan-engines/supported-file-type -->
 
-Too many requests
-# You're going a little too fast.
+# Supported file type
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+| *Engine Name* | *Supported File Type* |
+| --- | --- |
+| CrowdStrike Falcon ML | Portable Executable (PE)  Mach object file (Mach-O)  Executable and Linkable Format (ELF)  CDF & OOXML based Microsoft Office files  Adobe File (PDF) |
+| Webroot SMD | PE and JS embedded on PDF |
+| RocketCyber | Any windows file that contains a PE header. That would include the file format for Windows executables, object code, and DLLs in both 32-bit and 64-bit versions. |
+| Scrutiny | exe, dll, sys. |
+| Cylance | Windows executables (.acm, .ax, .cpl, .drv, .efi, .mui, .ocx, .src, .sys, .tsp, .exe, .dll)  macOS executables (.o, .dylib, .bundle)  Linux executables (.o, .ko, .mod, .so)  OLE files (.doc, .xls, .ppt)  OOXML files (.docx, .xlsx, .pptx)  PDF files (.pdf)  Archive files (.zip, .7z, .rar, .tar, .gz, .bz2, .xz)  **Note:** Files with the .zip extension are supported whether they are password-protected or not. Files with the .rar extension are supported only if they are not password-protected. |
+| SentinelOne | Windows PE format, Linux ELF format, MACH format (Future), PDF format, DOS COM file, OLE compound file format, OpenXML Document File Format (.docx, xlsx, pptx...), ZIP Archive file format, RAR Archive file format, LZMA Archive file format, BZIP2 Archive file format, TAR Archive file format, CABINET Archive file format, SFX Archive file format, Windows .NET PE File, Microsoft LNK file format, Email Storage Format, Powershell Script files, Python script executable file, Linux shell script executable file, gzip compressed file, PHP script file, ASP script file, ASP.NET Core script file, Batch file, JavaScript file, VBScript file |
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Info
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fmetascan-engines%2Fsupported-file-type%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Apart from the engines mentioned above, the other antivirus engines do not have specific file type limitations.

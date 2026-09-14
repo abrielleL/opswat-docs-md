@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/---what-is-the-latest-metadefender-managed-file-transfer-version -->
 
-Too many requests
-# You're going a little too fast.
+# What is the latest MetaDefender Managed File Transfer version?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code Check Your Version:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This article applies to all MetaDefender Managed File Transfer V3 releases deployed on Windows systems.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Browse MetaDefender Managed File Transfer [Release Notes](https://www.opswat.com/docs/mdmft/release-notes) for details on the latest version, version history, version comparisons and release notes.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2F---what-is-the-latest-metadefender-managed-file-transfer-version%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Alternatively, go directly through the [My OPSWAT](https://my.opswat.com/portal) for a list of available downloads.:
+
+1. Login to My OPSWAT portal
+2. Click on “MetaDefender Managed File Transfer”
+
+3. Click on “Download” button
+
+4. In the new window opened, always the version from the top is the latest version
+
+Pro Tip: 
+
+OPSWAT highly recommends that users upgrade to the latest version of MetaDefender Managed File Transfer. Current versions incorporate state-of-the-art features and necessary bug fixes, and are freely available for all license holders to download.
+
+Support:
+
+Feel free to contact OPSWAT support for further guidance through your Upgrade process. Please follow these instructions on [How To Create a Support Package](https://docs.opswat.com/mdcore/troubleshooting/how-to-create-support-package-), before logging a [Support Ticket](https://www.opswat.com/support) with the OPSWAT team.

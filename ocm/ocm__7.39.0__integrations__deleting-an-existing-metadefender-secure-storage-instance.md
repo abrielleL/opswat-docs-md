@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/deleting-an-existing-metadefender-secure-storage-instance -->
 
-Too many requests
-# You're going a little too fast.
+# Deleting an existing MetaDefender Storage Security instance
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to delete a MetaDefender Storage Security instance from OPSWAT Central Management.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Go to the **MetaDefender** **Storage Security** management page under **Inventory** in the sidebar.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. Select the instance that you want to delete.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fintegrations%2Fdeleting-an-existing-metadefender-secure-storage-instance%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+3. Click the **ACTIONS** drop-down menu and choose the **Delete** option.
+
+Info
+
+The dialog will be closed and thepage will be reloaded automatically if the result is successful.

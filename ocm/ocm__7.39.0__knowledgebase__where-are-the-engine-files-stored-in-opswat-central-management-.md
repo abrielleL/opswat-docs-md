@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/knowledgebase/where-are-the-engine-files-stored-in-opswat-central-management- -->
 
-Too many requests
-# You're going a little too fast.
+# Where are the engine files stored in OPSWAT Central Management?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all OPSWAT Central Management releases deployed on Windows systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The default location of the engine files in OPSWAT Central Management is:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+`C:\Program Files\OPSWAT\Central\tomcat\webapps\core\package`
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fknowledgebase%2Fwhere-are-the-engine-files-stored-in-opswat-central-management-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This directory contains the engine files downloaded by the OPSWAT Central Management application. If the installation has been customized, the location may vary. Always check your system configuration or consult your administrator if the default path is not found.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chat with our support engineer](https://my.opswat.com/portal/support).

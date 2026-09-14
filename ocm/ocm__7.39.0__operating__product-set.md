@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/operating/product-set -->
 
-Too many requests
-# You're going a little too fast.
+# Product Set
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Set View](/docs/ocm/7.39.0/operating/product-set#set-view)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+In order to access the Set Management feature for the OPSWAT Product type you wish to manage, navigate to its menu under **Inventory** and change the **View Mode** to **Set View. **
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The **Default** Set is available by default, containing all unassigned instances of an OPSWAT Product type.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Foperating%2Fproduct-set%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+In Set View, users can delete one or multiple Sets by clicking their checkboxes, selecting **Delete** from the **ACTIONS** drop-down menu.
+
+Info
+
+Members of the deleted Sets will be reassigned to the Default Set of their product type.
+
+Users can also assign individual Set to Group by clicking on the **Assign to Group** in **ACTIONS** drop-down menu. In the pop-up dialog, select the Group where the Set should be added to and confirm the selection.
+
+## [Edit individual Set and its member OPSWAT Product instances](/docs/ocm/7.39.0/operating/product-set#edit-individual-set-and-its-member-opswat-product-instances)
+
+Users can modify the individual Set by clicking on the Set's entry.
+
+To modify the Set's name, select the edit icon next to the Set's name. Similarly, to modify the Set's description, click on **Change** next to the Set's description.
+
+Users can also edit the member OPSWAT Product instances from the Set menu. To change an instance's name, click on the edit icon on its entry. To modify an instance's settings, select **Settings** from its entry's gear icon's drop-down menu.
+
+To assign additional OPSWAT Product instances to the Set, select **ADD MANAGED.**
+
+Select the additional instances by clicking their checkboxes. Finalize the selection by selecting **ADD.**

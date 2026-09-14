@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/can-i-upload-files-to-a-file-server-after-they-have-been-scanned -->
 
-Too many requests
-# You're going a little too fast.
+# Can I upload files to a file server after they have been scanned by MetaDefender Kiosk?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Kiosk V4 releases deployed on Windows or Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Yes, you can.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+There are multiple ways in which files can be moved to a file server after they have been scanned by MetaDefender Kiosk.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fcan-i-upload-files-to-a-file-server-after-they-have-been-scanned%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+All of the following options can be configured as part of your MetaDefender Kiosk Workflows:
+
+1. Files can be uploaded to a MetaDefender Managed File Transfer server via built-in integration with MetaDefender Kiosk.
+2. Files can be copied to a specified network path.
+3. Files can be uploaded to a file server by running a custom script.
+
+Administrator Caution
+
+Enabling Custom Command Line Script may introduce potential security risks. It is recommended that only experienced administrators enable and manage this setting, taking full responsibility to implement appropriate security measures and monitor for any vulnerabilities.
+
+Pro Tip:
+
+For more information on each method listed above, please [Read This](/docs/mdkiosk/v4.8.5/operating/selecting-how-to-handle-processed-files).
+
+Support:
+
+If you have any difficulty **Uploading Files to a File Server After Scanning Them With MetaDefender Kiosk** , please follow these instructions on [How To Create a Support Package](https://docs.opswat.com/mdkiosk/troubleshooting#creating-the-package), before [creating a support case or chatting with our support engineer](https://my.opswat.com/portal/support).

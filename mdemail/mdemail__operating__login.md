@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdemail/operating/login -->
 
-Too many requests
-# You're going a little too fast.
+# Login
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To log in to the web management console, users must provide their user name and password according to the user directory they are about to log in to. For details about user directories see [User directories](/docs/mdemail/configuration/users#user-directories).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When the user directory is not specified at the login, Email Gateway Security will attempt to authenticate the user to the default user directory. For details see [Default user directory](/docs/mdemail/configuration/users#default-user-directory).
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Login to a non-default user directory
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Foperating%2Flogin%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To log in to a non-default user directory, the name of the user directory must prefix the user name, with a backslash `\` character separating the two: `<user directory name>\<username>` .
+
+With the example of the image below, when the user `tramone` wants to log in to the user directory `AD` the username must be provided as `ad\tramone`.
+
+Login to an Active Directory type user directory
+
+To log in to an Active Directory type user directory, it is not the domain that must prefix the username, but the user directory name.

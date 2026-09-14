@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-isn---t-an-attached-file-inside-a-pdf-being-converted-to-a-d -->
 
-Too many requests
-# You're going a little too fast.
+# Why isn’t an attached file inside a PDF being converted to a different format during Deep CDR sanitization?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+When sanitizing a PDF that contains an attached file (for example, an XLS attachment), you may notice that the attached file is sanitized but not converted into a different file type (e.g., XLS → XLSX), even if your policy specifies a conversion.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This is expected behavior due to how recursive sanitization works in Deep CDR:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Attached or embedded files are treated as components of the parent PDF, rather than standalone inputs.
+- Deep CDR is designed to preserve the original file structure and format of embedded content when sanitizing.
+- As a result, the attached file is sanitized but is not subject to type conversion rules (e.g., XLS → XLSX, DOC → DOCX, etc.).
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-isn---t-an-attached-file-inside-a-pdf-being-converted-to-a-d%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Support:
+
+If Further Assistance is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/operating/devices-management -->
 
-Too many requests
-# You're going a little too fast.
+# Devices Management
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Overview](/docs/ocm/7.39.0/operating/devices-management#overview)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+OPSWAT Central Management can manage devices that have installed the MetaDefender Endpoint. MetaDefender Endpoint is an endpoint client that leverages OPSWAT technologies to collect security & vulnerability information, detect threats, and protect endpoints from the threats that come from using removable media. It is lightweight and remains transparent to end-users while protecting and auditing any risky activities that could introduce threats to the organization. MetaDefender Endpoint can be centrally managed by OPSWAT Central Management for policy control and reporting.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Introduction](/docs/ocm/7.39.0/operating/devices-management#introduction)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Foperating%2Fdevices-management%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+OPSWAT Central Management provides an extensive suite of features to manage your devices.
+
+- [MetaDefender Endpoint](/docs/ocm/7.39.0/operating/opswat-client)
+- [Device Groups](/docs/ocm/7.39.0/operating/device-groups)
+- [Devices Inventory](/docs/ocm/7.39.0/operating/devices-inventory)
+- [Device Policies](/docs/ocm/7.39.0/operating/device-policies)

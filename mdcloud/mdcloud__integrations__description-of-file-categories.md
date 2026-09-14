@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mdcloud/integrations/description-of-file-categories -->
 
-Too many requests
-# You're going a little too fast.
+# Description of File Categories
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+By default all files are categorized in one of the following categories:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+| Category | File types |
+| --- | --- |
+| E | Executables |
+| D | Documents |
+| A | Archives |
+| G | Graphic files |
+| T | Text |
+| P | PDF files |
+| M | Audio video format (media) |
+| N | Android APK files |
+| Z | Mail messages |
+| O | Other (anything that is not recognized as one of the above) |
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcloud%2Fintegrations%2Fdescription-of-file-categories%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+These can be seen in the "file_info.file_type_category" field.

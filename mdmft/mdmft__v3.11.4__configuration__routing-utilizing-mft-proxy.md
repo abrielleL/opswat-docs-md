@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/routing-utilizing-mft-proxy -->
 
-Too many requests
-# You're going a little too fast.
+# Routing utilizing MFT Discovery (BETA)
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
+## [MFT Discovery](/docs/mdmft/v3.11.4/configuration/routing-utilizing-mft-proxy#mft-discovery)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The MFT Discovery feature enables discovery of MFT instances beyond direct MFT to MFT connections.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Remote MFT instances connected via the MFT to MFT feature to any node in the connected MFT network are automatically discovered and displayed in the user interface.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Frouting-utilizing-mft-proxy%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+MFT instances recursively query connected peers to enumerate their links, progressively constructing the network topology.
+
+### [Discovery in restricted networks](/docs/mdmft/v3.11.4/configuration/routing-utilizing-mft-proxy#discovery-in-restricted-networks)
+
+In restricted networks (e.g., with data diodes preventing discovery responses), administrators can still construct the topology manually. The discovery feature lets administrators register remote MFT instances by specifying:
+
+- The known MFT instance through which they are reachable.
+- The remote instance’s identifier (deployment id).
+
+## [MFT to MFT connection to a remote instance (Routing)](/docs/mdmft/v3.11.4/configuration/routing-utilizing-mft-proxy#mft-to-mft-connection-to-a-remote-instance-routing)
+
+The **MFT to MFT** feature now allows administrators to select any previously discovered MFT as the destination when setting up a new connection. All intermediate MFTs automatically handle the synchronization process, securely proxying data from the source to the destination.
+
+Although the data may pass through multiple MFTs, the connection is still treated as a **direct link between the source and destination**. This means it fully supports all standard connection features, including **Transfer Policies**, just like a traditional MFT to MFT setup.

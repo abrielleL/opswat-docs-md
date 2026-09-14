@@ -1,12 +1,11 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/knowledge-base/is-snmp-monitoring-supported-for-metadefender-storage-security-- -->
 
-Too many requests
-# You're going a little too fast.
+# Is SNMP monitoring supported for MetaDefender Storage Security?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+At the current time SNMP monitoring is not supported for our MetaDefender Storage Security product.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This limitation is affecting [all versions](/docs/mdss/4.4.2/release-notes/release-notes) of the product.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Support:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fknowledge-base%2Fis-snmp-monitoring-supported-for-metadefender-storage-security--%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+If **Further Assistance** is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

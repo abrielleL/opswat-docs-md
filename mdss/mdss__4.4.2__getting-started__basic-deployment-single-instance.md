@@ -1,12 +1,25 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/getting-started/basic-deployment-single-instance -->
 
-Too many requests
-# You're going a little too fast.
+# Basic Deployment
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The basic deployment is the fastest way to get **MetaDefender Storage Security (MDSS)** up and running. All system components — MDSS, Metadefender Core, and shared services — are installed on a single machine.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Imagine running MDSS on a single computer. It's fast to set up and good for small tasks. But if you need to handle a lot of work or can't afford any downtime, this isn't the right choice.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+#### [Suitable For](/docs/mdss/4.4.2/getting-started/basic-deployment-single-instance#suitable-for)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fgetting-started%2Fbasic-deployment-single-instance%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Small workloads (perfect for testing or light usage)
+- Quick setup with minimal configuration
+
+#### [Key Points](/docs/mdss/4.4.2/getting-started/basic-deployment-single-instance#key-points)
+
+- All components run on one server.
+- You can't add more servers to handle more load.
+- If the server goes down, MDSS goes down.
+- You can still reconfigure or upgrade MDSS on this setup.
+
+#### [Important Considerations](/docs/mdss/4.4.2/getting-started/basic-deployment-single-instance#important-considerations)
+
+- Performance will vary depending on your server and file types.
+- This setup is *not recommended* for live, critical systems where you need high availability or the ability to handle a lot of data.
+- You get simplicity, but you lose the ability to scale and ensure continuous operation.

@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/sso-integrations -->
 
-Too many requests
-# You're going a little too fast.
+# SSO Integrations
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Some SSO providers deviate from standard RFC specifications. When integrating these providers with product_name, follow the specific instructions below to ensure compatibility:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Fsso-integrations%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| Product | Configuration |
+| --- | --- |
+| **ManageEngine ADSelfService Plus** | PKCE Support does not support Proof Key for Code Exchange (PKCE) when using the Authorization Code Flow. Please **disable PKCE support** in product_name when configuring this integration. |
+| **ManageEngine ADSelfService Plus** | Certain versions of ADSelfService Plus require **TLS 1.2**. To ensure compatibility, enable TLS 1.2 support in product_name by navigating to the Server Configuration tab. |

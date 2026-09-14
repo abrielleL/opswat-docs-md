@@ -70,21 +70,45 @@ These requirements apply to all deployment modes.
 
 ## RPM Installation — Linux (RHEL)
 
+> **Info Version Applicability**
+>
+> The requirements below apply to My OPSWAT Central Management **10.7.26080 and later**, where the supporting components (nginx, RabbitMQ, Valkey) are bundled with the RPM package. Their configuration and data are stored under the My OPSWAT Central Management directories, as listed in [Directory Paths](https://www.opswat.com/docs/cm/deployment/system-requirements#directory-paths-2).
+>
+> For **10.7.26070 and earlier**:
+>
+> - nginx, rabbitmq-server, redis and erlang must be installed separately before the RPM installer.
+> - These components use their own system directories (`/etc/nginx`, `/usr/share/nginx`, `/etc/rabbitmq`, `/var/lib/rabbitmq`, `/etc/redis`, `/var/lib/redis`).
+>
+> Please refer to the documentation for version [**10.7.26070**](https://www.opswat.com/docs/cm/10.7.26070/deployment/system-requirements#rpm-installation--linux-rhel) using the version selector at the top of this page.
+
 ### Operating System
 
 Red Hat Enterprise Linux **9.4 or later** (64-bit only).
 
 ### Required Packages
 
-Install the following packages before running the RPM installer:
+The following packages are set as the RPM package's "Requires" dependencies.
 
-| Package | Required Version | Installation Guide |
+Note that when installing the main package via dnf or yum, these dependecies will be automatically installed by default if a valid upstream repository is available.
+
+| Package | Required Minimum Version | Installation Guide |
 | ---- | ---- | ---- |
-| nginx | >= 1.30.1 | [nginx.org](https://nginx.org/en/linux_packages.html#RHEL) |
-| rabbitmq-server | >= 4.1.4 | [rabbitmq.com](https://www.rabbitmq.com/docs/install-rpm#overview) |
-| redis | >= 8.2.1 | [redis.io](https://redis.io/docs/latest/operate/oss_and_stack/install/install-stack/rpm/) |
-| erlang | 27.3.4.2 to 27.x (< 28.0.0) | Bundled with rabbitmq-server (same link above) |
-| openssl | >= 3.6.1 | Available via `dnf install openssl` |
+| openssl | No minimum | Available via `dnf install openssl` |
+| glibc | 2.34 | Available via `dnf install glibc` |
+| libgcc | 11.2.1 | Available via `dnf install libgcc` |
+| libstdc++ | 11.2.1 | Available via `dnf install libstdc++` |
+| systemd-libs | 250 | Available via `dnf install systemd-libs` |
+| zlib | 1.2.11 | Available via `dnf install zlib` |
+| libcap | 2.48 | Available via `dnf install libcap` |
+| libgcrypt | 1.10.0 | Available via `dnf install libgcrypt` |
+| libgpg-error | 1.42 | Available via `dnf install libgpg-error` |
+| libzstd | 1.5.1 | Available via `dnf install libzstd` |
+| lz4-libs | 1.9.3 | Available via `dnf install lz4-libs` |
+| ncurses-libs | 6.2 | Available via `dnf install ncurses-libs` |
+| openssl-libs | 3.0.1 | Available via `dnf install openssl-libs` |
+| xz-libs | 5.2.5 | Available via `dnf install xz-libs` |
+| libxcrypt | 4.4.18 | Available via `dnf install libxcrypt` |
+| pcre2 | 10.37 | Available via `dnf install pcre2` |
 
 > **Info**
 >
@@ -99,12 +123,12 @@ Install the following packages before running the RPM installer:
 | Event log folder | /var/log/mocm |
 | Database folder | /var/lib/mocm |
 | Config files (nginx, MongoDB, RabbitMQ) | /etc/opt/mocm |
-| Nginx config | /etc/nginx |
-| Nginx data | /usr/share/nginx |
-| RabbitMQ config | /etc/rabbitmq |
-| RabbitMQ data | /var/lib/rabbitmq |
-| Redis config | /etc/redis |
-| Redis data | /var/lib/redis |
+| Nginx config | /etc/opt/mocm/nginx |
+| Nginx data | /var/lib/mocm/nginx |
+| RabbitMQ config | /etc/opt/mocm/rabbitmq |
+| RabbitMQ data | /var/lib/mocm/rabbitmq |
+| Valkey config | /etc/opt/mocm/valkey |
+| Valkey data | /var/lib/mocm/valkey |
 
 ## Virtual Appliance (OVA)
 
@@ -119,6 +143,12 @@ Install the following packages before running the RPM installer:
 
 ### Directory Paths
 
+> **Info Version Applicability**
+>
+> The folder structure below applies to My OPSWAT Central Management **10.7.26080 and later**, where the configuration and data of the supporting components (nginx, RabbitMQ, Valkey) are stored under the My OPSWAT Central Management directories.
+>
+> For **10.7.26070 and earlier**, these components use their own system directories (`/etc/nginx`, `/usr/share/nginx`, `/etc/rabbitmq`, `/var/lib/rabbitmq`, `/etc/redis`, `/var/lib/redis`). Please refer to the documentation for version **10.7.26070** using the version selector at the top of this page.
+
 | Directory | Default Path |
 | ---- | ---- |
 | Main installation folder | /var/opt/mocm |
@@ -126,12 +156,12 @@ Install the following packages before running the RPM installer:
 | Event log folder | /var/log/mocm |
 | Database folder | /var/lib/mocm |
 | Config files (nginx, MongoDB, RabbitMQ) | /etc/opt/mocm |
-| Nginx config | /etc/nginx |
-| Nginx data | /usr/share/nginx |
-| RabbitMQ config | /etc/rabbitmq |
-| RabbitMQ data | /var/lib/rabbitmq |
-| Redis config | /etc/redis |
-| Redis data | /var/lib/redis |
+| Nginx config | /etc/opt/mocm/nginx |
+| Nginx data | /var/lib/mocm/nginx |
+| RabbitMQ config | /etc/opt/mocm/rabbitmq |
+| RabbitMQ data | /var/lib/mocm/rabbitmq |
+| Valkey config | /etc/opt/mocm/valkey |
+| Valkey data | /var/lib/mocm/valkey |
 
 ## Sizing Guidance
 

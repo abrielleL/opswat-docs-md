@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/operating/dashboard -->
 
-Too many requests
-# You're going a little too fast.
+# Dashboard
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+OPSWAT Central Management's **Dashboard** gives a general overview of OPSWAT Central Management and its instances status.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Overview page](/docs/ocm/7.39.0/operating/dashboard#overview-page)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The Overview page shows information about
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Foperating%2Fdashboard%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- All MetaDefender's product instances that OPSWAT Central Management managed
+- MetaDefender Endpoint devices status
+
+## [Vulnerabilities, Compliance, Threat Detection](/docs/ocm/7.39.0/operating/dashboard#vulnerabilities-compliance-threat-detection)
+
+This dashboard shows statistics and visualize chart vulnerabilities, compliance, threat detection status of monitored devices.
+
+If you have not monitored any devices, click on [MetaDefender Endpoint](/docs/ocm/7.39.0/operating/opswat-client) Add Devices button for add monitored devices
+
+## [Product Dashboard](/docs/ocm/7.39.0/operating/dashboard#product-dashboard)
+
+OPSWAT Central Management also provide user with an overview dashboard of managed OPSWAT products. Supported products are listed below:
+
+- [MetaDefender Core Dashboard](/docs/ocm/7.39.0/integrations/metadefender-core-dashboard)
+- [MetaDefender Kiosk Windows Dashboard](/docs/ocm/7.39.0/integrations/metadefender-kiosk-dashboard)
+- [MetaDefender Kiosk Linux Dashboard](/docs/ocm/7.39.0/integrations/metadefender-kiosk-linux-dashboard)

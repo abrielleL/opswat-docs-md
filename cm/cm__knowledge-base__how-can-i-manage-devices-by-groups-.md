@@ -99,7 +99,7 @@ To enroll devices to a group *via installation package*:
 
 ![](https://uploads.developerhub.io/prod/97qW/x5abyu7vqh9scabbmye3crddspoit1wrus3qf6cgmhwrs92o47kxy1jwe41pso5l.png)
 
-To learn more about this option, please [Read This](https://www.opswat.com/docs/cm/configuration---management/device-group-auto-assignment).
+To learn more about this option, please refer to [Auto-Assign Endpoints to a Group.](https://www.opswat.com/docs/cm/product-management/auto-assign-endpoints-to-a-group)
 
 > **Pro Tip:**
 >
@@ -124,8 +124,8 @@ To look up a GroupID:
 
 Administrators can use the **Get Devices** API, but filtered with the **Group ID** parameter within the request body. This will retrieve a list of all devices within the specified group.
 
-To learn more, please [Read This](https://www.opswat.com/docs/cm/developer-guide/get-devices) and [This](https://www.opswat.com/docs/cm/developer-guide/apis).
+To learn more, please refer to [Get Devices](https://www.opswat.com/docs/cm/developer-guidelines/get-devices) and [APIs](https://www.opswat.com/docs/cm/developer-guidelines/apis) guidelines.
 
 > **Support:**
 >
-> If you have followed the instructions above but are having difficulty **Managing Your Endpoint Devices By Groups**, please open a [Support Case](https://my.opswat.com/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+> If you have followed the instructions above but are having difficulty **Managing Your Endpoint Devices By Groups**, please open a [Support Case](https://my.opswat.com/support) with the OPSWAT team via phone, online chat or form.

@@ -1,12 +1,27 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/how-to-sanitize-non-compliant-mdzip-files- -->
 
-Too many requests
-# You're going a little too fast.
+# How to Sanitize Non-Compliant MDZIP Files?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to DeepCDR version 7.4 and later, which requires MetaDefender Core version 5.14.0 or higher to function properly.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Issue:** Some MDZIP files from customers may not strictly follow the MDZIP format, preventing them from being sanitized. R&D is unable to relax the format rules to support these non-compliant files.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+**Resolution:** These files can still be sanitized as regular ZIP files, provided the settings are configured to ensure the following:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fhow-to-sanitize-non-compliant-mdzip-files-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- The sanitized files retain their original `.mdzip` extension.
+- All internal file names remain unchanged. This is crucial for CAMEO to read the files correctly after sanitization.
+
+**Workarounds:**
+
+To keep the `.mdzip` extension, consider these options:
+
+- Manually rename the extension to `.mdzip` after sanitization.
+- Wait for the new feature enhancement in Core 5.15.0.
+
+To preserve the internal file names after sanitization:
+
+- Enable the setting: `Preserve entry name in sanitized files`. This feature has been available starting from DeepCDR version 7.4 and later, and it needs MetaDefender Core version 5.14.0 or above to work correctly.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

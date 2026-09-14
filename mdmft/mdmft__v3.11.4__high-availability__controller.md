@@ -1,12 +1,39 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/high-availability/controller -->
 
-Too many requests
-# You're going a little too fast.
+# Configuration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This section covers configurations specific to the High Availability (HA) setup.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [High Availability Configuration Tool](/docs/mdmft/v3.11.4/high-availability/controller#high-availability-configuration-tool)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fhigh-availability%2Fcontroller%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Use the High Availability Configuration Tool to configure MetaDefender MFT HA Controller™ and manage and monitor your HA environment. It allows you to configure nodes, adjust cluster settings such as timeouts, and review node and peer health status. The tool can also generate support packages to assist with troubleshooting. Additional capabilities will be added in future releases.
+
+For details, see the [HA Configuration Tool](/docs/mdmft/v3.11.4/high-availability/ha-configuration-tool-manual).
+
+## [HA Cluster Notification URL](/docs/mdmft/v3.11.4/high-availability/controller#ha-cluster-notification-url)
+
+If you are using email notifications you have to configure the **Notification URL Configuration.** Change the Notification URL to the HA Controller’s address.
+
+Info
+
+This address will be used in the email notifications as link to the MetaDefender® MFT. Since users will access the application through the MetaDefender MFT HA Controller™ the notification URL must be changed to it's address.
+
+More information can be found at the [Notification URL](/docs/mdmft/v3.11.4/configuration/notifications#notification-url) section.
+
+## [Server configuration](/docs/mdmft/v3.11.4/high-availability/controller#server-configuration)
+
+Server configuration is instance-specific and stored locally (not in the shared database). All settings under `Settings > Security > Server Configuration`—such as HTTPS, rate limiting, and port configuration—must be set independently on each node.
+
+Warning
+
+Changes made on one node do not automatically apply to the other node.
+
+Info
+
+It's not necessary to align the MetaDefender® MFT Server Configuration across nodes. For instance, the hostname will inherently differ between nodes. Additionally, if Node1 has higher specifications and requires a larger rate limit, you can configure a higher rate limit on Node1 compared to Node2.
+
+Info
+
+You can use the Host field to check which Node is currently active.

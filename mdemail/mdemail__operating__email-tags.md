@@ -1,12 +1,33 @@
 <!-- source: https://www.opswat.com/docs/mdemail/operating/email-tags -->
 
-Too many requests
-# You're going a little too fast.
+# Email tags
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Overview](/docs/mdemail/operating/email-tags#overview)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Email Gateway Security supports adding markers called ***tags*** to emails, to provide a user-defined notation for emails based on different processing properties of a specific email.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Per rule tags
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdemail%2Foperating%2Femail-tags%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Tags can be configured differently for each security rule.
+
+## [Enable tagging](/docs/mdemail/operating/email-tags#enable-tagging)
+
+Tagging can be enabled for several actions or statuses in security rules. For example here the *clean* tag is added to emails that were allowed:
+
+For further details about enabling and configuring tags see [Policy](/docs/mdemail/configuration/policy).
+
+## [Displaying tags](/docs/mdemail/operating/email-tags#displaying-tags)
+
+All assigned tags of an email are displayed in **Audit > Email History** / Email details.
+
+Based on the settings, certain tags may also show up in the front of the delivered email’s subject, in square brackets.
+
+No tags in subjects in Email History
+
+The tags are not applied in the subjects displayed in **Audit > Email History** and **Quarantine**.
+
+## [Filtering](/docs/mdemail/operating/email-tags#filtering)
+
+Emails can be filtered in **Audit > Email History** and in **Quarantine** by the tags applied.
+
+For details see [Operating/Email History](/docs/mdemail/operating/email-history).

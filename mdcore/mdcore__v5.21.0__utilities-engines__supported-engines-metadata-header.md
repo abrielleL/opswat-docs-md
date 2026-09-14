@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdcore/v5.21.0/utilities-engines/supported-engines-metadata-header -->
 
-Too many requests
-# You're going a little too fast.
+# Supported engines-metadata header
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+### [Decode and encode children file names with Shift-JIS encoding](/docs/mdcore/v5.21.0/utilities-engines/supported-engines-metadata-header#decode-and-encode-children-file-names-with-shift-jis-encoding)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The archive engine uses UTF-8 as a default encoding to create the children file names, if an archive file uses Shift-JIS encoding, please specify this info in the engine-metadata to preserve file names
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Use [MetaDefender Core API](https://docs.opswat.com/mdcore/metadefender-core/ref) to process a file
+2. Send the **engines-metadata** header with this value
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fv5.21.0%2Futilities-engines%2Fsupported-engines-metadata-header%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+JsonCopy{
+"extraction": { "charset": "SJIS" },
+"compression": { "charset": "SJIS" }
+}

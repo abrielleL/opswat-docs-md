@@ -1,12 +1,32 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/configuration/password-policy-configuration -->
 
-Too many requests
-# You're going a little too fast.
+# Password Policy
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Password Policy settings are accessible under **Settings > Security** tab .
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Local users' password can be enforced to meet requirements set by administrators, which includes following constraints:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- **Enforce password policy:**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Fconfiguration%2Fpassword-policy-configuration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+  - Determines the number of unique new passwords that must be associated with a user account before an old password can be reused
+  - Range: [0-24]
+  - Default: 0 (to disable enforcement)
+- **Minimum password length:**
+
+  - The least number of characters that can make up a password for a user account
+  - Range: [0-8]
+  - Default: 0 (to disable enforcement)
+- **Password must meet complexity requirements:**
+
+  - Determines whether passwords must meet a series of guidelines that are considered important for a strong password:
+  - Default: unchecked
+
+Info
+
+At least 1 uppercase letter of European languages (A through Z) At least 1 lowercase letter of European languages (a through z).
+
+At least 1 base 10 digits (0 through 9) At least 1 non-alphanumeric characters (special characters): (~!@#$%^&*_-+=`|(){}[]:;"'<>,.?/)
+
+Info
+
+Only the user that has an admin role can modify this setting

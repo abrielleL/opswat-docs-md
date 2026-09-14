@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/what-are-the-running-processes-of-metadefender-kiosk -->
 
-Too many requests
-# You're going a little too fast.
+# What are the running processes of MetaDefender Kiosk?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Kiosk V4 releases deployed on Windows systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Looking over task manager you will be able to see:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- Kiosk Custom Authentication Handler - omdCAMHandler.exe
+- MetaDefender Kiosk Service - MetadefenderSVC.exe
+- MetaDefender WatchDog - omsMD4MHelper.exe
+- Metascan DB Controller - omsDBCtrller.exe
+- Metascan Post Action Center - omsPACenter.exe
+- MongoDB - mongod.exe
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fwhat-are-the-running-processes-of-metadefender-kiosk%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Support:
+
+If you have any issue regarding the **Expected Running Processes of MetaDefender Kiosk**, please follow these instructions on [How To Create a Support Package](https://docs.opswat.com/mdkiosk/troubleshooting#creating-the-package), before logging a [Support Case](https://my.opswat.com/portal/support) with the OPSWAT team.

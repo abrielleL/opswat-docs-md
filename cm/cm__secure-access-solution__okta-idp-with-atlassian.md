@@ -58,22 +58,17 @@ Reference: [How to configure Atlassian SAML Single Sign On with an Identity Prov
 
 After configuring SSO, you should test it out to make sure that SSO works as expected.
 
-Now it's the time you can implement integration My OPSWAT Central Management with your Okta Atlassian by following the below steps. You can learn more details for each step here at [3.1.1. How to set it up?](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)
+Now it's the time you can implement integration My OPSWAT Central Management with your Okta Atlassian by following the below steps. You can learn more details for each step here at [Configuration.](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-integration-configuration)
 
-- [Step 1. Enable Access Control on your My OPSWAT Central Management](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Atlassian.html#step-1-enable-access-control-on-your-metaaccess-account) account
-- [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Atlassian.html#step-2-add-protected-applications-with-idp-method)
-- [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Atlassian.html#step-3-configure-access-rules)
-- [Step 4. Update Applications settings on Identity Provider](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Atlassian.html#step-4-update-applications-settings-on-identity-provider)
-- [Step 5. Configure SSO settings on applications](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Atlassian.html#step-5-configure-sso-settings-on-applications)
-- [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Okta_IdP_with_Atlassian.html#step-6-test-your-integration)
-
-## Step 1. Enable Access Control on your My OPSWAT Central Management account
+## Step 1. Enable Secure Access on your My OPSWAT Central Management account
 
 1. Login to the My OPSWAT Central Management console.
 2. Navigate to **Secure Access** and then **Protected Apps**
-3. Check on the box **"****Enable secure access****".**
+3. Check on the box **"Enable Secure Access".**
 4. Click **SAVE**.
-5. Navigate to **Integrations** and then **Device Identity**, and enable **Enable cross-domain API integration at port xxxx**
+5. Navigate to **Integrations** and then **Device Identity**, and enable **Enable cross-domain API integration at port xxxx.**
+
+![](https://uploads.developerhub.io/prod/97qW/3xcvx8db4yjszpg6r6rz3k7ayx4p42u38pcmurj3vrj94h1bg6hcf3rv1olrynz5.png)
 
 ## Step 2. Add protected applications with IdP Method
 
@@ -89,11 +84,9 @@ Now it's the time you can implement integration My OPSWAT Central Management wit
 
 4.  Select the Atlassian application which you just added above
 
-5.  Go to **Sign On** tab and click **View Setup Instruction** **
+5.  Go to **Sign On** tab and click **View Setup Instruction**
 
 ![](https://uploads.developerhub.io/prod/97qW/pqmtgyftxz4xtynqu6767kqnztlygapt32k04k6481f9xrnwin3atatyi2w6zhdt.png)
-
-**
 
 6.  Search for **X.509 Certificate** and c lick **Download certificate** to download Okta certificate
 
@@ -128,9 +121,9 @@ Store the log out URL in somewhere for later use.
       1. *Application*: application name, for example: Atlassian
       2. *Login URL*: application login URL which you have from Step 2.2
       3. *Logout URL*: application logout URL which you have from Step 2.3
-      4. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+      4. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications).
    4. Click **SAVE**
-10. After saving your changes sucessfully, click the **SSO Setup Instructions** button of the Atlassian application you have just added and then copy the **URL** MetaDefender IT Access generated there. This URL is used to replace Atlassian login URL on Okta in Step 4. Download the OPSWAT Certificate as well.
+10. After saving your changes sucessfully, click the **SSO Setup Instructions** button of the Atlassian application you have just added and then copy the **URL** My OPSWAT Central Management generated there. This URL is used to replace Atlassian login URL on Okta in Step 4. Download the OPSWAT Certificate as well.
 
 Note: you can add Atlassian application (step 2.5) when you add Okta IdP settings in step 2.4.
 
@@ -141,7 +134,7 @@ Note: you can add Atlassian application (step 2.5) when you add Okta IdP setting
 3. With a new access rule, you need to specify how you would like to block/allow access a device from the application
    1. *Rule name*: a rule name, for example Block non-compliant devices
    2. *Action*: Block or Allow
-   3. Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+   3. Configure conditions to do the action. Details at [Configure Access Rules](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 4. Click **ADD RULE**
 
 ## Step 4. Update Applications settings on Identity Provider
@@ -167,6 +160,4 @@ Note: you can add Atlassian application (step 2.5) when you add Okta IdP setting
 
 ## Step 6: Test your integration
 
-Follow guideline at [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Step_6__Test_your_integration.html) to test your integration to verify if it works as your expectation.
-
-**DONE! CONGRATULATIONS.**
+Follow guideline at [Test Your Integration ](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration)to verify if it works as your expectation.

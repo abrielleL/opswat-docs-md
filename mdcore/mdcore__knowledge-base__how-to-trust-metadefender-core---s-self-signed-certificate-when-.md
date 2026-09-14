@@ -1,12 +1,42 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/how-to-trust-metadefender-core---s-self-signed-certificate-when- -->
 
-Too many requests
-# You're going a little too fast.
+# How to Trust MetaDefender Core’s Self-Signed Certificate When HTTPS Is Enabled?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core V4 and V5 releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When enabling HTTPS for MetaDefender Core, most of the times a self-signed Security Certificate is being used. In these scenarios, other products integrated directly with it, in a 1-to-1 connection (without any intermediary proxy and/or network appliance), will fail to connect due to an SSL Trust Relation not establishing anymore. To address this, the Security Certificate needs to be installed in the Trusted Root Certification Authorities store of the machine hosting the application integrated with Core. Please find below the steps to achieve this for each Operating System:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [Windows:](/docs/mdcore/knowledge-base/how-to-trust-metadefender-core---s-self-signed-certificate-when-#windows)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fhow-to-trust-metadefender-core---s-self-signed-certificate-when-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+1. Double-click the .crt file → opens "Certificate".
+2. Click "Install Certificate...".
+3. Choose "Local Machine" ( You will need Administrator rights ).
+4. Choose "Place all certificates in the following store"
+5. Click Browse → select Trusted Root Certification Authorities.
+6. Click Next, then Finish.
+
+## [Debian:](/docs/mdcore/knowledge-base/how-to-trust-metadefender-core---s-self-signed-certificate-when-#debian)
+
+1. Copy your certificate to the trusted directory:
+
+`sudo cp mycert.crt /usr/local/share/ca-certificates/`
+
+2. Update CA store:
+
+`sudo update-ca-certificates`
+
+## [RedHat Enterprise Linux:](/docs/mdcore/knowledge-base/how-to-trust-metadefender-core---s-self-signed-certificate-when-#redhat-enterprise-linux)
+
+1. Copy the certificate:
+
+`sudo cp mycert.crt /etc/pki/ca-trust/source/anchors/`
+
+2. Update CA Trust:
+
+`sudo update-ca-trust extract`
+
+*The application service/machine needs to be restarted for the changes to take place and the SSL Trust Relation to establish.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chat with our support engineer](https://my.opswat.com/portal/support).

@@ -1,12 +1,14 @@
 <!-- source: https://www.opswat.com/docs/mdcloud/knowledge-base/how-can-i-update-my-payment-method-within-metadefender-cloud-onl -->
 
-Too many requests
-# You're going a little too fast.
+# How can I update my payment method within MetaDefender Cloud Online Store?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+To ensure the accuracy of your account information while purchasing our products through MetaDefender Cloud Online Store, it is necessary to maintain up-to-date records. To modify or update your card information for the Payment Method, a series of steps can be followed.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. Please go to <https://metadefender.opswat.com/settings/licensing> with the account you subscribed to our products.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. Under **Licensing**, you will find in the bottom of the page the **Active License** panel as in the below sample. Press **Manage Subscription** button on the right side of the screen
+3. By clicking on Manage Subscription, You will be redirected to a link under stripe.com, and then you can update the payment method as below. Now you can select Add payment method to update or change the information.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcloud%2Fknowledge-base%2Fhow-can-i-update-my-payment-method-within-metadefender-cloud-onl%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+4. After you fill in all the information needed, just click Add, and your new Payment Method will be displayed. From this interface, you have the possibility to select if the new payment method will be used as default or not, by clicking on the checkbox.
+
+5. Now you have all your Payment Information up to date within your account, and you can chose your payment method by making the one you would like to use as default, by selecting Make default.

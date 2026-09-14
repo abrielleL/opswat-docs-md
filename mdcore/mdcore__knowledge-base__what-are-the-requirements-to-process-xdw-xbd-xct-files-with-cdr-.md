@@ -1,12 +1,16 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/what-are-the-requirements-to-process-xdw-xbd-xct-files-with-cdr- -->
 
-Too many requests
-# You're going a little too fast.
+# What are the requirements to process XDW/XBD/XCT files with CDR?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Bellow you can find the entire list of requirements:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- Version DocuWorks 9 or newer on the system to use this feature.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+  - [Deep CDR Supported File Types](/docs/mdcore/deep-cdr/supported-file-types)
+  - [DocuWorks](https://www.fujifilm.com/fb/download/software/docuworks)
+  - [DocuWorks 9.1](https://www.fujifilm.com/fb/support/software/docuworks_91/faq/contents/faq_00655.html)
+- The trial versions will not work, a paid version is necessary.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhat-are-the-requirements-to-process-xdw-xbd-xct-files-with-cdr-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Support:
+
+If Further Assistance is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

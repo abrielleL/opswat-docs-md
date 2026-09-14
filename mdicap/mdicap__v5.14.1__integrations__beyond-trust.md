@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/mdicap/v5.14.1/integrations/beyond-trust -->
 
-Too many requests
-# You're going a little too fast.
+# Beyond Trust
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Beyond Trust has not accept Sanitized/Redacted content then before setup, please make sure CDR engine and redact feature of DLP engine on Meta Defender Core are disabled
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. log in to admin interface of BeyondTrust and navigate to Management -> Security
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Input MD ICAP Server to "ICAP Server URL" with format: **icap://host:port**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdicap%2Fv5.14.1%2Fintegrations%2Fbeyond-trust%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Info
+
+By default **1344** is ICAP port without TLS
+
+2. hit “Test with a file” button to check the connection with the MD ICAP Server
+
+1. Enable TLS for ICAP connection (ICAPS) - optional
+
+Info
+
+1. Must enable ICAPS at MD ICAP Server
+2. port 11344 is ICAPS default port
+
+- Input ICAP Server URL with format: **icaps**://<host>:<port>

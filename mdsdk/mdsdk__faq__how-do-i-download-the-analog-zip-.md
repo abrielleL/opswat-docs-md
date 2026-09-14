@@ -1,12 +1,5 @@
 <!-- source: https://www.opswat.com/docs/mdsdk/faq/how-do-i-download-the-analog-zip- -->
 
-Too many requests
-# You're going a little too fast.
+# How do I download the Analog.zip?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdsdk%2Ffaq%2Fhow-do-i-download-the-analog-zip-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Analog is hosted on the VCR Gateway, and tokens are customer-specific. To download Analog.zip, use [this link](https://vcr.opswat.com/gw/file/download/patch_status.json?type=1&token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjdW9uZ2xlQWNjb3VudCIsImlhdCI6MTU4MjI3OTMzMn0.SI9tOtEHtytBoABciMynqtKCUUx1ZXIbq7O7UR-BJIPPcKoxEcN2vOMBS0zT4FE9ikTALHhSGCd3tu8yBOs3rQ), which includes a sample token for demonstration purposes.

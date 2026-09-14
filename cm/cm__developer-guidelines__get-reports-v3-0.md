@@ -12,7 +12,7 @@
 | Requests per rate limit | 10/min |
 | Change History | 01/22/2019: add one more export type (type parameter in request), agent_log |
 
-Use to download reports such as OS patches summary, devices which missing a specific OS patch, missing OS patches on a specific device, MetaAccess agent log
+Use to download reports such as OS patches summary, devices which missing a specific OS patch, missing OS patches on a specific device, MetaDefender Endpoint log.
 
 ## API URL
 
@@ -25,8 +25,8 @@ https://gears.opswat.com/o/api/v3/get_reports
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
-| type | string | URL | Yes | Specify what report you want to download. Values can be: - os_patch_summary: get OS Patches summary report - device_missing_os_patch: get devices which missing a specific OS Patch report - missing_os_patch: get missing OS Patches on a device - agent_log: download MetaAccess agent log which was requested in Device Action. |  |
-| command_id | string | URL | Optional | **Must be passed in if the report type is agent_log** Command ID which archived from Device Action when you request to retrieve MetaAccess agent logs |  |
+| type | string | URL | Yes | Specify what report you want to download. Values can be: - os_patch_summary: get OS Patches summary report - device_missing_os_patch: get devices which missing a specific OS Patch report - missing_os_patch: get missing OS Patches on a device - agent_log: download MetaDefender Endpoint log which was requested in Device Action. |  |
+| command_id | string | URL | Optional | **Must be passed in if the report type is agent_log** Command ID which archived from Device Action when you request to retrieve MetaDefender Endpoint logs |  |
 | kb | string | URL | Optional | **Must be passed in with if the report type is device_missing_os_patch** KB Number of an OS patch you would like to download devices which are missing the OS patch. |  |
 | id | string | URL | Optional | **Must be passed in if the report type is missing_os_patch** Device ID or D MAC address |  |
 
@@ -103,8 +103,8 @@ https://gears.opswat.com/o/api/v3/get_reports?type=agent_log&command_id=5c2c59e9
 
 - ***Successful***
   - HTTP 200
-  - Response: a zip file. It contains MetaAccess agent logs
-- ***Command ID is valid but MetaAccess agent log is not available***
+  - Response: a zip file. It contains MetaDefender Endpoint logs
+- ***Command ID is valid but  MetaDefender Endpoint log is not available***
   - HTTP 202
   - Response: json
 

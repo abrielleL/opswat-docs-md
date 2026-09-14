@@ -1,12 +1,217 @@
 <!-- source: https://www.opswat.com/docs/mdcore/metadefender-core/ref -->
 
-Too many requests
-# You're going a little too fast.
+## Developer Guide
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+---
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+This is the API documentation for *MetaDefender Core Public API*. If you
+would like to evaluate or have any questions about this documentation,
+please contact us via our [Contact Us](https://www.opswat.com/contact) form.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+---
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fmetadefender-core%2Fref%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## How to Interact with MetaDefender Core using REST
+
+Beginning with MetaDefender Core 4.x, OPSWAT recommends using the JSON-based
+REST API. The available methods are documented below.
+
+> ***Note**:* MetaDefender API doesn't support chunk upload, however is
+> recommended to stream the files to MetaDefender Core as part of the upload
+> process.
+
+---
+
+## File Analysis Process
+
+MetaDefender's main functionality is to analyze large volumes with a high throughput. Depending on the configuration and licensed technologies, the analysis times can vary.
+Below is a brief description of the API integration flow:
+
+1. Upload a file for analysis (`POST /file`), which returns the `data_id` or `batch_id`: [File Analysis](/docs/mdcore/metadefender-core/ref#fileanalysispost)).
+
+   > ***Note**:* The performance depends on:
+   >
+   > - number of engines
+   > - type of file to be scanned
+   > - MetaDefender Core's hardware
+
+   **Batch Upload with multipart/form-data**:
+
+   - When the request uses `Content-Type: multipart/form-data`, MetaDefender Core treats the entire submission as a batch.
+   - A new batch is automatically created for this media type.
+   - Each part in the request body is processed as an individual file within the batch.
+   - The API returns a `batch_id` instead of a `data_id`.
+   - All individual file scans are linked to the created batch.
+2. You have 2 ways to retrieve the analysis report:
+
+   - **Polling**: Fetch the result with previously received data_id or batch_id (`GET /file/{data_id}` or `GET /file/{batch_id}` resource) until scan result belonging to data_id/batch_id doesn't reach the 100 percent progress_percentage: ([Fetch analysis result](/docs/mdcore/metadefender-core/ref#fileanalysisget))
+   > ***Note**:* Too many data_id/batch_id requests can reduce performance. It is enough to just check every few hundred milliseconds.
+
+   - **Callbackurl**: Specify a callbackurl that will be called once the analysis is complete. Up to 10 `callbackheader-name` / `callbackheader-value` pairs (unsuffixed, then `1`–`10`) are copied onto that webhook (`POST /file` binary upload, and `POST /file/batch/{batchId}/close/callback`).
+3. Retrieve the analysis results anytime after the analysis is completed with hash for files (md5, sha1, sha256, sha512) by calling [Fetch analysis result by hash](/docs/mdcore/metadefender-core/ref#hashget).
+
+   - The hash can be found in the scan results
+4. List `data_id` values for processed objects without fetching full scan payloads (`GET /file/ids`).
+
+   - IDs are returned regardless of status, result, or verdict, subject to processing-history permission.
+   - Use the listed IDs with `GET /file/{data_id}` or `GET /file/batch/{data_id}` as appropriate.
+5. Retrieve processed file (sanitized, redacted, watermarked, etc.) after the analysis is complete.
+
+   > ***Note**:* Based on the configured retention policy, the files might be available for retrieval at a later time.
+
+---
+
+OPSWAT provides some sample codes on [GitHub](https://github.com/OPSWAT) to
+make it easier to understand how the MetaDefender REST API works.
+
+Serverhttp://localhost:8008Server Variables## AuthenticationapiKey apikey
+
+Generated `session_id` from [Login](/docs/mdcore/metadefender-core/ref#userlogin) call can be used as an `apikey` for API calls that require authentication.
+
+Fields
+
+| Key | In |
+| --- | --- |
+| apikey | Header |  |
+
+## Auth
+
+### Authentication APIs
+
+User authentication is done via username & password.
+Additional integrations are available within the product:
+
+- **LDAP** integration
+- **Active Directory** integration
+- **SAML** integration (starting with v4.18.0)
+Endpoints[POST/login](/docs/mdcore/metadefender-core#userlogin) [POST/logout](/docs/mdcore/metadefender-core#userlogout)
+### Login
+
+Initiate a new session. Required for using protected REST APIs.
+
+Auth NoneRequest Body application/json
+
+| object | object |  |  |
+| --- | --- | --- | --- |
+| user | string | Username |  |
+| password | string | User's password |  |
+
+POST /logincURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+
+OK
+
+| object | object |  |  |
+| --- | --- | --- | --- |
+| oms-csrf-token | string | The randomly generated token used to prevent CSRF attacks |  |
+| session_id | string | The apikey used to make API calls which requires authentication |  |
+
+403
+
+Invalid credentials
+
+500
+
+Unexpected event on server
+
+ Response
+### Logout
+
+Destroy session for not using protected REST APIs.
+
+Auth NoneHeaders
+
+| apikey | string | Generated `session_id` from [Login](/docs/mdcore/metadefender-core/ref#userlogin) call can be used as an `apikey` for API calls that require authentication. |  |
+| --- | --- | --- | --- |
+
+POST /logoutcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+
+OK
+
+| object | object |  |  |
+| --- | --- | --- | --- |
+| response | string |  |  |
+
+400
+
+Bad Request.
+
+403
+
+Invalid user information.
+
+500
+
+Unexpected event on server
+
+ Response
+## User Management
+
+### User management APIs
+
+The APIs for manage users and user directories.
+
+Endpoints[POST/admin/user](/docs/mdcore/metadefender-core#usercreate) [GET/admin/user](/docs/mdcore/metadefender-core#userlist) [DELETE/admin/user/{user_id}](/docs/mdcore/metadefender-core#userdelete) [PUT/admin/user/{user_id}/apikey](/docs/mdcore/metadefender-core#changeuserapikey) [GET/admin/exportusers](/docs/mdcore/metadefender-core#exportusers) [PUT/admin/userdirectory/changepassword](/docs/mdcore/metadefender-core#userdirectorychangepass) [POST/user/changepassword](/docs/mdcore/metadefender-core#userchangepass) Show 
+## Analysis
+
+### File analysis APIs
+
+Submit each file to MetaDefender Core individually or group them in batches. Each file submission will return a `data_id` which will be the unique identifier used to retrieve the analysis results.
+When `Content-Type: multipart/form-data` is used, the entire request is treated as a batch. A `batch_id` is created automatically, and each part in the multipart body is processed as an individual file within that batch.
+**Important**: Even though one file is being submitted, if MetaDefender Core is configured to extract the files, all compound file types (archives, Office documents, etc.) will be extracted and each file within will be analyzed as a separate entry.
+
+- This means that if you submit an archive with 100 files in it, MetaDefender Core will process 101 files: original file as it is and each of the 100 child files
+  - Note that by opening the files, detection ratio can increase even by 30%.
+
+> ***Note**:* MetaDefender API doesn't support chunk upload. You shouldn't load the file in memory, is recommended to stream the files to MetaDefender Core as part of the upload process.
+
+Endpoints[POST/file](/docs/mdcore/metadefender-core#fileanalysispost) [POST/file/sync](/docs/mdcore/metadefender-core#fileanalysissyncpost) [GET/file/last](/docs/mdcore/metadefender-core#getlastprocessedfile) [GET/file/ids](/docs/mdcore/metadefender-core#listfileids) [GET/file/{data_id}](/docs/mdcore/metadefender-core#fileanalysisget) [GET/file/{data_id}/blocked-leaves](/docs/mdcore/metadefender-core#retrieveblockedleaffile) [GET/file/{data_id}/extraction-errors](/docs/mdcore/metadefender-core#retrieveextractionerrors) [GET/archive/{data_id}](/docs/mdcore/metadefender-core#fileanalysisgetallchildfiles) [GET/hash/{md5|sha1|sha256|sha512}](/docs/mdcore/metadefender-core#hashget) [GET/hash/{md5|sha1|sha256|sha512}/blocked-leaves](/docs/mdcore/metadefender-core#retrieveblockedleaffilebyhash) [GET/file/webhook/{data_id}](/docs/mdcore/metadefender-core#webhookstatus) [GET/file/rules](/docs/mdcore/metadefender-core#analysisrules) [HEAD/file/converted/{data_id}](/docs/mdcore/metadefender-core#headsanitizedfile) [GET/file/converted/{data_id}](/docs/mdcore/metadefender-core#sanitizedfile) [GET/file/download/{data_id}](/docs/mdcore/metadefender-core#downloadfile) [GET/file/{data_id}/export](/docs/mdcore/metadefender-core#resultexportedfile) [GET/quarantine/{sha256}/download](/docs/mdcore/metadefender-core#downloadquarantinedfile) [GET/file/{dataid}/sbom/report](/docs/mdcore/metadefender-core#downloadsbomreport) [POST/file/{data_id}/cancel](/docs/mdcore/metadefender-core#fileanalysiscancel) Show 
+## Batch
+
+Group the analysis requests in batches.
+
+Endpoints[POST/file/batch](/docs/mdcore/metadefender-core#batchcreate) [POST/file/batch/{batchId}/close](/docs/mdcore/metadefender-core#batchclose) [POST/file/batch/{batchId}/close/callback](/docs/mdcore/metadefender-core#batchclosecallback) [GET/file/batch/{batchId}](/docs/mdcore/metadefender-core#batchstatus) [GET/file/batch/{batchId}/certificate](/docs/mdcore/metadefender-core#batchsignedresult) [POST/file/batch/{batchId}/cancel](/docs/mdcore/metadefender-core#batchcancel) Show 
+## Multipart
+
+Upload a file for scan by multiple parts.
+
+Endpoints[POST/file/multipart](/docs/mdcore/metadefender-core#createmultipartuploadpost) [POST/file/multipart/{data_id}](/docs/mdcore/metadefender-core#uploadpartpost) [GET/file/multipart/{data_id}](/docs/mdcore/metadefender-core#uploadpartget) [DELETE/file/multipart/{data_id}](/docs/mdcore/metadefender-core#uploadpartdelete) Show 
+## Splitarchive
+
+Processes a split archive uploaded in multiple parts. Only the extracted files from the reassembled split archive are processed; the combined archive file itself is not supported. Therefore, Quarantine and PostAction do not apply.
+
+Endpoints[POST/file/splitarchive](/docs/mdcore/metadefender-core#createsplitarchiveuploadpost) [POST/file/splitarchive/{data_id}](/docs/mdcore/metadefender-core#uploadsplitarchivepartpost) [GET/file/splitarchive/{data_id}](/docs/mdcore/metadefender-core#getsplitarchivestatusget) [DELETE/file/splitarchive/{data_id}](/docs/mdcore/metadefender-core#abortsplitarchiveuploaddelete) Show 
+## Admin
+
+Admin specific API requests.
+
+Endpoints[GET/admin/export](/docs/mdcore/metadefender-core#adminexport) [GET/admin/export/v2](/docs/mdcore/metadefender-core#adminexportv2) [POST/admin/import](/docs/mdcore/metadefender-core#adminimport) [POST/admin/import/v2](/docs/mdcore/metadefender-core#adminimportv2) [POST/admin/role](/docs/mdcore/metadefender-core#rolecreate) [GET/admin/role](/docs/mdcore/metadefender-core#rolelist) [DELETE/admin/role/{role_id}](/docs/mdcore/metadefender-core#roledelete) [GET/admin/userdirectory](/docs/mdcore/metadefender-core#userdirectorylist) [GET/admin/license/backup](/docs/mdcore/metadefender-core#getlicensebackup) [POST/admin/license/backup](/docs/mdcore/metadefender-core#postlicensebackup) [DELETE/admin/license/backup](/docs/mdcore/metadefender-core#removebackupinstance) [POST/admin/license/backup/nomination](/docs/mdcore/metadefender-core#licensebackupnomination) Show 
+## License
+
+Activate the product or get licensing information. Will require admin apikey.
+
+Endpoints[POST/admin/license/activation](/docs/mdcore/metadefender-core#licenseactivation) [POST/admin/license](/docs/mdcore/metadefender-core#licenseupload) [GET/admin/license](/docs/mdcore/metadefender-core#licenseget) [POST/admin/license/deactivation](/docs/mdcore/metadefender-core#licensedeactivation) Show 
+## Config
+
+Configure the product through APIs (especially the Settings). Will require admin apikey.
+
+Endpoints[PUT/admin/config/auditlog](/docs/mdcore/metadefender-core#configauditlog) [PUT/admin/config/quarantine](/docs/mdcore/metadefender-core#configquarantine) [PUT/admin/config/sanitize](/docs/mdcore/metadefender-core#configsanitizedrepo) [PUT/admin/config/scanhistory](/docs/mdcore/metadefender-core#configscanhistory) [PUT/admin/config/session](/docs/mdcore/metadefender-core#configsession) [PUT/admin/config/update](/docs/mdcore/metadefender-core#configupdate) [GET/config/skip/{skip_type}/template](/docs/mdcore/metadefender-core#configgetskiphashtemplate) [POST/admin/config/skip/{skip_type}](/docs/mdcore/metadefender-core#configpostskiphashcsv) [POST/admin/config/skip](/docs/mdcore/metadefender-core#configpostskiphash) [GET/admin/config/skip](/docs/mdcore/metadefender-core#configgetskiphash) [PUT/admin/config/skip](/docs/mdcore/metadefender-core#putmodify-skip-by-hash-list) [DELETE/admin/config/skip](/docs/mdcore/metadefender-core#configdeleteskiphash) [GET/admin/config/webhook](/docs/mdcore/metadefender-core#configwebhook) [PUT/admin/config/webhook](/docs/mdcore/metadefender-core#configupdatewebhook) [GET/admin/config/proxy](/docs/mdcore/metadefender-core#configgetproxy) [PUT/admin/config/proxy](/docs/mdcore/metadefender-core#configupdateproxy) [POST/admin/config/proxy/testconnection](/docs/mdcore/metadefender-core#configpostproxytestconnection) [GET/admin/config/file/sync](/docs/mdcore/metadefender-core#configgetsyncscantimeout) [PUT/admin/config/file/sync](/docs/mdcore/metadefender-core#configupdatesyncscantimeout) [GET/admin/config/sessioncookie](/docs/mdcore/metadefender-core#configgetsessioncookie) [PUT/admin/config/sessioncookie](/docs/mdcore/metadefender-core#configputsessioncookie) [GET/admin/config/cacheuser](/docs/mdcore/metadefender-core#configgetcacheuser) [PUT/admin/config/cacheuser](/docs/mdcore/metadefender-core#configputcacheuser) [GET/admin/config/customresponseheader](/docs/mdcore/metadefender-core#configgetcustomresponseheader) [PUT/admin/config/customresponseheader](/docs/mdcore/metadefender-core#configputcustomresponseheader) [GET/admin/config/healthcheck](/docs/mdcore/metadefender-core#configgethealthcheck) [POST/admin/config/healthcheck](/docs/mdcore/metadefender-core#configupdatehealthcheck) [GET/admin/config/logger/logfile](/docs/mdcore/metadefender-core#getlogfileconfig) [PUT/admin/config/logger/logfile](/docs/mdcore/metadefender-core#putlogfileconfig) [GET/admin/config/logger/syslog](/docs/mdcore/metadefender-core#getsyslogconfig) [POST/admin/config/logger/syslog](/docs/mdcore/metadefender-core#postsyslogconfig) [PUT/admin/config/logger/syslog](/docs/mdcore/metadefender-core#putsyslogconfig) [DELETE/admin/config/logger/syslog](/docs/mdcore/metadefender-core#removesyslogconfig) [GET/admin/config/logger/general](/docs/mdcore/metadefender-core#getgeneralloggerconfig) [PUT/admin/config/logger/general](/docs/mdcore/metadefender-core#putgeneralloggerconfig) Show 
+## Yara
+
+YARA engine configuration and source management APIs.
+
+Endpoints[GET/admin/config/yara/sources](/docs/mdcore/metadefender-core#yarasourcesget) [PUT/admin/config/yara/sources](/docs/mdcore/metadefender-core#yarasourcesput) [GET/yara/package](/docs/mdcore/metadefender-core#yarapackagestatus) [POST/yara/generate](/docs/mdcore/metadefender-core#yarapackagegenerate) Show 
+## Engines
+
+Enable/disable or pin/unpin the engines through API.
+
+Endpoints[POST/admin/engine/{engineId}/pin](/docs/mdcore/metadefender-core#enginepin) [POST/admin/engine/{engineId}/unpin](/docs/mdcore/metadefender-core#engineunpin) [POST/admin/engine/{engineId}/enable](/docs/mdcore/metadefender-core#engineenable) [POST/admin/engine/{engineId}/disable](/docs/mdcore/metadefender-core#enginedisable) [GET/admin/engine/{engineId}/config](/docs/mdcore/metadefender-core#engineconfigget) [PUT/admin/engine/{engineId}/config](/docs/mdcore/metadefender-core#engineconfigput) [DELETE/admin/engine/{engineId}](/docs/mdcore/metadefender-core#deletedelete-an-engine-or-database-package) Show 
+## Stats
+
+Health check and statistics about MetaDefender Core usage.
+
+Endpoints[GET/admin/stat/server](/docs/mdcore/metadefender-core#getserverstats) [GET/version](/docs/mdcore/metadefender-core#productversion) [GET/stat/engines](/docs/mdcore/metadefender-core#enginesstatus) [GET/stat/nodes](/docs/mdcore/metadefender-core#nodesstatus) [GET/stat/activeperformance](/docs/mdcore/metadefender-core#activeperformance) [GET/stat/user/totalprocess](/docs/mdcore/metadefender-core#getusertotalprocess) [GET/readyz](/docs/mdcore/metadefender-core#healthcheck) Show 
+## Management
+
+Endpoints[POST/admin/update/folder](/docs/mdcore/metadefender-core#postforce-update-folder-trigger) [PUT/pincode](/docs/mdcore/metadefender-core#updatepincode) [HEAD/pincode](/docs/mdcore/metadefender-core#checkpincodeexists) [POST/admin/pincode/validate](/docs/mdcore/metadefender-core#validatepincode) Show 
+## Database
+
+Endpoints[POST/dbconfig/changepasswdpgconnection](/docs/mdcore/metadefender-core#dbconfigchangepgpassword) Show

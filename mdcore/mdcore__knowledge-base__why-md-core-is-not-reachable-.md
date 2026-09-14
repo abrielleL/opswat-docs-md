@@ -1,12 +1,37 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-md-core-is-not-reachable- -->
 
-Too many requests
-# You're going a little too fast.
+# Why MD Core is Not Reachable?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+**Issue Summary:** MetaDefender Core may become unreachable due to nginx failing to start properly after a restart or shutdown.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+**Error Logs:** In nginx_error.log, you may see the following entry:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+*[error] 10904#14248: OpenEvent("Global\ngx_reopen_3536") failed (2: The system cannot find the file specified)*
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-md-core-is-not-reachable-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+**Root Cause:** This issue occurs when nginx fails to clean up its temporary files during a shutdown or restart. On subsequent startups, these leftover files can interfere with nginx’s ability to launch, preventing MD Core from becoming reachable.
+
+**Remediation Steps:**
+
+1. **Stop the Service:**
+
+- Open Services (services.msc) and stop **OPSWAT MetaDefender Core**.
+
+2. **Clean Up Temporary Files:**
+
+- Navigate to: C:\Windows\Temp\ometascan
+- Delete all files inside this directory. Files you may find include:
+- ometascan-nginx.pid
+- nginx.conf
+- Other temporary files
+
+3. **Restart the Service:**
+
+- Start the **OPSWAT MetaDefender Core** service again.
+
+**Additional Notes:**
+
+- Ensure you have administrator privileges to delete the files.
+
+Support:
+
+If Further Assistance is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

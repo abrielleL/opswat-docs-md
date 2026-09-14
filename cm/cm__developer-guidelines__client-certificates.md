@@ -35,4 +35,4 @@ As of November 10th, 2016, the client certificate is supported on both Windows a
 | Internet Explorer 8+ | Yes | No |
 | Safari | No | Yes |
 
-*: MetaDefender IT Access agent couldn't insert client certificate to Firefox database if Firefox is running.
+*: My OPSWAT Central Management agent couldn't insert client certificate to Firefox database if Firefox is running.

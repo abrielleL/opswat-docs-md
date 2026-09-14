@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/knowledge-base/what-can-i-do-if-i-forget-my-password-to-access-the-product- -->
 
-Too many requests
-# You're going a little too fast.
+# What can I do if I forget my password to access the product?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Security Gateway releases.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+If you are unable to access the product due to invalid credentials or incorrect password, and there is not any other admin account your organization could use to gain access, access to the appliance will be lost permanently.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Due to obvious security reasons, there is currently not a way to reset user credentials in the product.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Fknowledge-base%2Fwhat-can-i-do-if-i-forget-my-password-to-access-the-product-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+A complete re-image of the product will be needed as a fresh deployment. Please reach out to OPSWAT Support to provide all the information needed for this re-image process.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chat with our support engineer**](https://my.opswat.com/support).
+
+MetaDefender

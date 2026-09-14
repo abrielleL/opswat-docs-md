@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/does-adding-a-second-mft-in-the-kiosk-serve-as-a-high-availabili -->
 
-Too many requests
-# You're going a little too fast.
+# Does adding a second MFT in the Kiosk serve as a high-availability mechanism?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The feature allowing the addition of multiple MFTs (Managed File Transfers) in the Kiosk is not intended as a high-availability mechanism. Here’s a detailed explanation of how this functionality works.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The option to configure multiple MFTs in the Kiosk is designed to support different workflows. It allows users to assign specific MFTs to individual workflows based on requirements.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Adding a second MFT does not create a high-availability setup. There is no failover mechanism to switch to the secondary MFT if the primary MFT becomes unavailable.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fdoes-adding-a-second-mft-in-the-kiosk-serve-as-a-high-availabili%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Similarly, the Kiosk does not support a round-robin approach for load balancing between MFTs. Each workflow must explicitly select which MFT it uses, and the system will not automatically alternate between them.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chat with our support engineer](https://my.opswat.com/portal/support).

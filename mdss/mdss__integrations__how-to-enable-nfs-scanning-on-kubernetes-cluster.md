@@ -1,12 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mdss/integrations/how-to-enable-nfs-scanning-on-kubernetes-cluster -->
 
-Too many requests
-# You're going a little too fast.
+# How to Enable NFS scanning on a Kubernetes Cluster
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+In order to scan an NFS share when having MDSS deployed in a Kubernetes cluster, the share location has to be mounted in the `nfsservice` container as a directory in the following path: `/opt/mdss/nfs/` . For example, the following values file can be applied when deploying MDSS using the helm chart.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+YamlCopymdss_components:
+nfsservice:
+extraVolumes:
+nfsTest:
+name: nfs-storage-unit
+nfs:
+server: <NFS_SERVER_IP>
+path: <PATH_EXPORTED_ON_SERVER>
+readOnly: no
+extraVolumeMounts:
+- name: nfs-storage-unit
+mountPath: /opt/mdss/nfs/<MOUNT_DIRECTORY>
+subPath: <SUBPATH_TO_SCAN>
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+This example file can also be found on our GitHub repo for k8s deployments [here](https://github.com/OPSWAT/metadefender-k8s/blob/main/helm_charts/mdss-nfs-example.yml)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fintegrations%2Fhow-to-enable-nfs-scanning-on-kubernetes-cluster%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+After replacing the placeholders, these values can be applied when deploying MDSS:
+
+BashCopyhelm install mdss <PATH_TO_HELM_CHART> -f mdss-nfs-example.yml
+#### [Notes:](/docs/mdss/integrations/how-to-enable-nfs-scanning-on-kubernetes-cluster#notes)
+
+- Any storage unit that can be mounted as a Persistent Volume in the container can also have it's contents scanned using the NFS module
+- Make sure that the share is mounted with the appropriate permissions, for example, whenever remediations or CDR are configured write permissions are also required

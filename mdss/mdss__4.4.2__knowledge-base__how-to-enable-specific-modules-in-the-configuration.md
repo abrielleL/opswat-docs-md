@@ -1,12 +1,34 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/knowledge-base/how-to-enable-specific-modules-in-the-configuration -->
 
-Too many requests
-# You're going a little too fast.
+# How to Enable Specific Modules in the Configuration?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+## [Enabling Modules](/docs/mdss/4.4.2/knowledge-base/how-to-enable-specific-modules-in-the-configuration#enabling-modules)
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+During the [installation](/docs/mdss/4.4.2/installation/installation-methods) it is advisable to activate only those modules you intend to use, as a measure to conserve resources.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+For instance, if your purpose is to scan Amazon S3 buckets, then you should only have the `amazonsdk` module enabled in `ENABLED_MODULES` environment variable inside the `customer.env` file.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fknowledge-base%2Fhow-to-enable-specific-modules-in-the-configuration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+BashCopyENABLED_MODULES=amazonsdk
+
+Please follow [Custom configuration](/docs/mdss/4.4.2/configuration/custom-configuration) to learn how to modify the `customer.env` file.
+
+It's important to remember that turning modules on or off is a non-destructive action, allowing you the flexibility to activate additional modules later if you need to work with different types of storage.
+
+By default, all modules are enabled, which means that `ENABLED_MODULES` will look like this right after the installation:
+
+BashCopyENABLED_MODULES=azureblob,amazonsdk,googlecloud,alibabacloud,azurefiles,smb,box,onedrive,sftp,nfs
+
+Please change it accordingly but remember that in order for these changes to be applied you need to restart MetaDefender Storage Security.
+
+## [Disabling Services](/docs/mdss/4.4.2/knowledge-base/how-to-enable-specific-modules-in-the-configuration#disabling-services)
+
+The following services can be disabled when they are managed externally, to prevent deploying their local container versions:
+
+- MongoDB
+- PostgreSQL
+- RabbitMQ
+- Redis
+
+They can be disabled by adding them individually to the `DISABLED_SERVICES` variable in `customer.env` :
+
+BashCopyDISABLED_SERVICES=mongo,postgres,rabbitmq,redis

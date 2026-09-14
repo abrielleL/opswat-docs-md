@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/why-japanese-characters-are-not-recognized-or-displayed-correctl -->
 
-Too many requests
-# You're going a little too fast.
+# Why Japanese characters are not recognized or displayed correctly in archives?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This knowledge base article provides details about MetaDefender Core functionality with specific **SHIFT-JIS** charset for ZIP, TAR and CAB archives.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+If you have issues with displaying specific characters in MetaDefender Core of child files inside an archive, as shown below:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Please follow the instructions below to resolve the issue:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fwhy-japanese-characters-are-not-recognized-or-displayed-correctl%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Login to MetaDefender Core UI
+- Go to Inventory
+- Go to Modules
+- Go to Utilities
+- Go to Archive Extraction
+- Enable the option “Encoding preference for entry name”
+- Enable the option “Automatic Recognition”
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [support case or chat with our support engineer](https://my.opswat.com/portal/support).

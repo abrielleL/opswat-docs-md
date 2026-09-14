@@ -6,25 +6,20 @@ My OPSWAT Central Management can be easily integrated with an existing PingOne &
 
 To get started with implementing My OPSWAT Central Management integration to enforce device posture check before granting a device to access Salesforce with PingOne Single Sign On (SSO) service, you need to have SSO set up between PingOne and Salesforce. If you haven't already done so, please follow the instructions [here](http://saml-doc.okta.com/SAML_Docs/How-to-Configure-SAML-2.0-in-Salesforce.html) to set it up.
 
-You can learn more details for each step here at [3.1.1. How to set it up?](https://onlinehelp.opswat.com/metaaccess/3.1.1._How_to_set_it_up_.html)
-
-- [Step 1. Enable Access Control on your My OPSWAT Central Management account](https://onlinehelp.opswat.com/metaaccess/PingOne_IdP_with_Salesforce.html#step-1-enable-access-control-on-your-metaaccess-account)
-- [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/PingOne_IdP_with_Salesforce.html#step-2-add-protected-applications-with-idp-method)
-- [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/PingOne_IdP_with_Salesforce.html#step-3-configure-access-rules)
-- [Step 4. Update Applications settings on Identity Provider](https://onlinehelp.opswat.com/metaaccess/PingOne_IdP_with_Salesforce.html#step-4-update-applications-settings-on-identity-provider)
-- [Step 5. Configure SSO settings on applications](https://onlinehelp.opswat.com/metaaccess/PingOne_IdP_with_Salesforce.html#step-5-configure-sso-settings-on-applications)
-- [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/PingOne_IdP_with_Salesforce.html#step-6-test-your-integration)
+You can learn more details for each step here at [Configuration](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-integration-configuration).
 
 ## Step 1. Enable Access Control on your My OPSWAT Central Management account
 
 1. Login to the My OPSWAT Central Management console.
 2. Navigate to **Secure Access** and then **Protected Apps.**
-3. Check on the box **"****Enable access control****"** and configure a port for the cross-domain API. Note that you must select a port which no applications on endpoints is running.
+3. Check on the box **"****Enable Secure Access****"** and configure a port for the cross-domain API. Note that you must select a port which no applications on endpoints is running.
 4. Click **SAVE**.
+
+![](https://uploads.developerhub.io/prod/97qW/3xcvx8db4yjszpg6r6rz3k7ayx4p42u38pcmurj3vrj94h1bg6hcf3rv1olrynz5.png)
 
 ## Step 2. Add protected applications with IdP Method
 
-1. The next step is importing an PingOne certificate to My OPSWAT Central Management. This allows MetaDefender IT Access to verify users signing though a trusted IdP. Each identity provider has a unique X.509 certificate. Download the PingOne certificate by following these steps:
+1. The next step is importing an PingOne certificate to My OPSWAT Central Management. This allows My OPSWAT Central Management to verify users signing though a trusted IdP. Each identity provider has a unique X.509 certificate. Download the PingOne certificate by following these steps:
    1. Login to PingOne as Administrator
    2. Go to Applications dashboard
    3. Select Salesforce application
@@ -67,9 +62,9 @@ You can learn more details for each step here at [3.1.1. How to set it up?](http
       2. *IdP Login URL:* get IdP SSO login URL from your PingOne account
       3. *Application Login URL*: application login URL which you have from Step 2.2
       4. *Application Logout URL*: application logout URL which you have from Step 2.3
-      5. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Step 2. Add protected applications with IdP Method](https://onlinehelp.opswat.com/metaaccess/Step_2._Add_protected_applications_with_IdP_Method.html)
+      5. *Access Mode*: pick an access mode you prefer. See details on the access modes at [Add Protected Applications with IdP Method](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-add-protected-applications)
    4. Click **SAVE**
-6. After saving your changes successfully, click the **Setup Instructions** button of the Salesforce application you have just added and then copy the **URL** MetaDefender IT Access generated there. This URL is used to replace Salesforce login URL on PingOne in Step 4.
+6. After saving your changes successfully, click the **Setup Instructions** button of the Salesforce application you have just added and then copy the **URL** My OPSWAT Central Management generated there. This URL is used to replace Salesforce login URL on PingOne in Step 4.
 
 Note: you can add Salesforce application (step 2.5) when you add PingOne IdP settings.
 
@@ -80,7 +75,7 @@ Note: you can add Salesforce application (step 2.5) when you add PingOne IdP set
 3. With a new access rule, you need to specify how you would like to block/allow access a device from the application
    1. *Rule name*: a rule name, for example Block non-compliant devices
    2. *Action*: Block or Allow
-   3. Configure conditions to do the action. Details at [Step 3. Configure Access Rules](https://onlinehelp.opswat.com/metaaccess/Step_3._Configure_Access_Rules.html)
+   3. Configure conditions to do the action. Details at [Configure Access Rules](https://www.opswat.com/docs/cm/secure-access-solution/SAML-SSO-configure-access-rules)
 4. Click **ADD RULE**
 
 ## Step 4. Update Applications settings on Identity Provider
@@ -109,6 +104,4 @@ Note: you can add Salesforce application (step 2.5) when you add PingOne IdP set
 
 ## Step 6: Test your integration
 
-Follow guideline at [Step 6: Test your integration](https://onlinehelp.opswat.com/metaaccess/Step_6__Test_your_integration.html) to test your integration to verify if it works as your expectation.
-
-**DONE! CONGRATULATIONS.**
+Follow guideline at [Test Your Integration](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration) to verify if it works as your expectation.

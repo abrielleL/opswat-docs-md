@@ -1,12 +1,26 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/configuration/user-config -->
 
-Too many requests
-# You're going a little too fast.
+# User Accounts
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+User Accounts must be set up prior to accessing the MetaDefender Optical Diode Management UI on both the RED and BLUE sides (User Accounts must be set up independently on the BLUE and RED sides).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Create and manage new users in BLUE and RED from the User Account menu
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+### [Add User Account](/docs/netwalldiode/v1.13.2/configuration/user-config#add-user-account)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Fconfiguration%2Fuser-config%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+To add a new user:
+
+1. Go to Configuration-> User Accounts
+2. Deploy Action button and select Add User Account
+3. Fill in the fields and click on Submit button to save the changes
+
+### [Remove User Account](/docs/netwalldiode/v1.13.2/configuration/user-config#remove-user-account)
+
+To remove a user:
+
+1. Go to Configuration-> User Accounts
+2. Select the user you want to remove from the table
+3. Deploy the Action button and select Delete
+4. A pop up will be displayed to confirm the deletion, click Submit to confirm
+
+MetaDefender

@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/supervisor-approval -->
 
-Too many requests
-# You're going a little too fast.
+# Supervisor Approval
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Supervisor Approval is a key security feature that enforces an additional layer of control over file access. This feature mandates that supervisors must approve files before users can download or preview them.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Files remain in a "Supervisor Approval" state until approved.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Fsupervisor-approval%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Configuration options for Administrators:
+
+- **One stage:** requires a single approval from any designated supervisor for each file
+- **Multi-stage:** allows Administrators to define the total number of approvals required for a file
+- **Step-based:** defines a sequence of approval steps, with supervisors sequentially approving the uploaded files

@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/is-kiosk-active-directory-integration-possible- -->
 
-Too many requests
-# You're going a little too fast.
+# Is Kiosk Active Directory integration possible?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Kiosk V4 releases deployed on Windows or Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+In order to perform a successful Kiosk Active Directory (AD) integration, the following steps must be followed:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Navigate to the Kiosk console to **User Management** > **Add new directory**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fis-kiosk-active-directory-integration-possible-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+2. Select **Type of directory** > **Active Directory (AD)**
+
+3. Fill in the correct credentials and select **Test connection** to make sure the AD server is reachable from the Kiosk side)
+
+4. The next page allows you to assign users to either the **Administrator** or **Auditor** role.
+
+5. The next page you can see the **Summary**, and click **Submit**
+
+6. After completing the steps mentioned above you should get the following confirmation of the **Directory saved successfully**.
+
+Support:
+
+If **Further Assistance** is required, please proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

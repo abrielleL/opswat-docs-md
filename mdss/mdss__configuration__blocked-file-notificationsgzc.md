@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/mdss/configuration/blocked-file-notificationsgzc -->
 
-Too many requests
-# You're going a little too fast.
+# User registration request notifications
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+New users can attempt to register accounts from the login page:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+These registration requests need to be verified and approve by MDSS System Administrators.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To enable notifications for user registration requests, please select the **User Registration Requests** option from the **Email Notifications** section:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fconfiguration%2Fblocked-file-notificationsgzc%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Always triple check the sender of the email before trusting ANY links.
+
+The email contains the following information:
+
+- Full Name of of registered user
+- Email address of registered user
+- Date of registration
+- Link to the MDSS instance's Users tab

@@ -1,12 +1,41 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/how-to-encode-data-in-base64- -->
 
-Too many requests
-# You're going a little too fast.
+# How to encode data in Base64?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Various applications and scenarios tend to make use of the Base64 Encoding when sending data. In such cases, users may wish to test different functionalities manually, by sending different calls to the system.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+For instance, MetaDefender Managed File Transfer will require Login Credentials encoded in Base64 for performing the Authentication API:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2Fhow-to-encode-data-in-base64-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The presence of escape characters ( \r \n ) might complicate things a little, so in this case we want to make sure that our encoding is correct. One way of successfully and correctly encoding this would be making use of the Java Programming Language, and running a script like the one below:
+
+JavaCopyimport java.util.Base64;
+public class Main {
+public static void main(String[] args) {
+String originalString = "JohnDoe\r\nSecretPassword ";
+// Encode the string to Base64
+String encodedString = Base64.getEncoder().encodeToString(originalString.getBytes());
+// Print the encoded result
+System.out.println("Encoded String: " + encodedString);
+}
+}
+
+That would provide us with the Encoded String: Sm9obkRvZQ0KU2VjcmV0UGFzc3dvcmQ=
+
+Alternatively, you can also use PowerShell:
+
+PowershellCopy# Define the original string
+$originalString = "JohnDoe`r`nSecretPassword "
+# Convert the string to bytes using UTF-8 encoding
+$bytes = [System.Text.Encoding]::UTF8.GetBytes($originalString)
+# Encode the byte array to Base64
+$encodedString = [Convert]::ToBase64String($bytes)
+# Print the encoded result
+Write-Output "Encoded String: $encodedString"
+
+Which we can further use to our scenario, as needed.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

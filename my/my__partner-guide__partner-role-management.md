@@ -115,8 +115,7 @@ In addition to the [standard role objects](https://www.opswat.com/docs/my/my-org
 
 | Role Objects | None | View Only | Full Access |
 | ---- | ---- | ---- | ---- |
-| **Channel Partner Portal - My Deal Management** *Applies to Partner Portal > Deal Registration tab* | No access |  | Access the page and **Register New Deal** |
-| **Channel Partner Portal - Organization Deal Management** *Applies to Partner Portal > Deal Registration tab* | No access | View all deal registrations submitted by your organization |  |
+| **Channel Partner Portal - Deal Management** *Applies to Partner Portal > Deal Registration tab* | No access | View all deal registrations submitted by your organization | Access the page and **Register New Deal** |
 | **Channel Partner Portal - MDF** *Applies to Partner Portal > Marketing Development Funds tab* Please note* This role* *object is only visible only to OPSWAT Preferred Partners enrolled in the MDF Program. To request enrollment, please contact your dedicated Channel Manager.* | No access | Access the page and view all MDF submitted by your organization | Includes View Only permissions and adds the ability to **Request New Fund**. |
 | **Channel Partner Portal - Organization Playbook** *Applies to Partner Portal > Resources > Playbooks tab* |  | View playbooks shared by your organization | Create, edit, and delete organization playbooks |
 | **License Management - Customer Organizations** *Applies to License Management > Customer Licenses and Customer contracts tab* | No access | View licenses of the customer's organization, including functions like **Active License,** **See Full License History**, **View Organization's MetaDefender Cloud License, See Customer Note and Partner Note.** | Includes View Only permissions and adds the ability to **Download Active Deployment Report, Edit Partner Note.** |

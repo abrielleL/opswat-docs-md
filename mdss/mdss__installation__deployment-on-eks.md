@@ -65,7 +65,7 @@ terraform apply
 
 Warning
 
-As security measure do not use the root user for any deployment or operation. Follow the principle of least privilege for all access granted. Keep in mind the resources listed in this page for your option selected: [EKS Cluster Architecture](/docs/mdss/cloud-deployment/eks-cluster-provision)
+As security measure do not use the root user for any deployment or operation. Follow the principle of least privilege for all access granted.
 
 ### [How to run the script](/docs/mdss/installation/deployment-on-eks#how-to-run-the-script)
 

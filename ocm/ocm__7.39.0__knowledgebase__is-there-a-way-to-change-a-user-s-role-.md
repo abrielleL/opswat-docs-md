@@ -1,12 +1,18 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/knowledgebase/is-there-a-way-to-change-a-user-s-role- -->
 
-Too many requests
-# You're going a little too fast.
+# Is there a way to change a User's role?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all OPSWAT Central Management V7.5.0+ releases deployed on Windows or Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+In OPSWAT Central Management, user role options include **Administrato**r, **Read-Only** and **Operator**, and can be updated at any time by following the instructions below.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+1. Log into the **OPSWAT Central Management Console**, then navigate to the **User Management** page.
+2. Check the boxes alongside the users whose roles you wish to update, as illustrated in the screenshot below.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Fknowledgebase%2Fis-there-a-way-to-change-a-user-s-role-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+3. Click the **Actions** button in the top, right-hand corner of the list and, from the drop-down menu, select the **Update Role** options, as illustrated below.
+
+4. Finally, in the pop-up box, select the desired **Role** from the drop-down menu, enter your 4-digit administrator **PIN**, then click the **Update** button.
+
+Support:
+
+If you have followed the instructions above but have been unable to **Change A User’s Role Via OPSWAT Central Management**, please open a [Support Case](https://my.opswat.com/portal/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).

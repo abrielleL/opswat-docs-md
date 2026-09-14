@@ -1,12 +1,40 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/high-availability/overview-page -->
 
-Too many requests
-# You're going a little too fast.
+# Overview Page
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The Overview page provides a live health monitor that periodically polls all configured MetaDefender® MFT nodes and cluster peers.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+High Availability Configuration Tool with fully configured cluster
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fhigh-availability%2Foverview-page%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Info
+
+Note, that after a new installation, only the Node Health Cards placeholders are visible, as the Cluster mode is disabled by default.
+
+High Availability Configuration Tool after a new installation - not configured yet
+
+### [Node Health Cards](/docs/mdmft/v3.11.4/high-availability/overview-page#node-health-cards)
+
+Each configured MetaDefender® MFT node is displayed as a card showing:
+
+| Field | Description |
+| --- | --- |
+| **Name** | The node's display name (e.g. "MFT1") |
+| **Status** | Color-coded indicator:  🟢 Active  🟠 Passive  🔴 Unhealthy  ⚪ Unreachable. |
+| **Version** | The software version reported by the node's health endpoint |
+| **Address** | The Node Manager URL |
+| **Last Checked** | Timestamp of the most recent health check |
+
+### [Peer Health Cards](/docs/mdmft/v3.11.4/high-availability/overview-page#peer-health-cards)
+
+Peer health cards are only visible when **cluster mode is enabled** (more than one peer configured). Each peer card shows:
+
+| Field | Description |
+| --- | --- |
+| Display name | Peer identifier, with `(Self)` badge for the local peer. |
+| Health status | Color-coded health indicator:  🟢 Healthy  🔴 Unhealthy  ⚪ Unreachable |
+| Role | Leader or Follower (Raft consensus role) |
+| Address | The peer's HTTP address |
+| Last checked | Timestamp of the most recent health check |
+| Error Details | Appears when the peer is unhealthy or unreachable. |

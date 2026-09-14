@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdcore/knowledge-base/i-forgot-my-login-password--what-can-i-do- -->
 
-Too many requests
-# You're going a little too fast.
+# I forgot my login password, what can I do?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Core V5 releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The 'Forgot Password' tab will be visible within the login screen. Once the username has been provided, instructions for password reset will be sent via email to the admin user created for password recovery.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+If a mail server has been integrated with the MetaDefender Core product, users will be able to use the feature to recover their credentials.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fknowledge-base%2Fi-forgot-my-login-password--what-can-i-do-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Please Note:
+
+SMTP server must be configured to use this feature. You can follow this [article](/docs/mdcore/knowledge-base/how-can-i-add-a-mail-server-to-the-core-deployment-) to configure.
+
+Support:
+
+If **Further Assistance** is required, please follow the instructions on [How to Create Support Package With Bundle Tools?](/docs/mdcore/troubleshooting/how-to-create-support-package-), then proceed to [create a support case or chat with our support engineer](https://my.opswat.com/portal/support).

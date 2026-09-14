@@ -1,12 +1,22 @@
 <!-- source: https://www.opswat.com/docs/mdicap/v5.14.1/installation/installing-using-helm -->
 
-Too many requests
-# You're going a little too fast.
+# Installing using Helm
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The Kubernetes deployment for MetaDefender ICAP Server can be performed directly using the provided Helm chart, which is available in our public GitHub repository [here](https://github.com/OPSWAT/metadefender-k8s).
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Example configuration files for different environments are provided in the `helm_charts` directory within the repository. As for the demand of customizing the installation of our MetaDefender ICAP Server product in a K8S cluster, we have published the helm chart on GitHub: <https://github.com/OPSWAT/metadefender-k8s/tree/main/helm_charts/icap>
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+## [How to Install MetaDefender ICAP Server using Helm](https://docs.opswat.com/mdcore/kubernetes-configuration/metadefender-core-in-your-already-created-k8s#how-to-install-metadefender-core-using-helm)
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdicap%2Fv5.14.1%2Finstallation%2Finstalling-using-helm%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+This chart is configured based on the variables listed in the values.yaml, minimum variables to setup to have the application running
+
+- ACCEPT_EULA
+- mdicapsrv__license__key
+
+gitCopygit clone https://github.com/OPSWAT/metadefender-k8s.git
+cd metadefender/helm_carts/icap
+helm install md-icapsrv ./icap .
+#You put the variables in the values.yaml file or use --set mdicapsrv_license_key=<license_key>
+### [Configuration Options](/docs/mdicap/v5.14.1/installation/installing-using-helm#configuration-options)
+
+For configuration using helm please check [Configuration on K8S](/docs/mdicap/v5.14.1/installation/configuration-on-k8s)

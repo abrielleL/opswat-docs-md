@@ -1,12 +1,15 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/configuration/preview-filter-configuration -->
 
-Too many requests
-# You're going a little too fast.
+# Preview Filter Configuration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Preview your configuration for included or excluded Organizational Units (OUs), Security Groups, and individual users. This lets you verify exactly which users and groups will be synchronized to MetaDefender Managed File Transfer™ before applying the changes.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Viewing the summary and to be synchroized users
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fconfiguration%2Fpreview-filter-configuration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Viewing the groups
+
+---
+
+Click "Start Synchronization" to [Synchronization and Finalizing Active Directory Setup](/docs/mdmft/v3.11.4/configuration/sync-and-finizining)

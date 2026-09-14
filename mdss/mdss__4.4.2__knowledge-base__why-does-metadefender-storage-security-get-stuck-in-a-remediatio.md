@@ -1,12 +1,31 @@
 <!-- source: https://www.opswat.com/docs/mdss/4.4.2/knowledge-base/why-does-metadefender-storage-security-get-stuck-in-a-remediatio -->
 
-Too many requests
-# You're going a little too fast.
+# Why does MetaDefender Storage Security get stuck in a remediation loop, causing inaccessibility?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Storage Security releases deployed on Windows and Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+### [Scenario:](/docs/mdss/4.4.2/knowledge-base/why-does-metadefender-storage-security-get-stuck-in-a-remediatio#scenario)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+In certain environments, MetaDefender Storage Security (MDSS) repeatedly retries remediation actions on specific files, even when the remediation fails or when files are already processed as *allowed* (depending on customer configuration).
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2F4.4.2%2Fknowledge-base%2Fwhy-does-metadefender-storage-security-get-stuck-in-a-remediatio%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+As a result, multiple files may become stuck in the remediation process, eventually causing the MDSS web interface to become unresponsive until the MDSS service is restarted.
+
+### [Root Cause](/docs/mdss/4.4.2/knowledge-base/why-does-metadefender-storage-security-get-stuck-in-a-remediatio#root-cause)
+
+The remediation loop occurs when MDSS retries remediation actions multiple times without an effective retry limit per real-time process or global configuration.
+
+By default, MDSS performs up to **3 remediation retries** with **30-second intervals**. When too many real-time processes (RTPs) are running on a single MDSS instance, **resource contention** can further increase the likelihood of remediation loops or degraded responsiveness.
+
+### [Resolution](/docs/mdss/4.4.2/knowledge-base/why-does-metadefender-storage-security-get-stuck-in-a-remediatio#resolution)
+
+- **Distribute workload** Deploy MDSS in an **active-active** model by distributing RTP workloads across multiple MDSS instances. For example: one instance handling 3 RTPs and another handling 4 RTPs instead of running all RTPs on a single instance.
+- **Review remediation retry configuration** Adjust the remediation process retry parameters according to the official documentation: <https://www.opswat.com/docs/mdss/configuration/remediation-process-retries>
+- **Investigate failed remediations** Check the scan report details of failed files to identify the underlying causes, such as:
+
+  - Permission or ownership issues
+  - File locking by other applications
+  - Interference from antivirus or endpoint protection
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).

@@ -1,12 +1,20 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/knowledge-base/how-to-add-an-embedded-image-in-to-the-notification-email -->
 
-Too many requests
-# You're going a little too fast.
+# How to add embedded images to notification email templates?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To add embedded images (as part of the email message instead of being referenced from an external source) as data URIs to MetaDefender Managed File Transfer email templates:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Data URI
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fknowledge-base%2Fhow-to-add-an-embedded-image-in-to-the-notification-email%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+A data URI for an image is a way to embed the image data directly into a web page or document by encoding it as a text string, allowing it to be displayed without the need for a separate file.
+
+For further details, see <https://en.wikipedia.org/wiki/Data_URI_scheme>.
+
+1. Obtain the data URI for your image using online converters or by encoding the image in Base64. Prefix it with the appropriate MIME type, e.g., "data/png;base64," followed by the encoded data.
+2. Go to your MetaDefender Managed File Transfer email template page and select "Tools" → "Source code."
+
+3. Find or create the <img> tag where you want to embed the image, and paste the data URI into the src attribute of the <img> tag.
+
+4. Save the dialog and the email template.

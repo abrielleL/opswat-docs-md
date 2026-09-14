@@ -4,7 +4,7 @@
 
 Discovery settings is accessible under **Settings --> Network & Discovery.**
 
-### **Network & Discovery settings**
+### [**Network & Discovery settings**](/docs/md-ot-security/v.2.2.6/settings/network-discovery#network--discovery-settings)
 
 Under this section, you can see all the NICs of MetaDefender OT Security machines, each in a different numbered card.
 
@@ -31,7 +31,7 @@ It should be noted that:
 
 *Note*: User don’t need to configure route for NICs, MetaDefender OT Security will handle that.
 
-### How to configure Discovery settings for best performance by MetaDefender OT Security
+### [How to configure Discovery settings for best performance by MetaDefender OT Security](/docs/md-ot-security/v.2.2.6/settings/network-discovery#how-to-configure-discovery-settings-for-best-performance-by-metadefender-ot-security)
 
 MetaDefender OT Security machines should have a network card connected to the mirror port and a network card connected to the normal port on the switch to work most effectively.
 
@@ -55,7 +55,7 @@ And the NIC that connect to normal port allows MetaDefender OT Security to colle
 
 After saving all the changes, you can test the configuration by clicking on the “Test Configuration“ button. A testing coverage will appear when the testing process is completed.
 
-## Wi-Fi Setting
+## [Wi-Fi Setting](/docs/md-ot-security/v.2.2.6/settings/network-discovery#wi-fi-setting)
 
 Clicking on the button settings to open the popup Wi-Fi setting.
 

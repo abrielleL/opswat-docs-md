@@ -1,12 +1,14 @@
 <!-- source: https://www.opswat.com/docs/mdmft/v3.11.4/end-user-guide/scan-results -->
 
-Too many requests
-# You're going a little too fast.
+# Scan Results
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+Summarize Page    Connect to Cursor Connect to VS Code
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+The scan or rescan results appear in the "State" column of My Files:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- **Available: No threats found;** the file is available for download
+- **Blocked: Threats were detected;** the file is blocked and cannot be downloaded. Blocked files are infected or contain potentially malicious content.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdmft%2Fv3.11.4%2Fend-user-guide%2Fscan-results%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Detailed scan report
+
+You can view a detailed scan report on the [**File information**](/docs/mdmft/v3.11.4/end-user-guide/file-information) page.

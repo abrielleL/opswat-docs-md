@@ -8,10 +8,10 @@ With this feature, administrators can track and analyze RADIUS events in real-ti
 
 1. Navigate to **Logs** → **RADIUS Event**
 2. This page contains comprehensive RADIUS event logs, allowing console users to filter the information based on specific activities. The available activities are:
-   - **Access** indicates when a device is accessing the Network and get the status response from MetaDefender IT Access as: Successful authentication (Accept) or Failed authentication (Reject).
+   - **Access** indicates when a device is accessing the Network and get the status response from My OPSWAT Central Management as: Successful authentication (Accept) or Failed authentication (Reject).
    - **Accounting** indicates when a device is attempting access to the Network recorded in the system.
-   - **Granted access** indicates an attempt to accessing the Network and get the status response from MetaDefender IT Access as Successful authentication (Accept)
-   - **Rejected access** indicates an attempt to accessing the Network and get the status response from MetaDefender IT Access as Failed authentication (Reject).
+   - **Granted access** indicates an attempt to accessing the Network and get the status response from My OPSWAT Central Management as Successful authentication (Accept)
+   - **Rejected access** indicates an attempt to accessing the Network and get the status response from My OPSWAT Central Management as Failed authentication (Reject).
 3. Console users can also use the search bar to search a record by multiple options (MAC address, Device name, Device ID, Access Profile, Rule).
 4. To filter the events based on timeframe, select ‘Timeframe’ and users can set the timeframe to: Today, Yesterday, Last 7 days, Last 30 days, or Custom.
 5. To export these logs (with filers applied), press ‘Export Filtered Events’ and submit your PIN. This will trigger the download of the filtered events as a CSV file.

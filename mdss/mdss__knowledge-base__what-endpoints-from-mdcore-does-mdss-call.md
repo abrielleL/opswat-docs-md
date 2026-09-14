@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mdss/knowledge-base/what-endpoints-from-mdcore-does-mdss-call -->
 
-Too many requests
-# You're going a little too fast.
+# Which API endpoints from MD Core does MDSS utilize?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
-
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
-
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdss%2Fknowledge-base%2Fwhat-endpoints-from-mdcore-does-mdss-call%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+| Endpoints | Permissions | Usage |
+| --- | --- | --- |
+| `/file` | Processing result fetching - Self-Only/Anyone  Download processed file - Self-Only/Anyone | Process files and retrieve results Download processed files |
+| /readyz |  | System health |
+| /stat | System Information - Full | System health |
+| /status |  | System health |
+| /admin/license | License - Read-Only/Full | License information |
+| /version |  | Version information |

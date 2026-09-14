@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/netwalldiode/v1.13.2/knowledge-base/can-i-use-the-same-port-number-on-different-channels-for-stream- -->
 
-Too many requests
-# You're going a little too fast.
+# Can I use the same port number on different channels for stream connections on MetaDefender Optical Diode?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all Metadefender Optical Diode version 1.11.0 and higher.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Background](/docs/netwalldiode/v1.13.2/knowledge-base/can-i-use-the-same-port-number-on-different-channels-for-stream-#background)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Customers may have applications that can communicate over one specific port. When adding this port to the stream configuration, no other stream was able to utilize the same port number even on a different channel.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fnetwalldiode%2Fv1.13.2%2Fknowledge-base%2Fcan-i-use-the-same-port-number-on-different-channels-for-stream-%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+## [Solution:](/docs/netwalldiode/v1.13.2/knowledge-base/can-i-use-the-same-port-number-on-different-channels-for-stream-#solution)
+
+Starting with MetaDefender Optical Diode version 1.11.0, support for multiple VLANs is now available and a specific port per channel is no longer a limitation. Customers can now make use of “Bind IP Address” feature, that will allow the bind of a specific IP address to a port per channel in the stream configuration. This will allow to use the same port number on different stream connections.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chat with our support engineer**](https://my.opswat.com/support).
+
+MetaDefender

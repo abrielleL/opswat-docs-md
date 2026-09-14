@@ -1,12 +1,23 @@
 <!-- source: https://www.opswat.com/docs/ocm/configuration/editing-user-directory -->
 
-Too many requests
-# You're going a little too fast.
+# Editing User Directory
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to edit a directory in OPSWAT Central Management.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. In the **User Directories** menu, select **Edit** in Settings icon
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. In the edit User Directory screen differs between user directory type.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2Fconfiguration%2Fediting-user-directory%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+a. For **Local** type user directory, modify the original settings as required and select **UPDATE** to finalize the edit user directory.
+
+- Name: Change name a user directory.
+- **Enable this User directory:** Click this checkbox to immediately enable/disable this directory.
+- **Number of failed logins before lockout:** Number of allowed login attempts in 1 minute. Setting it to 0 allows unlimited failed logins.
+- **Lockout time (minutes):** The length of the lockout period after a user reach maximum amount of failed logins. Setting it to 0 allows unlimited failed logins regardless of the number of failed logins specified.
+
+b. For **Active Directory** type user directory, fill in the required information and select **TEST CONNECTION** to check connection to the Active Directory server. After the connection is verified, select **UPDATE** to finalize the edit user directory.
+
+- **Server Host, Server Port:** The address of the Active Directory server.
+- **Encryption:** The encryption type used by the Active Directory server (None, SSL, StartTLS)
+- **User Base DN, Group Base DN:** The point where OPSWAT Central Management search for users and groups when adding new users and groups from Active Directories.
+- **ADD NEW SERVER:** Add an additional Active Directory server entry.

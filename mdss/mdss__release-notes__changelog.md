@@ -573,7 +573,7 @@ Introducing the Wasabi storage integration, Copy Functionality for duplicating f
 - The scan would be efficiently completed within an appropriate timeframe.
 - The display of stop time for RTP reports is accurate when the RTP scan has been initiated, ensuring precision in data presentation.
 
-For further details on the steps involved in integrating Wasabi you can access this link [Add A Wasabi Storage](https://www.opswat.com/docs/mdss/4.4.0/integrations/add-a-wasabi-storage).
+For further details on the steps involved in integrating Wasabi you can access this link [Add A Wasabi Storage](https://www.opswat.com/docs/mdss/integrations/add-a-wasabi-storage).
 
 ## [MetaDefender Storage Security v3.3.3](/docs/mdss/release-notes/changelog#metadefender-storage-security-v333)
 
@@ -601,7 +601,7 @@ With this release, we're introducing NFS storage integration, offering functiona
 - Improving the orchestration of the scanning process to address instances of scans becoming stuck.
 - Additional checks on the Windows docker service before starting MDSS
 
-You can find more information on the [Add an NFS Storage](https://www.opswat.com/docs/mdss/4.4.0/integrations/add-a-nfs-storage) steps by accessing the hyperlink.
+You can find more information on the [Add an NFS Storage](https://www.opswat.com/docs/mdss/integrations/add-a-nfs-storage) steps by accessing the hyperlink.
 
 ## [MetaDefender Storage Security v3.3.2](/docs/mdss/release-notes/changelog#metadefender-storage-security-v332)
 

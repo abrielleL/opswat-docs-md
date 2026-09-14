@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/mdcore/v5.21.0/utilities-engines/text-detection-with-ai-enhancement -->
 
-Too many requests
-# You're going a little too fast.
+# Text detection with AI
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This feature is designed to address the challenge of text-based file detections. These files, such as log files, script files, and readme files, are all simply "text" and lack distinct characteristics revealed by other methods. Analyzing the contents is crucial for accurate classification.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+To enable this AI feature:
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+- At **Inventory > Modules > Utilities > FileType**, Tick **Enable Machine Learning module**
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdcore%2Fv5.21.0%2Futilities-engines%2Ftext-detection-with-ai-enhancement%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- At **Workflow Management > Workflows > [Workflow name] > File Type > General**, Enable **Classify with Machine Learning**
+
+Without AI enabled, CUDA source code is detected as a text file.
+
+With AI enhancement, CUDA source code is detected as a CUDA file
+
+Info
+
+This feature is disabled by default. If you enable the AI-powered feature, OPSWAT will not use your content to train or fine tune its services. Unlike file signature matching, AI-based relies on heuristics and is not guaranteed to be precise. Experiment with your own dataset to determine if the AI engine fits your need.

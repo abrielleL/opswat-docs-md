@@ -1,12 +1,24 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/how-do-i-revert-metadefender-kiosk-to-a-previous-state-using-dee -->
 
-Too many requests
-# You're going a little too fast.
+# How do I revert MetaDefender Kiosk to a previous state using Deep Freeze software?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Kiosk V4 releases deployed on Windows or Linux systems.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+Faronics Deep Freeze Enterprise software can be used to restore the MetaDefender Kiosk to its optimal original state after every scan session.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+To configure your system to revert after each session, please follow the steps below:
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Fhow-do-i-revert-metadefender-kiosk-to-a-previous-state-using-dee%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- Ensure that Deep Freeze Enterprise edition is available.
+- Install Deep Freeze Enterprise edition *without* enabling **Deep Freeze Local Policies.**
+- Go to your **Kiosk Management Console>Configuration>Kiosk UI> Kiosk Interface**, then enable the Kiosk to **Reboot At End Of Session** as highlighted in the image below**.**
+
+- Configure Kiosk to your preferences and then activate the product.
+- Finally, take the system snapshot with your Faronics Deep Freeze software.
+
+Pro Tip:
+
+Faronics Deep Freeze ‘protects endpoints by Freezing a snapshot of a computer’s desired configuration and settings defined by the IT Admin. With an instant reboot, any unwelcome or unwanted changes are removed from the system, restoring it to its pristine Frozen state.’
+
+Support:
+
+If you have any difficulty **Reverting MetaDefender Kiosk to a Previous State Using Deep Freeze Software**, please follow these instructions on [How To Create a Support Package](https://docs.opswat.com/mdkiosk/troubleshooting#creating-the-package), before [creating a support case or chatting with our support engineer](https://my.opswat.com/portal/support).

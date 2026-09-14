@@ -1,12 +1,21 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/operating/creating-new-set -->
 
-Too many requests
-# You're going a little too fast.
+# Creating new Set
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The following guideline describes how to create a new Set in OPSWAT Central Management.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+1. In **Set View**, select **CREATE NEW SET**.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+2. In the **General information** page, fill out the required information for the new Set. Optionally, select an existing group where the new Set should be added to. Select **ASSIGN MANAGED INSTANCES TO SET** when ready.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Focm%2F7.39.0%2Foperating%2Fcreating-new-set%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+- **Name:** The name of the new Set, must be unique.
+
+- **Description:** The description of the new Set.
+
+3. In the **Assign instances to set** page, click the checkboxes of the OPSWAT Product instances that should be added to the new Set. Select **CREATE** to finalize the new Set's creation.
+
+4. The new Set is displayed in Set View.
+
+Warning
+
+Adding an OPSWAT Product belonging to another existing Set will remove it from that Set.

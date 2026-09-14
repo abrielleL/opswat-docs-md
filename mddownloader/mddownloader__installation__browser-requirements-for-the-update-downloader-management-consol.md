@@ -1,12 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/installation/browser-requirements-for-the-update-downloader-management-consol -->
 
-Too many requests
-# You're going a little too fast.
+# Browser Requirements for the Update Downloader Management Console
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+One of the following browsers is suggested to view the Update Downloader Management Console:
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+- Microsoft Edge
+- Chrome
+- Firefox
+- Safari
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
-
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Finstallation%2Fbrowser-requirements-for-the-update-downloader-management-consol%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+Chrome, Firefox, Safari and Edge browsers are tested with the latest available version at the time of release.

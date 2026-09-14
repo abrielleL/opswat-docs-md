@@ -1,12 +1,17 @@
 <!-- source: https://www.opswat.com/docs/mdkiosk/v4.8.5/knowledge-base/file-processing-does-not-start-automatically-when----process-all -->
 
-Too many requests
-# You're going a little too fast.
+# File processing does not start automatically when “Process all files” is enabled — why?
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+This article applies to all MetaDefender Kiosk versions.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+When **Process all files** is enabled, the customer may expect file processing to start automatically after inserting a removable storage device into MetaDefender Kiosk. However, this is not how Kiosk is designed.
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+Kiosk does not start file processing automatically when a device is inserted, regardless of the workflow configuration.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmdkiosk%2Fv4.8.5%2Fknowledge-base%2Ffile-processing-does-not-start-automatically-when----process-all%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+The manual start action acts as a safety gate. Kiosk workflows can include destructive actions, such as deleting non-compliant files, wiping the storage device, or quarantining content. If processing started immediately after device insertion, these actions could run before the user is ready or aware, which may cause unintended data loss.
+
+Administrators can reduce user steps by setting **Process all files** as the default scan mode and diabling all user questions. In this case, users do not need to select a scan option; they only need to confirm and start processing.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/support).
