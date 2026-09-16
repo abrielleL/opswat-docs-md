@@ -11,7 +11,7 @@ This article will cover the most common methods, including:
 
 Other common methods include:
 
-- Adding Client directly to your Golden Image for new systems. For instructions on how to create a Golden Image containing the MetaDefender Endpoint, refer to [Can MetaDefender Endpoint be distributed using a golden image, cloned VMs or AMIs?](https://www.opswat.com/docs/cm/knowledge-base/can-metadefender-endpoint-be-distributed-using-a-golden-image--c)
+- Adding Client directly to your Golden Image for new systems. For instructions on how to create a Golden Image containing the MetaDefender Endpoint, refer to [Can MetaDefender Endpoint be distributed using a golden image, cloned VMs or AMIs?](https://www.opswat.com/docs/cm/knowledge-base/can-opswat-client-be-distributed-using-a-golden-image--cloned-vm)
 - Distributing MetaDefender Endpoint with your software deployment/distribution tool.
 
 ## Installing MetaDefender Endpoint directly

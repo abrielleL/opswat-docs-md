@@ -2,36 +2,31 @@
 
 # Cisco Wired Layer 2 Integration
 
-Cisco Layer 2 Switch Configuration Example:
+Cisco Layer 2 switch configuration example.
 
-Note – In this example, a Cisco 2960 configuration is provided. However, any Cisco Layer 2 switch supporting the following features are eligible for integration:
+In this example, a configuration validated on modern Cisco IOS-XE switches (Catalyst 9200 and 3850, IOS-XE 16.12+) is provided. Any Cisco Layer 2 switch supporting the following features is eligible for integration:
 
 - RADIUS Authentication/Accounting
 - 802.1X
 - MAC Authentication Bypass (MAB)
 - RADIUS Change of Authorization (CoA)
-- Cisco-AVPair “url-redirect”
-- Cisco-AVPair “url-redirect-acl”
+- Cisco-AVPair "url-redirect"
+- Cisco-AVPair "url-redirect-acl"
 
-Note – In this example the NAC RADIUS Server / Policy Server is 10.10.10.10 (replace this IP with the IP of your NAC system)
+> **Note:** In this example the NAC RADIUS Server / Policy Server is `10.10.10.10` — replace this IP with the IP of your NAC system.
+>
+> Replace the VLAN number in the example port configuration with the desired default VLAN for the port.
+>
+> The `radius server <name>` block form shown below is used on IOS-XE 16.x and later. On older switches (IOS 15.2 and earlier) you may instead use the legacy single-line form: `radius-server host 10.10.10.10 auth-port 1812 acct-port 1813 key XXXXX`.
 
-Note – Replace the VLAN number on the example port configuration with the desired default VLAN for the port.
-
-Note – The “radius-server vsa send authentication” command is enabled by default and auto-generated on some IOS
-
-versions. If the command does not show up in a sh run, “sh run all” can be used to verify that it is configured on the
-
-switch.
-
-Layer 3 DHCP prerequisites
+## [Layer 3 DHCP prerequisites](/docs/manac/installation/cisco-wired-layer-2-integration#layer-3-dhcp-prerequisites)
 
 BashCopyinterface vlanX (Layer 3 interface for enforced network)
 ip helper-address X.X.X.X (DHCP server)
 ip helper-address X.X.X.X (IP address of NAC Enforcer)
 !
-End
-
-Layer 2 Switch Configuration
+end
+## [Layer 2 switch configuration](/docs/manac/installation/cisco-wired-layer-2-integration#layer-2-switch-configuration)
 
 BashCopyaaa new-model
 aaa authentication dot1x default group radius
@@ -53,12 +48,15 @@ description NAC User Test Port
 switchport access vlan X (replace with desired default VLAN for port)
 switchport mode access
 ip access-group sc_initial_acl in
+authentication host-mode multi-auth
+authentication order dot1x mab
+authentication priority dot1x mab
 authentication port-control auto
 mab
 dot1x pae authenticator (only required if endpoints are configured for 802.1X)
 dot1x timeout tx-period 15
 dot1x max-reauth-req 1
-authentication host-mode multi-auth
+spanning-tree portfast
 !
 ip http server
 ip http secure-server
@@ -78,19 +76,29 @@ deny tcp any host 10.10.10.10 eq 8443
 deny tcp any host 198.31.193.211 eq www
 deny tcp any host 198.31.193.211 eq 443
 deny tcp any host 198.31.193.211 eq 8443
-remark do not redirect web traffic destined for the redirect URL
-www.customerwebsite.com (replace x’s below with website address)
+remark do not redirect web traffic destined for the redirect URL www.customerwebsite.com (replace x.x.x.x below with the website address)
 deny tcp any host x.x.x.x eq www
 deny tcp any host x.x.x.x eq 443
 deny tcp any host x.x.x.x eq 8443
 permit ip any any (redirect all other traffic)
 !
-radius-server host 10.10.10.10 auth-port 1812 acct-port 1813 key XXXXX
+radius server NAC
+address ipv4 10.10.10.10 auth-port 1812 acct-port 1813
+key XXXXX
+!
 radius-server vsa send authentication
 !
-End
-Examples of other types of ACL exceptions (if required):
-remark allow PXE boot
+end
+> **Note:** The port configuration above attempts 802.1X first and falls back to MAB. On a port that serves only non-802.1X devices (printers, IP phones, IoT endpoints, etc.), the switch will wait for 802.1X to time out — `dot1x timeout tx-period` × (`dot1x max-reauth-req` + 1) seconds — before MAB authenticates the device. To avoid that delay on such ports, either:
+>
+> - remove the `dot1x pae authenticator` and `dot1x ...` lines so the port uses MAB only, or
+> - reverse the order so MAB is attempted first: `authentication order mab dot1x` / `authentication priority mab dot1x`.
+
+## [Additional ACL exceptions (if required)](/docs/manac/installation/cisco-wired-layer-2-integration#additional-acl-exceptions-if-required)
+
+Examples of other types of ACL exceptions that can be added to `sc_quarantine_acl`:
+
+BashCopyremark allow PXE boot
 deny udp any host x.x.x.x eq tftp
 deny udp any host x.x.x.x range 1025 5000
 remark allow authentication to domain controller

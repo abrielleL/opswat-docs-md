@@ -2,11 +2,11 @@
 
 # Why does my OPSWAT Central Management deployment ID change after a reboot and invalidate my license?
 
-> > > **ℹ️ Check Your Version:** This article applies to OPSWAT Central Management 10.x on-premises deployments. Automatic license reactivation is planned for the 10.7.26080+ on-premises release.
+> > > **Check Your Version:** This article applies to My OPSWAT Central Management 10.x on-premises deployments. Automatic license reactivation is planned for the 10.7.26080+ on-premises release.
 
 ## **Issue**
 
-After a reboot, power outage, or host failover, your OPSWAT Central Management deployment ID changes. The license activated against the previous deployment ID no longer validates, the license status changes to invalid, license usage resets to `0`, managed endpoints display a warning state, and you must manually reactivate the license.
+After a reboot, power outage, or host failover, My OPSWAT Central Management deployment ID changes. The license activated against the previous deployment ID no longer validates, the license status changes to invalid, license usage resets to `0`, managed endpoints display a warning state, and you must manually reactivate the license.
 
 The deployment ID is used only for licensing and activation. It does not control how OPSWAT Security Agent endpoints reach the server, so a deployment ID change on its own does not disconnect agents. If endpoints also lose connectivity after the same reboot, treat that as a separate symptom.
 
@@ -43,19 +43,19 @@ The virtual machine must be powered off to change this setting, so plan a short 
 
 ### **4. Reactivate the license**
 
-Reactivate the license in OPSWAT Central Management and confirm that license usage and endpoint status return to normal.
+Reactivate the license in My OPSWAT Central Management and confirm that license usage and endpoint status return to normal.
 
 ### **5. Validate the fix**
 
 If the virtual machine runs on a cluster, perform one live migration to another node, then re-run the command from step 1 and confirm the MAC address is unchanged. This validates the fix immediately, without waiting for a natural failover.
 
-### **Confirming the cause from OPSWAT Central Management**
+### **Confirming the cause from My OPSWAT Central Management**
 
 On version 10.6.2605 and later, the support package records that the deployment ID changed and when, which you can correlate with host and Windows event logs to identify which input changed. The change is detected by a scheduled job rather than in real time, so it appears in the logs only after the next scheduler run — up to approximately one day after the triggering reboot. Collect the support package at least a day after a reproduction.
 
 ## **Recommendation**
 
-- Set a static MAC address on any virtual machine hosting OPSWAT Central Management before activating the license.
+- Set a static MAC address on any virtual machine hosting My OPSWAT Central Management before activating the license.
 - Assign the server a static IP address, a DHCP reservation, or preferably a DNS name, and configure endpoints to use the DNS name. This prevents a separate class of endpoint connectivity loss after reboots.
 - Upgrade to 10.6.2605 or later so that deployment ID changes are recorded, making any recurrence diagnosable from the support package rather than inferred from symptoms.
 

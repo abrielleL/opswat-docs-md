@@ -6,5 +6,5 @@ The users can consult this web page or, alternatively, they can download the man
 
 **MetaDefender Cluster manual**
 
-- [Download link](https://metascanbucket.s3.us-west-1.amazonaws.com/Metadefender/Cluster/docs/MetaDefender%20Cluster%20-%20v2.9.0.pdf)
-- SHA256: DC6EF60944DD2CB75AC402D83121993E65A422BED3CD25A5DCB4B865181DE4CB
+- [Download link](https://metascanbucket.s3.us-west-1.amazonaws.com/Metadefender/Cluster/docs/MetaDefender%20Cluster%20-%20v2.9.1.pdf)
+- SHA256: 875BB3B19960FE86694F75024230B79E79586DA4C4DECC1A3D1B3ED1E082EAC6

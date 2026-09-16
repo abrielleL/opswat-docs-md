@@ -2,6 +2,52 @@
 
 # Archived release notes
 
+## [Version v2.9.0](/docs/mdcluster/release-notes/mddc-archived-release-notes#version-v290)
+
+Release Date: 26 August 2026
+
+**Scan and Access Results from Control Center**
+
+Users can now submit files for scanning directly from MetaDefender (MD) Cluster Control Center, view scan results, and look up previous results by data ID or file hash.
+
+When available, sanitized or processed files can also be downloaded directly from MD Cluster Control Center. Anonymous scanning is supported when anonymous access is enabled.
+
+**Assign Specific MD Core Workers to Workflows**
+
+Administrators can now assign specific MD Core to individual workflows, providing greater control over which MD Core instances process requests for each workflow.
+
+Assigned instances are displayed with CPU and memory information, making it easier to identify and manage the appropriate processing instances.
+
+**RAM Disk Support**
+
+MD Cluster now supports configuring MD Core working and temporary directories to use a RAM disk. This can reduce disk I/O and improve processing performance in environments with sufficient memory.
+
+**TLS Configuration for RabbitMQ and Redis**
+
+MD Cluster Control Center now provides TLS configuration options when adding or editing RabbitMQ and Redis service connections. Administrators can enable TLS, configure certificate verification, and specify a CA certificate path directly from Control Center.
+
+**Further Enhancements**
+
+- Kubernetes and container deployments are easier to manage with a unified Helm chart, bundled MD Core installers, simpler service import, and improved graceful shutdown.
+- HTTPS is now easier to configure for Control Center and API Gateway on Kubernetes.
+- Users can now select which Processing History fields to export to CSV.
+- Proactive DLP now displays regex patterns imported from TSV files and lets users select which patterns to use.
+- The minimum number of active AV engines can now be set to `0`, supporting Deep CDR, Proactive DLP, and other deployments that do not require antivirus engines.
+
+**Security Enhancements**
+
+- MD Cluster containers on Kubernetes now run as non-root users, with privilege escalation disabled and read-only root file systems.
+- Bundled components have been updated for better security, stability, and compatibility: PostgreSQL 18.6, nghttp2 1.70.0, and SQLite 3.53.4.
+
+**RESTful API**
+
+- Added support for the `client-identity` header in the POST `/file` API endpoint provided by MD Cluster API Gateway.
+
+**Bug Fixes**
+
+- Fixed an issue where invalid or malformed `metadata` headers were not validated correctly or could return incorrect error messages.
+- Improved MD Cluster File Storage cleanup to ensure orphaned physical files are removed correctly and do not accumulate over time.
+
 ## [Version v2.8.0](/docs/mdcluster/release-notes/mddc-archived-release-notes#version-v280)
 
 Release Date: 30 July 2026

@@ -6,8 +6,8 @@ The users can consult this web page or, alternatively, they can download the man
 
 **MetaDefender Core manual**
 
-- [Download link](https://metascanbucket.s3.us-west-1.amazonaws.com/Metadefender/Core/docs/MetaDefender%20Core%20-%20v5.22.0.pdf)
-- SHA256: 3A86F05F65BBFE65BD2DE40CF067F81FE9762EF2ED01787AF45C83D39CED7967
+- [Download link](https://metascanbucket.s3.us-west-1.amazonaws.com/Metadefender/Core/docs/MetaDefender%20Core%20-%20v5.22.1.pdf)
+- SHA256: 4E65980FF9E555004057FF8561060ACB3DD558E86ECB0E599D3E9DA702766416
 
 **OPSWAT MetaDefender AGD Documentation_v1.9**
 

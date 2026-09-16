@@ -2,8 +2,6 @@
 
 # Centralized Scanning Profile - Provisioning from Smart Touch
 
-### [**Administrator Provisioning**](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-smart-touch#administrator-provisioning)
-
 #### [Enrollment and Lock MetaDefender Drive](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-smart-touch#enrollment-and-lock-metadefender-drive)
 
 To enroll MetaDefender Drive with Smart Touch to **Centralized Scanning Profile,** perform the following procedure under administrator

@@ -4,7 +4,9 @@
 
 Within My OPSWAT Central Management, administrators have the ability to create users (both end-users and console users). This document covers how to set up local console users who will access the My OPSWAT Central Management console.
 
-## Add a console user
+## Console Users
+
+### Add a console user
 
 In order to invite an additional user to manage your account:
 
@@ -17,7 +19,7 @@ In order to invite an additional user to manage your account:
 7. Click on the **Invite** button to send out the invitation.
 8. If the action is successful, the user will then receive an invitation email. The user can follow [How could I manage another account?](https://www.opswat.com/docs/cm/knowledge-base/how-could-i-manage-another-account-) guideline to accept your invitation and start managing your account.
 
-## Update a console user
+### Update a console user
 
 Local users can have their roles updated after being added. To update a local console user:
 
@@ -29,7 +31,7 @@ Local users can have their roles updated after being added. To update a local co
 6. Enter your PIN to confirm the action if required.
 7. Click **Update**.
 
-## Delete a console user
+### Delete a console user
 
 To remove a local user and their access to My OPSWAT Central Management:
 
@@ -38,4 +40,43 @@ To remove a local user and their access to My OPSWAT Central Management:
 3. Select the user you wish to remove by checking the box next to their name.
 4. Select **Delete**.
 5. Enter your PIN to confirm the action if required.
+6. Select **Delete.**
+
+## End Users
+
+## Add an end-user
+
+In order to invite end users locally to Secure IT Access:
+
+1. Log into MetaDefender IT Access console
+2. Go to **User Management > Users > End Users**.
+3. Click on the “**Invite End User**” button.
+4. Enter an email address, first name, and last name of the person you would like to invite to your account.
+5. Enter your PIN to confirm the action.
+6. In the **App Assignment** tab, select what applications (if any at that time), that you want the user to have access to.
+7. Click on the **Invite** button to send out the invitation.
+8. If the action is successful, the user will then receive an email with an invitation with instructions on next steps.
+
+## Update an end-user
+
+Local users can have their name or application assignment updates after being added. To update a local console user:
+
+1. Log into MetaDefender IT Access console
+2. Go to **User Management > Users > End Users**.
+3. Select the user you wish to update by checking the box next to their name.
+4. Select **Update**.
+5. To change their name, go to **User Settings** and adjust the user's name accordingly.
+6. To change their application assignment, navigate to **Applications** and update their access.
+7. Enter your PIN to confirm the action.
+8. Click **Update**.
+
+## Delete an end-user
+
+To remove a local user and their access to MetaDefender IT Access:
+
+1. Log into MetaDefender IT Access console
+2. Go to **User Management > Users > End Users**.
+3. Select the user you wish to remove by checking the box next to their name.
+4. Select **Delete**.
+5. Enter your PIN to confirm the action.
 6. Select **Delete.**

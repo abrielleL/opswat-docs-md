@@ -8,15 +8,14 @@
 
 **New Features**
 
-- **Operator Accept Skipped/Threat Risk** Admins can define approved skip reasons so Operators can bypass files or large archives that are unnecessarily delaying a scan, while also preapproving known safe or false positive files by hash. This helps scans complete faster while keeping skip decisions controlled and consistent.
+- **Operator Accept Skipped/Threat Risk** Admins can define approved skip reasons so Operators can bypass files or large archives that are unnecessarily delaying a scan, while also pre-approving known safe or false positive files by hash. This helps scans complete faster while keeping skip decisions controlled and consistent.
 - **Skip By Hash** Provide ability to skip trusted files by hash, reducing scan time and false-positive overhead.
-
 - **User reports include deleted files** Scan reports now include a dedicated section listing each file that was removed during scanning, with its original path and cryptographic hash included before any boot-sector entries.
-- **MetaDefender Drive uses time and timeZone on Smart Touch** Smart Touch Operator can set the time zone on Smart Touch and keep its clock in step, so scan times and reports carry the correct local time.
+- **MetaDefender Drive uses time and TimeZone on Smart Touch** Smart Touch Operator can set the time zone on Smart Touch and keep its clock in step, so scan times and reports carry the correct local time.
 - **Get all logs in any support package** A support package collected from any one of MetaDefender Drive, MetaDefender Drive Toolkit, Smart Touch, or MetaDefender Drive In-Session are all included in the SupportPackage, so a single upload is enough to diagnose an issue.
-
 - **Provide posture check on MetaDefender Drive In-Session** MetaDefender Drive In-Session verifies endpoint security posture before scanning, checking EDR, OS updates, and disk encryption in a single workflow.
 - **Dedicated workflow for Drive-Kiosk integration** Kiosk Drive Integration is configured and managed under a dedicated workflow and with a new user interface.
+- **Centralized Scanning Profile now is applied for In-Session** After enrolled with Drive Toolkit, operator will be prompted for OTP when running Memory and Custom Scans from In-Session. To see how it works, refer to [Centralized Scanning Profile - Unlock in MetaDefender Drive In-Session](/docs/mddrive/configuration/centralized-scanning-profile-in-session)
 
 **Improvements and Bug Fixes**
 

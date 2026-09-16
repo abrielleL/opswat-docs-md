@@ -1,0 +1,66 @@
+<!-- source: https://www.opswat.com/docs/mdcore/v5.22.0/configuration/active-directory-attributes -->
+
+# Active Directory/LDAP attributes
+
+This page contains tips on how to obtain the USERNAME and the USER BASE DN and GROUP BASE DN attributes when creating an [Active Directory type user directory](/docs/mdcore/v5.22.0/configuration/user-directories).
+
+## [Username](/docs/mdcore/v5.22.0/configuration/active-directory-attributes#username)
+
+All three attributes should be expressed with a valid LDAP syntax.
+
+Normally a domain administrator should provide these values, however there is a way to get the USERNAME as a LDAP DN, that is needed for the MetaDefender Core to do searches in the directory information tree, and it is as follows:
+
+Log on to a Windows server machine that has connectivity to the Active Directory
+
+1. Choose a user that is intended for this purpose (ie: has rights to do searches in the tree)
+2. Open a Command window with elevated rights (Run as Administrator)
+3. Assuming example.com as domain and John Smith with account name john.smith as the user, type the following:
+
+> dsquery user domainroot -samid john.smith
+
+or
+
+> dsquery user domainroot -name John SmithInfo
+
+The commands above will return the correct DN for the user in question. The DN should look something like this:
+
+`CN=John Smith,OU=People,OU=Engineering,DC=example,DC=com`
+
+Please note, the actual user DN will not look exactly like the above example, but will depend on the structure of the underlying directory information tree in the Active Directory server.
+
+## [User base and group base DN](/docs/mdcore/v5.22.0/configuration/active-directory-attributes#user-base-and-group-base-dn)
+
+Once the user DN is obtained, an easy way to get the DNs for the user and group searches is by taking all the DC parts of the user DN and leaving the rest out, which results in the following DN:
+
+DC=example,DC=comNote
+
+Please note that using only DC components for the user/group DNs may result in searches to be executed from the top of the directory information tree and potentially slow down AD server responses a lot and thus have an impact on Metadefender Core password validation. The rule of thumb here is that the more specific the user/group DN the faster the server response.
+
+Taking the above example into consideration: a user search DN of "OU=People,OU=Engineering,DC=example,DC=com" could potentially result in much faster server response than "DC=example,DC=com" and should be preferred assuming all users reside under "OU=People,OU=Engineering,DC=example,DC=com" in the directory information tree.
+
+Note
+
+Please also note that users and groups may reside in different parts of the directory information tree, as a consequence applying the same, more specific DN both as USER BASE DN and GROUP BASE DN may cause Metadefender Core not to find group accounts in the directory information tree. So these DNs should be chosen carefully.
+
+## [Add User & Group Active Directory](/docs/mdcore/v5.22.0/configuration/active-directory-attributes#add-user--group-active-directory)
+
+In User Management, add a user or group to Active Directory (AD).
+
+## [Login with Active Directory](/docs/mdcore/v5.22.0/configuration/active-directory-attributes#login-with-active-directory)
+
+To log in with an Active Directory (AD) user account, you typically use the following format:
+
+1. **Directory name**: Directory name could be
+
+   1. the name of your AD directory - the name that user has configured on management console
+   2. or the domain name
+2. **AD Account:** An AD user or a member of an AD group that you have recently added to the directory.
+
+**Login Format:**
+
+[DirectoryName]\[AD account]
+
+For example, if your AD directory is `My Directory` and your domain name is `mycompany` and your username is `ADUser`, you would log in as:
+
+My Directory\ADUser
+mycompany\ADUser

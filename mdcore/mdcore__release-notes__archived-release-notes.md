@@ -2,6 +2,225 @@
 
 # Archived release notes
 
+## [Version v5.22.0](/docs/mdcore/release-notes/archived-release-notes#version-v5220)
+
+Release Date: 26 August 2026
+
+**New File Structure Validation Engine**
+
+Malicious content increasingly hides within document structures where traditional signatures cannot reach. **File Structure Validation (FSV)** inspects each file against its format specification and identifies embedded files, images, fonts, hyperlinks, metadata, and other elements. It enforces structural security policies without modifying the original file, while extractable content is scanned separately so content is not judged by its wrapper alone.
+
+FSV is integrated across MD Core: per-file-type control in workflow configuration, structural findings in the processing result, activity on the dashboard, and a dedicated section in both PDF and CSV executive reports.
+
+**Reuse processing result for archives**
+
+Hash-based reuse of processing results now covers archive files, not only non-archive submissions. Repeated scans of the same archive can skip a full re-extract and re-scan when reuse is enabled.
+
+**Skip by Hash approval expiry and auto-removal**
+
+Skip-by-hash allowlist and blocklist entries can carry an expiry date. When the time is reached, the hash is removed automatically so temporary approvals do not stay forever.
+
+**Email alerts for RAM and CPU utilization**
+
+Email notifications can fire when RAM or CPU crosses a configured threshold, in the same style as existing disk-space alerts.
+
+---
+
+**Stop processing files with a mismatched file type**
+
+A workflow can now be configured to stop processing a file as soon as a mismatch between its detected type and its extension is identified, rather than continuing through the remaining engines. For customers who reject mismatched files as a matter of policy, this shortens scan time and spares resources on traffic that would be blocked anyway.
+
+**Further Enhancements**
+
+**1) Force password change on first local login**
+
+A configurable policy can require local users to change their password on first login. LOCAL accounts only
+
+**2) Create user API can mint an API key**
+The Create user API can create an API key as part of user creation, so automation does not need a second step after the account exists. Please check details: [POST - Create user](/docs/mdcore/metadefender-core#usercreate)
+
+**3) Webhook callback API key**
+
+An custom header can be passed through to a webhook server when a file is submitted to the callback API, so the webhook endpoint can authenticate the request. [POST - Analyze File (Asynchronous mode)](/docs/mdcore/metadefender-core#fileanalysispost)
+
+**4) In-product notice when a newer Core version is available**
+
+Administrators can be notified in the console when a newer MetaDefender Core version is available.
+
+**5) API to list**`data_id`**values**
+
+A new API returns a list of `data_id` values so integrations can page or batch-query scan objects without walking history one file at a time. [MetaDefender Core API](/docs/mdcore/metadefender-core)
+
+`GET` - `/file/ids`
+
+Support filtering:
+
+1. Time windows
+2. Size and limit
+3. Original file (submitted file) vs extracted file vs batch
+
+**6) Global timeout now includes end-to-end file handling time, not only engine scan time**
+
+Under Enable Global Timeout, a new child option Include all file handling stages in timeout calculation can count the full file lifecycle, not only time after the file enters the scan queue. That includes upload or streaming, write to storage, hash calculation, queue wait, and scan processing.
+
+**7) Dependable central management, even when an instance is struggling**
+
+Health status reporting to My OPSWAT Central Management (MOCM) is now paced to at most one report per configured reporting interval. A struggling instance no longer sends many reports per second, loading Central Management at the moment it is already under strain.
+
+When MOCM offers a configuration that MetaDefender Core (MD Core) cannot apply, the rejection is now reported in full only for the first few consecutive attempts and summarized after that. One invalid setting no longer writes the complete configuration into the audit log on every sync interval.
+
+**8) Health reporting to central management recovers automatically**
+
+An enrolled instance that stopped reporting its health to My OPSWAT Central Management, because the reply to an outstanding report never arrived, now starts reporting again by itself. Recovery happens immediately on re-enrollment, and otherwise within the hour. Previously the instance stayed silent indefinitely and appeared stale in the Central Management console, with an unenroll or a full service restart as the only way back.
+
+**9) More reliable engine updates from Central Management**
+
+A damaged update package no longer stalls the engine and signature database updates queued behind it. Packages received through My OPSWAT Central Management (MOCM) that cannot be processed now fail cleanly and stay available to retry, while the remaining updates continue to install.
+
+**10) Engine deployment that fails fast instead of hanging**
+
+An engine or database deployment that cannot start no longer leaves the module stuck in Staging. The wait is now bounded: if the start does not complete, the deployment fails with a clear warning, cleans up after itself, and stays available to retry. Recovering no longer means removing the engine or restarting the service. Additional log detail across the staging phase also gives Support a clearer picture when a deployment does not behave as expected.
+
+**11) A Failed count you can act on**
+
+The *Failed* figure on the dashboard and in processing history now counts genuine processing failures only: *Failed*, *Extraction Failed* and *Scan Failed*. Objects that an operator cancelled, and objects that reached a configured processing limit, are no longer counted among them, so the number means what it says and can be trusted as an alerting signal.
+
+**12) One consistent vocabulary across every result**
+
+The six analysis categories in Processing History, covering advanced threats, vulnerabilities, threat signatures, origin, data loss and sanitization, now describe their outcomes in the same language. The same wording is used across the Processing History list, its CSV export and the executive report, so a result no longer reads differently depending on which column or which export it appears in.
+
+**13) Clearer feedback when adding a certificate**
+
+Selecting an empty certificate file in the *Add certificate by content* dialog now explains why the file cannot be used, instead of leaving the Add button disabled with no indication of the cause.
+
+---
+
+**Security Enhancements**
+
+Upgraded 3rd party libraries:
+
+- PostgreSQL v18.6
+- SQLite v3.53.4
+
+---
+
+**Bug Fixes**
+
+- Fixed an issue that Processing History could not show data after a scan of special cases. This is a displaying issue; your data in database is retained as is, and REST API integrations work properly.
+- Fixed an issue where a cancelled scan was not reported as cancelled in JSON exports, log files, and syslog.
+- Resolved an issue where importing a settings package could fail intermittently when a configuration value exceeded its length limit, silently keeping the previous configuration.
+
+## [Version v5.21.0](/docs/mdcore/release-notes/archived-release-notes#version-v5210)
+
+Release Date: 30 July 2026
+
+**All-new MetaDefender Core interface**
+
+Meet the all-new interface—designed for speed and comfort. With built-in dark mode, enhanced accessibility support, and seamless interactions, every workflow feels more natural and efficient.
+
+Below are some of the key highlights:
+
+A brand-new, comprehensive dashboard
+
+A completely redesigned dashboard featuring refreshed versions of existing metrics, making it easier to monitor your system, along with brand-new insights such as the CVE Detection Trend.
+
+Easily monitor and submit scans, including split archive submissions
+
+New look and feel for the Processing History and Processing Results pages
+
+Work comfortably in low light with built-in dark mode
+
+---
+
+**Splunk integration settings in MetaDefender Core**
+
+A dedicated **Splunk** section in MetaDefender Core makes it easier to connect Core to your Splunk environment. Add and manage Splunk connections, set the log level, allow self-signed certificates when needed.
+
+Users can also integrate with Splunk during installation via Wizard steps.
+
+---
+
+**Support PostgreSQL v18**
+
+MetaDefender Core now starts supporting PostgreSQL v18 (verified with 18.4).
+
+Bundled PostgreSQL server comes with MetaDefender Core standalone deployment also comes with this new version.
+
+**Note**:
+
+- PostgreSQL v18 itself cannot initialize its database cluster when the Windows system locale name contains non-ASCII characters. For example, Turkish Windows uses the locale `Turkish_Türkiye.1254`, which contains `ü`. Instruction for safe upgrade at [Upgrade to MetaDefender Core 5.21.0 or later on Windows systems with a non-ASCII locale](/docs/mdcore/troubleshooting/metadefender-core-with-postgresql-18-on-a-non-ascii-os-locale).
+- If your bundle PostgreSQL password contains non-ASCII characters (for example `£`, `€`, or accented letters), the upgrade may fail and prevent console login. ASCII special characters such as `&`, `~`, and `\` are not affected. Before upgrading, change the PostgreSQL password to ASCII-only - please check [Database Management](/docs/mdcore/configuration/database-management) for change password
+
+---
+
+**Redacted file name in output filename configuration**
+
+Output filename formatting now supports Proactive DLP redaction results through two new tokens: `${redacted.basename}` and `${redacted.extension}` (available in `short` and `long` formats). These tokens allow for the automatic use of masked filenames across DLP output, Deep CDR sanitized output, and archive tombstone names, ensuring sensitive information is removed from file names. If no redaction occurs, the tokens automatically fall back to the original filename and extension.
+
+---
+
+**Block unsupported file types in Proactive DLP**
+
+Proactive DLP can now be configured to block files it identifies as an "Unsupported File Type", rather than releasing them as "No Threat Detected". This gives security teams stricter control over content that Proactive DLP cannot fully inspect, aligning DLP behavior with fail-closed policies.
+
+---
+
+**Centralized "Skip by Hash" management via My OPSWAT Central Management**
+
+MetaDefender Core now supports centrally managing the "Skip by Hash" configuration (Skip Engines, Allowlist, and Blocklist) from My OPSWAT Central Management (MOCM). Administrators managing multiple Core instances can maintain hash lists once in Central Management and have them synchronized to all enrolled Cores over the existing heartbeat channel, instead of maintaining lists on each instance individually. Centrally managed hashes are enforced as read-only on the local Core while enrolled, a new Origin column and awareness banner indicate which entries are managed by Central Management, and configuration backups from older Core versions remain importable.
+
+**Dependency and availability:** This feature requires updates on **both MetaDefender Core and My OPSWAT Central Management (MOCM)** — the Core-side changes ship in this release, but end-to-end centralized management is only available once the corresponding MOCM support is released. MOCM plans to release this feature in **mid-August 2026**.
+
+---
+
+**Further Enhancements**
+
+**1) Clearer "Extension-Based Processing Fallback" configuration**
+
+The "Fallback file type detection to current extension if needed" option has been renamed to "Enable Extension-Based Processing Fallback" and its description has been updated to better reflect its expanded functionality. The option now uses the file extension as a secondary file type for processing when needed, reducing confusion for administrators when configuring workflows.
+
+**2) Improved error visibility for archive extraction failures**
+
+The scan-result UI now makes it easier to see the full error path when extraction fails deep inside large, multi-level archives, so operators can identify the problematic nested file without clicking through the archive one level at a time.
+
+**3) More meaningful extraction error messages**
+
+Extraction error messages have been improved to provide clearer, more detailed information, replacing generic or ambiguous wording so customers can better understand why extraction did not complete.
+
+**4) Classify Global Timeout Exceeded as Allowed when configured in workflow general settings.**
+
+Global Timeout Exceeded is now available under Workflow Management → General → Processing results to be classified as Allowed, so you can choose whether scans that hit the global timeout are treated as Allowed like other configurable outcomes.
+
+**5) Post Actions support sanitized files and optional filtering by sanitized file type.**
+
+Post Actions can now run for **sanitized** files, not only threat-related verdicts. You can also limit actions to **specific file types** (for example PDF, XLS, or DOCX) so downstream steps apply only to the formats you choose.
+
+**6) In-app alerts when disk space is low**
+
+When available disk space drops below configured thresholds, administrators now get an **in-app notification** in the MetaDefender Core web UI—in addition to existing email alerts and dashboard status—so low-disk conditions are hard to miss no matter which page you’re on.
+
+---
+
+**Security Enhancements**
+
+- Hardened license activation connectivity test: the license activation server connectivity test endpoint has been hardened to restrict the destinations it will connect to, mitigating a blind server-side request forgery (SSRF) issue that could otherwise be used to probe internal hosts and ports
+- Upgraded 3rd party libraries:
+
+  - c-ares (bundled within the gRPC) v1.34.8
+  - yamlcpp v0.9.0
+  - nghttp2 v1.69.0
+  - NGINX v1.30.4
+  - sqlite v3.53.3
+  - libxml2 v2.15.3
+  - PostgreSQL v18.4
+
+---
+
+**Bug Fixes**
+
+- Improved startup when several MetaDefender Core nodes share one database (shared-db), so concurrent restarts are less likely to hit database privilege deadlocks and fail to come online.
+- Improved NGINX log rotation on Windows by storing runtime config outside temp and recovering when the config file is missing.
+
 ## [Version v5.20.0](/docs/mdcore/release-notes/archived-release-notes#version-v5200)
 
 Release Date: 30 June 2026

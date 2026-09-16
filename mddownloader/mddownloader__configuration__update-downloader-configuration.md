@@ -1,12 +1,19 @@
 <!-- source: https://www.opswat.com/docs/mddownloader/configuration/update-downloader-configuration -->
 
-Too many requests
-# You're going a little too fast.
+# Update Downloader configuration
 
-This page is temporarily rate limited to keep things running smoothly for everyone. Please wait a moment, then try again.
+The Update Downloader configuration is separated into two parts. The basic server configurations are stored in the configuration files. Other configuration values can be set via the Web Management Console.
 
- Try again  [Visit DeveloperHub.io](https://developerhub.io)
+## [Management Console](/docs/mddownloader/configuration/update-downloader-configuration#management-console)
 
-Scraping this site with the project owner's permission? Request a project export from the site owner instead.
+The management console is available at: http://<Metadefender Update Downloader Server>:8028/ where <Metadefender Update Downloader Server> is the name or IP address of the system where Update Downloader is installed.
 
-Need a higher rate limit? Email [support@developerhub.io](mailto:support@developerhub.io?subject=Rate%20limit%20increase%20request&body=Page%3A%20https%3A%2F%2Fwww.opswat.com%2Fdocs%2Fmddownloader%2Fconfiguration%2Fupdate-downloader-configuration%0A%0AWhy%20I%20need%20a%20higher%20rate%20limit%3A%0A) explaining why.
+After installing the product the default password for the **admin** user is **admin**.
+
+Every change made in the Update Downloader configuration via the Management console is applied when you select **Save settings** or **OK**, except if the change cannot be applied.
+
+**Login screen**
+
+Typical issues related to the Web Management Console:
+
+- [Inaccessible Management Console](/docs/mddownloader/troubleshooting/inaccessible-management-console)
