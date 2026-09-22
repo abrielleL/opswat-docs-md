@@ -9,14 +9,16 @@ This guide provides step-by-step instructions to help you take full advantage of
 1. [Access and Permission](https://www.opswat.com/docs/my/partner-guide/partner-portal#access-and-permission)
 2. [Overview](https://www.opswat.com/docs/my/partner-guide/partner-portal#overview)
 3. [Deal Registration](https://www.opswat.com/docs/my/partner-guide/partner-portal#deal-registration)
-4. [Marketing Development Funds](https://www.opswat.com/docs/my/partner-guide/partner-portal#marketing-development-funds)
-5. [Resources](https://www.opswat.com/docs/my/partner-guide/partner-portal#resources)
+4. [Opportunities](https://www.opswat.com/docs/my/partner-guide/partner-portal#opportunities)
+5. [Marketing Development Funds](https://www.opswat.com/docs/my/partner-guide/partner-portal#marketing-development-funds)
+6. [Resources](https://www.opswat.com/docs/my/partner-guide/partner-portal#resources)
 
 ## Introduction to Partner Portal
 
 Within the Partner Portal, you can:
 
 - **Register and Manage Deals:** Submit opportunities and track approvals.
+- **Track Your Sales Pipeline:** View your organization's Opportunities, including renewals and other Opportunities that didn't start as a registration.
 - **Request MDF (Marketing Development Funds):** Apply for and monitor funding for joint marketing activities.
 - **Access Sales and Marketing Resources:** Download datasheets, presentations, and enablement materials.
 - **Stay informed:** View dashboards and updates summarizing your partner activities.
@@ -37,10 +39,11 @@ To access the Partner Portal, you must:
 
 ## Navigating the Partner Portal
 
-The Partner Portal includes 4 pages, each designed to help partners perform specific tasks and access the right information.
+The Partner Portal includes 5 pages, each designed to help partners perform specific tasks and access the right information.
 
 - [**Overview**](https://www.opswat.com/docs/my/partner-guide/partner-portal#overview)**:** Snapshot of partner activity and resources
-- [**Deal Registration**](https://www.opswat.com/docs/my/partner-guide/partner-portal#deal-registration): Submit and manage deal opportunities.
+- [**Deal Registration**](https://www.opswat.com/docs/my/partner-guide/partner-portal#deal-registration): Submit and manage deal registration
+- [**Opportunities**](https://www.opswat.com/docs/my/partner-guide/partner-portal#opportunities): View your organization's sales pipeline.
 - [**Marketing Development Funds**](https://www.opswat.com/docs/my/partner-guide/partner-portal#marketing-development-funds): Request and track funds.
 - [**Resources**](https://www.opswat.com/docs/my/partner-guide/partner-portal#resources)**:** Access partner sales, marketing, and technical materials.
 
@@ -52,9 +55,9 @@ The Partner Portal includes 4 pages, each designed to help partners perform spec
 
 The **Partner Portal - Overview** page gives you a high-level view of your partner activities and quick access to popular resources.
 
-![](https://uploads.developerhub.io/prod/JYvy/cym5box0co2cv9fs3s97cb8nb0lx1wov27l24hxr1mfg7f80cxh7nwadlvbpzskj.png)
+![](https://uploads.developerhub.io/prod/JYvy/c5e6fwsvqy7tygo5hue3inhc3ryjhb77e0wz1nk2p89de6c70d39cvp0li18t6lc.png)
 
-**Permission:** To access this page, you must be assigned to one of the following built-in roles: Admin, MDF Admin, or Partner User.
+**Permission:** To access this page, you must be assigned to one of the following [built-in roles](https://www.opswat.com/docs/my/partner-guide/partner-role-management#managing-roles): Admin, MDF Admin, or Partner User.
 
 What you’ll see:
 
@@ -74,16 +77,13 @@ Use the **Submitted Date** filter to change the period the page reports on. The 
 
 The Overview counts every deal your organization is tied to, not only the deals you registered. That includes leads without an opportunity, leads that have been converted to an opportunity, and opportunities. In the **Deal Stage** chart, closed lost deals appear only where your organization registered the deal.
 
+> MDF-related elements (Approved Funds Value & Marketing Development Fund Request Status) are visible only to OPSWAT Preferred Partners enrolled in the MDF Program.
+
 > **MDF-related elements (Approved Funds Value & Marketing Development Fund Request Status) are visible only to OPSWAT Preferred Partners enrolled in the MDF Program.**
 >
 > If you do not enroll in MDF Program, your Overview page is shown as below example
 >
 > ![](https://uploads.developerhub.io/prod/JYvy/kszoh3xiwh18w1244zbyke07bb3mv89vgarxcu61l2ocypuyjdgc5bvp10x1up5t.png)
-
-> **What you see on the dashboard may vary depending on the permissions assigned to your role**
->
-> - If you have **My Deal Management** permission only, dashboard data reflects only the deals you created.
-> - If you also have **Organization Deal Management** permission, dashboard data reflects all deals submitted within your organization.
 
 ### Deal Registration
 
@@ -93,10 +93,12 @@ The **Partner Portal - Deal Registration** page allows partners to submit, track
 >
 > For full OPSWAT Deal Registration Program details, please refer to this  [**LINK**](https://my.opswat.com/portal/partner-portal/resources/deal-registration-partner-program-guide)[ ](https://my.opswat.com/portal/partner-portal/resources/deal-registration-partner-program-guide)[ ](https://my.opswat.com/portal/partner-portal/resources/deal-registration-partner-program-guide)in My OPSWAT Partner Portal.
 
-**Permission:** You must be assigned to one of the following [Built-in Roles](https://www.opswat.com/docs/my/partner-guide/partner-role-management#built-in-roles) to access this page:
+**Permission:** This page is available to the following [built-in roles](https://www.opswat.com/docs/my/partner-guide/partner-role-management#managing-roles)
 
-- **Partner User:** You can view and manage only the deals you submit.
-- **Super Admin** or **Admin** : You can view all deal registrations submitted by your organization.
+- **Super Admin, Admin, MDF Admin, and Partner User: **View all deal registrations submitted by your organization and register new deals.
+- **User: **View all deal registrations submitted by your organization.
+
+Deal Management is not available on custom roles. To give someone access, assign one of the built-in roles above.
 
 > **PLEASE NOTE**
 >
@@ -107,6 +109,8 @@ The **Partner Portal - Deal Registration** page allows partners to submit, track
 1. Navigate to the **Partner Portal** tab in the left-hand menu and select **Deal Registration**.
 2. Click the **Register New Deal** button in the top right-hand corner.
 
+   ![](https://uploads.developerhub.io/prod/JYvy/zedohco21n42m09qvnanzbv1l0du1e3jt837r772jzf2ywf3p4wmq8xd2zptmyt6.png)
+
 > **PLEASE NOTE**
 >
 > If you don’t see the option to register a deal, contact your organization administrators or dedicated Channel Manager to request access.
@@ -116,7 +120,7 @@ The **Partner Portal - Deal Registration** page allows partners to submit, track
 - Resellers must indicate the Distributor they are working with.
 - If applicable, Distributors must indicate the Reseller involved in the opportunity.
 
-4. You will receive a confirmation email once your Deal Registration is successfully submitted. Click the **hyperlink in the email** or the **Deal ID** on the Deal Registration page to view the request details.
+4. You will receive a confirmation email once your Deal Registration is successfully submitted. Click the **hyperlink in the email** or the **Registration ID** on the Deal Registration page to view the request details.
 
 > **Additional qualification step for partners in METAPCIS region**
 >
@@ -151,6 +155,7 @@ Below the summary, the **deal registration list** displays all submitted deals y
 - Filter by **Deal Stage, Submitted Date, or Close Date**
 - Search by **Registration ID, Customer, Partner Contact, Distributor, or Reseller.**
 - The **Value** column shows the deal registration’s estimated value.
+- The **Distributor** and **Reseller** columns adjust based on your organization type: the Distributor column doesn't appear if your organization type is Distributor, and the Reseller column doesn't appear if your organization type is Reseller or Direct Reseller.
 - Click a **Registration ID** to view full details of that record. The detail form shows the same estimated value in its **Value** field.
 
 There are 7 deal stages:
@@ -163,6 +168,45 @@ There are 7 deal stages:
 - **CLOSED WON:** Deal successfully closed, resulting in revenue.
 - **CLOSED LOST:** Deal closed without success.
 
+### Opportunities
+
+The **Partner Portal - Opportunities** page shows your organization's complete sales pipeline: every Opportunity associated with your organization, including Opportunities resulting from submitted Deal Registrations, renewals, and other associated Opportunities.
+
+![](https://uploads.developerhub.io/prod/JYvy/ues3460q363rqnzxh7h8khqs2si1gsfbjsvq3e2hv2muf31va0eit3rgmk1qlp4a.png)
+
+**Permission: **You must be assigned to one of the following [built-in roles](https://www.opswat.com/docs/my/partner-guide/partner-role-management#managing-roles) to access this page: **Partner User**, **MDF Admin,** **Super Admin** or **Admin**
+
+The list is always organization-level: it shows every Opportunity where your organization is the Distributor or the Reseller.
+
+> **Opportunities vs. Deal Registration**
+>
+> The Opportunities list can overlap with your Deal Registration list, since a Deal Registration can become an Opportunity. The two pages answer different questions: **Deal Registration** shows what happened to the registrations you submitted, while **Opportunities** shows your complete sales pipeline, including renewals and other Opportunities that never started as a registration.
+
+At the top of the page, you'll see key summary metrics. Hover over a metric tile title to see how that metric is calculated.
+
+- **Total Deals:** The number of Opportunities in the list.
+- **Open Deals:** The number of open Opportunities that haven't been won or lost yet.
+- **Closed Won:** The total number of closed won Opportunities.
+- **Win Rate:** Closed Won opportunities divided by total opportunities, multiplied by 100. The tile shows the percentage. 
+
+Below the summary, the **Opportunities list** displays every Opportunity you can access.
+
+- Search by **Deal ID, Registration ID, Customer, or OPSWAT Sales Rep.**
+- Filter by **Stage, Created Date** (default last 12 months, with All time, YTD, and custom range options), **or Close Date.**
+- The **Registration ID** column links to the related Deal Registration if the Opportunity resulted from one; otherwise it shows a dash — for example, a renewal or another Opportunity associated with your organization.
+
+- Click a **Deal ID** to view full details of that record.
+
+There are 7 Opportunity stages:
+
+- **Discovery**
+- **Scoping & Development**
+- **Technical Validation**
+- **Negotiation**
+- **Paper Process / Contracting**
+- **Closed Won**
+- **Closed Lost**
+
 ### Marketing Development Funds
 
 The **Partner Portal - Marketing Development Funds** page lets eligible partners request and track funding support for joint marketing activities.
@@ -171,18 +215,23 @@ The **Partner Portal - Marketing Development Funds** page lets eligible partners
 >
 > This page is visible only to OPSWAT Preferred Partners enrolled in the [MDF Program](https://my.opswat.com/portal/partner-portal/resources/mdf-partner-program-guide). To request enrollment, please contact your dedicated Channel Manager.
 
-**Permission:** You must have **View only MDF permission** to access this page, and **Full Access** permission to submit a new MDF request.
+**Permission:** This page is available to the following [Built-in roles](https://www.opswat.com/docs/my/partner-guide/partner-role-management#built-in-roles-for-partner-organizations)
+
+- **Super Admin, Admin, and MDF Admin: **View all MDF requests submitted by your organization, and request new funds
+- **User and Partner User:** View all MDF requests submitted by your organization.
 
 #### **Submitting a New MDF Request**
 
-1. Navigate to the **Partner Portal** tab in the left-hand menu and select **Marketing Development Funds**.![](https://uploads.developerhub.io/prod/JYvy/xw2iw82dndzlml3p0ozmijkgavzyb5rjw4qgo2nvgwbu2azn70js75aba2yqebe6.png)
+1. Navigate to the **Partner Portal** tab in the left-hand menu and select **Marketing Development Funds**.
+
+   ![](https://uploads.developerhub.io/prod/JYvy/cx1rqcaickpgnudqrby8qocuur5dc9fd5bpse6xi65sjages7ohe8zd7wtfa9m9a.png)
 2. Click **Request New Fund** in the top-right corner. ![](https://uploads.developerhub.io/prod/JYvy/g1ickddzycofn1srdludl1sgpqt66mfl465psqwctz0z4w2tk94r87h9i76i0rit.png)
 3. Complete all required fields in the form and click **Submit**. Provide as much detail in the Description as possible to support faster review and approval.
 4. Once submitted, you can click the **MDF ID** to open its details page.
 
 #### **Tracking MDF Requests**
 
-![](https://uploads.developerhub.io/prod/JYvy/apx4mx86hr421esza6oqa5fb64kb6oca5y1t3btvibcye62lujp5ain5wq34ecx9.png)
+![](https://uploads.developerhub.io/prod/JYvy/a1kv5mpasy1ypeft8i0twcozbckeeg0t2bqyzo5tcc496pg9yexym2r44yl8g3xs.png)
 
 At the top of the page, you’ll see key summary metrics, including:
 
@@ -235,13 +284,13 @@ This function is used when you want to provide additional supporting documents o
 
 The **Partner Portal – Resources** page gives you access to all sales, marketing, and technical materials available to channel partners.
 
-![](https://uploads.developerhub.io/prod/JYvy/f8srkz69ef2wyi02zppgwe49jo2qix4744vepa4nl5a779a7cwkm4apxpvubgc7j.png)
+![](https://uploads.developerhub.io/prod/JYvy/e2bgb0ycy5h07uvg2ovaxjdsz4bj0la4zys5hj54u0n5z8k4u0p48trfd4i1rrix.png)
 
 **Permission:**
 
 - By default, all partner users with Partner Portal access can view this page.
-- With **Organization Playbook – View Only** permission, you can view playbooks shared by your organization.
-- With **Organization Playbook – Full Access** permission, you can create, edit, and delete organization playbooks.
+- **Super Admin, Admin, MDF Admin, and Partner User** can create, edit, and delete organization playbooks.
+- **User** can view playbooks shared by your organization.
 
 In the Resources page, you will find four sub-tabs:
 
@@ -259,3 +308,7 @@ If you encounter issues accessing the Partner Portal or using its features, plea
 - **Your Dedicated Channel Manager:** For questions about permissions, deal registration, or MDF requests.
 - **Organization Administrators:** For assistance with account or role assignments within your organization.
 - **OPSWAT Support:** For technical issues with the My OPSWAT Portal itself, submit a case directly through [Support](https://my.opswat.com/portal/support) tab.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

@@ -1,25 +1,22 @@
 <!-- source: https://www.opswat.com/docs/my/release-notes/release-notes -->
 
-# My OPSWAT Portal v2026.3.5.0
+# My OPSWAT Portal v2026.3.6.0
 
-| **Version** | v2026.3.5.0 |
+| **Version** | v2026.3.6.0 |
 | ---- | ---- |
-| **Release date** | September 7th, 2026 |
-| **Release Summary** | This release enhances license entitlement visibility in **License Management**, providing a clearer view of entitlements across license types, including **OLMS-managed Volume licenses**. |
+| **Release date** | September 21st, 2026 |
+| **Release Summary** | This release introduces **Opportunities**, a new page in the Partner Portal that gives partners full visibility into their organization's sales pipeline in one place. |
 
-## **Enhancements**
+## **New Features**
 
-### **Enhanced License Entitlement Visibility**
+### **[For Partners] Introducing Opportunities: Monitoring Full Sales Pipeline**
 
-The **License Management **page now provides a clearer view of license entitlements across license types, allowing customer purchasing Volume licenses see additional configuration details.
+![](https://uploads.developerhub.io/prod/JYvy/oakn7r3vnqbtzj88z5jkvg94yspmrvirrvl6bmjzbci7y52egne76clnio2dy4dw.png)
 
-The **Deployed / Purchased** column on the License Management page has been updated to **Entitlement**, showing the maximum instances for each license key.
+Partners can now see every Opportunity associated with their organization in one list on the new **Opportunities** page, without needing to ask their OPSWAT contact for status. The list includes Opportunities resulting from submitted Deal Registrations, renewals, and other associated Opportunities.
 
-- **For regular licenses,** the entitlement view now shows the maximum instances, with deployed instance details available when hovering.
+**Access path:** Partner Portal > [Opportunities](https://www.opswat.com/docs/my/partner-guide/partner-portal#opportunities)
 
-  ![](https://uploads.developerhub.io/prod/JYvy/vad4k40j8njfsxjfnfnnm3tzeo5v1f0214clij9eszvil4hf3e33kpgk90tq98ze.png)
-- **For volume licenses**, the entitlement view now shows the maximum instances, with maximum offline time details available when hovering.
+---
 
-  ![](https://uploads.developerhub.io/prod/JYvy/44uld3ugvukh53qc75nsu3zed9ane98evasg8rz8u4p5rnk0ahi6af7w5wnno80n.png)
-
-**Further reading:** [Organization Licenses; ](https://www.opswat.com/docs/my/license-management/my-organization-license)[Organization and its sub-organizations' Licenses](https://www.opswat.com/docs/my/license-management/my-main-sub-organizations-licenses) & [Customer License Management](https://www.opswat.com/docs/my/partner-guide/customer-licenses)
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)
