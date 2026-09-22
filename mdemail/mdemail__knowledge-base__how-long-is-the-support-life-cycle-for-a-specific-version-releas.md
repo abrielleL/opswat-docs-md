@@ -48,6 +48,8 @@ If you are upgrading from an older V5 release, visit [Installation](https://docs
 |  | 5.6.6 | 31 May 2023 | 14 Feb 2025 |
 |  | 5.6.5 | 29 Mar 2023 | 01 Dec 2024 |
 
+**Note on release 5.7.7**: Release 5.7.7 serves as the compatibility bridge to MetaDefender Email Gateway Security v6. Any v5 release can be upgraded to 5.7.7, and 5.7.7 can then be upgraded to any v6 release.
+
 Support:
 
 To contact support, please open a [Support Case](https://www.opswat.com/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go.opswat.com/OPSWATCommunity/s/).
