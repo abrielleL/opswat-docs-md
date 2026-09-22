@@ -1,6 +1,6 @@
 <!-- source: https://www.opswat.com/docs/cm/knowledge-base/why-is-metadefender-it-access-reporting-an-issue-with-password-a -->
 
-# Why is MetaDefender IT Access reporting an issue with password and lock-screen unexpectedly?
+# Why is My OPSWAT Central Management reporting an issue with password and lock-screen unexpectedly?
 
 > **Check Your Product:**
 >
@@ -37,3 +37,7 @@ With the above setting enabled, the associated devices will not be assessed in t
 > **Support:**
 >
 > If you have followed the instructions above but have further queries or concerns regarding **My OPSWAT Central Management** **Reporting Issues With A Device’s Password And Lock-Screen**, please open a [Support Case](https://my.opswat.com/portal/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

@@ -2,6 +2,8 @@
 
 # Get Reports v2.0
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 2.0 |
 | --- | --- |
 | Last Update | 05/16/2016 |
@@ -13,25 +15,25 @@
 
 Use to download reports such as OS patches summary, devices which missing a specific OS patch, missing OS patches on a specific device.
 
-## [API URL](/docs/macloud-sdp/developer-guide/get-reports-v2-0#api-url)
+## [API URL](/docs/cm/developer-guidelines/get-reports-v2-0#api-url)
 
 https://gears.opswat.com/o/api/v2/get_reports
-## [Request Parameters](/docs/macloud-sdp/developer-guide/get-reports-v2-0#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/get-reports-v2-0#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
 | type | string | URL | Yes | Specify what report you want to download. Values can be:   - OSPatchSummary: get OS Patches summary report - DeviceMissingOSPatch: get devices which missing a specific OS Patch report - MissingOSPatch: get missing OS Patches on a device |  |
-| kb | string | URL | Optional | Must be passed in with if the report type is *DeviceMissingOSPatch* Value: KB Number |  |
-| id | string | URL | Optional | Must be passed in if the report type is *MissingOSPatch* Value: device's id or MAC address |  |
+| kb | string | URL | Optional | Must be passed in with if the report type is *DeviceMissingOSPatch*  Value: KB Number |  |
+| id | string | URL | Optional | Must be passed in if the report type is *MissingOSPatch*  Value: device's id or MAC address |  |
 
 Response HTTP Code
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 
-## [Example](/docs/macloud-sdp/developer-guide/get-reports-v2-0#example)
+## [Example](/docs/cm/developer-guidelines/get-reports-v2-0#example)
 
-## [Get OS Patches Summary Report](/docs/macloud-sdp/developer-guide/get-reports-v2-0#get-os-patches-summary-report)
+## [Get OS Patches Summary Report](/docs/cm/developer-guidelines/get-reports-v2-0#get-os-patches-summary-report)
 
 **Request Example**
 
@@ -44,7 +46,7 @@ Request:https://gears.opswat.com/o/api/v2/get_reports?type=OSPatchSummary&access
 | 1 | critical_update | KB3115040 | Update for Microsoft Project 2013 32-Bit Edition | Microsoft has released an update for Microsoft Project 2013 32-Bit Edition. | Office 2013 | Microsoft Corporation | unknown | 1 |
 | 2 | critical_update | KB3115039 | Update for Microsoft OneDrive for Business 32-Bit Edition | Microsoft has released an update for Microsoft OneDrive for Business 32-Bit Edition. | Office 2013 | Microsoft Corporation | unknown | 1 |
 
-## [Get Devices Which Missing a Specific OS Patch Report](/docs/macloud-sdp/developer-guide/get-reports-v2-0#get-devices-which-missing-a-specific-os-patch-report)
+## [Get Devices Which Missing a Specific OS Patch Report](/docs/cm/developer-guidelines/get-reports-v2-0#get-devices-which-missing-a-specific-os-patch-report)
 
 **Request Example**
 
@@ -58,7 +60,7 @@ https://gears.opswat.com/o/api/v2/get_reports?type=DeviceMissingOSPatch&kb=KB311
 | No. | Device ID | Device Name | Username |
 | 1 | 3AD89B1F7647455889897B5D2A63D15A | WSEVN20 | ctran |
 
-## [Get Missing OS Patches on Device](/docs/macloud-sdp/developer-guide/get-reports-v2-0#get-missing-os-patches-on-device)
+## [Get Missing OS Patches on Device](/docs/cm/developer-guidelines/get-reports-v2-0#get-missing-os-patches-on-device)
 
 **Request Example**
 

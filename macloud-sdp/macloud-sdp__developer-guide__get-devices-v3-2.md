@@ -2,6 +2,8 @@
 
 # Get Devices v3.2
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 3.2 |
 | --- | --- |
 | Last Update | 07/31/2018 |
@@ -15,10 +17,10 @@
 
 Use to retrieve devices with certain criteria.
 
-## [API URL](/docs/macloud-sdp/developer-guide/get-devices-v3-2#api-url)
+## [API URL](/docs/cm/developer-guidelines/get-devices-v3-2#api-url)
 
 https://gears.opswat.com/o/api/v3.2/devices
-## [Request Parameters](/docs/macloud-sdp/developer-guide/get-devices-v3-2#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/get-devices-v3-2#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
@@ -26,18 +28,18 @@ https://gears.opswat.com/o/api/v3.2/devices
 | filter | object | Body | Optional | Specify filter criteria |  |
 | filter.product_ids | array<int> | Body | Optional | Specify applications which devices install |  |
 | filter.cve_ids | array<string> | Body | Optional | Specify cves which devices have |  |
-| filter.device_type | array<string> | Body | Optional | Specify type of device. Values can be "desktop","laptop","phone","tablet","server","vm" |  |
-| filter.category | array<string> | Body | Optional | Specify category which device has issues. Values can be "antiphishing", "antivirus", "backupclient", "hard_disk_encryption", "firewall", "patch_management", "instant_messegener", "cleaner_optimizer", "developer_tool", "cloud_storage", "publicfilesharing", "remote_control", "recording_web_meeting", "uninstaller", "toolbars", "media_player", "vpn_client", "unclassified_pua", "system", "hard_drive", "osupdate", "systemsecurity", "threat_antivirus", "threat_metascan", "threat_ip" |  |
-| filter.severity | array<string> | Body | Optional | Specific issue severity which devices have Values can be: "critical", "warning", "no_issues" |  |
-| filter.os | array<string> | Body | Optional | Specify OS type. Values can be: "windows","mac", "linux", "ios", "android" |  |
-| filter.device_status | array<string> | Body | Optional | Specify device status Values can be: "compliant", "non_compliant", "exempted", "out_of_license_usage", "unknown", "ignored", "installed", "pending", "quarantined" |  |
-| filter.agent_status | array<string> | Body | Optional | Specify agent status Values can be: "connected", "disconnected", "unseen", "out_of_date" |  |
-| filter.agent_type | array<string> | Body | Optional | Specify agent type Values can be: "managed", "dc" |  |
-| filter.group_id | array<string> | Body | Optional | Specify group id which a device is assigned to Values can be: |  |
-| filter.cve_severity | array<string> | Body | Optional | Specific cve severity which devices have Values can be: "critical", "important", "moderate", "low", "unknown" |  |
+| filter.device_type | array<string> | Body | Optional | Specify type of device.  Values can be "desktop","laptop","phone","tablet","server","vm" |  |
+| filter.category | array<string> | Body | Optional | Specify category which device has issues.  Values can be "antiphishing", "antivirus", "backupclient", "hard_disk_encryption", "firewall", "patch_management", "instant_messegener", "cleaner_optimizer", "developer_tool", "cloud_storage", "publicfilesharing", "remote_control", "recording_web_meeting", "uninstaller", "toolbars", "media_player", "vpn_client", "unclassified_pua", "system", "hard_drive", "osupdate", "systemsecurity", "threat_antivirus", "threat_metascan", "threat_ip" |  |
+| filter.severity | array<string> | Body | Optional | Specific issue severity which devices have  Values can be: "critical", "warning", "no_issues" |  |
+| filter.os | array<string> | Body | Optional | Specify OS type.  Values can be: "windows","mac", "linux", "ios", "android" |  |
+| filter.device_status | array<string> | Body | Optional | Specify device status  Values can be: "compliant", "non_compliant", "exempted", "out_of_license_usage", "unknown", "ignored", "installed", "pending", "quarantined" |  |
+| filter.agent_status | array<string> | Body | Optional | Specify agent status  Values can be: "connected", "disconnected", "unseen", "out_of_date" |  |
+| filter.agent_type | array<string> | Body | Optional | Specify agent type  Values can be: "managed", "dc" |  |
+| filter.group_id | array<string> | Body | Optional | Specify group id which a device is assigned to  Values can be: |  |
+| filter.cve_severity | array<string> | Body | Optional | Specific cve severity which devices have  Values can be: "critical", "important", "moderate", "low", "unknown" |  |
 | sort | object | Body | Optional | Specify how to sort devices in result-set By default: sort devices by status in DESC order: quarantined, non-compliant, exempted, compliant, pending, out_of_license_usage, unknown, ignored |  |
 | sort.order | string | Body | Optional | Specify sort order. Values can be:   - asc: sort devices in ascending order. - desc: sort devices in descending order. | DESC |
-| sort.field | string | Body | Optional | Specify which field will be sorted by Values can be: status, ip, nickname, user_name, os, last_seen, issues, group_policy | status |
+| sort.field | string | Body | Optional | Specify which field will be sorted by  Values can be: status, ip, nickname, user_name, os, last_seen, issues, group_policy | status |
 | search | string | Body | Optional | keyword to search devices. |  |
 | limit | int | Body | Optional | Specify maximum number of devices will be returned in the response. The value should be in [1,50]. | 1 |
 | page | int | Body | Optional | Specify page number which devices will be returned in. If the requested page exceeds the number of pages of devices, error code will be 413. It means that the requested page number is too large, no devices will be returned in this case. | 1 |
@@ -48,21 +50,21 @@ Notes:
 - criteria in a same parameter will be combined with OR operator
 - criteria in different parameter will be combined with AND operator
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/get-devices-v3-2#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/get-devices-v3-2#response-http-code)
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/get-devices-v3-2#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/get-devices-v3-2#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
 | device_id | string | HWID of a device |
-| severity | string | Issue severity of the device Values can be: "critical", "warning", "no_issues" |
-| status | string | device status Values can be: "compliant", "non_compliant", "exempted", "out_of_license_usage", "unknown", "ignored", "installed", "pending", "quarantined" |
+| severity | string | Issue severity of the device  Values can be: "critical", "warning", "no_issues" |
+| status | string | device status  Values can be: "compliant", "non_compliant", "exempted", "out_of_license_usage", "unknown", "ignored", "installed", "pending", "quarantined" |
 | device_name | string | device name |
 | nickname | string | device nickname (editable on the cloud console) |
-| device_type | string | device type Values can be "desktop","laptop","phone","tablet","server","vm" |
-| last_seen | string | The last timestamp in GMT format when MetaAccess reports its data to Cloud |
+| device_type | string | device type  Values can be "desktop","laptop","phone","tablet","server","vm" |
+| last_seen | string | The last timestamp in GMT format when My OPSWAT Central Management reports its data to Cloud |
 | last_reboot | string | The last timestamp in GMT format when device reboots |
 | agent_version | string | agent version |
 | remediation_link | string | URL of remediation page for the given device |
@@ -81,7 +83,7 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | os_info.name | string | OS name |
 | os_info.vendor | string | OS vendor |
 | os_info.version | string | OS version |
-| os_info.type | string | OS type. Values can be: "windows","mac", "linux", "ios", "android" |
+| os_info.type | string | OS type.  Values can be: "windows","mac", "linux", "ios", "android" |
 | cves | object | Summary of CVEs a device has |
 | cves.total | int | Total number of CVEs in device |
 | link_user | object | Linked user details |
@@ -91,7 +93,7 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | user_info.username | string | Currently logged in username |
 | user_info.domain | string | Currently logged in user domain |
 
-## [Example](/docs/macloud-sdp/developer-guide/get-devices-v3-2#example)
+## [Example](/docs/cm/developer-guidelines/get-devices-v3-2#example)
 
 **Example Request**
 
@@ -112,7 +114,7 @@ https://gears.opswat.com/o/api/v3.2/devices?access_token=TEST7P9ZMJ2LBF8AMOMJLFN
 "limit": 20,
 "page": 1
 }
-## [Example Response](/docs/macloud-sdp/developer-guide/get-devices-v3-2#example-response)
+## [Example Response](/docs/cm/developer-guidelines/get-devices-v3-2#example-response)
 
 [{
 "device_id": "6WXJURV8QAM0I7KC",
@@ -157,13 +159,13 @@ https://gears.opswat.com/o/api/v3.2/devices?access_token=TEST7P9ZMJ2LBF8AMOMJLFN
 "domain": "intl.opswat.com"
 }
 }]
-## [History](/docs/macloud-sdp/developer-guide/get-devices-v3-2#history)
+## [History](/docs/cm/developer-guidelines/get-devices-v3-2#history)
 
 | Version | URL |
 | --- | --- |
-| v3.1 | [Get Devices v3.1](/docs/macloud-sdp/developer-guide/get-devices-v3-1) |
-| v3.0 | [Get Devices v3.0](/docs/macloud-sdp/developer-guide/get-devices-v3-0) |
-| v2.3 | [Get Devices v2.3](/docs/macloud-sdp/developer-guide/get-devices-v2-3) |
-| v2.2 | [Get Devices v2.2](/docs/macloud-sdp/developer-guide/get-devices-v2-2) |
-| v2.1 | [Get Devices v2.1](/docs/macloud-sdp/developer-guide/get-devices-v2-1) |
-| v2.1 | [Search Devices v2.1](/docs/macloud-sdp/developer-guide/search-devices-v2-1) |
+| v3.1 | [Get Devices v3.1](/docs/cm/developer-guidelines/get-devices-v3-1) |
+| v3.0 | [Get Devices v3.0](/docs/cm/developer-guidelines/get-devices-v3-0) |
+| v2.3 | [Get Devices v2.3](/docs/cm/developer-guidelines/get-devices-v2-3) |
+| v2.2 | [Get Devices v2.2](/docs/cm/developer-guidelines/get-devices-v2-2) |
+| v2.1 | [Get Devices v2.1](/docs/cm/developer-guidelines/get-devices-v2-1) |
+| v2.1 | [Search Devices v2.1](/docs/cm/developer-guidelines/search-devices-v2-1) |

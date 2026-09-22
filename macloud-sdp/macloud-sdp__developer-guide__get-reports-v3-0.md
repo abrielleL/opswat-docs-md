@@ -2,6 +2,8 @@
 
 # Get Reports v3.0
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 3.0 |
 | --- | --- |
 | Last Update | 01/22/2019 |
@@ -12,37 +14,37 @@
 | Requests per rate limit | 10/min |
 | Change History | 01/22/2019: add one more export type (type parameter in request), agent_log |
 
-Use to download reports such as OS patches summary, devices which missing a specific OS patch, missing OS patches on a specific device, MetaAccess agent log
+Use to download reports such as OS patches summary, devices which missing a specific OS patch, missing OS patches on a specific device, MetaDefender Endpoint log.
 
-## [API URL](/docs/macloud-sdp/developer-guide/get-reports-v3-0#api-url)
+## [API URL](/docs/cm/developer-guidelines/get-reports-v3-0#api-url)
 
 https://gears.opswat.com/o/api/v3/get_reports
-## [Request Parameters](/docs/macloud-sdp/developer-guide/get-reports-v3-0#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/get-reports-v3-0#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
-| type | string | URL | Yes | Specify what report you want to download. Values can be:   - os_patch_summary: get OS Patches summary report - device_missing_os_patch: get devices which missing a specific OS Patch report - missing_os_patch: get missing OS Patches on a device - agent_log: download MetaAccess agent log which was requested in Device Action. |  |
-| command_id | string | URL | Optional | **Must be passed in if the report type is agent_log** Command ID which archived from Device Action when you request to retrieve MetaAccess agent logs |  |
-| kb | string | URL | Optional | **Must be passed in with if the report type is device_missing_os_patch** KB Number of an OS patch you would like to download devices which are missing the OS patch. |  |
-| id | string | URL | Optional | **Must be passed in if the report type is missing_os_patch** Device ID or D MAC address |  |
+| type | string | URL | Yes | Specify what report you want to download. Values can be:   - os_patch_summary: get OS Patches summary report - device_missing_os_patch: get devices which missing a specific OS Patch report - missing_os_patch: get missing OS Patches on a device - agent_log: download MetaDefender Endpoint log which was requested in Device Action. |  |
+| command_id | string | URL | Optional | **Must be passed in if the report type is agent_log**  Command ID which archived from Device Action when you request to retrieve MetaDefender Endpoint logs |  |
+| kb | string | URL | Optional | **Must be passed in with if the report type is device_missing_os_patch**  KB Number of an OS patch you would like to download devices which are missing the OS patch. |  |
+| id | string | URL | Optional | **Must be passed in if the report type is missing_os_patch**  Device ID or D MAC address |  |
 
 Response HTTP Code
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/get-reports-v3-0#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/get-reports-v3-0#response-parameters)
 
 | Key | Datatype | Description |
 | --- | --- | --- |
-| status | string | **This is only applied for agent_log type** Status of a command. Value can be   - Queue: the command is in queue, has not sent to a device yet - Pending: the command is sent to a device but the device has not responded yet - Failed: the device responded but the device couldn't complete the command |
-| message | string | **This is only applied for agent_log type** Details of the status |
-| error | string | **This is only applied for agent_log type** Indicate what is wrong |
-| error_description | string | **This is only applied for agent_log type** Details of the error |
+| status | string | **This is only applied for agent_log type**  Status of a command. Value can be   - Queue: the command is in queue, has not sent to a device yet - Pending: the command is sent to a device but the device has not responded yet - Failed: the device responded but the device couldn't complete the command |
+| message | string | **This is only applied for agent_log type**  Details of the status |
+| error | string | **This is only applied for agent_log type**  Indicate what is wrong |
+| error_description | string | **This is only applied for agent_log type**  Details of the error |
 
-## [Example](/docs/macloud-sdp/developer-guide/get-reports-v3-0#example)
+## [Example](/docs/cm/developer-guidelines/get-reports-v3-0#example)
 
-## [GET OS Patches Summary Report](/docs/macloud-sdp/developer-guide/get-reports-v3-0#get-os-patches-summary-report)
+## [GET OS Patches Summary Report](/docs/cm/developer-guidelines/get-reports-v3-0#get-os-patches-summary-report)
 
 **Request Example**
 
@@ -55,7 +57,7 @@ https://gears.opswat.com/o/api/v3/get_reports?type=os_patch_summary&access_token
 | 1 | critical_update | KB3115040 | Update for Microsoft Project 2013 32-Bit Edition | Microsoft has released an update for Microsoft Project 2013 32-Bit Edition. | Office 2013 | Microsoft Corporation | unknown | 1 |
 | 2 | critical_update | KB3115039 | Update for Microsoft OneDrive for Business 32-Bit Edition | Microsoft has released an update for Microsoft OneDrive for Business 32-Bit Edition. | Office 2013 | Microsoft Corporation | unknown | 1 |
 
-## [GET Devices Which Missing a Specific OS Patch Report](/docs/macloud-sdp/developer-guide/get-reports-v3-0#get-devices-which-missing-a-specific-os-patch-report)
+## [GET Devices Which Missing a Specific OS Patch Report](/docs/cm/developer-guidelines/get-reports-v3-0#get-devices-which-missing-a-specific-os-patch-report)
 
 **Request Example**
 
@@ -69,7 +71,7 @@ https://gears.opswat.com/o/api/v3/get_reports?type=device_missing_os_patch&kb=KB
 | No. | Device ID | Device Name | Username |
 | 1 | 3AD89B1F7647455889897B5D2A63D15A | WSEVN20 | bob |
 
-## [GET Missing OS Patches on Device](/docs/macloud-sdp/developer-guide/get-reports-v3-0#get-missing-os-patches-on-device)
+## [GET Missing OS Patches on Device](/docs/cm/developer-guidelines/get-reports-v3-0#get-missing-os-patches-on-device)
 
 **Request Example**
 
@@ -82,7 +84,7 @@ https://gears.opswat.com/o/api/v3/get_reports?type=missing_os_patch&id=00:0c:29:
 | No. | Category | KB Number | Title | Description | Product | Vendor | Severity |
 | 1 | update | KB3013816 | Update for Windows 8.1 for x64-based Systems | Install this update to resolve issues in Windows | Windows 8.1 | Microsoft Corporation | unknown |
 
-## [GET Fetch Log Reports](/docs/macloud-sdp/developer-guide/get-reports-v3-0#get-fetch-log-reports)
+## [GET Fetch Log Reports](/docs/cm/developer-guidelines/get-reports-v3-0#get-fetch-log-reports)
 
 **Request Example**
 
@@ -93,8 +95,8 @@ https://gears.opswat.com/o/api/v3/get_reports?type=agent_log&command_id=5c2c59e9
 - ***Successful***
 
   - HTTP 200
-  - Response: a zip file. It contains MetaAccess agent logs
-- ***Command ID is valid but MetaAccess agent log is not available***
+  - Response: a zip file. It contains MetaDefender Endpoint logs
+- ***Command ID is valid but MetaDefender Endpoint log is not available***
 
   - HTTP 202
   - Response: json
@@ -126,8 +128,8 @@ https://gears.opswat.com/o/api/v3/get_reports?type=agent_log&command_id=5c2c59e9
 "error" : "invalid_request",
 "error_description" : "Command not found"
 }
-## [History](/docs/macloud-sdp/developer-guide/get-reports-v3-0#history)
+## [History](/docs/cm/developer-guidelines/get-reports-v3-0#history)
 
 | API | Version | URL |
 | --- | --- | --- |
-| Get Reports | 2.0 | [Get Reports v2.0](/docs/macloud-sdp/developer-guide/get-reports-v2-0) |
+| Get Reports | 2.0 | [Get Reports v2.0](/docs/cm/developer-guidelines/get-reports-v2-0) |

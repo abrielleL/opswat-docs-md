@@ -1,36 +1,29 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/release-notes/splunk-add-on -->
 
-# Splunk Add-on
+# Installation
 
-**Release History**
+Summarize Page    Connect to Cursor Connect to VS Code
 
-## [3.0.0](/docs/macloud-sdp/release-notes/splunk-add-on#300)
+This Add-on is supported on all tiers of a distributed Splunk platform deployment and also on standalone Splunk instances. The table below provides a reference for installing the add-on in a distributed Splunk deployment:
 
-Additional features added to this version:
+| **Splunk instance type** | **Supported** | **Required** | **Comments** |
+| --- | --- | --- | --- |
+| Search Heads | Yes | Yes | All the search time extraction rules takes place on Search Heads |
+| Indexers | Yes | No | All data parsing will be done on heavy forwarder only. |
+| Heavy Forwarders | Yes | Yes | This Add-on supports only heavy forwarder for data collection. |
+| Universal Forwarder | No | No | This Add-on contains Python Scripts to make API calls, hence not supported on Universal Forwarder |
 
-- Upgraded Get Logs API to v3.2 for MetaAccess Logs input
-- Added support for additional Event category "Device Report" to MetaAccess Logs input
-- Upgraded Get Device Details API to v3.4 for MetaAccess Device Logs input
-- Added Device Username in device Vulnerabilities events.
-- Separated List of Vulnerabilities for a given device into Separate events to avoid Multi-value field handling for user while writing search query for Vulnerability events.
-- Fixed a bug in MetaAccess Device Logs input where in certain situations, the Additional API calls for get Device Details and get CVE keep getting skipped for certain Event Triggers selected by User while creating input.
+You can follow the below steps to install the OPSWAT Add-on for Splunk
 
-## [2.0.0](/docs/macloud-sdp/release-notes/splunk-add-on#200)
+1. Download the Add-on from Splunkbase [here](https://splunkbase.splunk.com/app/5530/)
+2. Install the Add-on on your Search Heads and Heavy Forwarder of distributed deployment, you can also install it on IDM if you are on Splunk Cloud.
 
-Additional features added to this version:
+   1. Login to Splunk server and go to “Manage Apps”, select “install app from File” button and upload the bundle downloaded in step 1.
+   2. Alternatively, you can also extract the bundle in the backend at $SPLUNK_HOME/etc/apps,*where*$SPLUNK_HOME_is your Splunk installation directory.
+3. After installation, restart the Splunk service.
 
-- A new input, MetaAccess Device Logs, allows admins to retrieve device event logs as well as device details and device CVEs for certain events such as when the device becomes non-compliant or device has reported issues.
+You can find more details on how to install an add-on based on your deployment type below:
 
-## [1.1.0 - May 03, 2021](/docs/macloud-sdp/release-notes/splunk-add-on#110---may-03-2021)
-
-This is the first version.
-
-Features supported in this release
-
-- Allow an admin configure MetaAccess accounts where the admin would like to collect data from
-- Admins can define inputs to collect data from MetaAccess accounts
-
-  - MetaAccess Logs Input: admins can retrieve event logs from an account. This input will retrieve event logs incremental by its interval.
-  - MetaAccess API Input: admins can retrieve data such as devices, account information, vulnerabilities from an account. This input will retrieve the current data at the time it runs by its interval
-  - Get Admin Logs, Get Device Logs, Get Vulnerabilities, Get Account Details, and Get Devices inputs OOTB
-- Admins can configure a log level, and proxy settings
+- [Single-instance Splunk Enterprise](https://docs.splunk.com/Documentation/AddOns/latest/Overview/Singleserverinstall)
+- [Distributed Splunk Enterprise](https://docs.splunk.com/Documentation/AddOns/latest/Overview/Distributedinstall)
+- [Splunk Cloud](https://docs.splunk.com/Documentation/AddOns/latest/Overview/SplunkCloudinstall)

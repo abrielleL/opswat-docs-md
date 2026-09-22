@@ -4,6 +4,23 @@
 
 Effective **August 1, 2026**, OPSWAT will discontinue offering the **RocketCyber anti-malware** engine for both **Windows** and **Linux** platforms and it will no longer be included in OPSWAT product bundles. **This change is due to the vendor’s end-of-life (EOL) announcement and discontinuation of support for the engine**.
 
+### [V 4.2.14](/docs/mdcore/v5.22.0/release-notes/metascan-release-notes#v-4214)
+
+Release date: 9/16/2026
+
+- Upgrade Gridinsoft Windows updater
+
+  - Delta check added
+- Engine update for Trellix - Linux
+
+  - Result mapping adjusted
+- Engine update for Trellix - Windows
+
+  - Result mapping adjusted
+- Upgrade OPSWAT Predictive Alin AI Linux SDK to 3.5.0
+- Upgrade OPSWAT Predictive Alin AI Windows SDK to 3.5.0
+- Upgrade OPSWAT Predictive Alin AI Cloud Linux SDK to 3.5.0
+
 ### [V 4.2.13](/docs/mdcore/v5.22.0/release-notes/metascan-release-notes#v-4213)
 
 Release date: 8/31/2026

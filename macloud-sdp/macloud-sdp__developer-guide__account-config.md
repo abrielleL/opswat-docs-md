@@ -2,6 +2,8 @@
 
 # Account Config
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 3.1 |
 | --- | --- |
 | Last Update | 10/22/2019 |
@@ -14,31 +16,31 @@
 
 Use this API to retrieve account settings.
 
-## [API URL](/docs/macloud-sdp/developer-guide/account-config#api-url)
+## [API URL](/docs/cm/developer-guidelines/account-config#api-url)
 
 https://gears.opswat.com/o/api/v3.1/configuration
-## [Request Parameters](/docs/macloud-sdp/developer-guide/account-config#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/account-config#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
 | sections | Array of strings | Body | Yes | Specify which settings to fetch information. Available options:   - cross-domain-api: Cross-domain API setting - regcode: a registration code for mobile devices to enroll to the account |  |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/account-config#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/account-config#response-http-code)
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See details in the Response HTTP Code section in [this page](/docs/cm/developer-guidelines/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/account-config#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/account-config#response-parameters)
 
 | Key | Datatype | Description |
 | --- | --- | --- |
-| <setting_name> | object | a setting name in the request. Depend on settings, object will have different keys in response |
+| <setting_name> | object | a setting name in the request.  Depend on settings, object will have different keys in response |
 | cross-domain-api | object | Cross-domain API setting |
 | cross-domain-api.enabled | number | Values:   - 1: API is enable on endpoints at the configured port - 0: API is disable on endpoints |
 | cross-domain-api.port | number | port number which the cross-domain API is listening on endpoints |
 | regcode | string | Account specific registration Shortcode |
 
-## [Example](/docs/macloud-sdp/developer-guide/account-config#example)
+## [Example](/docs/cm/developer-guidelines/account-config#example)
 
 **Request Example**
 
@@ -59,8 +61,8 @@ Request Body:
 },
 "regcode": "EZ3ESTSY"
 }
-## [History](/docs/macloud-sdp/developer-guide/account-config#history)
+## [History](/docs/cm/developer-guidelines/account-config#history)
 
 | Action | Version | URL |
 | --- | --- | --- |
-| Account Config | 3.0 | [Account Config v3.0](/docs/macloud-sdp/developer-guide/account-config-v3-0) |
+| Account Config | 3.0 | [Account Config v3.0](https://www.opswat.com/docs/macloud-sdp/developer-guide/account-config-v3-0) |

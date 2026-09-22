@@ -28,6 +28,7 @@ The file must be placed exactly in this path for the installation process to det
 The `postgres_ssl.conf` file should contain the following PostgreSQL SSL parameters. Replace the placeholders with the absolute paths to your certificate, key, and CA files:
 
 BashCopyssl = on
+ssl_groups = 'prime256v1'
 ssl_ciphers = 'HIGH:MEDIUM:+3DES:!aNULL'
 ssl_prefer_server_ciphers = on
 ssl_cert_file = '<absolute_path_to_cert_file>'
@@ -37,11 +38,18 @@ ssl_ca_file = '<absolute_path_to_root_ca_cert_file>'
 For example, in Linux
 
 BashCopyssl = on
+ssl_groups = 'prime256v1'
 ssl_ciphers = 'HIGH:MEDIUM:+3DES:!aNULL'
 ssl_prefer_server_ciphers = on
 ssl_cert_file = '/etc/tmp_cert/server.crt'
 ssl_key_file = '/etc/tmp_cert/server.key'
 ssl_ca_file = '/etc/tmp_cert/root.crt'
+
+**FIPS 140-3 Compliant Configuration from MetaDefender Core 5.22.0**
+
+From MetaDefender Core 5.22.0, the bundled PostgreSQL ships with a FIPS 140-3 validated OpenSSL module. On these versions, non-approved algorithms such as X25519 are unavailable to the database server regardless of configuration.
+
+Please note that the PostgreSQL [default](https://www.postgresql.org/docs/18/runtime-config-connection.html) for `ssl_groups` is `X25519:prime256v1`, which is not supported on these deployments. Specify only approved groups in `postgres_ssl.conf` - if the configuration references an algorithm the module does not provide, the PostgreSQL service fails to start. This applies only to standalone deployments using the bundled PostgreSQL.
 
 Users can store the cert/key files in any place, but please make sure that the cert/key files have the right permissions, so MetaDefender Core can copy them to the right location. For example, in Linux, the files need to have **read permission** for other users. Users can use this command in Linux to set the permissions
 

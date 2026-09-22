@@ -2,6 +2,8 @@
 
 # Link User
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 2.0 |
 | --- | --- |
 | Last Update | 0 8/28/2014 |
@@ -13,31 +15,31 @@
 
 Use to associate user with given MAC address or HWID.
 
-## [API URL](/docs/macloud-sdp/developer-guide/link-user#api-url)
+## [API URL](/docs/cm/developer-guidelines/link-user#api-url)
 
 https://gears.opswat.com/o/api/v2/devices/:value/link_user
-## [Request Parameters](/docs/macloud-sdp/developer-guide/link-user#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/link-user#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
 | value | string | URL | Yes | HWID of MAC address of the device |  |
-| opt | int | URL | Optional | Specific which kind of data we put in *value* parameter 0 - MAC address 1 - HWID | 0 |
+| opt | int | URL | Optional | Specific which kind of data we put in *value* parameter  0 - MAC address 1 - HWID | 0 |
 | username | string | Body | Yes | User associates to the device. Length of *username* parameter should be in [1..256] |  |
 | group | string | Body | Optional | Group name of the user who associated to the device. Length of *group* parameter should be in [1..256] |  |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/link-user#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/link-user#response-http-code)
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See details in the Response HTTP Code section in [this page](/docs/cm/developer-guidelines/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/link-user#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/link-user#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
 | result | int | **0** - failure **1** - success |
 | msg | string | Result details |
 
-## [Example](/docs/macloud-sdp/developer-guide/link-user#example)
+## [Example](/docs/cm/developer-guidelines/link-user#example)
 
 **Example Request:**
 

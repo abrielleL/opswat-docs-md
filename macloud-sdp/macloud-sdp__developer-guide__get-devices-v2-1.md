@@ -2,6 +2,8 @@
 
 # Get Devices v2.1
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 2.1 |
 | --- | --- |
 | Last Update | 01/30/2018 |
@@ -14,20 +16,20 @@
 
 Use to get all devices on a given account
 
-## [API URL](/docs/macloud-sdp/developer-guide/get-devices-v2-1#api-url)
+## [API URL](/docs/cm/developer-guidelines/get-devices-v2-1#api-url)
 
 https://gears.opswat.com/o/api/v2.1/devices
-## [Request Parameters](/docs/macloud-sdp/developer-guide/get-devices-v2-1#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/get-devices-v2-1#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
 | limit | int | URL | Optional | Specific maximum number of devices will be returned in the response. The value should be in [1,50]. If there are more devices than what the limit asks for, error code will be 406. | 1 |
 | page | int | URL | Optional | Specific page number which devices will be returned in. If the requested page exceeds the number of pages of devices, error code will be 413. It means that the requested page number is too large, no devices will be returned in this case. | 1 |
-| GroupBy | string | URL | Optional | Specific how to group devices. Values can be:**none** - No need to group devices**hwid** - HWID**host** - hostname**issues** - number of issues | none |
-| order | string | URL | Optional | Sort order. Values can be: **des** - descending.**asc** - ascending. | des |
+| GroupBy | string | URL | Optional | Specific how to group devices. Values can be:  **none** - No need to group devices **hwid** - HWID **host** - hostname **issues** - number of issues | none |
+| order | string | URL | Optional | Sort order. Values can be:  **des** - descending. **asc** - ascending. | des |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/get-devices-v2-1#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/get-devices-v2-1#response-http-code)
 
 | HTTP Code | Description |
 | --- | --- |
@@ -36,17 +38,17 @@ https://gears.opswat.com/o/api/v2.1/devices
 | 406 | Too many devices to return |
 | 413 | Requested page number exceeds limit |
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/get-devices-v2-1#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/get-devices-v2-1#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
 | hwid | string | Hardware ID of the device |
 | remediation_link | string | URL on remediation page for given device |
-| status | int | Reports the compliance status of the endpoint. This status is based on the defined policy within MetaAccess. Status values are:   - **0** – the endpoint is in compliance with MetaAccess account’s policies - **1** – the endpoint is **not** in compliance with MetaAccess account’s policies - **3** – the endpoint is still sending information to MetaAccess and not yet completed |
+| status | int | Reports the compliance status of the endpoint. This status is based on the defined policy within My OPSWAT Central Management.  Status values are:   - **0** – the endpoint is in compliance with My OPSWAT Central Management account’s policies - **1** – the endpoint is **not** in compliance with My OPSWAT Central Management account’s policies - **3** – the endpoint is still sending information to My OPSWAT Central Management and not yet completed |
 | hostname | string | Hostname of the device |
 | nickname | string | nickname for the device (admin editable) |
-| agent_version | string | Local resident MetaAccess agent version |
-| last_seen | string | The last timestamp in GMT format when MetaAccess agent reports its data to Cloud |
+| agent_version | string | Local resident MetaDefender Endpoint version |
+| last_seen | string | The last timestamp in GMT format when MetaDefender Endpoint reports its data to Cloud |
 | machine_type | string | The type of devices |
 | country | string | Region where the device IP geographically represents |
 | active | int | 1 - device is connected to Cloud, 0 - disconnected |
@@ -57,7 +59,7 @@ https://gears.opswat.com/o/api/v2.1/devices
 | user_info.domain | string | Currently logged in user domain |
 | os_info | object | Operation system block |
 | os_info.family | string | OS family |
-| [os_info.name](http://os_info.name/) | string | OS name |
+| os_info.name | string | OS name |
 | os_info.vendor | string | OS vendor |
 | os_info.version | string | OS version |
 | os_info.service_pack_version | string | OS Service Pack Version |
@@ -69,10 +71,10 @@ https://gears.opswat.com/o/api/v2.1/devices
 | network_info.ipv4_addr | string | IPV4 address |
 | network_info.ipv6_addr | string | IPV6 address |
 | total_critical_issue | int | Number of critical issues were seen on the device |
-| critical_status | int | This critical status is based on the defined policy within MetaAccess. This status apply for the whole device. Critical status values are:   - **0** – the endpoint doesn't have critical issues - **1** – the endpoint has critical issues - **2** – the endpoint is not found |
-| exempt | int | Exempt status of the endpoint device. Exempt values are:   - **0** – Endpoint device is not exempted - **1** – Endpoint device is exempted |
+| critical_status | int | This critical status is based on the defined policy within My OPSWAT Central Management. This status apply for the whole device.  Critical status values are:   - **0** – the endpoint doesn't have critical issues - **1** – the endpoint has critical issues - **2** – the endpoint is not found |
+| exempt | int | Exempt status of the endpoint device.  Exempt values are:   - **0** – Endpoint device is not exempted - **1** – Endpoint device is exempted |
 
-## [Example](/docs/macloud-sdp/developer-guide/get-devices-v2-1#example)
+## [Example](/docs/cm/developer-guidelines/get-devices-v2-1#example)
 
 **Example Request**
 

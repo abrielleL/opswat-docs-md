@@ -2,6 +2,8 @@
 
 # Device Policy Check v2.0
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 2.0 |
 | --- | --- |
 | Last Update | 10/14/2014 |
@@ -13,18 +15,18 @@
 
 Use to fetch compliance status of a given device
 
-## [API URL](/docs/macloud-sdp/developer-guide/device-policy-check-v2-0#api-url)
+## [API URL](/docs/cm/developer-guidelines/device-policy-check-v2-0#api-url)
 
 https://gears.opswat.com/o/api/v2/devices/:value/policy_check
-## [Request Parameters](/docs/macloud-sdp/developer-guide/device-policy-check-v2-0#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/device-policy-check-v2-0#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
-| verbose | int | URL | Optional | 1 - extra detailed information will return in response0 - response does not include detailed information | 0 |
-| opt | int | URL | Optional | **0 -** MAC address**1** - HWID**3** - SSID | 0 |
+| verbose | int | URL | Optional | 1 - extra detailed information will return in response 0 - response does not include detailed information | 0 |
+| opt | int | URL | Optional | **0 -** MAC address **1** - HWID **3** - SSID | 0 |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/device-policy-check-v2-0#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/device-policy-check-v2-0#response-http-code)
 
 | HTTP Code | Description |
 | --- | --- |
@@ -32,7 +34,7 @@ https://gears.opswat.com/o/api/v2/devices/:value/policy_check
 | 401 | Unauthorized. Your access_token is invalid or expired |
 | 404 | Not found |
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/device-policy-check-v2-0#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/device-policy-check-v2-0#response-parameters)
 
 | Key | Datatype | Description |
 | --- | --- | --- |
@@ -41,10 +43,10 @@ https://gears.opswat.com/o/api/v2/devices/:value/policy_check
 | location | string | (Not available, reserved for future) location in Policy manager. |
 | device_type | string | device type (laptop, desktop, vm, server, phone) of device. |
 | os_type | string | operating system type |
-| status | int | Device status. This status is based on the defined policy within MetaAccess. Status values are:   - **0** – the endpoint is in compliance with MetaAccess account’s policies - **1** – the endpoint is **not** in compliance with MetaAccess account’s policies - **2** – the endpoint is not found, it means that the endpoint does not have the MetaAccess agent installed - **3** – the endpoint is still sending information to MetaAccess and not yet completed |
+| status | int | Device status. This status is based on the defined policy within My OPSWAT Central Management.  Status values are:   - **0** – the endpoint is in compliance with My OPSWAT Central Management account’s policies - **1** – the endpoint is **not** in compliance with My OPSWAT Central Management account’s policies - **2** – the endpoint is not found, it means that the endpoint does not have the MetaDefender Endpoint installed - **3** – the endpoint is still sending information to My OPSWAT Central Management and not yet completed |
 | total_issue | int | Number of issues were seen on the device |
 | total_critical_issue | int | Number of critical issues were seen on the device |
-| critical_status | int | This critical status is based on the defined policy within MetaAccess. This status apply for the whole device. Critical status values are:   - **0** – the endpoint doesn't have critical issues - **1** – the endpoint has critical issues |
+| critical_status | int | This critical status is based on the defined policy within My OPSWAT Central Management. This status apply for the whole device.  Critical status values are:   - **0** – the endpoint doesn't have critical issues - **1** – the endpoint has critical issues |
 | last_seen | string | timestamp of the last time when the endpoint device sent a health report to the server. |
 | issues | array<object> | Lists any/all issues of given endpoint device. If a device is without issue, the issues array will appear blank (as shown in the example below). For those devices with issues, each issue will be listed out within *issue_text* (as shown in the example below). |
 | issues.<category_group> | array<object> | issues found in a category group on the device |
@@ -68,7 +70,7 @@ https://gears.opswat.com/o/api/v2/devices/:value/policy_check
 | infections.threats.ip_address | string | IP which a device connecting to |
 | infections.threats.status | string | indicates the scanning object is clear, dirty or in-progress |
 | infections.threats.details | array<object> | details of the IP connections |
-| infections.threats.details.source_name | string | Source of the feed, usually the domain where the feed is from (e.g., [example.com](http://example.com) ) |
+| infections.threats.details.source_name | string | Source of the feed, usually the domain where the feed is from (e.g., [example.com](http://example.com)) |
 | infections.threats.details.assessment | string | Type of threat detected |
 | infections.threats.details.confident | string | Represents the reliability of the detection based on several factors. The higher the score, the more reliable the result. |
 | infections.threats.geo_info | object | An object represents the geolocation of address |
@@ -82,13 +84,13 @@ https://gears.opswat.com/o/api/v2/devices/:value/policy_check
 | infections.total_sources | int | number of source of the feed |
 | infections.last_report | string | the timestamp in GMT format when agent reported threat log from local anti-malware products |
 
-## [Example](/docs/macloud-sdp/developer-guide/device-policy-check-v2-0#example)
+## [Example](/docs/cm/developer-guidelines/device-policy-check-v2-0#example)
 
 **Example Request (verbose = 0)**
 
 https://gears.opswat.com/o/api/v2.2/devices/TEST-59EHS/policy_check?opt=1&access_token=TEST7P9ZMJ2LBF8AMOMJLFNPMMLO953AVQ4C9YFF52R61234
 
-**Example Response **(verbose = 0)****
+**Example Response** **(verbose = 0)**
 
 {
 "status": 0,
@@ -98,11 +100,11 @@ https://gears.opswat.com/o/api/v2.2/devices/TEST-59EHS/policy_check?opt=1&access
 "total_critical_issue": 0
 }
 
-**Example Request **(verbose = 1)****
+**Example Request** **(verbose = 1)**
 
 https://gears.opswat.com/o/api/v2.2/devices/TEST-59EHS/policy_check?verbose=1&opt=1&access_token=TEST7P9ZMJ2LBF8AMOMJLFNPMMLO953AVQ4C9YFF52R61234
 
-**Example Response for Wins/macOS devices **(verbose = 1)****
+**Example Response for Wins/macOS devices** **(verbose = 1)**
 
 {
 "last_seen": "2017-03-22T02:36:00Z",
@@ -176,7 +178,7 @@ https://gears.opswat.com/o/api/v2.2/devices/TEST-59EHS/policy_check?verbose=1&op
 "status": 1
 }
 
-**Example Response for iOS/Android devices **(verbose = 1)****
+**Example Response for iOS/Android devices** **(verbose = 1)**
 
 {
 "last_seen": "2017-03-22T02:25:38Z",

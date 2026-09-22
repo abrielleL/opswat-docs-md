@@ -1,6 +1,6 @@
 <!-- source: https://www.opswat.com/docs/cm/knowledge-base/how-do-i-solve-secure-it-access-issues- -->
 
-# How do I solve Secure Access Issues?
+# How do I solve Secure IT Access Issues?
 
 > **Info:**
 >
@@ -16,3 +16,7 @@ Please visit the known environmental issues below for detailed remediation instr
 > **Support:**
 >
 > If you believe to have an environmental issue that is not listed in this document, please open a [Support Case](https://my.opswat.com/portal/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

@@ -2,6 +2,8 @@
 
 # Analysis mode
 
+The **Analysis Mode** and **Blocking Mode** features in Deep CDR will be moved to Maintenance Mode for now. These capabilities have been migrated to the [File Structure Validation](https://www.opswat.com/docs/mdcore/file-structure-validation/what-is-file-structure-validation-engine-) modules, which provide more extensive and comprehensive functionality.
+
 If your integrations don't need to use the sanitized file, you can enable this configuration to have a better performance.
 
 To enable this feature: Workflow Management > [Workflow Name] > Deep CDR > Advanced > Enable Analysis Mode (the "Include Sanitization Details" must be enabled)

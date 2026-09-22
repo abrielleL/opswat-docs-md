@@ -2,6 +2,8 @@
 
 # Delete Devices v2.0
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 2.0 |
 | --- | --- |
 | Last Update | 08/19/2014 |
@@ -13,19 +15,19 @@
 
 Use to delete devices on an account
 
-## [API URL](/docs/macloud-sdp/developer-guide/delete-devices-v2-0#api-url)
+## [API URL](/docs/cm/developer-guidelines/delete-devices-v2-0#api-url)
 
 https://gears.opswat.com/o/api/v2/devices/delete
-## [Request Parameters](/docs/macloud-sdp/developer-guide/delete-devices-v2-0#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/delete-devices-v2-0#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
-| opt | int | Body | Optional | 0 – Only uninstall client agent from device but keep the data in Cloud database1 – Remove Cloud database entry for the device as well as uninstall the client agent from device2 – Archive Cloud database entry for the device as well as uninstall the client agent from device | 1 |
+| opt | int | Body | Optional | 0 – Only uninstall client agent from device but keep the data in Cloud database  1 – Remove Cloud database entry for the device as well as uninstall the client agent from device  2 – Archive Cloud database entry for the device as well as uninstall the client agent from device | 1 |
 | MAC_list | array<string> | Body | Optional | MAC addresses of devices you want to delete. Don't use this parameter if you already use HWID_list in the body |  |
 | HWID_list | array<string> | Body | Optional | HWIDs of devices you want to delete. Don't use this parameter if you already use MAC_list in the body |  |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/delete-devices-v2-0#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/delete-devices-v2-0#response-http-code)
 
 | HTTP Code | Description |
 | --- | --- |
@@ -33,7 +35,7 @@ https://gears.opswat.com/o/api/v2/devices/delete
 | 400 | Bad request |
 | 401 | Unauthorized. Your access_token is invalid or expired |
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/delete-devices-v2-0#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/delete-devices-v2-0#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -44,7 +46,7 @@ Note: reasons cause failure in deleting a device
 - the cloud couldn't find any devices which reports the given MAC address or HWID
 - the given MAC address is invalid
 
-## [Example](/docs/macloud-sdp/developer-guide/delete-devices-v2-0#example)
+## [Example](/docs/cm/developer-guidelines/delete-devices-v2-0#example)
 
 **Example Request**
 

@@ -18,11 +18,9 @@ Follow below steps to integrate My OPSWAT Central Management with your Microsoft
 ## Step 2. Create AWS application on Microsoft Azure
 
 1. Log into Azure Portal as Administrator
-2. Click **Azure Active Directory** on the left navigation
+2. Click **Microsoft Entra ID** on the left navigation panel
 
-![](https://uploads.developerhub.io/prod/97qW/v4nz2hq51x1sf31o8fcuyvadmx4t6hntp30skxbzjh7hd0kn5vcqbwh9x5wuuktd.png)
-
-The Azure Active Directory button
+![Microsoft Entra ID Button](https://uploads.developerhub.io/prod/97qW/6b8rekce49zelianxfwo5wg037ecv0b21qfdtnera29oco3h74t1sfgni1jyt2ly.png)
 
 3. Navigate to **Enterprise applications >** **All applications**.
 
@@ -119,3 +117,7 @@ The Enterprise applications blade
 ## Step 6: Test your integration
 
 Follow guideline at [Test Your Integration ](https://www.opswat.com/docs/cm/secure-access-solution/test-your-integration)to verify if it works as your expectation.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

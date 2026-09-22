@@ -1,0 +1,25 @@
+<!-- source: https://www.opswat.com/docs/cm/knowledge-base/encryption-remediation-instruction -->
+
+# How do I solve Encryption issues on MetaDefender Endpoint/My OPSWAT Central Management devices?
+
+> **Check Your Product:**
+>
+> This article applies to the current My OPSWAT Central Management Console and API, and all MetaDefender Endpoint releases deployed on Windows, macOS and Linux systems.
+
+Users running MetaDefender Endpoint on one or more Windows, macOS or Linux devices may occasionally see My OPSWAT Central Management device compliance warnings/flags related to **Encryption**.
+
+These warnings/flags are triggered by device issues and will appear under **My OPSWAT Central Management** **Console>Inventory>Devices>Relevant Device>Detailed Device Information>Deep Compliance>Encryption**.
+
+For detailed remediation instructions on encryption-related device compliance issues, please select the relevant operating system from the list below.
+
+- [How do I solve BitLocker drive encryption issues on MetaDefender Endpoint devices?](https://www.opswat.com/docs/cm/knowledge-base/how-do-i-solve-bitlocker-drive-encryption-issues-on-metadefender)
+- [How do I solve FileVault issues on MetaDefender Endpoint/MetaDefender IT Access devices?](https://www.opswat.com/docs/cm/knowledge-base/how-do-i-solve-filevault-issues-on-metadefender-endpoint-device)
+- [How do I solve encryption issues on MetaDefender Endpoint/My OPSWAT Central Mangement VM devices using Cryptsetup?](https://www.opswat.com/docs/cm/knowledge-base/how-do-i-solve-encryption-issues-on-opswat-client-metaaccess-vm-)
+
+> **Support:**
+>
+> If your **Encryption Product Is Not Covered In Any Of The Linked Guidelines Above**, or if you have followed the relevant guidelines but **Continue To Experience Encryption Issues On Your** **MetaDefender Endpoint/My OPSWAT Central Management** **Devices**, please open a [Support Case](https://my.opswat.com/portal/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

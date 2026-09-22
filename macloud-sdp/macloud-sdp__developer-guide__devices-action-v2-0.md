@@ -2,6 +2,8 @@
 
 # Devices Action v2.0
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 2.0 |
 | --- | --- |
 | Last Update | 01/12/2015 |
@@ -13,20 +15,20 @@
 
 Use to send a remote command to given devices
 
-## [API URL](/docs/macloud-sdp/developer-guide/devices-action-v2-0#api-url)
+## [API URL](/docs/cm/developer-guidelines/devices-action-v2-0#api-url)
 
 https://gears.opswat.com/o/api/v2/devices/action
-## [Request Parameters](/docs/macloud-sdp/developer-guide/devices-action-v2-0#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/devices-action-v2-0#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
-| opt | int | Body | Optional | **0 -** MAC address**1** - HWID | 0 |
-| types | string | Body | Yes | The action type: dhcprenew - renew ip address for network interfaces on devices. exempt_all - exempt devices. unexempt - unexempt devices. |  |
-| MAC_list | array<string> | Body | Optional | MAC addresses of devices you want to send remote command. \ *The request body must have MAC_list parameter or HWID_list parameter, but not both.* |  |
-| HWID_list | array<string> | Body | Optional | HWIDs of devices you want to send remote command. **The request body must have MAC_list parameter or HWID_list parameter, but not both*.* |  |
+| opt | int | Body | Optional | **0 -** MAC address **1** - HWID | 0 |
+| types | string | Body | Yes | The action type:  dhcprenew - renew ip address for network interfaces on devices. exempt_all - exempt devices. unexempt - unexempt devices. |  |
+| MAC_list | array<string> | Body | Optional | MAC addresses of devices you want to send remote command. \  *The request body must have MAC_list parameter or HWID_list parameter, but not both.* |  |
+| HWID_list | array<string> | Body | Optional | HWIDs of devices you want to send remote command.  **The request body must have MAC_list parameter or HWID_list parameter, but not both*.* |  |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/devices-action-v2-0#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/devices-action-v2-0#response-http-code)
 
 | HTTP Code | Description |
 | --- | --- |
@@ -35,7 +37,7 @@ https://gears.opswat.com/o/api/v2/devices/action
 | 401 | Unauthorized. Your access_token is invalid or expired |
 | 404 | Not found |
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/devices-action-v2-0#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/devices-action-v2-0#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -46,7 +48,7 @@ Note: reasons can cause failure
 - the cloud couldn't find any devices which reports the given MAC address or HWID
 - the given MAC address is invalid
 
-## [Example](/docs/macloud-sdp/developer-guide/devices-action-v2-0#example)
+## [Example](/docs/cm/developer-guidelines/devices-action-v2-0#example)
 
 **Example Request**
 

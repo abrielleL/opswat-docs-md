@@ -2,6 +2,8 @@
 
 # Application Details
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 3.0 |
 | --- | --- |
 | Last Update | 06/14/2018 |
@@ -14,23 +16,23 @@
 
 Use to get application details which installed on endpoints on an account.
 
-## [API URL](/docs/macloud-sdp/developer-guide/application-details#api-url)
+## [API URL](/docs/cm/developer-guidelines/application-details#api-url)
 
 https://gears.opswat.com/o/api/v3/apps/details
-## [Request Parameters](/docs/macloud-sdp/developer-guide/application-details#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/application-details#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
 | product_id | string | body | Yes | OPSWAT signature id of a product |  |
 | version | string | body | Yes | Product version |  |
-| verbose.cves | interger | body | No | Specify if CVEs information is included on the response Values can be:   - 0: not include - 1: include | 0 |
+| verbose.cves | interger | body | No | Specify if CVEs information is included on the response  Values can be:   - 0: not include - 1: include | 0 |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/application-details#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/application-details#response-http-code)
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See details in the Response HTTP Code section in [this page](/docs/cm/developer-guidelines/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/application-details#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/application-details#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -54,7 +56,7 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | cves.cvss2_score | double | Common vulnerability scoring system v2.0 |
 | cves.cvss3_score | double | Common vulnerability scoring system v3.0 |
 
-## [Example](/docs/macloud-sdp/developer-guide/application-details#example)
+## [Example](/docs/cm/developer-guidelines/application-details#example)
 
 **Example Request with verbose as 0**
 

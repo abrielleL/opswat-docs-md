@@ -2,6 +2,8 @@
 
 # Search Devices v2.1
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 2.1 |
 | --- | --- |
 | Last Update | 01/30/2018 |
@@ -14,20 +16,20 @@
 
 Use to query devices on a given account
 
-## [API URL](/docs/macloud-sdp/developer-guide/search-devices-v2-1#api-url)
+## [API URL](/docs/cm/developer-guidelines/search-devices-v2-1#api-url)
 
 https://gears.opswat.com/o/api/v2.1/devices/search
-## [Request Parameters](/docs/macloud-sdp/developer-guide/search-devices-v2-1#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/search-devices-v2-1#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
-| q | string | URL | Yes | Specific search keywords, as well as any qualifiers. Multi-words are separated by **+**, for example Tomas Hertus is searched as tomas+hertus.Minimum of characters is **3**. Maximum of characters is **100** |  |
+| q | string | URL | Yes | Specific search keywords, as well as any qualifiers. Multi-words are separated by **+**, for example Tomas Hertus is searched as tomas+hertus. Minimum of characters is **3**. Maximum of characters is **100** |  |
 | in | string | URL | Yes | Qualifies which fields are used for search. The caller of the API is responsible for providing this information. |  |
-| limit | int | URL | Optional | Specific maximum number of devices will be returned in the response. The value should be in [1,50]. If there are more devices than what the limit asks for, error code will be 406.**Maximum value is 50** | 10 |
+| limit | int | URL | Optional | Specific maximum number of devices will be returned in the response. The value should be in [1,50]. If there are more devices than what the limit asks for, error code will be 406. **Maximum value is 50** | 10 |
 | page | int | URL | Optional | Specific page number which devices will be returned in. If the requested page exceeds the number of pages of devices, error code will be 413. It means that the requested page number is too large, no devices will be returned in this case. | 1 |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/search-devices-v2-1#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/search-devices-v2-1#response-http-code)
 
 | HTTP Code | Description |
 | --- | --- |
@@ -38,7 +40,7 @@ https://gears.opswat.com/o/api/v2.1/devices/search
 | 406 | Too many devices to return |
 | 413 | Requested page number exceeds limit |
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/search-devices-v2-1#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/search-devices-v2-1#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -46,11 +48,11 @@ https://gears.opswat.com/o/api/v2.1/devices/search
 | results | array<object> | Lists of devices which match to search criteria |
 | results.hwid | string | Hardware ID of the device |
 | results.remediation_link | string | URL on remediation page for given device |
-| results.status | int | Reports the health status of the endpoint device. This status is based on the defined policy within . Status values are:   - **0** – the endpoint is in compliance with MetaAccess account’s policies - **1** – the endpoint is **not** in compliance with MetaAccess account’s policies - **3** – the endpoint is still sending information to and not yet completed |
+| results.status | int | Reports the health status of the endpoint device. This status is based on the defined policy within .  Status values are:   - **0** – the endpoint is in compliance with My OPSWAT Central Management account’s policies - **1** – the endpoint is **not** in compliance with My OPSWAT Central Management account’s policies - **3** – the endpoint is still sending information to and not yet completed |
 | results.hostname | string | Hostname of the device |
 | results.nickname | string | nickname for the device (admin editable) |
-| results.agent_version | string | Local resident MetaAccess agent version |
-| results.last_seen | string | The last timestamp in GMT format when MetaAccess agent reports its data to Cloud |
+| results.agent_version | string | Local resident MetaDefender Endpoint version |
+| results.last_seen | string | The last timestamp in GMT format when MetaDefender Endpoint reports its data to Cloud |
 | results.machine_type | string | The type of devices |
 | results.country | string | Region where the device IP geographically represents |
 | results.active | int | 1 - device is active, 0 - deactive |
@@ -73,7 +75,7 @@ https://gears.opswat.com/o/api/v2.1/devices/search
 | results.network_info.ipv4_addr | string | IPV4 address |
 | results.network_info.ipv6_addr | string | IPV6 address |
 
-## [Example](/docs/macloud-sdp/developer-guide/search-devices-v2-1#example)
+## [Example](/docs/cm/developer-guidelines/search-devices-v2-1#example)
 
 **Example Request**
 

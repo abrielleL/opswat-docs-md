@@ -1,6 +1,8 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/secure-access/common-used-application-setup -->
 
-# Commonly Used Application Setup
+# Common Used Applications
+
+Summarize Page    Connect to Cursor Connect to VS Code
 
 Typical port and protocols for integrating applications with Software Defined Perimeter(SDP):
 

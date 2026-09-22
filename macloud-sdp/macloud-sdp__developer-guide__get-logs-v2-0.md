@@ -2,6 +2,8 @@
 
 # Get Logs v2.0
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 2.0 |
 | --- | --- |
 | Last Update | 10/25/2014 |
@@ -13,19 +15,19 @@
 
 To retrieve event logs on your account.
 
-## [API URL](/docs/macloud-sdp/developer-guide/get-logs-v2-0#api-url)
+## [API URL](/docs/cm/developer-guidelines/get-logs-v2-0#api-url)
 
 https://gears.opswat.com/o/api/v2/logs
-## [Request Parameters](/docs/macloud-sdp/developer-guide/get-logs-v2-0#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/get-logs-v2-0#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
 | limit | int | URL | Optional | Specific maximum number of event logs will be returned in the response. The value should be in [1,50]. If there are more event logs than what the limit asks for, error code will be 406. Event logs in response is ordered by date. | 1 |
 | page | int | URL | Optional | Specific page number which event logs will be returned in. If the requested page exceeds the number of pages of event logs, error code will be 413. It means that the requested page number is too large, no devices will be returned in this case. | 1 |
-| event_type | int | URL | Optional | Specific what kind of event logs you want to retrieve. 1: device events2: administrator events | 1 |
+| event_type | int | URL | Optional | Specific what kind of event logs you want to retrieve.  1: device events  2: administrator events | 1 |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/get-logs-v2-0#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/get-logs-v2-0#response-http-code)
 
 | HTTP Code | Description |
 | --- | --- |
@@ -34,7 +36,7 @@ https://gears.opswat.com/o/api/v2/logs
 | 406 | Too many records to return |
 | 413 | Requested page number exceeds limit |
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/get-logs-v2-0#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/get-logs-v2-0#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -42,7 +44,7 @@ https://gears.opswat.com/o/api/v2/logs
 | eventlog | array<string> | Array of events of the event log. The information will be formated as "<hh:mm> | [AM/PM] | <event category> | <device's hostname> | <event description>" |
 | date | string | timestamp when the event log occurs |
 
-## [Example](/docs/macloud-sdp/developer-guide/get-logs-v2-0#example)
+## [Example](/docs/cm/developer-guidelines/get-logs-v2-0#example)
 
 **Example Request**
 

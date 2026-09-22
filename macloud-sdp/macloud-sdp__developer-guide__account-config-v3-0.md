@@ -2,6 +2,8 @@
 
 # Account Config v3.0
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 3.0 |
 | --- | --- |
 | Last Update | 12/5/2016 |
@@ -13,30 +15,30 @@
 
 Use this API to retrieve account settings.
 
-## [API URL](/docs/macloud-sdp/developer-guide/account-config-v3-0#api-url)
+## [API URL](/docs/cm/developer-guidelines/account-config-v3-0#api-url)
 
 https://gears.opswat.com/o/api/v3/configuration
-## [Request Parameters](/docs/macloud-sdp/developer-guide/account-config-v3-0#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/account-config-v3-0#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
 | sections | Array of strings | Body | Yes | Specify which settings to fetch information. Available options:   - cross-domain-api: Cross-domain API setting |  |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/account-config-v3-0#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/account-config-v3-0#response-http-code)
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/account-config-v3-0#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/account-config-v3-0#response-parameters)
 
 | Key | Datatype | Description |
 | --- | --- | --- |
-| <setting_name> | object | a setting name in the request. Depend on settings, object will have different keys in response |
+| <setting_name> | object | a setting name in the request.  Depend on settings, object will have different keys in response |
 | cross-domain-api | object | Cross-domain API setting |
 | cross-domain-api.enabled | number | Values:   - 1: API is enable on endpoints at the configured port - 0: API is disable on endpoints |
 | cross-domain-api.port | number | port number which the cross-domain API is listening on endpoints |
 
-## [Example](/docs/macloud-sdp/developer-guide/account-config-v3-0#example)
+## [Example](/docs/cm/developer-guidelines/account-config-v3-0#example)
 
 **Request Example**
 

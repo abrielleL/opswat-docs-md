@@ -1,6 +1,8 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/developer-guide/get-applications -->
 
-# Get applications
+# Get Applications
+
+Summarize Page    Connect to Cursor Connect to VS Code
 
 | API version | 3.0 |
 | --- | --- |
@@ -14,10 +16,10 @@
 
 Use to get applications installed on endpoints on a specific account.
 
-## [API URL](/docs/macloud-sdp/developer-guide/get-applications#api-url)
+## [API URL](/docs/cm/developer-guidelines/get-applications#api-url)
 
 https://gears.opswat.com/o/api/v3/apps
-## [Request Parameters](/docs/macloud-sdp/developer-guide/get-applications#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/get-applications#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
@@ -32,11 +34,11 @@ https://gears.opswat.com/o/api/v3/apps
 | page | number | Body | No | A page you want to get data | 1 |
 | limit | number | Body | No | The limited number of how many records to be returned. | 50 |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/get-applications#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/get-applications#response-http-code)
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See details in the Response HTTP Code section in [this page](/docs/cm/developer-guidelines/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/get-applications#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/get-applications#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -50,7 +52,7 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | number_of_devices | int | A number determines how many devices install the product |
 | number_of_cves | int | A number determines how many cve issues that product exposures |
 
-## [Example](/docs/macloud-sdp/developer-guide/get-applications#example)
+## [Example](/docs/cm/developer-guidelines/get-applications#example)
 
 **Example Request: using Product ID**
 

@@ -2,6 +2,8 @@
 
 # Get Remediation Link 2.0
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 2.0 |
 | --- | --- |
 | Authentication | YES |
@@ -12,18 +14,18 @@
 
 Use to fetch a remediation link for a given device
 
-## [API URL](/docs/macloud-sdp/developer-guide/get-remediation-link-2-0#api-url)
+## [API URL](/docs/cm/developer-guidelines/get-remediation-link-2-0#api-url)
 
 https://gears.opswat.com/o/api/v2/devices/:value/remediation
-## [Request Parameters](/docs/macloud-sdp/developer-guide/get-remediation-link-2-0#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/get-remediation-link-2-0#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
 | value | string | URL | Yes | HWID or MAC address of the device |  |
-| opt | sint | URL | Optional | Type of the given value in the URL.1 - the given value is HWID.0 - the given value is MAC Address | 0 |
+| opt | sint | URL | Optional | Type of the given value in the URL.  1 - the given value is HWID. 0 - the given value is MAC Address | 0 |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/get-remediation-link-2-0#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/get-remediation-link-2-0#response-http-code)
 
 | HTTP Code | Description |
 | --- | --- |
@@ -31,7 +33,7 @@ https://gears.opswat.com/o/api/v2/devices/:value/remediation
 | 401 | Unauthorized. Your access_token is invalid or expired |
 | 404 | Not found |
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/get-remediation-link-2-0#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/get-remediation-link-2-0#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -39,7 +41,7 @@ https://gears.opswat.com/o/api/v2/devices/:value/remediation
 | result | int | (optional) indicate if the request is processed successfully.   - 0: failure |
 | msg | string | (optional) error details |
 
-## [Example](/docs/macloud-sdp/developer-guide/get-remediation-link-2-0#example)
+## [Example](/docs/cm/developer-guidelines/get-remediation-link-2-0#example)
 
 **Example Request**
 

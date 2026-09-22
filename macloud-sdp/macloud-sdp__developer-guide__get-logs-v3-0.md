@@ -2,6 +2,8 @@
 
 # Get Logs v3.0
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 3.0 |
 | --- | --- |
 | Last Update | 04/25/2017 |
@@ -12,12 +14,12 @@
 | Requests per rate limit | 10/min |
 | Response Format | JSON |
 
-MetaAccess records events on your accounts. There are 2 types of event logs: admin event logs and device event logs. To retrieve event logs on your account, you can use this API. You can set filters in parameters to filter event logs you concern.
+My OPSWAT Central Management records events on your accounts. There are 2 types of event logs: admin event logs and device event logs. To retrieve event logs on your account, you can use this API. You can set filters in parameters to filter event logs you concern.
 
-## [API URL](/docs/macloud-sdp/developer-guide/get-logs-v3-0#api-url)
+## [API URL](/docs/cm/developer-guidelines/get-logs-v3-0#api-url)
 
 https://gears.opswat.com/o/api/v3/logs
-## [Request Parameters](/docs/macloud-sdp/developer-guide/get-logs-v3-0#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/get-logs-v3-0#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
@@ -26,14 +28,14 @@ https://gears.opswat.com/o/api/v3/logs
 | page | int | Body | Optional | Specific page number which event logs will be returned in. If the requested page exceeds the number of pages of event logs, error code will be 413. It means that the requested page number is too large, no devices will be returned in this case. | 1 |
 | start_date | string | Body | Optional | Specific the start date for the query duration. Starting date of the query. Format: YYYY/MM/DD |  |
 | end_date | string | Body | Optional | Specific the end date for the query duration. Format: YYYY/MM/DD |  |
-| age | int | Body | Optional | Specify age of the information in seconds. Maximum value is 86400 (1 day) For example: if you want to query event logs in last 5 minutes, you need to pass age as 300. |  |
-| filter | array<string> | Body | Optional | Specify which events you want to retrieve. Options can be:   - *added*: events when a device is added - *deleted*: events when a device is deleted by Admin - *deleted_user*: events when a device is uninstalled by remote users on endpoints - *unseen*: events when a device is deleted by Lost Devices feature (a device is unseen for a long time) - *compliant*: events when a device becomes/changes status to COMPLIANT - *noncompliant*: events when a device becomes/changes status to NON-COMPLIANT |  |
+| age | int | Body | Optional | Specify age of the information in seconds. Maximum value is 86400 (1 day)  For example: if you want to query event logs in last 5 minutes, you need to pass age as 300. |  |
+| filter | array<string> | Body | Optional | Specify which events you want to retrieve.  Options can be:   - *added*: events when a device is added - *deleted*: events when a device is deleted by Admin - *deleted_user*: events when a device is uninstalled by remote users on endpoints - *unseen*: events when a device is deleted by Lost Devices feature (a device is unseen for a long time) - *compliant*: events when a device becomes/changes status to COMPLIANT - *noncompliant*: events when a device becomes/changes status to NON-COMPLIANT |  |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/get-logs-v3-0#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/get-logs-v3-0#response-http-code)
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/get-logs-v3-0#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/get-logs-v3-0#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -45,7 +47,7 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | logs.mac_addresses | string | MAC address of the device which the event occurred on |
 | logs.details | array<string> | Event details. The format is: ["category", "application", "version", "status"] |
 
-## [Example](/docs/macloud-sdp/developer-guide/get-logs-v3-0#example)
+## [Example](/docs/cm/developer-guidelines/get-logs-v3-0#example)
 
 **Example Request**
 
@@ -116,8 +118,8 @@ details: [
 }
 ]
 }
-## [History](/docs/macloud-sdp/developer-guide/get-logs-v3-0#history)
+## [History](/docs/cm/developer-guidelines/get-logs-v3-0#history)
 
 | Version | URL |
 | --- | --- |
-| v2.0 | [Get Logs v2.0](/docs/macloud-sdp/developer-guide/get-logs-v2-0) |
+| v2.0 | [Get Logs v2.0](/docs/cm/developer-guidelines/get-logs-v2-0) |

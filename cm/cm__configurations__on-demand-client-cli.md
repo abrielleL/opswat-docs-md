@@ -4,7 +4,7 @@
 
 The On-Demand MetaDefender Endpoint offers a command-line interface that allows a user to control how the on-demand should be run.
 
-Your solution can trigger our agent to run onetime and get device status to grant a device access to your resources. [Pulse Secure integration](https://www.opswat.com/docs/cm/integrations/pulse-secure-s-host-checker) as an example.
+Your solution can trigger our agent to run onetime and get device status to grant a device access to your resources. [Pulse Secure integration](https://www.opswat.com/docs/cm/secure-access-solution/pulse-secure-s-host-checker) as an example.
 
 ## Windows Usage
 
@@ -72,3 +72,7 @@ Note: all below examples are using the [My OPSWAT Central Management Tenant B](h
 **Case 1:** Run the MetaDefender Endpoint in silent mode while Horizon Client is running and device status is compliant.
 
 - Windows: OPSWAT_GEARS_Client.exe /silent /key your_license_key /host 3445 /runwhile /p:vmware-view.exe /o:and /s:1
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

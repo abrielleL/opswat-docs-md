@@ -2,6 +2,8 @@
 
 # Device Details v3.3
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 3.3 |
 | --- | --- |
 | Last Update | 05/14/2019 |
@@ -15,10 +17,10 @@
 
 Use to get device details by ID or MAC address.
 
-## [API URL](/docs/macloud-sdp/developer-guide/device-details-v3-3#api-url)
+## [API URL](/docs/cm/developer-guidelines/device-details-v3-3#api-url)
 
 https://gears.opswat.com/o/api/v3.3/devices/detail
-## [Request Parameters](/docs/macloud-sdp/developer-guide/device-details-v3-3#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/device-details-v3-3#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
@@ -26,19 +28,19 @@ https://gears.opswat.com/o/api/v3.3/devices/detail
 | opt | int | Body | Optional | Specify a type of the ids parameter   - 0: Device ID or Mac Address - 1: 3rd party custom ID which is linked with a device | 0 |
 | ids | Array | Body | Yes | The list of Device ID or MAC Address or linked ID of a devices you want to fetch information. Max length is 50 devices |  |
 | verbose | object | Body | Optional | Specify what information you look for |  |
-| verbose.system_info | int | Body | Optional | Specify if system information are included on the response Values can be:   - 0: not include - 1: include | 1 |
-| verbose.categories | int | Body | Optional | Specify if category issues the device has are included on the response Values can be:   - 0: not include - 1: include | 0 |
-| verbose.unclassified | int | Body | Optional | **Only applicable for Wins/macOS devices** Specify if unclassified applications are included on the response Values can be:   - 0: not include - 1: include | 0 |
-| verbose.mobile_apps | int | Body | Optional | **Only applicable for iOS/Android devices** Specify if installed applications are included on the response Values can be:   - 0: not include - 1: include | 0 |
-| verbose.detected_processes | int | Body | Optional | Only applicable for Linux devices Specify if running processes are included on the response Values can be:   - 0: not include - 1: include | 0 |
-| verbose.detected_packages | int | Body | Optional | Only applicable for Linux devices Specify if installed packages are included on the response Values can be:   - 0: not include - 1: include | 0 |
-| verbose.detected_patches | int | Body | Optional | Only applicable for wins/macOS devices Specify if missing OS patches are included on the response Values can be:   - 0: not include - 1: include | 0 |
+| verbose.system_info | int | Body | Optional | Specify if system information are included on the response  Values can be:   - 0: not include - 1: include | 1 |
+| verbose.categories | int | Body | Optional | Specify if category issues the device has are included on the response  Values can be:   - 0: not include - 1: include | 0 |
+| verbose.unclassified | int | Body | Optional | **Only applicable for Wins/macOS devices**  Specify if unclassified applications are included on the response  Values can be:   - 0: not include - 1: include | 0 |
+| verbose.mobile_apps | int | Body | Optional | **Only applicable for iOS/Android devices**  Specify if installed applications are included on the response  Values can be:   - 0: not include - 1: include | 0 |
+| verbose.detected_processes | int | Body | Optional | Only applicable for Linux devices  Specify if running processes are included on the response  Values can be:   - 0: not include - 1: include | 0 |
+| verbose.detected_packages | int | Body | Optional | Only applicable for Linux devices  Specify if installed packages are included on the response  Values can be:   - 0: not include - 1: include | 0 |
+| verbose.detected_patches | int | Body | Optional | Only applicable for wins/macOS devices  Specify if missing OS patches are included on the response  Values can be:   - 0: not include - 1: include | 0 |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/device-details-v3-3#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/device-details-v3-3#response-http-code)
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/device-details-v3-3#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/device-details-v3-3#response-parameters)
 
 | Key | Datatype | Returned when | Description |
 | --- | --- | --- | --- |
@@ -52,7 +54,7 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | issue.total_critical_issue | int |  | Total critical issues of device |
 | issue.total_warning_issue | int |  | Total warning issues of device |
 | group_name | string |  | group name which a device is assigned to |
-| agent_type | string |  | Type of Agent Values: managed – Managed device dc - Domain controller device |
+| agent_type | string |  | Type of Agent  Values:  managed – Managed device  dc - Domain controller device |
 | device_name | string | verbose.system_info = 1 | Hostname of the device. It will get "<private>" value if it's a non-collectible to each fields which related to privacy. |
 | nick_name | string | verbose.system_info = 1 | a nickname for the device which an administrator can update on the console |
 | device_type | string |  | The type of the device |
@@ -63,24 +65,24 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | last_reboot | string |  | The last timestamp in GMT format when device reboots |
 | public_ip | string |  | public IP of the device in the last report |
 | country | string |  | Region where the device IP geographically represents |
-| user_identity | string |  | Custom user identity information. This is only available if the account enables "Enforce users enter custom information" on Advanced Setting tab on Global Settings |
+| user_identity | string |  | Custom user identity information.  This is only available if the account enables "Enforce users enter custom information" on Advanced Setting tab on Global Settings |
 | user_info | object |  | User information block |
 | user_info.username | string |  | username who currently logs in. This field will be remove if it's set as privacy |
 | user_info.domain | string |  | Currently logged in user domain |
 | remediation_link | string |  | remediation page URL of the given device |
 | categories | array<object> |  | Details of each posture category |
 | categories.category_id | string |  | category ID which the current block stands for |
-| categories.issue | int |  | Severity of the category based on the defined policy on your account. Values are:   - -1 - category is disabled - 0 – no issues - 1 – warning - 2 – critical |
+| categories.issue | int |  | Severity of the category based on the defined policy on your account.  Values are:   - -1 - category is disabled - 0 – no issues - 1 – warning - 2 – critical |
 | categories.apps | array<object> |  | detailed products in a category |
 | categories.apps.id | string |  | Product ID |
 | categories.apps.name | string |  | Name of the product |
 | categories.apps.vendor | string |  | Name of the product vendor |
 | categories.apps.version | string |  | Product version |
 | categories.apps.ar_id | string |  | App remover ID of the product |
-| categories.apps.issue | int |  | Severity of the product based on the defined policy on your account Values are:   - -1 - Not an approved product - 0 - no issues - 1 - warning - 2 - critical |
+| categories.apps.issue | int |  | Severity of the product based on the defined policy on your account  Values are:   - -1 - Not an approved product - 0 - no issues - 1 - warning - 2 - critical |
 | categories.apps.health_status | array<object> |  | health information of the product |
 | categories.apps.health_status.status | string |  | product compliance details |
-| categories.apps.health_status.issue | int |  | Severity of the health_status based on the defined policy on your account Values are:   - 0 - no issues - 1 - warning - 2 - critical |
+| categories.apps.health_status.issue | int |  | Severity of the health_status based on the defined policy on your account  Values are:   - 0 - no issues - 1 - warning - 2 - critical |
 | unclassified | array<object> |  | Lists of unclassified products |
 | unclassified.id | string |  | product ID |
 | unclassified.name | string |  | product name |
@@ -112,18 +114,18 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | link_user | object |  | User is linked by admin (editable) |
 | link_user.username | string |  | Username is linked to device by admin |
 | link_user.group | string |  | Group is linked to device by admin |
-| mobile_apps | array<object> |  | **Only applicable for iOS/Android devices** Lists of applications installed on the device |
+| mobile_apps | array<object> |  | **Only applicable for iOS/Android devices**  Lists of applications installed on the device |
 | mobile_apps.name | string |  | application name |
 | mobile_apps.vendor | string |  | application vendor |
 | mobile_apps.community_rate | string |  | rating from community |
 | mobile_apps.community_reviewer | string |  | number of community reviewers who reviewed the application |
-| detected_processes | object |  | **Only applicable for Linux devices** Details about running processes on the device when the device reports data to your account |
+| detected_processes | object |  | **Only applicable for Linux devices**  Details about running processes on the device when the device reports data to your account |
 | detected_processes.total | int |  | number of running processes on the device when the device reports data to your account |
 | detected_processes.processes | array<object> |  | Lists of running processes on the device when the device reports data to your account with details |
-| detected_packages | object |  | **Only applicable for Linux devices** Details about packages installed on the device when the device reports data to your account |
+| detected_packages | object |  | **Only applicable for Linux devices**  Details about packages installed on the device when the device reports data to your account |
 | detected_packages.total | int |  | number of packages installed on the device when the device reports data to your account |
 | detected_packages.packages | array<object> |  | Lists of packages installed on the device when the device reports data to your account |
-| detected_patches | object |  | Only applicable for Windows/macOS devices Details about missing patches on the device when the device reports data to your account |
+| detected_patches | object |  | Only applicable for Windows/macOS devices  Details about missing patches on the device when the device reports data to your account |
 | detected_patches.timestamp | string |  | timestamp in GMT format when the device reports data to your account |
 | detected_patches.total | int |  | Total missing patches on the device when the device reports data to your account |
 | detected_patches.patches | array<object> |  | Lists of missing patches on the device when the device reports data to your account |
@@ -136,12 +138,12 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | detected_patches.patches.kb_name | string |  | (optional)The knowledge base article id of a missing patch. May duplicate security_update_id on some platforms. |
 | detected_patches.patches.release_date | string |  | A timestamp in GMT format when a patch is released |
 | infection | object |  | Details on threat detection |
-| infection.metascan | object |  | Only applicable for Windows/macOS/Linux devices Infection information block which is detected by [Metadefender Cloud](https://www.metadefender.com) |
+| infection.metascan | object |  | Only applicable for Windows/macOS/Linux devices  Infection information block which is detected by [Metadefender Cloud](https://www.metadefender.com) |
 | infection.metascan .last_scan | string |  | The last timestamp a device reports Statement of Threat |
 | infection.metascan.total | int |  | Total infections which is detected by [Metadefender Cloud](https://www.metadefender.com) |
 | infection.metascan.issue | int |  | Status of Daily [Metadefender Cloud](https://www.metadefender.com/) anti-malware scan based on a device policy on your account Values are:   - -1 – category is disabled - 0 – category doesnot have issues - 1 – category has issues - 2 – category has critical issues |
 | infection.metascan.threats | array<object> |  | Lists of found threats |
-| infection.metascan.threats.critical | int |  | Critical status of the threat Values are:   - 0 – not critical - 1 – critical |
+| infection.metascan.threats.critical | int |  | Critical status of the threat  Values are:   - 0 – not critical - 1 – critical |
 | infection.metascan.threats.scan_time | string |  | timestamp when found the threat |
 | infection.metascan.threats.file | string |  | File was found the threat |
 | infection.metascan.threats.hash | string |  | hash of the file |
@@ -149,11 +151,11 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | infection.metascan.threats.details | array<object> |  | threat details on each engine which detected the threat |
 | infection.metascan.threats.details.threat_name | string |  | Threat name which detected on a specific engine |
 | infection.metascan.threats.details.av_name | string |  | engine name |
-| infection.antivirus | object |  | Only applicable for Windows/macOS devices Repeated threat details detected by local anti-malware applications |
+| infection.antivirus | object |  | Only applicable for Windows/macOS devices  Repeated threat details detected by local anti-malware applications |
 | infection.antivirus.total | int |  | Total repeated threats which are detected by local anti-malware applications |
-| infection.antivirus.issue | int |  | Status of repeated threats based on a device policy on your account Values are:   - -1 – category is disabled - 0 – category doesnot have issues - 1 – category has issues - 2 – category has critical issues |
+| infection.antivirus.issue | int |  | Status of repeated threats based on a device policy on your account  Values are:   - -1 – category is disabled - 0 – category doesnot have issues - 1 – category has issues - 2 – category has critical issues |
 | infection.antivirus.threats | array<object> |  | Lists of repeated threats |
-| infection.antivirus.threats.critical | int |  | Critical status of the threat Values are:   - 0 – not critical - 1 – critical |
+| infection.antivirus.threats.critical | int |  | Critical status of the threat  Values are:   - 0 – not critical - 1 – critical |
 | infection.antivirus.threats.scan_time | string |  | Last timestamp when the threat was detected |
 | infection.antivirus.threats.repeat | int |  | Number of times the threat was detected |
 | infection.antivirus.threats.file | string |  | File was detected as a threat |
@@ -165,9 +167,9 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | infection.antivirus.threats.severity | string |  | threat severity |
 | infection.antivirus.threats.action | string |  | The type of remediation ( unknown, cleaned, deleted, quarantined) |
 | infection.antivirus.threats.existing | int |  | to indicate if an infected file still exists on the system.   - 0 : not existing - 1 : existing |
-| infection.ip_scanning | object |  | Only applicable for LINUX/MOBILE devices Details of daily scan for suspicious IP connections |
+| infection.ip_scanning | object |  | Only applicable for LINUX/MOBILE devices  Details of daily scan for suspicious IP connections |
 | infection.ip_scanning.total | int |  | Total of suspicious IPs |
-| infection.ip_scanning.issue | int |  | Status of the suspicious IP based on a device policy on your account Values are:   - -1 – category is disabled - 0 – category doesnot have issues - 1 – category has issues |
+| infection.ip_scanning.issue | int |  | Status of the suspicious IP based on a device policy on your account  Values are:   - -1 – category is disabled - 0 – category doesnot have issues - 1 – category has issues |
 | infection.ip_scanning.threats | array<object> |  | Lists of suspicious IPs |
 | infection.ip_scanning.threats.geo_info | object |  | An object represents the geolocation of the suspicious IP |
 | infection.ip_scanning.threats.geo_info.country_code | string |  | Region name of the network address (e.g., San Paulo) |
@@ -183,7 +185,7 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | infection.ip_scanning.threats.threats.confident | string |  | Represents the reliability of the detection based on several factors. The higher the score, the more reliable the result. |
 | infection.ip_scanning.threats.threats.source_name | string |  | Source of the feed, usually the domain where the feed is from (e.g., [example.com](http://example.com/) ) |
 
-## [Example](/docs/macloud-sdp/developer-guide/device-details-v3-3#example)
+## [Example](/docs/cm/developer-guidelines/device-details-v3-3#example)
 
 **Example Request: no verbose**
 
@@ -405,7 +407,7 @@ https://gears.opswat.com/o/api/v3.3/devices/detail?access_token=YOUR_ACCESS_TOKE
 "status": "not-found",
 }
 ]
-## [Example response for domain controller device](/docs/macloud-sdp/developer-guide/device-details-v3-3#example-response-for-domain-controller-device)
+## [Example response for domain controller device](/docs/cm/developer-guidelines/device-details-v3-3#example-response-for-domain-controller-device)
 
 [{
 "device_id": "DCYE9I3DNJ4IFMP84LIGG8S8207R4E04",
@@ -445,16 +447,16 @@ https://gears.opswat.com/o/api/v3.3/devices/detail?access_token=YOUR_ACCESS_TOKE
 }
 }
 ]
-## [History](/docs/macloud-sdp/developer-guide/device-details-v3-3#history)
+## [History](/docs/cm/developer-guidelines/device-details-v3-3#history)
 
 | Version | URL |
 | --- | --- |
-| v3.2 | [Device Details v3.2](/docs/macloud-sdp/developer-guide/device-details-v3-2) |
-| v3.1 | [Device Details v3.1](/docs/macloud-sdp/developer-guide/device-details-v3-1) |
-| v3.0 | [Device Details v3.0](/docs/macloud-sdp/developer-guide/device-details-v3-0) |
-| v2.6 | [Device Details v2.6](/docs/macloud-sdp/developer-guide/device-details-v2-6) |
-| v2.5 | [Device Details v2.5](/docs/macloud-sdp/developer-guide/device-details-v2-5) |
-| v2.4 | [Device Details v2.4](/docs/macloud-sdp/developer-guide/device-details-v2-4) |
-| v2.3 | [Device Details v2.3](/docs/macloud-sdp/developer-guide/device-details-v2-3) |
-| v2.2 | [Device Details v2.2](/docs/macloud-sdp/developer-guide/device-details-v2-2) |
-| v2.1 | [Device Details v2.1](/docs/macloud-sdp/developer-guide/device-details-v2-1) |
+| v3.2 | [Device Details v3.2](/docs/cm/developer-guidelines/device-details-v3-2) |
+| v3.1 | [Device Details v3.1](/docs/cm/developer-guidelines/device-details-v3-1) |
+| v3.0 | [Device Details v3.0](/docs/cm/developer-guidelines/device-details-v3-0) |
+| v2.6 | [Device Details v2.6](/docs/cm/developer-guidelines/device-details-v2-6) |
+| v2.5 | [Device Details v2.5](/docs/cm/developer-guidelines/device-details-v2-5) |
+| v2.4 | [Device Details v2.4](/docs/cm/developer-guidelines/device-details-v2-4) |
+| v2.3 | [Device Details v2.3](/docs/cm/developer-guidelines/device-details-v2-3) |
+| v2.2 | [Device Details v2.2](/docs/cm/developer-guidelines/device-details-v2-2) |
+| v2.1 | [Device Details v2.1](/docs/cm/developer-guidelines/device-details-v2-1) |

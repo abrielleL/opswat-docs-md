@@ -2,26 +2,42 @@
 
 ### METADEFENDER
 
-# IT Access
+# My OPSWAT Central Management
 
-#### 3.54.0 [Latest]
+#### 10.7.26091 [Latest]
 
-[Release Notes](https://www.opswat.com/docs/macloud-sdp/release-notes)
+[Release Notes](https://www.opswat.com/docs/cm/release-notes)
 
 Getting Started[##### Introduction
 
-###### Overview of OPSWAT MetaDefender IT Access.](/docs/macloud-sdp/secure-access)[##### Configuration & Management
+###### Get started with My OPSWAT Central Management](/docs/cm/get-started)[##### Onboarding Guide
 
-###### Learn how to configure the product. Detailed information for each option.](/docs/macloud-sdp/configuration---management)Deployment & Usage[##### Integrations
+###### Set up and operate My OPSWAT Central Management safely, efficiently, and with minimal disruption.](/docs/cm/onboarding-guide)[##### Configuration
 
-###### Available software integrations with OPSWAT Products & third parties.](/docs/macloud-sdp/integrations)[##### Developer Guidelines
+###### Learn how to configure the product. Detailed information for each option.](/docs/cm/configurations)Deployment & Usage[##### Deployment
 
-###### Integration guides with your existing solutions to enforce device posture check.](/docs/macloud-sdp/developer-guide)[##### SIEM Integrations
+######](/docs/cm/deployment)[##### Secure Access Solution
 
-###### Detailed documentation on how to use OPSWAT Media Validation Agent.](/docs/macloud-sdp/siem-integrations)[##### On-Premise Deployment
+######](/docs/cm/secure-access-solution)[##### Product Management
 
-###### Documentation for MetaDefender IT Access On Prem setup.](/docs/macloud-sdp/metadefender-it-access-on-prem)Support[##### Knowledge Base
+######](/docs/cm/product-management)[##### Patch Management
 
-###### Answers to common questions about the product capabilities, and related articles on popular topics.](/docs/macloud-sdp/kb)
+######](/docs/cm/patch-management)[##### User Management
+
+######](/docs/cm/user-management)[##### Reports & Notification
+
+######](/docs/cm/reports-and-notification)[##### Integrations
+
+######](/docs/cm/integrations)[##### Developer Guidelines
+
+######](/docs/cm/developer-guidelines)Support[##### Knowledge Base
+
+###### Answers to common questions about the product capabilities, and related articles on popular topics.](/docs/cm/knowledge-base)
 
 ## References
+
+[##### Direct Instance Management
+
+######
+
+Learn more](/docs/cm/direct-instance-management)

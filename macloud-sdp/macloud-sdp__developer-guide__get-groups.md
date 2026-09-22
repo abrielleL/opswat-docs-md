@@ -1,6 +1,8 @@
 <!-- source: https://www.opswat.com/docs/macloud-sdp/developer-guide/get-groups -->
 
-# Get groups
+# Get Groups
+
+Summarize Page    Connect to Cursor Connect to VS Code
 
 | API version | 3.0 |
 | --- | --- |
@@ -14,10 +16,10 @@
 
 Use to fetch groups in an account
 
-## [API URL](/docs/macloud-sdp/developer-guide/get-groups#api-url)
+## [API URL](/docs/cm/developer-guidelines/get-groups#api-url)
 
 https://gears.opswat.com/o/api/v3/groups
-## [Request Parameters](/docs/macloud-sdp/developer-guide/get-groups#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/get-groups#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
@@ -26,14 +28,14 @@ https://gears.opswat.com/o/api/v3/groups
 | page | number | Body | Optional | Specify a page number which groups will be returned in. If the requested page exceeds the number of pages of groups, error code will be 413. It means that the requested page number is too large, no groups will be returned in this case. | 1 |
 | search | string | Body | Optional | The keyword to search. In which, the keyword can be a group name or an assigned policy |  |
 | sort | object | Body | Optional | Specify how to sort groups in result-set By default: sort groups by group_name in ascending order |  |
-| sort.field | string | Body | Optional | Specify which field will be sorted by Values can be: **group_name, domain_name, policy_name, number_of_devices, last_update**. | group_name |
+| sort.field | string | Body | Optional | Specify which field will be sorted by  Values can be: **group_name, domain_name, policy_name, number_of_devices, last_update**. | group_name |
 | sort.order | string | Body | Optional | Specify sort order. Values can be:   - asc: sort devices in ascending order. - desc: sort devices in descending order. | asc |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/get-groups#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/get-groups#response-http-code)
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See details in the Response HTTP Code section in [this page](/docs/cm/developer-guidelines/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/get-groups#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/get-groups#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -48,7 +50,7 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | created_date | string | A timestamp in GMT format when this group is created |
 | last_modified | string | The last timestamp in GMT format when this group is updated |
 
-## [Example](/docs/macloud-sdp/developer-guide/get-groups#example)
+## [Example](/docs/cm/developer-guidelines/get-groups#example)
 
 **Example Request**
 

@@ -2,6 +2,8 @@
 
 # Account Policy
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 2.0 |
 | --- | --- |
 | Last Update | 6/15/2015 |
@@ -13,20 +15,20 @@
 
 Use this API to retrieve default device policy
 
-## [API URL](/docs/macloud-sdp/developer-guide/account-policy#api-url)
+## [API URL](/docs/cm/developer-guidelines/account-policy#api-url)
 
 https://gears.opswat.com/o/api/v2/account/policy
-## [Request Parameters](/docs/macloud-sdp/developer-guide/account-policy#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/account-policy#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | Header | Yes | access token which archived from OAuth authentication step |  |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/account-policy#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/account-policy#response-http-code)
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See details in the Response HTTP Code section in [this page](/docs/cm/developer-guidelines/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/account-policy#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/account-policy#response-parameters)
 
 | Key | Datatype | Description |
 | --- | --- | --- |
@@ -43,7 +45,7 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | policy.<category>.apply_to.server | int | Indicates if this option is applying to server devices |
 | policy.<category>.apply_to.vm | int | Indicates if this option is applying to virtual machine devices |
 
-## [Example](/docs/macloud-sdp/developer-guide/account-policy#example)
+## [Example](/docs/cm/developer-guidelines/account-policy#example)
 
 **Request Example**
 

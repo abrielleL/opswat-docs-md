@@ -2,6 +2,8 @@
 
 # Status Change v2.1
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 2.1 |
 | --- | --- |
 | Last Update | 01/30/2018 |
@@ -13,37 +15,37 @@
 
 Use to obtain status change (delta) of all devices in an account in a particular time frame.
 
-## [API URL](/docs/macloud-sdp/developer-guide/status-change-v2-1#api-url)
+## [API URL](/docs/cm/developer-guidelines/status-change-v2-1#api-url)
 
 https://gears.opswat.com/o/api/v2.1/devices/status_changed
-## [Request Parameters](/docs/macloud-sdp/developer-guide/status-change-v2-1#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/status-change-v2-1#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
-| verbose | int | URL | Optional | 1 - extra detailed information will return in response0 - response does not include detailed information | 0 |
-| age | long | URL | Optional | Specify age of the information in seconds. Value is from 0 to 86400For example if you want delta of information for last 5 minutes you need to set age as 300; | 86400 |
+| verbose | int | URL | Optional | 1 - extra detailed information will return in response 0 - response does not include detailed information | 0 |
+| age | long | URL | Optional | Specify age of the information in seconds. Value is from 0 to 86400  For example if you want delta of information for last 5 minutes you need to set age as 300; | 86400 |
 | os_type | string | URL | Optional | Specify operating system of devices you want to fetch data   - If os_type is "win_or_mac", return only Windows/Mac devices - If os_type is "linux_or_mobile", return status for linux or mobile devices | win_or_mac |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/status-change-v2-1#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/status-change-v2-1#response-http-code)
 
 | HTTP Code | Description |
 | --- | --- |
 | 200 | Success |
 | 401 | Unauthorized. Your access_token is invalid or expired |
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/status-change-v2-1#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/status-change-v2-1#response-parameters)
 
 | Key | Datatype | Verbose | Description |
 | --- | --- | --- | --- |
 | devices | array<object> |  | Lists of devices which changed status in the particular time frame |
 | devices.hwid |  |  | Hardware ID of a device. |
-| devices.mac_address | array<string> | OFF | ***Only available when device status as 2 or Verbose set as OFF*** Lists of MAC addresses of network inferfaces of a device |
-| devices.status | int |  | Reports the health status of the endpoint device as identified by the Mac Address. This status is based on the defined policy within MetaAccess. Status values are:   - **0** – the endpoint is in compliance with MetaAccess account’s policies - **1** – the endpoint is **not** in compliance with MetaAccess account’s policies - **2** – MAC address is not found, it means that the agent was uninstalled on the endpoint or deleted on MetaAccess console. - **3** – the endpoint is still sending information to MetaAccess and not yet completed   ***Note: if a device doesn't exist on the cloud any more (status as 2), very minimum information will be returned: hwid, and mac_addresses*** |
-| devices.critical_status | int |  | This critical status is based on the defined policy within MetaAccess. This status apply for the whole device. Critical status values are:   - **0** – the endpoint doesn't have critical issues - **1** – the endpoint has critical issues - **2** – the endpoint is not found |
+| devices.mac_address | array<string> | OFF | ***Only available when device status as 2 or Verbose set as OFF***  Lists of MAC addresses of network inferfaces of a device |
+| devices.status | int |  | Reports the health status of the endpoint device as identified by the Mac Address. This status is based on the defined policy within My OPSWAT Central Management.  Status values are:   - **0** – the endpoint is in compliance with My OPSWAT Central Management account’s policies - **1** – the endpoint is **not** in compliance with My OPSWAT Central Management account’s policies - **2** – MAC address is not found, it means that the agent was uninstalled on the endpoint or deleted on My OPSWAT Central Management console. - **3** – the endpoint is still sending information to My OPSWAT Central Management and not yet completed   ***Note: if a device doesn't exist on the cloud any more (status as 2), very minimum information will be returned: hwid, and mac_addresses*** |
+| devices.critical_status | int |  | This critical status is based on the defined policy within My OPSWAT Central Management. This status apply for the whole device.  Critical status values are:   - **0** – the endpoint doesn't have critical issues - **1** – the endpoint has critical issues - **2** – the endpoint is not found |
 | devices.total_issue | int |  | Number of issues were seen on the device. |
 | devices.total_critical_issue | int |  | Number of critical issues were seen on the device |
-| devices.policy_name | string | ON | Reversed for future Policy name which the device is assigned to |
+| devices.policy_name | string | ON | Reversed for future  Policy name which the device is assigned to |
 | devices.user | string | ON | Username of a group. |
 | devices.user_info | object | ON | Details of a user who logging on the device |
 | devices.user_info.username | string | ON | username who currently logs in. This field will be removed if it's set as privacy |
@@ -59,7 +61,7 @@ https://gears.opswat.com/o/api/v2.1/devices/status_changed
 | devices.os_info.architecture | string | ON | OS architecture |
 | devices.os_info.os_language | string | ON | OS language |
 | devices.os_info.user_password_set | int | ON | If user password is set on OS, 1 is set, 0 is not set |
-| devices.agent_type | int | ON | Agent type that runs on the device. (optional) agent_type values are:   - **0** – Persistent |
+| devices.agent_type | int | ON | Agent type that runs on the device. (optional)  agent_type values are:   - **0** – Persistent |
 | devices.network_info | array<object> | ON | Network adapter information block |
 | devices.network_info.mac_addr | string | ON | MAC address for adapter. This field will be removed if it's a non-collectible to each fields which related to privacy. |
 | devices.network_info.ipv4_addr | string | ON | IPV4 address. This field will be removed if it's a non-collectible to each fields which related to privacy. |
@@ -105,13 +107,13 @@ https://gears.opswat.com/o/api/v2.1/devices/status_changed
 | devices.remediation_link | string | ON | Remediation page URL of the device. |
 | devices.notification | string | ON | Reversed for future |
 
-## [Example](/docs/macloud-sdp/developer-guide/status-change-v2-1#example)
+## [Example](/docs/cm/developer-guidelines/status-change-v2-1#example)
 
 **Example Request:**
 
 https://gears.opswat.com/o/api/v2.1/devices/status_changed?age=300&access_token=TEST7P9ZMJ2LBF8AMOMJLFNPMMLO953AVQ4C9YFF52R61234
 
-**Example Response ****with verbose as OFF for Windows and macOS devices******
+**Example Response with verbose as OFF for Windows and macOS devices **
 
 {
 "devices": [{
@@ -124,7 +126,7 @@ https://gears.opswat.com/o/api/v2.1/devices/status_changed?age=300&access_token=
 }]
 }
 
-**Example Response: **with verbose as ON for Windows and macOS devices****
+**Example Response:** **with verbose as ON for Windows and macOS devices**
 
 {
 "devices": [{
@@ -209,7 +211,7 @@ https://gears.opswat.com/o/api/v2.1/devices/status_changed?age=300&access_token=
 }]
 }
 
-**Example response: ****with verbose as ON for Linux, iOS, and Android devices******
+**Example response: with verbose as ON for Linux, iOS, and Android devices **
 
 {
 "devices": [{

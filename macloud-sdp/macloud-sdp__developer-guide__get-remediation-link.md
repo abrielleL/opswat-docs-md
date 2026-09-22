@@ -2,6 +2,8 @@
 
 # Get Remediation Link
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 3.0 |
 | --- | --- |
 | Last Update | 10/22/2019 |
@@ -13,29 +15,29 @@
 
 Use to fetch a remediation link for a given device
 
-## [API URL](/docs/macloud-sdp/developer-guide/get-remediation-link#api-url)
+## [API URL](/docs/cm/developer-guidelines/get-remediation-link#api-url)
 
 https://gears.opswat.com/o/api/v3/devices/:value/remediation
-## [Request Parameters](/docs/macloud-sdp/developer-guide/get-remediation-link#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/get-remediation-link#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
 | value | string | URL | Yes | it can be a device ID or MAC address or a custom ID of a device. It depends on value of the "opt" parameter |  |
-| opt | int | URL | Optional | Type of the given value in the URL. 0: Device ID or Mac Address 1: 3rd party custom ID which is linked with a device | 0 |
+| opt | int | URL | Optional | Type of the given value in the URL.  0: Device ID or Mac Address  1: 3rd party custom ID which is linked with a device | 0 |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/get-remediation-link#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/get-remediation-link#response-http-code)
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See details in the Response HTTP Code section in [this page](/docs/cm/developer-guidelines/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/get-remediation-link#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/get-remediation-link#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
 | remediation_link | string | remediation page URL for the given device. |
-| result | int | Result for get a remediation page which has the given HWID/MAC address   - -1: device is found, but the device status is [Out of license usage](https://onlinehelp.opswat.com/metaaccess/What_are_the_different_device_statuses_and_what_do_they_mean_.html) - 0: device is not found. - 1: device is found, and the device's remediation page URL is returned in the remediation_link parameter |
+| result | int | Result for get a remediation page which has the given HWID/MAC address   - -1: device is found, but the device status is [Out of license usage](/docs/cm/knowledge-base/what-are-the-different-devices-statuses-and-what-do-they-mean-) - 0: device is not found. - 1: device is found, and the device's remediation page URL is returned in the remediation_link parameter |
 
-## [Example](/docs/macloud-sdp/developer-guide/get-remediation-link#example)
+## [Example](/docs/cm/developer-guidelines/get-remediation-link#example)
 
 **Example Request**
 
@@ -77,9 +79,9 @@ HTTP code 400 Bad Request
 "error": "invalid_request",
 "error_description": "Invalid option"
 }
-## [History](/docs/macloud-sdp/developer-guide/get-remediation-link#history)
+## [History](/docs/cm/developer-guidelines/get-remediation-link#history)
 
 | Version | URL |
 | --- | --- |
-| v2.2 | [Get Remediation Link v2.2](/docs/macloud-sdp/developer-guide/get-remediation-link-v2-2) |
-| v2.0 | [Get Remediation Link 2.0](/docs/macloud-sdp/developer-guide/get-remediation-link-2-0) |
+| v2.2 | [Get Remediation Link v2.2](https://www.opswat.com/docs/macloud-sdp/developer-guide/get-remediation-link-v2-2) |
+| v2.0 | [Get Remediation Link 2.0](https://www.opswat.com/docs/macloud-sdp/developer-guide/get-remediation-link-2-0) |
