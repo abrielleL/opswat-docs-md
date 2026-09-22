@@ -90,6 +90,8 @@ The widget displays:
 
 Select **View All** to view the complete list.
 
+To add a blocked sender to the allowlist, click the  icon and the sender’s **From address** can be directly added to the [allowlist](/docs/mdces3/configuration/allowlist).
+
 ## [Country of Origin & Geolocation](/docs/mdces3/operating/dashboard#country-of-origin--geolocation)
 
 The **Country of Origin & Geolocation** widget displays the geographic locations associated with recent email activity.
@@ -102,7 +104,7 @@ It includes:
 
 Use the map controls to zoom in or out.
 
-Select **View All** for additional location information.
+Click **All Traffic** or **Threats only** to filter between displaying all traffic or Threats only. Select **View All** for additional location information.
 
 ## [Recent Activity](/docs/mdces3/operating/dashboard#recent-activity)
 

@@ -29,7 +29,7 @@ The following engines are available in **MetaDefender Cloud Email Security ™**
 | **CMC** |  |  |
 | **K7** |  |  |
 | **Quick Heal** |  |  |
-| **RocketCyber** |  |  |
+| **Sentinel One** |  |  |
 | **TACHYON** |  |  |
 | **Trellix** |  |  |
 | **Webroot SMD** |  |  |

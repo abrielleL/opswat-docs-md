@@ -4,7 +4,7 @@
 
 # Cloud Email Security
 
-#### 3.28 [Latest]
+#### 3.29 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mdces3/release-notes)
 

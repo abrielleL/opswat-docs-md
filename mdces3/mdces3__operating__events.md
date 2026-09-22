@@ -124,17 +124,16 @@ Possible actions include:
 
 ### [Labels](/docs/mdces3/operating/events#labels)
 
-The **Labels** section displays classifications assigned during message analysis.
+The **Labels** section displays classifications assigned during analysis.
 
 Examples include:
 
-- **SCL (Spam Confidence Level)**
-- **BCL (Bulk Complaint Level)**
-- **SFV (Spam Filtering Verdict)**
-- **CAT (Category)**
 - **Attachments**
+- **Signed**
+- **Encrypted**
+- etc.
 
-These labels provide additional context about spam filtering and message classification performed by the email platform.
+These labels provide additional context about the content.
 
 ## [Asset Details](/docs/mdces3/operating/events#asset-details)
 
@@ -175,7 +174,22 @@ Additional actions are available from the **Asset Details** section.
 
 The **View** menu provides access to additional message information.
 
-Available options may vary depending on the event and deployment.
+#### [View Headers](/docs/mdces3/operating/events#view-headers)
+
+Display the email headers.
+
+#### [**View Microsoft 365 Anti-Spam Analysis**](/docs/mdces3/operating/events#view-microsoft-365-anti-spam-analysis)
+
+Display Microsoft 365 Anti-Spam results, such as:
+
+- SCL (Spam Confidence Level)
+- BCL (Bulk Complaint Level)
+- SFV (Spam Filtering Verdict)
+- CAT (Category)
+
+#### [View Quarantined Item](/docs/mdces3/operating/events#view-quarantined-item)
+
+Redirect to the corresponding quarantined item.
 
 ### [Download Email](/docs/mdces3/operating/events#download-email)
 
@@ -215,8 +229,8 @@ Displays the antivirus detection summary for each file.
 
 Examples include:
 
-- **0/15** – No antivirus engines detected a threat.
-- **1/7** – One antivirus engine detected the file as malicious.
+- **0/17** – No antivirus engines detected a threat.
+- **1/6** – One antivirus engine detected the file as malicious.
 
 Selecting the detection value opens the **Event Details** page for that file.
 
