@@ -104,6 +104,24 @@ Editing the contents of an already-imported profile isn't supported. If a profil
 - If a device matches both an imported profile and one of Kiosk's built-in supported devices, Kiosk uses the imported profile.
 - Editing the contents of an already-imported profile isn't supported from either the Console or the Profiler. If a profile needs to change, capture a new one and re-import it — see [Managing imported profiles](/docs/mdkiosk/v4.8.5/advanced-deployment/encrypted-usb-device-profiles#managing-imported-profiles).
 
+## [**Force OPSWAT USB Hub to use USB 2.0 mode**](/docs/mdkiosk/v4.8.5/advanced-deployment/encrypted-usb-device-profiles#force-opswat-usb-hub-to-use-usb-20-mode)
+
+If your device is an OPSWAT Kiosk device with an OPSWAT USB Hub, there is a known issue with some hardware-encrypted USB drives may fail to mount when plugged into the front ports, so the drive never appears in the Kiosk interface and can't be scanned in the first insert. While the permanent fix is in progress, you can turn on **Force OPSWAT USB Hub to use USB 2.0 mode** to detect these devices:
+
+1. Sign in to the Web Management Console with an administrator account.
+2. Go to **Configuration**, then open the **Advanced** tab.
+3. Expand the **Encrypted USB** section.
+4. Turn on **Force OPSWAT USB Hub to use USB 2.0 mode**. This setting is only available on OPSWAT Hardened Image hardware with a USB hub — if you don't see it, your Kiosk doesn't have the applicable hardware.
+5. Click **Save Updates**.
+
+The change takes effect within about 30 seconds and waits for any scan already in progress to finish first — no restart is needed.
+
+With this setting on, affected hardware-encrypted drives unlock successfully on the first try, without the extra "unlock again" step. The trade-off is that every device connected through that USB hub — not just the affected encrypted drive — runs at the slower USB 2.0 speed instead of the hub's normal higher speed. If you don't have drives affected by this issue, leave the setting off (its default) to keep the hub at full speed.
+
+Note
+
+If you leave this setting off and Kiosk automatically switches a connection to USB 2.0 to work around the issue, you'll see a message reading **"The USB port has been switched to USB 2.0. Please enter your PIN and unlock the drive again."** Tap **GOT IT** and unlock the drive a second time to continue — this happens automatically and doesn't require any Console configuration.
+
 ## [Related Links](/docs/mdkiosk/v4.8.5/advanced-deployment/encrypted-usb-device-profiles#related-links)
 
 - [Encrypted Device Verification And Approval](/docs/mdkiosk/v4.8.5/advanced-deployment/encrypted-device-verification)

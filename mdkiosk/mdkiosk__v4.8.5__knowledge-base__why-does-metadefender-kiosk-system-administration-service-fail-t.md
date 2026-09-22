@@ -27,6 +27,8 @@ To resolve this issue, install the Wireless Networking feature as follows:
 - Open PowerShell with administrative privileges
 - Run the following command:
 
+`Install-WindowsFeature Wireless-Networking -Restart`
+
 After the system restarts, proceed with the Kiosk installation or upgrade process again.
 
 Support:

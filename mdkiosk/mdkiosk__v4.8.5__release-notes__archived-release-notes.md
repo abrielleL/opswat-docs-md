@@ -2,7 +2,7 @@
 
 # Archived Release Notes
 
-## 4.8.4
+## [4.8.4](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#484)
 
 | Kiosk 4.8.4.8500 - 6 August 2026 | |
 | --- | --- |
@@ -45,7 +45,7 @@
 | Total Files Scanned Shows Incorrectly When Scanning Encrypted Disk Image | When scanning an encrypted VHDX disk image with the "Scan full VHDX" option enabled, the Total Files Scanned count in the processing log is reported incorrectly. The kiosk does not prompt for the encryption password and miscounts the files within the encrypted container. |
 | Skipped Files Are Recorded to the Printout | When scanning a disk image with skip options enabled (e.g., Skip processing locked system files, Skip protected OS files, Skip hidden files), the skipped files still appear in the printed scan report. |
 
-## 4.8.3
+## [4.8.3](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#483)
 
 | Kiosk 4.8.3.7906 - 26 June 2026 |  |
 | --- | --- |
@@ -81,7 +81,7 @@
 | Fixed blank SSO login screen when network is unavailable at startup | Resolved a race condition where the Kiosk showed a blank SSO authentication screen if the service started before the network was ready. |
 | Fixed missing numeric keys on the Vietnamese on-screen keyboard | Resolved an issue where the Vietnamese on-screen keyboard did not expose number and symbol keys. |
 
-## 4.8.2
+## [4.8.2](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#482)
 
 | MetaDefender Kiosk 4.8.2 |  |
 | --- | --- |
@@ -133,7 +133,7 @@
 | Kiosk fails to load on hardened image | Resolved a rare issue where the Kiosk could become unresponsive during startup after running for several days on a hardened system. The application now recovers gracefully, ensuring reliable, uninterrupted operation. |
 | Disk not detected after upgrading to 4.8.1 | Fixed an issue where certain external hard disks were not recognized properly after an upgrade, appearing only as unreadable boot sectors. All supported disk types are now detected reliably right out of the box. |
 
-## 4.8.1
+## [4.8.1](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#481)
 
 | MetaDefender Kiosk 4.8.1 |  |
 | --- | --- |
@@ -142,7 +142,7 @@
 | Security enhancements | Various security issues have been addressed to enhance the overall security of the system |
 | **25 March 2026** (Kiosk 4.8.1.6216) |  |
 | Resolved Kiosk application upgrade via My OPSWAT | Resolved issues when upgrading Kiosk application via My OPSWAT:   - The upgrade may fail due to issue with Ngnix process is being used for other purposes. - When upgrading via My OPSWAT On-Prem over HTTPS, Kiosk may fail to download the installer. |
-| **19 March 2026** (Kiosk 4.8.1.6195) |  |
+| **19 March 2026** (Kiosk 4.8.1.6194) |  |
 | **New Features** |  |
 | Encrypt USB with BitLocker when retrieving files | When files are retrieved to external USB media, Administrator can configure Kiosk to automatically encrypt the target USB device with BitLocker. This helps ensure that exported data remains protected when removed from the Kiosk environment. |
 | Support local Kiosk user accounts for media scanning | Kiosk now supports local Kiosk user accounts. Administrators can create or import users directly in the Kiosk management console, and those accounts can then be used to sign in on the Kiosk UI for media scanning. This allows environments without Active Directory integration to control which individual users are allowed to operate the Kiosk while still keeping a clear audit trail of who performed each scan. |
@@ -171,7 +171,7 @@
 | MD Drive unexpectedly ejected after initial enablement | MD Drive is ejected unexpectedly without user interaction shortly after the feature is enabled for the first time. |
 | MD Drive is detected as a normal USB after the Kiosk install or upgrade. | Following a fresh installation or upgrade from a previous version, the Kiosk may detect the MD Drive as a normal USB device instead of the expected integrated MD Drive.  **Workaround:** Reboot the Kiosk to get the integration working normally again. |
 
-## 4.8.0
+## [4.8.0](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#480)
 
 | **MetaDefender Kiosk 4.8.0** |  |
 | --- | --- |
@@ -216,7 +216,7 @@
 | Screensaver video preview not playing | When configuring the screensaver, the video preview may not play after selecting a file. However, the settings are saved successfully, and the screensaver functions correctly on the Kiosk UI. |
 | Partitions in BitLocker-encrypted USB may not mount in some rare case | In rare cases, partitions on a BitLocker‑encrypted USB device may not mount. |
 
-## 4.7.11
+## [4.7.11](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4711)
 
 | MetaDefender Kiosk 4.7.11 |  |
 | --- | --- |
@@ -254,7 +254,7 @@
 
 ##
 
-## 4.7.10
+## [4.7.10](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4710)
 
 | MetaDefender Kiosk 4.7.10 |  |
 | --- | --- |
@@ -293,7 +293,7 @@
 | Scan results of Proactive DLP not shown for archive child files | Kiosk does not display Proactive DLP scan result if the detected file is inside archive files. |
 | Kiosk cannot mount Clonezilla if it is stored in a long folder name | Clonezilla fails to mount image folders when the folder name exceeds 255 characters due to filesystem limitations. |
 
-## 4.7.9
+## [4.7.9](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#479)
 
 | **MetaDefender Kiosk 4.7.9** |  |
 | --- | --- |
@@ -323,7 +323,7 @@
 | The toast message is overlapped | The toast message when connecting to primary and backup Core will be overlapped with menu icons on Kiosk Tower, Kiosk Mini and Kiosk Mobile screen. |
 | Switching login option may not apply | When switching from “Login with Windows Authentication” option to “Windows user login” option, the change doesn’t apply |
 
-## 4.7.8
+## [4.7.8](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#478)
 
 | **MetaDefender Kiosk 4.7.8** |  |
 | --- | --- |
@@ -342,7 +342,7 @@
 | Black screen on domain login without local Admin rights | When the Kiosk is joined to a domain, logging in with an AD user account that is not a member of the local Administrators group will result in a black screen after login. Ensure that any domain account intended to log in and operate the Kiosk is added to the local Administrators group on the Kiosk device. |
 |  |  |
 
-## 4.7.7
+## [4.7.7](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#477)
 
 | **MetaDefender Kiosk 4.7.7** |  |
 | --- | --- |
@@ -376,7 +376,7 @@
 | Resolved self-scan did not triggered at the scheduled time | Kiosk resolved an issue where the Self-Scan feature did not automatically trigger at the scheduled time. |
 | Resolved high CPU and fan noise caused by CD/DVD drive | Kiosk resolved an issue where the CD/DVD drive could cause unusually high CPU usage, resulting in increased fan noise |
 
-## 4.7.6
+## [4.7.6](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#476)
 
 | **MetaDefender Kiosk 4.7.6** |  |
 | --- | --- |
@@ -421,7 +421,7 @@
 | Upgrade fails when Network Policy Hardening is enabled | When the Network Policy Hardening is enabled, certain network services are disabled as part of the security configuration. This prevents some components (such as firewall and network settings) from being backed up, causing the Kiosk upgrade process failed. |
 | Self-scan skips all files | Self-scan feature in Kiosk 4.7.6 does not work as expected with Core 5.14.2. When initiated a self-scan, all files are skipped. |
 
-## 4.7.5
+## [4.7.5](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#475)
 
 | **MetaDefender Kiosk 4.7.5** |  |
 | --- | --- |
@@ -456,7 +456,7 @@
 | Files are uploaded to MFT Guest ID when uploads fail | When uploading multiple files from Kiosk to MFT, failed uploads may be incorrectly redirected to the MFT Guest account and displayed to the user |
 | Kiosk may become unresponsive when wiping encrypted IronKey S1000 USB | When wiping an encrypted IronKey S1000 USB drive, it may cause the Kiosk to become unresponsive |
 
-## 4.7.4
+## [4.7.4](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#474)
 
 | **MetaDefender Kiosk 4.7.4** |  |
 | --- | --- |
@@ -486,7 +486,7 @@
 | Fixed Deployment ID change not reflecting in Kiosk UI | Resolved an issue where the Deployment ID change did not update correctly in the Kiosk UI, causing license activation failures. The UI now correctly reflects the Deployment ID |
 | Fixed configuration save issue after upgrade | Kiosk version 4.7.4 fixed an issue where data fields is missing after upgrading from an older version (such as 4.6.3) prevented the Guest workflow configuration from being saved. |
 
-## 4.7.3
+## [4.7.3](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#473)
 
 | **MetaDefender Kiosk 4.7.2** |  |
 | --- | --- |
@@ -508,7 +508,7 @@
 | Improve character counting accuracy for foreign languages | Improve the character counting method to ensure greater accuracy when enforcing character limits for some foreign languages which require the use of Input Method Editor (IME), for example, Hebrew |
 | Security enhancements | Various security issues have been addressed to enhance the overall security of the system |
 
-## 4.7.2
+## [4.7.2](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#472)
 
 | MetaDefender Kiosk 4.7.2 |  |
 | --- | --- |
@@ -538,7 +538,7 @@
 | **Known Issues** |  |
 | Cannot apply Disclaimer via OCM or My OPSWAT Set settings | After applying a custom Disclaimer from the Set settings in OCM or My OPSWAT, the custom Disclaimer does not apply to instance within the Set. This will be addressed in the next version. |
 
-## 4.7.1
+## [4.7.1](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#471)
 
 | **MetaDefender Kiosk 4.7.1** |  |
 | --- | --- |
@@ -578,7 +578,7 @@
 | **Fixed Bugs** |  |
 | Issue with Custom Authentication Configuration on OCM7 | Resolved an issue where administrators were unable to edit the configuration of custom authentication on OCM7. This fix restores full control over authentication settings for administrators. |
 
-## 4.7.0
+## [4.7.0](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#470)
 
 | **MetaDefender Kiosk 4.7.0** |  |
 | --- | --- |
@@ -607,7 +607,7 @@
 | Issue wheIssue when upgrading in-place from older versionsn upgrading in-place from older versions | KIOSK has upgraded several 3rd party components in this version. Therefore, when upgrading from very old KIOSK versions, administrators should uninstall the current KIOSK version to clean up the system before reinstalling version 4.7.0. After reinstalling, configurations will be retained as they were before. |
 | Issue with Custom Authentication on OCM7 | Administrators cannot edit the configuration of custom authentication on OCM7. This will be addressed in our next versions. |
 
-## 4.6.8
+## [4.6.8](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#468)
 
 | 4.6.8 |  |
 | --- | --- |
@@ -624,7 +624,7 @@
 | Enhanced Authentication with Nested AD Groups | KIOSK now more accurately authenticates users within nested AD groups. |
 | Improved detection of external CD/DVD ROM | Users can scan CD/DVD after starting a session on KIOSK and connecting an external USB CD/DVD ROM. |
 
-## 4.6.7
+## [4.6.7](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#467)
 
 | **4.6.7** |  |
 | --- | --- |
@@ -643,7 +643,7 @@
 | **Known Issues** |  |
 | The simplified workflow with the file size limitation | The simplified workflow is currently optimized to streamline user operations. So the limits related to file size/total file are not yet supported on the simplified workflow. |
 
-## 4.6.6
+## [4.6.6](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#466)
 
 | 4.6.6 |  |
 | --- | --- |
@@ -675,7 +675,7 @@
 | Wipe Data on Bitlocker Drive | Fixed issue where users couldn't delete data on Bitlocker drive when wiping the drive with KIOSK. |
 |  |  |
 
-## 4.6.5
+## [4.6.5](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#465)
 
 | **4.6.5 Hotfix**  **5 Jan 2024** | **Major release with new features and enhancements** |
 | --- | --- |
@@ -708,7 +708,7 @@
 | Unable to save user password at "Enter Vault server to upload files to" option | Will be addressed in the next version |
 | Data are not deleted after wipe Bitlocker |  |
 
-## 4.6.4
+## [4.6.4](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#464)
 
 | **14 November 2023** | **Major release with new features and enhancements** |
 | --- | --- |
@@ -733,7 +733,7 @@
 | Cannot trigger Self Scan by clicking SCAN NOW because Simplified workflow already starts a session. | **Workaround solution:** Admin can configure Schedule Self Scan and enable option ***Allow Self Scan to cancel any currently running scan*** to trigger Self Scan |
 |  |  |
 
-## 4.6.3
+## [4.6.3](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#463)
 
 | 31 August, 2023 | Release focused on enhancements and bug fixes |
 | --- | --- |
@@ -745,7 +745,7 @@
 | Support for additional encrypted devices | - DataLocker Sentry ONE - Viasat Freedom 600 |
 | `My OPSWAT` integration | Initial preparation for basic inventory & license reporting support in a future `My OPSWAT` release (end of September) |
 
-## 4.6.2
+## [4.6.2](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#462)
 
 | 26 June, 2023 | Vulnerability fixes  OMVA Release: 2.0.7.174 |
 | --- | --- |
@@ -756,7 +756,7 @@
 
 ---
 
-## 4.6.1
+## [4.6.1](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#461)
 
 | 8 May, 2023 | Security patch release - 4.6.1.9996 |
 | --- | --- |
@@ -783,7 +783,7 @@
 
 ---
 
-## 4.5.8
+## [4.5.8](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#458)
 
 | 11 October, 2022 |  |
 | --- | --- |
@@ -799,7 +799,7 @@
 
 ---
 
-## 4.5.7
+## [4.5.7](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#457)
 
 | 30 August, 2022 |  |
 | --- | --- |
@@ -817,7 +817,7 @@
 
 ---
 
-## 4.5.6
+## [4.5.6](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#456)
 
 | 24 May, 2022 | This release focused on new features  OMVA Release: 2.0.6.167 |
 | --- | --- |
@@ -831,7 +831,7 @@
 
 ---
 
-## 4.5.5
+## [4.5.5](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#455)
 
 | 28 March, 2022 | This release focused on new features and bug fixes/enhancements |
 | --- | --- |
@@ -847,7 +847,7 @@
 
 ---
 
-## 4.5.4
+## [4.5.4](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#454)
 
 | 20 December, 2021 | This release focused on new features and bug fixes/enhancements |
 | --- | --- |
@@ -860,7 +860,7 @@
 
 ---
 
-## 4.5.3
+## [4.5.3](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#453)
 
 | 2 November, 2021 | This release focused on bug fixes and enhancements |
 | --- | --- |
@@ -875,7 +875,7 @@
 
 ---
 
-## 4.5.2
+## [4.5.2](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#452)
 
 | 16 September, 2021 | This release focused on support for nested group login, archive file selection, session report sent for Visitor Management and bug fixes |
 | --- | --- |
@@ -893,7 +893,7 @@
 
 ---
 
-## 4.5.1
+## [4.5.1](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#451)
 
 | 27 July, 2021 | This release focused on blank disc detection, CM set settings, and OMVA logging enhancements.  OMVA Release: 2.0.5.137 |
 | --- | --- |
@@ -911,7 +911,7 @@
 
 ---
 
-## 4.5.0
+## [4.5.0](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#450)
 
 Note
 
@@ -932,7 +932,7 @@ Management Console support for Internet Explorer has been dropped
 
 ---
 
-## 4.4.12
+## [4.4.12](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4412)
 
 | 6 May, 2021 | This release focused on file limit configuration with Vault processing, correcting VMDK with Linux file systems and other bug fixes. |
 | --- | --- |
@@ -950,7 +950,7 @@ Management Console support for Internet Explorer has been dropped
 
 ---
 
-## 4.4.11
+## [4.4.11](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4411)
 
 | 6 April, 2021 | This release focused on syslog support for TLS over TCP and other features & bug fixes. |
 | --- | --- |
@@ -973,7 +973,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.4.10
+## [4.4.10](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4410)
 
 | 4 February, 2021 | This release focused on Digital session log signing and bug fixes. |
 | --- | --- |
@@ -988,7 +988,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.4.9
+## [4.4.9](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#449)
 
 | 12 January, 2021 | This release focused on user experience enhancements & bug fixes.  OMVA Release: 2.0.3.96 |
 | --- | --- |
@@ -1004,7 +1004,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.4.8
+## [4.4.8](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#448)
 
 | 8 December, 2020 | This release focused on Single Sign On user login to the Management Console & bug fixes.  OMVA Release: 2.0.2.94 |
 | --- | --- |
@@ -1017,7 +1017,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.4.7
+## [4.4.7](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#447)
 
 | 10 November, 2020 | This release focused on Active Directory user login to the Management Console & bug fixes. |
 | --- | --- |
@@ -1029,7 +1029,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.4.6
+## [4.4.6](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#446)
 
 | 13 October, 2020 | This release is focused on bug fixes. |
 | --- | --- |
@@ -1043,7 +1043,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.4.5
+## [4.4.5](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#445)
 
 | 15 September, 2020 | This release is focused on simplifying HTTPS configuration within the Management Console and bug fixes. |
 | --- | --- |
@@ -1057,7 +1057,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.4.4
+## [4.4.4](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#444)
 
 | 18 August, 2020 | This release is focused on Configuring the order workflow profiles are used to map a user to, periodic testing of Core servers and bug fixes. |
 | --- | --- |
@@ -1072,7 +1072,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.4.3
+## [4.4.3](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#443)
 
 | 16 July, 2020 | This release is focused on Copy & Go processing, ability to retrieve files from a directory and configuring the install password for OMVA  OMVA Release: 2.0.1.92 |
 | --- | --- |
@@ -1089,7 +1089,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.4.2
+## [4.4.2](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#442)
 
 | 5 June, 2020 | This release is focused on fixing issues with remote Active Directory support |
 | --- | --- |
@@ -1099,7 +1099,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.4.1
+## [4.4.1](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#441)
 
 | 15 May, 2020 | This release is focused on adding support for multiple AD servers and log retention |
 | --- | --- |
@@ -1116,7 +1116,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.4.0
+## [4.4.0](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#440)
 
 | 16 April, 2020 | This release is focused on adding NGINX to serve the Management Console, allowing Guests to receive summary reports via email, and providing passwords with encrypted archives when processing with Vault |
 | --- | --- |
@@ -1133,7 +1133,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.3.11
+## [4.3.11](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4311)
 
 | 13 March, 2020 | This release is focused on the flexibility with the Vault copy-to directory structure, file deletion confirmation for users and other bug fixes |
 | --- | --- |
@@ -1149,7 +1149,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.3.10
+## [4.3.10](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4310)
 
 | 11 February, 2020 | This release is focused on bug fixes |
 | --- | --- |
@@ -1162,7 +1162,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.3.9
+## [4.3.9](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#439)
 
 | 14 January, 2020 | This release is focused on Vault upload to user configuration and bug fixes |
 | --- | --- |
@@ -1174,7 +1174,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.3.8
+## [4.3.8](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#438)
 
 | 10 December, 2019 | This release is focused on Imaging Media and bug fixes |
 | --- | --- |
@@ -1187,7 +1187,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.3.7
+## [4.3.7](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#437)
 
 | 12 November, 2019 | This release is focused on Visitor Management and bug fixes |
 | --- | --- |
@@ -1200,7 +1200,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.3.6
+## [4.3.6](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#436)
 
 | 8 October, 2019 | This release is focused on Management Console enhancements when Kiosk is managed and bug fixes |
 | --- | --- |
@@ -1213,7 +1213,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.3.5
+## [4.3.5](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#435)
 
 | 10 September, 2019 | This release is primarily focused on bug fixes |
 | --- | --- |
@@ -1226,7 +1226,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.3.4
+## [4.3.4](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#434)
 
 | 13 August, 2019 | Release focused on adding Kiosk high availability, Layer 7 load balancer support and bug fixes |
 | --- | --- |
@@ -1244,7 +1244,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.3.3
+## [4.3.3](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#433)
 
 | 9 July, 2019 | Release focused on adding Kiosk self scan and bug fixes |
 | --- | --- |
@@ -1261,7 +1261,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.3.2
+## [4.3.2](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#432)
 
 | 11 June, 2019 | Release focused on adding the OPSWAT Media Validation Agent, support for Avira-Iron-Drive, and bug fixes |
 | --- | --- |
@@ -1276,7 +1276,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.3.1
+## [4.3.1](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#431)
 
 | 15 May, 2019 | Release focused on fixing Management Console logins for all timezones |
 | --- | --- |
@@ -1285,7 +1285,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.3.0
+## [4.3.0](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#430)
 
 | 14 May, 2019 | Feature release focused on adding user support for the Management Console, support for Non-Windows file systems and minor bug fixes |
 | --- | --- |
@@ -1300,7 +1300,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.2.15
+## [4.2.15](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4215)
 
 | 18 April, 2019 | Feature release focused on internal enhancements for Central Management |
 | --- | --- |
@@ -1309,7 +1309,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.2.14
+## [4.2.14](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4214)
 
 | 9 April, 2019 | Feature release focused on adding support for VMware virtual machines and bug fixes |
 | --- | --- |
@@ -1326,7 +1326,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.2.13
+## [4.2.13](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4213)
 
 | 12 March, 2019 | Feature release focused on processing contents within virtual hard disks and minor fixes |
 | --- | --- |
@@ -1338,7 +1338,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.2.12
+## [4.2.12](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4212)
 
 | 12 February, 2019 | Feature release focused on system boot hardening, folder navigation on Vault and allowing copying original with sanitized files |
 | --- | --- |
@@ -1353,7 +1353,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.2.11
+## [4.2.11](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4211)
 
 | 8 January, 2019 | Feature release focused on allowing multiple devices to be wiped in one session and stability enhancements |
 | --- | --- |
@@ -1368,7 +1368,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.2.10
+## [4.2.10](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#4210)
 
 | 11 December, 2018 | Feature release focused on expanding support for processing non-Windows file systems and simplifying blocked files reported in session reports. |
 | --- | --- |
@@ -1382,7 +1382,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.2.9
+## [4.2.9](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#429)
 
 | 13 November, 2018 | Feature release focused on email, user selection of copy-to directories and stability improvements |
 | --- | --- |
@@ -1399,7 +1399,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.2.8
+## [4.2.8](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#428)
 
 | 22 October, 2018 | Maintenance release focused on Central Management compatibility |
 | --- | --- |
@@ -1409,7 +1409,7 @@ Added a survey in the Management Console to collect feedback
 
 ---
 
-## 4.2.7
+## [4.2.7](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#427)
 
 | 11 October, 2018 | Feature release focused on media manifest validation and improvements for stabilized processing |
 | --- | --- |
@@ -1422,18 +1422,18 @@ Added a survey in the Management Console to collect feedback
 | Retry logic improved when retrieving results from MetaDefender | In previous versions, if an error from MetaDefender prevented Kiosk from obtaining results, it would fail quickly and show that the file failed to process. Kiosk will now try harder to receive correct results from MetaDefender if a file has been successfully sent for processing. |
 | Removed curl error logging when a session is canceled | Canceling a session can result in canceling active connections between the MetaDefender server & Kiosk. This would result in an unnecessary large amount of curl error logs that are now removed under this specific condition. |
 
-## 4.2.6
+## [4.2.6](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#426)
 
 Release Date: 11 September, 2018
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Added support for processing iPhones
 - Ability for users to select which file handling actions to take
 - Added support for DataLocker Sentry 3 FIPS
 - syslog messages can output in CEF format
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Files sizes are displayed when browsing files to process
 - Added more display data to the session log & printout
@@ -1444,67 +1444,67 @@ Release Date: 11 September, 2018
 - Enhanced loading process upon startup
 - Core quarantine results are now reflected in the Kiosk results
 
-## 4.2.5
+## [4.2.5](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#425)
 
 Release Date: 14 August, 2018
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Offload processing to a Vault server connected to MetaDefender
 - Ability to Pause and Resume file processing
 - Enable/disable the Default workflow to restrict user login
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Adjustments to automatic printing at the end of a session
 - Fixed copying to a network share when a Remote Active Directory is configured
 - Support copying between encrypted media of the same type
 - Configurable footer printing for the session receipt
 
-## 4.2.4
+## [4.2.4](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#424)
 
 Release Date: 10 July, 2018
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Added support for processing android phones
 - Added support for processing within Acronis TIB files
 - Ability to view and assign user groups to a workflow profile
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Syslog messages can be configured to send over TCP
 - Defined more event codes for syslog messages
 - Enhanced ability to handle large nested directories
 - WebMC session history will display if a result is from a hash lookup
 
-## 4.2.3
+## [4.2.3](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#423)
 
 Release Date: 12 June, 2018
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Added LDAPS support for Remote AD servers
 - Ability to set the apikey during installation
 - Display file names of files in a large archive during processing
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Extended syslog support to multiple servers
 - Fixed login issue with users assigned to a workflow profile
 - Corrected browsing for files in nested directories with similar names
 - Improved the speed for copying files
 
-## 4.2.2
+## [4.2.2](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#422)
 
 Release Date: 21 May 2018
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Functionality to alert if a popup is open on the underlying system
 - Events can be configured to broadcast to a syslog server
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - File browse window can handle large number of files in a directory
 - Fixed issue with querying users from a remote AD
@@ -1512,28 +1512,28 @@ Release Date: 21 May 2018
 - Updated Central Mgmt integration to further validate configuration settings
 - Added ability to view the MetaDefender Privacy Policy from the Management Console
 
-## 4.2.1
+## [4.2.1](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#421)
 
 Release Date: 16 April, 2018
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Ability to download files from Vault
 - Configure session and file history CSV export run automatically
 - Added support for Kingston DataTraveler 400 G2
 - Email session reports to the logged in Kiosk session user
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Modified font display with foreign languages
 - Fixed issue with Central Mgmt settings import
 - Enhanced various logging with more specific information
 
-## 4.2.0
+## [4.2.0](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#420)
 
 Release Date: 20 February, 2018
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Rebranded Kiosk
 - Ability to be managed by Central Management
@@ -1541,7 +1541,7 @@ Release Date: 20 February, 2018
 - Session and file history can be exported to CSV
 - Kiosk can be configured to allow file handling to run automatically
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Fixed issue with reporting wipe progress for large devices
 - Improved media handling
@@ -1551,26 +1551,26 @@ Release Date: 20 February, 2018
   - disable warning of network errors
 - Enhanced license activation
 
-## 4.1.1
+## [4.1.1](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#411)
 
 Release Date: 30 November, 2017
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - None
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Fixed issue in uploading files to SFT accounts when authentication is done by a custom authentication module
 - Sanitized files are copied to temporary storage instead of original media
 - Fixed issue in creating a new language
 - Fixed issue where session finish time was reported incorrectly in Kiosk logs
 
-## 4.1.0
+## [4.1.0](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#410)
 
 Release Date: 26 October, 2017
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Support for additional models of encrypted USB drives
 
@@ -1582,7 +1582,7 @@ Release Date: 26 October, 2017
 - Answers to user questions can be used in the path specified for post scan file handling
 - When copying blocked files, administrators have the option of only copying files that have been sanitized
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - The Metadefender Kiosk Management Console now has a default password ('admin') after installation
 - Cancelling a scan will cancel scans in progress on the Metadefender Core server
@@ -1590,45 +1590,45 @@ Release Date: 26 October, 2017
 - Improvements in the Japanese language keyboard
 - Language keyboards can be disabled from the Kiosk UI
 
-## 4.0.2
+## [4.0.2](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#402)
 
 Release Date: 18 September, 2017
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Metadefender Kiosk can be configured to check for existing scan results before sending a file to Metadefender Core
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - The Browse and Scan All options will not be displayed in the Kiosk UI if they are disabled
 - Media wipes are now logged as sessions
 - Media manifests are uploaded with files that are copied to a Metadefender SFT server
 - Vulnerability details are displayed if Metadefender Core has the Metadefender Vulnerability engine enabled
 
-## 4.0.1
+## [4.0.1](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#401)
 
 Release Date: 28 July, 2017
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Signed scan manifests can be written to processed media (requires Metadefender Core 4.8.0 or later)
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Improvements in uploading files to a Metadefender SFT server
 - Session scan logs are included in a configuration export
 
-## 4.0.0
+## [4.0.0](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#400)
 
 Release Date: 5 July, 2017
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - New Kiosk user interface
 - Optional 'Disclaimer' Screen in Kiosk workflow
 - Support for user selected language
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Re-implementation of drive wipe functionality
 - Move to new licensing mechanism
@@ -1636,163 +1636,163 @@ Release Date: 5 July, 2017
 - Minimum required version of Metadefender Core is 4.7.2
 - Configuration can not be imported from versions prior to 4.0.0
 
-## 3.4.6
+## [3.4.6](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#346)
 
 Release Date: 25 July, 2017
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - None
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Fixed issue where Kiosk sometimes didn't launch after system restart
 - Minor bug fixes
 
-## 3.4.5
+## [3.4.5](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#345)
 
 Release Date: 25 April, 2017
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Alert dialog shown to the user when a non-memory USB device is inserted
 - Devices can be limited to those whitelisted by device ID
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - The only Metadefender Kiosk workflows included by default will be the 'Default' and 'Guest' workflows
 - Mechanism to retrieve device serial IDs has been improved
 
-## 3.4.4
+## [3.4.4](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#344)
 
 Release Date: 14 March, 2017
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - None
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Metadefender Kiosk will now attempt to detect a second media if the first one detected fails
 - Error message shown when files can not be removed by Metadefender Kiosk
 
-## 3.4.3
+## [3.4.3](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#343)
 
 Release Date: 7 February, 2017
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Support for USB Flash Security encrypted drives
 - Option to whitelist files larger than a specified size
 - Allow administrator to disable 'Process All' option
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Addressed issue in using Kiosk over HTTPS
 - Better handling of scan results from Metadefender Core 4.x
 - System files on Bitlocker encrypted devices can optionally be excluded from scanning
 
-## 3.4.2
+## [3.4.2](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#342)
 
 Release Date: 13 December, 2016
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Metadefender Kiosk can now be configured to abort scans as soon as a blocked file is found
 - Multiple Metadefender Core servers can be defined for redundancy
 - Support for wiping encrypted USBs
 - Alert sound can be customized
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Better reporting of mismatched files that are found within archives
 - SMTP settings for emailed session reports are now configured globally
 - Estonian keyboard layout is now supported for the onscreen keyboard
 - Options for handling multiple partitions have been simplified to either block devices with multiple partitions or scan all available partitions
 
-## 3.4.1
+## [3.4.1](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#341)
 
 Release Date: 9 November, 2016
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - None
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Kiosk user will now be prompted to confirm before destination media is wiped before files are copied to it
 
-## 3.4.0
+## [3.4.0](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#340)
 
 Release Date: 27 October, 2016
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Each Metadefender Kiosk workflow specifies a specific Metadefender Core workflow or rule to use
 - Files identified as potentially vulnerable by Metadefender Core's vulnerability engine are shown in the scan results
 - Metadefender Kiosk will now scan the boot sector of any media
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - The Metadefender Kiosk session log page user interface has been updated
 - Potential security vulnerability with Ctrl-L key combination has been closed
 - Better handling of McAfee encrypted USB devices
 - Requires Metadefender Core 3.12.4 or later
 
-## 3.3.6
+## [3.3.6](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#336)
 
 Release Date: 30 September, 2016
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Built in user authentication now supports remote Active Directory authentication.
 
   - Note that for remote Active Directory authentication provided user credentials are not used when files are copied as a post action.
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Metadefender Kiosk will validate SSL certificates when using HTTPS to communicate to the Metadefender Core server. If Metadefender Core is using a self-signed certificate, this certificate must be installed on the Metadefender Kiosk machine, otherwise validation will fail.
 - The Metadefender Kiosk UI will reset after the scanned media has been removed when at the scan results page
 
-## 3.3.5
+## [3.3.5](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#335)
 
 Release Date: 1 September, 2016
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Encrypted drives can now be used as the "Copy To" destination
 - Drives that are being copied to can now be wiped before files are copied
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Server settings for e-mail notifications are now configured in Metadefender Kiosk instead of in Metadefender Core
 
-## 3.3.4
+## [3.3.4](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#334)
 
 Release Date: 8 July, 2016
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Compatible with Metadefender Core 4.4 and later versions
 - Support for Kanguru 2000 and 3000 encrypted USBs
 - More flexibility allowed in the destination directory when "Copy To" post action is enabled
 - Scan session log can be saved as a PDF
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - High security workflow included by default in installation
 - Kiosk UI now scales to higher resolutions
 - Count of files sent to a Metadefender Secure File Transfer server added to Management Console dashboard
 
-## 3.3.3
+## [3.3.3](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#333)
 
 Release Date: 31 May, 2016
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Non-guest Metadefender Kiosk profiles can now upload to Metadefender SFT guest accounts
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Updated onscreen Japanese keyboard
 - Metadefender Kiosk can now be used with a Metadefender Core server that has an API key set
@@ -1800,102 +1800,102 @@ Release Date: 31 May, 2016
 - Several hotkeys are now automatically disabled when the UI is running
 - Additional minor bug fixes
 
-## 3.3.2
+## [3.3.2](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#332)
 
 Release Date: 19 April, 2016
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Scan reports can now be sent by e-mail after the scanning session is complete
 - The file upload chunk size for uploading files to a Metadefender SFT server is now configurable.
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - The sender e-mail address is no longer required when uploading files to a Metadefender SFT server
 - Additional strings have been added to the Kiosk UI and can be modified through the Management Console
 - The encryption method for passwords saved in the Metadefender Kiosk configuration has changed. Importing configuration from versions prior to Metadefender Kiosk 3.3.2 will not import passwords.
 
-## 3.3.1
+## [3.3.1](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#331)
 
 Release Date: 15 March, 2016
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - None
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Better cancellation of a scan in progress
 - Fixed issue when browsing blank media
 - Correct detection of unencrypted Kanguru devices
 - Database and Windows events can be viewed through the Management Console
 
-## 3.3.0
+## [3.3.0](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#330)
 
 Release Date: 30 January, 2016
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - The name of the product is now Metadefender Kiosk
 - Administrators have the option to restrict access to domain users when Windows authentication is enabled
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Fixed bug in importing saved configuration
 - IIS Express component has been upgraded to version 8.0
 
-## 3.2.0
+## [3.2.0](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#320)
 
 Release Date: 23 December, 2015
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Metadefender now uses Metascan workflows (Metascan versions 3.10.1 and later)
 - Custom authentication modules are supported
 - Windows 10 support
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - None
 
-## 3.1.0
+## [3.1.0](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#310)
 
 Release Date: 31 October, 2015
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Metascan functionality can now be configured within the Metadefender Management Console. This is only supported for Metascan servers version 3.9.5 or later.
 - Support for floppy disks as the copy destination in post-actions
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Custom time periods can be set for the statistics displayed on the Metadefender dashboard
 
-## 3.0.12
+## [3.0.12](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#3012)
 
 Release Date: 30 September, 2015
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Upload to Policy Patrol Secure File Transfer (Requires version 2.2 or later of SFT) is now available as a post action
 - The Metadefender Management Console has an updated look and feel, matching the Metascan Management Console
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - The security and compatibility of the Metadefender Management Console has been improved by replacing the PHP component with JavaScript
 - Stability of the data sanitization post-action has been improved
 - Fixed issue where floppy disk drives on non-English operating systems were not being recognized
 - Fixed issue where in certain circumstances Metadefender might not start automatically upon system restart
 
-## 3.0.11
+## [3.0.11](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#3011)
 
 Release Date: 31 August, 2015
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - None
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Updated kiosk UI strings for non-English languages
 - Improved support for
@@ -1905,39 +1905,39 @@ Release Date: 31 August, 2015
   - Kingston encrypted USBs
 - If Windows authentication is enabled, non-local (i.e. domain) users are now required to specify their domain
 
-## 3.0.10
+## [3.0.10](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#3010)
 
 Release Date: 30 July, 2015
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - None
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Resolved issue where files would fail to copy to network locations when SHA-256 hash verification was enabled
 - Resolved issue in displaying large number of files in Metadefender's browse dialog
 - Support for file type conversion from image files has been removed. Conversion from PDF is now only supported to sanitized PDF. For customers that will be exporting Metadefender workflows that used this functionality OPSWAT recommends that these conversions are disabled before exporting.
 
-## 3.0.9
+## [3.0.9](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#309)
 
 Release Date: 30 June, 2015
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - None
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Reduced the latency in loading workflow configuration when there are many user accounts on the associated active directory server
 - Resolved race condition where Metadefender occasionally did not start upon system startup when installed on Windows 8 or newer operating systems
 - Improved behavior when multiple instances of Metadefender are running on the same system
 
-## 3.0.8
+## [3.0.8](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#308)
 
 Release Date: 22 May, 2015
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Windows 8.1 and 2012 R2 are now supported
 - Buffalo RUF2-hsc-2gt Encrypted USBs are now supported
@@ -1947,23 +1947,23 @@ Release Date: 22 May, 2015
 - Metadefender Idle Screen can be customized
 - German and Korean translations of the Metadefender kiosk UI
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Hashes of files are re-verified when the 'Copy To' post action command is used
 - Better handling of network failures when scanning with a remote Metascan server
 
-## 3.0.7
+## [3.0.7](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#307)
 
 Release Date: 22 December, 2014
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Scan logs can be saved to the media being scanned
 - Recent sessions now listed in the Metadefender Management Console logs page
 - Support for Buffalo SecureLock encrypted devices
 - Receipt can be configured to print automatically
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - More details available in the scan result screen for files that failed to scan
 - Kiosk user can be alerted when Metadefender license is close to expiration
@@ -1973,17 +1973,17 @@ Release Date: 22 December, 2014
 - Bitlocker encrypted drives are now supported on Windows 8.1
 - Other minor changes
 
-## 3.0.6
+## [3.0.6](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#306)
 
 Release Date: 4 November, 2014
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Support for Ironkey D250 encrypted USBs
 - Support for BitLocker (password) encrypted devices
 - Vietnamese and Japanese user interface available by default
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - User account credentials used for post actions when Windows authentication is enabled
 - Better indication when potential threats are found
@@ -1991,18 +1991,18 @@ Release Date: 4 November, 2014
 - Debug log package available for download in Management Console
 - Additional printout configuration options
 
-## 3.0.5
+## [3.0.5](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#305)
 
 Release Date: 1 August, 2014
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Added Support of KIOSK UI localization
 - Added predefined KIOSK UI Localization for Hebrew & Arabic
 - Added additional predefined profiles
 - More configuration for printouts
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Fixed error when scanning empty media
 - Improved accuracy of timestamps in logs
@@ -2012,16 +2012,16 @@ Release Date: 1 August, 2014
 - Add ability to set password in Metadefender Management Console
 - Various bug fixes
 
-## 3.0.4
+## [3.0.4](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#304)
 
 Release Date: 8 May, 2014
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Copy to user provided media as post-action
 - Username is available as a variable in post-actions when Windows login is enabled
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Improved archive handling
 - Improved physical keyboard support
@@ -2032,23 +2032,23 @@ Release Date: 8 May, 2014
 - Minor bug fixes
 - UI improvements
 
-## 3.0.3
+## [3.0.3](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#303)
 
 Release Date: 8 November, 2013
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - None
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Fixed print formatting issues
 
-## 3.0.2
+## [3.0.2](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#302)
 
 Release Date: 27 September, 2013
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - Search for processing result by file upload
 - Ability to export processing logs
@@ -2057,16 +2057,16 @@ Release Date: 27 September, 2013
 - Improved Metadefender Management Console
 - Improved formatting for built-in kiosk printers
 
-#### Fixed
+#### [Fixed](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#fixed)
 
 - Fixed bug that was preventing restoration of default and guest profiles
 - Prevent users from being added to more than one workflow profile
 
-## 3.0.1
+## [3.0.1](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#301)
 
 Release Date: 5 July, 2013
 
-#### Features
+#### [Features](/docs/mdkiosk/v4.8.5/release-notes/archived-release-notes#features)
 
 - User Authentication
 - Customizable User Profiles

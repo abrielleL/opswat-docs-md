@@ -12,6 +12,10 @@ In order to perform a successful Kiosk Active Directory (AD) integration, the fo
 
 3. Fill in the correct credentials and select **Test connection** to make sure the AD server is reachable from the Kiosk side)
 
+Tip:
+
+Instead of entering a fixed password for the directory's service account, you can set **Privileged access management manager** to **BeyondTrust Password Safe** and provide your BeyondTrust host, API key, and the managed system/account that holds this credential. MetaDefender Kiosk will then retrieve the current password from BeyondTrust automatically each time it connects to Active Directory, so logins keep working through your normal BeyondTrust password-rotation schedule without any changes on the Kiosk side.
+
 4. The next page allows you to assign users to either the **Administrator** or **Auditor** role.
 
 5. The next page you can see the **Summary**, and click **Submit**

@@ -92,6 +92,55 @@ You can click on **Group** to add AD groups to different roles
 
 The final page shows a summary of the User Directory configuration and gives the option to edit before saving. Use the **SUBMIT** button to save the User Directory.
 
+### [Configuring BeyondTrust Password Safe for Console login](/docs/mdkiosk/v4.8.5/operating/login-settings#configuring-beyondtrust-password-safe-for-console-login)
+
+If your organization manages Active Directory credentials through BeyondTrust Password Safe, Management Console sign-in for an AD-backed User Directory can use that same managed credential instead of a static, locally-stored bind password. Once configured, MetaDefender Kiosk fetches the current password from BeyondTrust live at each login — if the password is rotated on the BeyondTrust side, no changes are needed on the Kiosk side, and the very next login attempt uses the newly rotated password automatically.
+
+Info
+
+This is configured as part of the AD User Directory setup above, not as a separate login method — the fields below appear on the same User Directory pages once you select BeyondTrust Password Safe.
+
+**Requirements:**
+
+- MetaDefender Kiosk 4.8.5 or later.
+- A reachable BeyondTrust Password Safe instance (cloud or on-premises), with an API key and a run-as account that has permission to request and release managed-account credentials, plus the Managed System ID and Managed Account ID identifying the AD service account.
+
+**To configure it:**
+
+1. When adding or editing an AD User Directory (see **Active Directory** above), set **Privileged access management manager** to **BeyondTrust Password Safe** (the default is **None**).
+2. Fill in the fields that appear:
+
+   - **BeyondTrust host**
+   - **BeyondTrust username** (the run-as account)
+   - **BeyondTrust API key**
+   - **Request duration** (max time for request approvals, 1–15 minutes)
+   - **Reason** — pre-filled with a default justification; editable
+   - **Managed system ID**
+   - **Managed account ID**
+3. Continue through the wizard — the connection status must show **Connected** before you can continue, the same as a normal AD directory.
+4. Assign users to roles and click **SUBMIT** to save, as described above.
+
+Once saved, the static Bind Password is no longer used for this directory — Kiosk authenticates using the credential it fetches from BeyondTrust instead.
+
+**Configuration reference:**
+
+| Setting | Valid Values | Default | Notes |
+| --- | --- | --- | --- |
+| Privileged access management manager | None / BeyondTrust Password Safe | None | Selecting BeyondTrust Password Safe reveals the fields below and hides the static Bind Password field. |
+| BeyondTrust host | Hostname/URL | — | Required. |
+| BeyondTrust username | String (run-as account) | — | Required. |
+| BeyondTrust API key | String, up to 128 characters | — | Required. Stored encrypted; masked after save. |
+| Request duration | Integer, 1–15 minutes | — | Values outside 1–15 are rejected. |
+| Reason | String | Pre-filled default justification text | Editable; sent to BeyondTrust as the access-request reason. |
+| Managed system ID | String/ID | — | Required. Identifies the AD system in BeyondTrust. |
+| Managed account ID | String/ID | — | Required. Identifies the AD service account whose password Kiosk fetches. |
+
+Note:
+
+If BeyondTrust can't be reached at the moment someone tries to log in, Kiosk fails the login attempt with a clear error rather than hanging — it doesn't fall back to a cached or stored password.
+
+This same BeyondTrust Password Safe configuration also backs the [Kiosk UI Exit password](/docs/mdkiosk/v4.8.5/docs/mdkiosk/hardened-image/enable-exit-password-for-kiosk-ui), once **Use BeyondTrust Password Safe** is selected there — see [Enable Exit Password for Kiosk UI](/docs/mdkiosk/v4.8.5/docs/mdkiosk/hardened-image/enable-exit-password-for-kiosk-ui) and [Is Kiosk Active Directory integration possible?](/docs/mdkiosk/v4.8.5/docs/mdkiosk/knowledge-base/is-kiosk-active-directory-integration-possible-) for related setup.
+
 ---
 
 ## [SAML 2.0](/docs/mdkiosk/v4.8.5/operating/login-settings#saml-20)
