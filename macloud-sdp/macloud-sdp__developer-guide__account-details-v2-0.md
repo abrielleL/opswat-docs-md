@@ -2,6 +2,8 @@
 
 # Account Details v2.0
 
+Summarize Page    Connect to Cursor Connect to VS Code
+
 | API version | 2.0 |
 | --- | --- |
 | Last Update | 01/30/2018 |
@@ -14,26 +16,26 @@
 
 Use this API to fetch your account details
 
-## [API URL](/docs/macloud-sdp/developer-guide/account-details-v2-0#api-url)
+## [API URL](/docs/cm/developer-guidelines/account-details-v2-0#api-url)
 
 https://gears.opswat.com/o/api/v2/account
-## [Request Parameters](/docs/macloud-sdp/developer-guide/account-details-v2-0#request-parameters)
+## [Request Parameters](/docs/cm/developer-guidelines/account-details-v2-0#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | Header | Yes | access token which archived from OAuth authentication step |  |
 
-## [Response HTTP Code](/docs/macloud-sdp/developer-guide/account-details-v2-0#response-http-code)
+## [Response HTTP Code](/docs/cm/developer-guidelines/account-details-v2-0#response-http-code)
 
-See [APIs](/docs/macloud-sdp/developer-guide/apis)
+See [APIs guidelines.](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 
-## [Response Parameters](/docs/macloud-sdp/developer-guide/account-details-v2-0#response-parameters)
+## [Response Parameters](/docs/cm/developer-guidelines/account-details-v2-0#response-parameters)
 
 | Key | Datatype | Description |
 | --- | --- | --- |
 | name | string | Account Name |
 | email | string | Owner email address |
-| last_login | string | The last date when the owner user logged into MetaAccess console |
+| last_login | string | The last date when the owner user logged into My OPSWAT Central Management console |
 | date_created | string | Date when the account was created |
 | devices_allowed | int | Maximal number of devices is allowed to be monitored by on the account |
 | devices_used | int | Number of monitored devices on the account |
@@ -41,7 +43,7 @@ See [APIs](/docs/macloud-sdp/developer-guide/apis)
 | devices_critical | int | Number of devices with critical issues |
 | devices_issues | int | Number of devices with issues |
 
-## [Example](/docs/macloud-sdp/developer-guide/account-details-v2-0#example)
+## [Example](/docs/cm/developer-guidelines/account-details-v2-0#example)
 
 **Request Example**
 
