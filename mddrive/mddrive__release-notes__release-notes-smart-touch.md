@@ -17,4 +17,3 @@
 - Engine transfers that stop because the wireless connection was switched off report the lost connection, so an operator reconnects and retries rather than flashing the drive again.
 - When the connected network reports a time zone, syncing the clock adopts it automatically, so scan timestamps match local time without an operator selecting the zone by hand.
 - Importing a certificate authority certificate for Wi-Fi follows the same full-screen prompt-and-result flow as the Kiosk and Secure Storage imports, bringing the consistency in user experience.
-- Faster Secure Storage experience with fewer delays when disconnecting from a Kiosk, while keeping file counts accurate

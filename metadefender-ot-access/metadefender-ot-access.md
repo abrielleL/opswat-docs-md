@@ -4,7 +4,7 @@
 
 # OT Access
 
-#### 2.3.2 [Latest]
+#### 2.4.x [Latest]
 
 [Release Notes](https://www.opswat.com/docs/metadefender-ot-access/release-notes)
 

@@ -2,6 +2,17 @@
 
 # Release Notes
 
+## [Version 2.4.0](/docs/metadefender-ot-access/release-notes/release-notes#version-240)
+
+Component versions: Admin UI 2.4.0
+
+### [Improvements/Updates](/docs/metadefender-ot-access/release-notes/release-notes#improvementsupdates)
+
+- Support High-Availability
+- Gateway condition alerting and notifications
+- SAML identity provider signing certificate validation
+- Several authentication and access control hardening fixes
+
 ## [Version 2.3.3](/docs/metadefender-ot-access/release-notes/release-notes#version-233)
 
 Component versions: Admin UI 2.3.3, Management Console 3.02.0000
@@ -10,6 +21,8 @@ Component versions: Admin UI 2.3.3, Management Console 3.02.0000
 
 - Migrated the database to PostgreSQL to improve scalability and reliability.
 - Added support for logging and monitoring events between OT Access and OT Gateway.
+- Added an installation wizard for on-premises deployments.
+- Support LDAPs.
 - Bug fixes.
 
 ## [Version 2.3.2](/docs/metadefender-ot-access/release-notes/release-notes#version-232)
