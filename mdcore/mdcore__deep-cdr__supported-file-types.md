@@ -9,7 +9,7 @@ An increasingly popular and effective method of compromising computer security, 
 - Removing hidden exploitable objects (e.g., scripts, macros, etc.)
 - Converting the file format
 
-## [Supported File Types (total 229)](/docs/mdcore/deep-cdr/supported-file-types#supported-file-types-total-229)
+## [Supported File Types (total 230)](/docs/mdcore/deep-cdr/supported-file-types#supported-file-types-total-230)
 
 | Source File Type | Description | Target Sanitized Types |
 | --- | --- | --- |
@@ -242,6 +242,7 @@ An increasingly popular and effective method of compromising computer security, 
 | vsix | Visual Studio Extension | **vsix** |
 | blz | BriefLZ | **blz** |
 | taz | TAR Zipped Archive | **taz** |
+| aff4 | Advanced Forensic Format 4 | **aff4** |
 
 - (*) Only supported on Windows for now.
 - For the archive sanitization, please enable it in the Compression tab
@@ -250,7 +251,7 @@ Info
 
 Sanitization is in BETA for these file types:
 
-AVC, SPF, TWBX, UTIB, STORY, ASICS, ASICE, ES3, PCK, B3ML, B3DM, MDZIP, LZ, ASAR, MPD, DWFX, AVIF, 3DML, MPP, STP, VSIX, EASM, HEIF, YENC, VCF, IFC, LYRX, BLZ, X3P, TAZ, JT, IDML
+AVC, SPF, TWBX, UTIB, STORY, ASICS, ASICE, ES3, PCK, B3ML, B3DM, MDZIP, LZ, ASAR, MPD, DWFX, AVIF, 3DML, MPP, STP, VSIX, EASM, HEIF, YENC, VCF, IFC, LYRX, BLZ, X3P, TAZ, JT, IDML, AFF4
 
 XML sanitization is specific to XML vulnerability. It does not eliminate other threat such as Microsoft Office XML formats.
 

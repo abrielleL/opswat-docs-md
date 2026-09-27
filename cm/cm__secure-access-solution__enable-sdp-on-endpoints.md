@@ -28,8 +28,12 @@ To enable SDP on a device group:
 1. Log into My OPSWAT Central Management console
 2. Navigate to **Inventory > Groups**
 3. Select a group you would like to enable SDP, and select the **Settings** tab
-4. Toggle on the **Secure Access** section, and check off **Enable Secure IT Access for all devices**
+4. Toggle on the **Secure Access** section, and check off **Enable Secure IT Access for this group...**
 
 Within a few minutes after your change, the MetaDefender Endpoint will check in with the My OPSWAT Central Management backend servers, note the change, and begin installing SDP for the client devices.
 
 ![](https://uploads.developerhub.io/prod/97qW/o09c9lecuv23unflc43gx5f74t6ef1uvpkc2djr6kb36mf4sfi549bhho90ra5yb.png)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

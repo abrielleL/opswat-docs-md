@@ -37,7 +37,11 @@ Go to **Configuration > Email > Email Settings**. Pick SMTP or Microsoft 365 (Gr
 
 ### [End-user workflow at the Kiosk](/docs/mddrive/configuration/use-metadefender-drive-with-kiosk#end-user-workflow-at-the-kiosk)
 
-What the user sees when an MDD is inserted:
+Inserting MetaDefender Drive with Smart Touch to Kiosk
+
+If the inserted device is a Smart Touch, on the Smart Touch screen user will see this
+
+Depending on the Selected Workflow, user will be prompt for login or not
 
 #### [Enter email to receive the scan report](/docs/mddrive/configuration/use-metadefender-drive-with-kiosk#enter-email-to-receive-the-scan-report)
 

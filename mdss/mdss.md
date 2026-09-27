@@ -1,12 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mdss -->
 
+[MetaDefender Storage Security](https://www.opswat.com/docs/mdss)Need Help?
 ### METADEFENDER
 
 # Storage Security
 
 #### 4.5.2 [Latest]
 
-[Release Notes](https://www.opswat.com/docs/mdss/release-notes)
+[Release Notes](https://opswat.developerhub.io/docs/mdss/release-notes)
 
 Getting Started[##### Introduction
 

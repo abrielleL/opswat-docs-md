@@ -6,9 +6,9 @@
 
 ### [VMWare vSphere](https://www.opswat.com/docs/manac/installation/technical-requirements#vmware-vsphere)
 
-#### Small Standalone Appliance
+#### NAC Enforcer virtual appliance
 
-| **Appliance Specifications** | **NAC-Edge VMWare Enforcer** |
+| Specification | **Minimum Requirement** |
 | ---- | ---- |
 | **VMWare Version** | ESXi 5.1 or newer |
 | **Virtual Hardware Version** | Minimum version 8 |
@@ -28,3 +28,7 @@ The following FQDN must be resolved to the IP address of the NAC image before de
 | portal.myweblogon.com | IP address of the NAC image |
 
 **Note:** Ensure your DNS server (or local `hosts` file) is configured to resolve `portal.myweblogon.com` to the NAC image's assigned IP address prior to installation. Failure to configure this may result in portal access issues.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

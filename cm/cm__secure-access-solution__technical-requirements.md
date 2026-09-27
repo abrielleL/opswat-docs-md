@@ -6,9 +6,9 @@
 
 ### [VMWare vSphere](https://www.opswat.com/docs/manac/installation/technical-requirements#vmware-vsphere)
 
-#### Small Standalone Appliance
+#### NAC Edge virtual appliance
 
-| **Appliance Specifications** | **NAC-Edge VMWare Enforcer** |
+| **Specification** | Minimum Requirement |
 | ---- | ---- |
 | **VMWare Version** | ESXi 5.1 or newer |
 | **Virtual Hardware Version** | Minimum version 8 |
@@ -16,3 +16,7 @@
 | **Memory** | 8 GB Minimum |
 | **Hard Drive Storage** | 100 GB Minimum |
 | **Network Interface** | Gigabit NIC |
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

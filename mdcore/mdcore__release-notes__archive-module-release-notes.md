@@ -2,6 +2,17 @@
 
 # Archive Module release notes
 
+## [v8.1.0](/docs/mdcore/release-notes/archive-module-release-notes#v810)
+
+Release date: 9/23/2026
+
+- Added support for K5M extraction.
+- Added support for MSIP decryption.
+- Added the index of each extracted entry for formats.
+- Improved memory usage by tracking ongoing requests and applying more aggressive garbage collection.
+- Upgraded the 7-Zip library to 26.02 to resolve reported CVEs.
+- Fixed an engine crash when processing EML files.
+
 ## [v8.0.3](/docs/mdcore/release-notes/archive-module-release-notes#v803)
 
 Release date: 8/13/2026

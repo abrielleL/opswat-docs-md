@@ -2,6 +2,34 @@
 
 # Deep CDR release notes
 
+## [v8.1.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v810)
+
+Release date: 9/23/2026
+
+- Supported hidden data removal in Word, Excel, and PowerPoint 2007 files.
+- Supported encapsulated object removal and recursive sanitization in DICOM files.
+- Supported AFF4 compression.
+
+  Supported header and footer removal in Word 2007 and Excel 2007 files.
+- Supported digital signature removal in Office 2007 files.
+
+  Supported video object removal in PowerPoint 2007 files, including orphaned thumbnails shared with audio objects.
+- Supported attached template reference removal from Word 2007 files.
+- Extended IDML sanitization to remove unused data and all externally linkable content, and to allowlist hyperlinks.
+- Improved NEF processing by validating all image file directories and removing the invalid ones from the output.
+- Preserved non-text objects in hidden rows and tables when removing hidden data from Word 2007 files.
+- Preserved the visual appearance of PDFs with an invalid ToUnicode CMap.
+- Separated image removal reporting for images with and without object metadata.
+- Reported old Excel 2 workbooks as an unsupported version instead of an invalid file structure.
+- Supported complete comment removal in PowerPoint 2007 files.
+- Supported complete hyperlink removal in Office 2007 files.
+- Patched FFmpeg 8.0 to address CVE-2026-8461.
+- Fixed a crash caused by heap corruption during WDP watermark sanitization.
+- Fixed PDF forms no longer working after sanitization.
+- Fixed sanitized JTD files that could not be opened in Ichitaro.
+- Fixed PDF to TIFF conversion keeping only the first page.
+- Fixed MOV files becoming unplayable after sanitization.
+
 ## [v8.0.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v803)
 
 Release date: 8/26/2026

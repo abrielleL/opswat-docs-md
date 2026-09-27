@@ -28,7 +28,7 @@ There are two supported paths. The right one depends on whether **transfer speed
 
 ## [**Option 1 — Software (fastest to apply, keeps front ports)**](/docs/mdkiosk/v4.8.5/knowledge-base/hardware-encrypted-usb-drives-are-not-detected-on-kiosk-desktop#option-1--software-fastest-to-apply-keeps-front-ports)
 
-Available in **MetaDefender Kiosk 4.8.5 (build <to-be-updated>)** and later. The software offers two ways to make encrypted drives work at the front ports:
+Available in **MetaDefender Kiosk 4.8.5.9455** and later. The software offers two ways to make encrypted drives work at the front ports:
 
 •    **Fixed USB 2.0 mode** — a setting that keeps the ports at USB 2.0 until you switch them back. Encrypted drives are always detected, with no per-use action.
 

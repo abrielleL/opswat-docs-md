@@ -132,9 +132,18 @@ Follow the [Pre-Onboarding Setup](https://www.opswat.com/docs/cm/onboarding-guid
 
 The configuration and inventory data include system configuration, user info, a list of enrolled products & configuration. You need to run the following steps to migrate data.
 
-1.  Follow steps in [Import/Export - My OPSWAT Central Management v8 - Legacy](https://www.opswat.com/docs/myop/configuration/import-export) to backup Product Configurations, User Management, My OPSWAT Configurations
+1.  Follow steps in [Import/Export - My OPSWAT Central Management v8 - Legacy](https://www.opswat.com/docs/myop/configuration/import-export) to backup Product Configurations and My OPSWAT Configurations
 
 ![](https://uploads.developerhub.io/prod/97qW/kl0jf9ati451djg1gtlr05x9xoruw0eo8y6oc2v1kc5zk5hvlonnxthoj5mn2ald.png)
+
+> **Import Scope**
+>
+> Only** Product Configurations **and **My OPSWAT Configurations** are imported into CM10.  Nothing outside these areas is modified.
+>
+> - **Product Configurations**: MetaDefender instances, including their license information, instance configuration, and group configuration (imported into CM10 as policies)
+> - **My OPSWAT Configurations**: Registration code, SMTP, server URL, and TLS/HTTPS
+>
+> Other data such as user accounts, logs, proxy settings, and unsupported product types (any product **other than **MK4, MK5, Core, or ICAP) **are not imported**. These data can be set up manually in CM10 if needed.
 
 2. Download and run the CM8Importer on CM10 server to convert data
 
@@ -202,3 +211,7 @@ This step will copy all the processing history scan data from v8 to v10.
 5. Then wait for the process
 
 ![](https://uploads.developerhub.io/prod/97qW/g88raevsj97kcam8dmc70xtb2x61cwls4vume81gqbdg8f5zcw958y9gg2co5qp5.png)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

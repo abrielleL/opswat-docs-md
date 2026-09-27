@@ -2,6 +2,18 @@
 
 # OPSWAT Media Validation Agent (OMVA) Release Notes
 
+### Version 2.0.22
+
+**Windows 7 and Above:** 2.0.22.389
+
+**Release date: **September 24, 2026
+
+Enhancements
+
+- Enhance the message when validating and checking the license of MetaDefender Drive, displaying a specific prompt guiding the user to activate the drive to access it
+
+---
+
 ### Version 2.0.21
 
 **Windows 7 and Above:** 2.0.21.374
@@ -113,3 +125,7 @@ Bug fixes:
 
 - The tray icon no longer shows the image after the machine restarts.
 - USB drive validation fails when the agent detects multiple simultaneous insert events, occurring only when users restart the machine or connect a USB device with multiple partitions.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/mdendpoint/llms.txt)

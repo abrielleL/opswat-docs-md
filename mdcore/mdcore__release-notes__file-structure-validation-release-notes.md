@@ -2,6 +2,17 @@
 
 # File Structure Validation release notes
 
+## [v2.1.0](/docs/mdcore/release-notes/file-structure-validation-release-notes#v210)
+
+Release date: 9/23/2026
+
+- Supported structure validation for HDF5, HL7, GDBTABLE, LPKX, MPKX, and Pickle AI model files.
+- Supported DICOM encapsulated object extraction, including handling of preamble data.
+- Supported returning embedded objects and external image link from Microsoft Office 2003 files.
+- Supported streaming of returned objects to improve performance and less disk I/O.
+- Added standard validation references to the validation result.
+- Added schema upgrading logic for the selected object types setting.
+
 ## [v2.0.0](/docs/mdcore/release-notes/file-structure-validation-release-notes#v200)
 
 Release date: 8/27/2026

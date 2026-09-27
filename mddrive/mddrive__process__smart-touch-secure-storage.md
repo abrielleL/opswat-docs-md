@@ -43,7 +43,7 @@ To start using Secure File Storage:
 
 2. Confirm your selection by tapping **Proceed to Secure Storage**
 
-3. Secure File Storage will start first with calculating the Total Files. and the ***Initializing Secure File Storage***____*...* message will be displayed. The files count will be updated once the calculation is completed. This time of this process depends on the number of files being transferred. After Initializing, Secure File Storage will start into this **Locked** screen.
+3. Secure File Storage will start first with calculating the Total Files. and the ***Initializing Secure File Storage****...* message will be displayed. The files count will be updated once the calculation is completed. This time of this process depends on the number of files being transferred. After Initializing, Secure File Storage will start into this **Locked** screen.
 
 Info
 
@@ -65,6 +65,10 @@ During this initialization, if the MetaDefender Drive with Smart Touch is plugge
 After Copying Files into Secure File Storage
 
 If you plug the Secure File Storage into a host you will see an empty 32GB storage that is ready for another copy session, and the files that were previously copied into Secure File Storage can only be accessed from a computer **only when they have been scanned and confirmed safe** by an OPSWAT MetaDefender Kiosk.
+
+Show details of Files in Secure File Storage
+
+Tapping the (i) icon next to each file to see its details
 
 ## [Scan Files in Secure File Storage with MetaDefender Kiosk](/docs/mddrive/process/smart-touch-secure-storage#scan-files-in-secure-file-storage-with-metadefender-kiosk)
 

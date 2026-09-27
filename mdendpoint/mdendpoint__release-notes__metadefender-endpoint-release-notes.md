@@ -2,31 +2,46 @@
 
 # MetaDefender Endpoint Release Notes
 
-| Version | 2608 |
+| Version | 2609 |
 | ---- | ---- |
-| **Release date** | August 26, 2026 |
-| **Scope/Release Summary** | This release introduces enhanced security and endpoint management capabilities across Windows and macOS. Key highlights include: BIOS & Driver Patching, Enhanced Endpoint Port Control, File Type Allowlist for Scanning and Expanded Support with On-Demand Malware Scan |
+| **Release date** | September 23, 2026 |
+| **Scope/Release Summary** | This release introduces enhanced security and endpoint management capabilities across Windows and macOS. Key highlights include: Offline Embedded Engine Updates, Configurable Drive-Level Scanning, Automatic Direction-Based Scanning, and File Audit Trail Support |
 
-### MetaDefender Endpoint - Windows Persistent (7.6.2608.1108)
+### MetaDefender Endpoint - Windows Persistent (7.6.2609.1122)
 
-**Release date:** August 26, 2026
+**Release date:** September 23, 2026
 
 New Features
 
-- Support patching for endpoint’s BIOS and drivers, keeping critical device firmware and drivers up to date
-- Admins can control access to USB ports in My OPSWAT Central Management.
+- Automatically scan data transferred to and from peripheral media using configurable direction-specific rules
+- Admins can define which local drives users can view and select for Custom Scan in Malware Scan
 
 Enhancements
 
-- Admins can configure peripheral media content scanning to apply only to specific file types defined in the allowlist, while automatically blocking all others without scanning in Peripheral Media Protection
-- Support decryption of password-protected files during On-Access File Scanning in Peripheral Media Protection, prompting users to enter the password for scanning
+- Embedded engine definitions can now be set up and updated in fully air-gapped environments without internet connectivity
+- Submit suspected false positives with rationale and file origin directly from the Malware Scan user interface
+- Support file audit trails for files scanned by MetaDefender Endpoint for the first time, contributing a complete view of the file’s journey across OPSWAT products
 
 ---
 
-### MetaDefender Endpoint - MacOS (10.4.2608.251)
+### MetaDefender Endpoint - MacOS (10.4.2609.257)
 
-**Release date:** August 26, 2026
+**Release date:** September 23, 2026
 
 New Features
 
-- Supports on-demand Malware Scan directly from the file system, allowing users to scan specific files or folders using right-click actions.
+- Automatically scan data transferred to and from peripheral media using configurable direction-specific rules
+
+---
+
+### MetaDefender Endpoint - Linux
+
+**Deb: 15.4.2609.209 | RPM: 15.6.2609.196 | SDK: 4.3.5526.0**
+
+**Release date:** September 23, 2026
+
+- Fixed minor bugs
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/mdendpoint/llms.txt)

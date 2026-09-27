@@ -14,7 +14,7 @@ A license is only required on the Optical Diode BLUE side. There is no need to a
 
 First thing is to check the **Deployment ID**. This ID can be found in **Configuration -> License**. Deployment ID needs to be copied as we will need it to get a valid license file.
 
-Then browse to <my.opswat.com>and login with your user/password. Once correctly logged in, click on License Activation and fill in the following fields:
+Then browse to [my.opswat.com](https://my.opswat.com/portal/home) and login with your user/password. Once correctly logged in, click on License Activation and fill in the following fields:
 
 - **Package:** Select MetaDefender NetWall from the dropdown.
 - **Activation Key:** Insert the Activation Key that your OPSWAT sales representative has provided you with.

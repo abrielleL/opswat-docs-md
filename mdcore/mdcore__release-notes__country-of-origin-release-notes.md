@@ -2,6 +2,12 @@
 
 # Country of Origin release notes
 
+## [v2.4.0](/docs/mdcore/release-notes/country-of-origin-release-notes#v240)
+
+Release date: 9/23/2026
+
+- Supported signed APK, VSIX, JAR, and DEB file formats.
+
 ## [v2.3.1](/docs/mdcore/release-notes/country-of-origin-release-notes#v231)
 
 Release date: 7/22/2026

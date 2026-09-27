@@ -2,7 +2,7 @@
 
 # Supported file types
 
-The archive engine can extract 170 file types:
+The archive engine can extract 171 file types:
 
 | File type | Note |
 | --- | --- |
@@ -177,6 +177,7 @@ The archive engine can extract 170 file types:
 | BLZ |  |
 | X3P |  |
 | Parquet |  |
+| KM5 |  |
 
 - Encrypted PDF, MS Word (DOC, DOCX, DOCM, DOTX, DOTM, DOT)/Excel (XLS, XLSX, XLSM, XLSB, XLTM)/PowerPoint (PPT, PPTX, PPTM, PPSM, POTX, POTM), ALZ, EGG.
 - An encoded base64 file can be decoded by the archive extraction engine.

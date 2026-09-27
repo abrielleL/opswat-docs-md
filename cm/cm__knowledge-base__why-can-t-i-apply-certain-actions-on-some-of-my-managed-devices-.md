@@ -34,3 +34,7 @@ If you perform an action that is not applicable to a device or policy setting, t
 > **Support:**
 >
 > If you have further queries, concerns or issues regarding **Why Certain Actions Can’t Be Applied On Some Of Your Managed Devices**, please open a [Support Case](https://my.opswat.com/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

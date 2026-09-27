@@ -2,6 +2,18 @@
 
 # File Type Module release notes
 
+## [v8.1.0](/docs/mdcore/release-notes/file-type-module-release-notes#v810)
+
+Release date: 9/23/2026
+
+- Supported GDBTABLE, K5M, LPKX, MPKX, and ONNX detection.
+- Increased the number of supported file types through machine learning to 190 formats.
+- Improved JPEG detection to cover more structural variants.
+- Improved GIF detection performance.
+- Increased detection confidence for JAR, WAR, and XPI files.
+- Improved module performance.
+- Fixed a potential data race when looking up file type IDs concurrently.
+
 ## [v8.0.3](/docs/mdcore/release-notes/file-type-module-release-notes#v803)
 
 Release date:8/26/2026
