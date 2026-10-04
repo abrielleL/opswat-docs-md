@@ -76,7 +76,7 @@ Review the required features.
 >
 > Your existing Central Management v8 licensing entitlement remains valid after migrating to My OPSWAT Central Management v10. No additional license purchase is required as part of the migration process.
 >
-> Please note that license information is not migrated automatically. After migration, you must re-add your existing product licenses to My OPSWAT Central Management v10.
+> Please note that **product license is not migrated automatically**. After migration, you must re-add your existing product licenses to My OPSWAT Central Management v10.
 >
 > If you encounter any license-related issues, please contact [OPSWAT Support](https://www.opswat.com/support/contact-support) for assistance.
 
@@ -147,16 +147,19 @@ The configuration and inventory data include system configuration, user info, a 
 
 2. Download and run the CM8Importer on CM10 server to convert data
 
-- Download the [CM8Importer](https://cm10-onpremise.s3.ap-southeast-1.amazonaws.com/cm8Importer/10726062_cm8importer.zip)
-- Extract and copy the cm8importer to "CM10 installation location" <default in "**C:\Program Files\OPSWAT**">
-- Copy the backupdate from step (i) to "CM10 installation location" <default in "**C:\Program Files\OPSWAT**">
-- Put the backup file and CM8Importer.exe to the same folder
-- Run the following command:
-  - On Windows - Command Prompt
+- Download the [CM8Importer](https://cm10-onpremise.s3.ap-southeast-1.amazonaws.com/cm8Importer/26080_CM8Importer.zip)
+- Extract the archive and copy the CM8Importer binary for your platform to the CM10 server:
+  - Windows: `cm8importer.exe`
+  - Linux: `cm8importer`
 
-```powershell
-$cm8importer -baseURL=”<CM10-URL + port>” -encryptionPassword=”<export file encrypted password>” -inputFile=”<export file path>”
-```
+- Copy the backup file from step (4.1) into the **same folder** as the CM8Importer binary
+- Run the importer using the command for your platform below:
+
+| Platform |  Command Prompt |
+| ---- | ---- |
+| **Setting **`-baseURL`** (all platforms)** | The scheme in `-baseURL` is **always **`http`, the importer talks to CM10 over HTTP regardless of how CM10 itself is configured. Only the port changes, based on the CM10 setup: &#124; **CM10 setup** &#124; `-baseURL`** value** &#124; &#124; ---- &#124; ---- &#124; &#124; HTTP &#124; `http://localhost:80` &#124; &#124; HTTPS &#124; `http://localhost:443` &#124; `http://localhost:443` is therefore expected, not a typo. CM10 serves the import endpoint over HTTP and switches to HTTPS once the import completes. |
+| **Windows (MSI installation)** | Working folder: the CM10 installation location, by default `C:\Program Files\OPSWAT` ```powershell cm8importer.exe -baseURL="<CM10-URL + port>" -encryptionPassword="<export file encrypted password>" -inputFile="<export file path>" ``` |
+| **Linux (RPM installation or Virtual Appliance / OVA)** | Working folder depends on how CM10 was deployed: &#124; **Deployment** &#124; **Working folder** &#124; &#124; ---- &#124; ---- &#124; &#124; RPM installation &#124; `/opt` &#124; &#124; Virtual Appliance (OVA) &#124; `/var/opt` &#124; ```powershell #   Go to the folder holding the importer and the backup file #    RPM: /opt   &#124;   OVA: /var/opt cd /opt ls -l # backup.zip   cm8importer  # Make the importer executable chmod +x cm8importer  # Run the import ./cm8importer \   -baseURL="<CM10-URL + port>" \   -inputFile="<export file path>" \   -encryptionPassword="<export file encrypted password>" ``` Example, run locally on a CM10 server configured for HTTPS: ```powershell ./cm8importer -baseURL="http://localhost:443" -inputFile="backup.zip" -encryptionPassword="1111" ``` |
 
 3. Verify the active data
 
@@ -164,7 +167,7 @@ Waiting for the importing process. It's similar to this one
 
 ![](https://uploads.developerhub.io/prod/97qW/j49ipiauza1bjdk8o3xg7x7pgfjr3o489taahef0297a3q9ccnks5d7z1rlfukfw.png)
 
-Active data includes system configuration, list of enrolled products & configuration. You would need to verify some important data as below
+Active data includes system configuration, list of enrolled products & configuration. You would need to verify some important data as below:
 
 3.1. Verify the User Access
 

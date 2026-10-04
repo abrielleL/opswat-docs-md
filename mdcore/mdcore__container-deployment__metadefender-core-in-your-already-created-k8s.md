@@ -6,11 +6,11 @@ This guide explains how to use the provisioning script for generating all the Ku
 
 Also includes the details needed to understand how to install MetaDefender Core using directly the Helm chart.
 
-## Install using the Helm chart
+## [Install using the Helm chart](/docs/mdcore/container-deployment/metadefender-core-in-your-already-created-k8s#install-using-the-helm-chart)
 
 The MD Core k8s deployment can be performed directly using the provided helm chart in our public GitHub repo [here](https://github.com/OPSWAT/metadefender-k8s) and example configuration files for different environments are provided in the `helm_charts` directory.
 
-### Using the helm repository
+### [Using the helm repository](/docs/mdcore/container-deployment/metadefender-core-in-your-already-created-k8s#using-the-helm-repository)
 
 The GitHub repository can be used directly as a helm repo:
 
@@ -22,10 +22,10 @@ helm install mdcore mdk8s/metadefender_core -f <CUSTOM_VALUES_FILE.yml>
 Or the repository can be cloned locally:
 
 BashCopygit clone https://github.com/OPSWAT/metadefender-k8s.git metadefender
-cd metadefender/helm_carts
+cd metadefender/helm_charts
 #Example installation command
 helm install mdcore ./mdcore -f <CUSTOM_VALUES_FILE.yml>
-### Exposing MetaDefender Core Service
+### [Exposing MetaDefender Core Service](/docs/mdcore/container-deployment/metadefender-core-in-your-already-created-k8s#exposing-metadefender-core-service)
 
 By default, the helm chart deploys a `ClusterIP` service for MD Core and this can be changed to any service type supported by the Kubernetes cluster. For example, a `LoadBalancer`service type can be created by overwriting the `service_type` value in the `md-core` component:
 
@@ -39,14 +39,14 @@ YamlCopycore_ingress:
 host: <APP_NAMESPACE>-mdcore.k8s # Hostname for the publicly accessible ingress, the `<APP_NAMESPACE>` string will be replaced with the namespace where the chart is deployed
 enabled: true # Enable or disable the ingress creation
 class: nginx # Sets the ingress class depending on the installed ingress controller
-### Scaling MD Core
+### [Scaling MD Core](/docs/mdcore/container-deployment/metadefender-core-in-your-already-created-k8s#scaling-md-core)
 
 Multiple MD Core pods can be deployed by setting the `replicas`value in the`md-core` component:
 
 YamlCopycore_components:
 md-core:
 replicas: 3
-### TLS Configuration
+### [TLS Configuration](/docs/mdcore/container-deployment/metadefender-core-in-your-already-created-k8s#tls-configuration)
 
 In case we want to use a self-signed certificate, we need to create the secrets with the crt and key
 
@@ -71,7 +71,7 @@ scheme: HTTPS
 livenessProbe:
 httpGet:
 scheme: HTTPS
-### Ingress Configuration By CSP
+### [Ingress Configuration By CSP](/docs/mdcore/container-deployment/metadefender-core-in-your-already-created-k8s#ingress-configuration-by-csp)
 
 1. In case we want to use a self-signed certificate, we need to create the tls secret with the crt and key
 
@@ -119,7 +119,7 @@ spec_className: false
 core_components:
 md-core:
 service_type: NodePort
-### Proxy Configuration
+### [Proxy Configuration](/docs/mdcore/container-deployment/metadefender-core-in-your-already-created-k8s#proxy-configuration)
 
 To enable Proxy, the following criteria must be met
 
@@ -134,11 +134,11 @@ PROXY_PORT: 8080 # Proxy server port
 PROXY_USER: "" # (optional) Username for proxy authentication
 PROXY_PWD: "" # (optional) Password for proxy authentication
 PROXY_EXCLUSION: "" # Not use the proxy server for the addresses starting with the following entries, separated by comma
-## Flowchart for MetaDefender K8S Script
+## [Flowchart for MetaDefender K8S Script](/docs/mdcore/container-deployment/metadefender-core-in-your-already-created-k8s#flowchart-for-metadefender-k8s-script)
 
 The following flow chart represents how the MetaDefenderK8S script will configure the environment based on the options selected for installing MetaDefender products in an already created cluster.
 
-### Summary options to be selected
+### [Summary options to be selected](/docs/mdcore/container-deployment/metadefender-core-in-your-already-created-k8s#summary-options-to-be-selected)
 
 1. Select your cluster context where you want to install the MetaDefender products
 2. Access to the K8S cluster. Generate **Ingress** or provide **own** access.
@@ -153,10 +153,10 @@ The following flow chart represents how the MetaDefenderK8S script will configur
       2. the script will just indicate the secrets to edit, later on by you, for connecting the MetaDefender Core with your database.
    2. Create new **DB in K8S.** It will generate a postgreSQL pod inside the cluster
 
-### How to run script
+### [How to run script](/docs/mdcore/container-deployment/metadefender-core-in-your-already-created-k8s#how-to-run-script)
 
 Only MD CoreMD Core + MDSSCopy./metadefenderk8s.sh install --mdcore --name <k8s-cluster-name>./metadefenderk8s.sh install --mdcore --name <k8s-cluster-name> --mdss
-### Script Parameters
+### [Script Parameters](/docs/mdcore/container-deployment/metadefender-core-in-your-already-created-k8s#script-parameters)
 
 | Parameter | Flags | Options | Default | Description | Required/Optional |
 | --- | --- | --- | --- | --- | --- |

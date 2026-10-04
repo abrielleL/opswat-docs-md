@@ -44,7 +44,7 @@
 
 ## Additional feature differences include:
 
-- **MetaDefender Endpoint** is available in two flavors, and offers unique features for each operating system. To learn more about your options, [Read This](https://www.opswat.com/docs/cm/kb/which-opswat-client-should-i-use-).
+- **MetaDefender Endpoint** is available in two flavors, and offers unique features for each operating system. To learn more about your options, refer to [Which MetaDefender Endpoint should I use?](https://www.opswat.com/docs/cm/knowledge-base/which-metadefender-endpoint-should-i-use-)
 - **MetaDefender Endpoint** shows system information and actions via a sleek tray icon and dialogs, while scan progress is shown via the tray icon menu.
 - **MetaDefender Client** detects installed applications with compliance state, so administrators are not able to define security policies to assess risks on devices.
 
@@ -57,3 +57,7 @@
 > **Support:**
 >
 > For any queries or concerns regarding **MetaDefender Client VS MetaDefender Endpoint Features And Functionality**, please open a [Support Case](https://my.opswat.com/portal/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

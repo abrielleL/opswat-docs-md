@@ -45,7 +45,7 @@ Microsoft Entra ID requires MetaDefender Core to enable HTTPS for connections. P
 1. Switch back to Microsoft Entra ID, on `SAML-based Sign-on` page, navigate to `Basic SAML Configuration` and click `Edit` in the top right corner.
 
 2. Navigate to `Identifier (Entity ID)` in the right sidebar, click `Add identifier`, then enter a unique ID to identify MDCore, such as MDCore-SAML. Store the identifier to *identifier.*
-3. Navigate to `Reply URL(Assertion Consumer Service URL)`, click `Add reply URL` and fill in the URI with the value stored in *reply_uri* and click `Save`.
+3. Navigate to `Reply URL(Assertion Consumer Service URL)`, click `Add reply URL` and fill in the URI with the value stored in *reply_uri*. Then, in `Sign on URL` (a required field, marked with a red asterisk), enter the MetaDefender Core login URL in the format `https://<FQDN>:8008`, for example `https://mdcore-lab:8008`, and click `Save`.
 
 4. Navigate to `Attributes & Claims`, then click `Edit`.
 

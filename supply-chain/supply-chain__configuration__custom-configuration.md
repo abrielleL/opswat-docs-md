@@ -127,3 +127,67 @@ SCAN_TMP_ARCHIVE_RETENTION_SECONDS=3600
 ```
 
 Use this if disk fills up during heavy archive scanning. Lower the value to clean up temporary extracted files sooner.
+
+## Number of Trusted Proxies
+
+Sets how many proxies in front of the application are trusted to report the client's IP address.
+
+Default value is **1**.
+
+```bash
+TRUSTED_PROXY_HOPS=1
+```
+
+Use this if MetaDefender Software Supply Chain sits behind a load balancer or ingress. Set the value to 2. Otherwise all users share the load balancer's address and are rate-limited together.
+
+> **Note: **The following limits apply to source code repositories, which are downloaded as ZIP archives. Sizes are given in B, KB, MB, GB or TB, where 1 KB = 1024 bytes. A repository that exceeds a limit is not scanned, and the reason appears in the Scan failed message on its report page.
+
+## Maximum Archive Download Size
+
+Sets the largest repository archive that can be downloaded for scanning. The download stops as soon as the archive exceeds this size.
+
+Default value is **5GB**.
+
+```bash
+MDSSC_ARCHIVE_MAX_DOWNLOAD_SIZE=5GB
+```
+
+## Maximum Archive Extracted Size
+
+Sets the largest total size a repository archive can expand to when it is extracted.
+
+Default value is **10GB**.
+
+```bash
+MDSSC_ARCHIVE_MAX_EXTRACTED_SIZE=10GB
+```
+
+Use this if a repository fails to scan because its archive expands beyond the maximum extracted size. Raise the value to allow larger repositories, making sure the host has enough free disk space.
+
+## Maximum Archive File Count
+
+Sets the largest number of files and folders a repository archive can contain.
+
+Default value is **100000**.
+
+```bash
+MDSSC_ARCHIVE_MAX_ENTRY_COUNT=100000
+```
+
+Use this if a repository fails to scan because its archive contains too many files. Raise the value to allow repositories with more files.
+
+## Maximum Archive Expansion Factor
+
+Sets how many times larger than its compressed size a repository archive can become when extracted.
+
+Default value is **1000**.
+
+```bash
+MDSSC_ARCHIVE_MAX_EXPANSION_FACTOR=1000
+```
+
+Use this if a repository with highly compressible content fails to scan because it exceeds the expansion factor. Raise the value to allow it.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

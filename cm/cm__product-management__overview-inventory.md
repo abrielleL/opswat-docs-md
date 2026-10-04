@@ -30,7 +30,7 @@ My OPSWAT Central Management Inventory provides a 360-degree view of all securit
 
 ### **5. Network & Access Inventory**
 
-- **NAC Cloud-Controlled Devices**: Lists all network-connected devices with security posture checks enforced.
+- **NAC-Controlled Devices**: Lists all network-connected devices with security posture checks enforced.
 - **VPN & Remote Access Logs**: Monitors Next-Generation VPN activity for secure remote access.
 - **Firewall & Proxy Integration**: Tracks data flow and security rules applied at the network edge.
 
@@ -45,3 +45,7 @@ My OPSWAT Central Management Inventory provides a 360-degree view of all securit
 - **Regulatory Frameworks**: Aligns inventory tracking with NIST, GDPR, HIPAA, ISO 27001 standards.
 - **Security Posture Reports**: Generates automated compliance reports based on asset status and security policies.
 - **Incident Response Logs**: Maintains a record of security alerts, remediation actions, and forensic investigations.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

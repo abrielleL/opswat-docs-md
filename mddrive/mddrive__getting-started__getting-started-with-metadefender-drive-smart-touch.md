@@ -10,7 +10,7 @@ If your system's hardware is below the [recommended specifications](https://www.
 
 WPA3 Wi-Fi
 
-This device currently supports WPA2 security and does not offer compatibility with the WPA3 standard.
+This device connects using WPA2 security. If your access point runs in WPA2/WPA3 transition mode, the device automatically falls back to WPA2 to connect — this is expected and no action is needed. If your network is configured for **WPA3-only** (transition mode disabled), the device will not be able to connect; set the access point to WPA2/WPA3 transition mode or WPA2 to allow the device to join.
 
 WPA2 Enterprise
 
@@ -66,7 +66,7 @@ To Activate, Update or Enroll Drive with Smart Touch to Central Management or Ce
 - Change Smart Touch to "Device Scanning"
 - Plug Smart Touch to a PC with Drive Toolkit is running
 - Make sure on Smart Touch, the screen with message "Drive Toolkit Detected" is showing
-- Follow next steps in [Activate License](/docs/mddrive/getting-started/activate-license) and [Download Engine Updates](/docs/mddrive/getting-started/update-engines) to provision your Drive with Smart Touch
+- Follow next steps in [Activate License](/docs/mddrive/getting-started/activations) and [Download Engine Updates](/docs/mddrive/getting-started/update-engines) to provision your Drive with Smart Touch
 
 ## Generate [S](https://www.opswat.com/docs/mddrive/process/results--management#sync-reports-for-central-management)upport Packages
 

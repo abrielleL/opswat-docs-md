@@ -1,6 +1,6 @@
 <!-- source: https://www.opswat.com/docs/supply-chain/configuration/changing-password -->
 
-# Changing password
+# Changing Password
 
 To change your password:
 
@@ -12,3 +12,7 @@ To change your password:
 - Click **Save**.
 
 Changing the password requires a re-login: after saving, you are signed out and redirected to the login page, where you can sign in with the new password.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

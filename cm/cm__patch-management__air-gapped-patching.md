@@ -18,8 +18,8 @@ This guide provides step-by-step instructions for performing air-gapped patching
 
 To begin setting up air-gapped patch management, two things need to be done first:
 
-1. My OPSWAT Central Management on-premises is [installed](https://www.opswat.com/docs/cm/deployment/msi-installation) and licensed
-2. Endpoint devices are [enrolled](https://www.opswat.com/docs/cm/product-management/metadefender-endpoint)
+1. My OPSWAT Central Management on-premises is [installed](https://www.opswat.com/docs/cm/deployment/msi-installation), licensed, and[ switched](https://www.opswat.com/docs/cm/patch-management/on-premise-patch-management#how-to-switch-between-the-two-versions) to the new Patch Management solution
+2. Endpoint devices are [enrolled](https://www.opswat.com/docs/cm/endpoint-security-solution/metadefender-endpoint)
 
 When endpoints are enrolled and communicating with My OPSWAT Central Management, they will begin to report their missing patches.
 
@@ -289,3 +289,7 @@ Columns in report:
 - **Date Installed** - date timestamp when the patch was successfully applied
 - **Status** - status of patch on device
   - values: Not Installed / Pending Reboot / Installed
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

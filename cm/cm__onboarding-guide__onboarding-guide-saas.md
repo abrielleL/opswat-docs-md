@@ -4,36 +4,27 @@
 
 This onboarding guide aims to help you get started with My OPSWAT Central Management platform, enroll MetaDefender products, navigate core functions, and manage your account with maximum efficiency.
 
-- [Pre-Onboarding Setup](https://www.opswat.com/docs/cm/onboarding-guide/onboarding-guide-saas#pre-onboarding-setup)
-  - [Check Network Requirements](https://www.opswat.com/docs/cm/onboarding-guide/onboarding-guide-saas#check-network-requirements)
-  - [Set Up SaaS Account](https://www.opswat.com/docs/cm/onboarding-guide/onboarding-guide-saas#set-up-saas-account)
+- [Prerequisites](https://www.opswat.com/docs/cm/onboarding-guide/onboarding-guide-saas#pre-onboarding-setup)
 - [Getting Started](https://www.opswat.com/docs/cm/onboarding-guide/onboarding-guide-saas#getting-started)
   - [Access My OPSWAT Central Management](https://www.opswat.com/docs/cm/onboarding-guide/onboarding-guide-saas#access-my-opswat-central-management)
   - [Enroll Products](https://www.opswat.com/docs/cm/onboarding-guide/onboarding-guide-saas#enroll-products)
   - [Navigate Core Functions](https://www.opswat.com/docs/cm/onboarding-guide/onboarding-guide-saas#navigate-core-functions)
   - [Manage Your Account](https://www.opswat.com/docs/cm/onboarding-guide/onboarding-guide-saas#manage-your-account)
 
-## Pre-Onboarding Setup
+## Prerequisites
 
 A couple of quick checks to make sure everything goes smoothly before you dive in.
 
-### **Check Network Requirements**
-
-You’ll need to configure your firewall or proxy settings to ensure proper communication between product instances and My OPSWAT Central Management.
-
-Refer to the [Networking Requirement](https://www.opswat.com/docs/cm/deployment/networking-requirements) guideline for more details.
-
-### **Set Up SaaS Account**
-
-You’ll need an active OPSWAT account to log in. If you haven't registered yet, navigate to the [SaaS Account Setup](https://www.opswat.com/docs/cm/deployment/SaaS-account-setup) guideline.
-
-![](https://uploads.developerhub.io/prod/97qW/s28kv7o51eeuqzxvfawpwiwon8innwpl7qoyajcpc0cwckdrvujzx2fwu7aupsnk.png)
+|  |  |
+| ---- | ---- |
+| Check network requirements | You’ll need to configure your firewall or proxy settings to ensure proper communication between product instances and My OPSWAT Central Management. Refer to the [Networking Requirement](https://www.opswat.com/docs/cm/deployment/networking-requirements) guideline for more details. |
+| Sign up My OPSWAT Portal account to login | Visit [My OPSWAT Portal](https://my.opswat.com/portal/login)[ ](https://id.opswat.com/login?SAMLRequest=hVJNb8IwDP0rke%2B0aVUERLSoG0JDYhqCssNuoXVLUJuwOGX7%2BStfGruwo%2BXn9%2Bz3PJ58NzU7oiVldAyBx4Ghzk2hdBXDJpv1hjBJxiSbOjyItHU7vcLPFsmxblCTuHRiaK0WRpIioWWDJFwu1unrQoQeFwdrnMlNDSwlQus6qWejqW3QrtEeVY6b1SKGnXMHEr5fobTkmQN9SeflpvHzDmxq9E9a%2Fnr95staSfILLGVbu%2FRUAJt2Oykt3fmOG5Uq7nlqUykNbGZsjudTYihlTQhsPo1BRoj7LRaKh1VUDnjUV0GxH%2B53waCIRtsOREtJpI74O0bU4lyTk9rFEPKQ94KgF0QZ5yLoCx55AR99AFteDXhS%2BmLsI7e2FxCJlyxb9tLOrlLmDtj7LaQOBNdIxHkDe5%2FFY3J5CwCS%2F%2Bwe%2B%2FcSybX8%2BwTJDw%3D%3D&SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&Signature=ZqcO4y%2BVZpcbESWCcXV5gjGOcrGApcduUN%2FaV%2FSVefHjSzYUPkw6Sj0AL6nrtzOS4YzGSWIW4qZGxlMwfCk24YrdxJK3ITqpZb8DXSQ%2F0qwgIV8KEt1dDSaNpw8qwkJUZw8DRm0UrM9bArEz9QdpfVmfIVnSW8MzMGmAorpc%2FlKRIIZDHQtj2XWg2jtuW2kcOLt8YnJDCskOxlAK0i3TCOZ7fg9nhywBmG8CKBy8J7mV54aaNLljDYUzDitlCny5UTPUTV%2Fj0bNexXSWm1yH9hPvEgKH70yMeMZhX8bGAx%2BEoBi8sRvzslxwddK%2Bd8%2FqBqp5wpQOzO2ChiXsyTSrrg%3D%3D&app=appMA0001)to sign up for an account. You will receive an email on how to activate your account. ![](https://uploads.developerhub.io/prod/97qW/a6it6p6swv8bpm3zm6zozplnd2i0ztk9czcy5xxts1d1349l4omtomwmdhr73njd.png) You can use this account to log into OPSWAT Cloud services such as My OPSWAT Central Management, MetaDefender Cloud, or My OPSWAT Portal to download products, software, and to access the Support portal. |
 
 ## Getting Started
 
 Steps to execute once your account is active.
 
-### **Access My OPSWAT Central Management**
+### **Log into My OPSWAT Central Management**
 
 - Log into the [My OPSWAT Portal](https://my.opswat.com/).
 - Select **Central Management** from the top menu.
@@ -111,3 +102,7 @@ Refer to the [Server Configuration](https://www.opswat.com/docs/cm/configuration
 #### **Product Updates**
 
 Use the [Product Updates](https://www.opswat.com/docs/cm/configurations/product-updates) guideline to learn how to manage product updates.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

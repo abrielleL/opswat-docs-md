@@ -4,7 +4,7 @@
 
 # My OPSWAT Central Management
 
-#### 10.7.26091 [Latest]
+#### 10.7.26092 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/cm/release-notes)
 
@@ -18,7 +18,9 @@ Getting Started[##### Introduction
 
 ######](/docs/cm/deployment)[##### Secure Access Solution
 
-######](/docs/cm/secure-access-solution)[##### Product Management
+######](/docs/cm/secure-access-solution)[##### Endpoint Security Solution
+
+######](/docs/cm/endpoint-security-solution)[##### Product Management
 
 ######](/docs/cm/product-management)[##### Patch Management
 

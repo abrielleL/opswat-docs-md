@@ -62,7 +62,7 @@ In selecting the right flavor and version of the MetaDefender Endpoint for your 
 | **Automatic Update** | ✅ |  | ✅ |  | ✅ |
 | **Application Context** | System | User | System | User | System |
 | Remote Fetch Log | ✅ |  | ✅ |  |  |
-| [On-Demand Actions](https://www.opswat.com/docs/cm/kb/why-cant-i-apply-certain-actions-on-some-of-my-managed-devices) | ✅ | ✅ | ✅ |  | ✅ |
+| [Why can't I apply certain actions on some of my managed devices?](https://www.opswat.com/docs/cm/knowledge-base/why-can-t-i-apply-certain-actions-on-some-of-my-managed-devices-) | ✅ | ✅ | ✅ |  | ✅ |
 | Custom UI (5) | ✅ | ✅ | ✅ | ✅ |  |
 
 ### Vulnerability and Patch Management
@@ -118,13 +118,13 @@ MetaDefender Endpoint can detect unwanted applications and remove/stop applicati
 >
 > **(4)** MetaDefender Endpoint supports some CLI (command line interface) input, to allow administrators to customize how the Client runs or performs on-demand actions:
 >
-> - By default, once the **On-Demand MetaDefender Endpoint** is running, it will keep running until it is closed or the system is restarted. However, this can be customized via command line options. For more information, [Read This](https://www.opswat.com/docs/cm/configuration---management/on-demand-client-cli).
-> - The **Persistent MetaDefender Endpoint** offers a utility too that allows users to scan folders/files with a MetaDefender server. To learn more, [Read This](https://www.opswat.com/docs/cm/configuration---management/scan-files-folder-cli).
+> - By default, once the **On-Demand MetaDefender Endpoint** is running, it will keep running until it is closed or the system is restarted. However, this can be customized via command line options. For more information, Refer to [On-demand Client CLI](https://www.opswat.com/docs/cm/configurations/on-demand-client-cli)
+> - The **Persistent MetaDefender Endpoint** offers a utility too that allows users to scan folders/files with a MetaDefender server. To learn more, Refer to [Scan files/folder CLI.](https://www.opswat.com/docs/cm/configurations/scan-files-folder-cli)
 >
 > **(5)** The MetaDefender Endpoint offers the option for a customized tray icon and text on the client UI (including the tray-icon menu, notifications, and more):
 >
 > - This feature is only available for Enterprise customers.
-> - To receive a user interface rebranding package, and for the steps necessary to enable this feature, please contact OPSWAT Support, and [Read This](https://www.opswat.com/docs/cm/kb/how-do-i-change-text-on-opswat-client-ui-).
+> - To receive a user interface rebranding package, and for the steps necessary to enable this feature, please contact OPSWAT Support, and refer to [How do I change text on MetaDefender Endpoint UI?](https://www.opswat.com/docs/cm/knowledge-base/how-do-i-change-text-on-metadefender-endpoint-ui-)
 
 ## Mobile
 
@@ -139,3 +139,7 @@ MetaDefender Endpoint can detect unwanted applications and remove/stop applicati
 > **Support:**
 >
 > For further queries or concerns regarding the **MetaDefender Endpoint and Its Suitability for Your Enterprise**, please open a [Support Case](https://my.opswat.com/portal/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

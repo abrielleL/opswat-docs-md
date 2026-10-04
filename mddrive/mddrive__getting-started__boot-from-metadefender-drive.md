@@ -2,7 +2,7 @@
 
 # Perform a Bare Metal Scan
 
-## [Boot from MetaDefender Drive](/docs/mddrive/getting-started/boot-from-metadefender-drive#boot-from-metadefender-drive)
+## Boot from MetaDefender Drive
 
 1. While your device is turned off, insert your MetaDefender Drive into the device's USB Type-A port.
 2. Turn ON your device.
@@ -27,12 +27,12 @@
     - Use the arrow keys to select **OPSWAT MetaDefender Drive** and press `↵`.
     - Restart your MacBook and it will boot from OPSWAT MetaDefender Drive.
 
-## [**Connect to the Internet (optional)**](/docs/mddrive/getting-started/boot-from-metadefender-drive#connect-to-the-internet-optional)
+## **Connect to the Internet (optional)**
 
 - If MetaDefender Drive can't detect an internet connection, you will be prompted to manually establish a connection. Click the **Fix Internet** button to set up a Wi-fi connection.
 - If your device is deployed in an offline environment, you can skip this step by clicking the **Skip Connection** button.
 
-## [**Upgrade Drive Software**](/docs/mddrive/getting-started/boot-from-metadefender-drive#upgrade-drive-software)
+## **Upgrade Drive Software**
 
 Once an Internet connection has been established, MetaDefender Drive will check if its software is up to date. It is highly recommended that you upgrade your MetaDefender Drive if prompted.
 
@@ -42,7 +42,7 @@ Warning
 
 Skipping the **Connect to the Internet** step also skips upgrading the Drive software to its latest version. If you operate MetaDefender Drive in an offline environment, you can perform MetaDefender Drive's software and engine updates using the [MetaDefender Drive Toolkit](https://docs.opswat.com/mddrive/advanced-usages/drive-toolkit).
 
-## [**License Verification/ Remediation**](/docs/mddrive/getting-started/boot-from-metadefender-drive#license-verification-remediation)
+## **License Verification/ Remediation**
 
 MetaDefender Drive will automatically attempt to detect and verify your license. If it can't find a valid license, you will be prompted to remediate it manually:
 
@@ -54,7 +54,7 @@ License remediation prompt
 
 Entering MetaDefender Drive's Activation key
 
-## [**End-User License Agreement**](/docs/mddrive/getting-started/boot-from-metadefender-drive#end-user-license-agreement)
+## **End-User License Agreement**
 
 If you are using the plugged device for the first time, you will be prompted to read and accept MetaDefender Drive's terms of use:
 
@@ -62,19 +62,21 @@ License Agreement
 
 It is required to accept OPSWAT EULA, in order to use MetaDefender Drive.
 
-## [**Engines**](/docs/mddrive/getting-started/boot-from-metadefender-drive#engines)
+## **Engines**
+
+- After activated, on the first boot if there is no engines pre-copied, engines will show up with state Licensed, which means this tier of MetaDefender Drive is licensed with these engines.
 
 - MetaDefender Drive will automatically update the engines if an active internet connection is enabled, and if it has not been provisioned with Drive Toolkit and has not had engines copied.
 
 For provisining Drive with Toolkit
 
-Please refer the documentation [MetaDefender Drive Toolkit](/docs/mddrive/getting-started/drive-toolkit)
+Please refer the documentation [MetaDefender Drive Toolkit](/getting-started/drive-toolkit)
 
 - You may see the message *Required engines are initializing* right below the engines list. MetaDefender Drive requires a minimum subset of initiated engines to function. As a result, it is required to wait for the engines initialization to finish before you can start performing any scan.
 - It is highly recommended that you regularly
 
-  - [Download Engine Updates](/docs/mddrive/getting-started/update-engines) for Internet Connected Environment or
-  - [Update Engines In Air-Gapped Environment](/docs/mddrive/advanced-usages/update-engines-in-airgapped-environment)
+  - [Download Engine Updates](/getting-started/update-engines) for Internet Connected Environment or
+  - [Update Engines In Air-Gapped Environment](/advanced-usages/update-engines-in-airgapped-environment)
 
 Engine Update Minimum Requirements
 
@@ -88,7 +90,7 @@ Info
 
 Engines for In-Session Scanner are also downloaded together with other engines for MetaDefender Drive. You can see them in the different tab names: "**In-Session Scan**".
 
-## [**Disks**](/docs/mddrive/getting-started/boot-from-metadefender-drive#disks)
+## **Disks**
 
 MetaDefender Drive will automatically detect disk partitions and their file systems on the target device. Then, it will attempt to determine if the disk is encrypted.
 
@@ -106,19 +108,19 @@ Info
 
 Some local disk partitions might show as **Unmounted** due to being encrypted, unformulated, or formatted with an unsupported filesystem.
 
-## [Scan Types and Configurations](/docs/mddrive/getting-started/boot-from-metadefender-drive#scan-types-and-configurations)
+## Scan Types and Configurations
 
 MetaDefender Drive offers three scan types: **Smart Scan**, **Full Scan**, and **Custom Scan**. They add flexible configuration options and the ability to select a scanning engine to optimize performance and results for each dataset. The fourth option, **Forensic Collection**, gathers digital evidence instead of scanning for threats.
 
-### [**Smart Scan**](/docs/mddrive/getting-started/boot-from-metadefender-drive#smart-scan)
+### **Smart Scan**
 
-A configurable, one-click scan of critical system areas using a selected set of anti-malware engines, technologies, and directories. Configure the engines, technologies, target directories, and the button's name and description from [Settings → Smart Scan](/docs/mddrive/configuration/preferences---smartscan-settings).
+A configurable, one-click scan of critical system areas using a selected set of anti-malware engines, technologies, and directories. Configure the engines, technologies, target directories, and the button's name and description from [Settings → Smart Scan](/configuration/preferences---smartscan-settings).
 
 Smart Scan/ Quick Scan
 
 Smart Scan is the renamed, configurable successor to the former **Quick Scan**. The Dashboard button keeps the default name **Quick Scan** until you rename it. The directory (file path) selection is only available on Windows. Support for other operating systems will be added in subsequent releases.
 
-### [**Full Scan**](/docs/mddrive/getting-started/boot-from-metadefender-drive#full-scan)
+### **Full Scan**
 
 Scans all the mounted and unlocked disk partitions using all the enabled engines.
 
@@ -126,7 +128,7 @@ Scans all the mounted and unlocked disk partitions using all the enabled engines
 
 The total number of engines and technologies included for a full device scan depends on the engines and technologies enabled under **Settings** → **Preferences**.
 
-### [**Custom Scan**](/docs/mddrive/getting-started/boot-from-metadefender-drive#custom-scan)
+### **Custom Scan**
 
 Runs based on a user-defined selection of technologies, anti-malware engines, options, and filesystem paths.
 
@@ -134,7 +136,7 @@ Runs based on a user-defined selection of technologies, anti-malware engines, op
 
 Engines that aren't ready to be used, due to an ongoing update or initialization, appear grayed out and can't be included in a custom scan.
 
-## [Perform a Scan](/docs/mddrive/getting-started/boot-from-metadefender-drive#perform-a-scan)
+## Perform a Scan
 
 During a MetaDefender Drive scan, each file is run through the embedded MetaDefender system, which scans and analyzes it with multiple antivirus, vulnerability, and utility engines. Users can track scan progress with an estimated completion percentage displayed on the progress bar. The displayed **Time Remaining** value is estimated based on historical processing rates and file sizes and may be updated while the scan is running.
 

@@ -1,8 +1,8 @@
 <!-- source: https://www.opswat.com/docs/mddrive/getting-started/create-drive -->
 
-# Create Drives
+# Create MetaDefender Drives
 
-From the **Create Multiple Drives** page, you can upgrade or reinstall the MetaDefender Drive software on any of your drives by flashing the downloaded software image. The list shows the storage capacity and the current version installed on each drive. The **MetaDefender Drive** column will show the status of each drive, which will be **Not installed**, **Flashed** or **Flashed and activated**.
+From the **Create Drives** page, you can upgrade or reinstall the MetaDefender Drive software on any of your drives by flashing the downloaded software image. The list shows the storage capacity and the current version installed on each drive. The **MetaDefender Drive** column will show the status of each drive, which will be **Not installed**, **Flashed** or **Flashed and activated**.
 
 1. Check the boxes next to the drives you want to flash or reflash the latest software image, then click **Confirm and Proceed**
 

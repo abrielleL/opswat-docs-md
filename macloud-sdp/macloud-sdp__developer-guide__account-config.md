@@ -16,21 +16,21 @@ Summarize Page    Connect to Cursor Connect to VS Code
 
 Use this API to retrieve account settings.
 
-## [API URL](/docs/cm/developer-guidelines/account-config#api-url)
+## API URL
 
 https://gears.opswat.com/o/api/v3.1/configuration
-## [Request Parameters](/docs/cm/developer-guidelines/account-config#request-parameters)
+## Request Parameters
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
 | sections | Array of strings | Body | Yes | Specify which settings to fetch information. Available options:   - cross-domain-api: Cross-domain API setting - regcode: a registration code for mobile devices to enroll to the account |  |
 
-## [Response HTTP Code](/docs/cm/developer-guidelines/account-config#response-http-code)
+## Response HTTP Code
 
-See details in the Response HTTP Code section in [this page](/docs/cm/developer-guidelines/apis)
+See details in the Response HTTP Code section in [this page](/developer-guidelines/apis)
 
-## [Response Parameters](/docs/cm/developer-guidelines/account-config#response-parameters)
+## Response Parameters
 
 | Key | Datatype | Description |
 | --- | --- | --- |
@@ -40,7 +40,7 @@ See details in the Response HTTP Code section in [this page](/docs/cm/developer-
 | cross-domain-api.port | number | port number which the cross-domain API is listening on endpoints |
 | regcode | string | Account specific registration Shortcode |
 
-## [Example](/docs/cm/developer-guidelines/account-config#example)
+## Example
 
 **Request Example**
 
@@ -61,7 +61,7 @@ Request Body:
 },
 "regcode": "EZ3ESTSY"
 }
-## [History](/docs/cm/developer-guidelines/account-config#history)
+## History
 
 | Action | Version | URL |
 | --- | --- | --- |

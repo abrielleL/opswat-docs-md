@@ -20,7 +20,7 @@ Important
 
 A security dongle must be inserted in the BLUE and RED servers to change configuration.
 
-Login into the MetaDefender Optical Diode (hereinafter Optical Diode) BLUE. If the FTP Server has not been previously configured the user will see an Edit button to include a new FTP Server. This requires the user to reserve disk space to allow it to act as a FTP Server. Once the Edit button is selected, the user will be prompted by the message bellow.
+Login into the MetaDefender Optical Diode BLUE. If the FTP Server has not been previously configured the user will see an Edit button to include a new FTP Server. This requires the user to reserve disk space to allow it to act as a FTP Server. Once the Edit button is selected, the user will be prompted by the message bellow.
 
 Once the needed space has been reserved the user should indicate the following information.
 
@@ -61,7 +61,7 @@ Important
 
 A security dongle must be inserted in the BLUE and RED servers to change configuration.
 
-If the FTP Server hasn't been previously configured the user will see a Edit button to include a new FTP Server. This feature requires to reserve disk space to allow it to act as a FTP Server so, once the Edit button is pushed user would be notify of this circumstance via the message bellow.
+Login into the MetaDefender Optical Diode RED. If the FTP Server has not been previously configured the user will see an **Edit** button to include a new FTP Server. This requires the user to reserve disk space to allow it to act as a FTP Server. Once the **Edit** button is selected, the user will be prompted by the message bellow.
 
 Once the needed space has been reserved the user should indicate the following information.
 

@@ -4,7 +4,7 @@
 
 # Fend Optical Data Diode (5 and 15 Series)
 
-#### 4.2.7 [Latest]
+#### v4.3.0 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/fenddiode/release-notes)
 

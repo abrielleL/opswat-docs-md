@@ -28,6 +28,10 @@ To use Secure Storage with Kiosk, follow the steps to add the valid key, on a Se
 
 7. Your Secure File Storage now is ready to be used with the Kiosk that has the information showed in the **Current Key**
 
+Import KIOSK Cert for Secure File Storage from Central Management
+
+After Drive version v4.4.10 and Smart Touch v2.2.0, the Certificate can be also imported from Central Management if MetaDefender Drive with Smart Touch has been enrolled.
+
 ## [Delete Added Cert](/docs/mddrive/process/smart-touch-secure-storage#delete-added-cert)
 
 1. From **Kiosk Scan Validation** screen, tap the **Delete Key**

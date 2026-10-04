@@ -250,6 +250,14 @@ Click on Submit button to save the changes.
 
 ## [Statistics](/docs/netwalldiode/configuration/aveva-pi-connector#statistics)
 
-Users can check AVEVA PI Statistics by clicking on the Statistics tab in AVEVA PI Connector section of the menu.
+The AVEVA Pi Connector publishes as wide range of statistics that can be utilized for Connector performance monitoring and troubleshooting,
+
+To view statistics, navigate to **AVEVA Pi**  under the **Configuration** menu and click on the **Statistics** tab.
+
+#### [Statistics Tags Export](/docs/netwalldiode/configuration/aveva-pi-connector#statistics-tags-export)
+
+Statistics Tags Export enables user to generate and export statistics tags via a CSV file. The tags can be imported into the Pi Server for AVEVA Pi Connector monitoring.
+
+To export statistics tags , navigate to **AVEVA Pi**  under the **Configuration** menu and click on the **Statistics** tab. Select **Export Pi Tags** and a CSV file will be automatically generated. Multiple CSV files will be generated based on configuration.
 
 MetaDefender

@@ -8,7 +8,7 @@
 
 ## MetaDefender NDR v5.3.0 — Release Notes
 
-**Release Date:** September 9, 2026
+**Release Date:** September 29, 2026
 
 ### Overview
 

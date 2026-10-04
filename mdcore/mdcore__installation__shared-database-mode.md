@@ -116,7 +116,7 @@ Otherwise, you can specify a different location of sanitized/dlp/quarantined fil
 For example:
 
 - C:\new_folder
-- \192.168.1.1\new_folder
+- \\192.168.1.1\new_folder
 
 ## [Command Line Installation](/docs/mdcore/installation/shared-database-mode#command-line-installation)
 
@@ -156,7 +156,7 @@ password=your_own_password
 | --- | --- | --- | --- |
 | global/dbmode | optional  default is 1 (standalone) |  | 1 - Standalone  2 - Central Hub deployment  3 - Non-persistent  **4 - Shared** |
 | global/instance_name | optional  default is 6 characters of deployment ID |  | Unicode and number At least 3 characters No whitespace |
-| global/storage_path | optional  default is empty |  | Path to storages (DLP, quarantined, sanitized files) It could be a local path on the same machine, or a shared folder located in a remote connected machine. Make sure that folder is open access (read and write) to MetaDefender Core. For example:   - C:\folder - \192.168.1.1\folder |
+| global/storage_path | optional  default is empty |  | Path to storages (DLP, quarantined, sanitized files) It could be a local path on the same machine, or a shared folder located in a remote connected machine. Make sure that folder is open access (read and write) to MetaDefender Core. For example:   - C:\folder - \\192.168.1.1\folder |
 
 **2. Run installers using the command line to install**
 

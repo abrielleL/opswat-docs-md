@@ -8,9 +8,14 @@
 2. Navigate to the ***root*** folder inside the MetaDefender Drive partition and locate the ***MetaDefender Drive In-Sesion Scan.exe*** file
 
 3. When click it, In-Session will initialize with a splashing screen
-4. Then the application starts into **Overview** with option to run **Posture Check** which is a combination check where **Deep Compliance** will be triggered first and then **Malware scan** after
 
-3. **Deep Compliance** checks for any issue in **Anti-Malware, Encryption** and **Operation System**
+Launching In-Session from Smart Touch
+
+If you are running In-Session from Drive with Smart Touch, on Smart Touch screen you will see it status changes to **In-Session Scan Detected**
+
+3. Then the application starts into **Overview** with option to run **Posture Check** which is a combination check where **Deep Compliance** will be triggered first and then **Malware scan** after
+
+3. **Deep Compliance** checks if **Operating System Update** in **Anti-Malware, Encryption**
 4. Any compliant issues will be reported in **Deep Compliance** tab, and can be expanded to provide more details
 5. The issue will also be reflected in **Device Information** tab as well, along with other details about the device being checked
 
@@ -28,11 +33,15 @@ Engines for In-Session scan will not be updated when In-Session is running. Engi
 - Engines update in MetaDefender Drive Toolkit, following the instructions [here](https://www.opswat.com/docs/mddrive/maintenance/update-engines)
 - Engines update in MetaDefender Drive when booting it up, following the instructions [here](https://www.opswat.com/docs/mddrive/getting-started/boot-from-metadefender-drive#engines)
 
-8. Wait until all of the embedded engines display the **Ready** status. Click the **(i)** icon to see the embedded engines provided with the version. Those engines are only available after Drive has been updated either by Drive Toolkit or by Update from Drive's UI.
+9. Wait until all of the embedded engines display the **Ready** status. Click the **(i)** icon to see the embedded engines provided with the version. Those engines are only available after Drive has been updated either by Drive Toolkit or by Update from Drive's UI.
 
 Settings for In-Session
 
-The Malware Scan that follows up after **Compliance Check** is pre-defined in **Settings,**along with options for **Deep Compliance** and Malware Scan included for **Posture Check**.
+The Malware Scan that follows up after **Compliance Check** is pre-defined in **Settings,** along with options for **Deep Compliance** and Malware Scan included for **Posture Check**.
+
+Centralized Settings for In-Session from Central Management
+
+If Drive has been enrolled to OPSWAT Central Management, the settings for In-Session can be remotely changed from there
 
 ## [Memory Scan](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#memory-scan)
 
@@ -63,4 +72,4 @@ To select specific partitions, folders, or files to scan:
 
 ## [**Device Final Verdict**](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#device-final-verdict)
 
-The device will be marked Unsafe when Deep Compliance or Malware check report any issue
+The device will be marked Unsafe when Deep Compliance or Malware check report any issue.

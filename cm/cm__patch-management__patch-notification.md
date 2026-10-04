@@ -20,7 +20,7 @@
 | Field | Details |
 | ---- | ---- |
 | **Fill in the group's details** | ** **Fill in the group's details, including group name, email format, and group member emails ![](https://uploads.developerhub.io/prod/97qW/rpjnp5ypl5nwyxiqushfw2t00adbhk51fz41cxq7v6z6up3kw8vlve22153leitv.png) |
-| **Choose event triggers** | Select **Patch Management** from the dropdown, then select the checkbox for each event you want this group to receive. You must select at least one ![](https://uploads.developerhub.io/prod/97qW/mult7gds8ipkoc6fxc6dbxc6a4kwzl1qvorlaxbutvhnn1ckko7phpmpzzkmrk74.png) |
+| **Choose event triggers** | Select **Patch Management** from the dropdown, then select the checkbox for each event you want this group to receive. You must select at least one ![](https://uploads.developerhub.io/prod/97qW/t6vwj5t1gps2oylr4gucpsdxgxhgystvsjuhevw1nkpb9xcipv88otc1d91jbnbw.png) |
 
 4. Select **Save**
 
@@ -139,3 +139,7 @@ CEF:0|OPSWAT|MOCM|<cm10Version>|account_events.os_missing|New OS missing patch d
   "severity": "Important"
 }
 ```
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

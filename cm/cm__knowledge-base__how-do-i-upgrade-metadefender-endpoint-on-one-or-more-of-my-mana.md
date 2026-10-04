@@ -24,7 +24,7 @@ If a device is offline for an extended period, the version will update as soon a
 >
 > The **On-Demand MetaDefender Endpoint** will not auto-update, regardless of whether the account is set to do so.
 >
-> For more information on updating the Persistent and **On-Demand MetaDefender Endpoint** from the endpoint side, please [Read This](https://www.opswat.com/docs/cm/kb/how-do-i-upgrade-the-opswat-client-from-the-endpoint-side-).
+> For more information on updating the Persistent and **On-Demand MetaDefender Endpoint** from the endpoint side,  please refer to [How do I upgrade the MetaDefender Endpoint from the endpoint side?](https://www.opswat.com/docs/cm/knowledge-base/how-do-i-upgrade-the-metadefender-endpoint-from-the-endpoint-sid)
 
 To configure auto-updates on all **Persistent MetaDefender Endpoint** devices, and to notify **On-Demand MetaDefender Endpoint** users when they are due for an update, please follow the instructions below.
 
@@ -82,3 +82,7 @@ To adjust agent version conditions under policy, and receive notification when d
 > **Support:**
 >
 > If you have followed the instructions above and installed the latest OPSWAT Client on all of your managed devices, but find that you are unable to **Configure Automatic MetaDefender Endpoint Updates Via The My OPSWAT Central Management Console**, please open a [Support Case](https://my.opswat.com/portal/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

@@ -1,6 +1,6 @@
 <!-- source: https://www.opswat.com/docs/mddrive/getting-started/update-engines -->
 
-# Download Engine Updates
+# Update Engines
 
 MetaDefender Drive Toolkit automatically checks for the latest engine versions included in your license. The downloaded updates will be stored in the host device's local storage. From the **Manage Engines** page, you can check if any of your drives' engines is outdated so you can copy the latest version to this drive.
 

@@ -1,8 +1,8 @@
 <!-- source: https://www.opswat.com/docs/cm/patch-management/manage-missing-patches -->
 
-# Manage Missing Patches and Outdated Applications
+# Manage Missing Patches
 
- The Patches page is where you review missing OS patches and outdated third-party applications detected across your managed endpoints.,
+ The Patches page is where you review missing OS patches, outdated third-party applications, as well as outdated drivers, firmware, and BIOS across your managed endpoints.
 
 In the left navigation, select **Patch Management > Patches**.
 
@@ -10,10 +10,11 @@ It has two tabs that work the same way:
 
 - **Operating System**: missing OS patches across all endpoints.
 - **Third Party Applications**: installed applications running an outdated version.
+- **Driver & Firmware**: outdated or missing drivers, BIOS, and firmware updates across supported endpoints.
 
 The workflow below applies to both tabs.
 
-![](https://uploads.developerhub.io/prod/97qW/xytgmoo7b59lj7t7sdbtu4rhmi8kmktmu8yr2rxis18fp9q6awx3qmmzls0v8uje.png)
+![](https://uploads.developerhub.io/prod/97qW/zdpsp0aowpzj6tf50i3xqwbaww600davb2o01dpnim3zsd056l9x548r74soqmzh.png)
 
 ## **Find What Matters**
 
@@ -67,3 +68,8 @@ Note From the patch detail page, you can open the **Actions **menu or choose** D
 - Push an urgent fix with [On-Demand Deployment](https://www.opswat.com/docs/cm/patch-management/on-demand-deployment)
 - Automate recurring patching with [Policy Deployment](https://www.opswat.com/docs/cm/patch-management/policy-deployment)
 - Track a specific deployment in [Monitor Deployment](https://www.opswat.com/docs/cm/patch-management/monitor-deployment)
+- Run pre- and post-script with [Deployment Scripts](https://www.opswat.com/docs/cm/patch-management/deployment-scripts)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

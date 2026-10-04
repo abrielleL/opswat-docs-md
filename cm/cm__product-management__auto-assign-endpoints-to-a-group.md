@@ -18,7 +18,7 @@ This is an action that is performed by an administrator when selecting the actio
 
 ## Override Device Group Assignment via Playbooks
 
-This is an override setting found under the Move Device action in Playbooks. This is the highest override, and will override all auto or manual assignments. To learn more about playbooks [here](https://www.opswat.com/docs/cm/product-management/playbooks).
+This is an override setting found under the Move Device action in Playbooks. This is the highest override, and will override all auto or manual assignments. To learn more about playbooks [here](https://www.opswat.com/docs/cm/endpoint-security-solution/playbooks).
 
 ## Additional Notes
 
@@ -29,3 +29,7 @@ This is an override setting found under the Move Device action in Playbooks. Thi
   - Auto-assignment via the domain
   - Auto-assignment via installation package
 - To review device movement between groups, Administrators can use **Device Events** found under **Logs > Device Events**. Administrators are also able to export this information within **Device Events**.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

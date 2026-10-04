@@ -86,11 +86,11 @@ MetaDefender Core may be configured to use SSL. If the certificate or private ke
 
 **For Windows:**
 
-Please navigate to the MetaDefender Core installation folder, by default: C:\Program Files\OPSWAT\MetaDefender Core and run the ometascan-reset-ssl-conf.exe tool to disable the SSL configuration.
+Please navigate to the MetaDefender Core installation folder, by default: C:\Program Files\OPSWAT\MetaDefender Core and run the ometascan-reset-ssl-conf.exe tool **as Administrator** to disable the SSL configuration.
 
 **For Linux:**
 
-Please run the script /usr/sbin/ometascan-reset-ssl-conf
+Please run the script /usr/sbin/ometascan-reset-ssl-conf **with root privileges**
 
 Once done, please try starting the service again.
 

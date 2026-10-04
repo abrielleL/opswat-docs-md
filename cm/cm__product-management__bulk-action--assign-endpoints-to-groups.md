@@ -16,3 +16,7 @@ Administrators are able to move endpoints in bulk to groups in My OPSWAT Central
 - All devices should appear in the device group immediately.
 
 For other methods of group assignment, both manual and automatic, please review [Auto-Assign Endpoints to a Group](https://www.opswat.com/docs/cm/product-management/auto-assign-endpoints-to-a-group)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

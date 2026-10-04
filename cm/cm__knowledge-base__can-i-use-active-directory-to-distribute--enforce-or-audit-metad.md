@@ -50,7 +50,7 @@ The downside is that filtering for a specific process (e.g, GearsAgentService.ex
 >
 > Current versions incorporate state-of-the-art features and necessary bug fixes and are freely available for all license holders to download.
 >
-> For details on the latest releases, refer to[ Release Notes](https://www.opswat.com/docs/cm/release-notes/latest-release-notes)
+> For details on the latest releases, refer to[ Release Notes](https://www.opswat.com/docs/cm/release-notes/release-notes-for-v10-7-26091)
 >
 > Auto-upgrade can be configured either globally via **My OPSWAT Central Management Console>Settings>Global>Device Agents**, or at a group level via **My OPSWAT Central Management Console>Inventory>Device Groups>Settings**.
 >
@@ -59,3 +59,7 @@ The downside is that filtering for a specific process (e.g, GearsAgentService.ex
 > **Support:**
 >
 > Should you encounter any issues during the process of **Distributing, Enforcing And Auditing The Persistent MetaDefender Endpoint** **On Your Network**, please open a [Support Case](https://my.opswat.com/portal/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

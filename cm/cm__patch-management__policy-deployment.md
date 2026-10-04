@@ -4,9 +4,15 @@
 
 Policy Deployment keeps endpoints patched automatically, on a repeating schedule, so you don't have to trigger every deployment yourself.
 
-The process is the same for **Windows patches **and **Application updates**.
+The process is the same for **OS, Application**,** and Driver & Firmware Updates**.
 
-![](https://uploads.developerhub.io/prod/97qW/fsqtora9r72fjoekf5nxv3xdysckmuy7sgpe6oxsypzew1bp24jii5uk89lwhs3r.png)
+> **Please Note**
+>
+> Policy deployment only support **Window patches**. Non-Window devices will be automatically excluded.
+>
+> [Driver & Firmware Updates](https://www.opswat.com/docs/cm/patch-management/driver---firmware-settings-on-endpoint) is supported on **Dell **and **Lenovo Windows devices **only.
+
+![](https://uploads.developerhub.io/prod/97qW/wwkpgcvgltzw9696ysprr3wr1eafwkkk676kxiai50zyzznsgj4bq1jjczwdxdu7.png)
 
 ## Start a Policy Deployment
 
@@ -20,7 +26,7 @@ Note Policy deployments run on **Windows devices **only.
 | Configuration | Details |
 | ---- | ---- |
 | Name and describe the deployment | Enter a Name, a short Description, and any Tags you want to filter by later ![](https://uploads.developerhub.io/prod/97qW/emg10uei2uu06k6av1i6ins6qv7uximzuhkfclp8fuxfgxw3hdzkslku600bs0wz.png) |
-| Enable Window and Application patch policy | Use the Enable OS Patches Policy and/or Enable Application Patches Policy checkbox ![](https://uploads.developerhub.io/prod/97qW/39b5a9k6vipnlojx43ucz2nqefy2jgbn16xwtm0nz05a5382cdzeejes59mxcvmr.png) |
+| Enable Window and Application patch policy | Use the Enable OS Patches Policy and/or Enable Application Patches Policy checkbox ![](https://uploads.developerhub.io/prod/97qW/44wzkmvlquesa2d9yfdvicay53vrvjggi4ttaznmx93hncnnw2vxnptuuh95fkqc.png) |
 | Decide how often it runs | Set a Recurring Schedule. Daily, Weekly on one or more selected days, or Monthly on one or more selected days ![](https://uploads.developerhub.io/prod/97qW/5dr1qf9qpq9p3d88qr358tuhkhzw5w7a094lwaceezag3zc1q8brq1bbdy3rfwq9.png) |
 | Control restart and user notifications | Configure Reboot Options (Windows) or Update Notification (Application) to reduce user disruption ![](https://uploads.developerhub.io/prod/97qW/ficzv9hn1nxrcnu09783cwnexgo9ye69lb6x617xzq8tff3l0nv2bc2byjrjti8n.png) ![](https://uploads.developerhub.io/prod/97qW/goj5q50nwk80jfvzc3vemm8lv3cgbmwsy951f9nmab54fntjpx7zv3r5jh1l5p0i.png) |
 | Choose what gets installed | Use condition-based selection to automatically include patches or updates that match criteria. If you set multiple criteria, a patch only needs to match one to be included ![](https://uploads.developerhub.io/prod/97qW/x70lbdxn2euzpct1c1mbci3d07uoroy2j2p100olvdbnwwjdvct0luovfjwswe9c.png) Note* Rejected and unsupported items are automatically excluded, even if they match your selection criteria.* |
@@ -44,3 +50,7 @@ The policy will be assigned to the group and will run automatically according to
 - Configure point-in-time patch reports with [Custom Patch Reports](https://www.opswat.com/docs/cm/patch-management/custom-patch-reports)
 - Set real-time alerts for key patch events under [Patch Notification](https://www.opswat.com/docs/cm/patch-management/patch-notification)
 - Define SLA timeframes to maintain compliance visibility via [Patch SLA](https://www.opswat.com/docs/cm/patch-management/patch-sla)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

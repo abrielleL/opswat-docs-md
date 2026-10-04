@@ -2,7 +2,7 @@
 
 # User management
 
-New users get access to MetaDefender Software Supply Chain by creating an account, which an administrator then approves. Administrators manage all accounts on the **Users** page.
+New users get access to MetaDefender Software Supply Chain by creating an account, which an administrator then approves and assigns a role. Administrators manage all accounts on the **Users** page. For what each role can do, see [User roles](https://www.opswat.com/docs/supply-chain/configuration/user-roles).
 
 ## Creating an account
 
@@ -24,10 +24,14 @@ New users get access to MetaDefender Software Supply Chain by creating an accoun
 
 ## Waiting for approval
 
-A newly registered account must be approved by an administrator before it can be used - see the Pending Invitation page. Until then, signing in shows **Account is not active**:
+A newly registered account must be approved by an administrator before it can be used - see the Pending Invitation page. When approving the account, the administrator selects its role (**Administrator** or **Read-Only User**). Until then, signing in shows **Account is not active**:
 
 ![](https://uploads.developerhub.io/prod/jdK6/8bh4mqbk8kjrmwx1xvgfwwi0larukx44whag0ngmn0gngisy36fg8g6luxve5v4h.png)
 
 ## Managing users
 
-Administrators manage the accounts on the **Users** page: the **Active Users** table lists every active account with its name, username, email, and permissions. From here you can add a user directly with **Add User**, edit a user's details and permissions, or delete an account. Newly registered accounts waiting for approval are listed in the **Pending Users** table on the same page.
+Administrators manage the accounts on the **Users** page: the **Active Users** table lists every active account with its name, username, email, and role (shown under Permissions). From here you can add a user directly with **Add User** and choose their role, edit a user's details and role, or delete an account. Newly registered accounts waiting for approval are listed in the **Pending Users** table on the same page, where you choose each account's role before approving it.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

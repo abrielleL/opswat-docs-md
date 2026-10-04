@@ -46,7 +46,7 @@ OESIS supports Windows, macOS, and Linux platforms. This article provides a comp
 
 | OS | Arch | Device Posture | AppRemover | Vulnerability Assessment | Patch Management |
 | --- | --- | --- | --- | --- | --- |
-| macOS Golden Gate | x86-64, ARM64 | 🚫 (Targeted in Sep 2026) | 🚫 | 🚫 (Targeted in Sep 2026) | 🚫 (Targeted in Sep 2026) |
+| macOS Golden Gate | x86-64, ARM64 | ✅ | ✅ | ✅ | ✅ |
 | macOS Tahoe | x86-64, ARM64 | ✅ | ✅ | ✅ | ✅ |
 | macOS Sequoia | x86-64, ARM64 | ✅ | ✅ | ✅ | ✅ |
 | macOS Sonoma | x86-64, ARM64 | ✅ | ✅ | ✅ | ✅ |

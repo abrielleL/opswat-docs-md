@@ -2,7 +2,7 @@
 
 # Custom Patch Reports
 
-Patch Reports make it easy for administrators to share patching progress with stakeholders, prove compliance, and track remediation outcomes across operating systems, third-party apps, and deployment jobs.
+Administrators can create custom Patch Reports to share patching progress with stakeholders, prove compliance, and track remediation outcomes across operating systems, third-party apps, and deployment jobs.
 
 - [Create a Report](https://www.opswat.com/docs/cm/patch-management/custom-patch-reports#create-a-report)
 - [Preview a Report](https://www.opswat.com/docs/cm/patch-management/custom-patch-reports#preview-a-report)
@@ -24,7 +24,7 @@ To view and manage your reports, navigate to **Patch Management > Reports**.
 | Generating Schedule ![](https://uploads.developerhub.io/prod/97qW/ouktkv4y8t3i0nokpqqrb3u647a04n8uxthr3pyke85k4azb7umds5tzne0sy7e9.png) | Choose how often the report runs |
 | Time Frame Note* Time Frame configuration is only available on ****Patch Deployment**** reports. * ![](https://uploads.developerhub.io/prod/97qW/dgegxjq39p59a1iyr3djuqd3h0k9jfed7j3nk1ipde9gl0loonude4pl9bwte1gk.png) | Define the reporting window |
 | Groups ![](https://uploads.developerhub.io/prod/97qW/gdfxfozjf0rh38kbz3fg0d7l2aufv1zl4kg7dcdthbl25fckvtmfgbvbofixu3oq.png) | Select the device groups to include in the report. |
-| Report Type ![](https://uploads.developerhub.io/prod/97qW/g3vz9ra2y3152sfolqfokln7pozq0x07ydcae67ah2wik8qtytddvj9ctgrzeie0.png) | Select the focus of the report. This determines the metrics, charts, and details included in the output |
+| Report Type ![](https://uploads.developerhub.io/prod/97qW/2hw252eal7zyomkhnve3jcm6k6m7q34zp0wgcfyftytp3mng2xegsp2pkyrjrn2n.png) | Select the focus of the report. This determines the metrics, charts, and details included in the output |
 | Detail Report Hierarchy - **Group by Devices**: Lists each device with its associated patches, applications, or deployment jobs - **Group by Patches**: Lists each patch with the affected devices (available for Operating System and Patch Deployment type only) - **Group by Applications**: Lists each application with the affected devices (available for Third-party Application only) ![](https://uploads.developerhub.io/prod/97qW/64yn0hwke4zauiopwvo0in425vhidx3atd9actodpxgovj6y4m2ynom3tg4gtmse.png) | Define how detailed data is organized in the report, based on the selected report type |
 | Report Scope Filters Note *The available filters depend on the selected Report Type.* ![](https://uploads.developerhub.io/prod/97qW/ufohnsnzeiwk90ryfpm4iugl10bemt5zyselhpq69na9skqp0uw3ji4gsoguoj9o.png) | Refine the data set with one or more scope filters.  |
 | Share Report by Email Note* You can update the recipients anytime by editing the report configuration from the Reports List page.* - Tick **Summary** to include the high-level summary section in the report (available for PDF format only) - Tick **Detailed Report** to include the per-device, per-patch, or per-job detail section ![](https://uploads.developerhub.io/prod/97qW/0qar40ucy3msanzo5nztpa6qq2fpzx7yvralndhcsausrz1xtrhbtr0g5vqtem5f.png) | Enable this option to automatically email the report to selected recipients each time it runs. |
@@ -81,3 +81,7 @@ Includes the full dataset, organized based on the selected Detail Report Hierarc
 - **Operating System**: Detailed Report can be grouped by **Devices** or by **Patches**.
 - **Third-Party Application**: Detailed Report can be grouped by **Devices** or by **Applications**.
 - **Patch Deployment**: Detailed Report can be grouped by **Devices** or by **Patches**.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

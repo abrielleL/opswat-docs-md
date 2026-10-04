@@ -2,9 +2,9 @@
 
 # Upgrade
 
-> **Upgrading from a Previous Release (10.5.2603 to 10.6.2605)**
+> **Upgrading from a Previous Release (10.6.2605 to 10.6.26062)**
 >
-> This document explains how to move an existing deployment from the previous release (app build `10.5.2603`) to **this release** (app build `10.6.2605`) **without destroying any live infrastructure**.
+> This document explains how to move an existing deployment from the previous release (app build `10.6.2605`) to **this release** (app build `10.6.26062`) **without destroying any live infrastructure**.
 
 ## Conventions used in this document
 
@@ -16,6 +16,32 @@ The actual on-disk folder names in your environment may vary (e.g. `mocm-10.5.26
 | <current-release>/ | The release directory of **this** package (app build `10.6.2605`) — the new version you are upgrading **to**. |
 
 Replace both placeholders with the real paths on your machine before running any command.
+
+## **Upgrading **`10.6.2605`** → **`10.6.26062`** (application / chart only)**
+
+This is a **chart-only** upgrade — there are **no Terraform or infrastructure changes**. Skip the Terraform sections (Pre-upgrade checklist, Option A/B, Stage 4) below; those apply only when coming from `10.5.2603`. All changes ship in the `mocm/` Helm chart.
+
+### **What's new (**`10.6.2605`** → **`10.6.26062`**)**
+
+| Layer | Change |
+| ---- | ---- |
+| Helm | **New required value **`global.masterKekV1` (+ `global.currentKekVersion`), consumed by the product updater (`fusion-updater`, `fusion-updater-scheduler`). Must be generated and set before upgrade. |
+| Images | Bumped from `10.6.2605` to `10.6.26062` (see `images/images.txt`). |
+
+### **Steps**
+
+1. **Merge **`values.yaml` — do **not** overwrite (same rule as the *Helm / Helmfile upgrade (application layer)* section below). Carry over your credentials / host / `productKey` / storage / `componentReplicas` into the new file.
+2. **Bump the image tag** to `10.6.26062` in `global.image.tag`, and push the new images to ECR **before** syncing (`cd <current-release>/images && ./loadimage.sh`), otherwise pods will `ImagePullBackOff`.
+3. **Diff, then sync** (the 3-release ordering `mocm-bootstrap-1` → `mocm-bootstrap-2` → `mocm-service` is enforced by Helmfile):
+
+   `cd <current-release>/mocm`
+   `helmfile -f helmfile.yaml -n fusion diff`
+   `helmfile -f helmfile.yaml -n fusion sync 2>&1 | tee helmfile-upgrade.log`
+4. **Verify** all pods are Running:
+
+   `kubectl get pods -n fusion`
+
+No Terraform apply is required for this upgrade. See the *Helm / Helmfile upgrade (application layer)* section below for the standard merge / diff / rollback rules.
 
 ## What's new in this release (`10.5.2603` → `10.6.2605`)
 
@@ -321,3 +347,7 @@ tofu apply tfplan
 ```
 
 The matching security group `aws_security_group.elasticache` is defined in `02-sg.tf` and is **not** touched by renaming `09-elasticache.tf`. If nothing else references it after teardown, remove it in a follow-up commit.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

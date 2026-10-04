@@ -2,30 +2,6 @@
 
 # Configuration and Settings
 
-1. [Which version of MetaDefender Endpoint supports setting for anti-phishing according to the default browser](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/which-version-of-metadefender-endpoint-supports-setting-for-anti)
-2. [How can I reduce the number of false positives in threat detection?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-can-i-reduce-the-number-of-false-positives-in-threat-detecti)
-3. [Why can't I apply certain actions on some of my managed devices?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/why-can-t-i-apply-certain-actions-on-some-of-my-managed-devices-)
-4. [How can I disable the MetaDefender Endpoint Tray Icon?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-can-i-disable-the-metadefender-endpoint-tray-icon-)
-5. [How can I capture custom information from end-users?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-can-i-capture-custom-information-from-end-users-)
-6. [How can I control what happens to log files when devices are deleted in MetaDefender Endpoint?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-can-i-control-what-happens-to-log-files-when-devices-are-del)
-7. [Can I block certain applications on endpoints?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/can-i-block-certain-applications-on-endpoints-)
-8. [How to access My OPSWAT Central Management account if I lose access to my old authenticator app or changed phones?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-to-access-my-it-access-account-if-i-lose-access-to-my-old-au)
-9. [How can I add my own MetaDefender Core servers to scan threats on devices?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-can-i-add-my-own-metadefender-api-servers-to-scan-threats-on)
-10. [How to allow a specific threat in My OPSWAT Central Management admin console?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-to-allow-a-specific-threat-in-my-opswat-central-management-a)
-11. [What is the best practice for integrated UAG configuration?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/what-is-the-best-practice-for-integrated-uag-configuration-)
-12. [Which version of MetaDefender Endpoint supports setting for anti-phishing according to the default browser](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/which-version-of-opswat-client-supports-setting-for-anti-phishin)
-13. [How Can I Resolve High Disk Usage on the OCM Server?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-can-i-resolve-high-disk-usage-on-the-ocm-server-)
-14. [Why am I seeing the "You have not been granted access to any protected applications in undefined" error when using special characters in Azure group names?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/why-am-i-seeing-the--you-have-not-been-granted-access-to-any-pro)
-15. [How to generate a support package for My OPSWAT Central Management?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-to-generate-a-support-package-for-my-opswat-central-manageme)
-16. [Why can one user in the org see inventory devices while another cannot in My OPSWAT Central Management?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/why-can-one-user-in-the-org-see-inventory-devices-while-another-)
-17. [Why do I get "Failed to create server shutdown socket" when installing OCM 10 on-prem?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/why-do-i-get--failed-to-create-server-shutdown-socket--when-inst)
-18. [How to Perform a Clean Install of My OPSWAT CM10 On-Prem?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-to-perform-a-clean-install-of-my-opswat-cm10-on-prem-)
-19. [What does Platinum and Gold mean for anti-malware products?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/what-does-platinum-and-gold-mean-for-anti-malware-products-)
-20. [Where are the install directories for My OPSWAT Central Management v10?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/where-are-the-install-directories-for-my-opswat-central-manageme)
-21. [How do I forcefully unenroll a MetaDefender Core instance from OPSWAT Central Management (OCM)?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-do-i-forcefully-unenroll-a-metadefender-core-instance-from-o)
-22. [How to Fetch the Scan Results from MD Core into the OCM 10](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-to-fetch-the-scan-results-from-md-core-into-the-ocm-10)
-23. [How to update the NGINX port in My OPSWAT Central Management in Linux?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-to-update-the-nginx-port-in-my-opswat-central-management-in-)
-24. [How to modify a MetaDefender Core workflow and settings on My OPSWAT Central Management?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-to-modify-a-metadefender-core-workflow-and-settings-on-my-op)
-25. [Why don't other users in my organization see the same devices in OPSWAT Central Management?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/why-don-t-other-users-in-my-organization-see-the-same-devices-in)
-26. [Can I exempt a device from a My OPSWAT Central Management Access Policy?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/can-i-exempt-a-device-from-a-my-opswat-central-management-access)
-27. [How do I change my PIN?](https://app.developerhub.io/my-opswat-central-management/10.7.26091/knowledge-base/how-do-i-change-my-pin-)
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

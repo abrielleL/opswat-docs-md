@@ -74,7 +74,7 @@ A Rule is a named set of **conditions** paired with an **Access Profile**. When 
 2. **Flexible condition logic.**
    1. In v8, qualifier matching follows a rigid hierarchy: qualifiers are grouped into typed Qualifier Sets (OR within a set), which are grouped into Qualifier Containers (AND between sets).
    2. In v10, conditions can be grouped into arbitrary collections with configurable AND/OR logic, and these collections can be nested to arbitrary depth.
-3. **Compliance as a condition, not a separate system.** In v10, "device compliance status" and "device authentication status" are simply conditions you can include (or not) in your Rules — alongside network, identity, device type, or any other condition. Defining the security posture/compliance requirements of a device is handled by [MetaDefender Endpoint Policies](https://www.opswat.com/docs/cm/product-management/metadefender-endpoint-policies).
+3. **Compliance as a condition, not a separate system.** In v10, "device compliance status" and "device authentication status" are simply conditions you can include (or not) in your Rules — alongside network, identity, device type, or any other condition. Defining the security posture/compliance requirements of a device is handled by [MetaDefender Endpoint Policies](https://www.opswat.com/docs/cm/endpoint-security-solution/metadefender-endpoint-policies).
 
 ---
 
@@ -89,3 +89,7 @@ The table below maps v8 concepts to their closest v10 equivalents, but note that
 | Policy Container | Rule Conditions | Compliance is a condition within Rules in v10, not a separate evaluation layer. |
 | Role | Access Profile | Functionally identical; renamed to avoid term overloading. |
 | Role Matrix | *(no equivalent)* | Unnecessary in v10 — Rules map directly to Access Profiles without an intermediary lookup. |
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

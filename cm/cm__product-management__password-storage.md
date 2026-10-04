@@ -6,8 +6,6 @@ Password Storage is a feature in My OPSWAT Central Management that lets you mana
 
 > **Feature Availability**
 >
-> MetaDefender Core support for this feature is expected **by the end of September 2026**. Until then, storages and passwords you configure in My OPSWAT Central Management will not yet be delivered to Core instances.
->
 > This feature supports MetaDefender Core version 5.23.0 or later.
 
 To access the feature, navigate to **File Security > Password Storage**.
@@ -105,3 +103,13 @@ Note Removing an assignment clears that storage from all Core instances under th
 ## Using a Password Storage in a Workflow Rule
 
 When configuring a MetaDefender Core policy's Archive workflow rule, the password picker lists only the storages assigned to that policy. If it is empty or missing the storage you expect, go to the Password Storage page and assign it to the policy first.
+
+## Troubleshooting
+
+| Issues | Causes | Solutions |
+| ---- | ---- | ---- |
+| Policy sync fails with "Significant Issues" across MetaDefender Core instances | The policy references an archive password created locally on a single Core instance rather than in My OPSWAT Central Management. Other Core instances do not recognize the password reference and reject the workflow configuration. | **Option 1 (Recommended):** Add the password to **My OPSWAT Central Management**, assign it to the policy, and select it in the Archive workflow rule so it syncs fleet-wide.  **Option 2:** Open the policy's **Archive workflow rule** and **unselect/remove** the local password. |
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

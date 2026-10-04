@@ -13,7 +13,7 @@
 To begin setting up the new air-gapped patch management solution, two things need to be done first:
 
 1. My OPSWAT Central Management on-premises is [installed](https://www.opswat.com/docs/cm/deployment/msi-installation), licensed, and[ switched](https://www.opswat.com/docs/cm/patch-management/on-premise-patch-management#how-to-switch-between-the-two-versions) to the new Patch Management solution
-2. Endpoint devices are [enrolled](https://www.opswat.com/docs/cm/product-management/metadefender-endpoint)
+2. Endpoint devices are [enrolled](https://www.opswat.com/docs/cm/endpoint-security-solution/metadefender-endpoint)
 
 When endpoints are enrolled and communicating with My OPSWAT Central Management, they will begin to report their missing patches.
 
@@ -199,3 +199,7 @@ Patch Reports & Notifications provides administrators with the centralized tools
 ![](https://uploads.developerhub.io/prod/97qW/mult7gds8ipkoc6fxc6dbxc6a4kwzl1qvorlaxbutvhnn1ckko7phpmpzzkmrk74.png)
 
 Refer to [Patch Reports & Notifications](https://www.opswat.com/docs/cm/patch-management/patch-reports---notification) for more details.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

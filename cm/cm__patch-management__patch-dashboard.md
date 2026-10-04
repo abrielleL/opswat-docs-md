@@ -9,7 +9,8 @@ In the left navigation, select **Patch Management > Overview**.
 Choose the tab you need:
 
 - **Operating System**: OS patch posture across Windows, Linux, and macOS.
-- **Third Party Applications**:  installed-software posture.
+- **Third Party Applications**: Installed-software posture.
+- **Driver & Firmware**: Driver, BIOS, and firmware update posture.
 - **Job**: Deployment activity and outcomes.
 
 ![](https://uploads.developerhub.io/prod/97qW/hh0dk5bjntn5bsszys7681h3azk4azjb6l5omc69hn3jzgukmjc47ahd7dhchma6.png)
@@ -32,7 +33,7 @@ Quick jump to your specific goal:
 
 | Widgets | Details |
 | ---- | ---- |
-| - Patch Risk Summary (OS) ![](https://uploads.developerhub.io/prod/97qW/gal6jj3zbs2a42j4p4t0vudl7qmxuc07e5m1vnqfgkk9cunyejw2hwl44e4s825q.png) - Summary (Applications) ![](https://uploads.developerhub.io/prod/97qW/yh3k2numvxlwtf45vl7e12jhhjfcte2jtw9nygorkmjawaov51vk76v1v3lkmgyx.png) | Gives the quickest overview of your patch posture and critical gaps. |
+| - Patch Risk Summary (OS) ![](https://uploads.developerhub.io/prod/97qW/gal6jj3zbs2a42j4p4t0vudl7qmxuc07e5m1vnqfgkk9cunyejw2hwl44e4s825q.png) - Summary (Applications) ![](https://uploads.developerhub.io/prod/97qW/yh3k2numvxlwtf45vl7e12jhhjfcte2jtw9nygorkmjawaov51vk76v1v3lkmgyx.png) - Update Risk Summary (Driver & Firmware) ![](https://uploads.developerhub.io/prod/97qW/wb7fj63mnfq0nxazlirdy9cemxyshbd59fktqxq1ai92fm2uocvm9mjf1odh0ir1.png) | Gives the quickest overview of your patch posture and critical gaps. |
 
 ### Prioritize what to fix
 
@@ -40,14 +41,14 @@ If your organization tracks remediation targets, start with SLA compliance. Othe
 
 | Priority | Widgets | Details |
 | ---- | ---- | ---- |
-| SLA Compliance | - Missing OS Patches SLA Compliance  ![](https://uploads.developerhub.io/prod/97qW/h87xiuxtvg3ry9caf2coca5por7nodpmcimlz08ljogy065xq62zqhqco45woar5.png) - Application Patches SLA Compliance  ![](https://uploads.developerhub.io/prod/97qW/1ffrzdgb4nqgxg9i2njo4dt0163wdz36fvpf3tpxyrntnvag3rmll0xprt04vbj0.png) | Show patches that require immediate attention based on configured SLA |
-| Severity | - Missing Patches by Severity ![](https://uploads.developerhub.io/prod/97qW/j4gi708rrh50pevsjm4jv3lru7mth21oaxozuv56ueu8bpc9cq48x0o2q7gwr9eu.png) - Application Patches by Severity ![](https://uploads.developerhub.io/prod/97qW/w41hl2fycp4aqo3b89pkrcvebyyzv0hl1pfigahe5uo4nwxn6swyopolh3y0ix9x.png) | Break down missing patches and application updates by severity level |
+| SLA Compliance | - Missing OS Patches SLA Compliance  ![](https://uploads.developerhub.io/prod/97qW/h87xiuxtvg3ry9caf2coca5por7nodpmcimlz08ljogy065xq62zqhqco45woar5.png) - Application Patches SLA Compliance  ![](https://uploads.developerhub.io/prod/97qW/1ffrzdgb4nqgxg9i2njo4dt0163wdz36fvpf3tpxyrntnvag3rmll0xprt04vbj0.png) - Missing Driver & Firmware Updates SLA Compliance ![](https://uploads.developerhub.io/prod/97qW/nfjo14uc1yzdn06qt6i8i89zy432ebxjzkfmo7xbfejmgoyl76gfeic9s91036d9.png) | Show patches that require immediate attention based on configured SLA. See [Patch SLA](https://www.opswat.com/docs/cm/patch-management/patch-sla) for configuration guideline. |
+| Severity | - Missing Patches by Severity ![](https://uploads.developerhub.io/prod/97qW/j4gi708rrh50pevsjm4jv3lru7mth21oaxozuv56ueu8bpc9cq48x0o2q7gwr9eu.png) - Application Patches by Severity ![](https://uploads.developerhub.io/prod/97qW/w41hl2fycp4aqo3b89pkrcvebyyzv0hl1pfigahe5uo4nwxn6swyopolh3y0ix9x.png) - Missing Updates by Severity (Driver & Firmware) ![](https://uploads.developerhub.io/prod/97qW/sjjaewvbwidn4ny454tu6ihgltb3c64gag4ut553f6ihwqkwbf7i7sp8mhs0r146.png) | Break down missing patches and application updates by severity level. See [Manage Missing Patches and Outdated Applications](https://www.opswat.com/docs/cm/patch-management/manage-missing-patches) for more details. |
 
 ### Find long-standing risks
 
 | Widgets | Details |
 | ---- | ---- |
-| - Missing OS Patches by Release Date ![](https://uploads.developerhub.io/prod/97qW/esv00egijxc8f5vytpj2ioaf3c0q89i9bctqxno60jrr5jmosuguxddeigi8asej.png) - Application Vulnerability by Age ![](https://uploads.developerhub.io/prod/97qW/ront9nl23ohqvkc3nvrc9wjlwl9ybdcte9d5ykjvk8iecv7spaynm7j040rb3e02.png) | Surfacing long-standing missing patches and vulnerable applications that may indicate neglected devices or unsuccessful remediation efforts |
+| - Missing OS Patches by Release Date ![](https://uploads.developerhub.io/prod/97qW/esv00egijxc8f5vytpj2ioaf3c0q89i9bctqxno60jrr5jmosuguxddeigi8asej.png) - Application Vulnerability by Age ![](https://uploads.developerhub.io/prod/97qW/ront9nl23ohqvkc3nvrc9wjlwl9ybdcte9d5ykjvk8iecv7spaynm7j040rb3e02.png) - Missing Driver & Firmware Updates by Release Date ![](https://uploads.developerhub.io/prod/97qW/05x6maazf85j04ypymxr9lgmvt8s1k2xpez00otogum7nf49tzfxsolfa832ua9r.png) | Surfacing long-standing missing patches and vulnerable applications that may indicate neglected devices or unsuccessful remediation efforts |
 
 ### Track risk trend (Application)
 
@@ -71,7 +72,7 @@ If your organization tracks remediation targets, start with SLA compliance. Othe
 
 | Widgets | Details |
 | ---- | ---- |
-| - Top 10 Missing Patches by Devices (OS)  ![](https://uploads.developerhub.io/prod/97qW/f9ah4ms7n3r49i2k9him49jze6pqllwyorv2la5qjeopbc2yp03tzm830ltj3ixq.png) - Top Applications by Affected Devices ![](https://uploads.developerhub.io/prod/97qW/1eutjb0ukbhxh4xv76j4iro7emp4gfzlpm695fasmyncj7y0876gac1tck44e24c.png) | Identifies the patches or applications affecting the most devices. Fixing these closes the most gaps for the least deployment effort. |
+| - Top 10 Missing Patches by Devices (OS)  ![](https://uploads.developerhub.io/prod/97qW/f9ah4ms7n3r49i2k9him49jze6pqllwyorv2la5qjeopbc2yp03tzm830ltj3ixq.png) - Top Applications by Affected Devices ![](https://uploads.developerhub.io/prod/97qW/1eutjb0ukbhxh4xv76j4iro7emp4gfzlpm695fasmyncj7y0876gac1tck44e24c.png) - Top 10 Missing Updates by Devices (Driver & Firmware) ![](https://uploads.developerhub.io/prod/97qW/zcylzdn21x5fw1iw100g1974eiqqt7dqt079qienppty32544gyd00l9klm1w2n8.png) | Identifies the patches or applications affecting the most devices. Fixing these closes the most gaps for the least deployment effort. |
 
 ## Monitor and Review Deployments
 
@@ -119,3 +120,7 @@ You can then:
 - Push urgent fixes with [On-Demand Deployment](https://www.opswat.com/docs/cm/patch-management/on-demand-deployment)
 - Automate recurring patching with [Policy Deployment](https://www.opswat.com/docs/cm/patch-management/policy-deployment)
 - Track active and completed deployment jobs in real time with [Monitor Deployment](https://www.opswat.com/docs/cm/patch-management/monitor-deployment)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

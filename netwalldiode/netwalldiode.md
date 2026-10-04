@@ -4,7 +4,7 @@
 
 # Optical Diode
 
-#### v1.14.0 [Latest]
+#### v1.15.0 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/netwalldiode/release-notes)
 

@@ -2,6 +2,10 @@
 
 # Why does MetaDefender Core fail to trust a self-signed certificate in Kubernetes?
 
+**Check Your Version:**
+
+This article applies to all MetaDefender Core releases deployed on Kubernetes versions listed [here](https://www.opswat.com/docs/mdcore/container-deployment/md-core-in-kubernetes#kubernetes-supported-versions).
+
 When MetaDefender Core connects to an HTTPS application, it validates the SSL/TLS certificate presented by the remote endpoint. If that application uses a self-signed certificate, or a certificate issued by an internal Certificate Authority that MetaDefender Core does not trust, the connection can fail during certificate validation.
 
 A typical error looks similar to this:
@@ -196,3 +200,7 @@ Use the same hostname and port that MetaDefender Core uses. This is important be
 **FAQ: What if MetaDefender Core is installed on a virtual machine instead of Kubernetes?**
 
 > Install the certificate into the operating system trust store used by that host, restart the MetaDefender Core service, and then test the HTTPS connection again.
+
+**Support:**
+
+If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

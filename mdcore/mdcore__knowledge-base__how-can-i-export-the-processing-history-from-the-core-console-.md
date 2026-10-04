@@ -11,6 +11,10 @@ Please take note: STIX format contains blocked files only. A few options are ava
 - Version
 - Time Range
 
+### [How to export to a CSV file?](/docs/mdcore/knowledge-base/how-can-i-export-the-processing-history-from-the-core-console-#how-to-export-to-a-csv-file)
+
+1. Click the drop-down arrow and select **Export to CSV**.
+
 Support:
 
 If **Further Assistance** is required, please follow the instructions on [How to Create Support Package With Bundle Tools?](/docs/mdcore/troubleshooting/how-to-create-support-package-), then proceed to log a [support case or chat with our support engineer](https://my.opswat.com/portal/support).

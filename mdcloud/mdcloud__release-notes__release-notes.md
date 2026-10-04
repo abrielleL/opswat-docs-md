@@ -13,7 +13,19 @@ In order to enhance our customers' experience, we will be introducing the softwa
 | US | 4th Wednesday of each month | 03:00AM - 05:00AM (EDT) |
 | AUS | 4th Wednesday of each month | 11:00PM - 01:00AM (AEST) |
 
-**August 2026**
+### **September 2026**
+
+| Product Area | Release Type |
+| --- | --- |
+| metadefender.com   - Release date - September 16, 2026 - Version - 3.8.0 | New Features and Enhancements   - **Dedicated Enterprise and Community product pages.** [metadefender.com](http://metadefender.com) now has dedicated Enterprise and Community product pages, reachable from the expanded Product section of the main header navigation. - **Result cards now describe what each technology did.** All eight cards in the Analysis Overview grid previously shared a single status word, "Detected", so a successful sanitization appeared as "Detected - 11 Objects Sanitized" and a country match as "Detected - People's Republic of China". Each card now uses the verb appropriate to its technology: Deep CDR reports **Sanitized**, Proactive DLP reports **Identified**, Country of Origin reports **Origin**, Adaptive Sandbox reports **Verdict**, Vulnerability Assessment reports **Found**, and Metascan and Predictive AI continue to report **Detected**. Existing scan history results are displayed using the new mapping. - **Updated archive scan results view.** Scans performed with archive extraction present their extracted files and results in the current design. - **Emulation Graph design update.** The Emulation Graph on the file result Threats tab is updated to the current design. - **Similarity Search rows expand on full-row click.** Clicking anywhere on a Similarity Search row expands and collapses its detail panel. Rows are keyboard focusable, with Enter and Space toggling them, and selecting text within a row no longer triggers a toggle.   Fixed   - **Archive child files now show their own sandbox report.** Opening a file extracted from an archive issued an additional request keyed to the parent archive, which added latency and could display the parent's sandbox report on the child's page. The child's own report is now used. - **Cookie consent icon no longer covers Workflow Studio controls.** In Secure Pipeline Studio, the floating cookie consent icon overlapped the engine configuration panel and partly obscured the Cancel and Add buttons while a workflow was being configured. The icon has been relocated. |
+| API   - Release date - Released based on each region's maintenance window timeframe.  - Version - 4.81 | New Features and Enhancements   - **Aether workflow.** A new detection pipeline is available in the scan flow, activated through the rule values `aether` or `aether, unarchive`. Aether runs reputation, deflection, Adaptive Sandbox and threat intelligence in sequence and stops at the first definitive verdict, with each engine's outcome surfaced on the result as it completes. Reputation, deflection and threat intelligence result objects are added to the scan result and their status codes are folded into the overall verdict. Each Aether-scanned file consumes one Sandbox unit, charged when the request is admitted**.** Aether can be combined with archive extraction only; combining it with any other workflow option is rejected. - **Sandbox allowance is enforced per extracted file on archive scans.** Each file extracted from an archive now deducts one sandbox unit as its sandbox processing completes. When the allowance is partially exhausted, only the files that fit within it are processed. When the allowance is fully exhausted, the scan reports exceeded limits and extracted file details are omitted. Prevention quota accounting is unchanged. - **Deep CDR and Proactive DLP verdicts return independently for Community users.** On Community tier scans using a combined Deep CDR and DLP workflow, neither engine's output was returned until the slower engine finished. Each engine's output now surfaces as that engine completes   Fixed   - **Consistent scan progress messaging.** Per-file completion messaging previously varied between workflows depending on when each workflow was last edited. All workflows within a region now report progress consistently. |
+| ICAP Cloud   - Release date - - Version - | New Features and Enhancements  Fixed |
+| Menlo Plugin   - Release date - - Version - | New Features and Enhancements  Fixed |
+| MetaDefender Storage Security Cloud   - Release date - - Version - | New Features and Enhancements  Fixed |
+
+---
+
+### **August 2026**
 
 | Product Area | Release Type |
 | --- | --- |
@@ -23,7 +35,7 @@ In order to enhance our customers' experience, we will be introducing the softwa
 | Menlo Plugin   - Release date - - Version - | New Features and Enhancements  Fixed |
 | MetaDefender Storage Security Cloud   - Release date - - Version - | New Features and Enhancements  Fixed |
 
-**July 2026**
+### **July 2026**
 
 | Product Area | Release Type |
 | --- | --- |

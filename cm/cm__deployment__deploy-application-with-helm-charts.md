@@ -106,7 +106,7 @@ Download MOCM Kubernetes from My OPSWAT Portal and extract the MOCM on-premise p
 
 ```yaml
 # Extract the package
-tar -xzf MyOPSWATCentralManagement_10.5.2605.9060.tar.gz
+tar -xzf MyOPSWATCentralManagement_10.7.26062.9100.tar.gz
 # Expected directory structure:
 ├── terraform/
 │   ├── aws/       # AWS Infrastructure (OpenTofu + Ansible) — current release
@@ -170,14 +170,17 @@ cd ../scripts
 
 Contents of `scripts/`:
 
-└── gen-cert.sh
+```plaintext
+├── gen-cert.sh
+└── gen-kek.sh
+```
 
 **Prerequisites**: OpenSSL installed.
 
 Run the script:
 
 ```bash
-chmod +x gen-cert.sh
+chmod +x gen-cert.sh gen-kek.sh
 
 ./gen-cert.sh
 
@@ -200,6 +203,15 @@ Output files in `./certs/`:
 | public.key | RSA public key → `global.productKey.rsaPublicKey` |
 
 Keep these files safe — they are used to populate `global.productKey` in `values.yaml`
+
+```bash
+./gen-kek.sh
+```
+
+e script prints a base64 key plus the exact `values.yaml` lines to paste.
+
+> **Warning**: Set it **once**. It **cannot be changed** afterward — data encrypted
+> with the old key would become undecryptable.
 
 ## Quick Start
 
@@ -395,7 +407,17 @@ global:
       ....
 ```
 
-#### 4. S3 Storage
+#### 4.Master KEK
+
+Paste the contents of gen-kek.sh
+
+```yaml
+global:
+  masterKekV1: "<your-base64-32-byte-key>"
+  currentKekVersion: "V1"
+```
+
+#### 5. S3 Storage
 
 ```yaml
 global:
@@ -404,7 +426,7 @@ global:
     region: "us-west-2"
 ```
 
-#### 5. Component Replicas (Optional)
+#### 6. Component Replicas (Optional)
 
 Override the default `replicaCount`  for specific services:
 
@@ -613,3 +635,7 @@ After completing the deployment and DNS configuration, you can access the My OPS
 - Password: the value of `ADMIN_PASSWORD`
 
 You should now have access to the My OPSWAT Central Management console.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

@@ -7,7 +7,7 @@
 | **Release date** | 23 March 2026 |
 | **Scope** | Enhance current features and add new features. |
 
-## [New Features, Improvements, and Enhancements](/docs/md-ot-security/release-notes/release-notesxvplcg#new-features-improvements-and-enhancements)
+## New Features, Improvements, and Enhancements
 
 |  | Details |
 | --- | --- |

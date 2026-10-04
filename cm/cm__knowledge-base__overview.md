@@ -14,7 +14,7 @@ In this platform, customers can now manage multiple OPSWAT solutions including:
 
 My OPSWAT Central Management retains the foundational architecture, security controls, and operational policies established under MetaDefender IT Access, including the ISO 27001 certified Information Security Management System and SOC 2 Type II audited security controls.
 
-Refer to [Release Notes ](https://www.opswat.com/docs/cm/release-notes/latest-release-notes)for latest product version updates, new features, and enhancements.
+Refer to [Release Notes ](https://www.opswat.com/docs/cm/release-notes/release-notes-for-v10-7-26091)for latest product version updates, new features, and enhancements.
 
 ## **Why My OPSWAT Central Management**
 
@@ -24,3 +24,7 @@ With these enhanced capabilities, **My OPSWAT Central Management** now provides:
 2. **Zero Trust Enforcement** – Ensures that every device, file, and hardware component is continuously validated before gaining access.
 3. **Regulatory Compliance** – Meets industry standards like NIST, GDPR, CISA, HIPAA, and ISO 27001.
 4. **Scalability & Centralized Control** – Seamlessly manages security across large enterprise infrastructures and critical industries.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

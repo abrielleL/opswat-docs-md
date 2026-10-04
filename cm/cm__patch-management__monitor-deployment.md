@@ -14,7 +14,7 @@ In the left navigation, select **Patch Management > Jobs**.
 
 | Goal | Details |
 | ---- | ---- |
-| Open the right deployment tabs | Deployments are organized into three tabs:  1. Running: Deployments currently in progress 2. Schedule: Deployments scheduled  to run in the future 3. History: Completed deployments |
+| Open the right deployment tabs | Deployments are organized into three tabs:  1. **Running**: Deployments currently in progress 2. **Schedule**: Deployments scheduled  to run in the future 3. **History**: Completed deployments |
 | Identify deployment type and patch type | Look for the badges and label associated with each deployment to identify their deployment type and patch type |
 | Narrow the list to specific deployment or patch types | Open the Filter panel and filter by available criteria. Multiple filters can be combined |
 
@@ -44,10 +44,13 @@ The deployment details page includes the following sections:
 | By Device ![](https://uploads.developerhub.io/prod/97qW/smi1c4kxviadolouf9wx1ytg0xndlu93c17rjmfqwwpjdne73snefpb4myno30i1.png) | Track device-level status |
 | Log ![](https://uploads.developerhub.io/prod/97qW/8pvevbyc3lkj7v8xxeeqbir6r4j4qwtw3jjw69ooxxclny3g1fu3z8tnvatrsmob.png) | A complete, timestamped audit trail of deployment activity |
 | Ring Tabs (only available for ring deployments) ![](https://uploads.developerhub.io/prod/97qW/38kal9s6caslndmokbdn0es1wdp4ser0m4ks6aavvkxkv1tpup8hlj9li9qq3wl2.png) | See total progress and deployment health across every ring or results for an individual ring |
+| Scripts ![](https://uploads.developerhub.io/prod/97qW/vwltpqkm9888gr88rhcy8gckh0ihgzi53kgv4oixd3yw13j5c4ocjt5c5lgcla7j.png) | Track pre- and post-script execution status across target devices and download attached script files Refer to [Deployment Scripts](https://www.opswat.com/docs/cm/patch-management/deployment-scripts) for details |
 
 ## Review Deployment History
 
 Open the **History** tab to review completed deployments.
+
+![](https://uploads.developerhub.io/prod/97qW/u3iefuuh40xp03s67ju4cc1msvjvp4xhtlounc08dycdv1cyip3rzr5ur2c75twl.png)
 
 You can:
 
@@ -61,3 +64,7 @@ You can:
 - [Missing Patches: ](https://www.opswat.com/docs/cm/patch-management/manage-missing-patches)Find and act on missing patches and outdated application across your environment
 - [Patch Dashboard](https://www.opswat.com/docs/cm/patch-management/patch-dashboard): Get a single-pane view of your environment's patch posture
 - [Custom Patch Reports](https://www.opswat.com/docs/cm/patch-management/custom-patch-reports): Configure point-in-time patch reports
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

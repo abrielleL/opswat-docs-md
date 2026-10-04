@@ -6,7 +6,7 @@
 - [MetaDefender Optical Diode v1.0.1](/docs/netwalldiode/release-notes/netwall-diode-v1-0-1)
 - [MetaDefender Optical Diode v1.1.0](/docs/netwalldiode/release-notes/netwall-diode-v1-1-0)
 - [MetaDefender Optical Diode v1.2.0](/docs/netwalldiode/release-notes/netwall-diode-v1-2-0)
-- [MetaDefender Optical Diode v1.3.0](https://app.developerhub.io/netwall-diode/v1.6.0/release-notes/netwall-diode-v1-3-0)
+- [MetaDefender Optical Diode v1.3.0](/docs/netwalldiode/release-notes/netwall-diode-v1-3-0)
 - [MetaDefender Optical Diode v1.4.0](/docs/netwalldiode/release-notes/netwall-diode-v1-4-0)
 - [MetaDefender Optical Diode v1.5.0](/docs/netwalldiode/release-notes/netwall-diode-v1-5-0)
 - [MetaDefender Optical Diode v1.6.0](/docs/netwalldiode/release-notes/netwall-diode-v1-6-0oq3)
@@ -25,5 +25,7 @@
 - [MetaDefender Optical Diode v1.13.0](/docs/netwalldiode/release-notes/metadefender-optical-diode-v1-13-0)
 - [MetaDefender Optical Diode v1.13.1](/docs/netwalldiode/release-notes/metadefender-optical-diode-v1-13-1)
 - [MetaDefender Optical Diode v1.13.2](/docs/netwalldiode/release-notes/metadefender-optical-diode-v1-13-2)
+- [MetaDefender Optical Diode v1.14.0](/docs/netwalldiode/release-notes/metadefender-optical-diode-v1-14-0)
+- [MetaDefender Optical Diode v1.15.0](/docs/netwalldiode/release-notes/metadefender-optical-diode-v1-15-0)
 
 MetaDefender

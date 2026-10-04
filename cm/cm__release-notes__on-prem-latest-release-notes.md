@@ -2,7 +2,19 @@
 
 # On-Premise Release Notes
 
-### My OPSWAT Central Management v10.7.26080.2750
+## My OPSWAT Central Management v10.7.26080.2756
+
+| **Version** | v10.7.26080.2756 |
+| ---- | ---- |
+| **Release date** | September 25, 2026 |
+
+Bug Fixes** Resolved Recurring Automatic Service Restarts **
+
+Fixed an issue where My OPSWAT Central Management services restarted every five minutes due to failing background tasks retrying indefinitely on RabbitMQ 4.3.
+
+---
+
+## My OPSWAT Central Management v10.7.26080.2750
 
 | **Version** | v10.7.26080.2750 |
 | ---- | ---- |
@@ -16,7 +28,9 @@ Bug Fixes** Fixed Console Sign-In Loop After Upgrading to 10.7.26080.2744**
 
 Fixed an issue where users were redirected to the sign-in screen when logging into the console via custom domain names after upgrading to version 10.7.26080.2744.
 
-### My OPSWAT Central Management v10.7.26080.2744
+---
+
+## My OPSWAT Central Management v10.7.26080.2744
 
 | **Version** | v10.7.26080.2744 |
 | ---- | ---- |
@@ -40,14 +54,14 @@ The custom timeframe filtering on the Peripheral Media Protection Reports page n
 
 ---
 
-### My OPSWAT Central Management v10.7.26080
+## My OPSWAT Central Management v10.7.26080
 
 | **Version** | v10.7.26080 |
 | ---- | ---- |
 | **Release date** | August 18, 2026 |
 | **Release Summary** | This release introduces **new Peripheral Media Protection dashboard **with expanded USB-threat detection visibility**, **and **strengthens file security** with centralized Skip by Hash management for MetaDefender Core. It also **expands patch management **with configurable notifications and SLA compliance tracking, and delivers a broader set of platform improvements spanning authentication, on-premises installation, upgrade reliability, and admin notifications. |
 
-## Peripheral Media Protection Solution
+### Peripheral Media Protection Solution
 
 New Features** New Centralized Dashboards and Reports for USB-Threat Detection Events**
 
@@ -57,7 +71,7 @@ Refer to [Peripheral Media Protection](https://www.opswat.com/docs/cm/product-ma
 
 ![](https://uploads.developerhub.io/prod/97qW/jhx0n7ss6w6di5wjlgfo07kee0k0xorcgmrocfvd9qzlstlhbogwzctm6v8mxl76.png)
 
-## Endpoint Security Solution
+### Endpoint Security Solution
 
 New Features **New Patch Notifications for Key Patching Events**
 
@@ -65,7 +79,7 @@ New Patch notifications alert administrators in real time to key events, includi
 
 Refer to [Patch Notification](https://www.opswat.com/docs/cm/patch-management/patch-notification) guidelines for more detailed instruction.
 
-![](https://uploads.developerhub.io/prod/97qW/k9rv2kkjgt6bi7nqeuyjclugo708pnqpxo47fynkbmlokt8tanzv6u4k37o98kyw.png)
+![](https://uploads.developerhub.io/prod/97qW/t6vwj5t1gps2oylr4gucpsdxgxhgystvsjuhevw1nkpb9xcipv88otc1d91jbnbw.png)
 
 New Features **New** **Patch SLA Compliance Tracking**
 
@@ -83,7 +97,7 @@ Learn more in the [Bulletin and Data Source](https://www.opswat.com/docs/cm/patc
 
 ![](https://uploads.developerhub.io/prod/97qW/w4gbf1b0ngfnxjxbmre1q08qe15bkymd7458tykil3gnx1kcz2r7mivwveaa093w.png)
 
-## File Security Solution
+### File Security Solution
 
 New Features** Centralized Skip by Hash Management for MetaDefender Core**
 
@@ -109,7 +123,7 @@ Bug Fixes** Fixed Excessive MetaDefender Managed File Transfer Error Logs**
 
 Fixed an issue where MetaDefender Managed File Transfer generated continuous error-level log entries.
 
-## **Network Access Control Solution**
+### **Network Access Control Solution**
 
 New Features** Backup and Restore for On-Premises Appliance**
 
@@ -123,7 +137,7 @@ With this release, an export action is available in the console UI. Logs are pac
 
 ![](https://uploads.developerhub.io/prod/97qW/lwo6ngv6ealm8dyilsk6aton93tqz9ases35qoku28jp4sqgudtjw6o9vwhgaxkl.png)
 
-## **Additional Features**
+### **Additional Features**
 
 New Features** New Integration with OPSWAT Telemetry Framework**
 
@@ -182,3 +196,7 @@ New real-time alerts trigger when a software upgrade job fails, stalls, or run p
 Enhancements** Automatic Recovery of Stalled Upgrade Jobs**
 
 Upgrade jobs stuck in a perpetual "Updating" state are now automatically resolved every four hours, or on demand with a manual cleanup trigger.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

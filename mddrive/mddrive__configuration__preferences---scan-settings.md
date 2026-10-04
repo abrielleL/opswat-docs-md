@@ -27,7 +27,7 @@ The available settings in the **Scan Settings** window are:
 
 Baseline Hash Valid Period (in days)
 
-- This value only allow 3 days on the MetaDefender Drive 64 GB.
+- This value only allow 3 days on the MetaDefender Drive 64 GB and 365 days for MetaDefender Drive 2 (1TB)
 - Baseline hashes are not backed up when upgrading or re-flashing
 
 For more details about how to use **Differential Scan**, please refer to [Speeding Up Scans with Differential Scan](/docs/mddrive/knowledge-base/speeding-up-scans-with-differential-scan)

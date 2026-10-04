@@ -122,7 +122,6 @@ Plan for legacy OS support
 
 OPSWAT will discontinue support for the following OS in MetaDefender Core and its associated engines:
 
-- Debian 11 since **July** **2026**.
 - Ubuntu 22.04 since **Apr 2027**.
 Info
 

@@ -2,11 +2,11 @@
 
 # Configuration
 
-## [Logging configuration](/docs/mdicap/v5.14.1/configuration/configuration#logging-configuration)
+## Logging configuration
 
-To configure the log outputs and levels, consult the [3.1.2 MetaDefender ICAP Server configuration file](/docs/mdicap/v5.14.1/configuration/configuration-file) section.
+To configure the log outputs and levels, consult the [3.1.2 MetaDefender ICAP Server configuration file](/configuration/configuration-file) section.
 
-## [Linux log rotation](/docs/mdicap/v5.14.1/configuration/configuration#linux-log-rotation)
+## Linux log rotation
 
 The installer configures the logrotate service to rotate MetaDefender ICAP server log files.
 

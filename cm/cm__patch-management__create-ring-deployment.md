@@ -4,6 +4,11 @@
 
 Set up a reusable deployment configuration, then stage its rollout into rings in the steps that follow.
 
+> **Please Note**
+>
+> - Ring deployment only support **Window patches**. Non-Window devices will be automatically excluded.
+> - [Driver & Firmware Updates](https://www.opswat.com/docs/cm/patch-management/driver---firmware-settings-on-endpoint) is supported on **Dell **and **Lenovo Windows devices **only.
+
 ![](https://uploads.developerhub.io/prod/97qW/br6id2aew6kejdyqc8ya513j7hxt58bpfb9io6sc44v121tkq75zafqv6p3oefo1.png)
 
 ## Create Ring Deployment
@@ -13,8 +18,9 @@ Set up a reusable deployment configuration, then stage its rollout into rings in
 3. In the dialog, choose what to deploy:
    1. For Windows Patches
    2. For Application Patches
+   3. For Driver & Firmware Updates
 
-![](https://uploads.developerhub.io/prod/97qW/3odgg1t35l8vg3uwlextmq2ofqdto0nhan4t69j14p0eu0qwoj88jiypq1dsq8tr.png)
+![](https://uploads.developerhub.io/prod/97qW/tzw46j4wjytvxbuf2uyzxm4fgc5y5ognff27cymluml14dk9q2a76q05kj9ubdvn.png)
 
 ## Configure Ring Deployment
 
@@ -34,3 +40,7 @@ Set up a reusable deployment configuration, then stage its rollout into rings in
 - Configure point-in-time patch reports with [Custom Patch Reports](https://www.opswat.com/docs/cm/patch-management/custom-patch-reports)
 - Set real-time alerts for key patch events under [Patch Notification](https://www.opswat.com/docs/cm/patch-management/patch-notification)
 - Define SLA timeframes to maintain compliance visibility via [Patch SLA](https://www.opswat.com/docs/cm/patch-management/patch-sla)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

@@ -35,6 +35,14 @@ Microsoft Visual C++ Redistributable version 14.44 or later is required for vers
 
 ---
 
+OS support discontinuation
+
+OPSWAT will discontinue support for the following OS in MetaDefender Core and its associated engines:
+
+- Ubuntu 22.04 since **Apr 2027**.
+
+---
+
 ## [Known Limitations](/docs/mdcore/release-notes/release-notes#known-limitations)
 
 |  |  |

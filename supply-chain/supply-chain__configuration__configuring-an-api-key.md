@@ -49,3 +49,9 @@ await fetch("https://YOUR_ENDPOINT_URL", {
 > **Tip**
 >
 > Keep the API key secret. Do not include it in URLs or client-side code.
+
+> **Note:** API requests are limited to 12,000 per minute per user.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

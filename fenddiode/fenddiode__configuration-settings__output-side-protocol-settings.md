@@ -16,14 +16,15 @@ The options in this section will dynamically update based on the communications 
 - FTP Client - Sets the output side to act as an FTP client for outbound Ethernet data communication
 - FTPS Client - Sets the output side to act as an FTPS client for outbound Ethernet data communication
 - SFTP Client – Sets the output side to act as an SFTP client for outbound Ethernet data communication
-- MQTT Client - Sets the output side to act as an MQTT client (to Fend Cloud-AWS) for outbound Ethernet data communication
+- MQTT Publisher - Sets the output side to act as an MQTT client publisher for outbound Ethernet data communication
 - TCP Client (JSON Protocol Conversion) – Sets the output side to format incoming BACnet, LON, or Modbus as JSON for transmission via TCP client for outbound Ethernet data communication
 - TCP Client – Sets the output side to act as a TCP client for outbound Ethernet data communication
 - UDP Client – Sets the output side to act as a UDP client for outbound Ethernet data communication
+- Fend Cloud - Sets the output side to use Fend Cloud-AWS for outbound Ethernet data communication
 
 ### [Cellular Protocol Options](/docs/fenddiode/configuration-settings/output-side-protocol-settings#cellular-protocol-options)
 
-- MQTT Client - Sets the output side to use MQTT (to Fend Cloud-AWS) for outbound cellular data communication
+- Fend Cloud - Sets the output side to use Fend Cloud-AWS for outbound cellular data communication
 
 ## [FTP Client](/docs/fenddiode/configuration-settings/output-side-protocol-settings#ftp-client)
 
@@ -109,6 +110,15 @@ FTPS Certificate – Strongly Encouraged. If you wish for the FTPS client to ver
   - [x509 PEM “.crt” file]
 - Clear – Clears the current certificate.
 
+| FTPS Client TLS Public/Private Key Support | |
+| --- | --- |
+| Key Algorithm | Key Size |
+| RSA | Min: 1024, Max: 4096 |
+| ECDSA | 256, 384, 521 |
+| ECDH | 256, 384, 521 |
+| FTPS Client TLS Certificate Signature Support | |
+| Signature Hash | SHA256, SHA384 and SHA512 |
+
 ## [SFTP Client](/docs/fenddiode/configuration-settings/output-side-protocol-settings#sftp-client)
 
 ### [SFTP Tab](/docs/fenddiode/configuration-settings/output-side-protocol-settings#sftp-tab)
@@ -171,6 +181,19 @@ SFTP Public Host Key – **Strongly Encouraged**. This key is used to verify the
   - [SSH Public Key file]
 - Clear – Clears the current key.
 
+| SFTP Server Public/Private Host Key Support | |
+| --- | --- |
+| Key Algorithm | Key Size |
+| RSA | Min: 1024, Max: 4096 |
+| ECDSA | 256, 384 |
+| DSA | 1024 |
+| EdDSA 25519 | N/A |
+
+| SFTP Server Public Auth Key Support | |
+| --- | --- |
+| Key Algorithm | Key Size |
+| ECDSA | 256, 384 |
+
 ### [Supplied SSH Key Pair](/docs/fenddiode/configuration-settings/output-side-protocol-settings#supplied-ssh-key-pair)
 
 All Fend Diodes that shipped with firmware version 4.2.5+ come with pre-installed unique default keys for SFTP mode. For the output side SFTP Client, the keys provided are the Private and Public Auth Keys. The provided key type is ed25519. If your organization’s key management policies require different keys, you can clear the defaults and provide custom keys that meet your policies per the supported key types listed above.
@@ -185,7 +208,7 @@ All Fend Diodes that shipped with firmware version 4.2.5+ come with pre-installe
 
 There are no additional settings for Modbus RTU at this time. In Modbus RTU mode the outbound side of the diode will act as a Modbus device.
 
-## [MQTT Client](/docs/fenddiode/configuration-settings/output-side-protocol-settings#mqtt-client)
+## [Fend Cloud](/docs/fenddiode/configuration-settings/output-side-protocol-settings#fend-cloud)
 
 - Device ID – Displays the unique ID that identifies the diode in the cloud.
 - Topic – Cloud topic to publish. If using Fend Cloud, this should be set at the factory.
@@ -194,14 +217,14 @@ There are no additional settings for Modbus RTU at this time. In Modbus RTU mode
 - Endpoint – Endpoint URL to publish. If using Fend Cloud, this should be set at the factory.
 
   - [UTF8 string, max 64 characters]
-- Publish Cycle Time (s) – How often the diode should publish data to the MQTT endpoint. This setting should be adjusted based on the volume of data and the speed of the local connection. See [Appendix I: Recommended Transfer Timings by Protocol](https://www.opswat.com/docs/fenddiode/appendices/appendix-i-recommended-transfer-timings-by-protocol)
+- Publish Cycle Time (s) – How often the diode should publish data to the MQTT endpoint. This setting should be adjusted based on the volume of data and the speed of the local connection. See [Appendix I: Recommended Transfer Timings by Protocol](https://www.opswat.com/docs/fenddiode50/appendices/appendix-i-recommended-transfer-timings-by-protocol)
 
   - [0 – 255 seconds]
 - Port – Sets the port over which MQTT data is uploaded
 
   - [443 (HTTPS) or 8883 (MQTT)]
 
-### [MQTT Client Certificate Authority Tab](/docs/fenddiode/configuration-settings/output-side-protocol-settings#mqtt-client-certificate-authority-tab)
+### [Fend Cloud Client Certificate Authority Tab](/docs/fenddiode/configuration-settings/output-side-protocol-settings#fend-cloud-client-certificate-authority-tab)
 
 CA – Required. This certificate comes preloaded on all Fend diodes and should generally be left as is. In the event a change in certificates is needed, a Fend support notification will be sent out with specific instructions. NOTE: Max supported file size of 4096 bytes.
 
@@ -238,6 +261,15 @@ TLS Certificate – Strongly Encouraged. If you wish for the TCP client to verif
   - [x509 PEM “.crt” file]
 - Clear – Clears the current certificate.
 
+| TCP Client TLS Public/Private Key Support | |
+| --- | --- |
+| Key Algorithm | Key Size |
+| RSA | Min: 1024, Max: 4096 |
+| ECDSA | 256, 384, 521 |
+| ECDH | 256, 384, 521 |
+| TCP Client TLS Certificate Signature Support | |
+| Signature Hash | SHA256, SHA384 and SHA512 |
+
 ## [UDP Client](/docs/fenddiode/configuration-settings/output-side-protocol-settings#udp-client)
 
 - Target UDP Server IP Address – Sets the IP address of the target external UDP server.
@@ -246,3 +278,83 @@ TLS Certificate – Strongly Encouraged. If you wish for the TCP client to verif
 - Target UDP Server Port – Sets the port of the target external UDP server.
 
   - [1-65535]
+
+## [MQTT Publisher](/docs/fenddiode/configuration-settings/output-side-protocol-settings#mqtt-publisher)
+
+- Client ID - Client Identification to the broker. Needs to be unique to the broker.
+
+  - (0-64 char)
+- Broker IP or Hostname - Address of the target broker IP or locally resolvable hostname. Hostname requires the output side DNS Server to be set, or the output side to be in DHCP mode.
+
+  - (0-64 char)
+
+- Broker Port - Target brokers listening port.
+
+  - (0-65535)
+- Keep Alive (Sec) - Client's max idle time. If this time is exceeded without responding to a ping request, the broker disconnects the diode.
+- Authentication/Encryption - Authentication method used when connecting to the broker.
+
+  - (None, User/Password, Server Authentication, Mutual Authentication, TLS-PSK, User/Password + Server Auth, User/Password + Mutual Auth, User/Password + TLS-PSK)
+- User - When authenticating with Username and Password, this username will be used.
+- Password - When authenticating with Username and Password, this password will be used.
+- PSK - When authenticating with TLS PSK, this PSK will be used.
+
+- PSK ID - When authenticating with TLS PSK, this PSK will be used.
+- Connect Delay (Sec) - Delay between successive reconnection attempts.
+
+  - (0-60 seconds, default: 2)
+- MQTT Version - Restrict to a specific MQTT version when connecting.
+
+  - (3.1, 3.1.1)
+- Clean Session - Connect to the broker with a clean session or resume a previous one.
+
+- Topic - Topic to which the output side publishes all MQTT data.
+
+  - (1-256 chars)
+- QoS - Quality of service for the topic.
+
+  - (0: At most once, 1: At least once, 2: Exactly once)
+
+### [MQTT Publisher CA Tab](/docs/fenddiode/configuration-settings/output-side-protocol-settings#mqtt-publisher-ca-tab)
+
+MQTT Certificate – **Optional**. If you are using an authentication method that uses TLS, a Certificate Authority is required to verify the Brokers identity. NOTE: MQTT certs have a max supported file size of 4096 bytes.
+
+- Open – Loads a new certificate from file.
+
+  - [x509 PEM “.ca” file]
+- Clear – Clears the current certificate.
+
+### [MQTT Publisher Certificate Tab](/docs/fenddiode/configuration-settings/output-side-protocol-settings#mqtt-publisher-certificate-tab)
+
+MQTT Certificate – **Optional**. If you are using an authentication method that uses TLS, and wish for the Broker to verify your identity. NOTE: MQTT certs have a max supported file size of 4096 bytes.
+
+- Open – Loads a new certificate from file.
+
+  - [x509 PEM “.crt” file]
+- Clear – Clears the current certificate.
+
+### [MQTT Publisher Private Key Tab](/docs/fenddiode/configuration-settings/output-side-protocol-settings#mqtt-publisher-private-key-tab)
+
+MQTT Private Key – **Optional**. This is the private key paired with the certificate above. Max supported file size of 4096 bytes.
+
+- Open – Loads a new key from file.
+
+  - [x509 PEM “.key” file]
+- Clear – Clears the current key.
+
+| MQTT Publisher TLS Public/Private Key Support | |
+| --- | --- |
+| Key Algorithm | Key Size |
+| RSA | Min: 1024, Max: 4096 |
+| ECDSA | 256, 384, 521 |
+| ECDH | 256, 384, 521 |
+| MQTT Publisher TLS Certificate Signature Support | |
+| Signature Hash | SHA256, SHA384 and SHA512 |
+
+### [Supplied MQTT Certificate + Private Key Pair](/docs/fenddiode/configuration-settings/output-side-protocol-settings#supplied-mqtt-certificate--private-key-pair)
+
+All Fend 5/15-Series Diodes that shipped with firmware version 4.2.5+ come with pre-installed unique default keys. For the output side MQTT Publisher we provide a Certificate and Private Key. If your organization’s key management policies require different keys, you can clear the defaults and provide custom keys that meet your policies per the supported key types listed above. If you upgraded your diode firmware from an earlier version that did not support MQTT, you will not have pre-installed keys, and a Certificate and Private Key pair must be generated. See [this section](/docs/fenddiode/deployment-examples/tcp-client-server-examples#generating-a-tls-certificate-and-key-pair) for examples on generating certificates. The properties of the provided pair are the following:
+
+- Signature Algorithm: ecdsa-with-SHA256
+- Public Key Algorithm: id-ecPublicKey (384 bit)
+- Valid for 100 years

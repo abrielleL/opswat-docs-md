@@ -53,7 +53,7 @@ Backup and restore for MetaDefender Endpoint can now be managed centrally throug
 
 **Please note**: This feature is available for MetaDefender Endpoint Windows Persistent v7.6.2607 and later.
 
-Refer to [Backup & Restore](https://www.opswat.com/docs/cm/product-management/backup---restore) documentation for further instructions.
+Refer to [Backup & Restore](https://www.opswat.com/docs/cm/endpoint-security-solution/backup---restore) documentation for further instructions.
 
 ![](https://uploads.developerhub.io/prod/97qW/vx0ossqcpb0ido8mqyh0o27ga2feft956nlcqztwm14ibt1sqtq0p1xnunav1kmd.png)
 
@@ -208,3 +208,7 @@ Enhancements **Improved Installer Pre-Check Validation**
 My OPSWAT Central Management installer now runs hardware and environment pre-checks before setup begins, surfacing warnings with clear remediation guidance.
 
 ##
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

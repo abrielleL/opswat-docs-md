@@ -16,7 +16,7 @@ This means that free My OPSWAT Central Management and free MetaDefender Cloud us
 
 If your account does not support threat detection via multi-scanning with MetaDefender Cloud, and you attempt to enable threat detection with MetaDefender Cloud as a scan source in one of your My OPSWAT Central Management policies, that policy will be considered **Invalid**.
 
-The system will notify you as to the nature and cause of your invalid policy, as illustrated below, and you can opt to either disable the notification or adjust the relevant setting. To fix invalid policies, please [Read This](https://www.opswat.com/docs/cm/kb/how-can-i-fix-invalid-policies-on-my-account-).
+The system will notify you as to the nature and cause of your invalid policy, as illustrated below, and you can opt to either disable the notification or adjust the relevant setting. To fix invalid policies, please read [How can I fix invalid policies on my account?](https://www.opswat.com/docs/cm/knowledge-base/how-can-i-fix-invalid-policies-on-my-account-)
 
 ![](https://uploads.developerhub.io/prod/1yda/2oltpzk2sbckcbx76n7iu97de229zbiwwpgm2ynoxrtwvn0gb9ycaceyqcl07hz9.png)
 
@@ -36,3 +36,7 @@ The system will notify you as to the nature and cause of your invalid policy, as
 > **Support:**
 >
 > If you have further queries, concerns or issues regarding **Invalid Policies And How To Enable Threat Detection**, please open a [Support Case](https://my.opswat.com/portal/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

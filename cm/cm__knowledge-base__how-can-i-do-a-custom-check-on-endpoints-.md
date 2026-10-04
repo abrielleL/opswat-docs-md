@@ -130,7 +130,7 @@ My OPSWAT Central Management supports the running of custom scripts at the follo
 
 > **Please Note:**
 >
-> For Linux devices, multi-script is only supported via **Playbook**, not via standard **Custom Check** settings. For more information on running custom checks via playbook, please refer to [Playbooks](https://www.opswat.com/docs/cm/product-management/playbooks) guidelines.
+> For Linux devices, multi-script is only supported via **Playbook**, not via standard **Custom Check** settings. For more information on running custom checks via playbook, please refer to [Playbooks](https://www.opswat.com/docs/cm/endpoint-security-solution/playbooks) guidelines.
 
 4. Scripts must return an output with the following format:
 
@@ -179,8 +179,12 @@ My OPSWAT Central Management supports the running of custom scripts at the follo
 >   - **V15.6.2209.85 (Redhat-based Linux)** (only supported via playbook)
 >   - **V15.4.2209.89 (Debian-based Linux)** (only supported via playbook)
 >
-> For more information on playbook-facilitated custom and multi-script checks for Linux systems, please refer to [Playbooks](https://www.opswat.com/docs/cm/product-management/playbooks)[** guidelines.**](https://www.opswat.com/docs/cm/product-management/playbooks)
+> For more information on playbook-facilitated custom and multi-script checks for Linux systems, please refer to [Playbooks](https://www.opswat.com/docs/cm/endpoint-security-solution/playbooks)[** guidelines.**](https://www.opswat.com/docs/cm/endpoint-security-solution/playbooks)
 
 > **Support:**
 >
 > If you have followed the instructions above, but are having difficulty **Running A Custom Check or Multi-Script Check**, please open a [Support Case](https://my.opswat.com/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go2.opswat.com/s).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

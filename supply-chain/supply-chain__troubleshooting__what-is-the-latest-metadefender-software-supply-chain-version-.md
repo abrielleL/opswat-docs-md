@@ -6,6 +6,16 @@
 >
 > This article applies to all MetaDefender Software Supply Chain releases deployed on Linux systems.
 
+## Check the installed version
+
+Send an unauthenticated `GET` request to `/api/version` to check the version running on your MetaDefender Software Supply Chain instance. This public endpoint does not require an API key.
+
+```bash
+curl "https://YOUR_ENDPOINT_URL/api/version"
+```
+
+## Check the latest available version
+
 Browse MetaDefender Software Supply Chain [Release Notes](https://www.opswat.com/docs/supply-chain/release-notes) for details on the latest version, version history, version comparisons and release notes.
 
 Alternatively, go directly through the [My OPSWAT](https://my.opswat.com/portal) for a list of available downloads.:
@@ -30,3 +40,7 @@ Alternatively, go directly through the [My OPSWAT](https://my.opswat.com/portal)
 > **Support:**
 >
 > Feel free to contact OPSWAT support for further guidance through your Upgrade process. Please follow these instructions on [How To Create a Support Package](https://docs.opswat.com/mdcore/troubleshooting/how-to-create-support-package-), before logging a [Support Ticket](https://www.opswat.com/support) with the OPSWAT team.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

@@ -22,7 +22,7 @@ This section describes configuration of the Optical Diode BLUE OPC UA client to 
 
 ### [Initial Configuration](/docs/netwalldiode/configuration/opc-ua-connector#initial-configuration)
 
-Navigate to the **OPC UA menu item** under the **Connectors** menu, In the **Action** menu, select **Add Configuration**. Fill in the following fields:
+Navigate to the **OPC UA** under the **Connectors** menu, In the **Action** menu, select **Add Configuration**. Fill in the following fields:
 
 1. **Channel #:** Assign a channel number for the configured data flow. Note that the OPC UA channel number must be the same on BLUE and RED.
 2. **Name:** Assign a "Friendly Name" for the OPC UA configuration (not mandatory).
@@ -33,14 +33,14 @@ Navigate to the **OPC UA menu item** under the **Connectors** menu, In the **Act
 7. **Statistics Rate:** Type a value in the **Statistics Rate** box to generate OPC UA statistics. This value determines how often statistics are output to the Events log. If you type 0, statistics will not be generated.
 8. **Publish Rate:** Type a value in the **Publish Rate** box to determine the rate (in milliseconds) that the OPC UA client on Optical Diode BLUE can receive data from the customer-owned OPC UA server in the BLUE zone. Default value is 1000.
 9. **Authentication Mode**: Select Anonymous to allow all users. Select Username to allow a specific user. If you select Username, the Username and Password fields enable. Type the username and associated password you want to allow.
-10. **Root Node Filter:** To replicate data from only certain nodes on the OPC UA server in the BLUE zone, type one or more node names in the **Root Node** **Filter** box. Data will be retrieved from each typed node, and all of their child nodes, for replication to the RED zone. If the box is left blank (default), OPC UA data is retrieved from all nodes on the server.
-11. **Description:** Key in a detailed description of the configuration (not mandatory).
-12. **Max Browse Blocks per Second:** Type the rate at which the OPC UA schema is sent from Blue To Red. Recommended value is 15 blocks per second. If stack overflow syslog messages start appearing on either Red or Blue, reduce the block count to 10 blocks per second.
-13. **Max Tags per Subscription:** Max Tags involves the capability of the individual OPC UA Server that we are connecting to from BLUE. OPC UA Servers have a limit on the number of tags per subscription, as well as the number of subscriptions. The default value is 4000. If syslog reports an error of **max subscriptions reached**, increase the Max Tags to 6000 and try again. If syslog reports an error of **subscription too large,** reduce the Max Tags value.
-14. **Auto Rebrowse:** Enable/disable periodic rebrowse.
-15. **Rebrowse Delay:** Time between each automatic rebrowse. Valid range: 0 - 604800. Default: 60
-16. **Rebrowse Scope:** Defines which node (and sub-tree) to rebrowse, can be left empty to rebrowse all. Max length: 200 characters.
-17. **File Resend:** Check to enable/ disable file resend at set time interval (Used only for OPC UA Part 20 File Transfer).
+10. **Root Node Filter:** To replicate data from only certain nodes on the OPC UA server in the BLUE zone, type one or more node names in the Root Node Filter box. Root Node can be input manually, by exact list [node1;node2;node3], by wildcard [=Plant*] or by RegEx [@.*-.*]. Data will be retrieved from each specified root node, and all of their child nodes, for replication to the RED zone. If the box is left blank (default), OPC UA data is retrieved from all nodes on the server.
+11. **Max Browse Blocks per Second:** Type the rate at which the OPC UA schema is sent from Blue To Red. Recommended value is 15 blocks per second. If stack overflow syslog messages start appearing on either Red or Blue, reduce the block count to 10 blocks per second.
+
+1. **Max Tags per Subscription:** Max Tags involves the capability of the individual OPC UA Server that we are connecting to from BLUE. OPC UA Servers have a limit on the number of tags per subscription, as well as the number of subscriptions. The default value is 4000. If syslog reports an error of **max subscriptions reached**, increase the Max Tags to 6000 and try again. If syslog reports an error of **subscription too large,** reduce the Max Tags value.
+2. **Auto Rebrowse:** Enable/disable periodic rebrowse.
+3. **Rebrowse Delay:** Time between each automatic rebrowse. Valid range: 0 - 604800. Default: 60
+4. **Rebrowse Scope:** Defines which node (and sub-tree) to rebrowse, can be left empty to rebrowse all. Max length: 200 characters.
+5. **File Resend:** Check to enable/ disable file resend at set time interval (Used only for OPC UA Part 20 File Transfer).
 
 Note
 
@@ -69,6 +69,14 @@ Info
 A Trusted Certificate must be provided for each configured Channel.
 
 Click the **Enable** checkbox **Allow Untrusted Server Certificates** to allow untrusted certificates on the OPC UA server. The default is disabled.
+
+### [Configure OPC UA Certificate Lifetime](/docs/netwalldiode/configuration/opc-ua-connector#configure-opc-ua-certificate-lifetime-)
+
+The default OPC UA Certificate Expiration is set to 1 year. To change the default, navigate to **OPC UA** under the **Configuration** menu,
+
+1. Select the OPC UA **Channel Number** to be modified.
+2. Select **Regenerate Certificate.**
+3. Select **Certificate Lifetime** then **Submit.**
 
 ### [Configure Multiple OPC UA Servers BLUE](/docs/netwalldiode/configuration/opc-ua-connector#configure-multiple-opc-ua-servers-blue)
 
@@ -115,14 +123,18 @@ Important
 
 A Trusted Certificate must be assigned to each data Channel Number.
 
+### [Configure OPC UA Certificate Lifetime](/docs/netwalldiode/configuration/opc-ua-connector#configure-opc-ua-certificate-lifetime-)
+
+Once the OPC UA client certificate the Certificate Lifetime can be configured. The default OPC UA Certificate Expiration is set to 1 year. To change the default, navigate to **OPC UA** under the **Configuration** menu,
+
+1. Select the OPC UA **Channel Number** to be modified.
+2. Select **Regenerate Certificate.**
+3. Select **Certificate Lifetime** then **Submit.**
+
 ### [Configure Multiple OPC UA Servers RED](/docs/netwalldiode/configuration/opc-ua-connector#configure-multiple-opc-ua-servers-red)
 
 1. On Optical Diode RED, navigate to the **OPC UA menu item** under the **Connectors** menu.
 2. Select **Add Configuration** from the **Action** menu.
 3. Repeat the steps outlined in the Initial RED Configuration section above to add additional OPC UA servers.
-
-Note
-
-A maximum of 5 OPC UA servers can be configured on rack mount server form factors and a maximum of 3 OPC UA servers can be configured on Din Rail form factors.
 
 MetaDefender

@@ -4,7 +4,7 @@
 
 # Security Gateway
 
-#### 5.14.0 [Latest]
+#### v5.15.0 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/netwall/release-notes)
 

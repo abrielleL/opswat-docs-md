@@ -45,7 +45,7 @@ If you still cannot access the UI:
 
 C:\Program Files\OPSWAT\MetaDefender Core\
 
-2. Locate and run the tool:
+2. Locate and run the tool with **administrator/root** privileges:
 
 ometascan-reset-ssl-conf.exe
 

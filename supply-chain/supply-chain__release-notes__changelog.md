@@ -2,56 +2,32 @@
 
 # Changelog
 
-## Version 4.0.3
+## Version 4.0.4
 
-Release Date: August 03, 2026
-
-**Highlights**
-
-- **Complete Package Counts**
-  Package totals now include transitive dependencies, so the number in a report reflects everything that was scanned. Ingestion retains packages whether or not a version or ecosystem is specified, and reports load full package inventories well beyond 100 entries.
-- **Expanded SBOM Exports**
-  SBOM PDF exports now include transitive dependencies, giving you the complete dependency tree in a single document. Cyclone DX exports carry end-of-life and criticality properties for each component along with the root dependency relationship.
-- **Cross-Domain Scan Results Visibility**
-  When you choose to run a scan on the high side, the report includes a direct redirect link, so you can move from a cross-domain transfer straight to the corresponding report.
-- **Live Dashboard Totals**
-  Re-analyzed files count once toward your totals, so repeat scans of the same content keep the dashboard accurate. Dashboard, package, and CVE aggregates refresh as soon as reports are deleted.
-- **Notification and Interface Refinements**
-  Notifications now deliver clearer, less intrusive updates during scans and exports, shaped by user feedback. Repository inventory includes a risk score column.
-- **Offline Package Distribution**
-  The release pipeline now publishes the MDSSC offline package to My OPSWAT, simplifying installation in air-gapped and restricted-network environments.
-
-**Bug fixes**
-
-- SBOM exports in Cyclone DX and SPDX formats no longer drop packages whose version could not be resolved
-- PDF and CSV exports now report the correct package total for direct-file SBOM scans instead of double counting
-- The CVEs tab no longer presents pagination issues.
-- Opening a report or analysis detail view no longer raises a deceptive error notification
-- Creating a job with All References selected now sends the correct configuration
-
-## Version 4.0.1
-
-Release Date: August 03, 2026
+Release Date: August 28, 2026
 
 **Highlights**
 
-- **Consolidated CVE Visibility**
-  A new CVEs tab on the report page displays all identified vulnerabilities in a single, deduplicated view. This makes it easier to assess threats across your scans without duplicate entries cluttering your analysis.
-- **High-Side Scanning**
-  You can now opt to run scans on the high side, enabling secure cross-domain transfer workflows for high-security environments where data compartmentalization is critical.
-- **In-App Tutorial**
-  A new guided tutorial walks you through the latest features and improvements with each release. Stay informed about what's new without leaving the application, ensuring you can quickly discover and adopt the latest capabilities.
-- **Persistent Notifications**
-  A new notification center keeps you informed throughout your workflow. Export progress updates and scan outcomes now display as persistent notifications in your session, making it easy to track activity without disruption.
-- **Container Scanning Updates**
-  Container job configuration now supports the "latest" reference option, streamlining image scanning workflows.
+- **Nexus Container Support:** Nexus Container repositories are now available as a scan source alongside existing container registries. Connect to Nexus Container registries using the new integration, triggering scans directly against your Nexus container storage.
+- **Nexus Container Cross-Domain Transfers:** Transfer containers to and from Nexus Container repositories in cross-domain scenarios, completing the Nexus integration story alongside existing binary and raw-format support.
+- **ECR ↔ Harbor Cross-Domain Transfers:** Cross-domain transfers now work between Amazon ECR and Harbor registries, enabling secure container movement between cloud environments. Combine this with existing GitLab and Nexus binary/container transfer capabilities to build flexible supply chain workflows across your registry infrastructure.
+- **Complete Package Counts with Transitive Dependencies:** Package totals now include transitive dependencies, so the number in a report reflects everything that was scanned. Ingestion retains packages whether or not a version or ecosystem is specified, and reports load full package inventories well beyond 100 entries.
+- **JFrog Container Webhooks: **The JFrog container integration now supports event-based scanning via webhooks. New or updated container artifacts trigger scanning automatically, enabling continuous monitoring.
 
 **Improvements**
 
-- **Improved Job Management**
-  Manage your scan schedules more efficiently with bulk delete capabilities for upcoming jobs and new filtering options on the jobs table. The jobs view now displays Repository and Reference information for better organization tracking.
-- **Better Visibility & Reporting**
-  The dashboard now features clickable "Top Risky Packages" cards that instantly navigate to detailed package analysis filtered to critical vulnerabilities. Scan-in-progress reports default to the Files tab for faster insights, and package details are now available directly in scan results with a dedicated drawer.
+- **Expanded SBOM Exports:** SBOM PDF exports now include transitive dependencies, giving you the complete dependency tree in a single document. CycloneDX exports carry end-of-life and criticality properties for each component along with the root dependency relationship.
+- **Cross-Domain Scan Results Visibility :** High-side analyze logs now include direct redirect links to their corresponding reports, so you can move from a cross-domain transfer straight to the report without manual navigation.
+- **Notification and Interface Refinements: **Improved error handling for unconfigured cross-domain settings, better SBOM completion on TLS setups, and cleaner onboarding flows.
+
+**Bug Fixes**
+
+- SBOM exports in CycloneDX and SPDX formats no longer drop packages whose version could not be resolved
+- PDF and CSV exports now report the correct package total for direct-file SBOM scans instead of double counting
+- CVE search now matches the "Repositories With Issues" column
+- TLS certificate validation for SBOM completion now works correctly when `MD_CORE_CERTIFICATE_VALIDATION=IgnoreAllErrors` is set
+- Global cross-domain config endpoints now return clean 200 responses on unconfigured installs instead of 404s
+- Archive content views on direct SBOM scans now display properly
 
 ## Version 4.0.0
 
@@ -59,37 +35,17 @@ Release Date: July 20, 2026
 
 **Highlights**
 
-- **New User Interface**
-
-  The web interface has been rebuilt from the ground up for a faster, clearer, and more consistent experience. Navigation, dashboards, and result views have been reorganized to surface the information that matters most and to make large repositories easier to explore.
-- **Jobs Replacing Scans**
-
-  The "Scan" concept has been replaced by Jobs, a more flexible unit of work that groups the processing of a repository or source into a single, trackable activity. Jobs provide clearer status, history, and results, and lay the foundation for the platform's expanded workflows.
-- **Risk Score for Repositories**
-
-  Repositories now display an aggregated risk score, giving teams an at-a-glance measure of overall security posture. The score consolidates findings across a repository so you can prioritize the sources that need attention first.
-- **Security Suggestions**
-
-  The platform now provides Security Suggestions - actionable recommendations that help you remediate detected issues. Suggestions turn raw findings into clear next steps, reducing the time from detection to resolution.
-- **CSV Exports for Packages**
-
-  Package inventories can now be exported to CSV, making it simple to analyze, filter, and share package data outside the platform or feed it into other tools and reporting pipelines.
-
-- **JFrog Container Webhooks (Event-Based)**
-
-  The JFrog container integration now supports event-based scanning via webhooks. New or updated container artifacts trigger scanning automatically, enabling continuous monitoring.
-- **Telemetry**
-
-  Optional product telemetry has been added, allowing the platform to report operational and usage data to a configured collector. Telemetry helps OPSWAT improve the product and gives administrators better visibility into deployment health.
+- **New User Interface:** The web interface has been rebuilt from the ground up for a faster, clearer, and more consistent experience. Navigation, dashboards, and result views have been reorganized to surface the information that matters most and to make large repositories easier to explore.
+- **Jobs Replacing Scans:** The "Scan" concept has been replaced by Jobs, a more flexible unit of work that groups the processing of a repository or source into a single, trackable activity. Jobs provide clearer status, history, and results, and lay the foundation for the platform's expanded workflows.
+- **Risk Score For Repositories:** Repositories now display an aggregated risk score, giving teams an at-a-glance measure of overall security posture. The score consolidates findings across a repository so you can prioritize the sources that need attention first.
+- **Security Suggestions:** The platform now provides Security Suggestions - actionable recommendations that help you remediate detected issues. Suggestions turn raw findings into clear next steps, reducing the time from detection to resolution.
+- **JFrog Container Webhooks: **The JFrog container integration now supports event-based scanning via webhooks. New or updated container artifacts trigger scanning automatically, enabling continuous monitoring.
 
 **Improvements**
 
-- **Container Layer Scanning and Skip by Hash**
-
-  Container images are now scanned layer by layer, with previously scanned layers skipped by hash. This improves the granularity of container findings while avoiding redundant work, delivering faster scans across images that share common layers.
-- **New SBOM PDF Export with More Fields**
-
-  SBOM PDF export has been expanded to include additional fields, producing a richer, more complete software bill of materials. The enhanced report makes it easier to share comprehensive component and dependency information with stakeholders and auditors.
+- **New SBOM PDF Export with More Fields:** SBOM PDF export has been expanded to include additional fields, producing a richer, more complete software bill of materials. The enhanced report makes it easier to share comprehensive component and dependency information with stakeholders and auditors.
+- **CSV Exports for Packages :** Package inventories can now be exported to CSV, making it simple to analyze, filter, and share package data outside the platform or feed it into other tools and reporting pipelines.
+- **Container Layer Scanning and Skip by Hash: **Container images are now scanned layer by layer, with previously scanned layers skipped by hash. This improves the granularity of container findings while avoiding redundant work, delivering faster scans across images that share common layers.
 
 ## Version 3.3.1
 
@@ -451,3 +407,7 @@ Release date: April 2, 2024
 - The update password button occasionally remaining greyed out inadvertently has been addressed, ensuring consistent functionality for users.
 - Users were inadvertently able to select an empty scan pool for their workflow, but this issue has now been corrected to prevent such occurrences.
 - Enhanced error handling has been implemented to address cases where users encounter missing permissions while adding an Amazon ECR connection, ensuring smoother integration processes.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

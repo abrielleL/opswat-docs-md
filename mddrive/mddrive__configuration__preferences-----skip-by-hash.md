@@ -27,6 +27,8 @@
 
 Removing an entry from the list only affects scans run after the removal. A report already generated before the entry was removed keeps its original "Skipped by hash - <reason>" entry unchanged.
 
-Info
+## [Import List of Hash](/docs/mddrive/configuration/preferences-----skip-by-hash#import-list-of-hash)
 
-In 4.4.9, entries are added and removed one at a time from this list. Bulk import and adding a hash directly from a scan report are planned on a later version.
+From version 4.4.10, administrator can import hash by a list. Refer to the document [Skip by Hash](/docs/mddrive/getting-started/skip-by-hash-using-dtk) to set it up.
+
+The skipping hash can also be added remotely and centralized from Central Management. In Central Management, navigate to **Inventory → Devices → Settings → Skip by Hash** to add hash.

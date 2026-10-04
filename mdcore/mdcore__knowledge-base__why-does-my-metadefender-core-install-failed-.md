@@ -73,6 +73,10 @@ There are also various engine-specific third-party dependencies that should be m
 
 To learn more about engine-specific dependencies, please [Read This](/docs/mdcore/installation/recommended-system-configuration).
 
+Here is an example of a Windows installation of MetaDefender Core that failed due to missing third-party dependencies. The following error message shows what the user may see when the required dependencies are not installed:
+
+["What Does This Windows Installer Package Popup Window Means when MetaDefender Core does not successfully installed?"](https://www.opswat.com/docs/mdcore/knowledge-base/how-to-resolve--there-is-a-problem-with-this-windows-installer-p)
+
 ## [Downloading and running the official *.msi* or *.deb* installer package](/docs/mdcore/knowledge-base/why-does-my-metadefender-core-install-failed-#downloading-and-running-the-official-msi-or-deb-installer-package)
 
 To install MetaDefender Core on any compatible system, you must download the relevant verified installer package directly from the [My OPSWAT> Products > MetaDefender Core](https://my.opswat.com/home/metadefender-core) page.

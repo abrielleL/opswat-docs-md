@@ -19,6 +19,9 @@ Remote Application Update supports the following products:
 - **MetaDefender Kiosk** **Hardened Image**:  Version 4.8.3.xxxx or later.
 - **MetaDefender Core**: Version 5.20.x or later. Only supports standalone mode.
 - **MetaDefender Industrial Firewall**: Version 3.4.1.xxxx or later. The Automatic Application Upgrade setting must be enabled within the individual MetaDefender Industrial Firewall instance.
+  - OPSWAT Industrial OS (x86_64): version 3.4.1.xxxx or later
+  - OPSWAT Industrial OS (ARM64): version 3.5.0.xxxx or later
+  - MetaDefender Industrial Firewall Toolkit: extended options supported
 
 ## Importing Target Versions
 
@@ -251,3 +254,7 @@ Below the summary panel, you can filter instances by their update status.
   - **Update Success**: Installation completed successfully.
   - **Download Failed**: Target version could not be downloaded.
   - **Update Failed**: Target version could not be installed.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

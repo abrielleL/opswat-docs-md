@@ -26,23 +26,57 @@
 - Browse – Opens a dialog box to select a firmware file.
 - Update – Starts the firmware update process once a file has been selected.
 
-## [Diagnostics](/docs/fenddiode/configuration-settings/system-settings#diagnostics)
+## [Remote Syslog](/docs/fenddiode/configuration-settings/system-settings#remote-syslog)
 
-- Mode – Sets diagnostic mode on or off. “Off” means no diagnostic information will be sent.
-- Level of Info –Sets the verbosity (level of detail) of the diagnostic information as follows:
+- Mode – Sets remote syslog reporting on or off. “Off” means no syslog will be sent.
+- Level of Info – Sets the verbosity (level of detail) of the reported syslog. Selecting a higher number will include all messages for that number and all lower numbered message tiers (For example, selecting "2:Critical' will send alerts for levels 2, 1, and 0):
 
-  - Info (1,2,3) – Displays info, warning, and error messages
-  - Warning (2,3) –Displays warning and error messages
-  - Error (3 Only) – The least verbose setting, displays only error messages
-- Retry Timer – Sets how often the diode will attempt to connect with an external diagnostic server to send diagnostic messages.
+  - 0:Emergency
+  - 1:Alert
+  - 2:Critical
+  - 3:Error
+  - 4:Warning
+  - 5:Notice
+  - 6:Informational
+  - 7:Debug
+- Facility - Sets the reported facility for remote syslog. All syslog messages reported from the diode will report the same facility. Available facilities:
 
-  - [0-255, in seconds; 0 means “no retry”, as in the diode will only try to connect one time and if no connection is made or connection is lost, it will not retry]
-- Target Server IP Address – Sets the IP address for the target diagnostic server that will receive diagnostic messages from the outbound side of the diode
+  - 0:kern
+  - 1:user
+  - 2:mail
+  - 3:daemon
+  - 4:auth
+  - 5:syslog
+  - 6:lpr
+  - 7:news
+  - 8:uucp
+  - 9:cron
+  - 10:authpriv
+  - 11:ftp
+  - 12:ntp
+  - 13:security
+  - 14:console
+  - 15:solaris-cron
+  - 16:local0
+  - 17:local1
+  - 18:local2
+  - 19:local3
+  - 20:local4
+  - 21:local5
+  - 22:local6
+  - 23:local7
+- Retry Timer – Sets how often the diode will attempt to connect the remote syslog server. Only applicable with a "Syslog Transport" of 'TCP'.
+
+  - [0-255, in seconds; 0 means the diode will immediately reattempt to connect to the remote syslog server.]
+- Target Server IP Address – Sets the IP address for the remote syslog server to which the output side of the diode will send syslog messages.
 
   - [IP address in format: ###.###.###.###]
-- Target Server Port Number (1-65535) – Sets the port number for the target diagnostic server that will receive diagnostic messages from the outbound side of the diode
+- Target Server Port Number (1-65535) – Sets the port number for the remote syslog server to which the output side of the diode will send syslog messages.
 
   - [0-65535]
+- Transport - Sets the operating mode for delivering syslog to the remote server. Both TCP and UDP are supported.
+
+  - [UDP, TCP]
 
 ## [Configuration Session Settings](/docs/fenddiode/configuration-settings/system-settings#configuration-session-settings)
 

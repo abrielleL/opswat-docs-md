@@ -22,4 +22,8 @@ You can move between two versions using the following methods:
 
 ![](https://uploads.developerhub.io/prod/97qW/89gngg98tc5i62mz7gi9j2u0nki39t0zvrzxhzdj4v5dfb7wi5z2dzgjcxqldd5m.png)
 
-Note  After switching to the new Patch Management solution, MetaDefender Endpoints stop executing existing Classic Patch Settings configurations until you switch back. If you switch back to Classic Patch Settings, all MetaDefender Endpoints stop executing Patch Deployment policies until the new Patch Management solution is enabled again.
+Note  After switching to the new Patch Management solution, MetaDefender Endpoint stop executing existing Classic Patch Settings configurations until you switch back. If you switch back to Classic Patch Settings, all MetaDefender Endpoint stop executing Patch Deployment policies until the new Patch Management solution is enabled again.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

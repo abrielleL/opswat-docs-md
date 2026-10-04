@@ -60,14 +60,26 @@ sudo dpkg -i <name of the file>.deb || sudo apt-get install -f
 #### RedHat/CentOS
 
 ```bash
-sudo yum install -y --disablerepo="*" ./<name of the file>.rpm
+sudo yum install -y <name of the file>.rpm
 ```
 
-`--disablerepo="*"` is required on an offline machine. Otherwise, yum tries to refresh repository metadata and fails before installing the local file.
+## Loading Docker Images
 
-## Pulling the  Docker Images
+In offline environments, all required Docker images must be downloaded on an internet-connected machine and transferred to the target system. For RHEL installations, the offline toolkit is the recommended method. Use the manual pull and export method below for other operating systems.
 
-In offline environments, all required Docker images must be pulled on an internet-connected machine and transferred to the target system.
+#### Recommended: Load images using the offline toolkit (RHEL only)
+
+For RHEL installations, download the 4.1.0 offline or portable toolkit and its corresponding checksum from My OPSWAT -> [Product Downloads](https://my.opswat.com/home/metadefender-software-supply-chain). Download the files on an internet-connected machine and transfer them to the offline machine.
+
+Extract the offline toolkit and load the images:
+
+```bash
+tar -xzf mdssc-offline-4.1.0.tar.gz
+cd mdssc-offline-4.1.0
+sudo ./mdssc.sh -u load_images
+```
+
+#### Manual method: Pull and export images
 
 #### Required Images
 
@@ -81,23 +93,24 @@ All images are versioned per release.
 
 Use the following placeholders:
 
-- `<MDSSC_VERSION>` — e.g. `4.0.0`
+- `<MDSSC_VERSION>` — e.g. `4.1.0`
 - `<PLATFORM_VERSION>` — e.g. `platform-2.x`
 
 #### Step 1: Pull Images (Online Machine)
 
 ```bash
-docker pull docker.io/opswat/mdssc_api:4.0.0
-docker pull docker.io/opswat/mdssc_frontend:4.0.0
-docker pull docker.io/opswat/mdssc_binaries:4.0.0
-docker pull docker.io/opswat/mdssc_sourcecode:4.0.0
-docker pull docker.io/opswat/mdssc_containers:4.0.0
-docker pull docker.io/opswat/mdssc_notifications:4.0.0
-docker pull docker.io/opswat/mdssc_pgmigrations:4.0.0
+docker pull docker.io/opswat/mdssc_api:4.1.0
+docker pull docker.io/opswat/mdssc_frontend:4.1.0
+docker pull docker.io/opswat/mdssc_binaries:4.1.0
+docker pull docker.io/opswat/mdssc_sourcecode:4.1.0
+docker pull docker.io/opswat/mdssc_containers:4.1.0
+docker pull docker.io/opswat/mdssc_notifications:4.1.0
+docker pull docker.io/opswat/mdssc_processing:4.1.0
+docker pull docker.io/opswat/mdssc_pgmigrations:4.1.0
 
 docker pull docker.io/library/postgres:17
-docker pull docker.io/library/rabbitmq:4.2.4-alpine
-docker pull docker.io/library/redis:8.6.0-alpine
+docker pull docker.io/library/rabbitmq:4.2.2-alpine
+docker pull docker.io/library/redis:8.4.0-alpine
 
 docker pull docker.io/opswat/mdcloudservices_commonservices:platform-2.5.1
 docker pull docker.io/opswat/mdcloudservices_mdplatform:platform-2.5.1
@@ -119,18 +132,17 @@ docker save \
   opswat/mdssc_sourcecode:<MDSSC_VERSION> \
   opswat/mdssc_containers:<MDSSC_VERSION> \
   opswat/mdssc_notifications:<MDSSC_VERSION> \
+  opswat/mdssc_processing:<MDSSC_VERSION> \
+  opswat/mdssc_mongomigrations:<MDSSC_VERSION> \
   opswat/mdssc_pgmigrations:<MDSSC_VERSION> \
   opswat/mdcloudservices_commonservices:<PLATFORM_VERSION> \
-  opswat/mdcloudservices_mdplatform:<PLATFORM_VERSION> \
-  opswat/mdcloudservices_identityservice:<PLATFORM_VERSION> \
   opswat/mdcloudservices_licensing:<PLATFORM_VERSION> \
+  mongo:<MONGO_VERSION> \
   postgres:<POSTGRES_VERSION> \
-  rabbitmq:<RABBITMQ_VERSION> \
   redis:<REDIS_VERSION> \
+  rabbitmq:<RABBITMQ_VERSION> \
   -o mdssc.tar
 ```
-
-The version placeholders for 4.0.4 are: `<MDSSC_VERSION>` = `4.0.4`, `<PLATFORM_VERSION>` = `platform-2.5.1`, `<POSTGRES_VERSION>` = `17`, `<RABBITMQ_VERSION>` = `4.2.4-alpine`, and `<REDIS_VERSION>` = `8.6.0-alpine`.
 
 #### Step 3: Load Images (Offline Machine)
 
@@ -140,29 +152,11 @@ docker load -i mdssc.tar
 docker image ls
 ```
 
-#### Alternative: Offline Toolkit
-
-Download the offline toolkit and the RPM or DEB package for the same version on an internet-connected machine, then transfer both files to the offline machine. The RPM is available on the My.OPSWAT portal or at `https://metascanbucket.s3.amazonaws.com/Metadefender/MetaDefender_Software_Supply_Chain/<VERSION>/mdssc-<VERSION>.noarch.rpm`.
-
-```bash
-curl -O https://metascanbucket.s3.amazonaws.com/Metadefender/MetaDefender_Software_Supply_Chain_Offline/<VERSION>/mdssc-offline-<VERSION>.tar.gz
-curl -O https://metascanbucket.s3.amazonaws.com/Metadefender/MetaDefender_Software_Supply_Chain_Offline/<VERSION>/mdssc-offline-<VERSION>.tar.gz.sha256
-sha256sum -c mdssc-offline-<VERSION>.tar.gz.sha256
-
-tar -xzf mdssc-offline-<VERSION>.tar.gz
-cd mdssc-offline-<VERSION>
-sudo ./mdssc.sh -u load_images
-```
-
 ## [Podman Configuration](https://www.opswat.com/docs/mdss/installation/linux-installation#podman-configuration)
 
 MDSSC can also run using the Podman container engine instead of the default Docker one on RHEL operating systems. `Podman`, `podman-docker` and `docker-compose` need to be installed and running before installing MDSSC.
 
 After the installation is complete, MDSSC needs to be configured to skip the checks for the default Docker engine. This is done by setting `SKIP_DOCKER_CHECKS=yes` in the `/etc/mdssc/customer.env` file. The following commands can be used to install Podman and MDSSC on RHEL.
-
-> **Note**
->
-> The SELinux step below applies to Podman deployments only. With Docker, SELinux can remain in Enforcing mode.
 
 ```bash
 # install podman, podman-docker and docker-compose
@@ -173,6 +167,11 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 sudo systemctl enable podman.socket
 sudo systemctl start podman.socket
+
+# disable SELinux temporarily
+setenforce 0
+# to disable selinux permanetly 'SELINUX=disabled' needs to be set in the following config file
+sudo vim /etc/selinux/config
 
 # install additional MDSSC dependencies
 sudo subscription-manager repos --enable codeready-builder-for-rhel-8-$(arch)-rpms
@@ -198,19 +197,13 @@ Finally, MDSSC can be started using the regular startup command:
 sudo mdssc -c start
 ```
 
-## Verify the installation
-
-```bash
-sudo mdssc -c status
-sudo mdssc -v
-sudo docker ps
-```
-
-Expect about 14 running containers and the version you installed. The web interface answers on `https://<server IP>` when HTTPS is enabled.
-
 ## Next Steps
 
 Once the MetaDefender Software Supply Chain services are running, a few additional steps are required before the system is fully operational:
 
 1. **Activate your license** You must upload and apply a valid license to enable functionality. For details, see offline license activation section from [License Page](https://www.opswat.com/docs/supply-chain/configuration/license).
 2. **Configure a Scan Pool** At least one scan instance is required to analyze source code, containers or artifacts. For details, see [Scan Pools](https://www.opswat.com/docs/supply-chain/configuration/scan-pools).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

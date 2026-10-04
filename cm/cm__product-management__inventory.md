@@ -70,3 +70,7 @@ My OPSWAT Central Management provides administrators with actions that can be pe
 - **Undo Ignore** - This action allows an administrator to reverse the 'Ignore' status and the status will return to Unknown.
 - **Re-Identify** - This ad-hoc action pushes the device to re-attempt to prompt users for their [custom information](https://docs.opswat.com/macloud-sdp/kb/how-can-i-capture-custom-information-from-end-users-).
 - **Submit Ticket** - This action allows an administrator to report a device and any potential issue to the Customer Experience team.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

@@ -1,6 +1,6 @@
 <!-- source: https://www.opswat.com/docs/supply-chain/configuration/changing-email -->
 
-# Changing email
+# Changing Email
 
 Every user can change their own email address from their profile.
 
@@ -16,3 +16,7 @@ Changing personal information requires a re-login: after saving, you are signed 
 Administrators can review the details of any account - full name, username, email, and permissions - by clicking the edit action of a user on the **Users** page:
 
 ![](https://uploads.developerhub.io/prod/jdK6/kibbfqip151pn5c7pylu4k5t72rrktsk2vf5361k6gklv1qjk6e9b51blpl199nc.png)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

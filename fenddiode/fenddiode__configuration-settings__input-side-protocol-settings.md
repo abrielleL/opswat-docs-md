@@ -75,6 +75,15 @@ FTPS Private Key – **Required**. This is the private key paired with the certi
   - [x509 PEM “.key” file]
 - Clear – Clears the current key.
 
+| FTPS Server TLS Public/Private Key Support | |
+| --- | --- |
+| Key Algorithm | Key Size |
+| RSA | Min: 1024, Max: 4096 |
+| ECDSA | 256, 384, 521 |
+| ECDH | 256, 384, 521 |
+| FTPS Server TLS Certificate Signature Support | |
+| Signature Hash | SHA256, SHA384 and SHA512 |
+
 ### [Supplied FTPS Certificate + Private Key Pair](/docs/fenddiode/configuration-settings/input-side-protocol-settings#supplied-ftps-certificate--private-key-pair)
 
 All Fend Diodes that shipped with firmware version 4.2.5+ come with pre-installed unique default keys for FTPS mode. For the input side FTPS Server we provide a Certificate and Private Key. If your organization’s certificate management policies conflict with the use of the certificate provided, please clear and provide a certificate and private key that meets your policies. The properties of the provided pair are the following:
@@ -123,6 +132,19 @@ SFTP Public Auth Key – Optional if using username/password for authentication.
   - [SSH Public Key file]
 - Clear – Clears the current key.
 
+| SFTP Server Public/Private Host Key Support | |
+| --- | --- |
+| Key Algorithm | Key Size |
+| RSA | Min: 1024, Max: 4096 |
+| ECDSA | 256, 384 |
+| DSA | 1024 |
+| EdDSA 25519 | N/A |
+
+| SFTP Server Public Auth Key Support | |
+| --- | --- |
+| Key Algorithm | Key Size |
+| ECDSA | 256, 384 |
+
 ### [Supplied SSH Key Pair](/docs/fenddiode/configuration-settings/input-side-protocol-settings#supplied-ssh-key-pair)
 
 All Fend Diodes that shipped with firmware version 4.2.5+ come with pre-installed unique default keys for SFTP mode. For the input side SFTP Server, the keys provided are the Private and Public Host Keys. The provided key type is ed25519. If your organization’s key management policies require different keys, you can clear the defaults and provide custom keys that meet your policies per the supported key types listed above.
@@ -157,6 +179,15 @@ TLS Private Key – Required for TLS. This is the private key paired with the ce
   - [x509 PEM “.key” file]
 - Clear – Clears the current key.
 
+| TCP Server TLS Public/Private Key Support | |
+| --- | --- |
+| Key Algorithm | Key Size |
+| RSA | Min: 1024, Max: 4096 |
+| ECDSA | 256, 384, 521 |
+| ECDH | 256, 384, 521 |
+| TCP Server TLS Certificate Signature Support | |
+| Signature Hash | SHA256, SHA384 and SHA512 |
+
 ### [Supplied TLS Certificate + Private Key Pair](/docs/fenddiode/configuration-settings/input-side-protocol-settings#supplied-tls-certificate--private-key-pair)
 
 All Fend Diodes that shipped with firmware version 4.2.5+ come with pre-installed unique default keys for TCP + TLS mode. For the input side TCP+TLS Server we provide a Certificate and Private Key. If your organization’s key management policies require different keys, you can clear the defaults and provide custom keys that meet your policies per the supported key types listed above. The properties of the provided pair are the following:
@@ -170,6 +201,12 @@ All Fend Diodes that shipped with firmware version 4.2.5+ come with pre-installe
 - Diode UDP Server Port – The port the diode will open and listen on to receive datagrams from a UDP Client on the protected network
 
   - [1-65535]
+- Enable Multicast - Enables or disables multicast for the UDP server. Disables `Reply with and ACK`
+
+  - [Checked: Enable multicast and join the group listed below, Unchecked: Use Unicast for UDP Server]
+- Multicast Group - The multicast group you wish to receive multicast data on.
+
+  - [IP address in format: ###.###.###.###]
 - Reply with an ACK – Configures whether the UDP server will respond with an acknowledgement to each datagram. If checked, after the diode has received and processed a packet, it will return an ACK in the form of the ASCII string “OK\r\n”.
 
   - [Checked: Send ACK, Unchecked: Do not send ACK]
@@ -243,6 +280,21 @@ All Fend Diodes that shipped with firmware version 4.2.5+ come with pre-installe
 
   - [1 - 65535]
 - Register Group Data Type –The green highlighted box in the image above. Select the data type of the source data in the selected range. The selection here will restrict the “Consecutive Register Read Count” selection to ensure the correct number of registers is selected. Function codes 1 and 2 support binary values (1 or 0) only. If using function codes 1 or 2 leave the data type on the default selection, “U16”. For function codes 3 and 4, the following data types are supported along with their intervals:
+
+| **Data Type** | **Description** | **Register Read Count Interval** |
+| --- | --- | --- |
+| U8 | 8-bit Unsigned Integer | 1 |
+| S8 | 8-bit Signed Integer | 1 |
+| U16 | 16-bit Unsigned Integer | 1 |
+| S16 | 16-bit Signed Integer | 1 |
+| U32 | 32-bit Unsigned Integer | 2 |
+| S32 | 32-bit Signed Integer | 2 |
+| U64 | 64-bit Unsigned Integer | 4 |
+| S64 | 64-bit Signed Integer | 4 |
+| Float32 | 32-bit Floating Point | 2 |
+| Float64 | 64-bit Floating Point | 4 |
+| String32 | 32-bit String (Max 4 Chars) | 2 |
+| String64 | 32-bit String (Max 8 Chars) | 4 |
 
 **Important Note:** In some Modbus addressing approaches the function codes are not explicitly listed. Instead, the different function codes are inferred by using different 1-based non-overlapping register ranges as follows:
 
@@ -361,6 +413,21 @@ There are no additional settings for LON Listen at this time.
   - [1 - 65535]
 - Register Group Data Type – The green highlighted box in the image above. Select the data type of the source data in the selected range. The selection here will restrict the “Consecutive Register Read Count” selection to ensure the correct number of registers is selected. Function codes 1 and 2 support binary values (1 or 0) only. If using function codes 1 or 2 leave the data type on the default selection, “U16”. For function codes 3 and 4, the following data types are supported along with their intervals:
 
+| **Data Type** | **Description** | **Register Read Count Interval** |
+| --- | --- | --- |
+| U8 | 8-bit Unsigned Integer | 1 |
+| S8 | 8-bit Signed Integer | 1 |
+| U16 | 16-bit Unsigned Integer | 1 |
+| S16 | 16-bit Signed Integer | 1 |
+| U32 | 32-bit Unsigned Integer | 2 |
+| S32 | 32-bit Signed Integer | 2 |
+| U64 | 64-bit Unsigned Integer | 4 |
+| S64 | 64-bit Signed Integer | 4 |
+| Float32 | 32-bit Floating Point | 2 |
+| Float64 | 64-bit Floating Point | 4 |
+| String32 | 32-bit String (Max 4 Chars) | 2 |
+| String64 | 32-bit String (Max 8 Chars) | 4 |
+
 ## [Modbus RTU Listen](/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-rtu-listen)
 
 For listen mode, no additional settings are required. When the diode is connected to a port mirror or SPAN port that is forwarding an active Modbus networks traffic, the diode will begin forwarding all traffic to the output side. This means Modbus data will be available in Fend Cloud or on the output side’s Modbus Slave just like that! However, if you wish to get extra functionality out of the diode you can provide some optional settings.
@@ -379,7 +446,7 @@ By entering the configuration of the source Modbus network into the diode as des
 - Word Order
 - Converted Value
 
-Please see [Appendix VII: Fend Cloud / TCP JSON Examples](https://www.opswat.com/docs/fenddiode/appendices/appendix-vii-fend-cloud---tcp-json-examples) for output.
+Please see [Appendix VII: Fend Cloud / TCP JSON Examples](/docs/fenddiode/appendices/appendix-vii-fend-cloud---tcp-json-examples) for output.
 
 ## [BACnet MSTP Listen](/docs/fenddiode/configuration-settings/input-side-protocol-settings#bacnet-mstp-listen)
 

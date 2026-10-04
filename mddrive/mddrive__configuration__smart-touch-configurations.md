@@ -10,7 +10,7 @@ MetaDefender Drive Scan Mode will only available after activated
 
 MetaDefender Drive with Smart Touch can also be activated with Toolkit
 
-Please follow the steps in [Activate License](/docs/mddrive/getting-started/activate-license)
+Please follow the steps in [Activate License](/docs/mddrive/getting-started/activations)
 
 The follow steps will walk you through the process to **activate MetaDefender Drive with Smart Touch from within the Smart Touch**
 

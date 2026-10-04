@@ -53,4 +53,10 @@ As of release 6.4.2, SOC-level log messages also carry their message parameters 
 
 OMSemailId=681464 OMSuri=smtp://192.168.0.17:25 OMSrecipients=QList("karoly.arnhoffer@opswat.com") OMSuseTls=false OMSforceTls=false OMSmsgid=2407
 
+**SOC message parameters**
+
+In upcoming releases of Email Gateway Security it is planned to remove SOC-level log message parameters from the Name field text. The SOC-level log message parameters will be kept in the Extension field only.
+
+Customers who have configured their SIEM/SOAR/etc. systems to depend on the SOC-level log message parameters being in the Name field should migrate to the new structure.
+
 For further details about CEF see <https://www.microfocus.com/documentation/arcsight/arcsight-smartconnectors-8.4/pdfdoc/cef-implementation-standard/cef-implementation-standard.pdf>.

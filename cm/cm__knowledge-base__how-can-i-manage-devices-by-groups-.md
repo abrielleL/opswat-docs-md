@@ -129,3 +129,7 @@ To learn more, please refer to [Get Devices](https://www.opswat.com/docs/cm/deve
 > **Support:**
 >
 > If you have followed the instructions above but are having difficulty **Managing Your Endpoint Devices By Groups**, please open a [Support Case](https://my.opswat.com/support) with the OPSWAT team via phone, online chat or form.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

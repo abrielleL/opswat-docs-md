@@ -38,6 +38,8 @@ Identify which security layer is driving the most interventions, so you can prio
 | ---- | ---- |
 | Media Processing Sessions ![](https://uploads.developerhub.io/prod/97qW/k0815p22ayswggge5lfhub9npagi050kajl61cuzd0t7noja5utuatgedxrxq56m.png) | Shows the total number of media sessions within the selected timeframe, split into Allowed Media and Blocked Media |
 | Blocked Media Breakdown ![](https://uploads.developerhub.io/prod/97qW/c3wf6jxklikrdjodg9dc02sdicngm98totbo1tyub1v9s01xkxpm2gmq8pp5cvzp.png) | Breaks down blocked sessions by the reason they were blocked |
+| Allowed Media by Group ![](https://uploads.developerhub.io/prod/97qW/3e7ydoudp25kiif5e8xrg6ulyicwsga1aa269stne8sjotixnidyaqe1knwkt0mz.png) | Shows the distribution of allowed media sessions across different device or endpoint groups within the selected timeframe. |
+| Blocked Media by Group ![](https://uploads.developerhub.io/prod/97qW/9yon4izndrsagyp0xi76zhgzty56y8sb6ltoo2shydyvbg2zxnt3urifdh786iq0.png) | Breaks down blocked media sessions across different device or endpoint groups to pinpoint where security interventions occur most frequently. |
 
 ### Identify threat categories
 
@@ -72,3 +74,7 @@ The Health tab provides a real-time overview of your managed product instances. 
 | ---- | ---- | ---- |
 | Last Seen  | Shows when each device last reported to  My OPSWAT Central Management ![](https://uploads.developerhub.io/prod/97qW/zb6iw1qtie5tvirfxb35v0zjxo8phg6h3k2dwbs1vbjo329geenmrqj98gs9fp88.png) | - A healthy deployment should show the majority of devices in the **Within 1h** or** 1–24h ago** segments - If a significant portion of devices appear in the **> 30d ago** segment, verify network connectivity, confirm the agent service is running on those devices, or determine if those instances have been retired |
 | Version Status | Indicates whether each device is running the latest supported software version ![](https://uploads.developerhub.io/prod/97qW/3wd2i7bypr4m27ku7f9e51evd25us76t2bj8b3dbs7l18f0hcgfhrbi0y2xboo2m.png) | - Aim for all devices to show **Up To Date**. Out-of-date instances may lack critical security patches or feature improvements - Use the [Update Application](https://www.opswat.com/docs/cm/product-management/update-application) feature to push updates to out-of-date devices |
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)
