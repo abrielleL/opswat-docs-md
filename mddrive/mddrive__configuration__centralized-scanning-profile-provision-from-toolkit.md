@@ -1,11 +1,8 @@
 <!-- source: https://www.opswat.com/docs/mddrive/configuration/centralized-scanning-profile-provision-from-toolkit -->
 
-[MetaDefender Drive](https://www.opswat.com/docs/mddrive)Need Help?
 # Centralized Scanning Profile - Provisioning from Drive Toolkit
 
-### [**Administrator Provisioning**](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-toolkit#administrator-provisioning)
-
-#### [Enrollment and Lock MetaDefender Drive](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-toolkit#assign-an-approver)
+#### [Enrollment and Lock MetaDefender Drive](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-toolkit#enrollment-and-lock-metadefender-drive)
 
 To enroll a MetaDefender Drive withe Centralized Scanning Profile, the administrators open MetaDefender Drive Toolkit.
 
@@ -15,7 +12,7 @@ To enroll a MetaDefender Drive withe Centralized Scanning Profile, the administr
 
 Install **Google Authenticator, Microsoft Authenticator** or **Okta Verify** 2-factor authentication applications (to generate a 6-digit OTP (one-time password) in the next steps)
 
-#### [Assign an Approver](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-toolkit#unenrollment-for-metadefender-drive)
+#### [Assign an Approver](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-toolkit#assign-an-approver)
 
 Enter a name to identify the **Approver**, then click **Add**
 
@@ -23,7 +20,7 @@ Enter the MetaDefender Drive credentials (Account Name and Your Key) into the 2-
 
 A pop-up will confirm successfully locking MetaDefender Drive.
 
-#### [Unenrollment for MetaDefender Drive](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-toolkit#approver)
+#### [Unenrollment for MetaDefender Drive](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-toolkit#unenrollment-for-metadefender-drive)
 
 After booting the MetaDefender Drive the administrators wish to unenroll:
 
@@ -37,7 +34,7 @@ Click **Yes**
 
 A prompt will appear upon completion.
 
-### [Approver](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-toolkit#enrollment-and-lock-metadefender-drive)
+### [Approver provides OTP when asked by Operators](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-toolkit#approver-provides-otp-when-asked-by-operators)
 
 Assigned by the Administrator to authorize Operators to unlock MetaDefender Drive. Administrators can also perform the Approver role.
 

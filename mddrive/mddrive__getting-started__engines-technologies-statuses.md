@@ -8,9 +8,9 @@ MetaDefender Drive shows the status of every engine in two places: the **Engines
 
 | Group | Statuses | What to do |
 | --- | --- | --- |
-| **Ready** (green) | Active · Available · Ready to scan (Initializing Engines window only) | Nothing. An Available engine is switched on automatically when a scan uses it. |
-| **Wait** (orange) | Waiting for download · Downloading · Prepared · Staging · Validating · Extracting · Updating · Scheduled | The engine is being installed or updated. Wait; it moves on by itself. |
-| **Needs attention** (orange) | Licensed · Download failed · Temporary failed · Permanently Failed (shown as Failed in the Initializing Engines window) · Content invalid | The engine cannot scan. Usually fixed by running an engine update. |
+| **Ready** (green) | Active, Available, Ready to scan (Initializing Engines window only) | Nothing. An Available engine is switched on automatically when a scan uses it. |
+| **Wait** (orange) | Waiting for download, Downloading, Prepared, Staging, Validating, Extracting, Updating, Scheduled | The engine is being installed or updated. Wait; it moves on by itself. |
+| **Needs attention** (orange) | Licensed, Download failed, Temporary failed, Permanently Failed (shown as Failed in the Initializing Engines window), Content invalid | The engine cannot scan. Usually fixed by running an engine update. |
 
 The dot next to each engine name is green when the engine is ready and orange for every other status. **Not Selected** appears only in the Initializing Engines window. It means the scan does not use the engine, and needs no action.
 

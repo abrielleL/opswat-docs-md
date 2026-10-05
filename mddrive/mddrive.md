@@ -1,13 +1,12 @@
 <!-- source: https://www.opswat.com/docs/mddrive -->
 
-[MetaDefender Drive](https://www.opswat.com/docs/mddrive)Need Help?
 ### METADEFENDER
 
 # Drive
 
-#### v4.4.9 [Latest]
+#### v4.4.10 [Latest]
 
-[Release Notes](https://opswat.developerhub.io/docs/mddrive/release-notes)
+[Release Notes](https://www.opswat.com/docs/mddrive/release-notes)
 
 Getting Started[##### Introduction
 
