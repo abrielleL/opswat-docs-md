@@ -2,6 +2,8 @@
 
 # Security
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 This section will allow the system administrator to enable secure connections to MetaDefender Cluster Control Center if required. In addition, Request rate limit, Password and Session policies are set in this section.
 
 ### [Request Rate Limit](/docs/mdcluster/operating/operating-security#request-rate-limit)
@@ -66,3 +68,28 @@ Changes take effect for new sessions. Existing sessions continue to use the sett
 - **Session timeout**: Absolute timeout to invalidate individual user’s session regardless of that user activities.
 - **Allow Duplicate Sessions**: Allow same user to have multiple active sessions.
 - **Allow Cross IP Sessions**: Allow requests coming from sources different from the authenticated origin.
+
+### [Scan from link](/docs/mdcluster/operating/operating-security#scan-from-link)
+
+These settings control how MetaDefender Cluster downloads files that are submitted by link (the `downloadfrom` header of `POST /file`). They apply to the whole cluster.
+
+- **Max download queue**: the number of downloads that can run at the same time.
+
+  - When the limit is reached, a new link is **not** refused. It waits in the queue and starts when a running download finishes.
+  - Use a lower value to limit the network and disk load on the Download Service. Use a higher value to download more files in parallel.
+- **Idle timeout**: How long a download can go without receiving any data before it stops.
+
+  - The value is in **milliseconds**.
+  - The timer restarts every time data arrives. A slow download that still receives data does not stop.
+  - When the timeout is reached, the download result is `Download Failed` with the error detail `Server took too long to respond`.
+
+The idle timeout does not limit the total download time. The total time is limited by the workflow setting **General > Timeouts > File download**. When that limit is reached, the result is Download Timeout.
+
+- **Enforce scan from link validation**: Turn this on to allow or block links by pattern. When it is off, every link is downloaded, and the validation type and patterns are ignored.
+
+| **Type** | A link is downloaded when |
+| --- | --- |
+| Blocklist | It matches none of the patterns. |
+| Allowlist | It matches at least one pattern. |
+
+- **Patterns**: Each pattern is a regular expression.

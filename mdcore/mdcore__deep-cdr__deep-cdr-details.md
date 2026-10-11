@@ -2,6 +2,8 @@
 
 # Deep CDR Details
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Together with an error message, Deep CDR module also returns forensic info to describe what happened during the process in the case file was successfully sanitized.
 
 Sample forensic infoCopy...

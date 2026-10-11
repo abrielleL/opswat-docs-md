@@ -15,12 +15,14 @@ New Features
 
 - Automatically scan data transferred to and from peripheral media using configurable direction-specific rules
 - Admins can define which local drives users can view and select for Custom Scan in Malware Scan
+- Admins can monitor real-time endpoint performance including CPU, memory, disk, and network usage, with configurable thresholds and automated alerts on threshold breaches
 
 Enhancements
 
 - Embedded engine definitions can now be set up and updated in fully air-gapped environments without internet connectivity
 - Submit suspected false positives with rationale and file origin directly from the Malware Scan user interface
 - Support file audit trails for files scanned by MetaDefender Endpoint for the first time, contributing a complete view of the file’s journey across OPSWAT products
+- On-demand patch deployment now supports automation scripts, enabling custom pre- and post-checks.
 
 ---
 

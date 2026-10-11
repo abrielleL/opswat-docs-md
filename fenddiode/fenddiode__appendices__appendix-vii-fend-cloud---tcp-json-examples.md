@@ -2,6 +2,8 @@
 
 # Appendix VII: Industrial Protocol to JSON Conversion Examples
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 This appendix provides example JSON outputs from the Fend Cloud API, local MQTT or TCP JSON modes for Modbus, BACnet, and LON data. The data received from these modes will be encapsulated in an array, with each element being an object in the forms seen below. The data seen in the “payload” object is all the data sent from the diode. It will contain information about the protocol and values. Outside the “payload” object are fields populated by AWS, when using the Fend Cloud API, used for tracking and categorizing the data set, such as ingest time and diode serial number.
 
 ## [Modbus JSON](/docs/fenddiode/appendices/appendix-vii-fend-cloud---tcp-json-examples#modbus-json)

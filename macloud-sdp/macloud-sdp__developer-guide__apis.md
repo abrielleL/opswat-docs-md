@@ -2,7 +2,7 @@
 
 # APIs
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 My OPSWAT Central Management provides different APIs to fetch device information (Hostname, Device ID, MAC/IP Address,...) and device security and compliance status, such as Antivirus, Antiphising, Public File Sharing, and Malware detection as well as account information.
 

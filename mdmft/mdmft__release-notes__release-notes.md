@@ -2,12 +2,12 @@
 
 # Release Notes
 
-Summarize Page    Connect to Cursor Connect to VS Code
-# [MetaDefender Managed File Transfer 3.11.5](/docs/mdmft/release-notes/release-notes#metadefender-managed-file-transfer-3115)
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+# [MetaDefender Managed File Transfer 3.11.6](/docs/mdmft/release-notes/release-notes#metadefender-managed-file-transfer-3116)
 
-**Release Date:** 24 August 2026
+**Release Date:** 09 October 2026
 
-MFT 3.11.5 delivers per-group predefined folders, full SSO role mapping across every MFT role, designated folder upload restrictions, a consolidated MFT-to-MFT transfer status column, and over 30 bug fixes and reliability improvements.
+MFT 3.11.6 delivers a recipient domain allow/block list for external sharing, role-based login IP restrictions, direct line manager supervision mode, and consolidated supervisor approval notifications, and over 20 bug fixes and reliability improvements.
 
 # [New Features & Enhancements](/docs/mdmft/release-notes/release-notes#new-features--enhancements)
 
@@ -15,105 +15,77 @@ MFT 3.11.5 delivers per-group predefined folders, full SSO role mapping across e
 
 ### [Security](/docs/mdmft/release-notes/release-notes#security)
 
-#### [User Manager Role](/docs/mdmft/release-notes/release-notes#user-manager-role)
+#### [Role-Based Login IP Restrictions](/docs/mdmft/release-notes/release-notes#role-based-login-ip-restrictions)
 
-Assign a read-only User Manager role for user management and audit, grantable via an AD group.
+Restrict login access by IP address or range for specific roles, letting administrators require internet-facing deployments route privileged sign-ins through approved networks only.
 
-#### [Designated Folder Upload Restrictions](/docs/mdmft/release-notes/release-notes#designated-folder-upload-restrictions)
+#### [Configurable Notification Link Domains](/docs/mdmft/release-notes/release-notes#configurable-notification-link-domains)
 
-Restrict uploads and downloads to folders an administrator assigns, keeping transfers out of unauthorized locations.
+Define up to 10 approved domains in Settings → Notifications so links in upload, share, and account emails match the address each user actually reached MFT through.
 
-#### [Full SSO Role Mapping](/docs/mdmft/release-notes/release-notes#full-sso-role-mapping)
+#### [Recipient Domain Allow/Block List](/docs/mdmft/release-notes/release-notes#recipient-domain-allowblock-list)
 
-Assign any MFT role to an SSO user, extending mapping beyond Admin and Automation Coordinator.
+Define allowed or blocked external recipient email domains under Settings → Security so files can only be shared, invited, or downloaded by recipients on approved domains.
 
-#### [External User Password Enforcement](/docs/mdmft/release-notes/release-notes#external-user-password-enforcement)
+#### [Bulk File Status Override](/docs/mdmft/release-notes/release-notes#bulk-file-status-override)
 
-Enforce a password creation or change prompt for external users at first login, matching the existing local-user requirement.
+Manage file status overrides in bulk from the File Security Report, extending single-file overrides to multiple files blocked for reasons other than multiscanning, such as missing sanitization or password protection.
+
+#### [Direct Line Manager Supervision Mode](/docs/mdmft/release-notes/release-notes#direct-line-manager-supervision-mode)
+
+Assign each user's Active Directory line manager as their supervisor approver, eliminating manual group management for organizations with large AD directories.
 
 ---
 
 ### [User Management](/docs/mdmft/release-notes/release-notes#user-management)
 
-#### [Per-Group Predefined Folders](/docs/mdmft/release-notes/release-notes#per-group-predefined-folders)
+#### [External User Inactivity Auto-Disable](/docs/mdmft/release-notes/release-notes#external-user-inactivity-auto-disable)
 
-Define a fixed set of root-level folders per user group, replacing free-form My Files access.
+Configure external accounts to disable after a set period without a login, with the inactivity window adjustable globally in External Users Settings.
 
-- Configure the folder list per group from Group Settings
-- Folder changes propagate automatically as group membership changes
+**Minor Enhancements**
 
-#### [Per-Group Navigation Visibility](/docs/mdmft/release-notes/release-notes#per-group-navigation-visibility)
-
-Configure Shared With Me and User Management navigation visibility per user group.
+- **Last Successful Import Timestamp** — View the date and time of the last successful user mapping import on the Import/Export page, shown only after a successful import has occurred and converted to your local timezone.
 
 ---
 
 ### [Automation](/docs/mdmft/release-notes/release-notes#automation)
 
-#### [MFT-to-MFT Destination Workflow Selection](/docs/mdmft/release-notes/release-notes#mft-to-mft-destination-workflow-selection)
+#### [MFT-to-MFT Storage Recovery Retry](/docs/mdmft/release-notes/release-notes#mft-to-mft-storage-recovery-retry)
 
-Assign a distinct destination scan workflow for each MFT-to-MFT synchronization direction.
+Trigger MFT-to-MFT transfer retries once target storage frees up after a disk-full or transient failure, removing the need for administrators to manually resync stuck files.
+
+#### [Per-File MFT-to-MFT Sync](/docs/mdmft/release-notes/release-notes#per-file-mft-to-mft-sync)
+
+Manage MFT-to-MFT batch transfers so each file syncs to the destination as soon as its own scan completes, instead of holding the whole batch until every file finishes.
 
 ---
 
 ### [Integrations](/docs/mdmft/release-notes/release-notes#integrations)
 
-#### [SMTP Sender Email Override](/docs/mdmft/release-notes/release-notes#smtp-sender-email-override)
+#### [Consolidated Supervisor Approval Notifications](/docs/mdmft/release-notes/release-notes#consolidated-supervisor-approval-notifications)
 
-Set a single override sender address for all outbound SMTP messages, replacing the default administrator sender.
-
-**Minor Enhancements**
-
-- **File Integrity Email Clarity** — view clearer checksum terminology and a direct link to the affected file in integrity verification failure emails.
-
----
-
-### [Platform](/docs/mdmft/release-notes/release-notes#platform)
-
-#### [SQL Server LocalDB Removal](/docs/mdmft/release-notes/release-notes#sql-server-localdb-removal)
-
-Enforce migration off SQL Server LocalDB before upgrading, so unsupported database configurations no longer receive new installer updates.
-
-#### [HA Max Request Body Size](/docs/mdmft/release-notes/release-notes#ha-max-request-body-size)
-
-Configure the maximum allowed request body size for HA deployments to match workload requirements.
+Enable a single consolidated email notification for supervisor approval on bulk upload jobs, replacing one notification per file once scanning, validation, and approval complete for the batch.
 
 **Minor Enhancements**
 
-- **HA Controller Version Display** — view HA Controller version numbers alongside MFT version numbers on the HA Configuration Tool Overview page.
-- **LibreOffice Preview Engine Update** — preview Office documents using the latest LibreOffice release, incorporating upstream security fixes.
+- **Blue Line Email Template Redesign** — View outbound MFT emails redesigned with OPSWAT's Blue Line visual identity across every template and locale, verified for consistent rendering across email clients.
 
 ---
 
 ### [Administration](/docs/mdmft/release-notes/release-notes#administration)
 
-#### [Filtered File Security Export](/docs/mdmft/release-notes/release-notes#filtered-file-security-export)
+#### [Cross-Product File Journey Tracking](/docs/mdmft/release-notes/release-notes#cross-product-file-journey-tracking)
 
-Export the File Security Report table in its currently filtered, sorted, and configured state.
-
-#### [TCP Syslog Forwarding](/docs/mdmft/release-notes/release-notes#tcp-syslog-forwarding)
-
-Configure Syslog forwarding over TCP in addition to UDP for reliable audit event delivery.
-
-#### [Audit Log Sanitization Hashes](/docs/mdmft/release-notes/release-notes#audit-log-sanitization-hashes)
-
-View file hashes captured before and after sanitization directly in the audit log entry.
-
-#### [Database Health Status Banner](/docs/mdmft/release-notes/release-notes#database-health-status-banner)
-
-View a banner alerting administrators when the database connection is degraded or unreachable.
+Track a file's full journey across OPSWAT products in Central Management by forwarding session and transaction identifiers through MFT, unifying scan and transfer records into a single audit trail.
 
 **Minor Enhancements**
 
-- **Managed Folder Delete Confirmation** — view a confirmation dialog before a managed folder is deleted, preventing accidental removal.
+- **Group Core Workflow Change Alert** — View an audit trail message when a Local or AD group's Core scanning workflow changes, clarifying the change for administrators reviewing file history.
+- **Group Selection Dropdown Toggle** — Enable a switch to hide the Group Selection dropdown on file uploads, applying a default group for organizations that manage users through directory sync rather than manual group assignment.
+- **LDAP GUID Identifier Hint** — View a UI hint when configuring LDAP that the unique identifier field must be a GUID attribute, reducing misconfiguration during setup.
 
 ---
-
-### [Monitoring](/docs/mdmft/release-notes/release-notes#monitoring)
-
-#### [MFT-to-MFT Transfer Status Column](/docs/mdmft/release-notes/release-notes#mft-to-mft-transfer-status-column)
-
-View a single file transfer status column in My Files and File Analysis showing sync state and time.
 
 ---
 
@@ -123,129 +95,105 @@ View a single file transfer status column in My Files and File Analysis showing 
 
 ### [Security Fixes](/docs/mdmft/release-notes/release-notes#security-fixes)
 
-#### [SMTP Verification Response Disclosure](/docs/mdmft/release-notes/release-notes#smtp-verification-response-disclosure)
+#### [Readonly Administrator User Mapping Access](/docs/mdmft/release-notes/release-notes#readonly-administrator-user-mapping-access)
 
-SMTP server validation responses no longer reveal whether internal services on the MFT server or connected servers are reachable, closing a service enumeration path.
+Readonly Administrators have consistent read access to user mapping across every user type.
 
-#### [MFT API Denial of Service](/docs/mdmft/release-notes/release-notes#mft-api-denial-of-service)
+#### [Editor Role Folder Upload Access](/docs/mdmft/release-notes/release-notes#editor-role-folder-upload-access)
 
-The MFT API applies rate limiting and validation controls to close a Denial of Service exposure path identified during a customer security assessment.
+Users with Editor or Uploader access to a shared folder can upload into that folder through the API, matching the permission the API already reports for that share.
 
-#### [AD Credential and API Key Exposure](/docs/mdmft/release-notes/release-notes#ad-credential-and-api-key-exposure)
+#### [MFA Enrollment Long Username Support](/docs/mdmft/release-notes/release-notes#mfa-enrollment-long-username-support)
 
-AD credentials and the MD Core API key are no longer exposed through the access path identified during a penetration test.
-
-#### [SSO Email Role Uniqueness](/docs/mdmft/release-notes/release-notes#sso-email-role-uniqueness)
-
-An SSO email address can be assigned to only one role at a time, preventing the same identity from being mapped to multiple conflicting roles.
+MFA enrollment completes for users with long usernames, with the full secret key stored instead of being cut short.
 
 ---
 
 ### [Stability Fixes](/docs/mdmft/release-notes/release-notes#stability-fixes)
 
-#### [Processor Service Deadlock](/docs/mdmft/release-notes/release-notes#processor-service-deadlock)
+#### [Test Notification Modal Crash](/docs/mdmft/release-notes/release-notes#test-notification-modal-crash)
 
-File transfer delete operations in the processor service complete without triggering a database deadlock that previously caused the operation to fail.
+Sending a test notification from an email template opens and closes the confirmation modal cleanly.
 
-#### [Automation Job Log Page Rendering](/docs/mdmft/release-notes/release-notes#automation-job-log-page-rendering)
+#### [My Files Page With MFT-to-MFT Disabled](/docs/mdmft/release-notes/release-notes#my-files-page-with-mft-to-mft-disabled)
 
-The automation job execution log page renders correctly for jobs with a large number of log entries, rather than displaying a blank screen.
+My Files and File Security Report render correctly on instances where MFT-to-MFT is disabled.
 
-#### [Upload Progress Indicator Freeze](/docs/mdmft/release-notes/release-notes#upload-progress-indicator-freeze)
+#### [Supervisor Endpoint Reliability Hardening](/docs/mdmft/release-notes/release-notes#supervisor-endpoint-reliability-hardening)
 
-The floating upload progress indicator updates and clears correctly during a Pull from MFT operation, rather than remaining frozen on screen.
-
-#### [File Status After Version Upgrade](/docs/mdmft/release-notes/release-notes#file-status-after-version-upgrade)
-
-Files retain their correct processing status after upgrading from version 3.9.4 to 3.11.3, rather than becoming stuck in a Processing state.
-
-#### [Automation Jobs Page Crash](/docs/mdmft/release-notes/release-notes#automation-jobs-page-crash)
-
-The automation jobs page loads without crashing due to a missing pipe provider.
-
-#### [Email Template Configuration Modal](/docs/mdmft/release-notes/release-notes#email-template-configuration-modal)
-
-The General Configuration modal for email templates opens without console errors.
+The supervisor active-configuration endpoint carries additional regression coverage after an intermittent, unreproduced service hang was reported.
 
 ---
 
 ### [Reliability Improvements](/docs/mdmft/release-notes/release-notes#reliability-improvements)
 
-#### [Audit Logging Completeness](/docs/mdmft/release-notes/release-notes#audit-logging-completeness)
+#### [Audit Log Retention Cleanup](/docs/mdmft/release-notes/release-notes#audit-log-retention-cleanup)
 
-Audit log entries are captured for actions that previously left no trail.
+Audit logs are deleted according to the configured retention period even under heavy system usage and high log volume.
 
-- **User mapping import/export** — importing or exporting the user mapping list is recorded in the audit log
-- **Interrupted uploads** — interrupted file uploads are recorded in the audit trail
+#### [Security Trend Widget 26-Week View](/docs/mdmft/release-notes/release-notes#security-trend-widget-26-week-view)
 
-#### [User Creation Orphaned Record Conflicts](/docs/mdmft/release-notes/release-notes#user-creation-orphaned-record-conflicts)
+The Security Trend widget shows data for the Last 26 Weeks period, matching every other available date range on the dashboard.
 
-User creation completes without conflicting against orphaned records left behind by incomplete prior operations.
+#### [Malware Detection Engines Widget](/docs/mdmft/release-notes/release-notes#malware-detection-engines-widget)
 
-#### [Aggregated Data Reporting Toggle](/docs/mdmft/release-notes/release-notes#aggregated-data-reporting-toggle)
+The Top 5 Malware Detection Engines widget displays detection data whenever hits are present, matching the File Info page and other dashboard widgets.
 
-The Aggregated Data Reporting toggle displays its true configured state, and telemetry metrics are captured accurately for every instance.
+#### [External User Welcome Email Credentials](/docs/mdmft/release-notes/release-notes#external-user-welcome-email-credentials)
 
-#### [Shared Folder Email Direct Link](/docs/mdmft/release-notes/release-notes#shared-folder-email-direct-link)
+External user welcome emails include the username or email address needed to sign in.
 
-Share invitation emails for an upload-only folder link directly to the target folder or the Shared With Me landing page.
+#### [Configurable Core Scan Upload Timeout](/docs/mdmft/release-notes/release-notes#configurable-core-scan-upload-timeout)
 
-#### [Scheduled SFTP Push Timing](/docs/mdmft/release-notes/release-notes#scheduled-sftp-push-timing)
+Large file uploads to MetaDefender Core apply a configurable stall timeout, with upload progress and outcome logged for failed scan submissions.
 
-Scheduled SFTP Push jobs with no files to send complete without an unnecessary 15-second delay.
+#### [Transfer Metadata Transaction ID](/docs/mdmft/release-notes/release-notes#transfer-metadata-transaction-id)
+
+MFT transfer metadata carries a Transaction ID that links a file's journey across OPSWAT products into one audit trail record.
 
 ---
 
 ### [Behavior Corrections](/docs/mdmft/release-notes/release-notes#behavior-corrections)
 
-#### [File Storage Move Status Message](/docs/mdmft/release-notes/release-notes#file-storage-move-status-message)
+#### [Group Storage Quota Indicator](/docs/mdmft/release-notes/release-notes#group-storage-quota-indicator)
 
-The success message shown after a storage move operation reflects whether files were actually moved to active storage, rather than reporting success when none were moved.
+The storage usage indicator in the user info panel shows remaining space when a storage quota is set at the group level, matching the display already shown for individually configured quotas.
 
-#### [MFT-to-MFT Manual Sync Toggle Enforcement](/docs/mdmft/release-notes/release-notes#mft-to-mft-manual-sync-toggle-enforcement)
+#### [Group Upload Quota Enforcement](/docs/mdmft/release-notes/release-notes#group-upload-quota-enforcement)
 
-The manual sync-to-destination action is unavailable when Allow Users to Start Manual Synchronization is turned off, matching the configured setting.
+Group-based file upload quotas apply consistently to third-party SSO and AD accounts, matching enforcement already applied to standard accounts.
 
-#### [Imported Configuration External User Settings](/docs/mdmft/release-notes/release-notes#imported-configuration-external-user-settings)
+#### [Core License Connection Status](/docs/mdmft/release-notes/release-notes#core-license-connection-status)
 
-Importing a configuration file from a previous MFT version preserves the Show My Files and Allow to Share Files settings for external users.
+The Core Connection Status reflects an unlicensed MetaDefender Core instance accurately, and scan failures caused by a missing license include a clear reason.
 
-#### [SSO Redirect URL Update](/docs/mdmft/release-notes/release-notes#sso-redirect-url-update)
+#### [Download Page Completion State](/docs/mdmft/release-notes/release-notes#download-page-completion-state)
 
-The SSO configuration redirect URL can be updated and saved successfully.
+The shared-link download page stops polling and shows a clear confirmation once a file download succeeds.
 
-#### [Shared Folder Upload Actor Attribution](/docs/mdmft/release-notes/release-notes#shared-folder-upload-actor-attribution)
+#### [Supervisor Comment Field Validation](/docs/mdmft/release-notes/release-notes#supervisor-comment-field-validation)
 
-Email notifications for an upload to a shared folder credit the user who performed the upload, rather than always crediting the folder owner.
+The supervisor approval comment field enforces its input pattern in current Chromium-based browsers.
 
-#### [MFT-to-MFT Guest User Deletion Scope](/docs/mdmft/release-notes/release-notes#mft-to-mft-guest-user-deletion-scope)
+#### [Share Picker Refresh Pagination](/docs/mdmft/release-notes/release-notes#share-picker-refresh-pagination)
 
-Deleting an auto-created guest user at the destination MFT no longer deletes the corresponding local user at the source MFT.
+Refreshing a share or user picker replaces the visible list from the first page and continues scrolling normally afterward.
 
-#### [File Status After Scan Completion](/docs/mdmft/release-notes/release-notes#file-status-after-scan-completion)
+#### [Shared Folder Upload Permission Inheritance](/docs/mdmft/release-notes/release-notes#shared-folder-upload-permission-inheritance)
 
-A file's status updates correctly once its scan completes, rather than remaining in Processing indefinitely.
+Files uploaded into a shared folder inherit the Editor permission assigned to that folder.
 
-#### [Group File Policy Behavior](/docs/mdmft/release-notes/release-notes#group-file-policy-behavior)
+#### [Supervisor Approval Step 3 Setup](/docs/mdmft/release-notes/release-notes#supervisor-approval-step-3-setup)
 
-A group's file policy applies its managed folders correctly across membership and naming changes.
-
-- **Folder creation after group assignment** — folders defined in a group's file policy are created for members assigned to the group after the policy was configured
-- **Policy scope to like-named folders** — a group's file policy applies only to its managed folder, rather than to every folder at the My Files root sharing the same name
-
-#### [Share Menu Group Restriction Visibility](/docs/mdmft/release-notes/release-notes#share-menu-group-restriction-visibility)
-
-Users in a group with sharing disabled are hidden from the share menu, rather than appearing as available recipients.
-
-#### [Share Dropdown Duplicate Supervisor Entry](/docs/mdmft/release-notes/release-notes#share-dropdown-duplicate-supervisor-entry)
-
-The share-with dropdown for a shared folder lists its supervisor once instead of twice, so folder sharing notifications reach the intended recipient.
+Supervisor approval setup completes through every configuration step without getting stuck.
 
 ---
 
 ### [UI & Usability Fixes](/docs/mdmft/release-notes/release-notes#ui--usability-fixes)
 
-- **File Security Report Size Filter Unit** — the file size filter slider on the File Security Report displays values in a readable unit rather than raw bytes.
-- **Upload Modal Share Field State** — share-related fields in the file upload modal are disabled when file or folder sharing is not allowed for the user.
-- **Local Users Page Role Display** — special user roles display their actual role on the Local Users page, rather than appearing as a simple user.
-- **External Password Hint Text** — the hint text for Enforce Random Password for External Users accurately describes which accounts can set a password and notes the required SMTP configuration.
+- **Download Completion Indicator** — The download spinner stops once a file finishes downloading through an email or direct download link, matching the file-list download experience.
+- **Manager-Based Supervisor Approval Wording** — Manager-based supervisor approval setup displays clearer descriptive text to guide administrators through configuration.
+- **Supervisor Setup Filter Text** — Supervisor setup displays accurate guidance text for configuring the default supervisor through a filter in manager-based mode.
+- **Download Page Checkmark Alignment** — The download confirmation checkmark is centered within its circular container in Firefox.
+
+---

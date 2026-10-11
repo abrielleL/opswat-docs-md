@@ -2,6 +2,8 @@
 
 # Adding an existing MetaDefender Drive instance
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The following guideline describes how to add an existing MetaDefender Drive instance to OPSWAT Central Management.
 
 Info

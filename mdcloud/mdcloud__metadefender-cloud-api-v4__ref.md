@@ -4,7 +4,7 @@
 
 Welcome to the MetaDefender Cloud guide. This guide is intended to provide the information you need to:
 
-## Start analyzing files with 20+ anti-malware engines
+## Start analyzing files with 30+ anti-malware engines
 
 ## How to use MetaDefender Cloud Public APIs
 
@@ -13,7 +13,7 @@ Learn about frequently asked questions and additional concepts through our libra
 
 ## Key Features of MetaDefender Cloud
 
-> ***File Analysis*** - Analyzing binaries with 20+ anti-malware engines
+> ***File Analysis*** - Analyzing binaries with 30+ anti-malware engines
 
 > ***Deep CDR*** (aka Content Disarm and Reconstruction) with support for 100+ file types
 
@@ -201,7 +201,7 @@ The request has succeeded
 | reason | string | Description of the sanitization error |  |
 | details | string | Additional details on the sanitization error |  |
 | sandbox4 fields | object | Sandbox scan final verdict |  |
-| verdict | string | The overall result for the scanned file. |  |
+| verdict | string | The overall result for the scanned file.  Enum: `UNKNOWN`,`BENIGN`,`NO_THREAT`,`SUSPICIOUS`,`LIKELY_MALICIOUS`,`MALICIOUS` |  |
 | threatLevel | number | The infection score indicating the severity of the detected threats. |  |
 | confidence | integer | The confidence score when determining the severity of the detected threats. |  |
 | blocked | boolean | The indicator whether the file is blocked. |  |
@@ -257,7 +257,6 @@ Scanning a file consists of the following steps:
 Notes:
 
 - When both the multiscan and sandbox functionalities are concurrently operational, and specific rate limits have been established for the sandbox, while none exist for multiscan, rather than generating an error, the sandbox process will be executed. Consequently, the associated data_id will return a status code of 253, denoting 'Not Scanned. Rate Limit Exceeded,' within the scan results.
-
 Endpoints[POST/file](/docs/mdcloud/metadefender-cloud-api-v4#file-upload) [GET/file/webhooks/{dataId}](/docs/mdcloud/metadefender-cloud-api-v4#getretrieving-webhook-status) [GET/file/{dataId}](/docs/mdcloud/metadefender-cloud-api-v4#file-lookupbydataid) [POST/repo](/docs/mdcloud/metadefender-cloud-api-v4#repo-scan) [POST/dataIdBulkLookup](/docs/mdcloud/metadefender-cloud-api-v4#dataids-bulklookup) Show 
 ## Hash Lookups
 
@@ -269,7 +268,6 @@ MetaDefender provides two basic ways of looking up scan results using data hashe
    While single hash lookup provides full scan results related to the hash,
    if found, multiple hash lookup will return a list of condensed results with
    links (data_ids) to the full scan results.
-
 Endpoints[GET/hash/{hash}](/docs/mdcloud/metadefender-cloud-api-v4#hash-lookup) [POST/hash](/docs/mdcloud/metadefender-cloud-api-v4#hash-bulklookup) [GET/hash/{hash}/scanhistory](/docs/mdcloud/metadefender-cloud-api-v4#hash-scanhistory) [GET/hash/{hash}/badge](/docs/mdcloud/metadefender-cloud-api-v4#hash-badge) Show 
 ## Reputation Service
 
@@ -279,7 +277,6 @@ MetaDefender Cloud provides two basic ways of verifying reputation for each type
 
 1. Single scan (Scanning IP / Domain / URL)
 2. Bulk scans (Scanning list of IPs / Domains / URLs)
-
 Endpoints[GET/ip/{observable_ip}](/docs/mdcloud/metadefender-cloud-api-v4#ip-lookup) [POST/ip/](/docs/mdcloud/metadefender-cloud-api-v4#ip-bulklookup) [GET/url/{observable_url}](/docs/mdcloud/metadefender-cloud-api-v4#url-lookup) [POST/url/](/docs/mdcloud/metadefender-cloud-api-v4#url-bulklookup) [GET/domain/{observable_domain}](/docs/mdcloud/metadefender-cloud-api-v4#domain-lookup) [POST/domain/](/docs/mdcloud/metadefender-cloud-api-v4#domain-bulklookup) Show 
 ## Application Information
 
@@ -323,13 +320,12 @@ Use cases for the feed include:
 - Researchers analyzing trending malware on the market
 - Security products that leverage threat intelligence capabilities to
   harden security measures
-
 Endpoints[GET/feed/clean/latest](/docs/mdcloud/metadefender-cloud-api-v4#feed-latestcleanhashes) [GET/feed/infected/latest](/docs/mdcloud/metadefender-cloud-api-v4#feed-latestinfectedhashes) Show 
 ## Status Endpoints
 
 Various endpoints for querying MetaDefender Cloud.
 
-Endpoints[GET/status/version](/docs/mdcloud/metadefender-cloud-api-v4#status-version) [GET/status/enginedef](/docs/mdcloud/metadefender-cloud-api-v4#status-enginedef) Show 
+Endpoints[GET/status/version](/docs/mdcloud/metadefender-cloud-api-v4#status-version) [GET/status/maintenance](/docs/mdcloud/metadefender-cloud-api-v4#status-maintenance-get) [GET/status/enginedef](/docs/mdcloud/metadefender-cloud-api-v4#status-enginedef) Show 
 ## Dynamic Analysis
 
 API calls for dynamic analysis. General information can be found here: [Dynamic analysis](https://docs.opswat.com/mdcloud/operation/dynamic-analysis)

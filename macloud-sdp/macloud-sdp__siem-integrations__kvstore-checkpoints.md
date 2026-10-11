@@ -2,7 +2,7 @@
 
 # KVStore Checkpoints
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 The application saves important data like script execution timestamps and API authentication tokens to Splunk’s KVStore as “checkpoints”. The checkpoints should not require any maintenance, but if needed, can be found at the following location within Splunk on data collection node(HF).
 

@@ -2,6 +2,8 @@
 
 # Archive Sanitization
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 MetaDefender Core is able to sanitize whole uploaded archives and give a modified version of the original archive.
 
 Usually this means that a sanitized archive contains:

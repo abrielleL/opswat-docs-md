@@ -2,7 +2,7 @@
 
 # Installing MetaDefender Managed File Transfer
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [Before Installation](/docs/mdmft/installation/installing-metadefender-managed-file-transfer#before-installation)
 
 Before beginning the installation, ensure that the  [MetaDefender Managed File Transfer System Requirements](/docs/mdmft/installation/system-requirements) are met. If you are installing MetaDefender Managed File Transfer™ on the same server as MetaDefender Kiosk™ and/or MetaDefender Core™, the server must meet the combined system requirements of all the products.
@@ -20,3 +20,11 @@ MetaDefender Managed File Transfer™ seamlessly integrates with MetaDefender Ki
 
 - [Install Metadefender Kiosk](/docs/mdmft)
 - [Configuring Kiosk to integrate to MetaDefender Managed File Transfer](/docs/mdmft)
+
+## [Deployment with My OPSWAT™](/docs/mdmft/installation/installing-metadefender-managed-file-transfer#deployment-with-my_opswat-)
+
+MetaDefender Managed File Transfer™ seamlessly integrates with My OPSWAT™ to support global operations for OPSWAT products.
+
+End of Life
+
+OPSWAT Central Management version 7 and My OPSWAT On-premises (Central Management version 8) will reach [End of Life on 01/31/2027](https://www.opswat.com/docs/ocm/knowledgebase/end-of-sale-and-end-of-life-cm7-and-cm8). MetaDefender Managed File Transfer™ will also discontinue support for these in versions released beyond that date.

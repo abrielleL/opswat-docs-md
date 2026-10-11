@@ -2,6 +2,8 @@
 
 # Debug logging
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Debug logging can be used to identify issues with connections. It provides debug level details for each connections as well as the time each step took (e.g. parsing time, scan time, response time). It also tracks the number of active connections.
 
 ## [Important notes](/docs/mdicap/v5.14.1/configuration/debug-logging#important-notes)

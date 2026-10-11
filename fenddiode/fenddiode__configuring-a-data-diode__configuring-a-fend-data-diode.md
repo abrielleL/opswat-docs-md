@@ -2,6 +2,8 @@
 
 # Configuring a Fend Data Diode
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 This section describes how to use a web browser to log into and configure a diode.
 
 ### [Required Materials](/docs/fenddiode/configuring-a-data-diode/configuring-a-fend-data-diode#required-materials)

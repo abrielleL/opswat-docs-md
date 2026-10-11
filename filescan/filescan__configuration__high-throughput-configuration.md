@@ -2,6 +2,8 @@
 
 # High-Throughput Configuration
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 To achieve the maximum possible throughput on a single server, make sure to deploy **MetaDefender Sandbox** (previously known as OPSWAT Filescan Sandbox) on a powerful instance:
 
 - 32 vCPUs (preferably 64 vCPUs)
@@ -38,7 +40,6 @@ runOSINTLookupsRequireMinProcessingPriority=0
 enableOpswatReputationAPI=true
 opswatReputationAPIKey=<YOUR MDCLOUD APIKEY>
 enableVirusTotalLookups=false
-enableClamscanLookup=false
 runHexillionOnExtractedDomains=false
 runWhoisRecordLookups=false
 # Disable expensive/unpredictable subtasks

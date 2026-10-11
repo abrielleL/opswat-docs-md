@@ -2,7 +2,9 @@
 
 # Getting Started with MetaDefender Drive Smart Touch
 
-MetaDefender Drive with Smart Touch features a mobile form factor to add more flexibility and connectivity to transient device scanning. Similar to other form factors, it ships as an out-of-the-box solution with the latest software and scanning engine versions installed.
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
+**MetaDefender Drive with Smart Touch** features a mobile form factor to add more flexibility and connectivity to transient device scanning. Similar to other form factors, it ships as an out-of-the-box solution with the latest software and scanning engine versions installed.
 
 Prerequisite
 
@@ -56,7 +58,7 @@ It is recommended to connect the target device to a power source throughout the 
 
 To run your first scan, you will go through the same experience as the USB form factor of MetaDefender Drive. For more details, please follow the instructions on these pages:
 
-- [Perform a Pre-Boot Scan](/docs/mddrive/getting-started/boot-from-metadefender-drive)
+- [Perform a Pre-Boot Scan](/docs/mddrive/getting-started/getting-started-with-metadefender-drive)
 - [Perform an In-Session Scan](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session)
 
 ## [Activate and Update Drive with Smart Touch using Drive Toolkit](/docs/mddrive/getting-started/getting-started-with-metadefender-drive-smart-touch#activate-and-update-drive-with-smart-touch-using-drive-toolkit)

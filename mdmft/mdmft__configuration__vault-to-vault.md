@@ -2,7 +2,7 @@
 
 # MFT to MFT
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 This feature allows secure and controlled file transfers between different networks. When enabled, all file and folder operations will be sent from the source MFT to the destination MFT server. Based on the various transfer policies, file operation rules can be specified as:
 
@@ -80,7 +80,7 @@ When Enforce Synchronization is turned off, the connection status will display a
         - revoked by a supervisor
         - revoked by an administrator
       - Files that have been blocked by MetaDefender Core™ can be supervised only if they receive an administrator approval
-      - All files in a group transfer must be supervised before the request is forwarded to the upstream Managed File Transfer instance, including files stored in the recycle bin.
+      - All files in a group transfer must be supervised before the request is forwarded to the upstream Managed File Transfer instance, including files stored in the recycle bin. If **Synchronize Each File Individually** is enabled, each file waits only for its own supervision, not for the other files in the group transfer.
 
 Note
 
@@ -113,6 +113,15 @@ Guest welcome notifications (if configured for the destination Managed File Tran
 
 4. **Synchronize MetaDefender Core Workflow**: When this option is enabled, it will ensure that synchronization also forwards the explicitly set MetaDefender Core Workflow property for uploaded files. For example if files were uploaded by MetaDefender Kiosk and a custom MetaDefender Core Workflow was used, the destination MFT will try to scan the files with the same rule. If the same workflow is not available on the destination MFT, the default workflow will be used.
 5. **Allow Users to Start Manual Synchronization**: When enabled the users can trigger a re-synchronization with the destination MFT.
+6. **Synchronize Each File Individually**: When this option is enabled, each file uploaded from the web UI is sent to the destination MFT as soon as its own upload and scan complete, without waiting for the other files of the same upload (default is off). For example, if a user uploads several small files and one large file, the small files reach the destination MFT before the large file finishes uploading. If the user closes the browser before the upload finishes, the files that already finished uploading are still sent, on a best-effort basis. Files uploaded from REST integrations are still sent after the whole upload is complete.
+
+Info
+
+While this option is enabled, destination MFTs do not send upload-successful, shared-with, or folder-updated notifications, because each file arrives as a separate upload. Blocked-file and approval notifications are not affected. Files with a cancelled scan are not synchronized.
+
+Warning
+
+Do not change this option while web UI uploads are in progress. If it is turned off in the middle of an upload, some files of that upload may not be sent to the destination MFT. To send the missing files, use **Sync to Destination MFT**.
 
 ### [Connecting with an Upstream Managed File Transfer Instance](/docs/mdmft/configuration/vault-to-vault#connecting-with-an-upstream-managed-file-transfer-instance)
 

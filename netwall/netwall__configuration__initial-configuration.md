@@ -2,6 +2,8 @@
 
 # Initial Configuration
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Important
+
 A security dongle must be inserted in the BLUE and RED servers to change configuration.
 
 ### [MetaDefender Security Gateway Default IP](/docs/netwall/configuration/initial-configuration#metadefender-security-gateway-default-ip)
@@ -35,6 +37,16 @@ Also, user can click on the Login tab so the login UI can be customized:
 - **System name:** Message displayed on a banner in the login page and in every screen.
 - **Pre-login Message:** Message displayed at the login UI, before loging in.
 - **Post-login Message:** Message displayed at the bottom of every screen after loging in.
+
+### [Telemetry Data Collection](/docs/netwall/configuration/initial-configuration#telemetry-data-collection)
+
+Important
+
+MetaDefender Optical Diode collects and sends anonymized, aggregated usage and performance data to OPSWAT to help improve product performance and reliability. This feature is enabled by default over port 4317 and telemetry data is sent encrypted over TLS. A firewall configuration rule change is required to send telemetry data to OPSWAT.
+
+Following the Management IP reboot, a dialogue box will appear. The dialogue box will only appear once upon initial setup. Use the tick box to **enable/disable** telemetry data collection. Telemetry data collection must be **enabled/disabled** on both the BLUE and RED sides.
+
+Telemetry data collection must be **enabled/disabled** on both the BLUE and RED sides.
 
 ### [Set up DNS and NTP Servers](/docs/netwall/configuration/initial-configuration#set-up-dns-and-ntp-servers)
 

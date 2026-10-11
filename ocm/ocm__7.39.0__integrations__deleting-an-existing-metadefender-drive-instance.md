@@ -2,6 +2,8 @@
 
 # Deleting an existing MetaDefender Drive instance
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The following guideline describes how to delete a MetaDefender Drive instance from OPSWAT Central Management.
 
 1. Go to the **MetaDefender Drive** management page under **Inventory** in the sidebar.

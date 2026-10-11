@@ -2,7 +2,8 @@
 
 # CIS Level 1 & 2 Guidelines - Windows
 
-## [CIS Level 1](/docs/mdicap/installation/cis-level-1---2-guidelines---windowsbcm#cis-level-1)
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## CIS Level 1
 
 Windows version has been tested: Windows Server 2022 and 2025
 
@@ -16,7 +17,7 @@ Before: `Base_CIS-CAT_Report_Level1.html` Base report, the report before apply C
 
 After compliance __Base_CIS-CAT_Report_Level1.html *-* meet 98%
 
-## [CIS Level 2](/docs/mdicap/installation/cis-level-1---2-guidelines---windowsbcm#cis-level-2)
+## CIS Level 2
 
 Windows version has been tested: Windows Server 2022
 

@@ -2,6 +2,8 @@
 
 # Workflow rule
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The Workflow rule page is found under `Workflow Management`>`Workflows` after successful login.
 
 The rules represent different processing profiles.
@@ -14,6 +16,29 @@ The following actions are available:
 - Existing rules can be deleted
 
 Rules combine workflow templates and security zones and describe which workflows are available in a specified security zone. Multiple rules can be added for the same security zone.
+
+---
+
+## [Assigned Instances](/docs/mdcluster/operating/md-cluster-workflow-rule#assigned-instances)
+
+By default, every MetaDefender Core instance in the cluster can process files for any workflow.
+
+Enable **Assign this workflow to specific MetaDefender Core instances** on the **General** tab to reserve a workflow for a chosen set of instances. For example, to keep large archives on dedicated hardware, or to serve separate channels from separate instances inside a single cluster.
+
+When the option is enabled, pick one or more instances from **MetaDefender Core instances**. Each instance is listed as `<display name> - N CPUs, R GB RAM`, so a workflow can be matched to instances of the right capacity. At least one instance must be selected.
+
+- Files matched to this workflow are processed only by the selected instances. Instances that are not selected never receive them.
+- While a selected instance has nothing of its own to process, it also handles workflows that have no assigned instances, so its capacity is not wasted.
+- Workflows with the option disabled are unchanged: any MetaDefender Core instance can process them.
+- The **Assigned Workers** column on the **Workflows** list shows the instances each workflow is assigned to.
+
+The same assignment can be made from the instance's side — see [**Inventory > Workers**](/docs/mdcluster/operating/operating-workers#assign-workflows-to-instances)
+
+Only MetaDefender Core instances can be assigned; the API Gateway and the Callback Service cannot. Assignment requires MetaDefender Core 5.22.0 or later. Earlier versions do not appear in the list.
+
+While files matched to the assigned workflow are still being processed, the option cannot be turned off and the workflow cannot be deleted. Wait for processing to finish and try again.
+
+In Kubernetes deployments, a MetaDefender Core instance loses its workflow assignments when it is terminated or redeployed. The workflows must then be reassigned to the instance.
 
 ---
 
@@ -87,6 +112,22 @@ A scan request is eligible to reuse the results of an earlier request with the s
 - If **Discard processed files when the original file is blocked** is enabled and the processed files were removed, the previous result cannot be reused.
 - The list of detected possible file types must match between the earlier and current requests.
 - The earlier result is still available for reuse, either in the current instance's local reuse pool or in the Redis global reuse pool for up to 50 minutes.
+
+By default, processing-result reuse applies to individual files. To reuse results for archive files as well, enable **Reuse Processing Result for Archives**. This can significantly reduce processing time when the same archive is submitted again.
+
+When this option is enabled:
+
+- You can separately configure which previous verdicts must not be reused for archives.
+- Reuse also applies to nested archives. If a submitted archive contains a nested archive that was processed previously, the stored result for that nested archive can be reused while the remaining contents of the outer archive are processed normally.
+
+In addition to the configured verdict exclusions and the general reuse conditions described above, an archive is re-scanned in the following cases:
+
+| Re-scanned Condition | Why the archive is re-scanned |
+| --- | --- |
+| The archive, or any file inside it, is **password-protected or encrypted**. | A stored result cannot currently validate the password provided with a new request. The archive must therefore be extracted and scanned again. |
+| A stored archive result that exceeded the **expansion-factor limit** is reused as a nested archive inside another archive. | The expansion-factor limit depends on the size of the top-level file, so the result may be different when the archive appears in a different position. |
+| The previous archive extraction **timed out**. | Extraction timeouts can depend on system load and may not occur again. For this reason, timeout results are treated as non-repeatable and the archive is scanned again. |
+| A **skip-by-hash allowlist or blocklist entry** that affected a file inside the archive has **changed or expired**. | The stored decision for that file is no longer current, so the archive is scanned again using the latest allowlist and blocklist configuration. |
 
 ---
 

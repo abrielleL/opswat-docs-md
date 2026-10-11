@@ -2,6 +2,8 @@
 
 # Fend TCP/JSON Server Tool Examples
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The Fend TCP/JSON Server Tool is a lightweight TCP server designed to receive and log JSON TCP output from the diode. Use of the Fend TCP Server Tool is not required to use the diode’s TCP Client (JSON Protocol Conversion) output feature but may be helpful for testing or logging.
 
 If you wish to use/develop your own TCP server, the communications interface with the output side of the diode is relatively straightforward. No handshake is needed for the output side to connect to a TCP server. The output side is configured to connect to a specific IP address and port. Upon startup the output side of the diode will attempt to connect to the configured IP address. If it fails to connect, the output side will attempt a re-connection every few seconds. If the connection is successful the output side of the diode will begin delivering ASCII encoded JSON strings delimited by a "CRLF". CR = Carriage Return (\r , 0x0D in hexadecimal, 13 in decimal). LF = Line Feed (\n, 0x0A, 10 in decimal). If the output side ever loses connection, it will continue storing data until the connection is reestablished.

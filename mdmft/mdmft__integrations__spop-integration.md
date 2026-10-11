@@ -2,7 +2,7 @@
 
 # SPOP Integration
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 This section covers the integration of SharePoint On-Premises document libraries with MetaDefender Managed File Transfer™ for various use cases, such as automating file transfers. For example: [Introduction to File Transfer Automation](/docs/mdmft/automated-file-transfer/automated-jobs).
 
@@ -61,4 +61,4 @@ The test connection performs three validation checks:
 
 Note: For pull jobs only, Read permissions are sufficient. For both pull and push jobs, or push jobs only, Contribute or Full Control permissions are required..
 
-Your SharePoint On-Premises integration with MetaDefender® MFT is now complete. Learn how to configure Automated Jobs using this integration by reading more[here](/docs/mdmft/automated-file-transfer/spop-push-files).
+Your SharePoint On-Premises integration with MetaDefender® MFT is now complete. Learn how to configure Automated Jobs using this integration by reading more[here.](/docs/mdmft/automated-file-transfer/spop-push-files)

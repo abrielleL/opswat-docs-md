@@ -2,6 +2,8 @@
 
 # OPSWAT Central Management console is working but the tray icon does not transition to the running status and eventually times out
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 | Term | Detail |
 | --- | --- |
 | Problem | OPSWAT Central Management times out even though the console was working. The tray icon did not transition to the running status. |

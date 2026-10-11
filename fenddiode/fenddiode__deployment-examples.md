@@ -2,6 +2,7 @@
 
 # FTP and FTPS Examples
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [FTP and FTPS Local (On-Prem) Installations](/docs/fenddiode/deployment-examples#ftp-and-ftps-local-on-prem-installations)
 
 ### [FTP Buffered vs Streaming](/docs/fenddiode/deployment-examples#ftp-buffered-vs-streaming)

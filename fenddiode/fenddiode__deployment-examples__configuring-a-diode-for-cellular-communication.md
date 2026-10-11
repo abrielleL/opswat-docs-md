@@ -2,6 +2,8 @@
 
 # Configuring a Diode for Cellular Communication
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Fend CE and CE5 model data diodes are able to be used in cellular mode only if they have a Fend Cloud subscription. To enable a diode for cellular usage, select “Cellular” under Output Side -> Interface Settings. The protocol settings are pre-configured from Fend and will be ready for use when cellular is selected.
 
 ## [Input Side Protocols Compatible with Cellular](/docs/fenddiode/deployment-examples/configuring-a-diode-for-cellular-communication#input-side-protocols-compatible-with-cellular)

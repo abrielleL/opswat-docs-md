@@ -2,6 +2,8 @@
 
 # Failed to remote install OPSWAT Products
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 | Term | Detail |
 | --- | --- |
 | Problem | Failed to remote install OPSWAT Products |

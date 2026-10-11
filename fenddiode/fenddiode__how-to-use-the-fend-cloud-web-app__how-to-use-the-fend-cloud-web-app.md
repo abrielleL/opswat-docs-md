@@ -2,6 +2,8 @@
 
 # How to Use the Fend Cloud Web App
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 You can log into you Fend account at <https://app.fend.tech/login>. In the Fend web app you can submit support requests, download the latest software and users’ manuals, and, if you are subscribed to the Fend Cloud service, you can monitor and access your diode’s cloud data. There are four main sections, Dashboard, Devices, Credentials, and Support.
 
 ## [Dashboard](/docs/fenddiode/how-to-use-the-fend-cloud-web-app/how-to-use-the-fend-cloud-web-app#dashboard)

@@ -2,6 +2,8 @@
 
 # HTTP Header Parsing
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 In this page, we document HTTP header that MetaDefender ICAP Server is using for logging and scanning.
 
 ## [Flowchart](/docs/mdicap/operating/http-header-parsing#flowchart)

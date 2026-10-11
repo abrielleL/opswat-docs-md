@@ -2,12 +2,14 @@
 
 # Version 3.4.5
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 | **Version** | 3.4.5 |
 | --- | --- |
 | **Release date** | 26 July 2025 |
 | **Scope** | Enhance current features and add new features. |
 
-## [New Features, Improvements and Enhancements](/docs/md-ot-security/release-notes/release-notes9ht#new-features-improvements-and-enhancements)
+## New Features, Improvements and Enhancements
 
 |  | Details |
 | --- | --- |

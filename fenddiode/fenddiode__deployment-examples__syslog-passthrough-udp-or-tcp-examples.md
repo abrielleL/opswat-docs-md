@@ -2,6 +2,8 @@
 
 # Syslog Passthrough (UDP or TCP) Examples
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The UDP and TCP client/server features allow for the transfer of syslog. While the diode does not currently generate its own syslog, it is fully capable of facilitating a one-way transfer of syslog to a target syslog server
 
 ## [Customer Requirements](/docs/fenddiode/deployment-examples/syslog-passthrough-udp-or-tcp-examples#customer-requirements)

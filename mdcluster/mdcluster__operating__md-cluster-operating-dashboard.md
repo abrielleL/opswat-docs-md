@@ -2,6 +2,8 @@
 
 # Dashboard
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 MetaDefender Cluster (MD Cluster) Control Center provides a Web-based user interface at default port 8892 for user to monitor the system health, system activity and executive report.
 
 ### [System Health](/docs/mdcluster/operating/md-cluster-operating-dashboard#system-health)
@@ -16,7 +18,7 @@ System Health show the status of all related services:
 
 ### [Worker Health](/docs/mdcluster/operating/md-cluster-operating-dashboard#worker-health)
 
-The overall health of all MD Cluster API Gateway and MetaDefender Core instances of platforms are shown here. The administrator can quickly monitor the number of AV engines installed on each MetaDefender Core instance.
+The overall health of all MD Cluster API Gateway, MetaDefender Core instances of platforms are shown here. The administrator can quickly monitor the number of AV engines installed on each MetaDefender Core instance.
 
 For more details of engines installed on any MetaDefender Core instance, the administrator can hit on the row of that instance. A new page show.
 

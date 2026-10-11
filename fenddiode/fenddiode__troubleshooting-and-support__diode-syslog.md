@@ -2,6 +2,8 @@
 
 # Diode Syslog
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Enabling syslog in your config will allow the diode to publish system logs to a specified server on the outbound side. Syslog data can be delivered to a remote server via either TCP or UDP. All Syslog traffic is sent from the output side of the diode. Meaning, the remote syslog server needs to be on the output sides network, or accessible through routing.
 
 Syslog messages follow this specified format:

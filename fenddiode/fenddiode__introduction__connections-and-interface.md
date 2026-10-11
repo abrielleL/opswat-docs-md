@@ -2,6 +2,7 @@
 
 # Connections and Interface
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Fend Data Diode Model Numbers](/docs/fenddiode/introduction/connections-and-interface#fend-data-diode-model-numbers)
 
 Fend Data Diodes come in two different series with three hardware configurations each. The input side of all configurations is the same, but the output side varies, offering different combinations of serial, cellular, and ethernet. Each hardware option is shown below.

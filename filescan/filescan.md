@@ -4,7 +4,7 @@
 
 # Aether(Sandbox)
 
-#### 3.2.0 [Latest]
+#### 3.3.0 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/filescan/release-notes)
 
@@ -14,9 +14,7 @@ Getting Started[##### Overview
 
 ###### Step by step instructions on installation and the initial setup](/docs/filescan/installation)[##### Configuration
 
-###### Learn how to configure the product. Detailed information for each option.](/docs/filescan/configuration)[##### MetaDefender Sandbox API Reference
-
-######](/docs/filescan/metadefender-sandbox-api-reference)Deployment & Usage[##### Integrations
+###### Learn how to configure the product. Detailed information for each option.](/docs/filescan/configuration)Deployment & Usage[##### Integrations
 
 ###### Available software integrations with OPSWAT Products & third parties.](/docs/filescan/integrations)[##### Admin Guide
 
@@ -27,9 +25,3 @@ Getting Started[##### Overview
 ###### How to investigate product alerts dealing with Installation, Logging and Maintenance.](/docs/filescan/troubleshooting)
 
 ## References
-
-[##### MetaDefender Sandbox API Reference
-
-######
-
-Learn more](/docs/filescan/metadefender-sandbox-api-reference)

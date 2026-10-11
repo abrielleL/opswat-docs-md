@@ -2,6 +2,8 @@
 
 # Setup output file name
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 To set up output filename for sanitized file, go to **Policy** > **Workflow rules** > choose **workflow name**
 
 In the output filename format field, variables listed below can be used. Beside variables, any characters can be used as static text, except these:

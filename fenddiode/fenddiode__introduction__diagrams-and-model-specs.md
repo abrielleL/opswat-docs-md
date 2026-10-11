@@ -2,6 +2,8 @@
 
 # Diagrams and Model Specs
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Spec-sheets for all each Fend Data Diode model can be found at the links below.
 
 ## [XE15 – Ethernet Out](/docs/fenddiode/introduction/diagrams-and-model-specs#xe15--ethernet-out)

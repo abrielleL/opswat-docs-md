@@ -2,7 +2,7 @@
 
 # HA Configuration Tool
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [Introduction](/docs/mdmft/high-availability/ha-configuration-tool-manual#introduction)
 
 The **MetaDefender MFT HA Configuration Tool™** is a desktop application for editing the MetaDefender MFT HA Controller™'s `appsettings.json` configuration file. It provides a visual interface for managing:

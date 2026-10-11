@@ -2,6 +2,8 @@
 
 # F5 BIG IP SSL configuration
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 To scan data transmitted using SSL connection you have to take similar steps as listed in [F5 BIG IP LTM](/docs/mdicap/integrations/f5-big-ip-ltm).
 
 The only difference is that you should setup a HTTPS pool and virtual server instead of plain HTTP.

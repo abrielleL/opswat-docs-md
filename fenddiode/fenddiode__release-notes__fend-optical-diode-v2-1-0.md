@@ -2,6 +2,8 @@
 
 # Fend Optical Diode v2.1.0
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Released: 11/15/2022
 
 ## [Features/Changes:](/docs/fenddiode/release-notes/fend-optical-diode-v2-1-0#featureschanges)

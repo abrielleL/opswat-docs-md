@@ -2,6 +2,8 @@
 
 # Using the Fend Configuration Interface
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The screenshot below shows the four main action areas of user interface:
 
 1. **Menu section** –

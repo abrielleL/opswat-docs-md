@@ -2,7 +2,20 @@
 
 # Release Notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Security SDK](/docs/mdsdk/release-notes/release-notes#security-sdk)
+
+[October 7th, 2026](/docs/mdsdk/release-notes/october-07-2026)
+
+[October 2nd, 2026](/docs/mdsdk/release-notes/october-02-2026)
+
+[October 1st, 2026](/docs/mdsdk/release-notes/october-01-2026)
+
+[September 29th, 2026](/docs/mdsdk/release-notes/september-29-2026)
+
+[September 24th, 2026](/docs/mdsdk/release-notes/september-24-2026)
+
+[September 22nd, 2026](/docs/mdsdk/release-notes/september-22-2026)
 
 [September 15th, 2026](/docs/mdsdk/release-notes/september-15-2026)
 
@@ -75,47 +88,3 @@
 [January 13th, 2026](/docs/mdsdk/release-notes/january-13-2026)
 
 [January 06th, 2026](/docs/mdsdk/release-notes/january-06-2026)
-
-[December 30th, 2025](/docs/mdsdk/release-notes/december-30-2025)
-
-[December 23rd, 2025](/docs/mdsdk/release-notes/december-23-2025)
-
-[December 09th, 2025](/docs/mdsdk/release-notes/december-09-2025)
-
-[December 02nd, 2025](/docs/mdsdk/release-notes/december-02-2025)
-
-[November 25th, 2025](/docs/mdsdk/release-notes/november-25-2025)
-
-[November 18th, 2025](/docs/mdsdk/release-notes/november-18-2025)
-
-[November 12th, 2025](/docs/mdsdk/release-notes/november-12-2025)
-
-[November 04th, 2025](/docs/mdsdk/release-notes/november-04-2025)
-
-[October 28th, 2025](/docs/mdsdk/release-notes/october-28-2025)
-
-[October 23rd, 2025](/docs/mdsdk/release-notes/october-23-2025)
-
-[October 14th, 2025](/docs/mdsdk/release-notes/october-14-2025)
-
-[October 07th, 2025](/docs/mdsdk/release-notes/october-07-2025)
-
-[September 30th, 2025](/docs/mdsdk/release-notes/september-30-2025)
-
-[September 23rd, 2025](/docs/mdsdk/release-notes/september-23-2025)
-
-[September 16th, 2025](/docs/mdsdk/release-notes/september-16-2025)
-
-[September 09th, 2025](/docs/mdsdk/release-notes/september-09-2025)
-
-[September 03rd, 2025](/docs/mdsdk/release-notes/september-03-2025)
-
-[August 26th, 2025](/docs/mdsdk/release-notes/august-26-2025)
-
-[August 19th, 2025](/docs/mdsdk/release-notes/august-19-2025)
-
-[April 22nd, 2025](/docs/mdsdk/release-notes/april-22nd--2025)
-
-[April 8th, 2025](/docs/mdsdk/release-notes/release-notesapril8)
-
-[March 25, 2025](/docs/mdsdk/release-notes/release-notes8d8)

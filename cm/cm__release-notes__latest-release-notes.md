@@ -2,12 +2,22 @@
 
 # SaaS Release Notes
 
+| Version | v10.7.26092 |
+| ---- | ---- |
+| Release date | October 7, 2026 |
+
+Bug Fixes** Resolve Endpoint Re-enrollment Failure on New Account**
+
+Fixed an issue where an Endpoint could not be re-enrolled under a new My OPSWAT Central Management account if it had previously been used with another account.
+
+---
+
 | **Version** | v10.7.26092 |
 | ---- | ---- |
 | **Release date** | September 29, 2026 |
 | **Release Summary** | This release strengthens **file security **with the new **File Audit Trail**, which traces a file's full journey in a single view. **Endpoint & Patch Management** expands patch control with **Dell and Lenovo driver & firmware updates**, **pre- and post-deployment automation scripts**, and **real-time performance monitoring & alerting**. Remote product management and visibility extend with quarantined file retrieval for MetaDefender Core, reboot and shutdown for MetaDefender Industrial Firewall devices, and installed applications visibility for MetaDefender Drive scanned-host records.  |
 
-## Peripheral Media Protection Solution
+### Peripheral Media Protection Solution
 
 New Features **Support Automatic Direction-Based Workflow for Peripheral Media Protection**
 
@@ -35,7 +45,7 @@ Refer to [Peripheral Media Protection](https://www.opswat.com/docs/cm/product-ma
 
 ![](https://uploads.developerhub.io/prod/97qW/13vboh9hocrvwxfxditbxwyaj3b2mjwjfwi6f4s5myh8mz7zsbls2s3x8tpis2j3.png)
 
-## Endpoint Security Solution
+### Endpoint Security Solution
 
 New Features **Patch Management Now Supports Driver and Firmware Updates**
 
@@ -67,7 +77,7 @@ Patch compliance reporting now accounts for Ubuntu phased updates, eliminating f
 
 ![](https://uploads.developerhub.io/prod/97qW/5wm0p52v88j0gtibithtcebvahomq47ui2m3apsjnl4japn24t117gd2fiqidgg4.png)
 
-## Portable Malware Scanning
+### Portable Malware Scanning
 
 New Features** Installed Applications Visibility on MetaDefender Drive Scanned Hosts**
 
@@ -81,7 +91,7 @@ Administrators can now view license details for managed MetaDefender Drive devic
 
 ![](https://uploads.developerhub.io/prod/97qW/ih2lnttun3k6292qdhtu146584th9oadbrwnomy8bqkq0mttd7kq9zjhbp6av5n5.png)
 
-## OT and Cyber-Physical Systems Solution
+### OT and Cyber-Physical Systems Solution
 
 New Features** Remote Reboot and Shut Down for MetaDefender Industrial Firewall**
 
@@ -91,13 +101,21 @@ Administrators can remotely reboot or shut down MetaDefender Industrial Firewall
 
 ![](https://uploads.developerhub.io/prod/97qW/d41biee4qnbc94v3dxbr9df295vi9yt15o0iudttw70mtr2fajfu58gbo54h1fde.png)
 
+New Features** Support Syslog Forwarder for MetaDefender Industrial Firewall**
+
+Added Syslog Profile support for MetaDefender Industrial Firewall, enabling administrators to centrally configure and apply syslog forwarding settings across multiple firewall devices.
+
+Refer to [Syslog Profile](https://www.opswat.com/docs/cm/integrations/syslog-profile) guidelines for detailed instruction.
+
+![](https://uploads.developerhub.io/prod/97qW/o5vdzgh2ss4f4getluoqtkjrpyaest5eb2p4selmxvud0zt4odwg1pad8r0do8xi.png)
+
 Enhancements** Support Toolkit Upgrade for MetaDefender Industrial Firewall**
 
 Support OPSWAT Industrial OS platform and Toolkit upgrade for MetaDefender Industrial Firewall. Refer to [Update Application](https://www.opswat.com/docs/cm/product-management/update-application) guideline for more details.
 
 ![](https://uploads.developerhub.io/prod/97qW/8lpjrvh8pagq3zrdd4oe4hb75x4w6nlzrvaqu451jmpk2v29z5reziu08lewnbht.png)
 
-## File Security Solution
+### File Security Solution
 
 New Features **End-to-End File Audit Trail**
 
@@ -123,7 +141,7 @@ Refer to [Password Storage](https://www.opswat.com/docs/cm/product-management/pa
 
 ![](https://uploads.developerhub.io/prod/97qW/kpfeepg3jv9j07h24hmloyt01y94g14k8y8swicwsadp682rdgro0izsne1cu5kp.png)
 
-## Network Access Control solution
+### Network Access Control solution
 
 New Features **Hyper-V Appliance Image**
 
@@ -153,21 +171,13 @@ When a FreeRADIUS configuration fails to apply, View Output now includes the Fre
 
 ![](https://uploads.developerhub.io/prod/97qW/v3fkrtfj47bcqatj8tswa6njjsuc5mu8wdr8anzwt5sat5ffbcq8bknps5iy5jup.png)
 
-## Additional Features
+### Additional Features
 
 New Features** Redesigned Enroll Product Page **
 
 Enroll Product page has been redesigned to provide a single-glance view of the onboarding path, clearly separating standalone product setup from endpoint device deployment.
 
 ![](https://uploads.developerhub.io/prod/97qW/11kuqm52doa97tm7qhuoxazvqvdqs9zs2wkgwq57bimm4g6g5l9xqc6tah74eiy5.png)
-
-New Features **Support Syslog Forwarder for MetaDefender Industrial Firewall**
-
-MetaDefender Industrial Firewall can now send their logs through My OPSWAT Central Management to an enterprise SIEM using a Syslog profile.
-
-Refer to [Syslog Profile](https://www.opswat.com/docs/cm/integrations/syslog-profile) guidelines for detailed instruction.
-
-![](https://uploads.developerhub.io/prod/97qW/o5vdzgh2ss4f4getluoqtkjrpyaest5eb2p4selmxvud0zt4odwg1pad8r0do8xi.png)
 
 New Features** Display Map and Location Details**
 

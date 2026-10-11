@@ -2,6 +2,7 @@
 
 # Output Side Interface Settings
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Interface Select Radio Buttons](/docs/fenddiode/configuration-settings/output-side-interface-settings#interface-select-radio-buttons)
 
 The options in this section will set the current communication interface mode for the outbound side of the diode. The diode operates in a single mode at a time (RS485, Ethernet or Cellular). Once a selection is made, the settings for that communication interface mode will be displayed below.

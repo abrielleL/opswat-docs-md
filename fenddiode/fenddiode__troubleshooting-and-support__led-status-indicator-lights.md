@@ -2,6 +2,8 @@
 
 # LED Status Indicator Lights
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Both the input and output sections of the diode are equipped with separate LED status indicator lights that can be used when troubleshooting a diode. The LED lights are located in four groups and have different purposes as follows:
 
 1. Power Indicator – A solid green light means that the input or output side of the diode is powered on. No light means the side of the diode does not have power.

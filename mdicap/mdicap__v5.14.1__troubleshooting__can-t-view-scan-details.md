@@ -2,6 +2,8 @@
 
 # Can't view scan details
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The *View scan details* link on **Dashboard > ICAP history > Request** **details** points to the scan details on the MetaDefender Core instance where the actual scanning took place.
 
 For further details see [4.1. ICAP Dashboard](/docs/mdicap/v5.14.1/operating/icap-dashboard).

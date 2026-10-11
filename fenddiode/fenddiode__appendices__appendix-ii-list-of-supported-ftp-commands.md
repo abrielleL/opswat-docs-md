@@ -2,6 +2,8 @@
 
 # Appendix II: List of Supported FTP Commands
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 | Command | Definition |
 | --- | --- |
 | **ABOR** | Abort an active file transfer |

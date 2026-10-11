@@ -2,6 +2,8 @@
 
 # Workers
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 This section will allow the system administrator to add the MetaDefender Cluster (MD Cluster) Workers which will help deploy and monitor activities of MetaDefender Core, MD Cluster API Gateway and MD Cluster Callback Service.
 
 Info
@@ -75,9 +77,9 @@ After the upgrade completes successfully, all Workers display the new version nu
 
 ### [Deploy Instances](/docs/mdcluster/operating/operating-workers#deploy-instances)
 
-Once MD Cluster Workers have been added and their status are shown as `Available`. The system administrator can now deploy MetaDefender Core, MD Cluster API Gateway and MD Cluster Callback Service separately or all at the same time.
+Once MD Cluster Workers have been added and their status are shown as `Available`. The system administrator can now deploy MetaDefender Core, MD Cluster API Gateway, MD Cluster Callback Service, and Download Service separately or all at the same time.
 
-To deploy the MD Cluster API Gateway. Simply choose the version of MD Cluster API Gateway and select an available MD Cluster Workers.
+To deploy the MD Cluster API Gateway. Simply choose the version of MD Cluster API Gateway and select an available MD Cluster Worker.
 
 The Log level, Port, and custom Install directory that will be assigned to MD Cluster API Gateway can be set by clicking `Advanced Settings`.
 

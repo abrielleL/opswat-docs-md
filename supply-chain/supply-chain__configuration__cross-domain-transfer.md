@@ -8,6 +8,37 @@
 
 This feature is designed for environments where strict separation between networks is required while still allowing controlled data flow into a secure zone.
 
+### **High Side Configuration**
+
+The **High Side** environment is the secure destination where **scanned** source code or data is transferred after passing inspection.
+
+This is typically the production or more restricted environment.
+
+#### **High Side Setup**
+
+- In your **High Side MDSSC Instance** -> Open **Settings**.
+- Navigate to the **Cross Domain Transfer** tab.
+- Select "**High Side**" to configure this as a High Side environment.
+- Accept incoming transfers using the **toggle switch**.
+- Configure your **Push Behaviour** either via **pull request** or **direct push**.
+- Turn on **Scan Before Import** to scan each incoming transfer before it is imported. This toggle is off by default.
+  - Set **Maximum Allowed Severity** to **None**, **Low**, **Medium**, or another available severity. The default is **None**. "Vulnerability findings above this severity will block the import."
+  - Leave **Block transfer if secrets are found** checked. It is checked by default.
+  - These two fields appear only when **Scan Before Import** is on.
+- Under **Pairing Secret**, click **Generate**. The secret is shown only once. Copy it now. You need it for the Low Side Setup.
+  - After the secret is generated, the field shows it masked and the button changes to **Rotate**.
+  - **Warning:** Rotating issues a new secret. Transfers from the current low side fail until you enter the new secret on the low side.
+- Click on the "**Save**" button.
+
+![](https://uploads.developerhub.io/prod/jdK6/gjth913dhn8wqjwlsqliy7gz9160jtoh9nani02gyxk7qfjew95ubmwkglbwatgg.png)
+
+To push code to the High Side, ensure your API tokens have write permissions. You may need to regenerate them if they were created with read-only access.
+
+1. [Add A GitHub Service](https://www.opswat.com/docs/supply-chain/integrations/add-a-github-service)
+2. [Add A GitLab Service](https://www.opswat.com/docs/supply-chain/integrations/add-a-gitlab-service)
+
+---
+
 ### **Low Side Configuration**
 
 The **Low Side** environment is where the source code or data resides before being scanned and transferred to the **High Side** (secure zone).
@@ -21,15 +52,18 @@ This is typically the development or less restricted environment.
 - Select "**Low Side**" to configure this as a Low Side environment.
 - Enable transfers using the **toggle switch**.
 - Enter the **Data Diode address**.
-- [Configuring an API Key](https://www.opswat.com/docs/supply-chain/configuration/configuring-an-api-key) from the **High Side** UI
+- [Configuring an API Key](https://www.opswat.com/docs/supply-chain/configuration/configuring-an-api-key) from the **High Side V1** UI
 - Enter the **API key** from the High Side as the **authorization token**.
+- Under **Pairing Secret**, paste the secret you generated on the high side. This field is required.
 - Click on the "**Save**" button.
 
-![](https://uploads.developerhub.io/prod/jdK6/oxw6beolzzrw6uktgwzq7qq0yj4ej5bdvja4iotb4hte4en82hj4686t6q7ofhtm.png)
+![](https://uploads.developerhub.io/prod/jdK6/becidt5vzysib9hvktvf3s1xfgyzeyjzpzw6rfqdueaix060nsk7qhk7cx4xb88m.png)
 
 Once the **Cross Domain Transfer** settings are configured on both sides, cross-domain transfers must also be enabled at the workflow level on the Low Side instance.
 
-This is done through the lowside interface, in the workflow creation or update screen.
+This is done through the V1 interface, in the workflow creation or update screen.
+
+The Low Side workflow sets the severity and secrets thresholds before export. The High Side **Scan Before Import** setting is a second, independent gate on import.
 
 **Setup:**
 
@@ -42,68 +76,6 @@ This is done through the lowside interface, in the workflow creation or update s
 ![](https://uploads.developerhub.io/prod/jdK6/fmuqikrbzcvotuz9z5rxzciiwu92fy7g3epsxzu5cc1uh7y850x93rbqlbnp52an.png)
 
 ---
-
-### **High Side Configuration**
-
-The **High Side** environment is the secure destination where **scanned** source code or data is transferred after passing inspection.
-
-This is typically the production or more restricted environment.
-
-#### **High Side Setup**
-
-- In your **High Side MDSSC Instance** -> Open **Settings**.
-- Navigate to the **Cross Domain Transfer** tab.
-- Select "**High Side**" to configure this as a High Side environment.
-- Accept incoming transfers using the **toggle switch**.
-- Configure your **Push Behavior** — either via **pull request** or **direct push**.
-- Click on the "**Save**" button.
-
-![](https://uploads.developerhub.io/prod/jdK6/59z5djfl2s76ypys3lvl5ldz2kjhbiu1pg0lmeoikg7xs0mjnfedrimrn9lmotle.png)
-
-To push code to the High Side, ensure your API tokens have write permissions. You may need to regenerate them if they were created with read-only access.
-
-1. [Add A GitHub Service](https://www.opswat.com/docs/supply-chain/integrations/add-a-github-service)
-2. [Add A GitLab Service](https://www.opswat.com/docs/supply-chain/integrations/add-a-gitlab-service)
-
-![](https://uploads.developerhub.io/prod/jdK6/eovjdxsv97k1fktglbeii9uq7dfwvb5rmbws506fg1k1grxn3gtlatc2mjr37aib.png)
-
-High-side scanning is enabled through the "**Scan Before Import**" feature, which executes scans on the high side with enforcement gates that control and audit cross-domain transfers.
-This capability supports organizations with strict data compartmentalization and security requirements:
-
-- Administrators can configure scan policies by setting a maximum allowed severity threshold—vulnerability findings above this level will block the import.
-- Additionally, a dedicated option allows organizations to block transfers whenever secrets are detected, adding an extra layer of protection against credential exposure in software supply chain assets.
-
----
-
-### **Supported Services**
-
-The following cross-domain transfer routes are supported:
-
-#### Source code
-
-| Source | Destination |
-| ---- | ---- |
-| ![](https://cdn.simpleicons.org/gitlab) GitLab | ![](https://cdn.simpleicons.org/gitlab) GitLab |
-| ![](https://cdn.simpleicons.org/gitlab) GitLab | ![](https://cdn.simpleicons.org/github) GitHub |
-| ![](https://cdn.simpleicons.org/github) GitHub | ![](https://cdn.simpleicons.org/gitlab) GitLab |
-| ![](https://cdn.simpleicons.org/github) GitHub | ![](https://cdn.simpleicons.org/github) GitHub |
-
-#### Containers
-
-| Source | Destination |
-| ---- | ---- |
-|  Amazon ECR | ![](https://cdn.simpleicons.org/harbor) Harbor |
-| ![](https://cdn.simpleicons.org/harbor) Harbor |  Amazon ECR |
-| ![](https://cdn.simpleicons.org/sonatype) Nexus Containers | ![](https://cdn.simpleicons.org/sonatype) Nexus Containers |
-
-#### Binaries
-
-| Source | Destination |
-| ---- | ---- |
-| ![](https://cdn.simpleicons.org/jfrog) JFrog Binary | ![](https://cdn.simpleicons.org/jfrog) JFrog Binary |
-| ![](https://cdn.simpleicons.org/jfrog) JFrog Binary | ![](https://cdn.simpleicons.org/sonatype) Nexus Binary |
-| ![](https://cdn.simpleicons.org/sonatype) Nexus Binary | ![](https://cdn.simpleicons.org/jfrog) JFrog Binary |
-| ![](https://cdn.simpleicons.org/sonatype) Nexus Binary | ![](https://cdn.simpleicons.org/sonatype) Nexus Binary |
 
 ### Operating
 
@@ -122,36 +94,12 @@ Once both MDSSC instances are individually set up, you will need to link the con
 
 Once the feature is configured:
 
-1. **Initiate a scan in lowside** with the previously configured workflow.
+1. **Initiate a scan in V1** with the previously configured workflow.
 2. Use the **live logs** on both the Low Side and High Side to monitor the transfer in real time.
 3. If the transfer completes successfully, your code will now be available on the High Side.
 
 ![](https://uploads.developerhub.io/prod/jdK6/gfoykthc17waglxr04t2zbhb0ql4tjdvtbxwoknhyr5eumylovlf7tbczbz2kwwy.png)
 
-### Recommended Optical Diode Setup
+---
 
-1. Enter on the **NetWall Blue Server**, go to Streams and create a new HTTP one:
-
-![](https://uploads.developerhub.io/prod/jdK6/u9mzd9iiftzzs6fd74kfbdugrblnbnm98by004e3i5ok28yds1uncakljs657gz0.png)
-
-2. Complete with the following settings:
-
-![](https://uploads.developerhub.io/prod/jdK6/rgnvrd56r4uprqn2volx9501cpa8595kavz3fizlk5ihys18ptnk6khirwlc46jk.png)
-
-3. Click on **Submit**
-
-![](https://uploads.developerhub.io/prod/jdK6/n8ft6jwrk1qcqpk8xa26g0dy97k3syxvdabtinc8vx4csn0gnto8gb52jvjacdcf.png)
-
-Afterwards, go to **Redwall Server** and repeat the procedure as following:
-
-1. Add a new HTTP Stream:
-
-![](https://uploads.developerhub.io/prod/jdK6/n699mnthzefj8kxbvbb8ut3y7zk4noj5bd5vzdg9cpgtmwrbfb43b3epqzai7y5p.png)
-
-2. Complete with the following settings:
-
-![](https://uploads.developerhub.io/prod/jdK6/gf392pll805a3znhop0ub7hxx7ed99t89ocfwbqclo1h0cd6zwdm9gco2b8vrkfx.png)
-
-3. Click on submit:
-
-![](https://uploads.developerhub.io/prod/jdK6/smfo88ozgz7ks2yo7buatzpvv0124kwc4e6rm1epz80jyvyx3wvdbyyp6funm08f.png)
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

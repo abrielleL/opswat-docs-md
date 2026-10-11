@@ -2,6 +2,7 @@
 
 # Quick start
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [**Prerequisites**](/docs/mdcluster/container-deployment/quick-start#prerequisites)
 
 - **Kubernetes 1.31.x** with a `kubectl` context pointing at the cluster
@@ -40,6 +41,8 @@ replicas: 1
 service:
 type: LoadBalancer
 callback-service:
+replicas: 1
+download-service:
 replicas: 1
 secrets:
 # --- Bootstrap administrator account ---

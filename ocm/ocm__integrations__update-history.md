@@ -2,6 +2,8 @@
 
 # Update History
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The **Update History** page, located under the **Events And History** menu, contains the module update history of all MetaDefender Core instances managed by OPSWAT Central Management.
 
 Info

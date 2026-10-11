@@ -2,6 +2,8 @@
 
 # Adding an existing MetaDefender Email Gateway Security instance
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The following guideline describes how to add an existing MetaDefender Email Gateway Security instance to OPSWAT Central Management.
 
 1. Go to the **MetaDefender** **Email Gateway Security** management page under **Inventory** in the sidebar.

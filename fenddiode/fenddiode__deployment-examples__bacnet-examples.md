@@ -2,6 +2,7 @@
 
 # BACnet Examples
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Network/System Requirements](/docs/fenddiode/deployment-examples/bacnet-examples#networksystem-requirements)
 
 The Fend Diode currently supports listen mode for BACnet networks. Listen mode gathers all supported traffic passing over a network and sends it through the diode to a designated MQTT, Fend Cloud, or TCP server endpoint. For a list of BACnet commands currently supported see [Appendix IV: List of Supported BACnet Commands](https://www.opswat.com/docs/fenddiode/appendices/appendix-iv-list-of-supported-bacnet-commands). To install a diode in BACnet listen mode, the BACnet network traffic needs to be port mirrored to the input side of the diode, as follows:

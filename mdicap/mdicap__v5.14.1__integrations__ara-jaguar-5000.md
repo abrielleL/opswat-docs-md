@@ -2,6 +2,7 @@
 
 # ARA JAGUAR 5000
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Configuration via Web-based manager](/docs/mdicap/v5.14.1/integrations/ara-jaguar-5000#configuration-via-web-based-manager)
 
 1. In your browser log into Jaguar's Web Administration

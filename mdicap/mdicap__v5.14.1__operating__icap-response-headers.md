@@ -2,6 +2,8 @@
 
 # ICAP response headers
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Besides the standard ICAP headers following response headers are used by the MetaDefender ICAP Server:
 
 | Header name | Description | Example | Note |

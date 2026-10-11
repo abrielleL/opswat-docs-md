@@ -2,6 +2,25 @@
 
 # Archived release notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## [Version v2.9.1](/docs/mdcluster/release-notes/mddc-archived-release-notes#version-v291)
+
+Release Date: 15 September 2026
+
+**Improvements**
+
+Improved MD Core resource management when scanning large archives to reduce excessive memory and disk usage and prevent archive processing from affecting other scans. Archive extraction now uses dedicated processing resources and releases threads while waiting, improving stability under heavy archive workloads.
+
+**Security Enhancements**
+
+- Upgraded OpenSSL to version **3.5.8** to address known security vulnerabilities.
+
+**Bug Fixes**
+
+- Fixed an issue that could make MD Cluster Workers unusable on non-English Windows installations due to locale-dependent CPU metric collection.
+- Fixed an issue that could cause Debian-based Docker image builds to fail when retrieving the `libtiff5` package required by Deep CDR.
+- Fixed issues in MD Cluster File Storage gzip processing that could cause processing to hang on malformed data, accept truncated compressed content, or decompress data without a size limit.
+
 ## [Version v2.9.0](/docs/mdcluster/release-notes/mddc-archived-release-notes#version-v290)
 
 Release Date: 26 August 2026

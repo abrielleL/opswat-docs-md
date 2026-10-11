@@ -1,127 +1,103 @@
 <!-- source: https://www.opswat.com/docs/filescan/release-notes/release-notes-latest -->
 
-# Release Notes for v3.2.0
+# Release Notes for v3.3.0
 
-### [Date: 31st July 2026](/docs/filescan/release-notes/release-notes-latest#date-31st-july-2026)
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+### [Date: 8th October 2026](/docs/filescan/release-notes/release-notes-latest#date-8th-october-2026)
 
 Warning
 
-**Upgrading directly** from versions prior to 2.5.1 to 3.2.0 is **not possible!**
+**Upgrading directly** from versions prior to 2.5.1 to 3.3.0 is **not possible!**
 
-**Recommended Upgrade Path:** First upgrade to **2.5.1**, then install **3.2.0**.
+**Recommended Upgrade Path:** First upgrade to **2.5.1**, then install **3.3.0**.
 
-## [MetaDefender Aether™ 3.2.0 (including MetaDefender Sandbox™ capabilities)](/docs/filescan/release-notes/release-notes-latest#metadefender-aether-320-including-metadefender-sandbox-capabilities)
+## [MetaDefender Aether™ v3.3.0 (including MetaDefender Sandbox™ capabilities)](/docs/filescan/release-notes/release-notes-latest#metadefender-aether-v330-including-metadefender-sandbox-capabilities)
 
-[MetaDefender Aether](https://www.opswat.com/products/metadefender/aether) 3.2.0 expands the solution into a five-layer Zero-Day Detection pipeline and gives analysts clearer visibility into how each layer contributes to a file verdict. The release adds [Predictive Alin AI](https://www.opswat.com/technologies/predictive-alin-ai) for Pre-Execution Static Analysis, strengthens threat attribution, improves behavioral analysis of executable malware, expands detection for emerging evasion techniques, and provides broader operational logging.
+With the release of MetaDefender Aether v3.3.0, Aether's analysis capability has now been extended to support LLM Scanning. This new capability will see Model Files both Statically and Dynamically analysed to ensure that they are clean from any threats.
 
-## [**What’s new**](/docs/filescan/release-notes/release-notes-latest#whats-new)
+Organizations are adopting open-source and third-party models faster than they can review them. An AI model is not just passive data. It can carry executable code and expose an interface that can be manipulated. A single model can compromise every system that loads it, or quietly act against the organization that deploys it.
 
-**Five-Layer Zero-Day Detection with Predictive Alin AI**
+The new [LLM Scanning](/docs/filescan/datasheet/scanning-ai-models-for-security-risks) feature makes Aether more powerful. It checks the model itself and how the model behaves:
 
-MetaDefender Aether now includes Predictive Alin AI as the new Layer 2 for Static Analysis, expanding the threat processing pipeline from four layers to five:
+- [LLM Static Analysis](/docs/filescan/datasheet/static-analysis) inspects the model file pre-execution, and finds hidden code that would run the moment the model is loaded.
 
-1. **Threat Reputation:** Checks files and infrastructure against known intelligence
+- [LLM Dynamic Analysis](/docs/filescan/datasheet/dynamic-analysis) tests the running model with adversarial prompts. It shows whether the model can be hijacked or jailbroken, leaks data or produces harmful output.
 
-2. **Static Analysis:** Uses Predictive Alin AI to assess malicious intent before execution
+Teams can now bring open-source and third-party models into their pipelines, registries and production systems with confidence.
 
-3. **Dynamic Analysis:** Emulates suspicious and unresolved files to expose runtime behavior
+## [Key features](/docs/filescan/release-notes/release-notes-latest#key-features)
 
-4. **Threat Scoring:** Correlates evidence into a confidence-based risk score and verdict
+### [**LLM Scanning**](/docs/filescan/release-notes/release-notes-latest#llm-scanning)
 
-5. **Threat Hunting:** Connects samples to related malware families, infrastructure, and campaigns
+Submit a model to MetaDefender Aether in the same way you submit any other file. Aether runs two analyses: static analysis of the model file and dynamic analysis of the running model. If Aether finds a threat, Core blocks the file.
 
-Image Description: MetaDefender Aether’s five-layer Zero-Day Detection pipeline applies progressively deeper analysis while feeding newly discovered intelligence back into earlier detection layers.
+**Static analysis**
 
-**Predictive Alin AI** assesses files for malicious intent Pre-Execution, before emulation or sandbox analysis. This introduces an earlier, model-based decision point that accelerates triage and helps security teams focus deeper Dynamic Analysis on files that require further investigation.
+Aether never loads or runs the model. It reads only the parts of the file that can carry code or configuration and skips over the weights, so memory use stays low even for very large models.
 
-The new layer strengthens the full Aether pipeline without replacing any existing detection stage. Reputation identifies known indicators, Predictive Alin AI assesses unknown files statically, Dynamic Analysis exposes runtime behavior, Threat Scoring consolidates the evidence, and Threat Hunting connects the file to related threats and campaigns.
+| **Format** | **What Aether inspects** | **What it detects** |
+| --- | --- | --- |
+| Pickle and PyTorch | Every opcode, on a symbolic pickle VM | Code that runs on load, hidden imports, encoded and layered payloads built to evade simple scanners |
+| SafeTensors | Header, tensor table and offsets | Malformed headers, out-of-bounds offsets, data hidden in bytes that no tensor covers |
+| GGUF | Metadata, including the chat template | Jinja template injection |
+| ONNX | Graph, nodes and external-data references | Path traversal, custom and Python-backed operators |
+| Keras | Archive, model config and HDF5 attributes | Lambda-layer code execution, config-driven module loading |
+| TensorFlow SavedModel | Graph and function library | Dangerous operators, such as Python execution |
 
-**Clearer Evidence Across the Aether Processing Engine**
+Any payload Aether finds inside the file, including data hidden between tensors, is extracted and analysed on its own.
 
-Scan results now present a numbered, sequential view of each Aether layer that analyzed the file, including reputation, static analysis, dynamic analysis, threat scoring, and threat hunting.
+**Dynamic analysis**
 
-Each layer’s contribution is displayed directly within the result, making it easier for analysts to understand how the final verdict was reached.
+Aether connects to your inference server through its OpenAI-compatible API and runs 38 attack probes against the live model with 600+ adversarial prompts, covering 9 of the OWASP Top 10 for LLM Applications categories.
 
-Predictive Alin AI results are shown alongside the multiscanning verdict, allowing analysts to compare signature-based findings with the model-based prediction for the same sample.
+| **OWASP category** | **Probes** | **What Aether tests** |
+| --- | --- | --- |
+| LLM01 Prompt Injection | 14 | Direct and indirect injection, agent data injection, jailbreaks and safety bypass, delayed instructions, encoding and Unicode tricks, roleplay framing, multi-step chaining |
+| LLM02 Sensitive Information Disclosure | 6 | Leaks of sensitive data, credentials, personal data and documents; model extraction |
+| LLM03 Supply Chain | 3 | AI supply chain compromise, hallucinated software packages, tool and context poisoning |
+| LLM04 Data and Model Poisoning | 3 | RAG poisoning, persistent memory poisoning, training data poisoning |
+| LLM05 Improper Output Handling | 5 | Unsafe code execution, insecure output, malware and exploit code, harmful content |
+| LLM06 Excessive Agency | 1 | Misuse of agent tools |
+| LLM07 System Prompt Leakage | 2 | System prompt leaks, guardrail and reasoning disclosure |
+| LLM09 Misinformation | 3 | Disinformation, fraud and social engineering content, malicious automation |
+| LLM10 Unbounded Consumption | 1 | Resource exhaustion and cost abuse |
 
-Image Description: MetaDefender Aether presents each layer’s contribution in sequence, giving analysts a clear evidence trail behind the final verdict.
+**Examples include:**
 
-**More Actionable Threat Attribution**
+- Prompt injection and jailbreaks, including encoded, multi-step and roleplay attacks
+- Leaks of system prompts, credentials and personal data
+- Requests for malware and exploit code
+- Misuse of agent tools
+- Resource exhaustion and cost abuse
 
-Threat attribution now provides clearer, evidence-backed classifications in place of ambiguous or heavily qualified tags.
+Probes run in order of severity. Each scan plants single-use canary tokens, so if one appears in a response, the leak is confirmed. Every finding shows the prompt, the model's response, the severity, the OWASP category and the rule that flagged it.
 
-The improved attribution model gives analysts more direct information about a threat’s likely identity and intent. This reduces the time spent interpreting results, supports faster investigation decisions, and increases confidence in downstream response.
+Static and dynamic analysis are separate options, so you can run either one or both.
 
-Image Description: MetaDefender Aether calculates threat attribution independently for the submitted file and for files downloaded or extracted during analysis.
+**MITRE ATLAS Mapping**
 
-**More Complete Executable Behavior Analysis**
+- Findings on AI models are now mapped to MITRE ATLAS, the MITRE framework for attacks on AI systems.
+- ATLAS techniques are shown in the report, and you can filter reports by technique.
+- The JSON report includes the ATLAS data, ready for your SIEM or SOAR.
 
-Aether’s Portable Executable (PE) analysis now supports a configurable virtual file system, allowing samples to interact with the files and paths they expect during emulation.
+### [**Searchable Threat Attribution**](/docs/filescan/release-notes/release-notes-latest#searchable-threat-attribution)
 
-This enables malware with file-system dependencies to follow more of its intended execution flow, giving analysts a more complete view of file activity, payload behavior, and related indicators of compromise. It also helps reduce the risk that environment-dependent malicious behavior remains hidden during analysis.
+- **Advanced search:** Find every sample attributed to a malware family.
+- **Packer attribution:** Native packers and .NET protectors are now identified separately.
+- **Less noise:** Low-confidence attribution tags are no longer shown.
+- **Extracted files:** Attribution found on an extracted file now also appears on the submitted file.
 
-Analysts can define files expected by a sample, providing greater control when investigating malware that relies on specific file or path conditions.
+### [**More Evidence from Emulation**](/docs/filescan/release-notes/release-notes-latest#more-evidence-from-emulation)
 
-**Detection for Emerging Evasion Techniques**
+- **HTTP traffic**: Emulation now records the full request and response for each HTTP call, including headers and body.
+- **Delayed macros:** VBA emulation now supports Application.OnTime, which malware uses to delay its payload.
 
-MetaDefender Aether 3.2.0 adds detection coverage for techniques designed to conceal attacker infrastructure or interfere with automated analysis.
+### [**Deeper Unpacking**](/docs/filescan/release-notes/release-notes-latest#deeper-unpacking)
 
-New coverage includes:
-
-- **EtherHiding**, which conceals threat actor infrastructure or malicious instructions within blockchain transactions.
-
-- **Intentionally malformed .NET assemblies**, which use manipulated file structures to disrupt or evade automated analysis tools.
-
-These additions help analysts identify threats that attempt to hide behind decentralized services or structural manipulation.
-
-Image Description: MetaDefender Aether extracts the smart-contract address, JSON-RPC call, and blockchain endpoints used by an EtherHiding sample.
-
-**More Accurate Remote Template Injection Detection**
-
-Remote template injection analysis now uses an improved link detection and URL classification pipeline to distinguish genuine injection attempts from ordinary embedded links more accurately.
-
-The updated detection:
-
-- Corrects two indicators that could classify legitimate URLs as malicious.
-
-- Detects malicious IP links concealed through octal encoding.
-
-- Improves differentiation between benign embedded links and suspicious remote template activity.
-
-These changes reduce false positives caused by legitimate URLs while preserving coverage for genuine and obfuscated remote template injection attempts.
-
----
+- **Installers**: Better extraction from nested installers and more installer types, including PyInstaller, py2exe, ps2exe and Nuitka files.
 
 ## [**Improvements**](/docs/filescan/release-notes/release-notes-latest#improvements)
 
-**Centralized and Expanded Syslog Management**
-
-Syslog configuration has moved from the broker configuration file to the Aether Admin Panel, providing a more accessible and centralized way to manage logging settings.
-
-Existing syslog settings are not migrated automatically and must be reconfigured in the Admin Panel. See the [CEF Syslog Feedback](/docs/filescan/configuration/cef-syslog-feedback) documentation for migration details.
-
-Syslog coverage has also been expanded to include:
-
-- Authentication events
-
-- Administrator setting changes
-
-- Scan result summaries
-
-This gives security and audit teams greater visibility into user activity, configuration changes, and file analysis results.
-
-**Broader Detection and Intelligence Coverage**
-
-MetaDefender Aether 3.2.0 expands detection and threat intelligence coverage across several additional areas:
-
-- New detection engineering for wiper malware.
-
-- OCR-based CAPTCHA identification, including obfuscated but visually rendered fake CAPTCHAs used in ClickFix attacks.
-
-- New malware configuration extractors for PrivateLoader and Quasar RAT.
-
-- Expanded IOC coverage in the local Reputation database.
-
-Together, these improvements give analysts broader visibility into destructive malware, social-engineering techniques, malware infrastructure, and threats operating in connected, offline, or air-gapped environments.
+- **Usage Reporting:** Aether now shares anonymous usage metrics with OPSWAT through OpenTelemetry, to help us improve performance and prioritize the features you rely on. Only operational data is collected. No file contents, no personal data. Usage Reporting is on by default, and you can turn it off at any time in the Admin Panel.
 
 See the "Technical Datasheet" for a complete list of features: <https://docs.opswat.com/filescan/datasheet/technical-datasheet>

@@ -2,6 +2,8 @@
 
 # Firmware & Software Downloads
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The latest firmware releases, software tools, and code examples can be found on MyOPSWAT (<https://my.opswat.com/>).
 
 To get started, create a MyOPSWAT account by clicking "Create new" on the main login screen. Provide the requested information and then log in.

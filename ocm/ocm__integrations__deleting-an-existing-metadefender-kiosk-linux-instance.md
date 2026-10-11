@@ -2,6 +2,8 @@
 
 # Deleting an existing MetaDefender Kiosk Linux instance
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The following guideline describes how to delete a MetaDefender Kiosk Linux instance from OPSWAT Central Management.
 
 1. Navigate to the **MetaDefender Kiosk Linux** management page under **Inventory** in the sidebar.

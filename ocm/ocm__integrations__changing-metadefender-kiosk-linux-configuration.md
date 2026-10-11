@@ -2,6 +2,8 @@
 
 # Changing MetaDefender Kiosk Linux Configuration
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The following guideline describes how to change the configuration of a MetaDefender Kiosk Linux instance remotely.
 
 1. Go to the **MetaDefender Kiosk Linux** management page under **Inventory** in the sidebar.

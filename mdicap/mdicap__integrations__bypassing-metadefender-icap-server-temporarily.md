@@ -2,6 +2,8 @@
 
 # Bypassing MetaDefender ICAP Server temporarily
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 This guide describes how to enable and disable ICAP server on Symantec Blue Coat ProxySG.
 
 Warning

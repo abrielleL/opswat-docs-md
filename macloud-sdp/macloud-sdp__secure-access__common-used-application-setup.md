@@ -2,7 +2,7 @@
 
 # Common Used Applications
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 Typical port and protocols for integrating applications with Software Defined Perimeter(SDP):
 

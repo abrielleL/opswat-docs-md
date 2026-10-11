@@ -2,6 +2,8 @@
 
 # Workflow Configuration Template
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The Workflow templates page is found under `Workflow Management` > `Templates` after successful login.
 
 These workflow templates define the processing methods that can be used by the rules.
@@ -145,6 +147,8 @@ Setting '**Enable file hash for only selected types**' provides a list of suppor
 - By default, MD5, SHA1 and SHA256 are selected. SHA512 is unselected to avoid affecting processing performance, despite not much considerable.
 - SHA256 cannot be deselected.
 - File-based Vulnerability Assessment engine requires SHA1. Therefore, when SHA1 is deselected, it is expected to receive the result "Skipped the assessment" from the engine.
+
+**File download timeout**: Scan-from-link is the feature supporting users to process file by just specifying a direct download link via the [header "downloadfrom"](/docs/mdcluster/api-gateway#fileanalysispost), instead of sending a payload in HTTP(S) request body. You are able to define timeout for file downloading process of this feature.
 
 By enabling '**Global Timeout**' (disabled by default), application provides a global timeout for entire processing applied to every scan request.
 

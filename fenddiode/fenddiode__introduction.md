@@ -2,6 +2,8 @@
 
 # Introduction
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Welcome to the User’s Manual for the Fend Data Diode XE5, SE5, CE5, XE15, SE15, and CE15 Models.
 
 ## [**WARNING**](/docs/fenddiode/introduction#warning)

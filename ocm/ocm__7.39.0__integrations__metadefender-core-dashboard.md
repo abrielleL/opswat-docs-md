@@ -2,6 +2,8 @@
 
 # MetaDefender Core Dashboard
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 OPSWAT Central Management's MetaDefender Core Dashboard gives a general overview of the status and activities of all managed MetaDefender Core instances.
 
 Warning

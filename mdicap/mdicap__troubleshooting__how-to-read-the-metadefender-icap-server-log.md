@@ -2,6 +2,8 @@
 
 # How to read the MetaDefender ICAP Server log
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 - [Linux](/docs/mdicap/troubleshooting/how-to-read-the-metadefender-icap-server-log#linux)
 
   - [Files](/docs/mdicap/troubleshooting/how-to-read-the-metadefender-icap-server-log#files)

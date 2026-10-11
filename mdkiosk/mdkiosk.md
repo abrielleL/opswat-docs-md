@@ -4,7 +4,7 @@
 
 # Kiosk Windows
 
-#### v4.8.5 [Latest]
+#### v4.8.6 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mdkiosk/release-notes)
 

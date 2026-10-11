@@ -2,6 +2,8 @@
 
 # Appendix I: Recommended Transfer Timings by Protocol
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Because of the unidirectional nature of a data diode, confirmation of data receipt cannot be sent upstream to the originating device. Based on the quantity and size of the data being sent and the speed of the local network, different protocols require different cycle times to ensure that data flows in an optimal manner. The tables below show suggested timings for different protocol configurations:
 
 ## [FTP / FTPS / SFTP Buffered (Non-Streaming) Transfer Timings](/docs/fenddiode/appendices/appendix-i-recommended-transfer-timings-by-protocol#ftp--ftps--sftp-buffered-non-streaming-transfer-timings)

@@ -2,6 +2,8 @@
 
 # MetaDefender Drive v4.3.4
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 |  |  |
 | --- | --- |
 | **Released on Aug 11, 2025** | This release includes user experience enhancements and visibility improvements |

@@ -2,6 +2,8 @@
 
 # CIS Level 2 Guidelines - Linux
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Info
+
 Support Ubuntu Pro 22.04, 24.04
 
 For more details about the Center for Internet Security (CIS) please refer to the [**official documentation**](https://ubuntu.com/security/certifications/docs/usg/cis).

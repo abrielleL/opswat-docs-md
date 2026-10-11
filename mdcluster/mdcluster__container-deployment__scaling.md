@@ -2,6 +2,8 @@
 
 # Scaling
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Two kinds of scaling apply to MetaDefender Cluster, and they work very differently.
 
 **MetaDefender Cluster Workers** scale freely and without downtime. They register themselves with the MetaDefender Cluster Control Center on start and unregister on stop, so adding or removing replicas needs no coordination.
@@ -17,7 +19,8 @@ Scale each instance type independently, according to which resource is the bottl
 helm upgrade mdcluster ./mdcluster --reuse-values \
 --set workers.ometascan.replicas=5 \
 --set workers.api-gateway.replicas=3 \
---set workers.callback-service.replicas=3
+--set workers.callback-service.replicas=3 \
+--set workers.download-service.replicas=3
 ## [MetaDefender Cluster File Storage](/docs/mdcluster/container-deployment/scaling#metadefender-cluster-file-storage)
 
 **Never scale MetaDefender Cluster File Storage in.** Files are distributed across the instances, not copied to all of them, so removing a replica removes the MetaDefender Cluster Control Center's only route to every file that lived there. With the default `FILE_STORAGE_MAX_REPLICA: 1` each file has exactly one copy, so scaling in loses access to a share of your stored files immediately — and the MetaDefender Cluster Control Center reports nothing wrong.
@@ -33,7 +36,8 @@ Scaling MetaDefender Cluster File Storage requires **downtime**.
    helm upgrade mdcluster ./mdcluster --reuse-values \
    --set workers.ometascan.replicas=0 \
    --set workers.api-gateway.replicas=0 \
-   --set workers.callback-service.replicas=0
+   --set workers.callback-service.replicas=0 \
+   --set workers.download-service.replicas=0
    # Wait for every worker pod to finish draining
 2. **Scale MetaDefender Cluster File Storage:**
 
@@ -46,7 +50,8 @@ Scaling MetaDefender Cluster File Storage requires **downtime**.
    helm upgrade mdcluster ./mdcluster --reuse-values \
    --set workers.ometascan.replicas=5 \
    --set workers.api-gateway.replicas=3 \
-   --set workers.callback-service.replicas=3
+   --set workers.callback-service.replicas=3 \
+   --set workers.download-service.replicas=3
 
 Finally, confirm on the **Services** page of the console that every MetaDefender Cluster File Storage replica is listed and healthy.
 

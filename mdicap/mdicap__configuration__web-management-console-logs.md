@@ -2,6 +2,8 @@
 
 # Web Management Console logs
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The MetaDefender ICAP Server Web Management Console and REST interface is hosted by the nginix web server. Web Management Console and REST interface logs are written by nginx.
 
 ## [Linux](/docs/mdicap/configuration/web-management-console-logs#linux)

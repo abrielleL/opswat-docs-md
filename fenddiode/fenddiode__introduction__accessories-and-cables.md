@@ -2,6 +2,8 @@
 
 # Accessories and Cables
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Fend Data Diodes are shipped with various accessories, including optional DIN rail mounts and custom power cable connectors. This section provides an overview of these accessories
 
 ## [12V Power Supplies (Standard)](/docs/fenddiode/introduction/accessories-and-cables#12v-power-supplies-standard)

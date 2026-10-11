@@ -2,6 +2,8 @@
 
 # Appendix VI: Secondary Communication Indicator Light Patterns
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 This section contains tables for cross-referencing patterns from the Red/Green Secondary Communication Indicator LED bank. Bank B is the secondary communication indicator bank for the input side of the diode. Bank D is the secondary communication indicator bank for the output side of the diode.
 
 ## [Physical Connection Status for Ethernet](/docs/fenddiode/appendices/appendix-vi-secondary-communication-indicator-light-patterns#physical-connection-status-for-ethernet)

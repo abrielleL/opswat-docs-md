@@ -2,6 +2,7 @@
 
 # Inaccessible Web Management Console
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Connection refused or browser is waiting](/docs/mdicap/troubleshooting/inaccessible-web-management-console#connection-refused-or-browser-is-waiting)
 
 The Web Management Console can not be accessed from browser. You get an error message (connection refused) or your browser is waiting for reply.

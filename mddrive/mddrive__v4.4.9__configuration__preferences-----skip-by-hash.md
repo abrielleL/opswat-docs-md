@@ -2,11 +2,13 @@
 
 # Preferences → Skip By Hash
 
-**Skip by Hash** lets you exclude a specific file from being scanned on later runs, matched by its file hash rather than its name or path. In MetaDefender Drive 4.4.9, the list is managable from OPSWAT Central Management for a Drive enrolled to it — see [Manage MetaDefender Drives with OPSWAT Management](https://www.opswat.com/docs/mddrive/configuration/managing-drives-with-central-management) for enrollment details.
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
+The **Skip by Hash** feature enables you to exclude a specific file from subsequent scans, identified by its file hash, rather than its name or path. In MetaDefender Drive 4.4.9, the list can be managed from OPSWAT Central Management for any enrolled MetaDefender Drive. See [Manage MetaDefender Drives with OPSWAT Management](https://www.opswat.com/docs/mddrive/configuration/managing-drives-with-central-management) for enrollment instructions.
 
 ## [Add an entry](/docs/mddrive/v4.4.9/configuration/preferences-----skip-by-hash#add-an-entry)
 
-1. In OPSWAT Central Management, open the managed Drive's **Preferences** > **Skip by Hash**.
+1. Navigate to **Preferences** > **Skip by Hash**.
 2. Click **Edit Settings**.
 3. Click **Add**.
 4. Enter the **File name**.

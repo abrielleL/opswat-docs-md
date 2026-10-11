@@ -432,7 +432,7 @@ OK
 | os_type | string | Operating system family (such as Windows or Linux). |  |
 | machine_uuid | string | Unique hardware UUID of the host. |  |
 | logged_in_user | string | User logged in when the device was scanned. |  |
-| domain | string | Active Directory domain or workgroup name. |  |
+| domain_name | string | Active Directory domain or workgroup name. |  |
 | bios_info3 fields | object | BIOS information, including name, version, and release_date. |  |
 | name | string |  |  |
 | version | string |  |  |
@@ -472,8 +472,33 @@ OK
 | site_zone | string | Site or zone associated with the device, if available. |  |
 | last_scanned | integer | Time when the host was last scanned (Unix epoch milliseconds). |  |
 | protocol_usage | string | Reported network protocol usage, when available. |  |
+| bios_release_date | integer | The date and time when the computer’s BIOS was released. A value of 0 means this information is not available |  |
+| bios_type | string | The type of firmware your computer uses, such as UEFI or BIOS |  |
+| secure_boot | string | Whether Secure Boot is turned on or off, as reported by the computer (e.g., enabled or disabled). The value is stored as text and may vary depending on the computer, so it is not limited to a fixed set of values |  |
+| cpu_architecture | string | Processor architecture, e.g. x64. |  |
+| processor_count | integer | The number of physical processors installed on your computer |  |
+| core_count | integer | The total number of processor cores available on the device. |  |
+| memory_available_bytes | number | The amount of memory available for use when the information was collected, measured in bytes. Note that memory_total_mb represents total memory in megabytes (MB). Since these fields use different units, convert them to the same unit before comparing them |  |
+| os_service_pack | string | The service pack version of the operating system, if applicable (e.g: 0.0) |  |
+| os_product_id | string | The operating system's product id |  |
+| os_language | string | Shows the language and region currently set on the operating system, e.g: English (United States) |  |
+| os_install_time | integer | The date and time when the operating system was installed on the device. 0 means this information is not available |  |
+| ie_version | string | The version of Internet Explorer installed on the device, if available |  |
+| ie_service_pack | string | The service pack version of Internet Explorer installed on the device, if available |  |
+| ie_update_version | string | The version number of Internet Explorer installed on the device, if available |  |
+| windows_directory | string | The Windows folder path (e.g: C:\WINDOWS) where Windows is installed. Backslashes are displayed as entered |  |
+| system_directory | string | The system folder (e.g: C:\WINDOWS\system32) |  |
+| system_drive_total_bytes | integer | The total capacity of the drive where the operating system is installed, measured in bytes |  |
+| system_drive_free_bytes | integer | Free space available on the same drive, measured in bytes |  |
+| boot_device | string | Identifies the device or disk volume that the computer started from, such as \Device\HarddiskVolume1 |  |
+| timezone | string | The computer’s local time zone, including its UTC offset (e.g: UTC+07:00 for Vietnam) |  |
+| system_date_time | integer | The timestamp when the information was collected, based on the computer's system clock, in epoch milliseconds. It may differ from last_scanned if the computer's clock is inaccurate |  |
 
-Expand 400
+Expand 201
+
+OK
+
+400
 
 Bad Request
 

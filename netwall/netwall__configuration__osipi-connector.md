@@ -2,6 +2,8 @@
 
 # AVEVA PI Connector
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The NetWall AVEVA Pi Connector extracts values, PI point schema and pertinent Digital State Tables from one or more PI systems in the source (BLUE) domain and stores those values on a designated PI system in the destination (RED) domain.
 
 The Pi Connector also performs historical backfill. Historical backfill alleviates any gaps in archive data on the destination PI system.
@@ -243,8 +245,16 @@ Go to the High Availability tab and fill in the following fields:
 6. **Preferred Pi Tag:** Pi Tag used in the system's preferred site
 7. **Enable:** Tick the checkbox to enable High Availability configuration for redundant systems.
 
-Click on Submit button to save the changes.
+Click on **Submit** button to save the changes.
 
-## [Statistics](/docs/netwall/configuration/osipi-connector#statistics)
+## [Connector Statistics](/docs/netwall/configuration/osipi-connector#connector-statistics)
 
-Users can check AVEVA PI Statistics by clicking on the Statistics tab in AVEVA PI Connector section of the menu.
+The AVEVA Pi Connector publishes as wide range of statistics that can be utilized for Connector performance monitoring and troubleshooting,
+
+To view statistics, navigate to **AVEVA Pi**  under the **Configuration** menu and click on the **Statistics** tab.
+
+#### [Statistics Tag Export](/docs/netwall/configuration/osipi-connector#statistics-tag-export)
+
+Statistics Tag Export generates and exports statistics tags via a CSV file. The tags can be imported into the Pi Server for AVEVA Pi Connector monitoring.
+
+To export statistics tags , navigate to **AVEVA Pi**  under the **Configuration** menu and click on the **Statistics** tab. Select **Export Pi Tags** and a CSV file will be automatically generated. One or multiple CSV files will be generated based on your specific configuration.

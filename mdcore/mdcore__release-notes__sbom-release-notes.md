@@ -2,6 +2,24 @@
 
 # SBOM release notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## [v5.0.0](/docs/mdcore/release-notes/sbom-release-notes#v500)
+
+Release date: 10/05/2026
+
+- Introduce CBOM (Cryptographic Bill of Materials):
+
+  - Report cryptographic algorithms, libraries, certificates, protocols, and related material alongside software components.
+  - Classify cryptographic assets as quantum-resistant or quantum-vulnerable for post-quantum migration planning.
+  - Detect certificates embedded in binary files.
+- Introduce AIBOM (AI Bill of Materials):
+
+  - Report AI components and models, including their licenses, in the same unified report.
+- Add dedicated SBOM, CBOM, and AIBOM views, and export them together or separately, in JSON or PDF.
+- Restructure the scan result into per-module blocks with an engine-level summary, verdict, and risk count (requires MetaDefender Core V5.23+); earlier Core versions keep the previous format, without CBOM or AIBOM.
+
+- Enhance SBOM detection of CycloneDX report with all types.
+
 ## [v4.9.1](/docs/mdcore/release-notes/sbom-release-notes#v491)
 
 Release date: 8/27/2026

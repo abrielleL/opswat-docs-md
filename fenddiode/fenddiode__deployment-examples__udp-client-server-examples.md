@@ -2,6 +2,8 @@
 
 # UDP Client/Server Examples
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The UDP client/server feature allows for the transfer of protocol-independent data using UDP. This feature accepts any and all data that can be sent over UDP. All data sent through the diode using this protocol will appear to the target UDP Server as though it originated from the diode. All information from layers 1-4 will be stripped when ingested by the diodes UDP Server.
 
 ## [Customer Requirements](/docs/fenddiode/deployment-examples/udp-client-server-examples#customer-requirements)

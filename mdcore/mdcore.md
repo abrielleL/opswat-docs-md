@@ -4,7 +4,7 @@
 
 # Core
 
-#### v5.22.1 [Latest]
+#### v5.23.0 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mdcore/release-notes)
 

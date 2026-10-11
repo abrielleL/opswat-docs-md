@@ -2,6 +2,8 @@
 
 # Upgrade
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Check System Requirements
+
 Before starting the installation, please make sure that your target system meets the [Technical Requirements](/docs/filescan/installation/technical-requirements) and the installation is **performed by a person with basic Linux skills**.
 
 If your target system is currently running **Ubuntu 20.04**, then please upgrade to **Ubuntu 22.04 LTS** following the [Operating System Upgrade](/docs/filescan/installation/operating-system-upgrade) guide.
@@ -44,15 +46,15 @@ Warning
 
 If you configured **a custom user name and installation path** during your original installation, please configure the **same values**, otherwise the installer cannot find the existing installation!
 
-Info
-
-If you use the default options, the existing **filescanio** user will be automatically renamed to **sandbox**.
-
-If you have an existing installation at the default directory: **/home/filescanio/FileScanIO** then this directory will be moved & renamed to **/home/sandbox/sandbox**.
-
 **Step #5 - Run the install shell script**
 
-Note that this operation can take up to 20-30 minutes (depending on available network bandwidth).
+Warning
+
+The **first start after the upgrade** updates the database. On a **large database** (100,000 reports or more) this can take from a few minutes up to an **hour or more**.
+
+While the update runs, the web interface may show errors, and file uploads may not work. This stops by itself when the update is finished. **No data is lost.**
+
+Until the update is finished, please **do not restart** the Sandbox service or the server, and do not run the upgrade again. A restart starts the database update again from the beginning.
 
 BashCopysudo ./install.sh
 

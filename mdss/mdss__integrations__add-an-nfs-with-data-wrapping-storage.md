@@ -13,12 +13,12 @@ To scan a storage that contains wrapped files, you have to integrate it as an NF
 In order to integrate NFS with Data Wrapping with MetaDefender Storage Security, please follow these steps:
 
 1. As NFS with Data Wrapping is not using any credentials, you can have only one NFS with Data Wrapping account in MDSS. If you already have one, please go to step 4
-2. From the left side menu, navigate to **Inventory,** click on **Add account** and choose **NFS with Data Wrapping**.
+2. From the left side menu, navigate to **Inventory**, click **Add New** > **Account**, choose **NFS with Data Wrapping** and click **Next**.
 3. Give your [account](https://www.opswat.com/docs/mdss/operations/accounts-and-groups) a name so you can easily identify it later
 
 ![](https://uploads.developerhub.io/prod/k8zL/g6dgyoqfjltaer0fs3otqo4brtcuhlc3ds3ilc8za17iey0tojokqxgupi57krxg.png)
 
-4. From the left side menu, navigate to **Inventory,** click on **Add unit** and choose the previously created account.
+4. From the left side menu, navigate to **Inventory**, click **Add New** > **Unit**, choose the previously created account and click **Next**.
 
 ![](https://uploads.developerhub.io/prod/k8zL/hvb3u8lduluzlwty0zhamiq5kw3gvr36293i0z0ouvzbgwu37ag1jibviru01gdm.png)
 

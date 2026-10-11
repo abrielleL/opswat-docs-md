@@ -4,7 +4,7 @@
 
 # Storage Security
 
-#### 4.5.2 [Latest]
+#### 4.6.0 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mdss/release-notes)
 

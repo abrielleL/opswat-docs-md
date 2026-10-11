@@ -2,6 +2,8 @@
 
 # Kubernetes components
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 This page describes what the `mdcluster` chart creates and how configuration is shared between them.
 
 ## [**Workloads**](/docs/mdcluster/container-deployment/kubernetes-components#workloads)
@@ -14,6 +16,7 @@ This page describes what the `mdcluster` chart creates and how configuration is 
 | MetaDefender Cluster Worker running MetaDefender Core | `ometascan` | StatefulSet | Shared headless `worker` · instance `8008` |
 | MetaDefender Cluster Worker running the MetaDefender Cluster API Gateway | `api-gateway` | StatefulSet | Shared headless `worker`, plus its own `api-gateway` Service · instance `8899` |
 | MetaDefender Cluster Worker running the MetaDefender Cluster Callback Service | `callback-service` | StatefulSet | Shared headless `worker` · instance `8894` |
+| MetaDefender Cluster Worker running the MetaDefender Cluster Download Service | `download-service` | StatefulSet | Shared headless `worker` · instance `8895` |
 
 ## [**Architecture**](/docs/mdcluster/container-deployment/kubernetes-components#architecture)
 

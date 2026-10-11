@@ -2,6 +2,8 @@
 
 # Changing MetaDefender Email Security Configuration
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The following guideline describes how to change the configuration of a MetaDefender Email Security instance remotely.
 
 1. Go to the **MetaDefender Email Security** management page under **Inventory** in the sidebar.

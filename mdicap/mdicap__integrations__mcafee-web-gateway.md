@@ -2,6 +2,8 @@
 
 # McAfee Web Gateway
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The current documentation is based on McAfee Web Gateway version 7.7.
 
 ## [Prerequisites](/docs/mdicap/integrations/mcafee-web-gateway#prerequisites)

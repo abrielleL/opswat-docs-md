@@ -2,6 +2,8 @@
 
 # Device Policies
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 OPSWAT Central Management allows administrators to set different security requirements for different device groups.
 
 To manage device policies, you can find all policies under your account by navigating to Device Policies

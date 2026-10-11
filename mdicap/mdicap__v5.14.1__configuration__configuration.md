@@ -2,6 +2,7 @@
 
 # Configuration
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## Logging configuration
 
 To configure the log outputs and levels, consult the [3.1.2 MetaDefender ICAP Server configuration file](/configuration/configuration-file) section.

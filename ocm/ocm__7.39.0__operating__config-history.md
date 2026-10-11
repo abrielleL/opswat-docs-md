@@ -2,6 +2,8 @@
 
 # Config History
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The **Config History** page, located under the **Events And History** submenu, contains the history of any actions that changed the configuration of OPSWAT Central Management.
 
 - **Date:** The date and time of the modification.

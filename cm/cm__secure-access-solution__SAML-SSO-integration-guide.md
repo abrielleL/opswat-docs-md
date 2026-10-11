@@ -8,7 +8,7 @@ Security Assertion Markup Language (SAML) is an XML-based standard for web brows
 
 ## How does SAML SSO work with Cloud Access Control?
 
-![](https://uploads.developerhub.io/prod/97qW/r8dzh4np36prssn0f1t1dn2hsce48fddy3etfdtu1h02rs9wfxexvtcru25wjyhu.png)
+![](https://uploads.developerhub.io/prod/97qW/2t8i8u9q1dnjgzrty4tar4yhmb1h348933r0qjur5p326psu6hmhhzkxe5rfnjax.png)
 
 SAML single sign-on works by transferring the user's identity from one place (the identity provider) to another (the service provider). This is done through an exchange of digitally signed XML documents. Consider the following scenario: A user is logged into a system, which acts as an identity provider. The user would like to log into a remote application such as Salesforce or Dropbox (i.e. the service provider) but before the user is granted access, the user's device needs to pass a security check as defined by the organization's security policy. The following happens:
 
@@ -18,3 +18,7 @@ SAML single sign-on works by transferring the user's identity from one place (th
 4. The identity provider builds the authentication response in the form of an XML document containing the user's username or email address, signs it using a certificate and posts this information to My OPSWAT Central Management.
 5. My OPSWAT Central Management performs the security or posture check on the device and takes a decision on whether to grant or deny access; if it decides to grant access, it passes a SAML response from IdP to SP. Otherwise, it logs the user out
 6. The service provider retrieves the security check and authentication response and determines whether to grant access or deny it
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

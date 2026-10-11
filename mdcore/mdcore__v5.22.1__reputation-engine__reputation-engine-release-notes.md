@@ -1,0 +1,7 @@
+<!-- source: https://www.opswat.com/docs/mdcore/v5.22.1/reputation-engine/reputation-engine-release-notes -->
+
+# Release notes
+
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
+Our release notes have been moved [here.](https://docs.opswat.com/mdcore/release-notes/reputation-engine-release-notes)

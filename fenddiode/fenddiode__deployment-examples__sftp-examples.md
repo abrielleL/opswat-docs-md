@@ -2,6 +2,7 @@
 
 # SFTP Examples
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [SFTP Buffered vs Streaming](/docs/fenddiode/deployment-examples/sftp-examples#sftp-buffered-vs-streaming)
 
 SFTP has two modes of operation named “Buffered” mode and “Streaming” mode.

@@ -2,6 +2,8 @@
 
 # Adding an existing MetaDefender ICAP Server instance
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The following guideline describes how to add an existing MetaDefender ICAP Server instance to OPSWAT Central Management.
 
 1. Go to the **MetaDefender ICAP Server** management page under **Inventory** in the sidebar.

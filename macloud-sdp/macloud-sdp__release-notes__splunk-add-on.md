@@ -2,7 +2,7 @@
 
 # Installation
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 This Add-on is supported on all tiers of a distributed Splunk platform deployment and also on standalone Splunk instances. The table below provides a reference for installing the add-on in a distributed Splunk deployment:
 

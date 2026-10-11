@@ -2,6 +2,8 @@
 
 # MetaDefender Drive Toolkit v3.7.8
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 |  |  |
 | --- | --- |
 | **Released on Nov 19, 2025** | This release includes improvements to the Support Package content and generation process. |

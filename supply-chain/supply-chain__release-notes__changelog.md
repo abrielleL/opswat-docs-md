@@ -2,6 +2,39 @@
 
 # Changelog
 
+## Version 4.1.1
+
+Release Date: October 9, 2026
+
+**Bug Fixes**
+
+- Improved parallel scan reliability
+
+## Version 4.1.0
+
+Release Date: September 30, 2026
+
+**Highlights**
+
+- **Role-Based Access Control:** Administrators now have full control, while Read-Only Administrators can view all data without making changes. Permissions are enforced across the API and interface, with clearer messages when an action is blocked.
+- **Single Sign-On:** Users can now sign in through their organization's identity provider. Identity provider groups can be mapped to MetaDefender Administrator and Read-Only Administrator roles.
+- **Security Hardening:** Added brute-force protection, API rate limiting, stronger session safeguards, tighter input validation, updated HTTP security headers and TLS settings, and protections against oversized or maliciously compressed repository archives. Passwords must now contain at least 15 characters, and password reset no longer reveals whether an account exists.
+- **User Session Management:** Administrators can now view and end active user sessions, immediately signing users out when a device is lost, an employee leaves, or an account may be compromised.
+
+**Improvements**
+
+- **JFrog Container Improvements:** JFrog container discovery now supports OCI package-type repositories. Images cached in JFrog remote repositories can be listed and scanned by digest.
+- **Cross-Domain Support for Binaries:** Cross-domain transfer is now available for binary registry integrations as well as source code.
+- **Smoother, More Reliable Processing:** Scan, SBOM, and package processing now use a dedicated processing service, producing results consistently across sources.
+
+**Bug Fixes**
+
+- The Add User form now validates the full name as it is entered and displays error messages that match the requirement
+- On the high side of a cross-domain setup, container images are now unpacked when re-scanned before import, allowing the secrets policy to block images containing secrets
+- The package list now retains the severity filter when changing pages
+- Jira and Microsoft Teams notifications now require a Base URL, consistent with SMTP
+- Onboarding now displays an actionable error if the final step fails instead of waiting indefinitely
+
 ## Version 4.0.4
 
 Release Date: August 28, 2026
@@ -12,13 +45,13 @@ Release Date: August 28, 2026
 - **Nexus Container Cross-Domain Transfers:** Transfer containers to and from Nexus Container repositories in cross-domain scenarios, completing the Nexus integration story alongside existing binary and raw-format support.
 - **ECR ↔ Harbor Cross-Domain Transfers:** Cross-domain transfers now work between Amazon ECR and Harbor registries, enabling secure container movement between cloud environments. Combine this with existing GitLab and Nexus binary/container transfer capabilities to build flexible supply chain workflows across your registry infrastructure.
 - **Complete Package Counts with Transitive Dependencies:** Package totals now include transitive dependencies, so the number in a report reflects everything that was scanned. Ingestion retains packages whether or not a version or ecosystem is specified, and reports load full package inventories well beyond 100 entries.
-- **JFrog Container Webhooks: **The JFrog container integration now supports event-based scanning via webhooks. New or updated container artifacts trigger scanning automatically, enabling continuous monitoring.
+- **JFrog Container Webhooks:** The JFrog container integration now supports event-based scanning via webhooks. New or updated container artifacts trigger scanning automatically, enabling continuous monitoring.
 
 **Improvements**
 
 - **Expanded SBOM Exports:** SBOM PDF exports now include transitive dependencies, giving you the complete dependency tree in a single document. CycloneDX exports carry end-of-life and criticality properties for each component along with the root dependency relationship.
 - **Cross-Domain Scan Results Visibility :** High-side analyze logs now include direct redirect links to their corresponding reports, so you can move from a cross-domain transfer straight to the report without manual navigation.
-- **Notification and Interface Refinements: **Improved error handling for unconfigured cross-domain settings, better SBOM completion on TLS setups, and cleaner onboarding flows.
+- **Notification and Interface Refinements:** Improved error handling for unconfigured cross-domain settings, better SBOM completion on TLS setups, and cleaner onboarding flows.
 
 **Bug Fixes**
 
@@ -39,13 +72,13 @@ Release Date: July 20, 2026
 - **Jobs Replacing Scans:** The "Scan" concept has been replaced by Jobs, a more flexible unit of work that groups the processing of a repository or source into a single, trackable activity. Jobs provide clearer status, history, and results, and lay the foundation for the platform's expanded workflows.
 - **Risk Score For Repositories:** Repositories now display an aggregated risk score, giving teams an at-a-glance measure of overall security posture. The score consolidates findings across a repository so you can prioritize the sources that need attention first.
 - **Security Suggestions:** The platform now provides Security Suggestions - actionable recommendations that help you remediate detected issues. Suggestions turn raw findings into clear next steps, reducing the time from detection to resolution.
-- **JFrog Container Webhooks: **The JFrog container integration now supports event-based scanning via webhooks. New or updated container artifacts trigger scanning automatically, enabling continuous monitoring.
+- **JFrog Container Webhooks:** The JFrog container integration now supports event-based scanning via webhooks. New or updated container artifacts trigger scanning automatically, enabling continuous monitoring.
 
 **Improvements**
 
 - **New SBOM PDF Export with More Fields:** SBOM PDF export has been expanded to include additional fields, producing a richer, more complete software bill of materials. The enhanced report makes it easier to share comprehensive component and dependency information with stakeholders and auditors.
 - **CSV Exports for Packages :** Package inventories can now be exported to CSV, making it simple to analyze, filter, and share package data outside the platform or feed it into other tools and reporting pipelines.
-- **Container Layer Scanning and Skip by Hash: **Container images are now scanned layer by layer, with previously scanned layers skipped by hash. This improves the granularity of container findings while avoiding redundant work, delivering faster scans across images that share common layers.
+- **Container Layer Scanning and Skip by Hash:** Container images are now scanned layer by layer, with previously scanned layers skipped by hash. This improves the granularity of container findings while avoiding redundant work, delivering faster scans across images that share common layers.
 
 ## Version 3.3.1
 

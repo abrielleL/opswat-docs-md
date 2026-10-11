@@ -2,6 +2,8 @@
 
 # Password Recovery
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 OPSWAT Central Management provides a solution for you to reset password by answering the security question that had been set up during configuration wizard.
 
 ## [Set up security question](/docs/ocm/configuration/password-recovery#set-up-security-question)

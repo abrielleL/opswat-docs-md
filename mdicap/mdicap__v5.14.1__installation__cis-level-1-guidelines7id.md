@@ -2,6 +2,8 @@
 
 # CIS Level 1 Guidelines - Linux
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Info
+
 - Support Red Hat Enterprise [Linux 9](https://www.redhat.com/en/blog/center-internet-security-cis-compliance-red-hat-enterprise-linux-using-openscap) and,
 - Ubuntu 22.04, 24.04 Pro
 ## [Red Hat](/docs/mdicap/v5.14.1/installation/cis-level-1-guidelines7id#red-hat)

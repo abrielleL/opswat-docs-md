@@ -1,0 +1,40 @@
+<!-- source: https://www.opswat.com/docs/mdcore/v5.22.1/knowledge-base/how-to-properly-configure-syslog-server-for-metadefender-core- -->
+
+# How to properly configure Syslog Server for MetaDefender Core?
+
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Check Your Version:
+
+This articles apply to all MetaDefender Core releases deployed on Windows and Linux.
+
+Starting from **MetaDefender Core v5.13.0**, Syslog server configuration can be performed using REST API endpoints in addition to registry settings. While both methods are supported, **API-based configuration takes precedence**.
+
+## [Problem](/docs/mdcore/v5.22.1/knowledge-base/how-to-properly-configure-syslog-server-for-metadefender-core-#problem)
+
+When configuring MetaDefender Core to send log history to a logging system or a SIEM via syslog, you may encounter issues where the logs are not being sent, and unknown errors are logged without capturing scan history.
+
+## [Troubleshooting Steps](/docs/mdcore/v5.22.1/knowledge-base/how-to-properly-configure-syslog-server-for-metadefender-core-#troubleshooting-steps)
+
+#### [**1. Using REST API (Core v5.13.0+)**](/docs/mdcore/v5.22.1/knowledge-base/how-to-properly-configure-syslog-server-for-metadefender-core-#1-using-rest-api-core-v5130)
+
+**If you are using MetaDefender Core v5.13.0 or later**, it is recommended to configure syslog settings using the REST API. For more details on API usage, please refer to: [POST - Forcefully apply the new syslog server configurations](/docs/mdcore/v5.22.1/metadefender-core#postsyslogconfig)
+
+#### [**2. Using Registry (All Versions)**](/docs/mdcore/v5.22.1/knowledge-base/how-to-properly-configure-syslog-server-for-metadefender-core-#2-using-registry-all-versions)
+
+If you’re using an older version or prefer registry-based configuration, ensure the following keys are correctly set under: `HKEY_LOCAL_MACHINE\SOFTWARE\OPSWAT\Metascan\logger`.
+
+- `syslog`: Your syslog server, in the format of `<protocol>://<syslog_server_address>:<port>`.
+- `syslog_level`: Level of logging. Supported values are: `debug, info, warning, error`.
+
+Info:
+
+Syslog typically uses the UDP protocol on port 514. Please ensure that the protocol (tcp/udp) matches what your Syslog server is configured to receive.
+
+Success:
+
+**After making the changes to the registry values, make sure to restart the service of MetaDefender Core, to apply the new configuration.**
+
+Additionally, you can confirm that the MetaDefender Core server can reach the Syslog server over the specified port and protocol. You should ensure that no firewall or network ACL is blocking outbound traffic from MetaDefender Core.
+
+Support:
+
+If **Further Assistance** is required, please proceed to log a [**support case or chatting with our support engineer**](https://my.opswat.com/portal/support).

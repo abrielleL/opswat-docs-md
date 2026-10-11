@@ -2,6 +2,8 @@
 
 # Progress MOVEit
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Progress (former Ipswitch) MOVEit is a Managed File Transfer solution that allows a very simple integration with MetaDefender ICAP leveraging the Multiscanning technology.
 
 Please note Deep CDR and Proactive DLP are not supported currently!

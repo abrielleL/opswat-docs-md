@@ -2,6 +2,7 @@
 
 # Regular Maintenance
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Checking for Upgrades](/docs/mdcore/operating/regular-maintenance#checking-for-upgrades)
 
 Metadefender Core checks for available database updates and scan engine updates for the installed anti-malware engines on a regular basis. To manually update a scan engine or its database, click on the update now button or the upload package link on the **Inventory > Engines** page.

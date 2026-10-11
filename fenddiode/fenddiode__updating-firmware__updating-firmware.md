@@ -2,6 +2,8 @@
 
 # Updating Firmware
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 This section contains instructions for updating firmware on a Fend Diode.
 
 To update your data diode’s firmware, download the latest firmware for your diode from <https://my.opswat.com/>. For instructions on getting firmware from MyOPSWAT please see the section on [Firmware & Software Downloads](https://www.opswat.com/docs/fenddiode/firmware-software-downloads). If you have issues logging in or downloading support material, contact us at [fendsupport@opswat.com](mailto:fendsupport@opswat.com).

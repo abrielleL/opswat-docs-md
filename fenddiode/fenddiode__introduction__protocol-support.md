@@ -2,6 +2,7 @@
 
 # Protocol Support
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Supported Protocol Combinations](/docs/fenddiode/introduction/protocol-support#supported-protocol-combinations)
 
 Each diode model supports different configurations of input and output protocols. Each side of the diode supports a single communication mode selection and a single protocol selection at a time. The following combinations are available as of the latest release:

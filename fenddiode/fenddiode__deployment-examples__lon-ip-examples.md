@@ -2,6 +2,7 @@
 
 # LON IP Examples
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Network/System Requirements](/docs/fenddiode/deployment-examples/lon-ip-examples#networksystem-requirements)
 
 The Fend Diode currently supports listen mode for LON IP networks. Listen mode gathers all supported traffic passing over a network and sends it through the diode to a designated Fend Cloud, MQTT broker, or TCP server endpoint. To install a diode in LON IP listen mode, the LON IP network traffic needs to be port mirrored to the input side of the diode, as follows:

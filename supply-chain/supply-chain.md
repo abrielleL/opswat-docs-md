@@ -4,7 +4,7 @@
 
 # Software Supply Chain
 
-#### v4.1.0 [Latest]
+#### v4.1.1 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/supply-chain/release-notes)
 

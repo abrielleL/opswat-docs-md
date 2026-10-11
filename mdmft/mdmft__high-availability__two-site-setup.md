@@ -2,7 +2,7 @@
 
 # Two-Site Setup
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 The Two-Site topology is designed for geographically distributed deployments where traffic is routed externally and failover occurs across sites.
 
@@ -39,7 +39,7 @@ This design separates:
 
 Clients connect to the system via a **third-party Load Balancer**
 
-1. The Load Balancer routes traffic to the currently active MetaDefender MFT HA Controller™ instance
+1. The Load Balancer routes traffic to the currently active MetaDefender® MFT instance
 2. Routing decisions are based on a **public** [**Health Endpoint**](/docs/mdmft/high-availability/two-site-load-balancer-setup#health-endpoint)
 3. The MetaDefender MFT HA Controller™ independently monitors node health and controls activation state
 

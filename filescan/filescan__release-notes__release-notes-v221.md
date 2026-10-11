@@ -2,6 +2,7 @@
 
 # Release Notes for v2.2.1
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Date: 7 March, 2025](/docs/filescan/release-notes/release-notes-v221#date-7-march-2025)
 
 Warning

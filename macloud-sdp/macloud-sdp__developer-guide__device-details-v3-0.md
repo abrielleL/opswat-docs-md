@@ -2,7 +2,7 @@
 
 # Device Details v3.0
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 | API version | 3.0 |
 | --- | --- |

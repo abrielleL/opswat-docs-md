@@ -2,6 +2,8 @@
 
 # Preserve signed PDFs without sanitization
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Sanitizing a signed PDF changes its content; therefore the original signature no longer validates. If the signature is important. Deep CDR provides configuration options that let users decide whether and how to skip sanitization for signed files.
 
 1. Enable "**Skip Signed File**" and "**Validate Digital Signature**": Deep CDR validates the digital signature and file content to ensure integrity. Warning: there is a risk if an attacker uses a self-signed certificate.
@@ -19,4 +21,4 @@ Configure "Trusted CA directory" in the PDF Advanced configuration to point to t
 
 Files signed with this certificate will be **skipped during sanitization**.
 
-With these configurations Deep CDR only allows if the file has exact match to certificate.
+With these configurations, Deep CDR only allows if the file has exact match to certificate.

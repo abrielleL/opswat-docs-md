@@ -26,7 +26,7 @@ These requirements apply to all deployment modes.
 
 | Port | Protocol | Direction | Destination / Source | Purpose |
 | ---- | ---- | ---- | ---- | ---- |
-| 9000, 443 | TCP | Inbound | Product instances | Communications from products to My OPSWAT Central Management |
+| 9000 | TCP | Inbound | Product instances | Communications from products to My OPSWAT Central Management |
 | 443 | TCP | Outbound | [https://update.dl.opswat.com](https://update.dl.opswat.com), [https://opswat-gears-cloud.s3-us-west-2.amazonaws.com/](https://opswat-gears-cloud.s3-us-west-2.amazonaws.com/) | Product/module updates (if enabled) |
 | 443 | TCP | Outbound | [https://activation.dl.opswat.com](https://activation.dl.opswat.com) | License activation (if online) |
 | 443 | TCP | Outbound | Configured proxy servers | Outbound traffic via proxy (if configured) |
@@ -229,3 +229,7 @@ Supported browsers for launching the My OPSWAT Central Management console are Ch
 ## Screen Resolution
 
 We recommend that you use a screen resolution of 1300x768 or larger to properly display My OPSWAT Central Management console interface.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

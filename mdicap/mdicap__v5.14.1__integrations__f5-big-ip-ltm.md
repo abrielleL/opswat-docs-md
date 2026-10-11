@@ -2,6 +2,8 @@
 
 # F5 BIG IP LTM
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 MetaDefender Core –via MetaDefender ICAP Server– can be used to scan and sanitize all files being uploaded to the F5 BIG IP server with all of the engines in MetaDefender Core to make sure that no malware is able to get to the web servers behind the Big IP server. This guide describes the basic steps to getting MetaDefender ICAP Server working with your F5 BIG IP server.
 
 Info

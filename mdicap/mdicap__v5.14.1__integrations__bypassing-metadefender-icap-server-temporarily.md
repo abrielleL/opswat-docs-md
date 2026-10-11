@@ -2,13 +2,15 @@
 
 # Bypassing MetaDefender ICAP Server temporarily
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 This guide describes how to enable and disable ICAP server on Symantec Blue Coat ProxySG.
 
 Warning
 
 This documentation is assuming that MetaDefender ICAP Server is already configured and working properly.
 
-## [Enable MetaDefender ICAP Server](/docs/mdicap/v5.14.1/integrations/bypassing-metadefender-icap-server-temporarily#enable-metadefender-icap-server)
+## Enable MetaDefender ICAP Server
 
 To enable MetaDefender ICAP Server on Blue Coat:
 
@@ -22,7 +24,7 @@ To enable MetaDefender ICAP Server on Blue Coat:
    - The tab color should turn black.
 7. Click "Install policy
 
-## [Disable MetaDefender ICAP Server](/docs/mdicap/v5.14.1/integrations/bypassing-metadefender-icap-server-temporarily#disable-metadefender-icap-server)
+## Disable MetaDefender ICAP Server
 
 To disable ICAP server on Blue Coat:
 

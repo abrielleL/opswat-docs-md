@@ -2,6 +2,7 @@
 
 # Input Side Protocol Settings
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Protocol Selections](/docs/fenddiode/configuration-settings/input-side-protocol-settings#protocol-selections)
 
 The options in this section will dynamically update based on the communications interface selected (RS485 or Ethernet) and will display the protocol options compatible with the selected communication interface. The diode operates in a single protocol mode at a time based on this selection (for example: FTP or Modbus, but not both simultaneously). Once a protocol selection is made, the settings for that protocol will be displayed below.

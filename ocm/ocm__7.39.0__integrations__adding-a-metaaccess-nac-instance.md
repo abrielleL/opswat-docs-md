@@ -2,6 +2,8 @@
 
 # Adding a MetaAccess NAC instance
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The following guideline describes how to add a MetaAccess NAC instance to OPSWAT Central Management.
 
 Info

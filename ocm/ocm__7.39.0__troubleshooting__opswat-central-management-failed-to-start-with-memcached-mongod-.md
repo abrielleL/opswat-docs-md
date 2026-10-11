@@ -2,6 +2,8 @@
 
 # OPSWAT Central Management failed to start with memcached/mongod shells hanging in the foreground
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 | Term | Detail |
 | --- | --- |
 | Problem | OPSWAT Central Management failed to start with memcached/mongod shells hanging in the foreground |

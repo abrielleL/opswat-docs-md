@@ -2,6 +2,7 @@
 
 # Appendix IV: List of Supported BACnet Commands
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [PDU Types](/docs/fenddiode/appendices/appendix-iv-list-of-supported-bacnet-commands#pdu-types)
 
 - complex-ack-pdu (3)

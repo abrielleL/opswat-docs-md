@@ -2,6 +2,8 @@
 
 # MetaDefender Drive v3.8.0
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 | **MetaDefender Drive v3.8.0**  Released on Feb 1st, 2021 | This is a major release that adds new feature as well as improvement and stability |
 | --- | --- |
 | **New Features** |  |

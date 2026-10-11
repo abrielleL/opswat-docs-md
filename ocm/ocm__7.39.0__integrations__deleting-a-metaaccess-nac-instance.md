@@ -2,6 +2,8 @@
 
 # Deleting an existing MetaAccess NAC instance
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The following guideline describes how to delete a MetaAccess NAC instance from OPSWAT Central Management.
 
 1. Navigate to the **MetaAccess NAC** management page under **Inventory** in the sidebar.

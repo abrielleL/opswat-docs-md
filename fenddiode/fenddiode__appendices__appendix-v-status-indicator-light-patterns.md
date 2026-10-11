@@ -2,6 +2,8 @@
 
 # Appendix V: Status Indicator Light Patterns
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 This section contains tables for cross-referencing status indicator patterns from the Red/Yellow/Green Status Indicator LED bank. Bank A is the status indicator bank for the input side of the diode. Bank C is the status indicator bank for the output side of the diode.
 
 ## [Mode-Dependent Sequences](/docs/fenddiode/appendices/appendix-v-status-indicator-light-patterns#mode-dependent-sequences)

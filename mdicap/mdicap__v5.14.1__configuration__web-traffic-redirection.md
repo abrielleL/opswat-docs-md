@@ -2,6 +2,8 @@
 
 # Web traffic redirection
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 As a final step –when all the previous steps in this chapter are done– the web traffic must be redirected to flow through MetaDefender ICAP Server.
 
 Info

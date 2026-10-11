@@ -2,6 +2,8 @@
 
 # Policy Configuration
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The MetaDefender Core server can be configured to use different scanning profiles for different clients. The selection is based on the client's source IP address.
 
 In case multiple scanning profiles are configured for the given client, the client can choose which one to use. If a client does not have a scanning profile specified, MetaDefender Core uses the first matching profile from the Workflow rules.

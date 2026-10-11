@@ -869,10 +869,10 @@ A list of connected workers.
 | status_description | string | The description of worker's status |  |
 | version | string | The version of the worker. |  |
 | deployment_info5 fields | object | Deployment related information. This field is only available when instance is deployed. |  |
-| type | string | Deployment type, can be `ometascan` or `api-gateway`. |  |
+| type | string | Deployment type.  Enum: `ometascan`,`api-gateway`,`callback-service`,`download-service` |  |
 | installer_id | string | Identifier of the installer. |  |
 | version | string | The instance version. |  |
-| user_name | string | Name of the user who deployed the instance. |  |
+| deployer_name | string | Name of the user who deployed the instance. |  |
 | custom_config | object | Custom configuration for deployed instance. |  |
 
 Expand 400
@@ -969,10 +969,10 @@ Request to get available workers was successful
 | status_description | string | The description of worker's status |  |
 | version | string | The version of the worker. |  |
 | deployment_info5 fields | object | Deployment related information. This field is only available when instance is deployed. |  |
-| type | string | Deployment type, can be `ometascan` or `api-gateway`. |  |
+| type | string | Deployment type.  Enum: `ometascan`,`api-gateway`,`callback-service`,`download-service` |  |
 | installer_id | string | Identifier of the installer. |  |
 | version | string | The instance version. |  |
-| user_name | string | Name of the user who deployed the instance. |  |
+| deployer_name | string | Name of the user who deployed the instance. |  |
 | custom_config | object | Custom configuration for deployed instance. |  |
 
 Expand 400
@@ -1005,16 +1005,17 @@ Auth NoneHeaders
 | apikey | string | Generated `session_id` from [Login](/docs/mdcore/metadefender-distributed-cluster/ref#userlogin) call can be used as an `apikey` for API calls that require authentication. |  |
 | --- | --- | --- | --- |
 
-Request Body Deploy MetaDefender CoreDeploy MetaDefender Cluster API GatewayDeploy MetaDefender Cluster Callback Serviceapplication/json
+Request Body Deploy MetaDefender CoreDeploy MetaDefender Cluster API GatewayDeploy MetaDefender Cluster Callback ServiceDeploy MetaDefender Cluster Download Serviceapplication/json
 
 | object | object |  |  |
 | --- | --- | --- | --- |
 | type | string | Enum: `ometascan` |  |
 | installer_id | string | Identifier of the installer. |  |
 | worker | array[string] | List of worker IDs to deploy to. |  |
-| config | object | Optional configuration for ometascan worker. |  |
+| config3 fields | object | Optional configuration for ometascan worker. |  |
 | log_level | string | Enum: `debug`,`info`,`warning`,`error`  Default: info |  |
 | connection_per_file_service | integer | minimum: 1  Default: 4 |  |
+| install_dir | string | Optional. Custom install directory on the worker. It must already exist. |  |
 
 POST /admin/worker/instance/deploycURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
 
@@ -1094,7 +1095,7 @@ Request Body application/json
 | object | object | Parameters to upgrade deployed worker instances. |  |
 | --- | --- | --- | --- |
 | version | string | Target version to upgrade to. |  |
-| type | string | Worker deployment type.  Enum: `ometascan`,`api-gateway`,`callback-service` |  |
+| type | string | Worker deployment type.  Enum: `ometascan`,`api-gateway`,`callback-service`,`download-service` |  |
 
 POST /admin/worker/instance/upgradecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
 
@@ -1123,7 +1124,7 @@ Unexpected event on server.
  Response
 ### Get upgradable instance version
 
-Retrieve a list of available versions of MetaDefender Core and MetaDefender Cluster API Gateway for upgrading.
+Retrieve a list of available versions of MetaDefender Core, MetaDefender Cluster API Gateway, Callback Service and Download Service for upgrading.
 
 Auth NoneHeaders
 
@@ -1139,6 +1140,7 @@ A list of available versions for upgrading.
 | ometascan | array[string] |  |  |
 | api-gateway | array[string] |  |  |
 | callback-service | array[string] |  |  |
+| download-service | array[string] |  |  |
 
 400
 

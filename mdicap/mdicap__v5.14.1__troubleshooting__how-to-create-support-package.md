@@ -2,6 +2,8 @@
 
 # How to create support package
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Info
+
 A support package contains essential information regarding the operating system and OPSWAT software found on the machine.
 
 Warning - Security and Privacy Concerns

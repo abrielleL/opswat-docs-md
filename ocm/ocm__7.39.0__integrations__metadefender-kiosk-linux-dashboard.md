@@ -2,6 +2,8 @@
 
 # MetaDefender Kiosk Linux Dashboard
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 OPSWAT Central Management's MetaDefender Kiosk Linux Dashboard gives a general overview of the status and activities of all managed MetaDefender Kiosk Linux instances.
 
 ## [Processing Overview](/docs/ocm/7.39.0/integrations/metadefender-kiosk-linux-dashboard#processing-overview)

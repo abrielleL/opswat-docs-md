@@ -2,6 +2,8 @@
 
 # Device Groups
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 OPSWAT Central Management allows administrators to manage devices by categorizing them into groups with different security level. This will not only help administrators in reducing time spent in device management but also help ensure compliance by assigning different security requirements to a group.
 
 ## [Groups management page](/docs/ocm/operating/device-groups#groups-management-page)

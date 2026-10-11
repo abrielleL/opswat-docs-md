@@ -2,7 +2,7 @@
 
 # Default Supervisor Setup
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 Default Supervisors can be assigned by selecting from a list or by using filters. These supervisors are authorized to approve files uploaded by any user from any container (OU or group).
 
@@ -22,6 +22,12 @@ Info
 
 Guests and external users cannot be assigned as Supervisors.
 
+Info
+
+In Manager-based mode:
+
+- Active Directory users who act as managers (have direct reports) cannot be elected as default supervisors.
+- Active Directory users gaining direct reports will be removed from default supervisors.
 Info
 
 Active Directory configuration for groups:

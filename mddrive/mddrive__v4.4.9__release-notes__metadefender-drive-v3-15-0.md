@@ -2,6 +2,8 @@
 
 # MetaDefender Drive v3.15.0
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 | [MetaDefender Drive v3.15.0](/docs/mddrive/v4.4.9/release-notes/metadefender-drive-v3-15-0#metadefender-drive-v3150) Released on Dec 08, 2022 | This is a major release that is fully integrated with OPSWAT Toolkit and ready for new advanced features in the future |
 | --- | --- |
 | **New features** | New mechanism for updates and upgrades: We are changing the way users use Drives from end to end with the new Toolkit, so that new features can be deployed in a more convenient way. |

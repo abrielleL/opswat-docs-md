@@ -2,6 +2,7 @@
 
 # Enrollment and MetaDefender Core Configuration on My OPSWAT Central Management
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Enrollment](/docs/mdcore/configuration/my-opswat-central-management-enrollment#enrollment)
 
 To enroll MetaDefender Core (MD Core) into My OPSWAT Central Management (MOCM), follow these steps:
@@ -53,17 +54,22 @@ Legend
 
 ✅ Security Zones
 
-#### [Inventory](/docs/mdcore/configuration/my-opswat-central-management-enrollment#inventory)
+#### [Engines](/docs/mdcore/configuration/my-opswat-central-management-enrollment#engines-)
 
-✅ Modules
+✅Configuration
 
-- ✅Configuration
-- ✅Lock/Unlock engine package
-- ✅Disable/Enable engine
-- ✅Delete engine
+✅Lock/Unlock engine package
+
+✅Disable/Enable engine
+
+✅Delete engine
+
+#### [Library](/docs/mdcore/configuration/my-opswat-central-management-enrollment#library)
 
 ✅ External Scanners
 
 ✅ Webhook Authentication
 
 ✅ Post Actions
+
+✅ Password Storage

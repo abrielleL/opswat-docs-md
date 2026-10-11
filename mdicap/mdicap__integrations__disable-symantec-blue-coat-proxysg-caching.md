@@ -2,6 +2,7 @@
 
 # Disable Symantec Blue Coat ProxySG caching
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Step-by-step guide](/docs/mdicap/integrations/disable-symantec-blue-coat-proxysg-caching#step-by-step-guide)
 
 To prevent the transmission of stale content or other issues caused by object caching, you can use either cache(no) or bypass_cache(yes) in content policy language (CPL). For a comparison of cache(no) and bypass_cache(yes), see [KB1772](http://kb.bluecoat.com/index?page=content&id=KB1772).

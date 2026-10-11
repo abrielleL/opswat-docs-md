@@ -2,6 +2,8 @@
 
 # Deploy and Configure with Group Policy
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 OPSWAT File Security for Browser can be force-installed and centrally configured on managed devices using browser enterprise policies. This page covers Microsoft Edge, Google Chrome, and Chromium on Windows and Linux. Examples use Microsoft Edge; substitute the path for your browser where indicated.
 
 ### [Prerequisites](/docs/mdcloud/integrations/how-to-use-opswat-file-security-for-chromeih6#prerequisites)
@@ -67,6 +69,7 @@ json
 
 {
 "scan_downloads": true,
+"remove_unscanned_downloads":false,
 "sanitize_downloads": true,
 "sandbox_analysis": false,
 "selected_workflow": "",
@@ -100,7 +103,7 @@ Example (Edge):
 Key: HKLM\SOFTWARE\Policies\Microsoft\Edge\3rdparty\extensions\fjampemfhdfmangifafmianhokmpjbcj\policy
 Name: settings
 Type: REG_SZ
-Data: {"scan_downloads":true,"sanitize_downloads":true,"sandbox_analysis":false,"selected_workflow":"","reputation_lookup":false,"share_results":false,"show_notifications":true,"show_status_page":true,"save_clean_files":false,"storage_file_size":"","safe_url":true,"file_size_limit":"","file_size_limit_one_time":"","custom_apikey":"","core_url":"","core_apikey":"","core_rule":"","domain_allowlist":["opswat.com","metadefender.com"]}
+Data: {"scan_downloads":true,"remove_unscanned_downloads":false, "sanitize_downloads":true,"sandbox_analysis":false,"selected_workflow":"","reputation_lookup":false,"share_results":false,"show_notifications":true,"show_status_page":true,"save_clean_files":false,"storage_file_size":"","safe_url":true,"file_size_limit":"","file_size_limit_one_time":"","custom_apikey":"","core_url":"","core_apikey":"","core_rule":"","domain_allowlist":["opswat.com","metadefender.com"]}
 #### [Linux](/docs/mdcloud/integrations/how-to-use-opswat-file-security-for-chromeih6#linux)
 
 Add a file (for example `opswat-file-security.json`) to the managed policies directory listed above. Note the escaped inner quotes: `settings` is a string, not an object.
@@ -111,16 +114,17 @@ json
 "3rdparty": {
 "extensions": {
 "fjampemfhdfmangifafmianhokmpjbcj": {
-"settings": "{\"scan_downloads\":true,\"sanitize_downloads\":true,\"sandbox_analysis\":false,\"selected_workflow\":\"\",\"reputation_lookup\":false,\"share_results\":false,\"show_notifications\":true,\"show_status_page\":true,\"save_clean_files\":false,\"storage_file_size\":\"\",\"safe_url\":true,\"file_size_limit\":\"\",\"file_size_limit_one_time\":\"\",\"custom_apikey\":\"\",\"core_url\":\"\",\"core_apikey\":\"\",\"core_rule\":\"\",\"domain_allowlist\":[\"opswat.com\",\"metadefender.com\"]}"
+"settings": "{\"scan_downloads\":true,\"remove_unscanned_downloads\":false, \"sanitize_downloads\":true,\"sandbox_analysis\":false,\"selected_workflow\":\"\",\"reputation_lookup\":false,\"share_results\":false,\"show_notifications\":true,\"show_status_page\":true,\"save_clean_files\":false,\"storage_file_size\":\"\",\"safe_url\":true,\"file_size_limit\":\"\",\"file_size_limit_one_time\":\"\",\"custom_apikey\":\"\",\"core_url\":\"\",\"core_apikey\":\"\",\"core_rule\":\"\",\"domain_allowlist\":[\"opswat.com\",\"metadefender.com\"]}"
 }
 }
 }
 }
 ### [Settings reference](/docs/mdcloud/integrations/how-to-use-opswat-file-security-for-chromeih6#settings-reference)
 
-| Key | Type | Default `[CONFIRM all]` | Description |
+| Key | Type | Default | Description |
 | --- | --- | --- | --- |
 | `scan_downloads` | boolean | `true` | Scan every downloaded file. |
+| `remove_unscanned_downloads` | boolean | `false` | When `true`, a download the extension cannot scan (server unreachable, missing credentials, unsupported URL, file size limits) is cancelled and removed instead of allowed to finish. No effect on allowlisted domains or when `scan_downloads` is `false`. Files that already received a verdict are never removed. |
 | `sanitize_downloads` | boolean | `true` | Produce a Deep CDR-sanitized copy of supported file types. Ignored when `selected_workflow` is set. |
 | `sandbox_analysis` | boolean | `false` | Submit suspicious files for dynamic analysis. Ignored when `selected_workflow` is set. |
 | `selected_workflow` | string | `""` | MetaDefender Cloud Workflow ID. When set, the workflow's configuration replaces `sanitize_downloads` and `sandbox_analysis`. Empty string disables. |
@@ -133,7 +137,7 @@ json
 | `safe_url` | boolean | `true` | Check the download URL before the file is fetched. |
 | `file_size_limit` | integer or string | `""` | Skip scanning files from regular links larger than this size in MB. `0` or `""` disables. |
 | `file_size_limit_one_time` | integer or string | `""` | Skip scanning files from one-time links larger than this size in MB. `0` or `""` disables. |
-| `custom_apikey` | string | `""` | MetaDefender Cloud API key used for all scans. Overrides the user's own key and any Core configuration. Empty string disables. |
+| `custom_apikey` | string | `""` | MetaDefender Cloud API key used for all scans. Overrides the user's own key. **Does not override Core configuration** — when `core_url` and `core_apikey` are set, Core takes precedence. Empty string disables. |
 | `core_url` | string | `""` | URL of a private MetaDefender Core server. Requires `core_apikey`. Empty string disables Core scanning. |
 | `core_apikey` | string | `""` | API key for the MetaDefender Core server. Requires `core_url`. |
 | `core_rule` | string | `""` | Name of a workflow rule on the Core server (for example `multiscan`), sent as the `rule` header. Empty or omitted lets Core apply its default rule. If the name is not found, Core applies its default rule. |
@@ -143,8 +147,8 @@ json
 
 | Situation | Behaviour |
 | --- | --- |
-| `custom_apikey` set | Used for all scans. Core settings and the user's own key are ignored. |
-| `core_url` + `core_apikey` set, `custom_apikey` empty | Files are scanned by the Core server. `core_rule` applies if set. |
+| `custom_apikey` set | Used for all scans unless Core scanning is enabled. Overrides the user's own key only. |
+| `core_url` + `core_apikey` set | Files are scanned by the Core server, **regardless of** `custom_apikey`. `core_rule` applies if set. |
 | Neither set | Files are scanned by MetaDefender Cloud using the signed-in user's key. |
 | `selected_workflow` set | Workflow configuration overrides `sanitize_downloads` and `sandbox_analysis`. |
 | File exceeds `file_size_limit` but not `file_size_limit_one_time`, from a one-time link | File is still scanned. |

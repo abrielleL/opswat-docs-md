@@ -2,6 +2,8 @@
 
 # Version 3.7.0
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 | **Version** | 3.7.0 |
 | --- | --- |
 | **Release date** | 23 March 2026 |

@@ -2,11 +2,13 @@
 
 # Release Notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Info
+
 OPSWAT Central Management v.7 and My OPSWAT On-Premises (My OPSWAT Central Management v.8) will reach End of Life on January 31, 2027. We encourage you to upgrade to My OPSWAT Central Management v.10 before January 31, 2027, to ensure continued support and access to the latest features.
 
 More details can be found [here](/docs/ocm/knowledgebase/end-of-sale-and-end-of-life-cm7-and-cm8).
 
-| 7.40.0 OPSWAT Central Management release June 24, 2025 | OPSWAT Central Management V7 (OCMv7), the newest version of the series, streamlines the product central configuration and adds OPSWAT Client management to further enhance the security stance of organizations to protect against risky devices. |
+| 7.40.0 OPSWAT Central Management release June 24, 2026 | OPSWAT Central Management V7 (OCMv7), the newest version of the series, streamlines the product central configuration and adds OPSWAT Client management to further enhance the security stance of organizations to protect against risky devices. |
 | --- | --- |
 | **Built-in MetaDefender Endpoint version** |  |
 | Windows Persistent Endpoint 7.6.2606.1009 | Detailed release notes for MetaDefender Endpoint are [here](https://www.opswat.com/docs/mdendpoint/release-notes)[.](https://www.opswat.com/docs/mdendpoint/v2503/release-notes/metadefender-endpoint-release-notes) |

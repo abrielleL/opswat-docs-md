@@ -2,41 +2,49 @@
 
 # How to disable the Local PostgreSQL when using an external Database?
 
-This article applies to MetaDefender Storage Security v4.x
+> **Check Your Version:**
+>
+> This article applies to MetaDefender Storage Security v4.x
 
-### [**Overview**](/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab#overview)
+### **Overview**
 
-If you prefer to connect the MetaDefender Storage Security (MDSS) application to your own [remote PostgreSql](/docs/mdss/installation/windows-deployments#how-to-setup-an-external-postgresql-in-metadefender-storage-security) database server, you can disable the built-in PostgreSql container and its related references by editing the Docker Compose files. While the bundled PostgreSql service consumes minimal resources when idle, you can still reclaim those resources by following the steps below.
+If you prefer to connect the MetaDefender Storage Security (MDSS) application to your own [remote PostgreSql](https://www.opswat.com/docs/mdss/installation/windows-deployments#how-to-setup-an-external-postgresql-in-metadefender-storage-security) database server, you can disable the built-in PostgreSql container so that it is not deployed. The bundled PostgreSQL container is tuned to use a share of the host memory (on Linux, shared buffers are set to 25% of RAM at installation), so disabling it frees those resources. Follow the steps below.
 
 ---
 
-### [**Instructions**](/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab#instructions)
+### **Instructions**
 
-#### [1. Stop the MDSS Application](/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab#1-stop-the-mdss-application)
+#### 1. Stop the MDSS Application
 
 Before making any configuration changes, stop the MDSS services:
 
-PowershellCopysudo mdss -c stop
+```powershell
+sudo mdss -c stop
+```
 
 ---
 
-#### [2. Disable the Built-in PostgreSql Container](/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab#2-disable-the-built-in-postgresql-container)
+#### 2. Disable the Built-in PostgreSql Container
 
-Open the following file in a text editor: `/etc/mdss/docker-compose.main.yml`
+Open the file `/etc/mdss/customer.env` in a text editor and add `postgres` to the `DISABLED_SERVICES` variable (create the line if it does not exist):
 
-Locate the `postgresql` service section and **add the following**:
+```bash
+DISABLED_SERVICES=postgres
+```
 
-PowershellCopyprofiles:
-- disabled
-#### [3. Start the MDSS Application](/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab#3-start-the-mdss-application)
+`DISABLED_SERVICES` accepts a comma-separated list, so other externally managed services can be listed alongside it, for example `DISABLED_SERVICES=postgres,rabbitmq,redis`. See [How to Enable Specific Modules in the Configuration?](https://www.opswat.com/docs/mdss/knowledge-base/how-to-enable-specific-modules-in-the-configuration) for details.
+
+#### 3. Start the MDSS Application
 
 Once all modifications are complete, start the MDSS services again:
 
-PowershellCopysudo mdss -c start
+```powershell
+sudo mdss -c start
+```
 
 ---
 
-### [**Verification**](/docs/mdss/knowledge-base/how-to-disable-the-local-postgresql-when-using-an-external-datab#verification)
+### **Verification**
 
 After restarting, verify that:
 
@@ -47,6 +55,10 @@ You can check logs or test basic application functionality to ensure a proper co
 
 ---
 
-Support:
+> **Support:**
+>
+> If you have followed all of the steps above but are still experiencing issues, please follow these instructions on [how to generate a Support Package](https://www.opswat.com/docs/mdss/where-to-get-help/how-to-generate-a-support-package) before [creating a support case or chatting with one of our support engineers.](https://my.opswat.com/support)
 
-If you have followed all of the steps above but are still experiencing issues, please follow these instructions on [how to generate a Support Package](https://www.opswat.com/docs/mdss/where-to-get-help/how-to-generate-a-support-package) before [creating a support case or chatting with one of our support engineers.](https://my.opswat.com/support)
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/mdss/llms.txt)

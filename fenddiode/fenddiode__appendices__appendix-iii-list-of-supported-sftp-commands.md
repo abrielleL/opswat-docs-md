@@ -2,6 +2,8 @@
 
 # Appendix III: List of Supported SFTP Commands
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 SFTP mode supports the following SFTP commands:
 
 | Command | Definition |

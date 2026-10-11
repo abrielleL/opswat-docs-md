@@ -2,6 +2,8 @@
 
 # Database Maintenance | MetaDefender Core 4.18.0
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Info
+
 Only applicable to MetaDefender Core 4.18.0 with SQLite database.
 
 Starting with version 4.19.0, the product has changed to using PostgreSQL database. The applicable vacuum instructions could be found at MetaDefender Core 4.19.0 or above

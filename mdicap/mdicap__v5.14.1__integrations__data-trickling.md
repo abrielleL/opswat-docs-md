@@ -2,6 +2,7 @@
 
 # Data Trickling
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Overview](/docs/mdicap/v5.14.1/integrations/data-trickling#overview)
 
 Blue Coat ProxySG appliances implement Data Trickling to improve the user experience during ICAP scanning. Internet Content Adaptation Protocol (ICAP) is the protocol used by Blue Coat ProxySG and ProxyAV appliances, as well as some third party partner appliances, to perform scanning of objects to detect viruses, worms, spyware, and Trojans. Data Trickling is a mechanism implemented by Blue Coat ProxySG appliances performing ICAP scanning that slowly delivers, or trickles, data to the client as it is being scanned. By trickling data, users do not experience the timeouts sometimes associated with waiting for large objects to be scanned, or when scanning is delayed by high loads on content servers or upstream bandwidth limitations.

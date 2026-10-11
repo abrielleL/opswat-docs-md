@@ -2,6 +2,7 @@
 
 # Modbus Examples
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [General](/docs/fenddiode/deployment-examples/modbus-examples#general)
 
 The Fend Data Diode is capable of communicating directly with Modbus RTU and TCP devices. There are many different ways one can set up the diode, just as there are many ways to set up a Modbus network. This section will provide an overview of the many possible Modbus setups and provides instructions for specific examples. The Fend Data Diode supports the following configuration modes, which are detailed further below.

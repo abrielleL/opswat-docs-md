@@ -179,7 +179,7 @@ Try to access v10 with your credentials. You will need to reset the password and
 
 3.2. Verify the system configuration
 
-Compare the configuration between v8 and v10. The UI can be different. For any values that exist in v8, they should be the same in v10. For any new configurations in v10, the default value will be set. You can contact [OPSWAT Suppor](https://www.opswat.com/support/contact-support)t if you need to clarify any configuration.
+Compare the configuration between v8 and v10. The UI can be different. For any values that exist in v8, they should be the same in v10. For any new configurations in v10, the default value will be set. You can contact [OPSWAT Support](https://www.opswat.com/support/contact-support) if you need to clarify any configuration.
 
 3.3. Verify the Inventory and Product Configurations
 
@@ -196,7 +196,16 @@ You can compare the individual product configuration by going to the product det
 
 The Set setting will be migrated to Policy. You can compare the Set setting to the policy. For example, the Set Name will be converted to Policy Name.
 
-### **Step 5:** Migrate the history data
+### **Step 5:** Migrate OPSWAT products
+
+To migrate OPSWAT products from CM8 to CM10, you can choose between two primary methods depending on your network architecture and migration strategy:
+
+| Methods | Details | Use it when |
+| ---- | ---- | ---- |
+| Network deployment switchover | Reroute product traffic from CM8 to CM10 by updating local DNS (FQDN/CNAME), adjusting reverse proxy upstream rules, or reassigning the server IP. | - Products connect via an FQDN, domain name, or reverse proxy. -  You want to switch over your **entire product fleet at once** during a single maintenance window. |
+| Manual product enroll | Unenroll each product from CM8 and re-enroll it into CM10 using the CM10 URL and Registration Code.  Note Automation scripts are available for MetaDefender Core and Kiosk to automate bulk re-enrollment. Please contact [OPSWAT Support](https://www.opswat.com/support/contact-support) for more info on enrollment script. | You want to **migrate products in small batches **to test first before transitioning your entire production environment. |
+
+### Step 6: Migrate the history data
 
 This step will copy all the processing history scan data from v8 to v10.
 

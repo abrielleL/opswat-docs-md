@@ -2,6 +2,8 @@
 
 # Risks with range request
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Hypertext Transfer Protocol (HTTP) clients often encounter interrupted data transfers as a result of canceled requests or dropped connections. When a client has stored a partial representation, it is desirable to request the remainder of that representation in a subsequent request rather than transfer the entire representation. Likewise, devices with limited local storage might benefit from being able to request only a subset of a larger representation, such as a single page of a very large document, or the dimensions of an embedded image. [[RFC 7233](https://tools.ietf.org/html/rfc7233)]
 
 Both clients and servers support requesting or sending only parts of the original content based on the request of the client. The fact that a content was sent in fragments is hidden form the end user in most of the cases, it may happen automated by the client and the server to optimize performance.

@@ -2,6 +2,7 @@
 
 # OPSWAT Screen View
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Introduction](/docs/fenddiode/deployment-examples/Opswat-Screen-View#introduction)
 
 The OPSWAT Screen View Connector allows the user to replicate the HMI screen of a Windows device from the input side network to the output side network.

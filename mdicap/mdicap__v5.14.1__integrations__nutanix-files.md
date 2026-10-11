@@ -2,6 +2,7 @@
 
 # Nutanix Files
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Overview](/docs/mdicap/v5.14.1/integrations/nutanix-files#overview)
 
 Nutanix Files supports the Internet Content Adaptation Protocol (ICAP) to enable communication with MetaDefender ICAP Server. ICAP Server can scan files stored on file shares in real time when files are opened, closed, read from, or written to.

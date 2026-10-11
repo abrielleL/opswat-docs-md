@@ -2,12 +2,14 @@
 
 # Version 3.7.0
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 | **Version** | 3.7.0 |
 | --- | --- |
 | **Release date** | 23 March 2026 |
 | **Scope** | Enhance current features and add new features. |
 
-## New Features, Improvements, and Enhancements
+## [New Features, Improvements, and Enhancements](/docs/md-ot-security/release-notes/release-notesxvplcg#new-features-improvements-and-enhancements)
 
 |  | Details |
 | --- | --- |

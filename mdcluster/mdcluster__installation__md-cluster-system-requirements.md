@@ -2,6 +2,8 @@
 
 # System requirements
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 This page describes the software dependencies and recommended system requirements for deploying MetaDefender Cluster (MD Cluster) components on supported Windows and Linux platforms. Review these requirements before installation to ensure your environment is properly prepared for a stable and supported deployment.
 
 ## [Windows](/docs/mdcluster/installation/md-cluster-system-requirements#windows)
@@ -117,6 +119,34 @@ If CDR or DLP engines are installed on MD Core instances, the required file stor
 - **Recommended system requirements:**
 
   - Refer [here](https://www.opswat.com/docs/mdcore/installation/recommended-system-configuration#windows-supported-operating-systems) for detailed requirements
+
+### [Worker hosting MD Cluster Callback Service](/docs/mdcluster/installation/md-cluster-system-requirements#worker-hosting-md-cluster-callback-service)
+
+- **Supported version:** 2.6.0
+- **Dependencies:**
+
+  - [Microsoft Visual C++ Redistributable 2019](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
+  - Version 14.29.30139.0 or later
+- **Recommended system requirements:**
+
+  - 4 CPU cores
+  - 4 GB RAM
+  - 5 Gbps network bandwidth
+  - 50 GB storage
+
+### [Worker hosting MD Cluster Download Service](/docs/mdcluster/installation/md-cluster-system-requirements#worker-hosting-md-cluster-download-service)
+
+- **Supported version:** 2.10.0
+- **Dependencies:**
+
+  - [Microsoft Visual C++ Redistributable 2019](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
+  - Version 14.29.30139.0 or later
+- **Recommended system requirements:**
+
+  - 4 CPU cores
+  - 4 GB RAM
+  - 5 Gbps network bandwidth
+  - 50 GB storage
 
 ---
 
@@ -262,6 +292,40 @@ If CDR or DLP engines are installed on MD Core instances, the required file stor
 - **Recommended system requirements:**
 
   - Refer [here](https://www.opswat.com/docs/mdcore/installation/recommended-system-configuration#linux-supported-operating-systems) for detailed requirements
+
+### [Worker hosting MD Callback Service](/docs/mdcluster/installation/md-cluster-system-requirements#worker-hosting-md-callback-service)
+
+- **Supported version:** 2.6.0
+- **Required packages/tools:**
+
+  - uuid
+  - tar
+  - lsb_release
+  - jq
+  - curl
+- **Recommended system requirements:**
+
+  - 4 CPU cores
+  - 4 GB RAM
+  - 5 Gbps network bandwidth
+  - 50 GB storage
+
+### [Worker hosting MD Cluster Download Service](/docs/mdcluster/installation/md-cluster-system-requirements#worker-hosting-md-cluster-download-service)
+
+- **Supported version:** 2.10.0
+- **Required packages/tools:**
+
+  - uuid
+  - tar
+  - lsb_release
+  - jq
+  - curl
+- **Recommended system requirements:**
+
+  - 4 CPU cores
+  - 4 GB RAM
+  - 5 Gbps network bandwidth
+  - 50 GB storage
 
 ---
 

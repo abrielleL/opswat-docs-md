@@ -142,3 +142,7 @@ My OPSWAT Central Management now supports OpenID Connect (OIDC) as an authentica
 New Features **Okta Identity Provider Provisioning**
 
 Administrators can now configure Okta as an identity provider with full user provisioning support, enabling automatic synchronization of user access between Okta and My OPSWAT Central Management. Refer to [dedicated documentation](https://www.opswat.com/docs/cm/user-management/ocm-account-provisioning-with-okta) for configuration details.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

@@ -2,6 +2,8 @@
 
 # Changing the Diode Login Password
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 To change the diode’s login password:
 
 1. Log into your data diode using your web browser.

@@ -2,6 +2,8 @@
 
 # Customer Support
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Need help? Please contact Fend support via any of the following channels:
 
 - Create a ticket by logging into your MyOPSWAT account ([https://my.opswat.com](https://my.opswat.com/)):

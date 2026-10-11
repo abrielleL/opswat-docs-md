@@ -2,6 +2,8 @@
 
 # Could not create temporary directory
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 MetaDefender ICAP Server requires temporary directories and files for its operation. If the temporary directory can not be created then the ICAP Server will fail to start with Could not create temporary directory message in the logs.
 
 Example log message on CentOS 7:

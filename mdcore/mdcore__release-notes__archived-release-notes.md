@@ -2,7 +2,24 @@
 
 # Archived release notes
 
-## [Version v5.22.0](/docs/mdcore/release-notes/archived-release-notes#version-v5220)
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## Version v5.22.1
+
+**Upgraded 3rd party libraries:**
+
+- OpenSSL v3.5.8
+- Libxml2 v2.15.4
+
+**Bug Fixes**
+
+Fixed a set of displaying issues introduced with the all-new MetaDefender Core interface in version 5.21.0, where the processing details for several engines showed less information than the previous interface. The following items have been restored and corrected:
+
+- Deep CDR: the *Verdict Explanations* that state why a file received its verdict are shown again on the Sanitization tab, and rows in the sanitization details table can no longer be clicked when they have no further details to show.
+- Sandbox: the scan settings tab is available again, the SHA-256 hash and file type are populated in extended details, the severity filter is matched by a visible column, long YARA rule tags are no longer cut off, the severity heading now reads *Verdict*, and the list of detected formats matches the previous interface.
+- Proactive DLP: data types with long names are displayed in full, text no longer overlaps, tags are spaced correctly from the results table, the results list respects the selected number of items per page, and the message shown for an unsupported file type links to the list of supported file types again.
+- Post actions: the post actions list in the processing result respects the selected number of items per page instead of showing every entry at once.
+
+## Version v5.22.0
 
 Release Date: 26 August 2026
 
@@ -37,11 +54,11 @@ A workflow can now be configured to stop processing a file as soon as a mismatch
 A configurable policy can require local users to change their password on first login. LOCAL accounts only
 
 **2) Create user API can mint an API key**
-The Create user API can create an API key as part of user creation, so automation does not need a second step after the account exists. Please check details: [POST - Create user](/docs/mdcore/metadefender-core#usercreate)
+The Create user API can create an API key as part of user creation, so automation does not need a second step after the account exists. Please check details: [POST - Create user](/metadefender-core/ref#usercreate)
 
 **3) Webhook callback API key**
 
-An custom header can be passed through to a webhook server when a file is submitted to the callback API, so the webhook endpoint can authenticate the request. [POST - Analyze File (Asynchronous mode)](/docs/mdcore/metadefender-core#fileanalysispost)
+An custom header can be passed through to a webhook server when a file is submitted to the callback API, so the webhook endpoint can authenticate the request. [POST - Analyze File (Asynchronous mode)](/metadefender-core/ref#fileanalysispost)
 
 **4) In-product notice when a newer Core version is available**
 
@@ -49,7 +66,7 @@ Administrators can be notified in the console when a newer MetaDefender Core ver
 
 **5) API to list**`data_id`**values**
 
-A new API returns a list of `data_id` values so integrations can page or batch-query scan objects without walking history one file at a time. [MetaDefender Core API](/docs/mdcore/metadefender-core)
+A new API returns a list of `data_id` values so integrations can page or batch-query scan objects without walking history one file at a time. [MetaDefender Core API](/metadefender-core/ref)
 
 `GET` - `/file/ids`
 
@@ -110,7 +127,7 @@ Upgraded 3rd party libraries:
 - Fixed an issue where a cancelled scan was not reported as cancelled in JSON exports, log files, and syslog.
 - Resolved an issue where importing a settings package could fail intermittently when a configuration value exceeded its length limit, silently keeping the previous configuration.
 
-## [Version v5.21.0](/docs/mdcore/release-notes/archived-release-notes#version-v5210)
+## Version v5.21.0
 
 Release Date: 30 July 2026
 
@@ -148,8 +165,8 @@ Bundled PostgreSQL server comes with MetaDefender Core standalone deployment als
 
 **Note**:
 
-- PostgreSQL v18 itself cannot initialize its database cluster when the Windows system locale name contains non-ASCII characters. For example, Turkish Windows uses the locale `Turkish_Türkiye.1254`, which contains `ü`. Instruction for safe upgrade at [Upgrade to MetaDefender Core 5.21.0 or later on Windows systems with a non-ASCII locale](/docs/mdcore/troubleshooting/metadefender-core-with-postgresql-18-on-a-non-ascii-os-locale).
-- If your bundle PostgreSQL password contains non-ASCII characters (for example `£`, `€`, or accented letters), the upgrade may fail and prevent console login. ASCII special characters such as `&`, `~`, and `\` are not affected. Before upgrading, change the PostgreSQL password to ASCII-only - please check [Database Management](/docs/mdcore/configuration/database-management) for change password
+- PostgreSQL v18 itself cannot initialize its database cluster when the Windows system locale name contains non-ASCII characters. For example, Turkish Windows uses the locale `Turkish_Türkiye.1254`, which contains `ü`. Instruction for safe upgrade at [Upgrade to MetaDefender Core 5.21.0 or later on Windows systems with a non-ASCII locale](/troubleshooting/metadefender-core-with-postgresql-18-on-a-non-ascii-os-locale).
+- If your bundle PostgreSQL password contains non-ASCII characters (for example `£`, `€`, or accented letters), the upgrade may fail and prevent console login. ASCII special characters such as `&`, `~`, and `\` are not affected. Before upgrading, change the PostgreSQL password to ASCII-only - please check [Database Management](/configuration/database-management) for change password
 
 ---
 
@@ -221,7 +238,7 @@ When available disk space drops below configured thresholds, administrators now 
 - Improved startup when several MetaDefender Core nodes share one database (shared-db), so concurrent restarts are less likely to hit database privilege deadlocks and fail to come online.
 - Improved NGINX log rotation on Windows by storing runtime config outside temp and recovering when the config file is missing.
 
-## [Version v5.20.0](/docs/mdcore/release-notes/archived-release-notes#version-v5200)
+## Version v5.20.0
 
 Release Date: 30 June 2026
 
@@ -249,7 +266,7 @@ Issues are surfaced automatically and explained in plain language, so you know e
 
 Spend less time investigating and more time being confident that your deployment is protected. Spot problems early, resolve them faster, and share results with support in seconds.
 
-Check more details at [Auto Troubleshooting](/docs/mdcore/operating/auto-troubleshooting).
+Check more details at [Auto Troubleshooting](/operating/auto-troubleshooting).
 
 ---
 
@@ -259,7 +276,7 @@ Finding a single problematic file buried inside an archive just got easier. Arch
 
 When enabled per scanning rule, MetaDefender Core preserves child files matching your configured trigger verdicts, encrypts them at rest with AES-256-GCM, and makes them available as password-protected ZIPs. Office documents are smartly skipped to keep your forensic store clean.
 
-View, search, download, and manage your captures anytime: [Archive Forensic](/docs/mdcore/operating/archive-forensics).
+View, search, download, and manage your captures anytime: [Archive Forensic](/operating/archive-forensics).
 
 ---
 
@@ -362,7 +379,7 @@ We only collect neutral operational data. No sensitive information, no file cont
 - Fixed an issue where scan-result tab names were truncated when the tab bar overflowed.
 - Fixed an issue where a temporary file created by the AI Content Inspector was not deleted after a scan request was canceled.
 
-## [Version v5.19.0](/docs/mdcore/release-notes/archived-release-notes#version-v5190)
+## Version v5.19.0
 
 Release Date: 21 May 2026
 
@@ -480,7 +497,7 @@ Upgraded 3rd party libraries:
 - Fixed an issue where archive scan results displayed an "Exceeded Archive File Number" extraction issue without an associated count of affected files. The count is now correctly populated for the root archive.
 - Fixed an issue where the workflow rule name filter in Executive Reports did not reflect renamed rules, leaving the old name in the filter. The filter now correctly reflects the current rule name.
 
-## [Version v5.18.1](/docs/mdcore/release-notes/archived-release-notes#version-v5181)
+## Version v5.18.1
 
 Release Date: 15 April 2026
 
@@ -494,7 +511,7 @@ Bug Fixes:
 
 - Fixed a stability issue that, in rare cases under heavy load, could cause MetaDefender Core within MetaDefender Cluster to crash during extraction distribution.
 
-## [Version v5.18.0](/docs/mdcore/release-notes/archived-release-notes#version-v5180)
+## Version v5.18.0
 
 Release Date: 31 March 2026
 
@@ -512,7 +529,7 @@ The introduction of global search functionality across workflow rule settings fa
 
 **Feature Enhancement: Blocklist and Allowlist File-Type Configuration**
 
-Less friction, more control. Users can now configure lists in seconds via a simplified interface, while a dedicated search feature allows for navigation to specific file types. More details at [Blocklist by filetype configuration](/docs/mdcore/configuration/blocklist-by-filetype-configuration).
+Less friction, more control. Users can now configure lists in seconds via a simplified interface, while a dedicated search feature allows for navigation to specific file types. More details at [Blocklist by filetype configuration](/configuration/blocklist-by-filetype-configuration).
 
 ---
 
@@ -526,7 +543,7 @@ Gain immediate visibility into the connectivity status between MetaDefender Core
 
 Shared Database Mode is now supported for enrollment in My OPSWAT Central Management v10 (MOCM). This enhancement enables multiple instances sharing a database to be managed through MOCM, though certain limitations apply to certificate management and configuration synchronization in mixed-mode environments.
 
-Please refer to [My OPSWAT Central Management](/docs/mdcore/configuration/my-opswat-central-management) for more details.
+Please refer to [My OPSWAT Central Management](/configuration/my-opswat-central-management) for more details.
 
 ---
 
@@ -540,7 +557,7 @@ MetaDefender Core has been enhanced to support synchronization of SSL/TLS config
 
 Starting from version 5.18.0, users can download quarantined files with password protection. This feature enhances security by allowing files to be encrypted during download, helping prevent accidental execution due to unintended user actions.
 
-More details at [Download quarantine files](/docs/mdcore/operating/download-quarantine-files).
+More details at [Download quarantine files](/operating/download-quarantine-files).
 
 ---
 
@@ -590,7 +607,7 @@ Archive extraction monitoring has been enhanced to accurately report when a scan
 
 **8)** **Simplified Deep CDR Final Verdicts in API Responses**
 
-Scan result API responses ([GET - Fetch Analysis Result](/docs/mdcore/metadefender-core#fileanalysisget) and [GET - Fetch Analysis Result By Hash](/docs/mdcore/metadefender-core#hashget)) have been enhanced to include a top-level engine results object. This improvement introduces a `sanitization_result` field that provides a clear, simplified verdict of "Success," "Failed," or "Not Run," streamlining programmatic processing by eliminating the need to parse multiple internal fields across different file types.
+Scan result API responses ([GET - Fetch Analysis Result](/v5.20.0/metadefender-core/ref#fileanalysisget) and [GET - Fetch Analysis Result By Hash](/v5.20.0/metadefender-core/ref#hashget)) have been enhanced to include a top-level engine results object. This improvement introduces a `sanitization_result` field that provides a clear, simplified verdict of "Success," "Failed," or "Not Run," streamlining programmatic processing by eliminating the need to parse multiple internal fields across different file types.
 
 **9) Layout Refinements and Minor Adjustments for the PDF Processing Result Report**
 
@@ -651,7 +668,7 @@ Significant improvements have been made to the webhook response mechanism, enhan
 - Fix an issue where 1 MB `multipart/form-data` requests failed when submitted to MetaDefender Core.
 - Fix an issue where MetaDefender Core failed to parse `multipart/form-data` requests when the boundary parameter was enclosed in quotes.
 
-## [Version v5.17.1](/docs/mdcore/release-notes/archived-release-notes#version-v5171)
+## Version v5.17.1
 
 Release Date: 26 January 2026
 
@@ -659,9 +676,9 @@ Release Date: 26 January 2026
 
 MetaDefender Core introduces a branch new technology called **MetaDefender Aether**, a next-generation technology that brings Adaptive Sandbox and Threat Intelligence together into one powerful, unified pipeline. With Aether, security teams can detect, analyze, and respond to advanced threats with unprecedented speed and precision. This upgrade streamlines your threat detection workflow, reduces complexity, and delivers deeper insights, empowering you to stay ahead of even the most sophisticated cyber threats.
 
-For more details about the all-new Threat Intelligence engine, please refer to this documentation: [Threat Intelligence](/docs/mdcore/threat-intelligence-engine/overview).
+For more details about the all-new Threat Intelligence engine, please refer to this documentation: [Threat Intelligence](/threat-intelligence-engine/overview).
 
-For details on the Threat Intelligence response JSON format, as exposed in the new `threatintelligence_info` field, see: [GET - Fetch Analysis Result](/docs/mdcore/metadefender-core#fileanalysisget)
+For details on the Threat Intelligence response JSON format, as exposed in the new `threatintelligence_info` field, see: [GET - Fetch Analysis Result](/v5.20.0/metadefender-core/ref#fileanalysisget)
 
 ---
 
@@ -712,12 +729,12 @@ This scan type is not supported for requests that include the following headers:
 
 **Notes:** Before upgrading to v5.17.1 or later,
 
-1. Verify whether your client applications are using a relevant Content-Type header and its corresponding payload for [Analyze File (Asynchronous mode) - POST /file](/docs/mdcore/metadefender-core#fileanalysispost).
+1. Verify whether your client applications are using a relevant Content-Type header and its corresponding payload for [Analyze File (Asynchronous mode) - POST /file](/v5.20.0/metadefender-core/ref#fileanalysispost).
 
 - `application/octet-stream`: The payload must contain exactly one file's content.
 - `multipart/form-data`: The payload may contain multiple files' content and must strictly adhere to the standard format (including `Content-Disposition`, `Content-Type`, and the raw data). Non-compliant payload will result in an HTTP 400 error and the message: "Invalid multipart/form-data payload received".
 
-2. Verify that client-side parsing logic for the endpoint [Analyze File (Asynchronous mode) - POST /file](/docs/mdcore/metadefender-core#fileanalysispost) aligns with the submitted `Content-Type` header:
+2. Verify that client-side parsing logic for the endpoint [Analyze File (Asynchronous mode) - POST /file](/v5.20.0/metadefender-core/ref#fileanalysispost) aligns with the submitted `Content-Type` header:
 
 - `Content-Type: application/octet-stream`: The API returns a `data_id`.
 - `Content-Type: multipart/form-data`: The API returns a `batch_id`.
@@ -798,7 +815,7 @@ Upgraded libraries for vulnerability fixes:
 - Addressed an issue where API requests failed due to RAMDISK Temp Directory setup and using the `downloadfrom` header - causing incorrect disk space comparison.
 - Other cosmetic fixes.
 
-## [Version v5.17.0](/docs/mdcore/release-notes/archived-release-notes#version-v5170)
+## Version v5.17.0
 
 Release Date: 16 December 2025
 
@@ -846,7 +863,7 @@ Email notifications have been improved to support batch aggregation and clearer 
 
 MetaDefender Core now supports comprehensive scanning Split Archive file type.
 
-The product accepts individual requests with split-archive parts sent via a new set of API endpoints, reassemble them, then extract and process nested files. Integration instruction at [Split archive upload guideline](/docs/mdcore/integration/splitarchive-uploading-guidelinek4l).
+The product accepts individual requests with split-archive parts sent via a new set of API endpoints, reassemble them, then extract and process nested files. Integration instruction at [Split archive upload guideline](/integration/splitarchive-uploading-guidelinek4l).
 
 ---
 
@@ -858,9 +875,9 @@ The product accepts individual requests with split-archive parts sent via a new 
 
 **3)** The product now supports teamed NIC (Network Interface Card) configurations, preserving Deployment ID and maintaining stable license activation when network adapters are changed or switched within the team.
 
-**4)** The response of [POST - Login](/docs/mdcore/metadefender-core#userlogin) now will return the header X-Core-Id if custom header is configured. It will help the customers identify which instance behind load balancer users login to.
+**4)** The response of [POST - Login](/v5.20.0/metadefender-core/ref#userlogin) now will return the header X-Core-Id if custom header is configured. It will help the customers identify which instance behind load balancer users login to.
 
-**5)** Introduce new metrics regarding disk IO percentage in [GET /stat/nodes](/docs/mdcore/metadefender-core#nodesstatus) API, providing better visibility into node performance and potential bottlenecks. Adding `disk_stat_info` :
+**5)** Introduce new metrics regarding disk IO percentage in [GET /stat/nodes](/v5.20.0/metadefender-core/ref#nodesstatus) API, providing better visibility into node performance and potential bottlenecks. Adding `disk_stat_info` :
 
 - Disk utilization (%): Min-Max value from 0 to 100
 - Read speed (Mb/s): Min 0, Max depend on disk
@@ -906,7 +923,7 @@ The product accepts individual requests with split-archive parts sent via a new 
 - Fixed an issue where the password reset email would truncate passwords containing the '<' character.
 - Other cosmetic fixes.
 
-## [Version v5.16.1](/docs/mdcore/release-notes/archived-release-notes#version-v5161)
+## Version v5.16.1
 
 Release Date: 30 October 2025
 
@@ -916,7 +933,7 @@ MetaDefender Core now supports integration with BeyondTrust's Password Safe, ena
 
 This integration allows organizations to eliminate static AD bind passwords, and it supports configuration, status monitoring, and seamless login with AD users whose credentials are managed by Password Safe.
 
-More details at [Integrate Active Directory with BeyondTrust Password Safe](/docs/mdcore/configuration/integrate-active-directory-with-beyondtrust-s-password-safe).
+More details at [Integrate Active Directory with BeyondTrust Password Safe](/configuration/integrate-active-directory-with-beyondtrust-s-password-safe).
 
 ---
 
@@ -992,7 +1009,7 @@ Upgraded libraries for vulnerability fixes:
 
 Permissions have been tightened so only users with the appropriate right can access and view the data of "Config History".
 
-Adjusted [Webhook worker count](/docs/mdcore/metadefender-core#configupdatewebhook) boundary:
+Adjusted [Webhook worker count](/v5.20.0/metadefender-core/ref#configupdatewebhook) boundary:
 
 - Setting the webhook worker count to a very high value would prevent MetaDefender Core from starting, causing it to hang.
 - The worker count is now limited to a maximum of 100, and any higher values from previous versions are automatically adjusted during upgrade to ensure stable operation.
@@ -1018,7 +1035,7 @@ Sep 04 15:56:56.123 SE Asia Standard Time ... CEF:0|OPSWAT|MSCW|5.16.1|core.conf
 - Fixed an issue where upgrading MetaDefender Core on Ubuntu 24 could cause the service to lose connection with Postgres due to a specific system warning.
 - Fixed an issue where audit logs and syslog entries only displayed user ID instead of username when a local user was deleted.
 
-## [Version v5.16.0](/docs/mdcore/release-notes/archived-release-notes#version-v5160)
+## Version v5.16.0
 
 Release Date: 30 September 2025
 
@@ -1107,7 +1124,7 @@ For example, with the following settings, XML and RELS child files of DOCX file 
 
 **REST API Enhancements**
 
-**1)** APIs [GET - Fetch a list of blocked leaf files inside archive](/docs/mdcore/metadefender-core#retrieveblockedleaffile) and [Fetch a list of blocked leaf files inside archive by hash](/docs/mdcore/metadefender-core#retrieveblockedleaffilebyhash) include
+**1)** APIs [GET - Fetch a list of blocked leaf files inside archive](/v5.20.0/metadefender-core/ref#retrieveblockedleaffile) and [Fetch a list of blocked leaf files inside archive by hash](/v5.20.0/metadefender-core/ref#retrieveblockedleaffilebyhash) include
 
 Hash-related fields:
 
@@ -1119,7 +1136,7 @@ Hash-related fields:
 
 And YARA rule fields: `yara_info`
 
-2. Begin tracking Proactive DLP wait time: `dlp_wait_time` . This new field is included in [Fetch Analysis Result](/docs/mdcore/metadefender-core#fileanalysisget) and other result fetching APIs.
+2. Begin tracking Proactive DLP wait time: `dlp_wait_time` . This new field is included in [Fetch Analysis Result](/v5.20.0/metadefender-core/ref#fileanalysisget) and other result fetching APIs.
 
 ---
 
@@ -1131,7 +1148,7 @@ And YARA rule fields: `yara_info`
 
 **3)** Quarantine feature offers options for searching for Technology results like SBOM, Adaptive Sandbox and sorting by Date Added.
 
-**4)** Administrators may enable SSL connection for bundle PostgreSQL. More details at [How to setup SSL connection for PG](/docs/mdcore/installation/bundle-postgresql-ssl-connection).
+**4)** Administrators may enable SSL connection for bundle PostgreSQL. More details at [How to setup SSL connection for PG](/installation/bundle-postgresql-ssl-connection).
 
 **5)** Session cookie sent or not sent with cross-site requests is configurable on web console under Security tab in Settings.
 
@@ -1164,7 +1181,7 @@ YARA rules using HTTP are now subject to the following restrictions:
 - Addressed a UI issue that displayed an incorrect number of supported file types of Adaptive Sandbox in workflow configuration.
 - Addressed an issue that incorrectly prohibited certain accepted special characters (e.g., underscores and hyphens) in usernames within the Email Server configuration settings.
 
-## [Version v5.15.2](/docs/mdcore/release-notes/archived-release-notes#version-v5152)
+## Version v5.15.2
 
 Release Date: 28 August 2025
 
@@ -1172,7 +1189,7 @@ Release Date: 28 August 2025
 
 In March 2026, Microsoft will be retiring Basic authentication with SMTP AUTH, and the change will complete after April. That means applications will no longer be able to use this authentication method to send emails.
 
-This change prompts us to prioritize implementing OAuth support for Email Server as soon as possible. If you are using Basic Auth, we encourage you to review this document [Microsoft 365 OAuth](/docs/mdcore/configuration/email-configuration#microsoft-365-oauth) and change your MetaDefender Core's configurations to OAuth.
+This change prompts us to prioritize implementing OAuth support for Email Server as soon as possible. If you are using Basic Auth, we encourage you to review this document [Microsoft 365 OAuth](/configuration/email-configuration#microsoft-365-oauth) and change your MetaDefender Core's configurations to OAuth.
 
 ---
 
@@ -1196,7 +1213,7 @@ Scan requests that are rejected such as those surpassing file size limits or occ
 
 **Note:** This feature only supports Standalone mode.
 
-More details at [Track Rejected Requests](/docs/mdcore/configuration/system-configuration#track-rejected-requests).
+More details at [Track Rejected Requests](/configuration/system-configuration#track-rejected-requests).
 
 ---
 
@@ -1217,9 +1234,9 @@ In collaboration with My OPSWAT Central Management, MetaDefender Core begins to 
 
 **REST API Enhancements**
 
-**1)** A dedicated API endpoint to fetch and monitor system's resources including Disk space usage, CPU and RAM utilizations. Document at [GET - Get server system resource](/docs/mdcore/metadefender-core#getserverstats).
+**1)** A dedicated API endpoint to fetch and monitor system's resources including Disk space usage, CPU and RAM utilizations. Document at [GET - Get server system resource](/v5.20.0/metadefender-core/ref#getserverstats).
 
-**2)** The feature Scan-from-Link can now skip its metadata check and proceed directly to file downloading when clients set the new header `skip-head-request` of [POST - Analyze File (Asynchronous mode)](/docs/mdcore/metadefender-core#fileanalysispost) to false.
+**2)** The feature Scan-from-Link can now skip its metadata check and proceed directly to file downloading when clients set the new header `skip-head-request` of [POST - Analyze File (Asynchronous mode)](/v5.20.0/metadefender-core/ref#fileanalysispost) to false.
 
 ---
 
@@ -1258,13 +1275,13 @@ Upgraded libraries for vulnerability fixes:
 - Addressed an issue where a negative value for `others_time` could occur after Compression sanitization execution.
 - Addressed a comestic issue where Metascan tile was temporarily grayed out while Country of Origin was processing files.
 
-## [Version v5.15.1](/docs/mdcore/release-notes/archived-release-notes#version-v5151)
+## Version v5.15.1
 
 Release Date: 30 July 2025
 
 **New Operating System Support: Ubuntu 24.04**
 
-This release introduces support for Ubuntu 24.04 across most engines. The majority of engines are now compatible and operational on this new operating system. MetaDefender Core now also supports CIS Level 2 system hardening benchmarks on this OS. For more details, refer to [CIS Level 2 - Linux Guidelines](/docs/mdcore/installation/cis-level-2-guidelines).
+This release introduces support for Ubuntu 24.04 across most engines. The majority of engines are now compatible and operational on this new operating system. MetaDefender Core now also supports CIS Level 2 system hardening benchmarks on this OS. For more details, refer to [CIS Level 2 - Linux Guidelines](/installation/cis-level-2-guidelines).
 
 Few engines still require additional time for full compatibility with Ubuntu 24.04:
 
@@ -1300,8 +1317,8 @@ Most settings, except for the product file path, do not require a service restar
 
 The product now offers three means of log configurations:
 
-- Through MetaDefender Core web console ([Advanced Log Configurations](/docs/mdcore/configuration/advanced-log-configuration)).
-- Using REST API endpoints ([PUT - Update log configuration](/docs/mdcore/metadefender-core#putlogfileconfig)).
+- Through MetaDefender Core web console ([Advanced Log Configurations](/configuration/advanced-log-configuration)).
+- Using REST API endpoints ([PUT - Update log configuration](/v5.20.0/metadefender-core/ref#putlogfileconfig)).
 - Enrolling and managing with My OPSWAT Central Management.
 
 ---
@@ -1327,10 +1344,10 @@ Introduced a new field, `post_processing.sanitization_details.status`, to the re
 
 Impacted REST API endpoints:
 
-- [GET /file/{data ID}](/docs/mdcore/metadefender-core#fileanalysisget)
-- [POST /file/sync](/docs/mdcore/metadefender-core#fileanalysissyncpost)
-- [GET /hash/{hash value}](/docs/mdcore/metadefender-core#hashget)
-- [GET /file/archive/{data ID}](/docs/mdcore/metadefender-core#fileanalysisgetallchildfiles)
+- [GET /file/{data ID}](/v5.20.0/metadefender-core/ref#fileanalysisget)
+- [POST /file/sync](/v5.20.0/metadefender-core/ref#fileanalysissyncpost)
+- [GET /hash/{hash value}](/v5.20.0/metadefender-core/ref#hashget)
+- [GET /file/archive/{data ID}](/v5.20.0/metadefender-core/ref#fileanalysisgetallchildfiles)
 
 ---
 
@@ -1343,9 +1360,9 @@ Impacted REST API endpoints:
 - When the machine loses internet connectivity to MOCM and the service is subsequently restarted.
 - When the system's root certificates are corrupted or invalid and are later updated or restored.
 
-**3)** A tool for Admin to remove an existing PIN code or set a new one. More details at [PIN Code Reset Tool](/docs/mdcore/troubleshooting/pin-code-reset-tool).
+**3)** A tool for Admin to remove an existing PIN code or set a new one. More details at [PIN Code Reset Tool](/troubleshooting/pin-code-reset-tool).
 
-**4)** Audit Log covers activities related to API [PUT - Update list of custom response headers](/docs/mdcore/metadefender-core#configputcustomresponseheader).
+**4)** Audit Log covers activities related to API [PUT - Update list of custom response headers](/v5.20.0/metadefender-core/ref#configputcustomresponseheader).
 
 **5)** Extended the option "Fallback file type detection to current extension" to Adaptive Sandbox.
 
@@ -1372,7 +1389,7 @@ Upgraded libraries for vulnerability fixes:
 - Resolved an issue where slots in the queue for Batch processing were not released and temporary files were not cleaned up when the client connection was closed, resulting in improper transmission of error responses.
 - Resolved a potential issue that could cause the service to crash due to incompatibility between a library with Qt6.
 
-## [Version v5.15.0](/docs/mdcore/release-notes/archived-release-notes#version-v5150)
+## Version v5.15.0
 
 Release Date: 03 July 2025
 
@@ -1380,7 +1397,7 @@ Release Date: 03 July 2025
 
 MetaDefender Core now supports CIS Level 2 system hardening benchmarks on Ubuntu 22.04. This enables organizations to meet more rigorous compliance requirements in regulated or high-assurance environments.
 
-For more details, refer to [CIS Level 2 - Linux Guidelines](/docs/mdcore/installation/cis-level-2-guidelines). Support for additional systems is planned for future releases.
+For more details, refer to [CIS Level 2 - Linux Guidelines](/installation/cis-level-2-guidelines). Support for additional systems is planned for future releases.
 
 ---
 
@@ -1391,7 +1408,7 @@ A new feature has been added to support exporting and importing engine advanced 
 - Export all engine settings, even for modules that are currently deactivated.
 - Import these settings into a new installation, ensuring that module activation states and configurations are preserved.
 - Restore previous settings for engines if they are re-enabled after import.
-- Control the feature via the API header `engine_config`: [GET - Export configuration](/docs/mdcore/metadefender-core#adminexportv2).
+- Control the feature via the API header `engine_config`: [GET - Export configuration](/v5.20.0/metadefender-core/ref#adminexportv2).
 
 This feature improves configuration management and migration scenarios, especially for customers who need to maintain consistent engine settings across deployments.
 
@@ -1411,7 +1428,7 @@ For more information, please refer to the official My OPSWAT Central Management 
 
 Administrators can now define a file size limit at the NGINX layer. This enables earlier enforcement of policy controls and supports more distributed or containerized environments.
 
-This is configurable at the key `body_size` in ignition file. More details at [Ignition file fields](/docs/mdcore/installation/deployment-automation-support#ignition-file-fields).
+This is configurable at the key `body_size` in ignition file. More details at [Ignition file fields](/installation/deployment-automation-support#ignition-file-fields).
 
 ---
 
@@ -1435,7 +1452,7 @@ This post-activation check helps administrators verify whether their environment
 
 Administrators can configure HTTPS during the initial deployment process using ignition file, rather than post-installation on web console or via API call. This simplifies secure setup and reduces deployment time.
 
-A new set of settings are introduced at [HTTPS section in Ignition file](/docs/mdcore/installation/deployment-automation-support#ignition-file-fields).
+A new set of settings are introduced at [HTTPS section in Ignition file](/installation/deployment-automation-support#ignition-file-fields).
 
 ---
 
@@ -1475,10 +1492,10 @@ New options have been introduced in the Allowlist workflow configuration to auto
 
 **1)** Attach MetaDefender Core server information in the response header X-Core-Id of the following API endpoints:
 
-- `POST` `/file/batch` - [Initiate Batch](/docs/mdcore/metadefender-core#batchcreate)
-- `GET` `/hash` - [Fetch Analysis Result By Hash](/docs/mdcore/metadefender-core#hashget)
+- `POST` `/file/batch` - [Initiate Batch](/v5.20.0/metadefender-core/ref#batchcreate)
+- `GET` `/hash` - [Fetch Analysis Result By Hash](/v5.20.0/metadefender-core/ref#hashget)
 
-**2)** Supporting customizable parameters with new header `info` in the REST API [GET /readyz](/docs/mdcore/metadefender-core#healthcheck) allows users to query specific system metrics, such as CPU load thresholds, relevant to their use case. Available values:
+**2)** Supporting customizable parameters with new header `info` in the REST API [GET /readyz](/v5.20.0/metadefender-core/ref#healthcheck) allows users to query specific system metrics, such as CPU load thresholds, relevant to their use case. Available values:
 
 - all: return all the information
 - database: obtain database status
@@ -1489,11 +1506,11 @@ New options have been introduced in the Allowlist workflow configuration to auto
 - number_active_av_engines: obtain the number of active AV engines threshold
 - engines: obtain engine status
 
-**3)** Introduce a new API endpoint to fetch a list of blocked leaf files inside the archive by Hash: [GET /hash/{hash value}/blocked-leaves](/docs/mdcore/metadefender-core#retrieveblockedleaffilebyhash).
+**3)** Introduce a new API endpoint to fetch a list of blocked leaf files inside the archive by Hash: [GET /hash/{hash value}/blocked-leaves](/v5.20.0/metadefender-core/ref#retrieveblockedleaffilebyhash).
 
-**4)** Introduce a dedicated API endpoint to validate PIN code: [POST /admin/pincode/validate](/docs/mdcore/metadefender-core#validatepincode).
+**4)** Introduce a dedicated API endpoint to validate PIN code: [POST /admin/pincode/validate](/v5.20.0/metadefender-core/ref#validatepincode).
 
-**5)** Provide a new API endpoint to trigger `Local Folder Update` even during business hours or pause update window: [POST /admin/update/folder](/docs/mdcore/metadefender-core#postforce-update-folder-trigger).
+**5)** Provide a new API endpoint to trigger `Local Folder Update` even during business hours or pause update window: [POST /admin/update/folder](/v5.20.0/metadefender-core/ref#postforce-update-folder-trigger).
 
 ---
 
@@ -1515,7 +1532,7 @@ Upgraded libraries for vulnerability fixes:
 - Fixed a crash issue that potentially happens during proxy setup. Network management is unavailable when the proxy configuration is applied, leading to a crash of MetaDefender Core. This scenario occurs with an extremely low likelihood.
 - Fixed an issue where the setting `Processing results to be classified as Allowed` was not applied correctly, causing erroneous blocking of results.
 
-## [Version v5.14.2](/docs/mdcore/release-notes/archived-release-notes#version-v5142)
+## Version v5.14.2
 
 Release Date: 28 May 2025
 
@@ -1561,13 +1578,13 @@ All the following methods support this header: asynchronous mode, synchronous mo
 
 More details at:
 
-- [GET - Fetch Analysis Result](/docs/mdcore/metadefender-core#fileanalysisget)
-- [GET - Fetch Analysis Result By Hash](/docs/mdcore/metadefender-core#hashget)
-- [GET - Status of Batch Analysis](/docs/mdcore/metadefender-core#batchstatus)
-- [POST - Analyze File (Asynchronous mode)](/docs/mdcore/metadefender-core#fileanalysispost)
-- [POST - Analyze File (Synchronous mode)](/docs/mdcore/metadefender-core#fileanalysissyncpost)
-- [POST - Initiate Batch](/docs/mdcore/metadefender-core#batchcreate)
-- [POST - Create multipart uploading session](/docs/mdcore/metadefender-core#createmultipartuploadpost)
+- [GET - Fetch Analysis Result](/v5.20.0/metadefender-core/ref#fileanalysisget)
+- [GET - Fetch Analysis Result By Hash](/v5.20.0/metadefender-core/ref#hashget)
+- [GET - Status of Batch Analysis](/v5.20.0/metadefender-core/ref#batchstatus)
+- [POST - Analyze File (Asynchronous mode)](/v5.20.0/metadefender-core/ref#fileanalysispost)
+- [POST - Analyze File (Synchronous mode)](/v5.20.0/metadefender-core/ref#fileanalysissyncpost)
+- [POST - Initiate Batch](/v5.20.0/metadefender-core/ref#batchcreate)
+- [POST - Create multipart uploading session](/v5.20.0/metadefender-core/ref#createmultipartuploadpost)
 
 The client identity details are accessible through:
 
@@ -1581,7 +1598,7 @@ Starting with version 5.14.2, MetaDefender Core introduces support for archive p
 
 The passwords are transmitted via header `archivepwd` and are secured through at-rest encryption.
 
-More details at [POST - Create multipart uploading session](/docs/mdcore/metadefender-core#createmultipartuploadpost).
+More details at [POST - Create multipart uploading session](/v5.20.0/metadefender-core/ref#createmultipartuploadpost).
 
 **SBOM Package Filter for Archive Files and Batch**
 
@@ -1615,7 +1632,7 @@ A new SBOM filter functionality has been added to the Scan Results page. This fe
 - Fixed an issue that omitted blocked reason "Extraction Failed" when a temporary extracted file was absent.
 - Fixed an issue that incorrectly disabled Country of Origin engine after importing a configuration with "Allowlist by vendor" setting enabled.
 
-## [Version v5.14.1](/docs/mdcore/release-notes/archived-release-notes#version-v5141)
+## Version v5.14.1
 
 Release Date: 28 April 2025
 
@@ -1627,19 +1644,19 @@ This release of MetaDefender Core introduces official support for Oracle Linux 9
 
 To offer automated user management, MetaDefender Core provides a new REST API that Administrators can call to set or change a permanent apikey for local-type users.
 
-API document at [Update user's API key](/docs/mdcore/metadefender-core#changeuserapikey).
+API document at [Update user's API key](/v5.20.0/metadefender-core/ref#changeuserapikey).
 
 **Securing syslog communication over TLS**
 
 This version introduces support for securing syslog communication over Transport Layer Security (TLS), enhancing the confidentiality and integrity of log data transmitted across networks.
 
-New protocol `tcps` is supported. Documentation at [Logging](/docs/mdcore/configuration/logging), and API can be found at [Apply syslog server configurations](/docs/mdcore/metadefender-core#postsyslogconfig).
+New protocol `tcps` is supported. Documentation at [Logging](/configuration/logging), and API can be found at [Apply syslog server configurations](/v5.20.0/metadefender-core/ref#postsyslogconfig).
 
 **Post Action and External Scanner**
 
 Introduce a command restriction for Post Action and External Scanner features enabling server Administrators to specify a list of permitted commands that these features can only use.
 
-More details at [Hardening feature for Post Action and External Scanner](/docs/mdcore/configuration/hardening-for-external-scanners-and-post-actions).
+More details at [Hardening feature for Post Action and External Scanner](/configuration/hardening-for-external-scanners-and-post-actions).
 
 **Post Action with permitted-only commands.**
 
@@ -1699,7 +1716,7 @@ To close the experience gap, the product now supports more features in Inventory
 - Fixed a display issue that showed up an empty screen of Inventory/Modules on MOCM after upgrading to v5.14.0.
 - Fixed a display issue that sometimes showed up an empty screen of Workflow on MOCM after enrollment.
 
-## [Version v5.14.0](/docs/mdcore/release-notes/archived-release-notes#version-v5140)
+## Version v5.14.0
 
 Release Date: 31 March 2025
 
@@ -1727,8 +1744,8 @@ Release Date: 31 March 2025
   - An ability to export offline activation license for backup and restore. The exported license is safely stored in password-protected ZIP file.
   - Introduce a new child setting under 'Block files that exceed the file size threshold' to exclude good verdicts from specific technologies, preventing those files from being blocked due to exceeding the file size threshold.
   - Support nomination for hot-backup instance with OLMS activation.
-  - Add more accurate load factors such as CPU load and Avg. duration time in the health check API. For more details, refer to [Get health check status](/docs/mdcore/metadefender-core#healthcheck).
-  - New API for AD-bound password rotation automation. For more details, refer to [Change Password for AD/LDAP User Directory](/docs/mdcore/metadefender-core#userdirectorychangepass).
+  - Add more accurate load factors such as CPU load and Avg. duration time in the health check API. For more details, refer to [Get health check status](/v5.20.0/metadefender-core/ref#healthcheck).
+  - New API for AD-bound password rotation automation. For more details, refer to [Change Password for AD/LDAP User Directory](/v5.20.0/metadefender-core/ref#userdirectorychangepass).
   - Reason details for blocklisted and allowlisted results.
   - An ability to search for users of user groups in Processing History.
   - New audit logs for JSON and PDF result export from Processing History.
@@ -1745,7 +1762,7 @@ Release Date: 31 March 2025
     - quazip v1.4.0
     - libxml2 v2.12.10
   - Remove unnecessary .NET 6 from Windows Azure image.
-  - Make Password Recovery feature more robust: Users now only receive an expirable token in password-reset email and use that token to set a new password. For more details, refer to [Forgot Password](/docs/mdcore/configuration/password-recovery#forgot-password).
+  - Make Password Recovery feature more robust: Users now only receive an expirable token in password-reset email and use that token to set a new password. For more details, refer to [Forgot Password](/configuration/password-recovery#forgot-password).
   - Enhance error response to not return raw messages and HTML source code.
 - UI updates
 
@@ -1771,7 +1788,7 @@ Release Date: 31 March 2025
 - Addressed an issue that caused an incorrect proxy settings retrieval.
 - Addressed an issue that caused Deep CDR unable to sanitize file after upgrading from product v4 to the latest.
 
-## [Version v5.13.3](/docs/mdcore/release-notes/archived-release-notes#version-v5133)
+## Version v5.13.3
 
 Release Date: 27 February 2025
 
@@ -1789,7 +1806,7 @@ Release Date: 27 February 2025
 - Improved NGINX logging to indicate initialization failure clearer.
 - Resolved an issue that caused upgrade process suspended.
 
-## [Version v5.13.2](/docs/mdcore/release-notes/archived-release-notes#version-v5132)
+## Version v5.13.2
 
 Release Date: 21 January 2025
 
@@ -1803,7 +1820,7 @@ Release Date: 21 January 2025
 - Addressed an issue that caused automated license activation failure after Azure image instance was restarted.
 - Addressed a crash issue that happened when checking invalid sanitized file existence.
 
-## [Version v5.13.1](/docs/mdcore/release-notes/archived-release-notes#version-v5131)
+## Version v5.13.1
 
 Release Date: 16 January 2025
 
@@ -1858,7 +1875,7 @@ Release Date: 16 January 2025
   - Fixed an issue that wrongly displayed "No Specific Configuration" at Deep CDR tile despite of the fact that result is "Sanitization Failed".
   - Other minor bugs.
 
-## [Version v5.13.0](/docs/mdcore/release-notes/archived-release-notes#version-v5130)
+## Version v5.13.0
 
 Release Date: 18 December 2024
 
@@ -1867,7 +1884,7 @@ Release Date: 18 December 2024
 - New OS support: Rocky Linux 9
 
   - We also provide a new Docker image based on official Rocky Linux repository. You can try it here: MetaDefender Core [Rocky Linux image](https://hub.docker.com/r/opswat/metadefendercore-rocky) and [Rocky Linux for non-root image](https://hub.docker.com/r/opswat/metadefendercore-rocky-nonroot).
-- OPSWAT has discontinued support for CentOS 7 and RHEL 7 since December 2024 in MetaDefender Core and its associated engines. If you need some more time to transition from legacy OS, refer to this instruction [Lock Your Engine and Plan for Migration](/docs/mdcore/knowledge-base/end-of-life-support-for-centos-7-and-RedHat-7-in-metadefender-co#continuing-with-centos-7redhat-7---pinning-your-engine--not-recommended).
+- OPSWAT has discontinued support for CentOS 7 and RHEL 7 since December 2024 in MetaDefender Core and its associated engines. If you need some more time to transition from legacy OS, refer to this instruction [Lock Your Engine and Plan for Migration](/knowledge-base/end-of-life-support-for-centos-7-and-RedHat-7-in-metadefender-co#continuing-with-centos-7redhat-7---pinning-your-engine--not-recommended).
 - Report scheduling
 
   - MetaDefender Core provides a new feature that enables Administrators to schedule not only when executive report and processing history report are sent but also set recurring schedules for automated delivery.
@@ -1875,19 +1892,19 @@ Release Date: 18 December 2024
 - Administrators now can directly generate and download support packages right on web console.
 - Advanced rate limiting configuration via web console
 
-  - For more details, refer to [Request rate limit configuration](/docs/mdcore/configuration/request-rate-limit) and [Request rate limit test scenarios](/docs/mdcore/integration/request-rate-limiting).
+  - For more details, refer to [Request rate limit configuration](/configuration/request-rate-limit) and [Request rate limit test scenarios](/integration/request-rate-limiting).
 - Syslog configuration via REST API
 
-  - [Apply new syslog server configurations](/docs/mdcore/metadefender-core#postsyslogconfig)
-  - [Remove syslog servers or clear all syslog configurations](/docs/mdcore/metadefender-core#removesyslogconfig)
+  - [Apply new syslog server configurations](/v5.20.0/metadefender-core/ref#postsyslogconfig)
+  - [Remove syslog servers or clear all syslog configurations](/v5.20.0/metadefender-core/ref#removesyslogconfig)
 - Ability to download summarized user list
 - New chart and statistics to display how many percentages/files are reused by hash.
 - Tool to hide specific data from support package.
 
   - Provides an ability to hide sensitive data from logs, support package, which may contain information such as IPv4, IPv6, MAC address and file path.
-  - For instruction, refer to [How to Create Support Package With Bundle Tools?](/docs/mdcore/troubleshooting/how-to-create-support-package-) and try the new parameter `-enable-redact` .
+  - For instruction, refer to [How to Create Support Package With Bundle Tools?](/troubleshooting/how-to-create-support-package-) and try the new parameter `-enable-redact` .
 - Introduces an ability for Administrators to download a summary list of users and groups present on the product. You can find the Export button in User Management which generates a CSV file listing all the users and groups' information.
-- Supports CIS Level 1 for Ubuntu 22.04 and RHEL 9. For more details, refer to [CIS Level 1 - Linux Guidelines](/docs/mdcore/installation/cis-level-1-guidelines).
+- Supports CIS Level 1 for Ubuntu 22.04 and RHEL 9. For more details, refer to [CIS Level 1 - Linux Guidelines](/installation/cis-level-1-guidelines).
 - PostgreSQL v16 support (remotely).
 
   - The product does not perform any version upgrade on customer's remote PostgreSQL.
@@ -1952,7 +1969,7 @@ Release Date: 18 December 2024
 - Resolved an issue that might cause local user session repeatedly expired after its password was reset.
 - Resolved an intermitten issue that caused file extension of downloaded file wrong.
 
-## [Version v5.12.1](/docs/mdcore/release-notes/archived-release-notes#version-v5121)
+## Version v5.12.1
 
 Release Date: 30 October 2024
 
@@ -1961,7 +1978,7 @@ Release Date: 30 October 2024
 - Support user login for nested AD groups
 
   - When enabling a new setting `Nested Group Login`, the product allows users who are indirect members of an AD group to log in and take on the corresponding roles and rights.
-- MetaDefender Core now supports CIS Level 1 for RHEL 9. For more details, refer to [CIS Level 1 - Linux Guidelines](/docs/mdcore/installation/cis-level-1-guidelines).
+- MetaDefender Core now supports CIS Level 1 for RHEL 9. For more details, refer to [CIS Level 1 - Linux Guidelines](/installation/cis-level-1-guidelines).
 - Result display enhancements.
 
   - Introduces filtration options for the display of processing results, enabling users to quickly filter which file types violate the blocklist policy.
@@ -1984,7 +2001,7 @@ Release Date: 30 October 2024
 - Usability enhancements / changes
 
   - Support new operator '**smaller than**' for file size condition in `Blocklist`& `Allowlist.`
-  - REST API [Fetch a list of blocked leaf files inside archive](/docs/mdcore/metadefender-core#retrieveblockedleaffile) now includes AV engine name and detected threat name.
+  - REST API [Fetch a list of blocked leaf files inside archive](/v5.20.0/metadefender-core/ref#retrieveblockedleaffile) now includes AV engine name and detected threat name.
   - Addressed a case where Firefox browser sometimes incorrectly detects CSV file type, causing CSV uploading to fail with message '`File format is invalid. Please upload a CSV file.`'
   - Added more options for Data Retention of sanitized files and the Proactive DLP engine processed files.
   - Based on the override classification in `Workflow Rule` making blocking decision for the SBOM engine results.
@@ -1998,8 +2015,8 @@ Release Date: 30 October 2024
   - Group settings '`Enabled file hash for only selected types`' and '`Skip Hash Calculation`'.
 - Central Hub enhancements
 
-  - Support a REST API to download digitally signed status reports for the entire batch. The specification is the same as [Download Signed Batch Result](/docs/mdcore/metadefender-core#batchsignedresult).
-  - Support a REST API to fetch the product version. The specification is the same as [Get Product Version](/docs/mdcore/metadefender-core#productversion).
+  - Support a REST API to download digitally signed status reports for the entire batch. The specification is the same as [Download Signed Batch Result](/v5.20.0/metadefender-core/ref#batchsignedresult).
+  - Support a REST API to fetch the product version. The specification is the same as [Get Product Version](/v5.20.0/metadefender-core/ref#productversion).
 - Additional logging for the Single Sign-On (SSO) feature.
 - Updated the UI to reflect engine state in case of inactivity.
 - Ensured color consistency for table titles across UI modes.
@@ -2019,7 +2036,7 @@ Release Date: 30 October 2024
 - Fixed an issue that generated wrong database name when running in standalone mode with the parameter `IGNITION_JSON` in Docker container.
 - Fixed an issue with Non-persistent mode that prevented the service from starting in Docker container.
 
-## [Version v5.12.0](/docs/mdcore/release-notes/archived-release-notes#version-v5120)
+## Version v5.12.0
 
 Release Date: 30 September 2024
 
@@ -2071,7 +2088,7 @@ Release Date: 30 September 2024
 - Fixed an issue making obsolete functions for storing Sandbox and SBOM report left after an upgrade.
 - Corrected Maximum and Total processed object size in PDF Executive Report.
 
-## [Version v5.11.1](/docs/mdcore/release-notes/archived-release-notes#version-v5111)
+## Version v5.11.1
 
 Release Date: 28 August 2024
 
@@ -2090,7 +2107,7 @@ Release Date: 28 August 2024
 
   - Introduces Max download queue setting which you can modify number of file downloads at a time for your use case and network. Also introduces pattern validation setting which users define blocklist and allowlist based on link pattern.
 
-You can find these in Settings\Security tab. For more details: [Scan-from-link Settings](/docs/mdcore/configuration/scan-from-link-settings)
+You can find these in Settings\Security tab. For more details: [Scan-from-link Settings](/configuration/scan-from-link-settings)
 
 - Usability enhancements / changes
 
@@ -2099,7 +2116,7 @@ You can find these in Settings\Security tab. For more details: [Scan-from-link S
   - Supports Windows 11, version 23H2.
   - Changes the display name for decrypted documents.
   - Allows users to export and import queue size settings.
-  - Enhances the support package generation script to enable users to collect a variety of log files from newest to oldest. For more information, see [How to Create Support Package With Bundle Tools?](/docs/mdcore/troubleshooting/how-to-create-support-package-)
+  - Enhances the support package generation script to enable users to collect a variety of log files from newest to oldest. For more information, see [How to Create Support Package With Bundle Tools?](/troubleshooting/how-to-create-support-package-)
   - Enables users to search for file types in Blocklist and Allowlist settings.
   - Exposes sanitized file sizes in the REST API, even when they are 0 bytes.
   - Allows users to switch between hours and days for setting the "Definition age threshold" under Workflow Rule \ Metascan.
@@ -2124,7 +2141,7 @@ You can find these in Settings\Security tab. For more details: [Scan-from-link S
     - Introduces a new optional parameter, MDCORE_LICENSE_COMMENT, type string.
   - Provides new settings for the On-Premises License Management Server (OLMS) proxy.
 
-    - For more details: [Docker run parameters](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#parameter-init-details-environmental-variables--ignition-file)
+    - For more details: [Docker run parameters](/container-deployment/docker-image-published-on-opswat-docker-hub#parameter-init-details-environmental-variables--ignition-file)
 - Logging improvements
 
   - Optimized logging for unlicensing events.
@@ -2147,7 +2164,7 @@ You can find these in Settings\Security tab. For more details: [Scan-from-link S
   - Fixed an issue that prevented header metadata from working with Hub.
 - Implemented UI enhancements and resolved minor bugs.
 
-## [Version v5.11.0](/docs/mdcore/release-notes/archived-release-notes#version-v5110)
+## Version v5.11.0
 
 Release Date: 31 July 2024
 
@@ -2162,10 +2179,10 @@ Release Date: 31 July 2024
   - Multipart uploading support can work with Standalone mode and Shared mode. For Shared mode, client needs to ensure that parts of a file must be sent to 1 MetaDefender Core instance.
   - This mechanism is only compatible with Asynchronous scan, Batch scan and Webhook functionality.
   - Users can enable this mechanism in Workflow Rule and set a time-to-live for received parts.
-  - [Initiate multipart upload session: POST /file/multipart](/docs/mdcore/metadefender-core#createmultipartuploadpost)
-  - [Upload individual part of file to the conducted session: POST /file/multipart/{dataID}](/docs/mdcore/metadefender-core#uploadpartpost)
-  - [Check uploading status: GET /file/multipart/{dataID}](/docs/mdcore/metadefender-core#uploadpartget)
-  - [Abort multipart uploading: DELETE /file/multipart/{dataID}](/docs/mdcore/metadefender-core#uploadpartdelete)
+  - [Initiate multipart upload session: POST /file/multipart](/v5.20.0/metadefender-core/ref#createmultipartuploadpost)
+  - [Upload individual part of file to the conducted session: POST /file/multipart/{dataID}](/v5.20.0/metadefender-core/ref#uploadpartpost)
+  - [Check uploading status: GET /file/multipart/{dataID}](/v5.20.0/metadefender-core/ref#uploadpartget)
+  - [Abort multipart uploading: DELETE /file/multipart/{dataID}](/v5.20.0/metadefender-core/ref#uploadpartdelete)
 - Module Update settings and Data Retention settings are now managed in My OPSWAT product inventory.
 
   - After enrolled, these settings will be locked on MetaDefender Core management console, and users can only make changes on My OPSWAT console.
@@ -2244,7 +2261,7 @@ Release Date: 31 July 2024
   - Resolved performance degradation in shared DB mode that occurred when more than 4 instances were running concurrently, particularly affecting handling of high traffic loads.
 - Implemented UI enhancements and resolved minor bugs.
 
-## [Version v5.10.1](/docs/mdcore/release-notes/archived-release-notes#version-v5101)
+## Version v5.10.1
 
 Release Date: 27 June 2024
 
@@ -2303,7 +2320,7 @@ Release Date: 27 June 2024
   - Several redundant error logs appear when using this mode.
 - Central Hub, unabled to create batch: Fixed an issue that client could not create batch to Central Hub
 
-## [Version v5.10.0](/docs/mdcore/release-notes/archived-release-notes#version-v5100)
+## Version v5.10.0
 
 Release Date: 21 May 2024
 
@@ -2377,7 +2394,7 @@ Release Date: 21 May 2024
 - Fix issue that MetaDefender Core container could not auto deactivate.
 - Multiscanning exclusion setting did not work properly when configured engine(s) are "Inactive".
 
-## [Version v5.9.0](/docs/mdcore/release-notes/archived-release-notes#version-v590)
+## Version v5.9.0
 
 Release Date: 21 March 2024
 
@@ -2388,7 +2405,7 @@ Release Date: 21 March 2024
   - The OPSWAT Reputation Engine enables instant threat identification by comparing hashes against a growing database cataloging known good and bad files.
   - The Reputation Engine utilizes hash reputation based on advanced analysis like metadata evaluation, content inspection, and contextual correlation to minimize false positives. This allows accurate threat detection with limited business disruption. Through database updates and hash contributions, the Reputation Engine enhances protection against new and evolving attacks.
   - In MetaDefender Core, customers need to opt-in to enable the Reputation Engine through the workflow management settings.
-  - Learn more details at [Overview](/docs/mdcore/reputation-engine/reputation-engine)
+  - Learn more details at [Overview](/reputation-engine/reputation-engine)
   - ***Warning:*** *The Reputation engine will be automatically added into all existing and new customers' license to fulfill our security protection committed to our customers. That means the engine will be downloaded and deployed when applicable, but users must opt-in to enable the engine's processing under MetaDefender Core workflow rule.*
   - *Without taking any action to enable it, this engine deployment should not cause any impact to our customers integration and scanning service.* __
 - Country of Origin (COO) engine integration
@@ -2397,7 +2414,7 @@ Release Date: 21 March 2024
   - The COO engine provides organizations with visibility into file upload origins. With precise data origin insights, organizations can streamline audits, protect sensitive data, and prevent malicious file uploads. This enhances security and compliance at reduced cost.
   - By combining advanced technologies like Deep Content Disarm and Reconstruction (Deep CDR), Multiscanning, and Proactive Data Loss Prevention with origin-based access controls, organizations can secure intellectual property, maintain compliance, and block illegal or non-compliant foreign data. This mitigates breach risks and avoids substantial fines per regulations like GDPR.
   - The COO engine supports signed file types like PE files, MSI, and Self-extract.
-  - Learn more details at [Country of Origin](/docs/mdcore/country-of-origin/country-of-origin)
+  - Learn more details at [Country of Origin](/country-of-origin/country-of-origin)
   - ***Warning:*** *For those customers who using older version of MetaDefender Core where we provided a feature for allowlisting files based on vendor, then those settings will be migrated to COO engine's settings under MetaDefender Core workflow rule on the latest version.*
   - *In that case (applicable to whom already using existing older version of MetaDefender Core's allowlisting file based on vendor), COO engine is not licensed by default for customers, so please reach out to OPSWAT to acquire license for COO engine and use that license* **before** **_ upgrading**_ __*your MetaDefender Core to ensure settings migration to be made properly.* __
   - *Once upgraded, exppecting that COO engine will be displayed on MetaDefender Core inventory page, but inactive. It requires users to disable COO engine and re-enable it back. All previous allowlisting file based on vendor's settings will be then found under "Country Of Origin" tab in the corresponding workflow rule.* __
@@ -2405,7 +2422,7 @@ Release Date: 21 March 2024
 
   - Windows Server 2012 has been out of support by the vendor (Microsoft) since Oct 2023 - Reference: <https://learn.microsoft.com/en-us/lifecycle/announcements/windows-server-2012-r2-end-of-support>
   - MetaDefender Core version 5.9.0 will no longer support this OS version, and recommend our customers migrating their systems to newer supported Windows Server version.
-  - List of current supported Windows OS versions can be found at [Supported Windows Operating Systems](/docs/mdcore/installation/recommended-system-configuration#windows-supported-operating-systems).
+  - List of current supported Windows OS versions can be found at [Supported Windows Operating Systems](/installation/recommended-system-configuration#windows-supported-operating-systems).
 - API key protection
 
   - Strengthening MetaDefender Core's security by protecting users' API key (if created) in the database using SHA256 hashing. Then actual API key value could not be retrieved back for good.
@@ -2436,7 +2453,7 @@ Release Date: 21 March 2024
   - Upgraded to rabbitmq-c 0.13.0 for performance.
 - Security improvements
 
-  - New option to disable user information caching via using designated administrative REST API endpoint (PUT /admin/config/cacheuser). Details at [MetaDefender Core API](/docs/mdcore/metadefender-core)
+  - New option to disable user information caching via using designated administrative REST API endpoint (PUT /admin/config/cacheuser). Details at [MetaDefender Core API](/v5.20.0/metadefender-core/ref)
   - Upgraded to PostgreSQL 14.11 bundled with the product for vulnerabilities.
   - Upgraded to OpenSSL 3.2.0 bundled with the product for vulnerabilities.
   - Handled URL encoded characters.
@@ -2453,7 +2470,7 @@ Release Date: 21 March 2024
   - Prevented the product upgrade proceeding when insufficient disk space is detected. Faiure reason will be caught in the product log when encountered.
 - Performance improvements
 
-  - Optimized [PUT - Modify 'skip by hash' list](/docs/mdcore/metadefender-core#configupdateskiphash) to process a large volume of hashes data - up to hundreds of thousands of entries, which is not possible before the optimization.
+  - Optimized [PUT - Modify 'skip by hash' list](/v5.20.0/metadefender-core/ref#configupdateskiphash) to process a large volume of hashes data - up to hundreds of thousands of entries, which is not possible before the optimization.
 - Logging improvements
 
   - Added more information into the product log in the event of scan submission was blocked due to out of workflow time window (included filepath, filename, callbackurl, sanitizeurl, downloadfrom)
@@ -2478,7 +2495,7 @@ Release Date: 21 March 2024
 - Scan could be hung while being processed with batch in Central Hub architecture.
 - MetaDefender Core service could be crashed when using distributed load extraction with file size filtration setting in Central Hub architecture.
 
-## [Version v5.8.0](/docs/mdcore/release-notes/archived-release-notes#version-v580)
+## Version v5.8.0
 
 Release Date: 20 December 2023
 
@@ -2492,7 +2509,7 @@ Release Date: 20 December 2023
 
   - The new setting under "General" section in MetaDefender Core workflow rule (disabled by default) will let authorized users configure the product to automatically reuse eligible processed results with the same hash for all other in-progress submitted requests.
   - A great approach to tremendously boost up the entire processing throughput for certain use-cases such as Email Security, DevSecOps, Cross Domain etc. to avoid repeatedly processing same files within a short time period.
-  - Learn more at [Reuse scan results for the same hash](/docs/mdcore/configuration/workflow-rule-configuration#reuse-scan-results-for-the-same-hash-)
+  - Learn more at [Reuse scan results for the same hash](/configuration/workflow-rule-configuration#reuse-scan-results-for-the-same-hash-)
 - Support Red Hat Enterprise 9
 
   - Enrich supported OS porfolio in MetaDefender Core with new support for Red Hat Enterprise 9.
@@ -2527,7 +2544,7 @@ Release Date: 20 December 2023
 - In docker mode, MetaDefender Core cannot start when making change on environmental variable `CORE_DATA _PATH` without attached volume.
 - Some UI cosmetics and minor bugs are addressed.
 
-## [Version v5.7.1](/docs/mdcore/release-notes/archived-release-notes#version-v571)
+## Version v5.7.1
 
 Release Date: 09 November 2023
 
@@ -2556,7 +2573,7 @@ Release Date: 09 November 2023
 - Temporary files generated by Deep CDR and Proactive DLP engines were not cleaned up properly when cancelling scan request.
 - Failed to export scan result PDF report on Red Hat Enterprise.
 
-## [Version v5.7.0](/docs/mdcore/release-notes/archived-release-notes#version-v570)
+## Version v5.7.0
 
 Release Date: 09 October 2023
 
@@ -2589,7 +2606,7 @@ Release Date: 09 October 2023
 - "Others_time" in the JSON scan result was mistakenly set to negative when a file is quarantined due to global processing timeout exceeded.
 - "start_time" in the JSON scan result was set to 1970-01-01 for in-progress file processing.
 
-## [Version v5.6.1](/docs/mdcore/release-notes/archived-release-notes#version-v561)
+## Version v5.6.1
 
 Release Date: 28 August 2023
 
@@ -2626,7 +2643,7 @@ Release Date: 28 August 2023
 - Memory increasing abnormally and leaking with data statistics against PostgreSQL.
 - Other minor stability issues.
 
-## [Version v5.6.0](/docs/mdcore/release-notes/archived-release-notes#version-v560)
+## Version v5.6.0
 
 Release Date: 14 July 2023
 
@@ -2654,12 +2671,12 @@ Release Date: 14 July 2023
 - Override global processing timeout for specific scan requests
 
   - Client also can override the new setting of global processing timeout per specific scan requests when needed, by using a new request header `global-timeout` for the file submission request.
-  - Details: [POST - Analyze File (Asynchronous mode)](/docs/mdcore/metadefender-core#fileanalysispost)
+  - Details: [POST - Analyze File (Asynchronous mode)](/v5.20.0/metadefender-core/ref#fileanalysispost)
   - If this header is not set, or its value is empty, then MetaDefender Core will use the pre-defined global processing timeout in corresponding workflow rule (only when enabled).
 - Hash lookup supported for in-progress scan
 
-  - Before having to submit another scan request for a same file to MetaDefender Core and duplicate the effort of scanning, client could now utilize the hash lookup API [GET - Fetch Analysis Result By Hash](/docs/mdcore/metadefender-core#hashget) to be acknowledged that a same file is actually being processed, so client could waive the same request to MetaDefender Core.
-  - Introduce a new header `include-inprogress` for [GET - Fetch Analysis Result By Hash](/docs/mdcore/metadefender-core#hashget) to indicate whether or not client would want to receive "In-progress" (instead of not found result) in such circumstance.
+  - Before having to submit another scan request for a same file to MetaDefender Core and duplicate the effort of scanning, client could now utilize the hash lookup API [GET - Fetch Analysis Result By Hash](/v5.20.0/metadefender-core/ref#hashget) to be acknowledged that a same file is actually being processed, so client could waive the same request to MetaDefender Core.
+  - Introduce a new header `include-inprogress` for [GET - Fetch Analysis Result By Hash](/v5.20.0/metadefender-core/ref#hashget) to indicate whether or not client would want to receive "In-progress" (instead of not found result) in such circumstance.
 - Allowlist by vendor filtration
 
   - Allow users to create a filter on MetaDefender Core to add PE (Portable Executable) files tied to certain vendors into the allowlist.
@@ -2667,7 +2684,7 @@ Release Date: 14 July 2023
 - Continuous improvement for Sandbox (formerly OPSWAT Filescan) engine integration
 
   - Rename "OPSWAT Filescan" engine to "Sandbox".
-  - Add `extraction_info` to the scan result JSON of [GET - Fetch analysis reports containing all files in archive](/docs/mdcore/metadefender-core#fileanalysisgetallchildfiles)
+  - Add `extraction_info` to the scan result JSON of [GET - Fetch analysis reports containing all files in archive](/v5.20.0/metadefender-core/ref#fileanalysisgetallchildfiles)
   - Adjust default enabled file types for Sandbox file processing under workflow:
   - Remote Sandbox: all file types are selected by default.
   - Local Sandbox: all file types except archive are selected by default.
@@ -2676,15 +2693,15 @@ Release Date: 14 July 2023
   - When enabled, MetaDefender Core will avoid sanitizing empty file (zero bytes). By default, it is disabled. You can find this new setting under "Deep CDR" workflow tab.
 - Attach MetaDefender Core server information in scan result fetching response
 
-  - When enabled via using a new supported API endpoint [PUT - Update list of custom response headers](/docs/mdcore/metadefender-core#configputcustomresponseheader), MetaDefender Core will return allowable server information (deployment ID, server IP address and port) in designated header `X-Core-Id` in the scan result fetching response (e.g. GET /file/<data_id>).
+  - When enabled via using a new supported API endpoint [PUT - Update list of custom response headers](/v5.20.0/metadefender-core/ref#configputcustomresponseheader), MetaDefender Core will return allowable server information (deployment ID, server IP address and port) in designated header `X-Core-Id` in the scan result fetching response (e.g. GET /file/<data_id>).
   - This new API endpoint also supports users to only return those pre-defined data to authenticated scan requests (where uses API key in the request).
 - Throttling option for scanning webhook
 
-  - Support new parameters `workercount` , `requestqueue` in the existing API endpoint [PUT - Webhook set configuration](/docs/mdcore/metadefender-core#configupdatewebhook) to define better flexibility for scan webhook:
+  - Support new parameters `workercount` , `requestqueue` in the existing API endpoint [PUT - Webhook set configuration](/v5.20.0/metadefender-core/ref#configupdatewebhook) to define better flexibility for scan webhook:
 
     - workercount: the total number of workers for the webhook responser (for sending callbacks to the webhook client). Default is 1. **Note:** a service restart is required for changes to take effect.
     - requestqueue: the maximum number of requests allowed for each worker. Default is 100.
-  - Besides that, now users can set zero (0) for the existing parameter transfertimeout for the [PUT - Webhook set configuration](/docs/mdcore/metadefender-core#configupdatewebhook), that means, disable timeout for sending callbacks to webhook client.
+  - Besides that, now users can set zero (0) for the existing parameter transfertimeout for the [PUT - Webhook set configuration](/v5.20.0/metadefender-core/ref#configupdatewebhook), that means, disable timeout for sending callbacks to webhook client.
   - **NOTE:** *These throttling options only apply to webhook mechanism that notify processing result, do not apply to the mechanism where MetaDefender Core sends sanitized file back to the client just yet.*
 - Enhance sorting feature in processing history UI
 
@@ -2711,7 +2728,7 @@ Release Date: 14 July 2023
   - Under high load, MetaDefender Core could fail to send callback responses to webhook client.
 - Health check API returned out of date data
 
-  - Under high load, the heath check API [GET - Get health check status](/docs/mdcore/metadefender-core#healthcheck) could return out-of-date data for scan queue and engine status.
+  - Under high load, the heath check API [GET - Get health check status](/v5.20.0/metadefender-core/ref#healthcheck) could return out-of-date data for scan queue and engine status.
 - Inconsistent scan result with Threat Intelligence under Quarantine
 
   - Scanning with Threat Intelligence under Quarantine could return inconsistent result.
@@ -2720,7 +2737,7 @@ Release Date: 14 July 2023
   - When a scan is done with timeout for Sandbox (formerly OPSWAT Filescan), temporary file was not cleaned up properly.
 - Other minor bug fixes
 
-## [Version v5.5.1](/docs/mdcore/release-notes/archived-release-notes#version-v551)
+## Version v5.5.1
 
 Release Date: 18 May 2023
 
@@ -2747,7 +2764,7 @@ Release Date: 18 May 2023
 - New attribute added into existing key `extraction_info` in the JSON scan result structure
 
   - is_encrypted_file (optional, only accept "true"/"false"): a flag to indicate a file is encrypted or not.
-  - See more details on [GET - Fetch Analysis Result](/docs/mdcore/metadefender-core#fileanalysisget)
+  - See more details on [GET - Fetch Analysis Result](/v5.20.0/metadefender-core/ref#fileanalysisget)
 - Handling MSG file with archive sanitization use-case
 
   - When enabling "Block unsupported file type" under Deep CDR section, then sanitization on MSG file failed due to msg.data file (blocked as unsupported).
@@ -2762,7 +2779,7 @@ Release Date: 18 May 2023
 - Adding parsing digital signature processing time
 
   - New key named `parse_dgsg_time` added into the existing `processing_time_details` __to indicate actual processing time spent on parsing digital signature against file.
-  - See more details on [GET - Fetch Analysis Result](/docs/mdcore/metadefender-core#fileanalysisget)
+  - See more details on [GET - Fetch Analysis Result](/v5.20.0/metadefender-core/ref#fileanalysisget)
 - Support retry configurations for webhook post action
 
   - Users now can customize retry mode and timeout setting for webhook post action in Workflow Rule.
@@ -2787,7 +2804,7 @@ Release Date: 18 May 2023
 - URL encoded "rule" header in scan request
 - - MetaDefender Core did not decode values in the "rule" header when it is URL encoded (for example: "rule" = "File%20process")
 
-## [Version v5.5.0](/docs/mdcore/release-notes/archived-release-notes#version-v550)
+## Version v5.5.0
 
 Release Date: 06 April 2023
 
@@ -2847,7 +2864,7 @@ This new feature supports local authentication, AD / LDAP authentication and als
   - When having *.0 files in rootCA trusted store.
 - Some UI cosmetics and minor bugs are addressed.
 
-## [Version v5.4.1](/docs/mdcore/release-notes/archived-release-notes#version-v541)
+## Version v5.4.1
 
 Release Date: 28 February 2023
 
@@ -2905,7 +2922,7 @@ Release Date: 28 February 2023
 
   - When there was another higher blocked verdict (e.g. Sensitive Data Found) is also available.
 
-## [Version v5.4.0](/docs/mdcore/release-notes/archived-release-notes#version-v540)
+## Version v5.4.0
 
 Release Date: 04 January 2023
 
@@ -2963,11 +2980,11 @@ Release Date: 04 January 2023
 - Import full configuration package (.zip) via the ignition file
 
   - Supported automation better with full configuration package (.zip) via the ignition file. Example: eula=true [config] import=settings.zip import_password=123 ....
-  - Details: [Ignition file](/docs/mdcore/installation/deployment-automation-support#ignition-file)
+  - Details: [Ignition file](/installation/deployment-automation-support#ignition-file)
 - Webhook callback retry mechanism enhancement
 
   - Enhanced webhook retry mechanism for resending callback result in case of either timeout or not receiving webhook server’s response.
-  - Timeout threshold could be defined via new key `transfertimeout` (by default, 30000 ms) with [PUT - Webhook set configuration](/docs/mdcore/metadefender-core#configupdatewebhook)
+  - Timeout threshold could be defined via new key `transfertimeout` (by default, 30000 ms) with [PUT - Webhook set configuration](/v5.20.0/metadefender-core/ref#configupdatewebhook)
 - New CLI tool to clean up database created by no-longer-used MetaDefender Core instance in the shared DB mode
 
   - Using this tool to clean all scan data from MetaDefender Core instance(s) that you no longer use, applicable in the shared DB mode.
@@ -2975,11 +2992,11 @@ Release Date: 04 January 2023
 
     - Windows: C:\Program Files\OPSWAT\MetaDefender Core\ometascan-db-cleaner.exe
     - Linux: /usr/sbin/ometascan-db-cleaner
-  - Details: [Database Cleanup Tool in Shared DB Mode](/docs/mdcore/troubleshooting/database-cleanup-tool-in-shared-db-mode)
+  - Details: [Database Cleanup Tool in Shared DB Mode](/troubleshooting/database-cleanup-tool-in-shared-db-mode)
 - New CLI tool to check remote PostgreSQL user compliance
 
-  - This tool is to help your database system admin quickly determine whether or not your remote PostgreSQL database have sufficient user privileges as described at [PostgreSQL User Privilege Requirements](/docs/mdcore/troubleshooting/postgresql-user-privilege-requirement) to work properly with MetaDefender Core application.
-  - Details: [Remote PostgreSQL User Privileges Checking Tool](/docs/mdcore/troubleshooting/remote-postgresql-user-privileges-checking-tool)
+  - This tool is to help your database system admin quickly determine whether or not your remote PostgreSQL database have sufficient user privileges as described at [PostgreSQL User Privilege Requirements](/troubleshooting/postgresql-user-privilege-requirement) to work properly with MetaDefender Core application.
+  - Details: [Remote PostgreSQL User Privileges Checking Tool](/troubleshooting/remote-postgresql-user-privileges-checking-tool)
 
 **Fixed:**
 
@@ -2994,7 +3011,7 @@ Release Date: 04 January 2023
   - When hitting the limit, the UI hung at the uploading screen.
 - Some UI cosmetics and minor bugs are addressed.
 
-## [Version v5.3.1](/docs/mdcore/release-notes/archived-release-notes#version-v531)
+## Version v5.3.1
 
 Release Date: 07 November 2022
 
@@ -3002,7 +3019,7 @@ Release Date: 07 November 2022
 
 - Upgraded OpenSSL framework from version 3.0.5 to version 3.0.7 for its recent vulnerability patches ([CVE-2022-3358](https://www.openssl.org/news/vulnerabilities.html#CVE-2022-3358), [CVE-2022-3786](https://www.openssl.org/news/vulnerabilities.html#CVE-2022-3786) and [CVE-2022-3602](https://www.openssl.org/news/vulnerabilities.html#CVE-2022-3602)). More details: <https://www.openssl.org/news/openssl-3.0-notes.html>
 
-## [Version v5.3.0](/docs/mdcore/release-notes/archived-release-notes#version-v530)
+## Version v5.3.0
 
 Release Date: 27 October 2022
 
@@ -3019,7 +3036,7 @@ Release Date: 27 October 2022
     - File storage server (known as "MetaDefender Core NAS").
     - Redis (the open-source caching server).
     - RabbitMQ (the open-source messaging broker).
-  - More details: [MetaDefender Cluster Deployment](/docs/mdcore/cluster-deployment/md-cluster-deployment)
+  - More details: [MetaDefender Cluster Deployment](/cluster-deployment/md-cluster-deployment)
 - PostgreSQL bundle upgrade
 
   - Applicable to PostgreSQL server bundled with MetaDefender Core installation. It is upgraded to version 12.12 (from old version 12.11) for vulnerability fixes.
@@ -3044,7 +3061,7 @@ Release Date: 27 October 2022
 
   - Custom date and time feature: users could not set PM for start time, and AM for stop time as a range. For example: Sep 07 12:00:00 PM to Sep 08 12:00:00 AM
 
-## [Version v5.2.2](/docs/mdcore/release-notes/archived-release-notes#version-v522)
+## Version v5.2.2
 
 Release Date: 06 October 2022
 
@@ -3058,7 +3075,7 @@ Release Date: 06 October 2022
 
     - When you already have external scanners and post actions defined in the Inventory in older product version, then all of them will be automatically added to every available workflow rule (not template) in the new product version once upgraded.
     - Applied to shared DB mode, all external scanners and post actions settings will be auto shared among MetaDefender Core instances, unless the license for external scanner on each MetaDefender Core is different.
-  - Details: [External Scanner and Post Action](/docs/mdcore/configuration/workflow-configuration-template#external-scanner-and-post-action)
+  - Details: [External Scanner and Post Action](/configuration/workflow-configuration-template#external-scanner-and-post-action)
 - File digital signature vendors in the executive report
 
   - Vendor statistics information for file digital signature is now calculated and displayed in the executive report.
@@ -3088,7 +3105,7 @@ Release Date: 06 October 2022
   - Too aggressive polling for file processing result when users navigated to some last pages.
   - UI cosmetic bug fixes.
 
-## [Version v5.2.1](/docs/mdcore/release-notes/archived-release-notes#version-v521)
+## Version v5.2.1
 
 Release Date: 30 August 2022
 
@@ -3110,7 +3127,7 @@ Release Date: 30 August 2022
 
     - `timerange` (number of hours): allow scoping down the recent number of hours that hash lookup task should start from till now, instead of searching the entire scan history in MetaDefender Core database.
     - `selfonly` (true/false): useful to archive hash lookup, allow specifying to only perform hash lookup against the original archive file self only, and skip searching all child files result within the original archive.
-  - More details: [Fetch Analysis Result By Hash](/docs/mdcore/metadefender-core#hashget)
+  - More details: [Fetch Analysis Result By Hash](/v5.20.0/metadefender-core/ref#hashget)
 - Verbose file type analysis data
 
   - Support to expose verbose file type analysis data in JSON scan details. This can be done via setting `include_`file___`details` in the `engines-metadata` header for POST file submission request.
@@ -3124,7 +3141,7 @@ Release Date: 30 August 2022
 
   - MetaDefender Core once installed, it will automatically create an internal PostgreSQL user for operation purpose, and so far that user name is auto randomized by MetaDefender Core and non adjustable (`usr_<random characters>`).
   - Now MetaDefender Core supports database system admin to define and change to their own PostgreSQL user instead.
-  - More details: [Customize Internal PostgreSQL User](/docs/mdcore/troubleshooting/customize-internal-postgresql-user)
+  - More details: [Customize Internal PostgreSQL User](/troubleshooting/customize-internal-postgresql-user)
 - Security enhancements
 
   - Continuing to harden and secure MetaDefender Core even better to prevent potential HTML injection and XSS attacks.
@@ -3150,7 +3167,7 @@ Release Date: 30 August 2022
 
   - UI cosmetic bug fixes.
 
-## [Version v5.2.0](/docs/mdcore/release-notes/archived-release-notes#version-v520)
+## Version v5.2.0
 
 Release Date: 12 July 2022
 
@@ -3168,10 +3185,10 @@ Release Date: 12 July 2022
     - Upgraded Qt framework 6
 - Executive report in PDF
 
-  - The executive report is now supported for PDF file export. Details: [Executive Report](/docs/mdcore/operating/dashboard#executive-report)
+  - The executive report is now supported for PDF file export. Details: [Executive Report](/operating/dashboard#executive-report)
 - File digital signature verification
 
-  - File digital signature is now analyzed and recognized by MeDefender Core while processing. The vendor digitial signature is available on both processing details UI page and JSON scan result, and also calculated for the statistics found on [Executive Report](/docs/mdcore/operating/dashboard#executive-report). Also supporting users to allowlist files based on specific vendor names (using regular expression) configured in the workflow rule (under "Allowlist" tab).
+  - File digital signature is now analyzed and recognized by MeDefender Core while processing. The vendor digitial signature is available on both processing details UI page and JSON scan result, and also calculated for the statistics found on [Executive Report](/operating/dashboard#executive-report). Also supporting users to allowlist files based on specific vendor names (using regular expression) configured in the workflow rule (under "Allowlist" tab).
   - Currently only PE files are supported `.`acm,`.ax, .cpl, .dll, .drv, .efi, .exe, .mui, .ocx, .scr, .sys, .tsp` ([Portable Executable](https://en.wikipedia.org/wiki/Portable_Executable))
 - Blocked leaf files filtered in archive scanning
 
@@ -3182,7 +3199,7 @@ Release Date: 12 July 2022
   - All blocked reasons are exposed on the processing details UI page (if archive file, then also inheriting from child files' blocked reasons if available), that helps with further context on unclear failures, and troubleshooting.
 - A setting to exclude sanitize version of blocked child files from archive sanitization
 
-  - By default ([Archive Sanitization](/docs/mdcore/deep-cdr/archive-sanitization)) feature will pack following into sanitized archive file:
+  - By default ([Archive Sanitization](/deep-cdr/archive-sanitization)) feature will pack following into sanitized archive file:
 
     - All allowed child files (or their sanitized version if available).
     - Sanitized versions of blocked child files (if blocked child files are sanitized successfully).
@@ -3193,11 +3210,11 @@ Release Date: 12 July 2022
 - Data retention for statistics
 
   - The new setting can be found under Settings page - Data Retention tab with named "Statistics". By default, the retention range is set to 6 months.
-  - Details: [Data Retention](/docs/mdcore/configuration/data-retention)
+  - Details: [Data Retention](/configuration/data-retention)
 - An installation option to skip startup UI screens
 
   - Better support for automation environments. A new setting `skip`**_startup _**`pages` supported in the ignition file to skip all welcome and other startup pages (e.g. upgrade result) when installing / upgrading MetaDefender, and going straight to the product index default page.
-  - Details: [Ignition file](/docs/mdcore/installation/deployment-automation-support#ignition-file)
+  - Details: [Ignition file](/installation/deployment-automation-support#ignition-file)
 - Skipped sanitization result
 
   - A new sanitization result to indicate the santization is skipped due to certain reasons ruled by Deep CDR configurations.
@@ -3207,7 +3224,7 @@ Release Date: 12 July 2022
   - Previously `others_time` covered that as well in JSON result, but now we make a dedicated new field for that in JSON result called `wait`*_*`child_``files_time`
 - HTTPS configuration removal tool
 
-  - Just in case you configured HTTPS via MetaDefender Core UI but due to unexpected failures on certificates, and thus being blocked to make any change because MetaDefender Core service is not running, thus you need to disable HTTPS configuration on MetaDefender Core using a dedicated CLI tool - ([HTTPS Configuration Removal Tool](/docs/mdcore/troubleshooting/https-disablement-tool)
+  - Just in case you configured HTTPS via MetaDefender Core UI but due to unexpected failures on certificates, and thus being blocked to make any change because MetaDefender Core service is not running, thus you need to disable HTTPS configuration on MetaDefender Core using a dedicated CLI tool - ([HTTPS Configuration Removal Tool](/troubleshooting/https-disablement-tool)
 - Minor UI changes
 
   - Some UI updates on the executive reports, modules.
@@ -3225,7 +3242,7 @@ Release Date: 12 July 2022
 
   - UI cosmetics bug fixes.
 
-## [Version v5.1.2](/docs/mdcore/release-notes/archived-release-notes#version-v512)
+## Version v5.1.2
 
 Release Date: 27 April 2022
 
@@ -3260,7 +3277,7 @@ Release Date: 27 April 2022
   - The pie chart in the Executive Report page was not rendered and displayed correctly occasionally.
   - Some other UI cosmetic minor fixes.
 
-## [Version v5.1.1](/docs/mdcore/release-notes/archived-release-notes#version-v511)
+## Version v5.1.1
 
 Release Date: 31 March 2022
 
@@ -3283,7 +3300,7 @@ Release Date: 31 March 2022
   - Allow API key of an already-removed user to be assigned to another user, this is to ensure no interruption or changes in the cross-system integration.
 - Health check settings supported for the configurations export/import feature
 
-  - Health check settings ([Health Check API Configuration](/docs/mdcore/configuration/heath-check-api)) is now included in the MetaDefender Core configurations export/import feature
+  - Health check settings ([Health Check API Configuration](/configuration/heath-check-api)) is now included in the MetaDefender Core configurations export/import feature
 - Auto upgrade when connecting to an older database version
 
   - Allow MetaDefender Core auto detect and upgrade its database when connecting to an older database version as expected.
@@ -3335,7 +3352,7 @@ Release Date: 31 March 2022
   - Obsolete temporary files and folders were not cleaned up when user configured to set a new tempdirectory location.
   - Temporary files downloaded from a link were not cleaned up when disabling engines during scan.
 
-## [Version v5.1.0](/docs/mdcore/release-notes/archived-release-notes#version-v510)
+## Version v5.1.0
 
 Release Date: 23 February 2022
 
@@ -3347,7 +3364,7 @@ Release Date: 23 February 2022
   - Hash calucaltion time
   - Archive extraction time
   - Per AV engine processing time
-  - Details: [Executives Report](/docs/mdcore/operating/dashboard#executives-report)
+  - Details: [Executives Report](/operating/dashboard#executives-report)
 - Exclusion list for proxy server configuration
 
   - Define an exclusion list of destination addresses to bypass going through proxy server configured on MetaDefender Core. Applied to connections triggered by MetaDefender Core for following activities:
@@ -3357,18 +3374,18 @@ Release Date: 23 February 2022
     - Scan by download link
     - Single Sign On integration (Fetch metadata from URL and login)
     - Remote PostgreSQL database connection
-  - Details: [Exclusion List](/docs/mdcore/configuration/proxy-configuration#exclusion-list)
+  - Details: [Exclusion List](/configuration/proxy-configuration#exclusion-list)
 - Support Ubuntu 20.04
 
-  - See the list of supported OS at [Recommended System Configuration](/docs/mdcore/installation/recommended-system-configuration)
+  - See the list of supported OS at [Recommended System Configuration](/installation/recommended-system-configuration)
 - API key in the ignition file
 
   - Local admin user's API key could be now definied in the ignition file for automation enhancement.
-  - Details: [Ignition file fields](/docs/mdcore/installation/deployment-automation-support#ignition-file-fields)
+  - Details: [Ignition file fields](/installation/deployment-automation-support#ignition-file-fields)
 - Network drive and UNC path for update folder pickup
 
   - Allow users to define UNC path and network drive for update folder pickup setting.
-  - Details: [Local folder update](/docs/mdcore/configuration/engines-update-configuration#local-folder-update)
+  - Details: [Local folder update](/configuration/engines-update-configuration#local-folder-update)
 - Timeout indication for Proactive DLP processing
 
   - Whenever Proactive DLP processing timed out, a clear and explicit timeout result is now used (instead of a generic failure reason).
@@ -3379,11 +3396,11 @@ Release Date: 23 February 2022
   - File path, file name, callback URL, sanitize URL, download-from URL for both asynchronous and synchronous scans.
 - New simplified REST API to download output file after sanitized and Proactive DLP processed
 
-  - Details: [GET - Download either sanitized files or DLP processed files](/docs/mdcore/metadefender-core#downloadfile)
+  - Details: [GET - Download either sanitized files or DLP processed files](/v5.20.0/metadefender-core/ref#downloadfile)
 - Clear indication for archive extraction in STDIN for post action
 
   - A new key of "extracted_files" is added into the STDIN for post action to indicate whether MetaDefender Core indeed extracted to child files from original file or not.
-  - Details: [Post Actions](/docs/mdcore/configuration/external-scanners-and-post-actions#post-actions)
+  - Details: [Post Actions](/configuration/external-scanners-and-post-actions#post-actions)
 - Resizable table column on the UI
 
   - Applied to tables on the UI including processing history, quarantine, user management, engine list, quarantine etc.
@@ -3412,7 +3429,7 @@ Release Date: 23 February 2022
 
   - Cosmetic bug fixes
 
-## [Version v5.0.1](/docs/mdcore/release-notes/archived-release-notes#version-v501)
+## Version v5.0.1
 
 Release Date: 28 December 2021
 
@@ -3481,7 +3498,7 @@ Release Date: 28 December 2021
   - Error message was misleading when modifying a certificate being used by workflow rule or HTTPS setting.
   - Not able to continue testing LDAP configurations on UI after previous attempt was successful.
 
-## [Version v5.0.0](/docs/mdcore/release-notes/archived-release-notes#version-v500)
+## Version v5.0.0
 
 Release Date: 30 November 2021
 
@@ -3492,7 +3509,7 @@ Release Date: 30 November 2021
   - In typical use-cases, expecting better throughput on version 5 with architecture changes and processing flow optimization (30% - 200% depending on specific circumstances, configurations and data set)
 - RedHat 8.x is supported (official)
 
-  - Installation guide: [Red Hat Enterprise Linux 8.x package (.rpm)](/docs/mdcore/installation/standalone-mode#red-hat-enterprise-linux-8x-package-rpm)
+  - Installation guide: [Red Hat Enterprise Linux 8.x package (.rpm)](/installation/standalone-mode#red-hat-enterprise-linux-8x-package-rpm)
 - Security hardening
 
   - Eliminated critical and major vulnerabilities found in 3rd party libraries as well as the application itself.
@@ -3500,19 +3517,19 @@ Release Date: 30 November 2021
 
   - Supporting to setup backup MetaDefender Core instance(s) to run in parallel with your production (active) instance. Backup instance(s) will be allowed to use the same license key as your active one without actually being accumulated into the activation slots, and allowed to have all engines downloaded and deployed, configurations pre-setup, share the same database with active one (except of processing files).
   - Any of backup instance(s) should be ready to take over the active one anytime as a part of your disaster recovery plan to minimize the down time as much as possible.
-  - More details: [Hot Swap Backup Configuration](/docs/mdcore/configuration/hot-backup-configuration)
+  - More details: [Hot Swap Backup Configuration](/configuration/hot-backup-configuration)
 - Health check API
 
   - Determining MetaDefender Core server's readiness to process upcoming files based on pre-defined criteria / policy that configurable by administrators. Allowing native support for a large pool of MetaDefender instances (load balancer in autoscaling groups. or liveness probe in Kubernetes, etc.)
-  - More details: [Health Check API Configuration](/docs/mdcore/configuration/heath-check-api)
+  - More details: [Health Check API Configuration](/configuration/heath-check-api)
 - Server active performance statistics API
 
   - Determining MetaDefender Core performance (processing time, throughput, queue time etc.) within specific time window to help you make better decision on which server is the best to route upcoming requests. Metrics that can be also collected and reported in external tools, not just via SIEM.
-  - More details: [GET - Active performance](/docs/mdcore/metadefender-core#activeperformance)
+  - More details: [GET - Active performance](/v5.20.0/metadefender-core/ref#activeperformance)
 - Bulk hash skipping modification API
 
   - No longer need to import one by one hash for either or both whitelisting and blacklisting. Allows you to import a list of hashes instead in a form of file.
-  - More details: [POST - Add new hashes to 'skip by hash' list](/docs/mdcore/metadefender-core#configpostskiphash)
+  - More details: [POST - Add new hashes to 'skip by hash' list](/v5.20.0/metadefender-core/ref#configpostskiphash)
 - Parallel engine deployment
 
   - Only applicable to bundled engines for now. Bundled engines will be deployed and initialized in parallel, to make MetaDefender Core get to ready state faster, and possibly reduce down time in dynamic environments (Containers, Cloud Autoscaling, etc.).
@@ -3530,11 +3547,11 @@ Release Date: 30 November 2021
 - Preferred encoding supported for sanitization and DLP processing
 
   - A new header `engines-metadata` for `POST /file` (asynchronous scan) and `POST /file/sync` (synchronous scan) to specify explicitly payload's preferred encoding (e.g. ISO-2022-JP) for sanitization and DLP processing. If not specified, then default encoding (UTF-8) will be applied.
-  - More details: [POST - Analyze File (Asynchronous mode)](/docs/mdcore/metadefender-core#fileanalysispost)
+  - More details: [POST - Analyze File (Asynchronous mode)](/v5.20.0/metadefender-core/ref#fileanalysispost)
 - Proactive DLP integration enhanced
 
   - Helped expose new Proactive DLP features on MetaDefender Core workflow rules, and make the product workflow flexible for changes and improvements.
-  - More details: [Proactive DLP release notes](/docs/mdcore/release-notes/proactive-dlp-release-notes)
+  - More details: [Proactive DLP release notes](/release-notes/proactive-dlp-release-notes)
 - SHA256 checksum of objects in Deep CDR analysis result details displayed
 
   - SHA256 checksum calculated on every sanitized objects processed by Deep CDR is now displayed on MetaDefender Core's processing result UI.
@@ -3563,7 +3580,7 @@ Release Date: 30 November 2021
 
   - Uninstalling the product and then reinstalling back on the same machine but with different deployment ID.
 
-## [Version v4.21.2](/docs/mdcore/release-notes/archived-release-notes#version-v4212)
+## Version v4.21.2
 
 Release Date: 30 August 2021
 
@@ -3571,16 +3588,16 @@ Release Date: 30 August 2021
 
 - Mutual authentication for secured webhook (callback) mode
 
-  - An additional security mode for callback HTTPS to authenticate requests indeed sent by MetaDefender Core, and help against man-in-the-middle attack. Details could be found at: [Webhook Authentication](/docs/mdcore/operating/library-management#webhook-authentication)
+  - An additional security mode for callback HTTPS to authenticate requests indeed sent by MetaDefender Core, and help against man-in-the-middle attack. Details could be found at: [Webhook Authentication](/operating/library-management#webhook-authentication)
 - Webhook (callback) for sanitized file download (BETA feature - not recommend to be used on production)
 
   - When registered by client, whenever a sanitized file is produced and ready, a new callback with sanitized file content will be sent back to client.
 - Configurable relevant session cookie attribute aided in CSRF attack prevention
 
-  - "*SameSite*" attribute on the session cookie "*session_id_ometascan*" with supported values: Lax (default), Strict, None (i.e. empty) to be configurable. Supported to configure via either administrative REST API, or ignition file. Details could be found at: [Configure session cookie attribute](/docs/mdcore/metadefender-core#configputsessioncookie)
+  - "*SameSite*" attribute on the session cookie "*session_id_ometascan*" with supported values: Lax (default), Strict, None (i.e. empty) to be configurable. Supported to configure via either administrative REST API, or ignition file. Details could be found at: [Configure session cookie attribute](/v5.20.0/metadefender-core/ref#configputsessioncookie)
 - Support SSL connection between MetaDefender Core and PostgreSQL
 
-  - Along with a setup guidance for SSL database connection. Details could be found at: [SSL Connection for bundled PostgreSQL](/docs/mdcore/configuration/ssl-connection-for-postgresql-communication)
+  - Along with a setup guidance for SSL database connection. Details could be found at: [SSL Connection for bundled PostgreSQL](/configuration/ssl-connection-for-postgresql-communication)
 - SQL Injection prevention check and ensurement
 
   - On all supported REST APIs
@@ -3589,7 +3606,7 @@ Release Date: 30 August 2021
   - Allowed users to change DN information in AD / LDAP directories
 - Logging details enhancement on Webhook (callback) failures
 
-  - Enhanced on generic failure (error code = 444) to expose more details in WARNING log level. Details could be found at: [Webhook error message description](/docs/mdcore/metadefender-core#webhookstatus)
+  - Enhanced on generic failure (error code = 444) to expose more details in WARNING log level. Details could be found at: [Webhook error message description](/v5.20.0/metadefender-core/ref#webhookstatus)
 - Logging details enhancement when failing to open PostgreSQL service
 
   - In a circumstance of when failing to open PostgreSQL configuration file.
@@ -3640,7 +3657,7 @@ Release Date: 30 August 2021
 
   - HTTPS configured with full chain certificate scenario, the intermediate certificate could be stripped out before importing into the product
 
-## [Version v4.21.1](/docs/mdcore/release-notes/archived-release-notes#version-v4211)
+## Version v4.21.1
 
 Release Date: 13 July 2021
 
@@ -3658,7 +3675,7 @@ Release Date: 13 July 2021
 - A new CLI tool to analyze and deeply vacuum database
 
   - PostgreSQL database could be more bulky over time with high scanning traffic. The tool which is bundled with MetaDefender Core installation is to analyze database and vacuum database effectively, and simplify IT administration. Even though it is not required to stop MetaDefender Core service while running, but still recommended to run the tool when the scanning service is at rest, or not in peak hours to avoid scanning performance impact.
-  - Details: [Database Maintenance | MetaDefender Core 4.19.0 or above](/docs/mdcore/operating/database-maintenance---metadefender-core-4-19-0-or-above)
+  - Details: [Database Maintenance | MetaDefender Core 4.19.0 or above](/operating/database-maintenance---metadefender-core-4-19-0-or-above)
 - More data points collected for the support package
 
   - Including size of objects from MetaDefender Core database to help us determine better the characteristics of the data for troubleshooting purpose.
@@ -3687,7 +3704,7 @@ Release Date: 13 July 2021
 
   - Occurred when handling archive files.
 
-## [Version v4.21.0](/docs/mdcore/release-notes/archived-release-notes#version-v4210)
+## Version v4.21.0
 
 Release Date: 14 June 2021
 
@@ -3759,7 +3776,7 @@ Release Date: 14 June 2021
 
   - Some other minor bug fixes.
 
-## [Version v4.20.1](/docs/mdcore/release-notes/archived-release-notes#version-v4201)
+## Version v4.20.1
 
 Release Date: 31 Mar 2021
 
@@ -3798,7 +3815,7 @@ Release Date: 31 Mar 2021
 
   - Some other minor bug fixes.
 
-## [Version v4.20.0](/docs/mdcore/release-notes/archived-release-notes#version-v4200)
+## Version v4.20.0
 
 Release Date: 08 Feb 2021
 
@@ -3828,7 +3845,7 @@ Release Date: 08 Feb 2021
 
   - Tooltip for processed file cleanup explanation
 
-## [Version v4.19.2](/docs/mdcore/release-notes/archived-release-notes#version-v4192)
+## Version v4.19.2
 
 Release Date: 07 Dec 2020
 
@@ -3900,7 +3917,7 @@ Release Date: 07 Dec 2020
   - Blocked files was not stored in quarantine with local file path scan, or scan from link fashion.
   - Wrong data calculation on statistics page
 
-## [Version v4.19.1](/docs/mdcore/release-notes/archived-release-notes#version-v4191)
+## Version v4.19.1
 
 Release Date: 21 Oct 2020
 
@@ -4019,7 +4036,7 @@ Release Date: 21 Oct 2020
 
   - The issue could only happen when Proactive DLP was used with watermarking triggered on child files inside archive sanitization.
 
-## [Version v4.19.0](/docs/mdcore/release-notes/archived-release-notes#version-v4190)
+## Version v4.19.0
 
 Release Date: 27 Aug 2020
 
@@ -4090,7 +4107,7 @@ Release Date: 27 Aug 2020
 
   - The setting was reset back to default value (3 minutes).
 
-## [Version v4.18.0](/docs/mdcore/release-notes/archived-release-notes#version-v4180)
+## Version v4.18.0
 
 Release Date: 26 May 2020
 
@@ -4171,7 +4188,7 @@ Release Date: 26 May 2020
 
   - None of AV engines actually scanned archive file when archive timeout occurred
 
-## [Version v4.17.3](/docs/mdcore/release-notes/archived-release-notes#version-v4173)
+## Version v4.17.3
 
 Release Date: 06 Apr 2020
 
@@ -4180,7 +4197,7 @@ Release Date: 06 Apr 2020
 - Configurable setting to run database optimization
 
   - Database optimization has been introduced since Core 4.17.0 to help run database queries faster. The downside is while running (for a few seconds), Core queries hold up causing possibly timeout on client side.
-  - This new setting allows users setting specific time to run database optimization task (to avoid peak hours), or just disable to prevent this task from running (to avoid performance degradation while running). Learn more how to configure: [Startup Core Configuration](/docs/mdcore/configuration/metadefender-configuration#startup-core-configuration))
+  - This new setting allows users setting specific time to run database optimization task (to avoid peak hours), or just disable to prevent this task from running (to avoid performance degradation while running). Learn more how to configure: [Startup Core Configuration](/configuration/metadefender-configuration#startup-core-configuration))
 - Scan database rollback mechanism
 
   - In some circumstances (e.g. Core crashes, out of disk/memory etc.), the atomicity of product database could be compromised causing inconsistent processing scan history returned. Rollback mechanism helps retain that atomicity of database.
@@ -4242,7 +4259,7 @@ Release Date: 06 Apr 2020
 
   - When session cleared out, authenticated users could be logged out repeatedly due to session expired error on MetaDefender Core management console.
 
-## [Version v4.17.2](/docs/mdcore/release-notes/archived-release-notes#version-v4172)
+## Version v4.17.2
 
 Release Date: 03 Mar 2020
 
@@ -4316,7 +4333,7 @@ Release Date: 03 Mar 2020
   - Added margin to bottom edge of scan result UI
   - Name of rights under user management did not match to Inventory
 
-## [Version v4.17.1](/docs/mdcore/release-notes/archived-release-notes#version-v4171)
+## Version v4.17.1
 
 Release Date: 06 Jan 2020
 
@@ -4360,7 +4377,7 @@ Release Date: 06 Jan 2020
 
   - The field "File Password" on the file processing UI not cleared up after empty file selected
 
-## [Version v4.17.0.1](/docs/mdcore/release-notes/archived-release-notes#version-v41701)
+## Version v4.17.0.1
 
 Release Date: 27 Nov 2019
 
@@ -4370,7 +4387,7 @@ Release Date: 27 Nov 2019
 
   - Under certain circumstances, a deadlock issue could encounter locking database from being queried (timeout on REST requests)
 
-## [Version v4.17.0](/docs/mdcore/release-notes/archived-release-notes#version-v4170)
+## Version v4.17.0
 
 Release Date: 14 Nov 2019
 
@@ -4428,7 +4445,7 @@ Release Date: 14 Nov 2019
   - Some display and hyperlink minor issues related to table and navigation
   - Hitting cancel batch button on UI causing error
 
-## [Version v4.16.3](/docs/mdcore/release-notes/archived-release-notes#version-v4163)
+## Version v4.16.3
 
 Release Date: 16 Oct 2019
 
@@ -4447,7 +4464,7 @@ Release Date: 16 Oct 2019
 - Password protected document could not be decrypted properly for data sanitization
 - Uninstalling MetaDefender Core did not clean up its leftover data folder
 
-## [Version v4.16.2](/docs/mdcore/release-notes/archived-release-notes#version-v4162)
+## Version v4.16.2
 
 Release Date: 10 Sep 2019
 
@@ -4469,7 +4486,7 @@ Release Date: 10 Sep 2019
 - Non UTF-8 characters were not displayed correctly when exporting process history via UI
 - Dependency installation issue on Ubuntu 18 & Debian 9
 
-## [Version v4.16.1](/docs/mdcore/release-notes/archived-release-notes#version-v4161)
+## Version v4.16.1
 
 Release Date: 12 Aug 2019
 
@@ -4496,7 +4513,7 @@ Release Date: 12 Aug 2019
 - Some other minor UI issues
 - Wrong timezone set on exported CSV scan report
 
-## [Version v4.16.0](/docs/mdcore/release-notes/archived-release-notes#version-v4160)
+## Version v4.16.0
 
 Release Date: 08 July 2019
 
@@ -4519,7 +4536,7 @@ Release Date: 08 July 2019
 - Wrong UI result on sanitization timeout
 - Memory leak issue on engine package uploading
 
-## [Version v4.15.2](/docs/mdcore/release-notes/archived-release-notes#version-v4152)
+## Version v4.15.2
 
 Release Date: 19 June 2019
 
@@ -4533,7 +4550,7 @@ Release Date: 19 June 2019
   - Enhanced error log messages when the engine process is terminated due to engine timeout
   - Exposed log messages on warning level when there is an archive extraction failure
 
-## [Version v4.15.1](/docs/mdcore/release-notes/archived-release-notes#version-v4151)
+## Version v4.15.1
 
 Release Date: 06 June 2019
 
@@ -4566,7 +4583,7 @@ Release Date: 06 June 2019
   - Not user-friendly error messages when adding duplicate hashes to a backlist
   - Typos on the UI
 
-## [Version v4.15.0](/docs/mdcore/release-notes/archived-release-notes#version-v4150)
+## Version v4.15.0
 
 Release Date: 06 May 2019
 
@@ -4601,7 +4618,7 @@ Release Date: 06 May 2019
   - non-Unicode file name displayed on web scan UI encoded properly
 - Sanitizing empty archive file no longer returns failed
 
-## [Version v4.14.3](/docs/mdcore/release-notes/archived-release-notes#version-v4143)
+## Version v4.14.3
 
 Release Date: 01 Apr 2019
 
@@ -4628,7 +4645,7 @@ Release Date: 01 Apr 2019
 - DLP verdict returns incorrect value for some cases
 - Logs in support package did not handle non-Unicode characters
 
-## [Version v4.14.2](/docs/mdcore/release-notes/archived-release-notes#version-v4142)
+## Version v4.14.2
 
 Release Date: 28 Feb 2019
 
@@ -4642,7 +4659,7 @@ Release Date: 28 Feb 2019
 - Make error message more relative for case where file exceeded the size limit
 - Pinning engines and their databases independently
 
-## [Version v4.14.1](/docs/mdcore/release-notes/archived-release-notes#version-v4141)
+## Version v4.14.1
 
 Release Date: 31 Jan 2019
 
@@ -4653,7 +4670,7 @@ Release Date: 31 Jan 2019
 - Hash validation (blacklist/whitelist)
 - Upload performance
 
-## [Version v4.14.0](/docs/mdcore/release-notes/archived-release-notes#version-v4140)
+## Version v4.14.0
 
 Release date: 19 Dec 2018
 
@@ -4667,7 +4684,7 @@ Release date: 19 Dec 2018
 - Enhanced password policy can be enabled for local users
 - Files with Failed to sanitize result can be set to be blocked
 
-## [Version v4.13.2](/docs/mdcore/release-notes/archived-release-notes#version-v4132)
+## Version v4.13.2
 
 Release date: 21 Nov 2018
 
@@ -4682,7 +4699,7 @@ Release date: 21 Nov 2018
 - Clean-up mechanism removes files still in use
 - Various engine handling issues
 
-## [Version v4.13.1](/docs/mdcore/release-notes/archived-release-notes#version-v4131)
+## Version v4.13.1
 
 Release date: 31 Oct 2018
 
@@ -4692,7 +4709,7 @@ Fixed issues:
 - Batch processings cannot be cancelled via web management console
 - "Can't process shared resource file" error message did not contain the file name
 
-## [Version v4.13.0](/docs/mdcore/release-notes/archived-release-notes#version-v4130)
+## Version v4.13.0
 
 Release date: 16 Oct 2018
 
@@ -4713,7 +4730,7 @@ Fixed issues:
 - Extracted files are left behind
 - On Debian based systems, on upgrades, engines are deleted and disabled engines are re-enabled
 
-## [Version v4.12.2](/docs/mdcore/release-notes/archived-release-notes#version-v4122)
+## Version v4.12.2
 
 Release date: 3 Oct 2018
 
@@ -4721,7 +4738,7 @@ Fixed issues:
 
 - In case of archive processing, sometimes clean-up mechanism removes some extracted files before processing is finished
 
-## [Version v4.12.1](/docs/mdcore/release-notes/archived-release-notes#version-v4121)
+## Version v4.12.1
 
 Release date: 26 Sept 2018
 
@@ -4736,7 +4753,7 @@ Fixed issues:
 - The value, set in "MAX TOTAL SIZE OF EXTRACTED FILES" is handled incorrectly
 - Older configs cannot be imported into v4.12.0
 
-## [Version v4.12.0](/docs/mdcore/release-notes/archived-release-notes#version-v4120)
+## Version v4.12.0
 
 Release date: 15 Sept 2018
 
@@ -4760,7 +4777,7 @@ Fixed issues:
 - On hash lookup page, empty hash can be searched
 - Sanitized output file name validation can cause user interface stalled
 
-## [Version v4.11.3](/docs/mdcore/release-notes/archived-release-notes#version-v4113)
+## Version v4.11.3
 
 Release date: 30 Aug 2018
 
@@ -4768,7 +4785,7 @@ Fixed issues:
 
 - Whitelist page under Inventory menu does not exist (only UI issue)
 
-## [Version v4.11.2](/docs/mdcore/release-notes/archived-release-notes#version-v4112)
+## Version v4.11.2
 
 Release date: 29 Aug 2018
 
@@ -4787,7 +4804,7 @@ Fixed issues:
 - Typos on the user interface
 - Abandoned files left behind after processings
 
-## [Version v4.11.1](/docs/mdcore/release-notes/archived-release-notes#version-v4111)
+## Version v4.11.1
 
 Release date: 8 Aug 2018
 
@@ -4798,7 +4815,7 @@ Fixed issues:
 - Empty files are skipped in archives
 - Incomplete archive extraction issue happened on heavily overloaded systems
 
-## [Version v4.11.0](/docs/mdcore/release-notes/archived-release-notes#version-v4110)
+## Version v4.11.0
 
 Release date: 11 July 2018
 
@@ -4818,7 +4835,7 @@ Fixed issues:
 - Default workflows can be overridden on config import
 - Core crashes
 
-## [Version v4.10.2](/docs/mdcore/release-notes/archived-release-notes#version-v4102)
+## Version v4.10.2
 
 Release Date: 27 June 2018
 
@@ -4829,7 +4846,7 @@ Fixed issues:
 - Node crashes
 - Inconsistent results in case of archive processing: In case of processing an archive more times, the result may be different by cases (infected/exceeded archive file number/exceeded archive size)
 
-## [Version v4.10.1](/docs/mdcore/release-notes/archived-release-notes#version-v4101)
+## Version v4.10.1
 
 Release Date: 23 May, 2018
 
@@ -4837,7 +4854,7 @@ New features:
 
 - Data Sanitization engine time-out and retry count is now configurable
 - REST API: process info contains the name of the last scanned file when scanning archive file types
-- REST API: Configurations that may change the final scan result since the time of processing will be included in the [process info response](/docs/mdcore/metadefender-core) (i.e., outdated definitions)
+- REST API: Configurations that may change the final scan result since the time of processing will be included in the [process info response](/metadefender-core/ref) (i.e., outdated definitions)
 - Hash based result lookups can be filtered by rule name
 
 Fixed issues:
@@ -4846,7 +4863,7 @@ Fixed issues:
 - On the dashboard, category names of doughnut charts were truncated
 - In case of archive processing, the "Not scanned" result to a file is not propagated to a higher level (overall verdict)
 
-## [Version v4.10.0](/docs/mdcore/release-notes/archived-release-notes#version-v4100)
+## Version v4.10.0
 
 Release Date: 2 May, 2018
 
@@ -4874,7 +4891,7 @@ Fixed issues:
 - AD group members did not have user profiles
 - Misleading license information
 
-## [Version 4.9.1](/docs/mdcore/release-notes/archived-release-notes#version-491)
+## Version 4.9.1
 
 Release Date: 28 February, 2018
 
@@ -4893,7 +4910,7 @@ Fixed issues:
 - Access via Active Directory is not logged
 - Sluggish pages under Policy menu
 
-## [Version 4.9.0](/docs/mdcore/release-notes/archived-release-notes#version-490)
+## Version 4.9.0
 
 Release Date: 13 December, 2017
 
@@ -4918,7 +4935,7 @@ Fixed issues:
 - Poorly handled UTF-8 characters in output file name for sanitized files
 - /hash API can give "in progress" result
 
-## [Version 4.8.2](/docs/mdcore/release-notes/archived-release-notes#version-482)
+## Version 4.8.2
 
 Fixed issues:
 
@@ -4926,7 +4943,7 @@ Fixed issues:
 - Fixed a possible crash issue at Scan history manual cleanup in case of high load
 - Fixed a memory leak in case of recurrring failed database deployment on Node
 
-## [Version 4.8.1](/docs/mdcore/release-notes/archived-release-notes#version-481)
+## Version 4.8.1
 
 Release Date: 5 October, 2017
 
@@ -4954,7 +4971,7 @@ Fixed issues:
 - Improved archive handling
 - Archive related failure handling
 
-## [Version 4.8.0](/docs/mdcore/release-notes/archived-release-notes#version-480)
+## Version 4.8.0
 
 New features:
 
@@ -4978,21 +4995,21 @@ Fixed issues:
 - Fixed error handling when scan target was sent in the body and via filepath (/file REST API)
 - Fixed disconnected ghost node issue displayed on user interface
 
-## [Version 4.7.2](/docs/mdcore/release-notes/archived-release-notes#version-472)
+## Version 4.7.2
 
 Issues fixed:
 
 - Fixed bug that could cause policies to not contain any elements and forbid user to create new items
 - Fixed bug where Core could download older version of engines where newer one was already downloaded
 
-## [Version 4.7.1](/docs/mdcore/release-notes/archived-release-notes#version-471)
+## Version 4.7.1
 
 Issues fixed:
 
 - Fixed upgrade of scan configuration
 - Fixed ghost nodes appeared on Inventory→ Nodes page
 
-## [Version 4.7.0](/docs/mdcore/release-notes/archived-release-notes#version-470)
+## Version 4.7.0
 
 New features:
 
@@ -5017,13 +5034,13 @@ Issues fixed:
 - Fixed order of extracted files on scan details view
 - Fixed rare temporary file leak during archive scan
 
-## [Version 4.6.3](/docs/mdcore/release-notes/archived-release-notes#version-463)
+## Version 4.6.3
 
 Issues fixed:
 
 - Improved scan result fetching performance for big archives
 
-## [Version 4.6.2](/docs/mdcore/release-notes/archived-release-notes#version-462)
+## Version 4.6.2
 
 Issues fixed:
 
@@ -5033,7 +5050,7 @@ Issues fixed:
 - Fixed login issue which happened when many login request was initiated concurrently
 - Fixed calculation of extracted file count
 
-## [Version 4.6.1](/docs/mdcore/release-notes/archived-release-notes#version-461)
+## Version 4.6.1
 
 New features:
 
@@ -5052,7 +5069,7 @@ Issues fixed:
 - Fixed a rare race condition in update downloader component
 - Fixed login issue when Core v3 like URL is used by the admin
 
-## [Version 4.6.0](/docs/mdcore/release-notes/archived-release-notes#version-460)
+## Version 4.6.0
 
 New features:
 
@@ -5088,14 +5105,14 @@ Issues fixed:
 - Filesize is now correctly displayed on scan result user interface
 - Support package generator now includes auditlog db
 
-## [Version 4.5.1](/docs/mdcore/release-notes/archived-release-notes#version-451)
+## Version 4.5.1
 
 Issues fixed:
 
 - Fixed possible crash of Agent when there is database which is handled by engine
 - Fixed possible crash of Core that could occur when updating a package
 
-## [Version 4.5.0](/docs/mdcore/release-notes/archived-release-notes#version-450)
+## Version 4.5.0
 
 New features:
 
@@ -5114,7 +5131,7 @@ Issues fixed:
 - Potential issue fixed for update file upload
 - /apiversion interface is added to easily determine REST API compatibility level
 
-## [Version 4.4.1](/docs/mdcore/release-notes/archived-release-notes#version-441)
+## Version 4.4.1
 
 New features:
 
@@ -5145,7 +5162,7 @@ Issues fixed:
 - Detailed logging in case of SSL connection issues
 - Improved auto-recovery of engines running under Emulated Windows
 
-## [Version 4.3.0](/docs/mdcore/release-notes/archived-release-notes#version-430)
+## Version 4.3.0
 
 New features:
 
@@ -5167,7 +5184,7 @@ Issues fixed:
 - Fixed failed scans during some engine or database update
 - Removed unmeaningful database age display of non-anti-malware engines
 
-## [Version 4.2.0](/docs/mdcore/release-notes/archived-release-notes#version-420)
+## Version 4.2.0
 
 New features:
 
@@ -5193,7 +5210,7 @@ Issues fixed:
 - do not download database without the corresponding engine package
 - number of engines and maximum file size is now reflect the current status
 
-## [Version 4.1.0](/docs/mdcore/release-notes/archived-release-notes#version-410)
+## Version 4.1.0
 
 New features:
 
@@ -5212,7 +5229,7 @@ Issues fixed:
 - fixed manual update package upload
 - fixed unwanted warning message after successful activation
 
-## [Version 4.0.1](/docs/mdcore/release-notes/archived-release-notes#version-401)
+## Version 4.0.1
 
 New features:
 
@@ -5229,7 +5246,7 @@ Issues fixed:
 - do not check for updates at product startup if auto update is off
 - fixed a page auto refresh issue with Internet Explorer
 
-## [Version 4.0.0](/docs/mdcore/release-notes/archived-release-notes#version-400)
+## Version 4.0.0
 
 New features:
 

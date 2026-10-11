@@ -2,6 +2,8 @@
 
 # Connecting to the Fend Data Diode via Web Browser (Windows, MacOS and Linux)
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 To configure the diode, you must open a connection with the diode. This section describes how to open a configuration session over ethernet and provides some tips on things to confirm before trying to connect.
 
 ## [Step 1: Confirm Your Computer’s Network Settings before Connecting to a Data Diode](/docs/fenddiode/configuring-a-data-diode/connecting-to-the-fend-data-diode-via-web-browser#step-1-confirm-your-computers-network-settings-before-connecting-to-a-data-diode)

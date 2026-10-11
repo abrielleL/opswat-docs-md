@@ -1,46 +1,31 @@
 <!-- source: https://www.opswat.com/docs/filescan/datasheet/scanning-ai-models-for-security-risks -->
 
-# Scanning AI Models for Security Risks
+# LLM Scanning
 
-As AI becomes very popular in modern applications, companies are racing to integrate AI chatbots and other AI-powered utilities into their products to optimize work efficiency.
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
-The sharing and reuse of pre-trained AI models has become a widespread practice. After training a model like ChatGPT, you need to save those weights (already trained model) somewhere. These files aren't just simple data - they're complex formats like Pickle, Pytorch and TensorFlow, each with their own serialization style.
+Artificial intelligence has become part of everyday life. The models behind chatbots, copilots, search engine, and recommendation sit inside the applications people use every day and organizations are adopting open-source and third-party models faster than they can review them.
 
-Developers frequently download models from public repositories like Hugging Face, Kaggle, and others to accelerate innovation and avoid redundant training efforts. Attackers are now targeting the AI model supply chain by injecting malware, backdoors, and malicious logic into serialized model files. These compromised models can be difficult to detect using conventional security tools and may lead to remote code execution (RCE) attacks, data leak, or sabotage of downstream AI tasks.
+As models become core software components, scanning them has become a crucial part of cybersecurity. An AI model is not just passive data. In some cases it's an artifact that carries executable code, and an interface that can be manipulated. Most teams pull models from Hugging Face and hope for the best, there isn't much else to go on. However, a model file is a black box, a single model can compromise every system that loads it, or quietly act against the organization that deploys it.
 
-MetaDefender Aether supports scanning AI model files, including `.pkl`, `.pt`, `.pb` and`.h5`, providing robust detection for the most critical attack vectors.
+MetaDefender Aether's LLM Scanner checks **the model itself** and **how the model behaves**. That lets teams bring open-source and third-party models into their pipelines, registries, and production systems with confidence.
 
-## **Common AI Model Attack Vectors**
+## [Key features](/docs/filescan/datasheet/scanning-ai-models-for-security-risks#key-features)
 
-Several ML model formats can introduce security risks:
+- **Multi-format coverage**: supports parsing **7 LLM file types** across the major AI frameworks.
+- **Deep structural analysis**: analyzes a model deep down to its structure and **never executes it**.
+- **Code & backdoor detection**: exposes embedded payloads, dangerous imports, and hidden execution paths through **30+ dedicated threat indicators**.
+- **Built for scale**: supports analyzing **multi-gigabyte models**.
+- **Adversarial behavioral probing**: evaluates the live model against a probe suite mapped to **the OWASP LLM Top 10** risk categories.
 
-| Format | Framework | Extension | Description | Code Execution | Tagging |
-| --- | --- | --- | --- | --- | --- |
-| Pickle | Generic Python | `.pkl`, `.pickle` | Python’s default serialization format; allows arbitrary code execution during deserialization. | Yes | `pickle` |
-| Pytorch | Pytorch | `.pt`, `pth` | Uses Pickle internally to store model weights and architecture, vulnerable to embedded code execution. | Yes | `pytorch` |
-| Tensorflow | TensorFlow | `.pb` | Protocol Buffers format used to store SavedModels. Can include Lambda Layer in KerasMetadata to allow arbitrary code execution. | Yes | `tensorflow` |
-| Keras | Keras / TensorFlow | `.h5` | HDF5 format used by Keras; Lambda layers serialized with marshal can enable code execution. | Yes | `tensorflow` |
+- **Integrated intelligence**: findings flow into the MetaDefender Aether verdict alongside other analysis layer.
+- **MITRE ATLAS mapping:** findings are tagged with technique from MITRE ATLAS, the adversarial-ML knowledge base.
 
-## **How MetaDefender Sandbox Enhances AI Model Security**
+A threat can be baked into the model artifact before it ships, or it can live in how the model responds once deployed. LLM Scanner covers both, through two complementary detection capabilities.
 
-MetaDefender Sandbox provides **comprehensive security analysis** for ML models, identifying potential threats before they can impact AI workflows.
-
-### **Key Capabilities**
-
-- **Support for Multi-Serialization Format Parsing:** Enables comprehensive detection across major AI model formats, including Pickle, Protocol Buffers, and Marshal serialization.
-- **Leveraging Integrated Pickle Scanning Tools:** Integrates Fickling to parse Pickle’s structure and extract artifacts.
-- **Deep Static Analysis:** Disassembles and analyzes serialized objects inside `pkl` , `pt` and `h5` files.
-- **Graph-Level Threat Detection:** Identifies unsafe TensorFlow operators and custom graph nodes in `pb` models.
-- **Uncovering Deliberate Evasion Techniques:** Exposes the hidden logic of complicated evasion techniques.
-
-### **Showcase Report: Detect Stack Pickle technique and its Malicious contents**
-
-URL for the sample
-
-<https://www.filescan.io/uploads/68bf95d2a1a41633174df884/reports/3bd2c3bf-8aa4-47bb-8b5b-fb4b5dbd0a90/overview>
-
-Stacked Pickle can be utilized as a trick to hide malicious behavior. By nesting multiple Pickle objects and injecting the payload across layers then combined with compression or encoding. Each layer looks benign on its own, therefore many scanners and quick inspections miss the malicious payload.
-
-MetaDefender Sandbox peels those layers one at a time: it parses each Pickle object, decodes or decompresses encoded segments, and follows the execution chain to reconstruct the full payload. By replaying the unpacking sequence in a controlled analysis flow, the sandbox exposes the hidden logic without running the code in a production environment.
+| Feature | Description | Learn more |
+| --- | --- | --- |
+| **LLM Static Analysis** | Malicious payloads and arbitrary code-execution paths can hide inside model files. The scanner detects the correct format, then parses it down to its structure to surface embedded payloads, dangerous imports, and anomalous signatures. | [Learn more →](/docs/filescan/datasheet/static-analysis) |
+| **LLM Dynamic Analysis** | Even a clean model file is no guarantee of safe behavior. The scanner evaluates the deployed model's behaviors itself, dynamically probing it with adversarial prompts to expose prompt injection, sensitive-data disclosure, and other weaknesses that only appear at inference time. | [Learn more →](/docs/filescan/datasheet/dynamic-analysis) |
 
 See the "Technical Datasheet" for a complete list of features: <https://docs.opswat.com/filescan/datasheet/technical-datasheet>

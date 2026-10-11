@@ -2,8 +2,8 @@
 
 # Roles
 
-Summarize Page    Connect to Cursor Connect to VS Code
-## [Overview](/docs/mdmft/operating/RBAC-role-base-access-control-permissions#overview)
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## Overview
 
 MetaDefender Managed File Transfer™ includes several predefined roles, also referred to as "User Types." When MetaDefender Managed File Transfer™ is first accessed, the initial user is created as an Administrator. Any local user created afterward must have their role defined during the creation process.
 
@@ -11,7 +11,7 @@ Info
 
 The first Administrator account can be deleted, as long as there is at least one other Administrator remaining in the system.
 
-## [Roles and Permissions](/docs/mdmft/operating/RBAC-role-base-access-control-permissions#roles-and-permissions)
+## Roles and Permissions
 
 **Administrator**
 
@@ -42,18 +42,20 @@ The first Administrator account can be deleted, as long as there is at least one
 - A regular user role with elevated permissions
 - Can see all files in the pending approval state and approve them, making the files immediately available
 - Cannot assign or delegate supervisory roles
+- This role will overrule the Supervisor role if granted simultaneously
 
 **Verdict Supervisor**
 
 - A Global Supervisor with more accessibility for files
 - Has access to the Processing History, and the ability to Override Blocked Status or Restore Blocked Status of user files.
+- This role will overrule the Supervisor role if granted simultaneously
 
 **User**
 
 - Can manage the files they upload
 - Can share files with internal and guest users
 - Can create guest users
-- For detailed capabilities, refer to the [End User Guide](https://app.developerhub.io/metadefender-managed-file-transfer/v3.9.3/end-user-guide/access-md-mft)
+- For detailed capabilities, refer to the [End User Guide](/end-user-guide/access-md-mft)
 
 **Automation Coordinator**:
 

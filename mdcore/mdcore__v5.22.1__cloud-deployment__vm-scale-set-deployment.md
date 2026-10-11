@@ -1,0 +1,112 @@
+<!-- source: https://www.opswat.com/docs/mdcore/v5.22.1/cloud-deployment/vm-scale-set-deployment -->
+
+# VM Scale Set
+
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## [Steps to follow for a Production Environment](/docs/mdcore/v5.22.1/cloud-deployment/vm-scale-set-deployment#steps-to-follow-for-a-production-environment)
+
+When running MetaDefender Core is needed to generate a Azure VM image with the desired configuration as the image published in the Azure Marketplace is only covering one use case and is not recommended to be used for production.
+
+1. Create Networking and Resource Group for MetaDefender
+2. Create Azure PostgreSQL in case of wanting remote database (Optional but recommended)
+3. Create Azure VM (Linux or Windows) and follow the installation process for the desired OS. See [Installation](/docs/mdcore/v5.22.1/installation/installing-metadefender-core)
+
+   1. Generate an APIKEY from the UI and save it for later.
+   2. Generate a Azure VM image based on the current VM
+4. Create a Azure VMSS
+5. Create the Licensing Automation. Following [Licensing Automation on Azure](/docs/mdcore/v5.22.1/cloud-deployment/licensing-automation-on-azure) page
+
+## [Running a POC Environment using Terraform example](/docs/mdcore/v5.22.1/cloud-deployment/vm-scale-set-deployment#running-a-poc-environment-using-terraform-example)
+
+For a multi instance deployment of MetaDefender Core in Azure you can use the terraform code provided by OPSWAT to test this deployment type.
+
+Info
+
+This terraform code is just an example to test the deployment type. Customers can reuse the code as needed.
+
+### [Prerequisites and Requirements](/docs/mdcore/v5.22.1/cloud-deployment/vm-scale-set-deployment#prerequisites-and-requirements)
+
+**Azure knowledge**: This guide assumes familiarity with Azure Services
+
+**Azure account**: needs permission to create Azure Services listed in [Recommended Architecture for Azure](/docs/mdcore/v5.22.1/cloud-deployment/single-azure-vm-architecture)
+
+**Tools installation:** [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+
+### [System/OS requirements](/docs/mdcore/v5.22.1/cloud-deployment/vm-scale-set-deployment#systemos-requirements)
+
+For OS, database type, 3rd party dependencies and storage requirements on Windows installations, please refer to the *Microsoft Windows Deployments* section of the [Recommended System Configuration](/docs/mdcore/v5.22.1/installation/recommended-system-configuration) page.
+
+For OS, database type, 3rd party dependencies and storage requirements on Linux installations, please refer to the *Linux Deployments* section of the [Recommended System Configuration](/docs/mdcore/v5.22.1/installation/recommended-system-configuration) page.
+
+### [Deploy using Terraform](/docs/mdcore/v5.22.1/cloud-deployment/vm-scale-set-deployment#deploy-using-terraform)
+
+- Locally clone the [metadefender-csp](https://github.com/OPSWAT/metadefender-csp/tree/main/AWS) repository and go to Azure/vm-scale-set-deployment
+
+BashCopygit clone git@github.com:OPSWAT/metadefender-csp.git
+cd Azure/vm-scale-set-deployment
+#### [Deploy activating the instances using Azure Function](/docs/mdcore/v5.22.1/cloud-deployment/vm-scale-set-deployment#deploy-activating-the-instances-using-azure-function)
+
+- Modify terraform.tfvars with the desired options
+
+  - (Required) VM_PWD required to access to the instances (ssh or RDP)
+  - (Required) LICENSE_AUTOMATION_FUNCTION= true required if wanted to have the instance activated automatically
+  - (Required) APIKEY_GENERATION=false only supported for User-data. The instance is activated with temporary session id
+  - (Required) LICENSE_KEY_CORE required if wanted to have the instance activated automatically
+  - There is one general section and one section for each product that is supported using this Terraform project in case of needing to install additional OPSWAT products
+
+terraform.tfvarsCopy# General variables
+RG_NAME = "opswatmd" # Prefix to add to all the resources
+MD_REGION = "eastus" # Region for all the resources
+MD_VNET_CIDR = "192.168.0.0/16" # VPC CIDR where to create the MetaDefender products
+PUBLIC_ENVIRONMENT = true
+APIKEY_GENERATION = false
+IMPORT_RG = false
+VM_PWD = ""
+LICENSE_AUTOMATION_FUNCTION = true
+# MetaDefender Core variables
+DEPLOY_CORE = true
+CORE_INSTANCE_TYPE = "Standard_D8s_v5" # Instance type for MetaDefender Core
+LICENSE_KEY_CORE = ""
+APIKEY = ""
+CORE_USER = ""
+CORE_PWD = ""
+OFFER_PRODUCT_CORE = "opswat-mdcore-linux" # Windows opswat-mdcore-windows
+SKU_CORE = "opswat-mdcore-linux" # Windows opswat-mdcore-windows
+NUMBER_INSTANCES_CORE = 2
+
+- Run terraform init and apply. Check the resource to be created, after that enter "y"
+
+BashCopyterraform init
+terraform apply
+#### [Deploy activating the instances using the User-Data (POC Only)](/docs/mdcore/v5.22.1/cloud-deployment/vm-scale-set-deployment#deploy-activating-the-instances-using-the-user-data-poc-only)
+
+- Modify terraform.tfvars with the desired options
+
+  - (Required) LICENSE_KEY_CORE required if wanted to have the instance activated automatically
+  - (Required) APIKEY_GENERATION=true to have the apikey generated by terraform. Need to activate the instance automatically
+  - There is one general section and one section for each product that is supported using this Terraform project in case of needing to install additional OPSWAT products
+
+terraform.tfvarsCopy# General variables
+RG_NAME = "metadefender" # Prefix to add to all the resources
+MD_REGION = "eastus" # Region for all the resources
+MD_VNET_CIDR = "192.168.0.0/16" # VPC CIDR where to create the MetaDefender products
+PUBLIC_ENVIRONMENT = true
+APIKEY_GENERATION = true
+IMPORT_RG = false
+VM_PWD = "<SET_UP_VM_PWD>"
+# MetaDefender Core variables
+DEPLOY_CORE = true
+CORE_INSTANCE_TYPE = "Standard_D8s_v5" # Instance type for MetaDefender Core
+LICENSE_KEY_CORE = ""
+OFFER_PRODUCT_CORE = "opswat-mdcore-linux" # Windows opswat-mdcore-windows
+SKU_CORE = "opswat-mdcore-linux" # Windows opswat-mdcore-windows
+NUMBER_INSTANCES_CORE = 2
+
+- Run terraform init and apply. Check the resource to be created, after that enter "y"
+
+BashCopyterraform init
+terraform apply
+### [Next Steps](/docs/mdcore/v5.22.1/cloud-deployment/vm-scale-set-deployment#next-steps)
+
+- Create Azure function to handle the license automation to Azure function App using [Visual Studio Code](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-node?pivots=nodejs-model-v4), or [Command Line](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-cli-node?tabs=linux%2Cazure-cli%2Cbrowser&pivots=nodejs-model-v4). See [Licensing Automation on Azure](/docs/mdcore/v5.22.1/cloud-deployment/licensing-automation-on-azure)
+- After the function is created withing the Azure Function App. We need to trigger the function using Azure Alerts based on the

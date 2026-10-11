@@ -2,6 +2,8 @@
 
 # Unable to access OPSWAT Central Management console due to corrupted web application files
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 | Term | Detail |
 | --- | --- |
 | Problem | Cannot access OPSWAT Central Management console |

@@ -2,6 +2,8 @@
 
 # Resetting Your Diode
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Fend diodes include a physical reset button that can be used to perform a power cycle (reset) or return to factory settings (restore). This button is located to the left of the input side power jack and requires a small pin or paperclip to press.
 
 **Power Cycle (Reset)** **– Quick press and release** – To power cycle the diode, perform a short press and release of the reset button. This will reboot both the input side and the output side. Use this feature if the diode is behaving unexpectedly or you need to reset a connection.

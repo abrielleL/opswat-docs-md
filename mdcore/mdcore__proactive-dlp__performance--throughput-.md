@@ -2,6 +2,8 @@
 
 # Performance (Throughput)
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Disclaimer
+
 We do not guarantee the same performance in your environment. Performance can vary significantly depending on data sets and systems used when running the tests. The sole purpose of this section of the User Guide is to provide a high-level indicator of performance impact when enabling Proactive DLP in your business logic.
 
 ## [Windows System Info](/docs/mdcore/proactive-dlp/performance--throughput-#windows-system-info)

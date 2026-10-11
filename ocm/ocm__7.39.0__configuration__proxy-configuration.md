@@ -2,6 +2,8 @@
 
 # Proxy Configuration
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 OPSWAT Central Management can be configured to send its traffic through a forward proxy. Administrators can configure proxy settings in the **Proxy** tab at **Settings >** **Server Configuration.**
 
 - **Enable proxy:** Enable the use of proxy

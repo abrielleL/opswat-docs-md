@@ -2,6 +2,19 @@
 
 # Release Notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## [Version 3.6.0](/docs/mddownloader/release-notes/release-notes#version-360)
+
+Release date: Oct 08, 2026
+
+Enhancements:
+
+- Upgraded NGINX to v1.30.5
+- Upgraded OpenSSL to v3.5.9
+- Upgraded 7-Zip to v26.03
+- Upgrade yaml-cpp to v0.9.0
+- Fixed an issue where downloaded engine and database packages could stay in the "Downloaded" state and never move to "Exported" until a service restart. This happened when an export cycle ended early and its export resources were not released.
+
 ## [Version 3.5.0](/docs/mddownloader/release-notes/release-notes#version-350)
 
 Release date: June 17, 2026

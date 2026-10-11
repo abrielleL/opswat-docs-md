@@ -2,7 +2,7 @@
 
 # Notifications
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [SMTP Configuration](/docs/mdmft/configuration/notifications#smtp-configuration)
 
 To enable notifications, configure the SMTP settings located under "Notifications" → "SMTP" in the sidebar menu.
@@ -117,3 +117,39 @@ This is the hostname used in emails to generate links to the MetaDefender Manage
 Info
 
 The Notification URL will be overridden if the server's hostname changes.
+
+### [Additional Allowed Notification URLs](/docs/mdmft/configuration/notifications#additional-allowed-notification-urls)
+
+Use this list when users reach MetaDefender Managed File Transfer through more than one address, for example an internal hostname and an external one. When a user reaches MetaDefender Managed File Transfer through an address in the list, links in the emails their actions trigger use that address. In all other cases, links use the Notification URL.
+
+Leave the list empty to always use the Notification URL. The list is empty by default, including after an upgrade, so emails stay the same until you add an entry.
+
+Info
+
+Only add addresses that every email recipient can open. A recipient may open the link from a different network than the user who triggered the email.
+
+#### [Adding an Entry](/docs/mdmft/configuration/notifications#adding-an-entry)
+
+- Enter a full address that starts with `http://` or `https://`, for example `https://files.example.com` or `https://files.example.com:8443`.
+- Do not include a path, query string, fragment, user name, or password.
+- The `|` character is not allowed.
+- Spaces and a trailing `/` are removed on save.
+- You can add up to 10 entries. All entries together, counting one separator character between each entry, can be at most 1,000 characters.
+- Each entry must point to a different host and port, and must be different from the Notification URL. `http://files.example.com` and `https://files.example.com` count as the same entry.
+
+While you type, only the URL format and exact duplicates are checked. All other rules are checked when you click "Update". If an entry breaks a rule, the message "Invalid notification base url" appears and nothing is saved.
+
+#### [Network Requirements](/docs/mdmft/configuration/notifications#network-requirements)
+
+Be Aware
+
+If a reverse proxy, load balancer, or web application firewall sits in front of MetaDefender Managed File Transfer, it must pass on the address the user reached. Configure it to do one of the following:
+
+- Keep the original `Host` header (recommended).
+- Send the original hostname in the `X-Forwarded-Host` header.
+
+If both headers are present, `X-Forwarded-Host` is used. If it contains several values, the first one is used.
+
+**High Availability:** only keeping the original `Host` header is supported. The HA Controller replaces any `X-Forwarded-Host` header it receives.
+
+If neither is configured, all emails use the Notification URL. Nothing else changes.

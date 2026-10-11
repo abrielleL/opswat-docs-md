@@ -2,6 +2,8 @@
 
 # Changing MetaDefender ICAP Server Configuration
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The following guideline describes how to change the configuration of a MetaDefender ICAP Server instance remotely.
 
 1. Go to the **MetaDefender ICAP Server** management page under **Inventory** in the sidebar.

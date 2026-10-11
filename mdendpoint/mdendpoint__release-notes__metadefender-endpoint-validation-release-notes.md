@@ -2,24 +2,26 @@
 
 # MetaDefender Endpoint Validation Release Notes
 
-| Version | 2608 |
+| Version | 2609 |
 | ---- | ---- |
-| **Release date** | August 12, 2026 |
-| **Scope/Release Summary** | This release introduces enhanced usability and visibility for validated peripheral media, enabling seamless file transfers, convenient file management directly within Nautilus, and a comprehensive view of all connected devices. It also provides greater flexibility for testing and troubleshooting by allowing users to temporarily disable the service for a specified duration and automatically re-enable it afterward. |
+| **Release date** |  September 25, 2026 |
+| **Scope/Release Summary** | This release introduces the ability to add trusted peripheral devices to the allowlist for Linux-based devices and fixed notification popups overlap issue for Windows-based device |
 
-### MetaDefender Endpoint Validation - Linux (3.4.2608)
+### MetaDefender Endpoint Validation - Windows (3.1.2609)
 
-**Release date:** August 12, 2026
-
-New Features
-
-- Supports drag-and-drop, copy and paste (Ctrl+C/Ctrl+V), and cut and paste operations to transfer files from validated peripheral devices to local drives.
-- Allows users to temporarily disable the service for a specified duration and re-enable it afterward, simplifying testing and troubleshooting.
+**Release date:** September 25, 2026
 
 Enhancements
 
-- Displays the full list of all connected peripheral media devices for enhanced visibility.
-- Supports right-click actions on the context menu in Nautilus, allowing users to unblock peripheral media and copy files directly within the file manager for a more seamless experience.
+- Fixed notification popups overlap issue
+
+### MetaDefender Endpoint Validation - Linux (3.4.2609)
+
+**Release date:** September 25, 2026
+
+New Features
+
+- Support allowlist for trusted peripheral devices. Users can now add specific peripheral devices by vendor, product ID, or instance path to allowlist and exempt them from the validation process.
 
 > **Supported OS Version**
 >
@@ -30,3 +32,7 @@ Enhancements
 > Ubuntu 24.04
 >
 > Ubuntu 26.04
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/mdendpoint/llms.txt)

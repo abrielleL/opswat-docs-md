@@ -25,7 +25,7 @@ New Patch notifications alert administrators in real time to key events, includi
 
 Refer to [Patch Notification](https://www.opswat.com/docs/cm/patch-management/patch-notification) guidelines for more detailed instruction.
 
-![](https://uploads.developerhub.io/prod/97qW/k9rv2kkjgt6bi7nqeuyjclugo708pnqpxo47fynkbmlokt8tanzv6u4k37o98kyw.png)
+![](https://uploads.developerhub.io/prod/97qW/t6vwj5t1gps2oylr4gucpsdxgxhgystvsjuhevw1nkpb9xcipv88otc1d91jbnbw.png)
 
 New Features **New** **Patch SLA Compliance Tracking**
 
@@ -94,3 +94,7 @@ New real-time alerts trigger when a software upgrade job fails, stalls, or run p
 Enhancements** Automatic Recovery of Stalled Upgrade Jobs**
 
 Upgrade jobs stuck in a perpetual "Updating" state are now automatically resolved every four hours, or on demand with a manual cleanup trigger.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

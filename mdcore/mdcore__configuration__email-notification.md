@@ -2,6 +2,8 @@
 
 # Email Notification
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Administrator can configure Email Notification settings to receive notifications for detected threats and incidents, providing real-time updates on potential security risks.
 
 - **Soon-to-Expire Licensing:** Helps avoid service interruptions by facilitating timely license renewals.
@@ -39,3 +41,7 @@ This feature consolidates notification emails to reduce noise while ensuring imp
 - **Send Frequency** Specifies the time interval (in minutes) at which notification emails are sent, if any qualifying events occur. For example, if the send frequency is set to **1 minute** and only one **“Not Scanned”** request occurs within that minute, MetaDefender Core will still send a notification email, even if the batch size has not been reached.
 
 Together, these thresholds ensure that notifications are sent in batches to minimize email spamming, while also guaranteeing timely delivery so that no important notifications are missed.
+
+## [Custom email body template](/docs/mdcore/configuration/email-notification#custom-email-body-template)
+
+The users can also custom their own email body template, please check details: [Email Template](/docs/mdcore/configuration/email-template)

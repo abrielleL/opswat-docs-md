@@ -2,7 +2,7 @@
 
 # File Settings
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 ## [Upload Options](/docs/mdmft/configuration/file-settings#upload-options)
 
@@ -30,6 +30,23 @@ For more detailed information, [click here](/docs/mdmft/configuration/pull-mft).
 ### [Allow Users to Upload Files Without Specifying Group Membership](/docs/mdmft/configuration/file-settings#allow-users-to-upload-files-without-specifying-group-membership)
 
 For further details on Group selection behavior during upload, [click here](/docs/mdmft/operating/upload-files).
+
+### [**Hide Group Selection for Active Directory Users**](/docs/mdmft/configuration/file-settings#hide-group-selection-for-active-directory-users)
+
+Removes the upload group selection for Active Directory users, so their uploads follow the same group rules as a local user’s.
+
+Active Directory users frequently belong to a large number of groups, most of which carry no meaning during a file upload. Enabling this option hides the selection and lets MetaDefender Managed File Transfer™ resolve the group itself.
+
+The option affects Active Directory users only. Local users, SSO users, guest users and external users are unaffected. The group list itself does not change — MetaDefender Managed File Transfer™ still resolves the full group membership and still applies group settings to the upload. Only the selection is hidden.
+
+Which group is applied depends on the **Allow Users to Upload Files Without Specifying Group Membership** setting above:
+
+| **Allow Users to Upload Files Without Specifying Group Membership** | **Result** |
+| --- | --- |
+| Disabled | The user’s first group is applied automatically. Groups are ordered by display name, so the same group is applied on every upload. |
+| Enabled | No group is applied, exactly as if the user had left the selection empty. |
+
+This setting controls whether the selection is shown, not whether a group is applied. The group rules themselves remain those described under Allow Users to Upload Files Without Specifying Group Membership.
 
 ### [Enable File Classification](/docs/mdmft/configuration/file-settings#enable-file-classification)
 

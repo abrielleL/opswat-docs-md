@@ -23,7 +23,9 @@ The deployment ID is derived from many factors on the server, but the server's *
 
 On the virtualization host, run:
 
-`Get-VMNetworkAdapter -VMName <VM name> | Select MacAddress, DynamicMacAddressEnabled`
+```powershell
+Get-VMNetworkAdapter -VMName <VM name> | Select MacAddress, DynamicMacAddressEnabled
+```
 
 If `DynamicMacAddressEnabled` returns `True`, the MAC address is not static and is the likely cause. Record the current `MacAddress` value — you will need it in step 3.
 
@@ -59,4 +61,8 @@ On version 10.6.2605 and later, the support package records that the deployment 
 - Assign the server a static IP address, a DHCP reservation, or preferably a DNS name, and configure endpoints to use the DNS name. This prevents a separate class of endpoint connectivity loss after reboots.
 - Upgrade to 10.6.2605 or later so that deployment ID changes are recorded, making any recurrence diagnosable from the support package rather than inferred from symptoms.
 
-> > > **ℹ️ Support:** If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).
+> > > **Support:** If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

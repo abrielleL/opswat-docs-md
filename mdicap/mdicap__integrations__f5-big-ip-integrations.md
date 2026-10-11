@@ -2,6 +2,8 @@
 
 # F5 BIG IP Integrations
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 MetaDefender ICAP Server can be integrated to different F5 solutions in different ways. Please follow the guide which is the best match for your use-case:
 
 - MetaDefender ICAP Server and BIG-IP LTM using iApp template: [ICAP Server iApp template](/docs/mdicap/integrations/icap-server-iapp-template)

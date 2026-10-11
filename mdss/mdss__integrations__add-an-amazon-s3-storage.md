@@ -4,9 +4,11 @@
 
 Enabling this option may hinder product performance due to the increased number of actions required when communicating with the S3 server. In order to integrate Amazon S3 with MetaDefender Storage Security please follow these steps:
 
-1. Navigate to **Inventory** tab -> **Add**  -> **Account -> Amazon S3**
+1. From the left side menu, navigate to **Inventory**, click **Add New** > **Account**, choose **Amazon S3** and click **Next**
 
-2. Give your [account](/docs/mdss/operations/accounts-and-groups) a name so you can easily identify it later
+![](https://uploads.developerhub.io/prod/k8zL/v8xtljlavxtugb9174wxjizafrymm2c6j254irbbj5a5u3bmsmjk9hdikf0gjts6.png)
+
+2. Give your [account](https://www.opswat.com/docs/mdss/operations/accounts-and-groups) a name so you can easily identify it later
 3. Optionally, add a custom **Service URL** for your S3 Service, if you have one configured.
 4. There are two ways to connect:
 
@@ -22,6 +24,8 @@ Enabling this option may hinder product performance due to the increased number 
 11. *Choose the destination Group*
 12. *Once the account is added successfully, proceed with adding the storage unit by navigating to* **Inventory** tab -> **Add New** -> **Unit -> Choose account previously created**
 
+![](https://uploads.developerhub.io/prod/k8zL/vjbi3yeghk1brx7rkxmmmuuxwenknzri9mohk9abq514lejkv7re0m9e0tlrflyr.png)
+
 13. Give your storage a unique name so you can easily identify it later.
 14. Assign a Group to your storage unit
 15. Enter a valid S3 Bucket name
@@ -29,7 +33,7 @@ Enabling this option may hinder product performance due to the increased number 
 17. Add folder location (optional).
 18. Complete the changes and add your storage unit.
 
-### [Where can I find the Access Key ID and Secret Access Key?](/docs/mdss/integrations/add-an-amazon-s3-storage#where-can-i-find-the-access-key-id-and-secret-access-key)
+### Where can I find the Access Key ID and Secret Access Key?
 
 To generate an Access Key ID / Secret Access Key pair please follow these steps:
 
@@ -37,37 +41,47 @@ To generate an Access Key ID / Secret Access Key pair please follow these steps:
 2. In the **Details** pane, click the appropriate IAM user or create one if none exists
 3. From the **Security Credentials,** tab click **Create Access Key**
 
-Info
+> **Info**
+>
+> If you already have a maximum of two access keys—active or inactive—you must delete one first before proceeding. If you need more than two root access keys, IAM users (each of whom can be assigned their own access keys) would probably better suit your requirements.
 
-If you already have a maximum of two access keys—active or inactive—you must delete one first before proceeding. If you need more than two root access keys, IAM users (each of whom can be assigned their own access keys) would probably better suit your requirements.
-
-### [Using IAM role for Amazon S3 integration](/docs/mdss/integrations/add-an-amazon-s3-storage#using-iam-role-for-amazon-s3-integration)
+### Using IAM role for Amazon S3 integration
 
 On S3 integration with IAM, the role configured on the EC2 machine will be used to authenticate.
 
 With the optional field of Assume Role ARN, MetaDefender Storage Security allows integration with other buckets that are in different accounts from the current AWS account. This is possible by configuring Assume Role ARN field, with the ARN of the role that has access to the other account's S3 bucket.
 
-Using IAM Role: Modifying the default hop limit
+> **Using IAM Role: Modifying the default hop limit**
+>
+> If you are deploying MetaDefender Storage Security on an EC2 instance you will need to run the following AWS CLI command in order to increase the default `hop-limit`
+>
+> `aws ec2 modify-instance-metadata-options --instance-id <INSTANCE_ID> --http-put-response-hop-limit 3 --http-endpoint enabled`
+>
+> This is **required** because our services run within Docker and IMDSv2 restricts the number of "hops" each request to the metadata service can make.
 
-If you are deploying MetaDefender Storage Security on an EC2 instance you will need to run the following AWS CLI command in order to increase the default `hop-limit`
-
-`aws ec2 modify-instance-metadata-options --instance-id <INSTANCE_ID> --http-put-response-hop-limit 3 --http-endpoint enabled`
-
-This is **required** because our services run within Docker and IMDSv2 restricts the number of "hops" each request to the metadata service can make.
-
-### [Using client-side encryption](/docs/mdss/integrations/add-an-amazon-s3-storage#using-client-side-encryption)
+### Using client-side encryption
 
 To use client-side encryption, you will need to do the following. From AWS Console, navigate to Key Management Service (KMS) and click on **Create a key.** The key should be a symmetric key and used to encrypt and decrypt.
 
+![](https://uploads.developerhub.io/prod/k8zL/swnxjjqi96q6nbari3pcako265ybkhd63t7ggctxy6847bzg55nbcjpngxex3966.png)
+
 Click **Next,** give a name (Alias) to the key and finish the creation process. Once complete, the key should look like this:
+
+![](https://uploads.developerhub.io/prod/k8zL/u6vkl8g9jpmb8i4n0sygvsyofjdpx2go9w94lfi51za483pead41ugb547igfoxy.png)
 
 From AWS Console, navigate to Secrets Manager and click on **Store a new secret**. Secret type should be Other type of secret and Encryption key should be the name of the key from step 2. The Secret value needs to be in plain text and should be the ID of the key created at step 1. Please note that we do not support **Key/value**.
 
+![](https://uploads.developerhub.io/prod/k8zL/99l7kkg3make21pm08dlhmzh3wulxq0pkm01py1uoikete6lzi3vgj27aiiwcwbp.png)
+
 Click **Next,** give a name to the secret and finish the process. Once complete, the Secret should look like this:
+
+![](https://uploads.developerhub.io/prod/k8zL/4zwdc4rymxamqguu36y3lciy2cnhen3k7p6e0z2q0dmq5e62o9ial7w6upvl0db5.png)
 
 Navigate to MetaDefender Storage Security UI and introduce the name of the secret created at step 4. If your Secret name is not valid or its value does not point to a valid key ID in Key Management Service, an error will be displayed on top of the UI. Also, optionally, you can add a custom **Service URL** for your Secrets Manager Service, if you have one configured.
 
-### [Necessary AWS policies](/docs/mdss/integrations/add-an-amazon-s3-storage#necessary-aws-policies)
+![](https://uploads.developerhub.io/prod/k8zL/a74x7s9ycxu1fe5eb2df1dozfjcctkmow77i0xql2k4dxj64hesqjwltcsab2l9n.png)
+
+### Necessary AWS policies
 
 These are the necessary AWS policies required in order to add an Amazon S3 Storage:
 
@@ -99,7 +113,7 @@ To be able to use **autodiscovery**, additional AWS policies are required:
 
 - s3:ListAllMyBuckets
 
-## [S3 Compatible integrations](/docs/mdss/integrations/add-an-amazon-s3-storage#s3-compatible-integrations)
+## S3 Compatible integrations
 
 In order to use an S3 compatible storage unit the following requirements should be met:
 
@@ -111,21 +125,21 @@ The following object storage providers have been validated but any provider that
 - MinIO Object Storage
 - Ceph Object Gateway
 
-## [Configure UserAgent](/docs/mdss/integrations/add-an-amazon-s3-storage#configure-useragent)
+## Configure UserAgent
 
 In order to have a good tracking in AWS of every requests that MDSS does, a environment variable can be set that will be used to configure user agent.
 
 | Parameter | Value |
-| --- | --- |
+| ---- | ---- |
 | MDSS_LOG_IDENTIFIER | string |
 
 By default this is not configured and the dotnet SDK value is used.
 
-## [Transfer file metadata and checksum on created or moved files](/docs/mdss/integrations/add-an-amazon-s3-storage#transfer-file-metadata-and-checksum-on-created-or-moved-files)
+## Transfer file metadata and checksum on created or moved files
 
-Warning
-
-MDSS does not support checksums CRC32C and CRC64NVME for any kind of operation.
+> **Warning**
+>
+> MDSS does not support checksums CRC32C and CRC64NVME for any kind of operation.
 
 This option enables the storage functionality to retrieve the metadata and checksum of files, and upon moving, copying or sanitizing them, the information is kept in the destination bucket for the files if it supports metadata or file checksum.
 
@@ -138,25 +152,29 @@ Files resulting from **DeepCDR** and **Encrypted Files** will have checksums rec
 If a file has an unsupported checksum algorithm, or it does not have a checksum at all, the default **CRC32** algorithm will be used to compute a checksum for data integrity **by default**. This is the case only if the transfer option is enabled.
 
 | Checksum algorithm | Transfer support in MDSS |
-| --- | --- |
+| ---- | ---- |
 | CRC-32 (used by default) | ✅ |
 | SHA-1 | ✅ |
 | SHA-256 | ✅ |
 | CRC-32C | ❌ |
 | CRC-64NVME | ❌ |
 
-Warning
+> **Warning**
+>
+> If this option is enabled scanning performance may be reduced as more queries are performed to AWS services, and also the checksum needs to be recalculated during scanning in certain scenarios which also involves a performance penalty.
 
-If this option is enabled scanning performance may be reduced as more queries are performed to AWS services, and also the checksum needs to be recalculated during scanning in certain scenarios which also involves a performance penalty.
+> **Warning**
+>
+> To move checksum and metadata to storages created in versions prior to v3.5.3, these need to be  retested for this functionality. This can be done with a simple **Edit** action on the storage, with no changed fields.
 
-Warning
-
-To move checksum and metadata to storages created in versions prior to v3.5.3, these need to be retested for this functionality. This can be done with a simple **Edit** action on the storage, with no changed fields.
-
-## [Server-Side Encryption Override](/docs/mdss/integrations/add-an-amazon-s3-storage#server-side-encryption-override)
+## Server-Side Encryption Override
 
 **How to enable**: Set the environment variable **AMAZONSDK_USE _AWS _MANAGED _SSE** to **true**. When set, all S3 uploads send the *x-amz-server-side-encryption: aws:kms* header, so S3 uses the AWS-managed KMS key (aws/s3) instead of the bucket’s default KMS key.
 
 **When to use**: Enable this when S3 buckets are configured with SSE-KMS encryption using a KMS key that is not accessible to the service (e.g., cross-account keys, deleted keys, or keys without the required kms:GenerateDataKey permission). This is commonly needed in multi-account setups where the destination bucket's KMS key belongs to a different AWS account.
 
 **Note**: Objects are encrypted with the AWS-managed key, not the bucket’s customer-managed key. This can affect key rotation and compliance that rely on a specific KMS key.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/mdss/llms.txt)

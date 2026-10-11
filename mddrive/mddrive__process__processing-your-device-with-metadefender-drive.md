@@ -1,7 +1,8 @@
 <!-- source: https://www.opswat.com/docs/mddrive/process/processing-your-device-with-metadefender-drive -->
 
-# Scan Devices with Bare Meta (Boot) Scans
+# Perform Pre-Boot Scans
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Scan Types and Configurations](/docs/mddrive/process/processing-your-device-with-metadefender-drive#scan-types-and-configurations)
 
 MetaDefender Drive offers three scan types: **Smart Scan**, **Full Scan**, and **Custom Scan**. They add flexible configuration options and the ability to select a scanning engine to optimize performance and results for each dataset. The fourth option, **Forensic Collection**, gathers digital evidence instead of scanning for threats.

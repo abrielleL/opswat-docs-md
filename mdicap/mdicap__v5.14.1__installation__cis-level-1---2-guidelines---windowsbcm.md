@@ -2,6 +2,7 @@
 
 # CIS Level 1 & 2 Guidelines - Windows
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [CIS Level 1](/docs/mdicap/v5.14.1/installation/cis-level-1---2-guidelines---windowsbcm#cis-level-1)
 
 Windows version has been tested: Windows Server 2022 and 2025

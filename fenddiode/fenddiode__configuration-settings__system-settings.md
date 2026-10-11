@@ -2,6 +2,7 @@
 
 # System Settings
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [About](/docs/fenddiode/configuration-settings/system-settings#about)
 
 - Model Number – Displays the diode model number.

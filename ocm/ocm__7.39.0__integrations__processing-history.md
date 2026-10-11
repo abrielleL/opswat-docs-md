@@ -2,6 +2,8 @@
 
 # Processing History
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The **Processing History** page, located under the **Events And History** submenu, contains the scanning history of all MetaDefender Core instances under the management of OPSWAT Central Management.
 
 Scan results can be color-coded and bold for readability. Select **Settings** and choose the text settings that should be associated with each type of results. Use the delete icon to remove the corresponding settings.

@@ -1,11 +1,13 @@
 <!-- source: https://www.opswat.com/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session -->
 
-# Perform an In-Session Scan
+# Getting Started with MetaDefender Drive In-Session
 
-## [Run MetaDefender Drive In-Session](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#run-metadefender-drive-in-session)
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## [Perform an In-Session Scan](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#perform-an-in-session-scan)
 
-1. While your device OS is running, insert your OPSWAT MetaDefender Drive into the device's USB Type-A port.
-2. Navigate to the ***root*** folder inside the MetaDefender Drive partition and locate the ***MetaDefender Drive In-Sesion Scan.exe*** file
+While your device OS is running, insert your OPSWAT MetaDefender Drive into the device's USB Type-A port.
+
+1. Navigate to the ***root*** folder inside the MetaDefender Drive partition and locate the ***MetaDefender Drive In-Sesion Scan.exe*** file
 
 3. When click it, In-Session will initialize with a splashing screen
 
@@ -34,14 +36,6 @@ Engines for In-Session scan will not be updated when In-Session is running. Engi
 - Engines update in MetaDefender Drive when booting it up, following the instructions [here](https://www.opswat.com/docs/mddrive/getting-started/boot-from-metadefender-drive#engines)
 
 9. Wait until all of the embedded engines display the **Ready** status. Click the **(i)** icon to see the embedded engines provided with the version. Those engines are only available after Drive has been updated either by Drive Toolkit or by Update from Drive's UI.
-
-Settings for In-Session
-
-The Malware Scan that follows up after **Compliance Check** is pre-defined in **Settings,** along with options for **Deep Compliance** and Malware Scan included for **Posture Check**.
-
-Centralized Settings for In-Session from Central Management
-
-If Drive has been enrolled to OPSWAT Central Management, the settings for In-Session can be remotely changed from there
 
 ## [Memory Scan](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#memory-scan)
 
@@ -73,3 +67,32 @@ To select specific partitions, folders, or files to scan:
 ## [**Device Final Verdict**](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#device-final-verdict)
 
 The device will be marked Unsafe when Deep Compliance or Malware check report any issue.
+
+## [Settings for MetaDefender Drive In-Session](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#settings-for-metadefender-drive-in-session)
+
+The Settings provides configuration for In-Session. The settings will be applied on the next run after saving.
+
+### [Posture Check Operations Options](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#posture-check-operations-options)
+
+- Enable/Disable **Deep Compliance**
+- The **Malware Scan** that follows up after **Compliance Check**
+
+### [Options for Deep Compliance](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#options-for-deep-compliance)
+
+- **AntiMalware** local existence and compliance
+- **Disk encryption** is enabled or not
+- **Operating System** is up-to-date or outdated
+
+### [Options to display Malware Scan type](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#options-to-display-malware-scan-type)
+
+- Show/Hide Memory Scan
+- Show/Hide Full Scan
+- Show/Hide Custom Scan
+
+## [Manage In-Session settings with Central Management](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#manage-in-session-settings-with-central-management)
+
+If MetaDefender Drive has been enrolled to OPSWAT Central Management, In-Session can be remotely configured from there
+
+## [View collected information of the scanned devices from Central Management](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#view-collected-information-of-the-scanned-devices-from-central-management)
+
+After reports are synced, from **Central Management**, navigate to **Solution → Portable Malware Scanning → Dashboard → Scanned Host.** Click a scanned host, the collected information will be shown under **System Information.**

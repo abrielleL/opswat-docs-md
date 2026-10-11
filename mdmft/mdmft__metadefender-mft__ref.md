@@ -32,7 +32,6 @@ This URL can also be changed directly from the configuration file by following t
    ssl_password_file "<password_file_path>";
    ```
 5. Restart MetaDefender Vault Helper Service (vaultHelper) for changes to apply.
-
 Serverhttp://localhost:8010Server Variables## Authenticationhttp basicAuthhttp bearerAuth
 ## Authentication Management
 

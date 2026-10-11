@@ -2,6 +2,7 @@
 
 # Dell EMC Isilon OneFS
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [On-Demand Scanning](/docs/mdicap/integrations/dell-emc-isilon-onefs#on-demand-scanning)
 
 EMC Isilon OneFS has the ability to scan files before they are opened, or after they are closed.

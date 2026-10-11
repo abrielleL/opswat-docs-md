@@ -2,6 +2,8 @@
 
 # FILEMOD
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 Besides the standard REQMOD and RESPMOD, ICAP Server supports the FILEMOD (file modification) ICAP methods.
 
 FILEMOD lets the client to pass a file name and path to the ICAP Server so that it can scan the file in place (rather than streaming the file to the ICAP Server through TCP for scanning).

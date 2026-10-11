@@ -2,6 +2,8 @@
 
 # Resource requirements
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 By default, the charts set no resource requests or limits. For any environment carrying real traffic, set requests and limits explicitly.
 
 ## [**The published baseline**](/docs/mdcluster/container-deployment/resource-requirements#the-published-baseline)
@@ -17,7 +19,8 @@ Per-component minimums are maintained in [System requirements](/docs/mdcluster/i
 | `control-center` | 4 | 4Gi | 100Gi |
 | `identity-service` | 4 | 4Gi | 50Gi |
 | `api-gateway` | 4 | 8Gi | 50Gi |
-| `callback-service` | 4 | 8Gi | 50Gi |
+| `callback-service` | 4 | 4Gi | 50Gi |
+| `download-service` | 4 | 4Gi | 50Gi |
 | `ometascan` | See the [MetaDefender Core requirements](https://www.opswat.com/docs/mdcore) |  |  |
 
 ## [**Assigning CPU and memory**](/docs/mdcluster/container-deployment/resource-requirements#assigning-cpu-and-memory)
@@ -33,12 +36,16 @@ limits: { cpu: "8", memory: 16Gi, ephemeral-storage: 200Gi }
 # The API Gateway and Callback Service have the same allowance.
 api-gateway:
 resources:
-requests: { cpu: "4", memory: 8Gi, ephemeral-storage: 50Gi }
-limits: { cpu: "4", memory: 8Gi, ephemeral-storage: 50Gi }
+requests: { cpu: "4", memory: 4Gi, ephemeral-storage: 50Gi }
+limits: { cpu: "4", memory: 4Gi, ephemeral-storage: 50Gi }
 callback-service:
 resources:
 requests: { cpu: "4", memory: 8Gi, ephemeral-storage: 50Gi }
 limits: { cpu: "4", memory: 8Gi, ephemeral-storage: 50Gi }
+download-service:
+resources:
+requests: { cpu: "4", memory: 4Gi, ephemeral-storage: 50Gi }
+limits: { cpu: "4", memory: 4Gi, ephemeral-storage: 50Gi }
 # --- Services ---
 control-center:
 resources:
