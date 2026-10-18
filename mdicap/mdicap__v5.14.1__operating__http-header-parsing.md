@@ -6,9 +6,9 @@ View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
 In this page, we document HTTP header that MetaDefender ICAP Server is using for logging and scanning.
 
-## [Flowchart](/docs/mdicap/v5.14.1/operating/http-header-parsing#flowchart)
+## Flowchart
 
-## [Details](/docs/mdicap/v5.14.1/operating/http-header-parsing#details)
+## Details
 
 The steps below detail how MetaDefender ICAP Server parses HTTP information from content-disposition.
 
@@ -33,7 +33,7 @@ The steps below detail how MetaDefender ICAP Server parses HTTP information from
    1. If **name** parameter is present then the filename will be the parameter's value (between quote mark) and the extension will be empty
 4. If none of the above succeeded or the extension contains special characters then the filename and extension parsing is failed in this step.
 
-### [Good examples](/docs/mdicap/v5.14.1/operating/http-header-parsing#good-examples)
+### Good examples
 
 The following table includes good Content-Disposition examples.
 
@@ -46,7 +46,7 @@ The following table includes good Content-Disposition examples.
 | filename = test.txt | test.txt | txt |
 | name="test" | test |  |
 
-### [Bad examples](/docs/mdicap/v5.14.1/operating/http-header-parsing#bad-examples)
+### Bad examples
 
 The following table includes bad Content-Disposition examples.
 
@@ -57,13 +57,13 @@ The following table includes bad Content-Disposition examples.
 | filename=test.t?x | Special character in extension |
 | name=test | No quote marks |
 
-### [Parse from URL](/docs/mdicap/v5.14.1/operating/http-header-parsing#parse-from-url)
+### Parse from URL
 
 Parsing is made using the URL via the GET HTTP method. This method receives the text after the last "/" in the URL path until the first "?" character or until the first "#" character if "?" is not present, or until the end of the URL is neither is present.
 
 The extension is considered to be the substring after the last "." character. If the extension is empty or contains special characters, it is considered a failure.
 
-#### [Good examples](/docs/mdicap/v5.14.1/operating/http-header-parsing#good-examples)
+#### Good examples
 
 The following table includes good URL examples.
 
@@ -75,7 +75,7 @@ The following table includes good URL examples.
 | /a/test.php#abc | test.php | php |
 | /a/b/test.php?abc&d=b&g#hjk | test.php | php |
 
-#### [Bad examples](/docs/mdicap/v5.14.1/operating/http-header-parsing#bad-examples)
+#### Bad examples
 
 The following table includes bad URL examples.
 
@@ -84,7 +84,7 @@ The following table includes bad URL examples.
 | /test | No extension |
 | /test/? | Empty part between the last "/" and "?" |
 
-## [Additional Details](/docs/mdicap/v5.14.1/operating/http-header-parsing#additional-details)
+## Additional Details
 
 The following parameters are handled case insensitively: filename, filename*. It means that FILENAME, FiLeNaMe* etc. will be also found.
 

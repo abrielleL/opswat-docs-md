@@ -67,8 +67,8 @@ Unsafe content in the model's output, scripts, markup, or commands that harms th
 
 | **Techniques** | **Description** |
 | --- | --- |
-| Unexpected Code Execution | Whether the model writes a knowledge-base document that reads as a standing instruction to a future assistant. |
-| Malware and Exploit Code Generation | Whether a fabricated training-data citation or forged transcript planted in context biases the next reply. |
+| Unexpected Code Execution | Whether the model produces code or commands that a downstream system would execute without validation. |
+| Malware and Exploit Code Generation | Whether the model can be pushed into writing working malware, exploits or attack tooling. |
 | Harmful Content Generation | Actionable illegal, violent, or abusive content, including step-by-step operational guidance for real-world harm. |
 | *And more than 10 other techniques* |  |
 

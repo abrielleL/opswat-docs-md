@@ -2,6 +2,14 @@
 
 # YARA engine release notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+#### [**V5.0.3**](/docs/mdcore/release-notes/yara-module-release-notes#v503)
+
+Release date: 7/23/2026
+
+- **Bugfix**: Fixed an issue with the Engine crashing when shutting down
+- **Upgraded to YARA-X v1.19.0**: The engine now uses the latest version of YARA-X, offering improved rule validation, stricter syntax enforcement, and enhanced performance.
+
 #### [v5.0.2](/docs/mdcore/release-notes/yara-module-release-notes#v502)
 
 Release date 9/17/2025

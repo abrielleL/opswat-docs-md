@@ -6,21 +6,21 @@ View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
 The Configuration page lets you configure global settings for MetaDefender Kiosk.
 
-## [Protect closing the Kiosk](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#protect-closing-the-kiosk)
+## Protect closing the Kiosk
 
 It is highly recommended to set exit credentials to protect the Kiosk scanning User Interface from being closed by users.
 
 Two options exist to protect exiting the Kiosk UI:
 
-### [Exit password](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#exit-password)
+### Exit password
 
 Select this options to require users to enter a password when exiting the Kiosk. After selecting this checkbox, two fields appear: **New password** and **Confirm password**.
 
-### [Kiosk Administrator's credentials](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#kiosk-administrators-credentials)
+### Kiosk Administrator's credentials
 
 Select this option to allow AD users, that are assigned as administrative users of the Management Console, to close the Kiosk UI. Upon attempting to close the UI, a prompt will be displayed to enter AD credentials.
 
-## [Configuring session log files](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#configuring-session-log-files)
+## Configuring session log files
 
 You can save session log files as a text or PDF file, and choose to save log files to a specific location on the system or to the processed media. By default, MetaDefender Kiosk saves session log files to the Log folder in the MetaDefender Kiosk installation directory.
 
@@ -40,11 +40,11 @@ To save session log files:
 
 > **Note:** The detailed ISO log follows the same format (text or PDF) and destination settings (default location, custom directory, source/destination media, or email) configured above for session logs. This option is off by default and can also be configured centrally through Central Management.
 
-## [Auto Export Logs](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#auto-export-logs)
+## Auto Export Logs
 
 The session and/or file history can be configured to be automatically exported to a specified directory path in CSV format. By default, the history will be exported to the Kiosk's log directory. The frequency dictates how often the automatic export will run.
 
-## [Setting advanced configuration options](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#setting-advanced-configuration-options)
+## Setting advanced configuration options
 
 You can set advanced configuration options by expanding the Advanced Configuration section of the Configuration page.
 
@@ -66,21 +66,21 @@ Note
 
 Set the timeout to `0` to disable it (the default), which restores the previous behavior of waiting indefinitely for a password.
 
-## [Email Settings](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#email-settings)
+## Email Settings
 
-The admin can configure SMTP server to support for email sending at session termination. It's advised to use SMTP mail server, not relay. The username and password are authenticated to login to mail server. Any sender configured to appear as a From field in the email header must be an email address that the username has permission to send as. See [Email Session Report](/docs/mdkiosk/v4.8.6/operating/email-session-report) or [Visitor Management](/docs/mdkiosk/v4.8.6/metadefender-kiosk-windows/v4.5.7/advanced-deployment/visitor-management) for email header settings
+The admin can configure SMTP server to support for email sending at session termination. It's advised to use SMTP mail server, not relay. The username and password are authenticated to login to mail server. Any sender configured to appear as a From field in the email header must be an email address that the username has permission to send as. See [Email Session Report](/operating/email-session-report) or [Visitor Management](/metadefender-kiosk-windows/v4.5.7/advanced-deployment/visitor-management) for email header settings
 
 To configure oAuth email authentication with Microsoft 365 (Graph API), please refer to [this guide](https://www.opswat.com/docs/mdkiosk/advanced-deployment/configuring-global-kiosk-settings#email-settings).
 
 The admin can verify if the email configuration is correct by providing existing email addresses as [From Address] and [To Address] and proceeding SEND. [From Address] must be an email that the username has permission to send as.
 
-## [Email Template](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#email-template)
+## Email Template
 
 The email template allows Kiosk admin to prepare common email content in HTML format. It will apply for email part in the workflow creation. This template aims to email signature with a company logo. The logo attached in the template should be a low resolution not exceeding 100KB and only one.
 
 The email template does not apply for testing email.
 
-## [Disk Image Files](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#disk-image-files)
+## Disk Image Files
 
 The administrator can configure Kiosk to scan 4 types of disk images:
 
@@ -111,7 +111,7 @@ Kiosk 4.7.11 adds support for scanning LVM (Logical Volume Manager) disk images,
 
 The disk image must use the .lvm file extension for Kiosk to recognize and mount it.
 
-## [Multiple Partitions](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#multiple-partitions)
+## Multiple Partitions
 
 | Option | Single Windows Partition | Only Windows Partitions | Mixed Windows and Non Windows Partitions | Only Mac / Linux Partitions |
 | --- | --- | --- | --- | --- |
@@ -120,18 +120,18 @@ The disk image must use the .lvm file extension for Kiosk to recognize and mount
 
 The SCAN ALL action will mount every partition it can successfully mount. All partitions will be scanned by "Process All." The file browser will have the ability to select files on any partition.
 
-## [Managing the display language](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#managing-the-display-language)
+## Managing the display language
 
 You can also change the default language displayed in MetaDefender Kiosk from the Choose Language drop-down menu. Options include English, Arabic, Hebrew, Korean, Vietnamese, German, Japanese, Spanish and French . If you wish to add a language to the MetaDefender Kiosk UI or edit the translations of any of the existing languages, click **View and edit languages** .
 
-## [Pop Up Detection](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#pop-up-detection)
+## Pop Up Detection
 
 Enabling pop up detection will allow Kiosk to detect any windows/pop ups open on the underlying desktop and notify the user. Any pop up that triggers the detection will be logged to the Application Log on the WebMC, along with the process that owns it. *Time Open Threshold* indicates how long a pop should be open until Kiosk notifies that a pop up needs attention. *Process Allowlist* specifies any process whose pop ups will be ignored from triggering the detection. *Notification Action* indicates what action Kiosk will take to notify the user:
 
 - *Display warning* - a warning will be displayed indicating that there is a pop up that requires attention
 - *Display warning and disable Kiosk* - warning displayed with the addition of canceling any running session and disallowing any new session to be started until the Administrator attends to the pop up. This requires closing the UI, handling the pop up and starting Kiosk again.
 
-## [Screensaver](/docs/mdkiosk/v4.8.6/advanced-deployment/configuring-global-kiosk-settings#screensaver)
+## Screensaver
 
 Kiosk screensaver helps protect the LCD lifetime or to play company introduction video or ads. Kiosk disables Windows system screensaver and support an alternative in the settings. By default, a built-in screensaver is selected. The admin can select desired video or image from an URL or local sources.
 
@@ -151,8 +151,6 @@ Info
   - **Image**: JPG, PNG, ICO, GIF, SVG, WEBP
 - This list is fully supported when uploading with Google Chrome browser, other browsers can make some of the media types cannot be previewed.
 - If the video or URL is invalid, the default will be played instead.
-- In OCM mode, [**Browse file**] is disabled.
-- Starting from version 4.6.1, the customized screensaver can be retained during the upgrading process.
 Self Scan and Screen saver
 
 If Self Scan is triggered while the screen saver is active, the screen saver remains running.

@@ -2,7 +2,19 @@
 
 # Deep CDR release notes
 
-## [v8.1.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v810)
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## v8.1.1
+
+Release date: 10/14/2026
+
+- Supported HL7 file sanitization:
+
+  - Removed embedded objects from HL7 files.
+  - Applied image processing to images embedded in OBX segments.
+  - Sanitized embedded files recursively.
+- Improved sanitization performance for image-heavy Office 2007 files by processing embedded images in parallel.
+
+## v8.1.0
 
 Release date: 9/23/2026
 
@@ -30,7 +42,7 @@ Release date: 9/23/2026
 - Fixed PDF to TIFF conversion keeping only the first page.
 - Fixed MOV files becoming unplayable after sanitization.
 
-## [v8.0.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v803)
+## v8.0.3
 
 Release date: 8/26/2026
 
@@ -38,7 +50,7 @@ Release date: 8/26/2026
 - Fixed a stability issue when processing PPTX files.
 - Fixed an issue with JTD sanitization.
 
-## [v8.0.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v802)
+## v8.0.2
 
 Release date: 8/13/2026
 
@@ -50,7 +62,7 @@ Release date: 8/13/2026
 - Fixed corrupted output for Word 2007 files when Remove Structured Document Tags is enabled.
 - Fixed invalid file structure reported for DWF (containing Group 4 fax images), XLS (non-standard compound file header), WAV (invalid fmt chunk size)
 
-## [v8.0.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v801)
+## v8.0.1
 
 Release date: 7/22/2026
 
@@ -67,7 +79,7 @@ Release date: 7/22/2026
   - Fixed an issue where the last pages of some PDF files became blank due to image resource key normalization.
 - Fixed broken output when sanitizing DRC files extracted from B3DM.
 
-## [v8.0.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v800)
+## v8.0.0
 
 Release date: 7/2/2026
 
@@ -92,7 +104,7 @@ Release date: 7/2/2026
 - Improved sanitization performance for Microsoft Office 2007 files, delivering up to a 50% speed increase and reducing memory usage by up to 2× for large files.
 - Upgrade Windows Compiler from VS2019 to VS2022.
 
-## [v7.8.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v782)
+## v7.8.2
 
 Release date: 5/20/2026
 
@@ -108,7 +120,7 @@ Release date: 5/20/2026
   - Streamlined Word, PowerPoint, and Excel 2007 sanitization with single-pass processing.
 - Fixed newline preservation in HTML attribute values.
 
-## [v7.8.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v781)
+## v7.8.1
 
 Release date: 4/15/2026
 
@@ -130,7 +142,7 @@ Release date: 4/15/2026
 - Fixed an issue where JWW files became unreadable after sanitization.
 - Allow skip loading images in conversion of HTML to images.
 
-## [v7.8.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v780)
+## v7.8.0
 
 Release date: 3/25/2026
 
@@ -163,7 +175,7 @@ Release date: 3/25/2026
 - Support Debian 13.
 - Upgrade OpenSSL to 3.6.1.
 
-## [v7.7.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v772)
+## v7.7.2
 
 Release date: 2/5/2026
 
@@ -187,7 +199,7 @@ Release date: 2/5/2026
   - Handled script tags with namespaces in SVG.
   - Improved handling of hyperlinks in RTF files.
 
-## [v7.7.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v771)
+## v7.7.1
 
 Release date: 1/14/2026
 
@@ -210,7 +222,7 @@ Release date: 1/14/2026
 - Removed beta labels for several file types.
 - Added CIS Level 2 support for Windows Server 2022.
 
-## [v7.7](/docs/mdcore/release-notes/deep-cdr-release-notes#v77)
+## v7.7
 
 Release date: 12/16/2025
 
@@ -228,13 +240,13 @@ Release date: 12/16/2025
 - Improved VSIX sanitization with enhanced structural validation and removal of untracked files.
 - Improved removal of embedded OLE objects in MPP files.
 
-## [v7.6.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v763)
+## v7.6.3
 
 Release date: 11/19/2025
 
 - Fixed backward compatibility issue with the old MetaDefender Core (5.6.1 or older).
 
-## [v.7.6.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v762)
+## v.7.6.2
 
 Release date: 11/12/2025
 
@@ -259,7 +271,7 @@ Release date: 11/12/2025
 - Improve invisible text detection in TXT files.
 - Return detailed conversion and sanitization information, including source and target file types.
 
-## [v7.6.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v761)
+## v7.6.1
 
 Release date: 10/14/2025
 
@@ -272,7 +284,7 @@ Release date: 10/14/2025
   - Return more detailed information when SVG sanitization occurs.
   - Reclassified the removal of Windows event attributes under JavaScript.
 
-## [v7.6.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v760)
+## v7.6.0
 
 Release date: 9/24/2025
 
@@ -300,7 +312,7 @@ Release date: 9/24/2025
 - Handle escaped characters in script nodes properly.
 - Distinguish between email addresses and hyperlinks in several file formats.
 
-## [v7.5.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v752)
+## v7.5.2
 
 Release date: 8/19/2025
 
@@ -320,7 +332,7 @@ Release date: 8/19/2025
 - Fixed an issue where Deep CDR’s skip allowlisted feature was not working in some cases.
 - Added support for Windows Server 2025 and Ubuntu 24.04.
 
-## [v.7.5.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v751)
+## v.7.5.1
 
 Release date: 7/24/2025
 
@@ -333,7 +345,7 @@ Release date: 7/24/2025
 - Improve sanitization for HTML with UTF-16 content.
 - Upgrade OpenSSL to 3.3.3.
 
-## [v7.5.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v750)
+## v7.5.0
 
 Release date: 6/25/2025
 
@@ -354,7 +366,7 @@ Release date: 6/25/2025
 - Upgrade .NET to version 8.
 - [Drop support CentOS 7/RH 7/Debian 10/Ubuntu 20](https://www.opswat.com/docs/mdcore/knowledge-base/end-of-life-support-for-centos-7-and-RedHat-7-in-metadefender-co).
 
-## [v7.4.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v742)
+## v7.4.2
 
 Release date: 5/28/2025
 
@@ -370,7 +382,7 @@ Release date: 5/28/2025
 - Enhance WAV sanitization.
 - Support Amazon Linux 2023.
 
-## [v7.4.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v741)
+## v7.4.1
 
 Release date: 4/24/2025
 
@@ -384,7 +396,7 @@ Release date: 4/24/2025
 - Enhance timeout handling in case of recursive sanitization.
 - Improve ICS sanitization in case of invalid html content.
 
-## [v7.4](/docs/mdcore/release-notes/deep-cdr-release-notes#v74)
+## v7.4
 
 Release date: 3/27/2025
 
@@ -408,7 +420,7 @@ Release date: 3/27/2025
 - Improve VSTO removal in DOCX.
 - Update sanitization description to be clearer.
 
-## [v7.3.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v732)
+## v7.3.2
 
 Release date: 2/19/2025
 
@@ -423,7 +435,7 @@ Release date: 2/19/2025
 - Update error messages for image sanitization when exceeding the size limit.
 - Remove the Beta label for several file types.
 
-## [v7.3.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v731)
+## v7.3.1
 
 Release date: 1/15/2025
 
@@ -431,7 +443,7 @@ Release date: 1/15/2025
 - Better handling HTML encode.
 - Improve ODP sanitization to avoid missing images.
 
-## [v7.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v73)
+## v7.3
 
 Release date: 12/18/2024
 
@@ -451,7 +463,7 @@ Release date: 12/18/2024
   - Faster process XLSX contains large sheets.
 - Support Rocky Linux 9.4, Debian 12.
 
-## [v7.2.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v723)
+## v7.2.3
 
 Release date: 11/13/2024
 
@@ -469,13 +481,13 @@ Release date: 11/13/2024
 - Optimize PDF hyperlink processing to use less system resource.
 - Digitally sign all binary files.
 
-## [v7.2.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v722)
+## v7.2.2
 
 Release date: 10/23/2024
 
 - Fix Japanese encoding in the HTML sanitization.
 
-## [v7.2.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v721)
+## v7.2.1
 
 Release date: 10/8/2024
 
@@ -492,7 +504,7 @@ Release date: 10/8/2024
 - Enhance VBA project processing in MS Office sanitization.
 - Enhance OLE object removal in RTF sanitization
 
-## [v7.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v72)
+## v7.2
 
 Release date: 9/18/2024
 
@@ -512,7 +524,7 @@ Release date: 9/18/2024
 - Distinguish regular hyperlink and HYPERLINK functions in MS Excel.
 - Enhance TIFF, JPG, and DWF sanitization.
 
-## [v7.1.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v711)
+## v7.1.1
 
 Release date: 7/24/2024
 
@@ -523,7 +535,7 @@ Release date: 7/24/2024
 - Validate digital signature in signed PDF files.
 - Remove Beta labels for several file types.
 
-## [v7.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v71)
+## v7.1
 
 Release date: 6/25/2024
 
@@ -544,14 +556,14 @@ Release date: 6/25/2024
 - Enhance image sanitization in PDF.
 - Improve HTML encoding in EML sanitization.
 
-## [v.7.0.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v701)
+## v.7.0.1
 
 Release date: 4/22/2024
 
 - Resolve service startup failures.
 - Improve HTA hyperlink handling.
 
-## [v7.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v70)
+## v7.0
 
 Release date: 4/3/2024
 
@@ -562,20 +574,20 @@ Release date: 4/3/2024
 - Return metadata object details for several file types.
 - Upgrade the engine to use .NET 6.
 
-## [v6.8.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v682)
+## v6.8.2
 
 Release date: 2/5/2024
 
 - Enhance signed PDFs with compressed catalog processing.
 
-## [v6.8.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v681)
+## v6.8.1
 
 Release date: 1/16/2024
 
 - Enhance macro processing for Microsoft Excel.
 - Enhance hyperlink processing for PDFs.
 
-## [v6.8.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v680)
+## v6.8.0
 
 Release date: 12/19/2023
 
@@ -595,7 +607,7 @@ Release date: 12/19/2023
 - Improve JWW sanitization.
 - Fix the temp file removal issue during high load.
 
-## [v6.7.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v672)
+## v6.7.2
 
 Release date: 11/9/2023
 
@@ -603,13 +615,13 @@ Release date: 11/9/2023
 - Improve non-English encoding when converting MS Office.
 - Fix a race condition issue during a high-load situation.
 
-## [v6.7.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v671)
+## v6.7.1
 
 Release date: 10/5/2023
 
 - Fix crash issue when processing a specific webp file
 
-## [v6.7](/docs/mdcore/release-notes/deep-cdr-release-notes#v67)
+## v6.7
 
 Release date: 9/27/2023
 
@@ -622,14 +634,14 @@ Release date: 9/27/2023
 - Remove BETA label for EGG, WMA, OGG, OPUS, HEIC, JWC, JHD, APNG, TSV, OFT, BWF, W64, RF65, AIFF
 - Fixed sanitization failure for a zip file with specific LNK files in it
 
-## [v6.6.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v662)
+## v6.6.2
 
 Release date: 8/9/2023
 
 - Support DocuWork Container (XCT) sanitization
 - Fix engine crash when processing TIFF file
 
-## [v6.6.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v661)
+## v6.6.1
 
 Release date: 7/19/2023
 
@@ -637,7 +649,7 @@ Release date: 7/19/2023
 - Improve PDF validation rule
 - Support new encoding in XML sanitization
 
-## [v6.6](/docs/mdcore/release-notes/deep-cdr-release-notes#v66)
+## v6.6
 
 Release date: 6/20/2023
 
@@ -647,7 +659,7 @@ Release date: 6/20/2023
 - Improve sanitization for JSON, WAV, MP3, MP4, Images
 - Improve logging
 
-## [v6.5.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v652)
+## v6.5.2
 
 Release date: 4/13/2023
 
@@ -655,14 +667,14 @@ Release date: 4/13/2023
 - Improve AutoCAD sanitization
 - Improve logging
 
-## [v6.5.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v651)
+## v6.5.1
 
 Release date: 4/2/2023
 
 - Enhance URI checking in Calendar file sanitization
 - Handle big PDF Outline tree
 
-## [v6.5](/docs/mdcore/release-notes/deep-cdr-release-notes#v65)
+## v6.5
 
 Release date: 3/15/2023
 
@@ -675,14 +687,14 @@ Release date: 3/15/2023
 - Enhance hyperlink processing in ICS
 - Split the processors to services to improve the stability
 
-## [v6.4.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v641)
+## v6.4.1
 
 Release date: 2/13/2023
 
 - Support new file types: Tableau Packaged Workbook (TWBX), Tableau Datasource (TDS), ShadowProtect Full Backup File (SPF)
 - Enhance JPEG sanitization to prevent file size from increasing
 
-## [v6.4](/docs/mdcore/release-notes/deep-cdr-release-notes#v64)
+## v6.4
 
 Release date: 1/11/2023
 
@@ -690,7 +702,7 @@ Release date: 1/11/2023
 - Support encoding Shift-JIS in TXT sanitization
 - Handle SVG bomb attack
 
-## [v6.3.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v632)
+## v6.3.2
 
 Release date: 12/2/2022
 
@@ -698,7 +710,7 @@ Release date: 12/2/2022
 - Fix an issue when converting a big SVG to BMP
 - Preserve EML header when sanitizing files
 
-## [v6.3.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v631)
+## v6.3.1
 
 Release date: 11/3/2022
 
@@ -710,7 +722,7 @@ Release date: 11/3/2022
 - Apply image size setting to BMP
 - Improve PDF sanitization
 
-## [v6.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v63)
+## v6.3
 
 Release date: 10/5/2022
 
@@ -723,7 +735,7 @@ Release date: 10/5/2022
 - Display an error message when missing engine dependencies (MetaDefender Core 5.2.1+)
 - Enhance comment removal in HTML
 
-## [v6.2.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v622)
+## v6.2.2
 
 Release date: 8/22/2022
 
@@ -731,7 +743,7 @@ Release date: 8/22/2022
 - Remove linked objects in ODT sanitization
 - Remove Content Description, Extended Description and Content Branding when removing metadata in WMV/WMA
 
-## [v6.2.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v621)
+## v6.2.1
 
 Release date: 8/2/2022
 
@@ -740,7 +752,7 @@ Release date: 8/2/2022
 - Allow whitelist macro hash with case insensitive
 - Better handling signature in PDF file
 
-## [v6.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v62)
+## v6.2
 
 Release date: 6/29/2022
 
@@ -756,13 +768,13 @@ Release date: 6/29/2022
 - Handle loading external resources in MS Office processing
 - Remove BETA label for WEBM, VDX, VTX, VSX,TIFF64
 
-## [v6.1.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v613)
+## v6.1.3
 
 Release date: 6/2/2022
 
 - Improve PDF sanitization
 
-## [v6.1.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v612)
+## v6.1.2
 
 Release date: 5/16/2022
 
@@ -770,7 +782,7 @@ Release date: 5/16/2022
 - Preserve empty encoding declaration in XML
 - Fixed line folding issue for ICS sanitization
 
-## [v6.1.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v611)
+## v6.1.1
 
 Release date: 4/27/2022
 
@@ -778,7 +790,7 @@ Release date: 4/27/2022
 - Using LZW compression for BMP to TIFF, PNG to TIFF, DWF/DXF to TIFF conversions
 - Optimize PDF sanitization resource
 
-## [v6.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v61)
+## v6.1
 
 Release date: 3/28/2022
 
@@ -789,21 +801,21 @@ Release date: 3/28/2022
 - Improve PDF, TXT, Excel, SVG, LNK, HTML, JWW sanitization
 - Improve debug log: log location is moved to the engines log folder, support log rotation
 
-## [v6.0.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v602)
+## v6.0.2
 
 Release date: 2/10/2022
 
 - Enhance stability
 - Fix HTML encoding issue
 
-## [v6.0.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v601)
+## v6.0.1
 
 Release date: 1/10/2022
 
 - Change Blacklist/Whitelist to Blocklist/Allowlist
 - Remove unnecessary files in the package
 
-## [v6.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v60)
+## v6.0
 
 Release date: 12/15/2021
 
@@ -818,7 +830,7 @@ Release date: 12/15/2021
 - Improve timeout handling
 - libgdiplus 6.0.5 or above is required for some file type conversions
 
-## [v5.14 (Windows Only)](/docs/mdcore/release-notes/deep-cdr-release-notes#v514-windows-only)
+## v5.14 (Windows Only)
 
 Release date: 11/22/2021
 
@@ -826,7 +838,7 @@ Release date: 11/22/2021
 - Enhance RTF/PDF sanitization to handle unexpected cases
 - Support new file type conversion: EGG to the other archive file types
 
-## [v5.14 (Windows Only)](/docs/mdcore/release-notes/deep-cdr-release-notes#v514-windows-only)
+## v5.14 (Windows Only)
 
 Release date: 10/4/2021
 
@@ -839,14 +851,14 @@ Release date: 10/4/2021
 - Better macro handling in MS Office 2007
 - Enhance HTML sanitization with specific encoding and non-ASCII characters
 
-## [v5.13.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v5131)
+## v5.13.1
 
 Release date: 8/17/2021
 
 - Handle MPEG-1 encode in MPEG sanitization
 - Improve PDF/HTML sanitization to handle corner cases, none standard format.
 
-## [v5.13](/docs/mdcore/release-notes/deep-cdr-release-notes#v513)
+## v5.13
 
 Release date: 7/5/2021
 
@@ -857,13 +869,13 @@ Release date: 7/5/2021
 - Several minor bug fixes
 - libgomp (Centos), libgomp1 (Ubuntu) is required
 
-## [v5.12.3 - hotfix](/docs/mdcore/release-notes/deep-cdr-release-notes#v5123---hotfix)
+## v5.12.3 - hotfix
 
 Release date: 6/15/2021
 
 - Fixed the configuration issue when upgrading from Core 4.19.x to Core 4.20.x
 
-## [v5.12.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v5123)
+## v5.12.3
 
 Release date: 6/3/2021
 
@@ -872,7 +884,7 @@ Release date: 6/3/2021
 - A new configuration to control image quality for Image sanitization
 - Improve PDF sanitization
 
-## [v5.12.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v5122)
+## v5.12.2
 
 Release date: 5/18/2021
 
@@ -880,7 +892,7 @@ Release date: 5/18/2021
 - A new configuration to control JPEG file size/quality in PDF file
 - Improve m4a sanitization
 
-## [v5.12.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v5121)
+## v5.12.1
 
 Release date: 4/27/2021
 
@@ -888,7 +900,7 @@ Release date: 4/27/2021
 - Fix PDF hang issue
 - Better handling Think Cell object in Microsoft Office
 
-## [v5.12](/docs/mdcore/release-notes/deep-cdr-release-notes#v512)
+## v5.12
 
 Release date: 4/8/2021
 
@@ -898,7 +910,7 @@ Release date: 4/8/2021
 - A new configuration to process CDATA in XML
 - Improve CSV, DWG sanitization on Linux
 
-## [v5.11.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v5112)
+## v5.11.2
 
 Release date: 3/1/2021
 
@@ -907,14 +919,14 @@ Release date: 3/1/2021
 - Fix sanitization failure when a TIFF file has unknown custom tags
 - Fix compound file corrupted after sanitization
 
-## [v5.11.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v5111)
+## v5.11.1
 
 Release date: 1/27/2021
 
 - Fix a crash issue when sanitizing LNK file
 - Fix sanitization failures with some specific XLM, PDF, PNG files.
 
-## [v.5.11](/docs/mdcore/release-notes/deep-cdr-release-notes#v511)
+## v.5.11
 
 Release date: 1/11/2021
 
@@ -923,21 +935,21 @@ Release date: 1/11/2021
 - Enhance engine communication on Linux
 - Support XLS to CSV conversion
 
-## [v5.10.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v5103)
+## v5.10.3
 
 Release date: 12/07/2020
 
 - Reduce resource usage when sanitizing XML files
 - Fix a crash issue when sanitizing Excel files
 
-## [v5.10.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v5102)
+## v5.10.2
 
 Release date: 11/16/2020
 
 - Fixed a hang issue with XLSX sanitization
 - Fixed a PDF timeout issue
 
-## [v5.10.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v5101)
+## v5.10.1
 
 Release date: 10/28/2020
 
@@ -945,7 +957,7 @@ Release date: 10/28/2020
 - Fixed a bug that causes some specific PDF files cannot be opened after sanitizing
 - Fixed memory leak issue in MP3 sanitization
 
-## [v5.10](/docs/mdcore/release-notes/deep-cdr-release-notes#v510)
+## v5.10
 
 Release date: 09/28/2020
 
@@ -962,7 +974,7 @@ Release date: 09/28/2020
 - Improve XFA form sanitization in PDF
 - Enhance processing PpAction (mouse over llink and mouse click link) objects in Powerpoint 2007
 
-## [v5.9.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v593)
+## v5.9.3
 
 Release date: 9/1/2020
 
@@ -971,7 +983,7 @@ Release date: 9/1/2020
 - Better HTML redirection in cases a hyperlink is escaped
 - New file type conversion: XLSM to CSV, XLTX to CSV, DOC to RTF, DOCM to RTF, HTML to TXT
 
-## [v5.9.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v592)
+## v5.9.2
 
 Release date: 8/10/2020
 
@@ -983,13 +995,13 @@ Release date: 8/10/2020
 - Better handling embedded PDF file in MS Excel 2007
 - Improve PDF, TIFF, RTF sanitization
 
-## [v5.9.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v591)
+## v5.9.1
 
 Release date: 7/15/2020
 
 - Hotfix to work with MetaDefender Kiosk Secure Image
 
-## [v5.9](/docs/mdcore/release-notes/deep-cdr-release-notes#v59)
+## v5.9
 
 Release date: 7/7/2020
 
@@ -1006,7 +1018,7 @@ Release date: 7/7/2020
 - Improve HWP sanitization: better image handling, separate chart configuration with embedded objects, fix memory leak
 - Better handling Tiff images, unused objects, 3D objects in PDF sanitization
 
-## [v5.8.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v581)
+## v5.8.1
 
 Release date: 5/20/2020
 
@@ -1015,7 +1027,7 @@ Release date: 5/20/2020
 - A new configuration to allow zero font in HTML file
 - Improve SVG, XML, UTF-16 HTML sanitization
 
-## [v5.8](/docs/mdcore/release-notes/deep-cdr-release-notes#v58)
+## v5.8
 
 Release date: 4/14/2020
 
@@ -1030,21 +1042,21 @@ Release date: 4/14/2020
 - Better PDF timeout handling
 - Improve image quality when converting from PDF to TIFF
 
-## [v5.7.4](/docs/mdcore/release-notes/deep-cdr-release-notes#v574)
+## v5.7.4
 
 Release date: 3/23/2020
 
 - Better handling special signs (",+) in CSV
 - Improve hyperlink removal in RTF
 
-## [v5.7.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v573)
+## v5.7.3
 
 Release date: 3/5/2020
 
 - Handle Meta Refresh tag in HTML
 - Better OLE object handling in DOCX
 
-## [v5.7.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v572)
+## v5.7.2
 
 Release date: 2/18/2020
 
@@ -1053,7 +1065,7 @@ Release date: 2/18/2020
 - More stable JPG, ICO, CUR sanitization
 - Minor changes in configuration UI
 
-## [v5.7.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v571)
+## v5.7.1
 
 Release date: 1/29/2020
 
@@ -1062,7 +1074,7 @@ Release date: 1/29/2020
 - New configurations to control image quality in PDF
 - Return hyperlink list when choosing "Display hyperlink with domain only" in HTML sanitization
 
-## [v5.7.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v570)
+## v5.7.0
 
 Release date: 12/26/2019
 
@@ -1082,37 +1094,37 @@ Release date: 12/26/2019
 - Improve PDF sanitization speed
 - Better disk I/O usage
 
-## [v5.6.5](/docs/mdcore/release-notes/deep-cdr-release-notes#v565)
+## v5.6.5
 
 Release date: 12/2/2019
 
 - Fixed additional break line when sanitizing HTML
 - Better handling metadata removal in Microsoft Office 2007
 
-## [v5.6.4](/docs/mdcore/release-notes/deep-cdr-release-notes#v564)
+## v5.6.4
 
 Release date: 11/19/2019
 
 - Improve PDF sanitization: betting handling metadata, none standard PDF files
 
-## [v5.6.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v563)
+## v5.6.3
 
 Release date: 11/7/2019
 
 - Better processing Cross Reference Table ( xref ) in PDF
 - Improve multi-threads handling for JTD sanitization
 
-## [v5.6.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v562)
+## v5.6.2
 
 - Preserve newline character when sanitizing CSV
 - Better handling PDF Form with empty decoded data
 
-## [v5.6.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v561)
+## v5.6.1
 
 - Better handling invalid file structure for TIFF
 - Better handling MP3 version 2.5
 
-## [v5.6.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v560)
+## v5.6.0
 
 - Better handling CSV formulas starting with special characters
 - Microsoft Office sanitization improvement
@@ -1126,19 +1138,19 @@ Release date: 11/7/2019
   - Improved PDF form sanitization
 - Optimized system resource usage (RAM, I/O)
 
-## [v5.5.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v553)
+## v5.5.3
 
 - Supported TXT to TXT sanitization
 - Introduced new options to process formulas in CSV
 - Improved memory usage when sanitizing big HTML files
 - Better handling invalid structure JPG files
 
-## [v5.5.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v552)
+## v5.5.2
 
 - Better resource usage for image processing
 - Better disarming process for Microsoft Office sanitization
 
-## [v5.5.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v551)
+## v5.5.1
 
 - Supported new file types:
 
@@ -1148,7 +1160,7 @@ Release date: 11/7/2019
 - Supported a new configuration to process image link in HTML
 - Improved 20% PDF sanitization speed
 
-## [v5.5.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v550)
+## v5.5.0
 
 - Deep CDR as new name
 - Supported new file types:
@@ -1161,27 +1173,27 @@ Release date: 11/7/2019
 - Improved ODT sanitization: remove linked images; hidden text, paragraphs, comments
 - Improved Deep CDR details
 
-## [v5.4.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v543)
+## v5.4.3
 
 - Improved file handling for HTML, CSV, images sanitization
 - Improved process management in Linux sanitization
 - Better encode handling for RTF sanitization
 - Improved logging
 
-## [v5.4.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v542)
+## v5.4.2
 
 - Better DDE handling for DOCX
 - Improved PDF sanitization: better handling MetaData, XFA form, Security setting
 - Better temp file handling for JTDC sanitization
 
-## [v5.4.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v541)
+## v5.4.1
 
 - Improved Linux sanitization stability
 - Improved ODT sanitization: font, embedded sheet handling
 - Better DDE handling for DOC/XLS/XLT
 - Better link handling for DOCX
 
-## [v5.4.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v540)
+## v5.4.0
 
 - Supported new 26 file formats, more than 100 sanitization types:
 
@@ -1202,27 +1214,27 @@ Release date: 11/7/2019
 - Improved HTML sanitization: handle hyperlink better, preserve content in "pre" tag, remove redundant data
 - More stable Linux sanitization for DOCX, PPTX
 
-## [v5.3.4](/docs/mdcore/release-notes/deep-cdr-release-notes#v534)
+## v5.3.4
 
 - Better handling empty HTML file
 - Improved PDF parser to handle file structure better
 
-## [v5.3.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v533)
+## v5.3.3
 
 - Improved handling hidden content in DOCX sanitization
 - Improved ODT sanitization in Linux
 
-## [v5.3.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v532)
+## v5.3.2
 
 - Improved error message for Microsoft XML Spreadsheet 2003 (.xml) sanitization
 - Improved PDF sanitization: XFA form, Metadata parser
 
-## [v5.3.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v531)
+## v5.3.1
 
 - Enhanced XLS sanitization in case files only contain Macros
 - Improved forensic info in HWP sanitization
 
-## [v5.3.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v530)
+## v5.3.0
 
 - Sanitization of recursively embedded documents in Microsoft Office 2007 documents
 - Sanitization of Calendar data files: iCalendar (.ics) & vCalender v1.0 (.vcs)
@@ -1231,14 +1243,14 @@ Release date: 11/7/2019
 - Extended file support that now includes Ichitaro Document to Compressed format (JTDC), a compressed version of JTD
 - Enhanced PDF sanitization functionality, including handling of digital signatures, JavaScript, form fields, and layers
 
-## [v5.2.12](/docs/mdcore/release-notes/deep-cdr-release-notes#v5212)
+## v5.2.12
 
 - Enhanced handling DDE with RTF file type
 - Improved handling external objects in Microsoft Office document
 - Improved handling Forms in PDF
 - Improved error message for password protect documents
 
-## [v5.2.11](/docs/mdcore/release-notes/deep-cdr-release-notes#v5211)
+## v5.2.11
 
 - Enhanced the EMF sanitization inside PPT for Linux
 - Improved error messages for invalid file structure in DOC, PPT
@@ -1246,24 +1258,24 @@ Release date: 11/7/2019
 - Better CDATA node handling in HTML sanitization
 - Better temp file handling in Microsoft Office 2007 sanitization
 
-## [v5.2.10](/docs/mdcore/release-notes/deep-cdr-release-notes#v5210)
+## v5.2.10
 
 - Better OLE handling for HWP
 - Enhance file structure validation for PDF, Microsoft Office
 
-## [v5.2.9](/docs/mdcore/release-notes/deep-cdr-release-notes#v529)
+## v5.2.9
 
 - Better failure handling for PDF, DOCX sanitization
 - Enhanced Microsoft Office sanitization: remove more linked objects, control stream.
 
-## [v5.2.8](/docs/mdcore/release-notes/deep-cdr-release-notes#v528)
+## v5.2.8
 
 - Improved PPT sanitization speed
 - Improved CSV sanitization speed in Linux
 - Improved WMF/EMF sanitization to prevent device independent bitmap (DIB) copy vulnerability (CVE-2017-0190) and buffer overflow vulnerability (CVE-2005-2123, CVE-2005-2124)
 - Improved forensic info and error message
 
-## [v5.2.7](/docs/mdcore/release-notes/deep-cdr-release-notes#v527)
+## v5.2.7
 
 - Sanitization detail is available on MetaDefender Core REST API (version 4.12.1 and newer) (Beta)
 - Improved WMF/EMF sanitization to prevent code execution
@@ -1275,82 +1287,82 @@ Release date: 11/7/2019
 - Improved HTML sanitization speed on Linux
 - Added performance report for Linux
 
-## [v5.2.6](/docs/mdcore/release-notes/deep-cdr-release-notes#v526)
+## v5.2.6
 
 - Enhanced steganography sanitization for PNG
 
-## [v5.2.5](/docs/mdcore/release-notes/deep-cdr-release-notes#v525)
+## v5.2.5
 
 - Support Windows Metafile (WMF), Enhanced Metafile (EMF) sanitization on Windows (Beta)
 - Better non-standard objects handling for PDF
 - Enhanced HWP sanitization: content, image handling.
 
-## [v5.2.4](/docs/mdcore/release-notes/deep-cdr-release-notes#v524)
+## v5.2.4
 
 - Improved Microsoft Office sanitization speed on Linux
 - Improved PDF sanitization speed on Linux
 - Improved HWP sanitization speed on Linux
 - Improved JTD sanitization speed on Linux
 
-## [v5.2.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v523)
+## v5.2.3
 
 - Supported Microsoft Visio Drawing (VSDX, VSDM) sanitization on Windows (Beta)
 - Improved hyperlink sanitization for HTML
 - Improved hyperlink sanitization for HWP
 
-## [v5.2.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v522)
+## v5.2.2
 
 - Supported external media objects removal for PPTX/PPSX sanitization
 - Improved hidden text removal for DOCX/DOTX sanitization
 
-## [v5.2.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v521)
+## v5.2.1
 
 - Fixed the issue of loading customized configuration on a 64bit system
 - Handle NULL character in content for HTML to HTML sanitization
 - Preserve UTF-8 BOM encoding for CSV sanitization
 
-## [v5.2.0](/docs/mdcore/release-notes/deep-cdr-release-notes#v520)
+## v5.2.0
 
 - Handle big file size sanitization on Windows
 - Improved PPSX sanitization: better OLE object, Command handling
 - Improved file size with Microsoft Office files contain EMF/WMF images
 - On Linux, additional file types support: DOCM2DOCM, DOTM2DOTM, DOTX2DOTX, XLS2XLS, XLSM2XLSM, XLSB2SXLSB, PPT2PPT, PPSX2PPSX, PPTM2PPTM, RTF2RTF, HTML2HTML, WMF2JPG, XML-DOC2PDF, XML-XLS2PDF, XML-DOCX2PDF, JTD2JTD, HWP2HWP, DWG2DWG
 
-## [v5.1.20](/docs/mdcore/release-notes/deep-cdr-release-notes#v5120)
+## v5.1.20
 
 - Fixed XML, SVG sanitization issue
 
-## [v5.1.19](/docs/mdcore/release-notes/deep-cdr-release-notes#v5119)
+## v5.1.19
 
 - Enhanced Linux CDR performance
 - Supported more file types in Linux CDR: XML2XML, SVG2SVG, DOT2DOT, GIF2GIF
 
-## [v5.1.18](/docs/mdcore/release-notes/deep-cdr-release-notes#v5118)
+## v5.1.18
 
 - Removed Linux BETA label
 - Improved HWP sanitization: better image handling, stream processing.
 - Fixed HTML sanitization issue when sanitizing links, scripts
 
-## [v5.1.17](/docs/mdcore/release-notes/deep-cdr-release-notes#v5117)
+## v5.1.17
 
 - Increased HWP sanitization speed
 - Handling missing fonts for DOC sanitization on Linux
 - Handling attachment removal for PDF with non-standard format
 - Better handling of temporary files for DOCX, PPTX, XLSX sanitization
 
-## [v5.1.16](/docs/mdcore/release-notes/deep-cdr-release-notes#v5116)
+## v5.1.16
 
 - Fixed moniker type issue in PPT
 - Fixed some handling embedded font in PDF
 
-## [v5.1.15](/docs/mdcore/release-notes/deep-cdr-release-notes#v5115)
+## v5.1.15
 
 - Improved Linux sanitization for DOCX
 - Added support iso-2022-jp for HTML sanitization
 - Enhanced CSV sanitization
 - Enhanced PNG sanitization inside Microsoft Office documents
 
-## [v5.1.14](/docs/mdcore/release-notes/deep-cdr-release-notes#v5114)
+## v5.1.14
 
 - Enhanced Macro removal for AutoCAD (Beta)
 - Adding support additional potentially malicious objects in DOCX
@@ -1358,19 +1370,19 @@ Release date: 11/7/2019
 - Enhanced sanitization of some non-standard format PDF
 - Enhanced sanitization of some non-standard format RTF
 
-## [v5.1.13](/docs/mdcore/release-notes/deep-cdr-release-notes#v5113)
+## v5.1.13
 
 - Supported SVG to SVG sanitization (Beta)
 - Adding support additional Potentially Malicious Objects (PMO) object types in PPTX
 - Adding support additional PMO object types in XLSM
 - Improve handling file structure integrity with a specific DOCX type
 
-## [v5.1.12](/docs/mdcore/release-notes/deep-cdr-release-notes#v5112)
+## v5.1.12
 
 - Enhanced PPTX, PDF sanitization
 - Better handling of temporary files for image sanitization
 
-## [v5.1.11](/docs/mdcore/release-notes/deep-cdr-release-notes#v5111)
+## v5.1.11
 
 - Supported AutoCAD (Beta)
 - Introduced new type of process_hyperlink_behavior for HTML
@@ -1379,30 +1391,30 @@ Release date: 11/7/2019
 - Fixed image sanitization failure on Linux
 - Fixed embedded object removal for JTD
 
-## [v5.1.10](/docs/mdcore/release-notes/deep-cdr-release-notes#v5110)
+## v5.1.10
 
 - Updated omsFileTypeConversion.exe icon for rebrand
 - Fixed JTD sanitization lost images and objects
 - Fixed bugs on Microsoft Office files: DDE, Macro,...
 - Handled OLE Link for Microsoft Office files
 
-## [v5.1.9](/docs/mdcore/release-notes/deep-cdr-release-notes#v519)
+## v5.1.9
 
 - Improved Linux sanitization
 - Fixed bugs on PDF sanitization: corrupted files, crashed
 - Distinguished Generic XML and Microsoft Office XML sanitization
 
-## [v5.1.8](/docs/mdcore/release-notes/deep-cdr-release-notes#v518)
+## v5.1.8
 
 - Fixed bugs on PDF and DOCM sanitization
 
-## [v5.1.7](/docs/mdcore/release-notes/deep-cdr-release-notes#v517)
+## v5.1.7
 
 - process_tag in HTML configuration was changed to process_hyperlink_behavior, default value is 1
 - Removed metadata in RTF file
 - Enhanced JPG, PDF, HTML sanitization
 
-## [v5.1.6](/docs/mdcore/release-notes/deep-cdr-release-notes#v516)
+## v5.1.6
 
 - Supported DDE sanitization for DOC, XLS and CSV file format
 - Enhanced sanitization on ODT file format
@@ -1411,26 +1423,26 @@ Release date: 11/7/2019
 - Enhanced stabilization for HTML, XLS and PPTX file format
 - Enhanced validation for HTML and RTF file format
 
-## [v5.1.5](/docs/mdcore/release-notes/deep-cdr-release-notes#v515)
+## v5.1.5
 
 - Improved PDF sanitization (reduced sanitized file size, optimized image processing time in PDF,...)
 - Supported ODT sanitization (for both Windows and Linux)
 - Improved JPG sanitization (reduced processing time)
 
-## [v5.1.4](/docs/mdcore/release-notes/deep-cdr-release-notes#v514)
+## v5.1.4
 
 - Supported DDE sanitization for DOCX and XLSX file format
 
-## [v5.1.3](/docs/mdcore/release-notes/deep-cdr-release-notes#v513)
+## v5.1.3
 
 - Enhanced metadata sanitization for Microsoft Office 2007 file format ( Title, Subject, Comments, Author, Last Modified By, Company, Modified Date)
 - Improved TIFF to TIFF sanitization
 
-## [v5.1.2](/docs/mdcore/release-notes/deep-cdr-release-notes#v512)
+## v5.1.2
 
 - Improved DOC, PDF, HTML sanitization for validation
 - Supported Form object sanitization in PDF
 
-## [v5.1.1](/docs/mdcore/release-notes/deep-cdr-release-notes#v511)
+## v5.1.1
 
 - Supported metadata sanitization for Microsoft Office 2003 file format (DOC, XLS, PPT)

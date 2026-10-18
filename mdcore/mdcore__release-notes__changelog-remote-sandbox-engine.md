@@ -2,9 +2,43 @@
 
 # Remote Engine
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Pro Tip
+
 Keep your MetaDefender Aether (previously know MetaDefender Sandbox) standalone instance up to date for the latest features. See the [release notes](https://docs.opswat.com/filescan/release-notes) for more information.
 
-v3.0.0
+## [V3.3.1](/docs/mdcore/release-notes/changelog-remote-sandbox-engine#v331)
+
+Release date: 13/10/2026
+
+| **New Features and Improvements** |
+| --- |
+| - Fixed configuration issues with No Threat Detected verdict |
+
+## [v3.3.0](/docs/mdcore/release-notes/changelog-remote-sandbox-engine#v330)
+
+Release date: 10/10/2026
+
+| **New Features and Improvements** |
+| --- |
+| - **LLM Scanning**Submit a model to MetaDefender Aether in the same way you submit any other file. Aether runs two analyses: static analysis of the model file and dynamic analysis of the running model. If Aether finds a threat, Core blocks the file.**Static analysis**Aether never loads or runs the model. It reads only the parts of the file that can carry code or configuration and skips over the weights, so memory use stays low even for very large models.Any payload Aether finds inside the file, including data hidden between tensors, is extracted and analysed on its own.**Dynamic analysis**Aether connects to your inference server through its OpenAI-compatible API and runs 38 attack probes against the live model, covering 9 of the OWASP Top 10 for LLM Applications categories. Probes run in order of severity. Each scan plants single-use canary tokens, so if one appears in a response, the leak is confirmed. Every finding shows the prompt, the model's response, the severity, the OWASP category and the rule that flagged it.Static and dynamic analysis are separate options, so you can run either one or both. - **More Evidence from emulation** - **HTTP traffic**: Emulation now records the full request and response for each HTTP call, including headers and body. - **Delayed macros:** VBA emulation now supports Application.OnTime, which malware uses to delay its payload. - **Deeper unpacking** - **Installers**: Better extraction from nested installers and more installer types, including PyInstaller, py2exe, ps2exe and Nuitka files. - **Extended YARA triggers**Adaptive Sandbox scan can be triggered for custom YARA rules |
+
+## [v3.2.0](/docs/mdcore/release-notes/changelog-remote-sandbox-engine#v320)
+
+Release date: 31/07/2026
+
+| **New Features and Improvements** |
+| --- |
+| - **Implemented instrumented file system within the PE emulator:** The PE emulator now instanciates an instrumented filesystem in which the emulated sample resides. A great step towards the first official version of Filescan's PE emulator. This feature enables proper emulation of any file operation and interaction which would have previously terminated the emulation. This feature brings the flexibility of manually configuring the fake files that "exist" within, so that the emulated sample actually locates any file defined in the configuration file. Hence, this milestone not only enables a new feature, but extends configuration and flexibility of the emulation environment. - **Detection for Emerging Evasion Techniques:** Threat actors keep getting more creative — Sandbox keeps pace. This release adds detection for *etherhiding* (concealing threat actor infrastructure inside blockchain transactions) and intentionally malformed .NET assemblies built to break automated analysis tools. - **Detection for Emerging Evasion Techniques:** Threat actors keep getting more creative — Sandbox keeps pace. This release adds detection for *etherhiding* (concealing threat actor infrastructure inside blockchain transactions) and intentionally malformed .NET assemblies built to break automated analysis tools. - **Smarter Remote Template Detection:** Remote template injection analysis got a full pass this release, aimed at keeping the false-positive rate flat while closing real detection gaps. A rebuilt link-detection and URL-classification pipeline now tells genuine injection attempts apart from ordinary embedded links — fixing two indicators that had been flagging legitimate URLs as malicious, and closing a gap where obfuscated, octal-encoded malicious IP links were going undetected. Fewer false alarms, no loss of coverage. - **Broader Detection & Coverage Improvements:** This release also expands detection coverage on several fronts: new detection engineering for wiper malware, CAPTCHA identification via OCR (including obfuscated but rendered fake CAPTCHAs used in ClickFix attacks), new config extractors for PrivateLoader and Quasar RAT, and expanded IOC coverage in the local reputation database. |
+
+## [v3.1.0](/docs/mdcore/release-notes/changelog-remote-sandbox-engine#v310)
+
+Release date: 31/04/2026
+
+| **New Features and Improvements** |
+| --- |
+| **What's new**   - **Expanded archive support:** Multiple archive types are now supported with Core 18.1. - **Deep CDR hyperlink trigger:** The hyperlink Deep CDR type can now be used to trigger Sandbox analysis. - **TLS certificate verification:** Added an option to enable TLS certificate validation using the operating system's certificate store.   **Bug Fixes**   - **Improved URL handling:** Fixed URL parsing when the Load Balancer feature is enabled. |
+
+## [v3.0.0](/docs/mdcore/release-notes/changelog-remote-sandbox-engine#v300)
 
 Release date 26/01/2026
 

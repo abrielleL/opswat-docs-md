@@ -40,6 +40,8 @@ ENABLED_MODULES=azureblob,amazonsdk,googlecloud,alibabacloud,azurefiles,smb,box,
 
 `smb_legacy` is an additional module for Linux deployments. It selects the previous SMB service for hosts that cannot run the SMB service's kernel mount; keep `smb` in the list and add `smb_legacy` at the end. See [Add an SMB-Compatible unit in Linux deployments](https://www.opswat.com/docs/mdss/integrations/how-to-add-a-smb-share-as-a-nfs-storage).
 
+Use the module names exactly as listed above. Names are case-sensitive and must be separated by commas without spaces. Unknown module names are ignored, and the corresponding integrations are not available. Before upgrading, review your list as described in [Upgrade MDSS](https://opswat.developerhub.io/docs/mdss/installation/upgrade-procedures).
+
 Please change it accordingly but remember that in order for these changes to be applied you need to restart MetaDefender Storage Security.
 
 > **Resource usage**

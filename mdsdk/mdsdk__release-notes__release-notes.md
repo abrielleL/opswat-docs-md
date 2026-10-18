@@ -5,6 +5,8 @@
 View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Security SDK](/docs/mdsdk/release-notes/release-notes#security-sdk)
 
+[October 13th, 2026](/docs/mdsdk/release-notes/october-13-2026)
+
 [October 7th, 2026](/docs/mdsdk/release-notes/october-07-2026)
 
 [October 2nd, 2026](/docs/mdsdk/release-notes/october-02-2026)

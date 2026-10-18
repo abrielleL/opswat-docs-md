@@ -5,6 +5,7 @@
 Each workflow consists of the following configurations:
 
 - File discovery
+- File filters
 - Scan pool
 - File tagging
 - Deep CDR
@@ -35,9 +36,9 @@ Once a name is given to the new workflow it will require to choose the type of w
 
 #### Discovery only
 
-The Discovery only workflow will be created with the default settings after pressing Create button.
+The Discovery only workflow will be created with the default settings after pressing Create button
 
-![](https://uploads.developerhub.io/prod/k8zL/t52l3stevklhnak6ecxgaunjuhv74n8epx7ydfqknrncwiyxpphemyz8p642k6kd.png)
+![](https://uploads.developerhub.io/prod/k8zL/4lk7p24bnxc4bf7cfpu48h1kmldolpvwyskxmprhiiycu82fv1ahotricerzhhy7.png)
 
 This type of workflow it is used for storage interaction without scanning the file. This allows a more limited number of remediations and focus only on discovering folder structure and managing it
 
@@ -45,9 +46,19 @@ This type of workflow it is used for storage interaction without scanning the fi
 
 The standard workflow is saved in the system only after the "Scan pool" is properly configured. While in draft mode, all the other settings nodes are inaccessible until the Scan pool is successfully configured.
 
-![](https://uploads.developerhub.io/prod/k8zL/k6d0itelbxw747zsxb3b2r2zy44txeoj5k1fqb3n996vb0rme6w1kb3xz9a1ahdo.png)
+![](https://uploads.developerhub.io/prod/k8zL/180jmpg2nr4bi6qg0i5gmp030kvhbun94ij6ujame85crigd2dmkdj6ct9babp6o.png)
 
 Once the Scan pool is successfully configured, the other settings can be updated by clicking on each one individually. The workflow is updated instantly once the "Save changes" button is clicked for each of the settings nodes.
+
+## File Filters
+
+File filters decide which discovered files are sent for scanning. You can limit a workflow to selected file types, a size range and a last-modified date range. A file is scanned only when it passes every filter you set; files that don't are recorded in the scan report as **Skipped by filter**, with the reason, and are not scanned. The node shows **Active** when at least one filter is set.
+
+File types are picked from categories (archives, Office documents, images, executables and others) or entered as custom extensions. The match is based on the file extension only, not on the file's content.
+
+![](https://uploads.developerhub.io/prod/k8zL/xkqi0lvzdm9kuwy6qg85m6by6km6r3e805qyx5r5bbmtey3q8qjsy3xhsstojcq0.png)
+
+For detailed setup instructions and the full list of supported file types, refer to [File Filters](https://www.opswat.com/docs/mdss/configuration/file-filters).
 
 ## Scan pool
 
@@ -65,13 +76,13 @@ Each scan pool configuration is tied to a specific scan pool and workflow rule, 
 
 When configuring the scan pool step in a workflow, you can select a scan pool, optionally enable failover to a secondary scan pool for cases where all scan instances from the primary pool are unavailable or unresponsive, and specify the user agent and workflow rule to apply during scanning.
 
-![](https://uploads.developerhub.io/prod/k8zL/jjr3mocakb82sj5wrdi54by3kpe534844f6q95qtnsotytw9y7zwnl3plqs95fkj.png)
+![](https://uploads.developerhub.io/prod/k8zL/syptt7p85k7j9cd3ogjnd9ag3rresw089tmmz560sj8upefa3u5xv0yarkcn0hju.png)
 
 ## Technologies
 
 This lists all technologies available in the connected MetaDefender Core/Cloud/Distributed Cluster instance configured in the scan pool step. If settings have changed on the MetaDefender Core/Cloud/Distributed Cluster side, use the **Refresh technologies** button to load the latest available technologies
 
-![](https://uploads.developerhub.io/prod/k8zL/ujjaglpckh3m72jfmq7lyh0de211ovz6njtnyvwkmk4qswt1f985i56uowt9nq5j.png)
+![](https://uploads.developerhub.io/prod/k8zL/2wispdhamg10qbv1395dnuwdjx1agvircps01xqgy4tdncc1rwdlxmbkx31afppg.png)
 
 ## File Tagging
 
@@ -79,7 +90,7 @@ When enabled, File Tagging labels processed files with their security status (cl
 
 For instructions on setting up the feature, refer to the [Configure File Tagging](https://www.opswat.com/docs/mdss/configuration/file-tagging).
 
-![](https://uploads.developerhub.io/prod/k8zL/dkkpebhan9txxuqoownvc51lu1zebl70omlcqagtaumcty68c994vj5bjhgqhws7.png)
+![](https://uploads.developerhub.io/prod/k8zL/reeekxyt7b6kynthy10rvcmwuvyvlo26i6q49urfkhj2dlpvbgr6otcn9mj2tbyu.png)
 
 ## Deep CDR
 
@@ -89,7 +100,7 @@ Enabling the File Sanitization feature creates a secure version of a file by rem
 
 For detailed instructions on configuring this feature, refer to the [Deep CDR user guide](https://www.opswat.com/docs/mdcore/deep-cdr) and [Deep Content Disarm and Reconstruction (Deep CDR)](https://www.opswat.com/docs/mdss/configuration/deep-content-disarm-and-reconstruction--deep-cdr-).
 
-![](https://uploads.developerhub.io/prod/k8zL/nhyovuwr6qljrkw7w33b7t2sij97ketcw61ipv6waspm1u5nyeow1xjwaaf4b9xo.png)
+![](https://uploads.developerhub.io/prod/k8zL/oid9nf3jhjpt2f0z8ls5xdbadp6mxb3zjx5smsr8r2wp4b17ecbiipizxj8y174l.png)
 
 ## File Definition
 
@@ -97,7 +108,7 @@ What was previously known as Remediation Actions is now called File Definition, 
 
 For detailed setup instructions, refer to the [Configure File Definition](https://www.opswat.com/docs/mdss/configuration/file-definition).
 
-![](https://uploads.developerhub.io/prod/k8zL/yg3fstn813wwsqyrsfb9slbjaz1u4mwzmp5eoy4ywltjc1bw2yq590lmckuea6cc.png)
+![](https://uploads.developerhub.io/prod/k8zL/mu6ujpuqjfm8b0xf04m388aw37ii0zfmzsviqpdo6t6xzocnkly7b8a4b72zhmov.png)
 
 ## File Remediations
 
@@ -112,7 +123,7 @@ For more information on setting up the feature, refer to the [Keep, Copy, Move o
 - Develop a clear tagging strategy to facilitate efficient file management and consistency.
 - Regularly review and update your remediation actions and tagging configurations to align with your organizational evolving security needs and policies.
 
-![](https://uploads.developerhub.io/prod/k8zL/i36wn36r70fl3y6r4cl2qjezxrwtu5mt499prrvn7qndxja35mrxa7xvzuksdqwe.png)
+![](https://uploads.developerhub.io/prod/k8zL/yfnwlrsc3cbrsn8e3m7c8uqkw3uqttrmusm0jusm5e7quzrqlnud6i077jt6454n.png)
 
 ## Other Remediations
 
@@ -134,7 +145,7 @@ Retrieve & process all past versions of a file. This comes with a performance co
 
 For more details about this feature, refer to [Scan File Versions](https://www.opswat.com/docs/mdss/configuration/scan-file-versions).
 
-![](https://uploads.developerhub.io/prod/k8zL/f302tlxnlwwjue94rew3hirf4u2wketeuzoj0ichpq2c4zkefysd9loyar06631u.png)
+![](https://uploads.developerhub.io/prod/k8zL/d570pyi2766vt96021xhfqmgj4qpah3j1955pga10foxq9a6vaot0wwb4lg9kc0s.png)
 
 ## Error Handling
 

@@ -15,20 +15,20 @@ View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude abou
 
 Use this API to retrieve default device policy
 
-## [API URL](/docs/cm/developer-guidelines/account-policy#api-url)
+## API URL
 
 https://gears.opswat.com/o/api/v2/account/policy
-## [Request Parameters](/docs/cm/developer-guidelines/account-policy#request-parameters)
+## Request Parameters
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | Header | Yes | access token which archived from OAuth authentication step |  |
 
-## [Response HTTP Code](/docs/cm/developer-guidelines/account-policy#response-http-code)
+## Response HTTP Code
 
-See details in the Response HTTP Code section in [this page](/docs/cm/developer-guidelines/apis)
+See details in the Response HTTP Code section in [this page](/developer-guidelines/apis)
 
-## [Response Parameters](/docs/cm/developer-guidelines/account-policy#response-parameters)
+## Response Parameters
 
 | Key | Datatype | Description |
 | --- | --- | --- |
@@ -45,7 +45,7 @@ See details in the Response HTTP Code section in [this page](/docs/cm/developer-
 | policy.<category>.apply_to.server | int | Indicates if this option is applying to server devices |
 | policy.<category>.apply_to.vm | int | Indicates if this option is applying to virtual machine devices |
 
-## [Example](/docs/cm/developer-guidelines/account-policy#example)
+## Example
 
 **Request Example**
 

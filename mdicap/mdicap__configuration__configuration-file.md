@@ -1,7 +1,8 @@
 <!-- source: https://www.opswat.com/docs/mdicap/configuration/configuration-file -->
 
-[MetaDefender ICAP Server](https://www.opswat.com/docs/mdicap)Need Help?
 # Configuration file
+
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
 - ### [Linux](/docs/mdicap/configuration/configuration-file#linux) config file location
 
@@ -12,7 +13,7 @@
   - [HKEY_LOCAL_MACHINE\SOFTWARE\OPSWAT\ICAP Server\global](/docs/mdicap/configuration/configuration-file#hkey_local_machinesoftwareopswaticap-serverglobal)
   - [HKEY_LOCAL_MACHINE\SOFTWARE\OPSWAT\ICAP Server\logger](/docs/mdicap/configuration/configuration-file#hkey_local_machinesoftwareopswaticap-serverlogger)
 
-## [Linux](/docs/mdicap/configuration/configuration-file#linux-config-file-location)
+## [Linux](/docs/mdicap/configuration/configuration-file#linux)
 
 Note
 
@@ -26,7 +27,7 @@ The configuration file for the server is located in **/etc/mdicapsrv/mdicapsrv.c
 
 After modifying the server configuration file you must restart the MetaDefender ICAP Server service for the changes to take effect. You should use the distribution-standard way to restart the mdicapsrv service.
 
-### [[global] section](/docs/mdicap/configuration/configuration-file#logger-section)
+### [[global] section](/docs/mdicap/configuration/configuration-file#global-section)
 
 | parameter | default value | required | description |
 | --- | --- | --- | --- |
@@ -59,7 +60,7 @@ After modifying the server configuration file you must restart the MetaDefender 
 | `skip_non _standard_encoding_preprocess` | <empty> | optional | List of content-encoding will be ignored decoding before send to MD Core for scanning, seperate by comma E.g: none, other_type |
 | `store_first_n_characters_url` | -1 | optional |  |
 
-### [[logger] section](/docs/mdicap/configuration/configuration-file#internal-section)
+### [[logger] section](/docs/mdicap/configuration/configuration-file#logger-section)
 
 | key | default value | required | description |
 | --- | --- | --- | --- |
@@ -78,7 +79,7 @@ Note
 
 You should set both of syslog and syslog_level or none of them and you should set both of logfile and loglevel or none of them.
 
-### [[internal] section](/docs/mdicap/configuration/configuration-file#diagnostic-section)
+### [[internal] section](/docs/mdicap/configuration/configuration-file#internal-section)
 
 | key | default value | required | description |
 | --- | --- | --- | --- |
@@ -86,7 +87,7 @@ You should set both of syslog and syslog_level or none of them and you should se
 | `skip_first_start_page` | false | optional | When it is set to true, the server will automatically skip the first start page on the new version |
 | `sso_cross_instance_enabled` | false | optional | When it is set to true, it applies a single SSO configuration across all MD ICAP Server instances that use the same Shared Database Mode. This ensures consistency when multiple MD ICAP Server instances are deployed behind a load balancer and accessed via the same URL |
 
-### [[diagnostic] section](/docs/mdicap/configuration/configuration-file#windows)
+### [[diagnostics] section](/docs/mdicap/configuration/configuration-file#diagnostics-section)
 
 | key | default value | required | description |
 | --- | --- | --- | --- |
@@ -97,7 +98,7 @@ You should set both of syslog and syslog_level or none of them and you should se
 | `icap_test_client_req_max_file_count` | 5 | optional | Limits how many files can be included in a single test request. Requests with more files than this are rejected before being sent to the scan engine. The default of 5 suits typical ad-hoc testing; increase it (up to 100) if you need to batch-test larger sets of files at once. |
 | `icap_test_client_req_max_total_size` | 50 | optional | Limits the combined size (in MB) of all files submitted together in one test request. The UI checks this locally and blocks the upload before sending if the total is over the limit, so no time is wasted on a request that would be rejected anyway. Note the effective cap is actually the smaller of this value and the target workflow's own scan-size limit — raising this setting alone won't bypass a stricter limit set on the destination workflow. |
 
-## [Windows](/docs/mdicap/configuration/configuration-file#windows-config-file-location)
+## [Windows](/docs/mdicap/configuration/configuration-file#windows)
 
 The configuration for the server is located in **Windows Registry**.
 
@@ -150,7 +151,7 @@ Default logging target is Windows event log with default level of info (see belo
 | syslog |  | string value | optional | Value can only by in form of 'protocol://<hostname>:<port>'. (Multiple server can be specified separated with comma)  For **TCP** secure syslog server (support since ICAP v5.8.0) use this format: `tcps://hostname:port` |
 | syslog_level |  | string value | optional | Level of logging. Supported values are: debug, info, warning, error |
 | override |  | string value | optional | Override specific log ids to display them on another level e.g.: "1723:error,663:info" . Note: when displaying these log ids their original level will remain the same. |
-| capture_traffic |  | DWORD | optional | Capture raw TCP traffic in case of bad requests. See [3.5.4 Logging traffic of bad requests](/docs/mdicap/configuration/logging-traffic-of-bad-requests). |
+| capture_traffic |  | string value | optional | Capture raw TCP traffic in case of bad requests. See [3.5.4 Logging traffic of bad requests](/docs/mdicap/configuration/logging-traffic-of-bad-requests). |
 | cef | false | string value | optional | If true, the log format is Common Event Format |
 | local_timezone | false | string value | optional | If true, the times sent in syslog messages will be in the server's local timezone. This does not effect entries in the log file/Windows event log. When syslog is used with cef and local_timezone enabled the timezone name can vary based on the underlying system and it's settings. Examples   - Syslog    - UTC: 2018-09-19T13:07:36Z   - Local: 2018-09-19T15:07:36+02:00 - Syslog with CEF    - UTC: Sep 19 13:12:47 UTC   - Local 1: Sep 19 15:12:47 CEST   - Local 2: Sep 19 15:12:47 Central Europe Daylight Time |
 | nginx_logfile | [installdir] ginx ginx.log | string value | optional | File name and path to store the NGINX logs. |
@@ -168,7 +169,7 @@ You should set both of syslog and syslog_level or none of them and you should se
 | db_connection | 10 | string value | optional | Define maximum number of concurrent connections allows MetaDefender Core to open to work with PostgreSQL database server. Only available starting MetaDefender Core 5.2.0 |
 | skip_first_start_page | false | Boolean | optional | - true: start page will be skipped - false: will keep start page |
 
-### [HKEY_LOCAL_MACHINE\SOFTWARE\OPSWAT\ICAP Server\diagnostic](/docs/mdicap/configuration/configuration-file#hkey_local_machinesoftwareopswaticap-serverdiagnostic)
+### [HKEY_LOCAL_MACHINE\SOFTWARE\OPSWAT\ICAP Server\diagnostics](/docs/mdicap/configuration/configuration-file#hkey_local_machinesoftwareopswaticap-serverdiagnostics)
 
 | key | default value | type | required | description |
 | --- | --- | --- | --- | --- |

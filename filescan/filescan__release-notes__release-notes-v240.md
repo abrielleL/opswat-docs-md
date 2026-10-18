@@ -3,13 +3,13 @@
 # Release Notes for v2.4.0
 
 View as Markdown Ask ChatGPT about this page Ask Claude about this page
-## [Date: 30 July, 2025](/docs/filescan/release-notes/release-notes-v240#date-30-july-2025)
+## Date: 30 July, 2025
 
 Info
 
 This release artifact contains False Positive files (pycdc, upx, nuitka-extractor) that are incorrectly detected by the Cylance and Quick Heal AV engines. If you are scanning the release artifact with MetaDefender Core, please enable the Reputation engine as explained here to avoid these misdetections: <https://www.opswat.com/docs/mdcore/reputation-engine/configuration-reputation-engine>
 
-## [**MetaDefender Sandbox 2.4.0 Release Notes**](/docs/filescan/release-notes/release-notes-v240#metadefender-sandbox-240-release-notes)
+## **MetaDefender Sandbox 2.4.0 Release Notes**
 
 Seamless enterprise integration, streamlined user access, and a powerful new interface - MetaDefender Sandbox is now faster to deploy, easier to use, and richer in insight than ever before.
 
@@ -69,7 +69,7 @@ PE Emulation Boosts Detection Accuracy
 
 ---
 
-## [**MetaDefender Sandbox 2.4.0 Threat Detection Release Notes**](/docs/filescan/release-notes/release-notes-v240#metadefender-sandbox-240-threat-detection-release-notes)
+## **MetaDefender Sandbox 2.4.0 Threat Detection Release Notes**
 
 **What's New**
 
@@ -149,9 +149,9 @@ Extended MITRE Mapping reveals obfuscation, evasion, and execution tactics in .N
 
 ---
 
-## [**MetaDefender Sandbox 2.4.0 Engine Release Notes**](/docs/filescan/release-notes/release-notes-v240#metadefender-sandbox-240-engine-release-notes)
+## **MetaDefender Sandbox 2.4.0 Engine Release Notes**
 
-[**Advanced Windows PE Emulator (Beta)**](/docs/filescan/datasheet/pe-emulator--beta-)
+[**Advanced Windows PE Emulator (Beta)**](/datasheet/pe-emulator--beta-)
 
 **Enhancements**
 

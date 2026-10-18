@@ -12,7 +12,7 @@ Example log message on CentOS 7:
 
 Consider the following:
 
-1. Proper access rights are configured on the temporary directory root (see the tempdirectory entry in [3.1.2 MetaDefender ICAP Server configuration file](/docs/mdicap/v5.14.1/configuration/configuration-file))
+1. Proper access rights are configured on the temporary directory root (see the tempdirectory entry in [3.1.2 MetaDefender ICAP Server configuration file](/configuration/configuration-file))
 2. There is appropriate amount of free disk space for temporary files on the partition where temporary directory root is configured to
 
    1. In case of abnormal termination of ICAP Server (crash, power supply problems etc.) there is a chance that temporary files remain under the temporary directory root.

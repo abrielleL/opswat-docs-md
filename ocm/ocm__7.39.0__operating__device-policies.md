@@ -8,7 +8,7 @@ OPSWAT Central Management allows administrators to set different security requir
 
 To manage device policies, you can find all policies under your account by navigating to Device Policies
 
-## Create a new policy
+## [Create a new policy](/docs/ocm/7.39.0/operating/device-policies#create-a-new-policy)
 
 In case the administrators would like to create a new policy from an existing policy, they can clone an existing policy by clicking on the setting icon on the desired policy and Clone it.
 

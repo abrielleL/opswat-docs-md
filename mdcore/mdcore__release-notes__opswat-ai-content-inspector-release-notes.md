@@ -2,9 +2,70 @@
 
 # OPSWAT AI Content Inspector release notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## [V 2.3.1](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#v-231)
+
+Release date: 29 September 2026
+
+Release type: MINOR
+
+AI Content Inspector 2.3.1 adds support for WMF/EMF images and OpenDocument spreadsheets and presentations, introduces a Linux NVIDIA GPU engine package, and delivers updated image and text detection models, revised default confidence thresholds, and stability fixes for e-mail, Office, and text processing.
+
+#### [**New Features**](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#new-features)
+
+- Added support for WMF and EMF images (.wmf, .emf)
+- Added support for OpenDocument spreadsheets and presentations (.ods, .ots, .odp, .otp)
+- Added a Linux NVIDIA GPU engine package (requires CUDA 13.0 and NVIDIA driver R580 or newer)
+- Added engine and database versions to every scan result
+- Added metadata forensic analysis for images attached to .eml and .msg messages
+
+#### [**Changes and Improvements**](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#changes-and-improvements)
+
+- Updated the ML SDK from 1.7.0 to 1.8.0, model weights from 1.7.0 to 1.8.0, and the DB API from 10 to 11
+- Replaced OriginLens v0.5.1 with v1.4.2 in both FAST and FORENSIC profiles. The CNN and CommFor detectors and image heat maps have been removed; `output_images` remains available in the Core interface
+- Replaced the RoBERTa text classifier with Ettin-17m in the FORENSIC profile, and added Ettin-17m as a second text verdict source in the FAST profile
+- Updated default confidence bands: images now use 60/40 (previously 70/30), and the text suspicious threshold is now 50 (previously 45). Workflows still using the previous defaults are migrated automatically
+- Texts shorter than 45 words are no longer scored and are reported as Uncertain
+- Python engine modules are now compiled with Nuitka
+
+#### [**Bugfixes**](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#bugfixes)
+
+- Fixed an issue where scanning .msg files with certain code pages failed with error code 1
+- Fixed an issue where correctly typed .msg files were rejected as unsupported
+- Fixed an issue where capture date, camera, and GPS values stored in nested EXIF IFDs were not read
+- Fixed an issue where the fraud result was reported as `not detected` when the fraud classifier did not run; it is now reported as `not scanned`
+- Fixed an issue where unreadable Office documents were reported as an unsupported file type; they now fail with `err_code` 1 and a descriptive error message
+- Fixed an issue where files with no extractable text returned a model score; they now report text as Not Detected
+- Fixed an issue where text scans did not fail when the required text classifier could not be loaded
+
+## [V 2.3.0](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#v-230)
+
+Release date: 14 September 2026
+
+Release type: MAJOR
+
+AI Content Inspector 2.3.0 introduces support for Microsoft Office document formats, adds engine lifecycle notifications, and includes improvements to document text processing, an ML model update, and fixes for result consistency.
+
+#### [**New Features**](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#new-features)
+
+- Added support for Microsoft Word documents (.docx, .docm, .doc, .rtf, .odt)
+- Added support for Microsoft PowerPoint presentations (.pptx, .pptm, .potx, .potm, .ppsx, .ppsm, .ppt, .pot, .pps)
+- Added support for Microsoft Excel spreadsheets (.xlsx, .xlsm, .xltx, .xltm, .xlam, .xlsb, .xls, .xlt)
+- Added out-of-support lifecycle notifications, informing users when the engine version reaches end of support
+
+#### [**Changes and Improvements**](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#changes-and-improvements)
+
+- Reworked document text cleaning to improve the quality and consistency of text extracted for analysis
+- Improved the performance of markdown text cleanup
+
+#### [**Bugfixes**](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#bugfixes)
+
+- Fixed an issue where the result JSON could be inconsistent when preferences were misconfigured
+- Fixed an issue where sub-verdicts could be inconsistent when scanning with some features disabled
+
 ## [V 2.2.0](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#v-220)
 
-Release date: 8/10/2026
+Release date: 14 August 2026
 
 Release type: MAJOR
 
@@ -31,7 +92,7 @@ AI Content Inspector 2.2.0 introduces support for additional email file formats,
 
 ## [V 2.1.1](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#v-211)
 
-Release date: 8/10/2026
+Release date: 10 August 2026
 
 Release type: MINOR
 
@@ -47,7 +108,7 @@ Release type: MINOR
 
 ## [V 2.1.0](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#v-210)
 
-Release date: 7/13/2026
+Release date: 13 July 2026
 
 Release type: MAJOR
 
@@ -61,7 +122,7 @@ Release type: MAJOR
 
 ## [V 2.0.1](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#v-201)
 
-Release date: 5/28/2026
+Release date: 28 May 2026
 
 Release type: MINOR
 
@@ -71,7 +132,7 @@ Release type: MINOR
 
 ## [V 2.0.0](/docs/mdcore/release-notes/opswat-ai-content-inspector-release-notes#v-200)
 
-Release date: 5/21/2026
+Release date: 21 May 2026
 
 Release type: MAJOR
 

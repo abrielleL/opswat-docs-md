@@ -8,7 +8,7 @@ This article is only applicable to MetaDefender Core 4.19.0 and 4.19.1.
 
 For MetaDefender Core 4.19.2 or newer, all engines could be removed directly on the MetaDefender Core management console UI under Modules page.
 
-For MetaDefender Core 4.18.0 or older, please follow instructions here [What are the engine clean-up instructions?](/knowledge-base/what-are-the-engine-clean-up-instructions).
+For MetaDefender Core 4.18.0 or older, please follow instructions here [What are the engine clean-up instructions?](/docs/mdcore/knowledge-base/what-are-the-engine-clean-up-instructions).
 
 Sometimes, during the engines downloading/deployment process, some of them may remain in **"failed"** or **"permanently failed"** status. In that case, you could perform an engine clean-up by using MetaDefender Core built-in engine sweeper tool:
 
@@ -27,7 +27,7 @@ P, --port <port> Port of PostgreSQL server.
 U, --username <username> Username for PostgreSQL server.
 D, --database <database> Database name to connect.
 B, --builtin-postgres Only use if that is a built-in PostgreSQL server (installed on the same machine with MetaDefender Core)
-## MetaDefender Core 4.19.x database information to connect
+## [MetaDefender Core 4.19.x database information to connect](/docs/mdcore/troubleshooting/engine-clean-up-tool#metadefender-core-419x-database-information-to-connect)
 
 - **Host and port:** Specified while installing Core 4.19.0. In default installation option, MetaDefender Core setups local and connect to PostgreSQL server at localhost via port 5432
 - **Username:** Specified while installing Core 4.19.0. In default installation option, MetaDefender Core uses username postgres
@@ -39,7 +39,7 @@ Info
 
 For example: database name should be metadefender_core_lrmgvs in the sample screenshot below
 
-## Example usages
+## [Example usages](/docs/mdcore/troubleshooting/engine-clean-up-tool#example-usages)
 
 Assuming we will connect to a local PostgreSQL server with following info:
 
@@ -47,7 +47,7 @@ Assuming we will connect to a local PostgreSQL server with following info:
 - username = postgres
 - database name = metadefender_core_lrmgvs
 
-## Example 1: List all installed engines
+## [Example 1: List all installed engines](/docs/mdcore/troubleshooting/engine-clean-up-tool#example-1-list-all-installed-engines)
 
 BashCopyometascan-engine-sweeper.exe -B -H localhost -P 5432 -U postgres -D metadefender_core_lrmgvs -l
 
@@ -75,7 +75,7 @@ Installed engines:
 "dlp_8_windows" | "Proactive DLP"
 "clamav_1_windows" | "ClamAV"
 "filetype_1_windows" | "FileType"
-## Example 2: Remove engine package and database package of Archive engine (e.g. 7z_13_windows)
+## [Example 2: Remove engine package and database package of Archive engine (e.g. 7z_13_windows)](/docs/mdcore/troubleshooting/engine-clean-up-tool#example-2-remove-engine-package-and-database-package-of-archive-engine-eg-7z_13_windows)
 
 BashCopyometascan-engine-sweeper.exe -B -H localhost -P 5432 -U postgres -D metadefender_core_lrmgvs -e 7z_13_windows
 
@@ -104,7 +104,7 @@ The OPSWAT Metadefender Core service was started successfully.
  
 The OPSWAT Metadefender Core Node service is starting...
 The OPSWAT Metadefender Core Node service was started successfully.
-## Example 3: Remove engine only (retain its database)
+## [Example 3: Remove engine only (retain its database)](/docs/mdcore/troubleshooting/engine-clean-up-tool#example-3-remove-engine-only-retain-its-database)
 
 BashCopyometascan-engine-sweeper.exe -B -H localhost -P 5432 -U postgres -D metadefender_core_lrmgvs -e 7z_13_windows -d
 
@@ -133,7 +133,7 @@ The OPSWAT Metadefender Core service was started successfully.
  
 The OPSWAT Metadefender Core Node service is starting...
 The OPSWAT Metadefender Core Node service was started successfully.
-## Example 4: Remove all engines
+## [Example 4: Remove all engines](/docs/mdcore/troubleshooting/engine-clean-up-tool#example-4-remove-all-engines)
 
 BashCopyometascan-engine-sweeper.exe -B -H localhost -P 5432 -U postgres -D metadefender_core_lrmgvs -e "*"
 

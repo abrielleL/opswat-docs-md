@@ -140,7 +140,43 @@ TRUSTED_PROXY_HOPS=1
 
 Use this if MetaDefender Software Supply Chain sits behind a load balancer or ingress. Set the value to 2. Otherwise all users share the load balancer's address and are rate-limited together.
 
-> **Note: **The following limits apply to source code repositories, which are downloaded as ZIP archives. Sizes are given in B, KB, MB, GB or TB, where 1 KB = 1024 bytes. A repository that exceeds a limit is not scanned, and the reason appears in the Scan failed message on its report page.
+Behind a TLS-terminating load balancer or ingress, you must also set [Allowed Origins](https://www.opswat.com/docs/supply-chain/configuration/custom-configuration#allowed-origins), because `TRUSTED_PROXY_HOPS` alone does not cover the Origin check.
+
+## Allowed Origins
+
+Sets the browser origins that may open real-time SignalR connections to `/api/v1/hubs/*` and enables HTTP CORS for the same origins. Use a comma-separated list of origins in `scheme://host[:port]` format.
+
+Default value is empty. With an empty value, the API accepts only same-origin requests by comparing the browser Origin with the scheme, host and port it sees itself.
+
+For a single origin:
+
+```bash
+ALLOWED_ORIGINS=https://mdssc.example.com
+```
+
+For multiple origins:
+
+```bash
+ALLOWED_ORIGINS=https://mdssc.example.com,https://mdssc-secondary.example.com
+```
+
+Use this when a load balancer, reverse proxy or Kubernetes ingress terminates TLS and forwards plain HTTP to MDSSC. The browser sends an `https://` Origin, but the API sees `http`, so the Origin check fails.
+
+On Linux, set `ALLOWED_ORIGINS` in `/etc/mdssc/customer.env`, then apply it:
+
+```bash
+sudo mdssc -u update
+```
+
+For Kubernetes, set `ALLOWED_ORIGINS` in the `helm_charts/mdssc` chart `values.yaml`. The default is `""`.
+
+If the value is missing or wrong, `/api/v1/hubs/cross-domain-transfer/negotiate` returns HTTP 403. The Cross Domain Transfer Activity Log stays empty and shows a connection error. Other features continue to work because they use REST.
+
+To verify the value, sign in and open the browser developer tools Network tab. The `/api/v1/hubs/cross-domain-transfer/negotiate` request returns HTTP 200 when the value is correct and HTTP 403 when it is missing or wrong.
+
+Installs that serve HTTPS themselves with `sudo mdssc -u enable_https`, or use plain HTTP without a TLS proxy, need no change.
+
+> **Note:** The following limits apply to source code repositories, which are downloaded as ZIP archives. Sizes are given in B, KB, MB, GB or TB, where 1 KB = 1024 bytes. A repository that exceeds a limit is not scanned, and the reason appears in the Scan failed message on its report page.
 
 ## Maximum Archive Download Size
 

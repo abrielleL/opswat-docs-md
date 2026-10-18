@@ -2,6 +2,8 @@
 
 # Squid
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Warning
+
 There is a bug with RESPMOD (REQMOD is working well) of Squid from version 5.5 to 6.11 then the file > 65563 bytes can not be download (<https://bugs.squid-cache.org/show_bug.cgi?id=5463>)
 
 Please use Squid version **4.13** or **6.13** or **7.0.1** (Which has already included the bug fix)
@@ -112,6 +114,12 @@ Generate a new root certificate for Squid:
 openssl.exe req -new -newkey rsa:1024 -days 1000 -nodes -x509 -keyout myc.pem -out myc.pem
 
 After generating a new certificate, the certificate storage should be reinitialized by deleting the <SQUIDFOLDER>\var\cache\squid_ssldb folder and running:
+
+- Squild v4 or newer
+
+<SQUIDFOLDER>\lib\squid\security_file_certgen.exe -c -s <SQUIDFOLDER>\var\cache\squid_ssldb
+
+- Squild older than v4
 
 <SQUIDFOLDER>\lib\squid\ssl_crtd.exe -c -s <SQUIDFOLDER>\var\cache\squid_ssldb
 

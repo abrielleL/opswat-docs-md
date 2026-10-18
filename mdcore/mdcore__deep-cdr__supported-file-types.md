@@ -2,6 +2,7 @@
 
 # Supported File Types
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [What is CDR?](/docs/mdcore/deep-cdr/supported-file-types#what-is-cdr)
 
 An increasingly popular and effective method of compromising computer security, especially as part of a targeted attack, involves sharing common document types or image files with victims. Even though the original versions of these files do not contain executable data, attackers have found ways to trigger these files to execute embedded malicious code. Popular techniques used to accomplish this include VBA macros, exploit payloads, and embedded Flash or JavaScript code. This type of attack has a high success rate because most users don’t expect common file types to contain infections. For high-risk files or scenarios, Content Disarm & Reconstruction (CDR) prevents any possibility of malicious content (including zero-day threats) from executing. High-risk files can be sanitized through several different methods:
@@ -9,7 +10,7 @@ An increasingly popular and effective method of compromising computer security, 
 - Removing hidden exploitable objects (e.g., scripts, macros, etc.)
 - Converting the file format
 
-## [Supported File Types (total 230)](/docs/mdcore/deep-cdr/supported-file-types#supported-file-types-total-230)
+## [Supported File Types (total 231)](/docs/mdcore/deep-cdr/supported-file-types#supported-file-types-total-231)
 
 | Source File Type | Description | Target Sanitized Types |
 | --- | --- | --- |
@@ -134,6 +135,7 @@ An increasingly popular and effective method of compromising computer security, 
 | u3d | Universal 3D | **u3d**, 3ds, dae, stl, pdf, drc, rvm, fbx |
 | drc | Google Draco | **drc**, 3ds, dae, pdf, u3d, rvm, fbx |
 | rvm | AVEVA Plant Design Management System Model | **rvm**, 3ds, dae, stl, pdf, u3d, drc, fbx |
+| hl7 | Health Level Seven | **hl7** |
 | dcm | Digital Imaging and Communications in Medicine | **dcm** |
 | shp | Shapefile | **shp** |
 | shx | Shapefile | **shx** |

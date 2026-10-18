@@ -2,6 +2,18 @@
 
 # File Structure Validation release notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## [v2.1.1](/docs/mdcore/release-notes/file-structure-validation-release-notes#v211)
+
+Release date: 10/14/2026
+
+- Reduced Stack Polyglot false positives
+- Returned orphaned objects found by the PDF analyzer.
+- Improved the XML schema validation output when validation fails.
+- Reported more types of embedded content as soon as it is found.
+- Fixed polyglot detection failures, slow processing when many files were scanned at the same time.
+- Fixed the Schemas Validation setting having no effect when disabled.
+
 ## [v2.1.0](/docs/mdcore/release-notes/file-structure-validation-release-notes#v210)
 
 Release date: 9/23/2026

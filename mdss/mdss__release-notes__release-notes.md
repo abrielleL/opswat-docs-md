@@ -2,6 +2,26 @@
 
 # Release notes
 
+## **MetaDefender™ Storage Security 4.6.1**
+
+**Release date:** October 14, 2026
+
+**End of support**: April 14, 2028
+
+#### **Enhancements**
+
+- **Workflow file filters in the web UI.** The file type, size and last modified filters introduced in 4.6.0 can now be set on the workflow diagram, in a File filters node between File discovery and Scan pool. You can pick whole file type categories or single extensions, add extensions outside the catalog under Other extensions, set a size range and a last modified window, and see the filters a workflow uses in the Workflows list, in the New job and Job details drawers, and as optional columns in Reports and Inventory.
+- **Larger file type catalog and custom extensions.** The file type catalog lists 378 extensions, up from 111, taken from the MetaDefender Core supported file type lists for Deep CDR and Proactive DLP, and any other extension can be added by hand in the UI or through the API, with the default limit per workflow raised from 250 to 500. The filter compares the extension in the file name and never inspects the content, so a file without an extension always passes. A size or date range whose maximum is not above its minimum is refused on save and on settings import instead of being saved and skipping every file, and a workflow saved earlier with such a range is refused on its next update until the range is corrected.
+
+#### **Improvements**
+
+- **Arabic and Hebrew file names in reports.** File and folder names in Arabic, Persian or Hebrew display correctly in the Reports file list, in file details and in the PDF report. Each name reads in its own direction, the path runs from the root folder to the file, and the extension follows the file name. The PDF report, which drew Arabic letters reversed and unjoined, renders them as written, and names that mix Arabic or Hebrew with Latin words lay out the same way in the PDF as in the UI.
+
+#### **Bug Fixes**
+
+- **Rescans no longer stuck in Cancelled.** Rescanning a file from a completed or cancelled scan was accepted, but the file went straight back to Cancelled and never ran, and no further rescan could recover it. Rescans now run and end with a verdict, and cancelling a scan or a single file still stops the work queued for it.
+- **NFS and SMB scans retry transient listing errors.** In 4.6.0, a folder listing that hit a short-lived error, such as a dropped connection or the NFS or SMB service not yet ready, was skipped without a retry, and a scan started while that service was unreachable ended within seconds with no files. Listings are retried again, and a folder that still fails after the retries is reported as a warning while the scan continues. The warning shows the underlying status, so a timeout can be told from a refused connection, and the SKIP_FOLDER_ON_MAX_TRANSIENT_ERROR_RETRIES setting is no longer read.
+
 ## **MetaDefender™ Storage Security 4.6.0**
 
 **Release date:** October 5, 2026

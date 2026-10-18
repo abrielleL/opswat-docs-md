@@ -6,7 +6,7 @@ View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
 Logging raw TCP traffic can be used to identify issues with bad requests. It provides debug level details for requests that were refused by ICAP Server's request parser due to syntax errors.
 
-## [Important notes](/docs/mdicap/v5.14.1/configuration/logging-traffic-of-bad-requests#important-notes)
+## Important notes
 
 Warning
 
@@ -16,15 +16,15 @@ Warning
 
 Raw TCP traffic logs may contain sensitive or private information in a clear-text format.
 
-## [Step-by-step guide](/docs/mdicap/v5.14.1/configuration/logging-traffic-of-bad-requests#step-by-step-guide)
+## Step-by-step guide
 
 Info
 
-For configuration details see [3.1.2 MetaDefender ICAP Server configuration file](/docs/mdicap/v5.14.1/configuration/configuration-file).
+For configuration details see [3.1.2 MetaDefender ICAP Server configuration file](/configuration/configuration-file).
 
-## [Windows](/docs/mdicap/v5.14.1/configuration/logging-traffic-of-bad-requests#windows)
+## Windows
 
-### [Enable logging raw TCP traffic](/docs/mdicap/v5.14.1/configuration/logging-traffic-of-bad-requests#enable-logging-raw-tcp-traffic)
+### Enable logging raw TCP traffic
 
 Perform the following steps to enable traffic logging:
 
@@ -42,7 +42,7 @@ Perform the following steps to enable traffic logging:
 5. Start MetaDefender ICAP server
 
 > net start mdicapsrv
-### [Disable logging raw TCP traffic](/docs/mdicap/v5.14.1/configuration/logging-traffic-of-bad-requests#disable-logging-raw-tcp-traffic)
+### Disable logging raw TCP traffic
 
 Perform the following steps to disable traffic logging:
 
@@ -60,9 +60,9 @@ Perform the following steps to disable traffic logging:
 5. Start MetaDefender ICAP server
 
 > net start mdicapsrv
-## [Linux (CentOS syntax)](/docs/mdicap/v5.14.1/configuration/logging-traffic-of-bad-requests#linux-centos-syntax)
+## Linux (CentOS syntax)
 
-### [Enable logging raw TCP traffic](/docs/mdicap/v5.14.1/configuration/logging-traffic-of-bad-requests#enable-logging-raw-tcp-traffic)
+### Enable logging raw TCP traffic
 
 Perform the following steps to enable traffic logging:
 
@@ -78,7 +78,7 @@ Perform the following steps to enable traffic logging:
 5. Start MetaDefender ICAP server
 
 # service mdicapsrv start
-### [Disable logging raw TCP traffic](/docs/mdicap/v5.14.1/configuration/logging-traffic-of-bad-requests#disable-logging-raw-tcp-traffic)
+### Disable logging raw TCP traffic
 
 Perform the following steps to enable traffic logging:
 

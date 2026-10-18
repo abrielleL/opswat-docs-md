@@ -7,9 +7,9 @@ View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
 Warning
 
-**Upgrading directly** from versions prior to 2.5.1 to 3.3.0 is **not possible!**
+**Direct upgrade not supported:** Versions earlier than 2.5.1 cannot be upgraded directly to v3.3.x.
 
-**Recommended Upgrade Path:** First upgrade to **2.5.1**, then install **3.3.0**.
+**Recommended upgrade path:** Upgrade to 2.5.1 first, then install v3.3.X.
 
 ## [MetaDefender Aether™ v3.3.0 (including MetaDefender Sandbox™ capabilities)](/docs/filescan/release-notes/release-notes-latest#metadefender-aether-v330-including-metadefender-sandbox-capabilities)
 
@@ -99,5 +99,11 @@ Static and dynamic analysis are separate options, so you can run either one or b
 ## [**Improvements**](/docs/filescan/release-notes/release-notes-latest#improvements)
 
 - **Usage Reporting:** Aether now shares anonymous usage metrics with OPSWAT through OpenTelemetry, to help us improve performance and prioritize the features you rely on. Only operational data is collected. No file contents, no personal data. Usage Reporting is on by default, and you can turn it off at any time in the Admin Panel.
+
+## [**Awareness**](/docs/filescan/release-notes/release-notes-latest#awareness)
+
+**Java 21 Notice for Adaptive Sandbox**
+
+- This release includes a notification about an upcoming change to Adaptive Sandbox. A future Adaptive Sandbox feature will require Java 21, so customers should plan an upgrade from Java 17. Delivery of this feature is planned for the second half of 2027. No action is required at this time, and Adaptive Sandbox remains fully supported on Java 17. The notification is an early advisory to allow time for upgrade planning before the feature is released. Further details will be provided closer to the release date.
 
 See the "Technical Datasheet" for a complete list of features: <https://docs.opswat.com/filescan/datasheet/technical-datasheet>

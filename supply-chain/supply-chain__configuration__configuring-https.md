@@ -27,6 +27,10 @@ For disabling HTTPS communication, run the following command:
 sudo mdssc -u disable_https
 ```
 
+### TLS terminated at a load balancer or ingress
+
+If a load balancer or ingress terminates TLS, keep MDSSC on HTTP and set [ALLOWED_ORIGINS](https://www.opswat.com/docs/supply-chain/configuration/custom-configuration#allowed-origins) to the browser address. Deployments where MDSSC serves HTTPS itself need no change.
+
 ## Custom CA certificates
 
 Custom certificates can be loaded in each **MDSSC** container by placing them in the appropriate configuration directory depending on the host OS. If the directory does not exist, an empty one is created at startup. Any number of certificates can be placed in the directory and they will be loaded into **MDSSC**.
@@ -66,3 +70,7 @@ MD_CORE_CERTIFICATE_VALIDATION=VALUE
 - **Default** → A MetaDefender Core server with invalid certificate can't be integrated
 - **IgnoreChainErrors** → A MetaDefender Core server with certificate chain errors can be integrated
 - **IgnoreAllErrors** → A MetaDefender Core server with invalid certificate can be integrated
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

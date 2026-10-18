@@ -10,7 +10,7 @@ Warning
 
 This documentation is assuming that MetaDefender ICAP Server is already configured and working properly.
 
-## Enable MetaDefender ICAP Server
+## [Enable MetaDefender ICAP Server](/docs/mdicap/v5.14.1/integrations/bypassing-metadefender-icap-server-temporarily#enable-metadefender-icap-server)
 
 To enable MetaDefender ICAP Server on Blue Coat:
 
@@ -24,7 +24,7 @@ To enable MetaDefender ICAP Server on Blue Coat:
    - The tab color should turn black.
 7. Click "Install policy
 
-## Disable MetaDefender ICAP Server
+## [Disable MetaDefender ICAP Server](/docs/mdicap/v5.14.1/integrations/bypassing-metadefender-icap-server-temporarily#disable-metadefender-icap-server)
 
 To disable ICAP server on Blue Coat:
 

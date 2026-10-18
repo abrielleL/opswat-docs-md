@@ -2,6 +2,8 @@
 
 # Configure MetaDefender Drive with Smart Touch
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 This section covers the **Settings and Configuration** available for **MetaDefender Drive with Smart Touch**
 
 ## [Activation](/docs/mddrive/configuration/smart-touch-configurations#activation)

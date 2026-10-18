@@ -60,4 +60,10 @@ mdssc_ingress:
   class: nginx                      # Sets the ingress class depending on the installed ingress controller
 ```
 
+> When the ingress terminates TLS, set [ALLOWED_ORIGINS](https://www.opswat.com/docs/supply-chain/configuration/custom-configuration#allowed-origins) in the `helm_charts/mdssc` chart values to the ingress URL.
+
 ##
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

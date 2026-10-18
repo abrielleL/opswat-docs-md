@@ -16,7 +16,9 @@ Getting Started[##### MetaDefender Optical Diode Introduction
 
 ###### Learn how to activate/deactivate your MetaDefender Optical Diode license](/docs/netwalldiode/netwall-diode-license)[##### Configuration
 
-###### Instructions to configure management IP, file transfer feature and a TCP/UDP streams. How to update MetaDefender Optical Diode software.](/docs/netwalldiode/configuration)Deployment & Usage[##### OPC DA Connector
+###### Instructions to configure management IP, file transfer feature and a TCP/UDP streams. How to update MetaDefender Optical Diode software.](/docs/netwalldiode/configuration)[##### OPSWAT NetWall OD-102 Common Criteria Evaluated Configuration Guide v1.0
+
+######](/docs/netwalldiode/opswat-netwall-od-102-common-criteria-evaluated-configuration-gu)Deployment & Usage[##### OPC DA Connector
 
 ###### Learn how to configure MetaDefender Optical Diode OPC Connector to replicate OPC streams](/docs/netwalldiode/opcda-connector)[##### OPSWAT Screen View
 

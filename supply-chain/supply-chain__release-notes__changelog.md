@@ -2,6 +2,32 @@
 
 # Changelog
 
+## Version 4.2.0
+
+Release Date: October 14, 2026
+
+**Highlights**
+
+- **Cryptographic Bill of Materials (CBOM) and Quantum Safety:** MDSSC now finds the cryptographic assets in scanned content, such as algorithms and certificates. Each job, file and repository shows a quantum-safety verdict, and a new Cryptography dashboard summarizes the assets across all jobs.
+- **Event-Based Scans for Harbor and Nexus Binaries:** Harbor and Nexus Repository can now send webhook events to MDSSC. A new or updated artifact starts a scan automatically.
+- **Copy Remediation for Harbor and GitHub:** Copy remediation is now available for Harbor and GitHub connections.
+- **Cross-Domain Transfer Improvements:** Each high-side connection mapping now selects its own import scan workflow. The high side skips files it already scanned, and malicious, unreadable, failed and canceled files always block a transfer.
+
+**Improvements**
+
+- **Security Hardening:** The server validates every request field. Login errors do not reveal whether a username exists.
+- **CWE Information:** The CVE table and the CVE details show CWE IDs.
+- **GitHub Enterprise:** Webhook events now start scans.
+- **API Keys:** Each user now has one API key. Saving a new key replaces the old one.
+
+**Bug Fixes**
+
+- Saving the Edit User dialog keeps the user's SSO or tenant role instead of promoting the user to Administrator
+- A custom role can no longer use the "Administrator" name, so the role a user sees matches their access
+- After a license is activated during onboarding, the "No active license" banner no longer appears
+- MDSSC now scans the container image configuration for images without an OS
+- The Upcoming Jobs table now shows scheduled jobs
+
 ## Version 4.1.1
 
 Release Date: October 9, 2026

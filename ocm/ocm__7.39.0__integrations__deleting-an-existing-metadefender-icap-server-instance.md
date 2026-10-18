@@ -1,7 +1,8 @@
 <!-- source: https://www.opswat.com/docs/ocm/7.39.0/integrations/deleting-an-existing-metadefender-icap-server-instance -->
 
-[OPSWAT Central Management v7 - Legacy](https://www.opswat.com/docs/ocm)Need Help?
 # Deleting an existing MetaDefender ICAP Server instance
+
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
 The following guideline describes how to delete a MetaDefender ICAP Server instance from OPSWAT Central Management.
 

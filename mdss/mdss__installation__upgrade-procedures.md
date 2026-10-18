@@ -35,6 +35,12 @@ Starting with version 4.0.0 of MDSS the database will be migrated from MongoDB t
 >
 > Visit [My OPSWAT](https://my.opswat.com/)  to download the latest `.deb` or `.rpm` package.
 
+> **Warning**
+>
+> > If you have overridden `ENABLED_MODULES` in `/etc/mdss/customer.env`, review the list before upgrading. Module names must match the ones in `/etc/mdss/.env` of the new version: `onedrive` was renamed to `graph` in 4.0.0 (OneDrive and SharePoint Online), and newer modules such as `mft`, `ftp` and `oraclesdk` are only enabled if they are in your list. Names are case-sensitive and must be separated by commas without spaces.
+>
+> > Starting with 4.6.0, unknown module names are ignored and the corresponding integrations are not available after the upgrade. Versions 4.0.0 to 4.5.2 stop instead with an error such as `open /etc/mdss/docker-compose.onedrive.yml: no such file or directory`. If you do not need a custom list, remove the line so the default from `.env` applies.
+
 > **Offline Deployments**
 >
 > In case of an offline deployment, the offline steps need to be followed: [Offline Upgrade](https://www.opswat.com/docs/mdss/installation/upgrade-procedures#offline-upgrade)

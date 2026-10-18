@@ -1,19 +1,29 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes-smart-touch -->
 
-# MetaDefender Drive Smart Touch v2.2.0
+# MetaDefender Drive Smart Touch v2.3.0
+
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
 |  |  |
 | --- | --- |
-| **Released on** **Sep 08, 2026** | This release includes new features, improvements, bug fixes. |
+| **Released on** **Oct 13, 2026** | This release includes new features, improvements, bug fixes. |
 
 **New Features**
 
-- **Reset from SmartTouch:** Administrators can reset a Smart Touch back to its previous known working state from the device itself, recovering units stuck in activation loops or with a corrupted image. Refer to [Reset MetaDefender Drive Image with Smart Touch](/docs/mddrive/maintenance/reset-smart-touch).
+- **Improved the Secure Files User Experience**: so the device automatically goes directly to file sharing, eliminating the need for users to manually leave Locked Mode, even before the device is plugged in.
+- **Smart Touch now synchronizes system time with Central Management or My OPSWAT,** including air-gapped on-premises Central Management environments without Internet NTP access.
 
-**Improvements and Bug Fixes**
+**Improvements**
 
-- A Drive that cannot reach an update server still lists the engines it holds in System Settings, rather than reporting none.
-- Starting a second scan after a reboot without reconnecting the cable no longer strips MetaDefender Drive of its engines or its OPSWAT Central Management enrollment.
-- Engine transfers that stop because the wireless connection was switched off report the lost connection, so an operator reconnects and retries rather than flashing the drive again.
-- When the connected network reports a time zone, syncing the clock adopts it automatically, so scan timestamps match local time without an operator selecting the zone by hand.
-- Importing a certificate authority certificate for Wi-Fi follows the same full-screen prompt-and-result flow as the Kiosk and Secure Storage imports, bringing the consistency in user experience.
+- **Download progress:** The update progress bar displays current transfer speed alongside percentage and bytes remaining, letting administrators know how quickly a large image is arriving.
+- **MetaDefender Drive uses Smart Touch Internet Bridging** as an automatic fallback when a scan host has no direct internet access, provide an option when internet is needed, under user control.
+- A storage-full device can be cleared using an offline maintenance script that removes rebuildable files — such as leftover update packages, log files, caches and crash dumps, or optionally engine definitions and the MetaDefender Drive package — while never touching customer data like license keys, settings or scan reports.
+- Smart Touch enrollment finishes faster — full enrollment now takes around 2 minutes rather than remounting and re-extracting unchanged components on every attempt.
+- Smart Touch administrators can configure One-Time Password settings for enrolled MetaDefender Drive devices through OPSWAT Central Management, with changes synchronized automatically to ensure consistency across all platforms.
+- When Central Management does not have an MetaDefender Drive image available, Smart Touch reports clearly which item was missing rather than showing a generic error.
+
+**Bug Fixes**
+
+- Smart Touch coredumps are now named after the crashing process and previous versions' dumps are purged on upgrade.
+- MetaDefender Drive booted from Smart Touch uses the appliance's connection automatically when it has none of its own.
+- MetaDefender Drive no longer fails to enroll with OPSWAT Central Management when the image is unavailable or the MetaDefender Drive version is empty, so enrollment completes with a clear status instead of reporting an error.

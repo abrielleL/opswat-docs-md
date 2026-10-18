@@ -6,13 +6,13 @@ View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
 This documentation is based on FortiGate 5.4.3 documentation using web-based manager and CLI. For different version of FortiGate or missing information, refer to FortiGate user guides.
 
-## [Configuration via Web-Based Manager](/docs/mdicap/integrations/fortigate#configuration-via-web-based-manager)
+## Configuration via Web-Based Manager
 
-### [Enabling ICAP feature](/docs/mdicap/integrations/fortigate#enabling-icap-feature)
+### Enabling ICAP feature
 
 ICAP does not appear by default in the web-based manager, it has to be enabled by going to **System → Feature Select** and enabling **ICAP**. You may need to refresh the page in order to see the changes.
 
-### [Adding ICAP server and profile](/docs/mdicap/integrations/fortigate#adding-icap-server-and-profile)
+### Adding ICAP server and profile
 
 1. Add ICAP server
 
@@ -35,7 +35,7 @@ ICAP does not appear by default in the web-based manager, it has to be enabled b
    2. Create new or edit an existing policy
    3. In the section '**Security Profiles**', switch on ICAP and select the previously created profile.
 
-## [Configuration via CLI](/docs/mdicap/integrations/fortigate#configuration-via-cli)
+## Configuration via CLI
 
 1. Add ICAP server
 
@@ -115,20 +115,20 @@ config firewall policy [or policy6 if IPv6 is used]
 edit <index_int>
 set icap-profile ""
 end
-## [Scanning HTTPS content](/docs/mdicap/integrations/fortigate#scanning-https-content)
+## Scanning HTTPS content
 
 To be able to inspect and scan SSL/SSH traffic you have to enable it in Fortigate. After enabling this option you should download the certificate used by Fortigate and install/import it to the browsers which communicate with Fortigate. Otherwise you might see SSL/security related notifications or errors, or even not working web pages.
 
 The certificate can be downloaded under **Security Profiles→ SSL/SSH Inspection**
 
-## [Enable SSL inception via GUI](/docs/mdicap/integrations/fortigate#enable-ssl-inception-via-gui)
+## Enable SSL inception via GUI
 
 1. Navigate to **Policy&Objects** and select the policy you would like to enable SSL inception to (for example an Explicit Proxy Policy)
 
 2. In the **Edit** page of the selected policy locate the **Security Profiles** section
 3. Turn **SSL/SSH Inspection** on and set it to **deep-inspection**
 
-## [Enable SSL inspection via CLI](/docs/mdicap/integrations/fortigate#enable-ssl-inspection-via-cli)
+## Enable SSL inspection via CLI
 
 The steps shown above would like this via CLI:
 
@@ -137,7 +137,7 @@ config firewall explicit-proxy-policy
 edit 1
 set ssl-ssh-profile deep-inspection
 end
-## [Resources](/docs/mdicap/integrations/fortigate#resources)
+## Resources
 
 - [Other FortiGate documentation](http://docs.fortinet.com/)
 - [FortiOS Handbook - The Complete Guide to FortiOS](http://docs.fortinet.com/d/fortigate-fortios-handbook-the-complete-guide-to-fortios-beta)

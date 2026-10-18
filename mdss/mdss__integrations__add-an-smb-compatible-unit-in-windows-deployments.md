@@ -15,7 +15,7 @@ In order to integrate SMB Compatible Storage with MetaDefender Storage Security 
 2. Give your [account](https://www.opswat.com/docs/mdss/operations/accounts-and-groups) a name so you can easily identify it later
 3. Enter the name of the user that will be used to access the SMB share
 4. Enter the password of the above user.
-5. Enter the IP address of the SMB server you wish to connect to.
+5. Enter the IP (or hostname) of the SMB server you wish to connect to.
 6. Specify the port number used for the SMB connection, **445** being the default SMB port
 7. Click on Next to finish the process.
 8. From the left side menu, navigate to **Inventory**, click **Add New** > **Unit**, choose the previously created account and click **Next**
@@ -24,7 +24,20 @@ In order to integrate SMB Compatible Storage with MetaDefender Storage Security 
 
 9. Give your unit a unique name so you can identify it later.
 10. Assign your unit to a Group
-11. Indicate the specific share path on the SMB server from which you want to access files .
+11. Indicate the specific share path on the SMB server from which you want to access files. The Share path is the share name as published on the SMB server, optionally followed by a subfolder path inside that share. It must not contain the server. The server comes from the account, and MDSS builds the UNC path `\\<server>\<share path>` itself.
+
+    **Format**: `<share name>[/<subfolder>/<subfolder>...]`
+    - Forward slashes and backslashes are both accepted.
+    - Leading and trailing slashes are ignored.
+    - The value is used exactly as typed, so avoid leading or trailing spaces.
+    **Examples** (server 10.0.0.5 configured on the account):
+
+    | Share path | Connects to |
+    | ---- | ---- |
+    | finance | \\10.0.0.5\finance |
+    | finance/reports | \\10.0.0.5\finance\reports |
+    | finance\reports\2026 | \\10.0.0.5\finance\reports\2026 |
+    | Backups$ | \\10.0.0.5\Backups$ (hidden share) |
 12. Click **Next** in order to finish the process.
 
 > **Info**

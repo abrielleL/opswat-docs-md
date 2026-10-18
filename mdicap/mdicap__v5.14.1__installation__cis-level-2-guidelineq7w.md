@@ -8,26 +8,26 @@ Support Ubuntu Pro 22.04, 24.04
 
 For more details about the Center for Internet Security (CIS) please refer to the [**official documentation**](https://ubuntu.com/security/certifications/docs/usg/cis).
 
-## [Instruction Steps](/docs/mdicap/v5.14.1/installation/cis-level-2-guidelineq7w#instruction-steps)
+## Instruction Steps
 
-#### [Install the UA (Ubuntu Advantage) client](/docs/mdicap/v5.14.1/installation/cis-level-2-guidelineq7w#install-the-ua-ubuntu-advantage-client)
+#### Install the UA (Ubuntu Advantage) client
 
 BashCopysudo apt update
 sudo apt install ubuntu-advantage-tools
-#### [Set up the Ubuntu Security Guide](/docs/mdicap/v5.14.1/installation/cis-level-2-guidelineq7w#set-up-the-ubuntu-security-guide)
+#### Set up the Ubuntu Security Guide
 
 BashCopysudo ua enable usg
 sudo apt install usg
-#### [Check SCAP Content Overview (Security Content Automation Protocol)](/docs/mdicap/v5.14.1/installation/cis-level-2-guidelineq7w#check-scap-content-overview-security-content-automation-protocol)
+#### Check SCAP Content Overview (Security Content Automation Protocol)
 
 BashCopysudo oscap info /usr/share/ubuntu-scap-security-guides/1/benchmarks/ssg-ubuntu2204-ds.xml
-#### [Auditing an Ubuntu System for DISA-STIG Compliance](/docs/mdicap/v5.14.1/installation/cis-level-2-guidelineq7w#auditing-an-ubuntu-system-for-disa-stig-compliance)
+#### Auditing an Ubuntu System for DISA-STIG Compliance
 
 BashCopysudo usg audit cis_level2_server
 
 The report is generated in /var/lib/usg/
 
-#### [Applying the CIS rules to a Set of Systems](/docs/mdicap/v5.14.1/installation/cis-level-2-guidelineq7w#applying-the-cis-rules-to-a-set-of-systems)
+#### Applying the CIS rules to a Set of Systems
 
 There are 2 ways to apply the CIS rules:
 

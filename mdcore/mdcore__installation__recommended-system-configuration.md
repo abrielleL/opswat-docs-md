@@ -2,6 +2,8 @@
 
 # Recommended System Configuration
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 MetaDefender Core supports a wide range of deployment options, including air-gapped environments, providing the flexibility to choose the environment that best suits customers' requirements and infrastructure.
 
 - Physical server.
@@ -70,10 +72,10 @@ The resources listed below (CPU, RAM, disk space) are the minimum recommended fo
 - Microsoft Visual C++ Redistributable for Visual Studio 2015–2022 (x64), version 14.38 or later.
 - PostgreSQL: Only applicable when using a pre-installed PostgreSQL server running remotely.
 
-  - From 14.5 to 14.23
-  - From 15.7
-  - From 16.4
-  - From 18.4
+  - 14.5 - 14.23
+  - 15.7 - latest 15.x version
+  - 16.4 - latest 16.x version
+  - 18.4 - latest 18.x version
 
 Further modules (engines) also have dependencies as described below.
 
@@ -166,10 +168,10 @@ The resources listed below (CPU, RAM, disk space) are the minimum recommended fo
 - lsb_release (Rocky Linux 9.x/Red Hat 9.x)
 - postgresql - only applicable when using a pre-installed PostgreSQL server running remotely
 
-  - From 14.5 to 14.23
-  - From 15.7
-  - From 16.4
-  - From 18.4
+  - 14.5 - 14.23
+  - 15.7 - latest 15.x version
+  - 16.4 - latest 16.x version
+  - 18.4 - latest 18.x version
 
 Not all the above dependencies will need to be installed, it is dependent on different Unix distro and version
 

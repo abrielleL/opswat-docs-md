@@ -4,13 +4,13 @@
 
 The **Packages** tab of the Reports page is the package-centric view of your scan results: every package discovered across your scans, aggregated into a single Software Bill of Materials. The severity summary at the top shows the total number of vulnerabilities across all packages.
 
-![](https://uploads.developerhub.io/prod/jdK6/2gq9apy7adfvl03avqlpuzc7wll66wj2cytwnttyueeuiti94ktbn1nmh30sokj4.png)
+![](https://uploads.developerhub.io/prod/jdK6/j4equ547psd2x7dl9nt1bn55vulx2vt6mudghn9h31u6so11siuut0zjdtagmloz.png)
 
-For each package you can see its version, the repositories where issues were found, the number of vulnerabilities by severity, the license risks, and when it was last updated. Use the search field to find a package by name, and the column filters to filter by severity or license risk. Click a package to open its details.
+For each package you can see its version, the repositories where issues were found, the number of vulnerabilities by severity, its dependencies, the license risks, and when it was last updated. Use the search field to find a package by name, and the severity summary to filter by severity. Click a package to open its details.
 
 ## Package details
 
-Click a package in the Packages tab to open its **Package Overview** - the list of all scanned versions of that package, each with its vulnerabilities, license risks, release date, and the recommended version to upgrade to:
+Click a package in the Packages tab to open its **Package Overview** - the list of all scanned versions of that package, each with its vulnerabilities, dependencies, license risks, release date, and the recommended version to upgrade to:
 
 ![](https://uploads.developerhub.io/prod/jdK6/1n6orrblwuw5ajbu4tqbbpg0bijykfldqw0oa73tg4piweoswuwlmwskvs976r6n.png)
 
@@ -21,9 +21,10 @@ Click a version to open the **package version details**. You can also land here 
 - **Software Bill of Materials:** the vulnerability totals by severity - click a severity to filter the CVE list below;
 - **License Risks:** the number of blocked licenses, with the details of each license;
 - **CVEs:** every vulnerability found in this version, with its severity and the versions that fix it. Expand a row for the description, the CVSS score, and the references, or use the arrow at the end of the row to open the reference in a new tab;
+- **Transitive Dependencies:** the dependencies of this version, with their version constraint, vulnerabilities, and ecosystem;
 - **Connections:** where the package was found - the connection, repository, reference, and scan date.
 
-![](https://uploads.developerhub.io/prod/jdK6/jr3se3vugous0u57qpytpdqz3j4vvtznvun47z7txjci8f39a062y1s3kql4g2ly.png)
+![](https://uploads.developerhub.io/prod/jdK6/94240xobhlj21986fxb5hd3rkdahy38bqtsew6e0fz16094cj0lnntx3722ig4ul.png)
 
 ## Package labels
 
@@ -52,3 +53,7 @@ You can attach labels to packages to categorize them - for example, to mark a fi
 - Click **Attach**. The label is displayed in the **Labels** column of the package:
 
 ![](https://uploads.developerhub.io/prod/jdK6/vdokbkbbxodux948abch893nram3qpoz2m70waop42c20vmcu46wvprz6ezaapf9.png)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

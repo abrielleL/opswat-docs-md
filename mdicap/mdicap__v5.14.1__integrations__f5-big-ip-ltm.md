@@ -12,11 +12,11 @@ The simplest way to integrate MetaDefender ICAP Server with F5 BIG IP is to use 
 
 The iApps technology was released in F5’s v11, so the description in this page is more generic.
 
-For details about the MetaDefender ICAP Server iApp template and how to use it, see [4.4.3.6 ICAP Server iApp template](/docs/mdicap/v5.14.1/integrations/icap-server-iapp-template).
+For details about the MetaDefender ICAP Server iApp template and how to use it, see [4.4.3.6 ICAP Server iApp template](/integrations/icap-server-iapp-template).
 
-## [Sample Deployment Diagram](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#sample-deployment-diagram)
+## Sample Deployment Diagram
 
-## [System Requirements](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#system-requirements)
+## System Requirements
 
 The following systems are required to set up MetaDefender ICAP Server with an F5 BIG IP
 
@@ -24,27 +24,27 @@ The following systems are required to set up MetaDefender ICAP Server with an F5
 - MetaDefender ICAP Server
 - MetaDefender Core
 
-## [Deployment ‘How To’ Video](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#deployment-how-to-video)
+## Deployment ‘How To’ Video
 
 To help you get up and running quickly, watch this video that demonstrates how to integrate MetaDefender ICAP Server with F5® BIG-IP® Load Traffic Manager™ (LTM®): <https://www.opswat.com/videos/how-to-integrate-metadefender-icap-with-f5>
 
-## [Configuring MetaDefender ICAP Server](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#configuring-metadefender-icap-server)
+## Configuring MetaDefender ICAP Server
 
 For installation and configuration quick guidelines see: 1. Quick Start with MetaDefender ICAP Server.
 
-For detailed instructions see 2. Installing or Upgrading MetaDefender ICAP Server and [3. Configuring MetaDefender ICAP Server](/docs/mdicap/v5.14.1/configuration/metadefender-icap-server-configuration).
+For detailed instructions see 2. Installing or Upgrading MetaDefender ICAP Server and [3. Configuring MetaDefender ICAP Server](/configuration/metadefender-icap-server-configuration).
 
-### [Note on MetaDefender ICAP Server Licensing](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#note-on-metadefender-icap-server-licensing)
+### Note on MetaDefender ICAP Server Licensing
 
-MetaDefender ICAP Server must have a valid license to function correctly. For license configuration details see [2.4. MetaDefender ICAP Server Licensing](/docs/mdicap/v5.14.1/installation/metadefender-icap-server-licensing).
+MetaDefender ICAP Server must have a valid license to function correctly. For license configuration details see [2.4. MetaDefender ICAP Server Licensing](/installation/metadefender-icap-server-licensing).
 
-## [Configuring the F5 BIG IP Appliance](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#configuring-the-f5-big-ip-appliance)
+## Configuring the F5 BIG IP Appliance
 
 The following configuration steps should be done from the F5 BIG IP Management Console interface. The steps below describe the minimum configuration required for MetaDefender ICAP Server integration with F5 BIG IP. Please refer to the [F5 BIG IP manual for advanced configuration](https://techdocs.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/ltm-implementations-11-5-1/12.html).
 
 1. Open a web browser and load the BIG IP Management Console. (Please refer to the BIG IP manual for details about how to open the BIG IP Management Console.)
 
-### [Creating a custom client-side ICAP profile](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#creating-a-custom-client-side-icap-profile)
+### Creating a custom client-side ICAP profile
 
 You create this ICAP profile when you want to use an ICAP server to wrap an HTTP request in an ICAP message before the BIG-IP system sends the request to a pool of web servers. The profile specifies the HTTP request-header values that the ICAP server uses for the ICAP message.Important: You can use macro expansion for all ICAP header values. For example, if an ICAP header value contains ${SERVER_IP}, the BIG-IP system replaces the macro with the IP address of the ICAP server selected from the pool assigned to the internal virtual server. If an ICAP header value contains ${SERVER_PORT}, the BIG-IP system replaces the macro with the port of the ICAP server selected from the pool assigned to the internal virtual server. For example, you can set the URI value in an ICAP profile to icap://${SERVER_IP}:${SERVER_PORT}/OMSScanReq-AV.
 
@@ -62,7 +62,7 @@ You create this ICAP profile when you want to use an ICAP server to wrap an HTTP
 
 After you create the ICAP profile, you can assign it to an internal virtual server so that the HTTP request that the BIG-IP system sends to an ICAP server is wrapped in an ICAP message, according to the settings you specified in the ICAP profile.
 
-### [Creating a pool of ICAP servers](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#creating-a-pool-of-icap-servers)
+### Creating a pool of ICAP servers
 
 You perform this task to create a pool of ICAP servers that perform content adaptation on HTTP requests.
 
@@ -85,7 +85,7 @@ You perform this task to create a pool of ICAP servers that perform content adap
 
 The pool of ICAP load balancing servers appears in the Pools list.
 
-### [Creating an internal virtual server for forwarding requests to an ICAP server](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#creating-an-internal-virtual-server-for-forwarding-requests-to-an-icap-server)
+### Creating an internal virtual server for forwarding requests to an ICAP server
 
 A virtual server of type internal provides a destination that a standard type of virtual server can use when forwarding HTTP requests slated for ICAP-based content adaptation.
 
@@ -102,7 +102,7 @@ A virtual server of type internal provides a destination that a standard type of
 
 After you perform this task, a standard type of virtual server can forward HTTP requests to an internal type of virtual server. The internal virtual server then sends the request to a pool of ICAP servers, before sending the request back to the standard virtual server for forwarding to the pool of web servers.
 
-### [Creating a custom Request Adapt profile](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#creating-a-custom-request-adapt-profile)
+### Creating a custom Request Adapt profile
 
 You create a Request Adapt type of profile when you want a standard HTTP virtual server to forward HTTP requests to an internal virtual server that references a pool of ICAP servers. A Request Adapt type of profile instructs the HTTP virtual server to send an HTTP request to a named internal virtual server for possible request modification.
 
@@ -124,7 +124,7 @@ You create a Request Adapt type of profile when you want a standard HTTP virtual
 
 After you perform this task, the BIG-IP system contains a Request Adapt profile that a standard HTTP virtual server can use to forward an HTTP request to an internal virtual server for ICAP traffic.
 
-### [Creating a custom HTTP profile](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#creating-a-custom-http-profile)
+### Creating a custom HTTP profile
 
 An HTTP profile defines the way that you want the BIG-IP®system to manage HTTP traffic.Note: Other HTTP profile types (HTTP Compression and Web Acceleration) enable you to configure compression and cache settings, as required. Use of these profile types is optional.
 
@@ -138,7 +138,7 @@ An HTTP profile defines the way that you want the BIG-IP®system to manage HTTP 
 
 The custom HTTP profile now appears in the HTTP profile list screen.
 
-### [Creating a pool to process HTTP traffic](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#creating-a-pool-to-process-http-traffic)
+### Creating a pool to process HTTP traffic
 
 You can create a pool of web servers to process HTTP requests.
 
@@ -161,7 +161,7 @@ You can create a pool of web servers to process HTTP requests.
 
 The new pool appears in the Pools list.
 
-### [Creating an HTTP virtual server for enabling request adaptation](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#creating-an-http-virtual-server-for-enabling-request-adaptation)
+### Creating an HTTP virtual server for enabling request adaptation
 
 You perform this task to create a standard virtual server that can forward an HTTP request to an internal virtual server. The internal virtual server then sends the request to a pool of ICAP servers before the BIG-IP® system sends the request to the web server.
 
@@ -177,7 +177,7 @@ You perform this task to create a standard virtual server that can forward an HT
 10. From the Default Pool list, select the name of the HTTP server pool that you previously created.
 11. Click Finished.
 
-### [Configuring the REQMOD (Request Modification) service](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#configuring-the-reqmod-request-modification-service)
+### Configuring the REQMOD (Request Modification) service
 
 In order to configure F5 BIG-IP LTM to only forward HTTP requests to the MetaDefender Core ICAP server, follow the steps described below. In the case you want to configure F5 BIG-IP LTM to forward both HTTP requests and responses, refer to the "Configuring REQMOD and RESPMOD Services" section.
 
@@ -195,7 +195,7 @@ In order to configure F5 BIG-IP LTM to only forward HTTP requests to the MetaDef
    3. Set “Preview Size” to 0 and make sure the checkbox next to it is checked.
    4. Click “Update” to apply the changes.
 
-### [Configuring REQMOD and RESPMOD Services](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#configuring-reqmod-and-respmod-services)
+### Configuring REQMOD and RESPMOD Services
 
 In order to configure F5 BIG-IP LTM to forward both HTTP requests and responses to the MetaDefender Core ICAP server, follow the steps described below. In the case you want to configure F5 BIG-IP LTM to only forward HTTP responses, refer to the "Configuring REQMOD Service" section.
 
@@ -225,13 +225,13 @@ In order to configure F5 BIG-IP LTM to forward both HTTP requests and responses 
    3. Set “Preview Size” to 0 and make sure the checkbox next to it is checked.
    4. Click “Update” to apply the changes.
 
-### [Configuring Service Down Actions](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#configuring-service-down-actions)
+### Configuring Service Down Actions
 
 If you followed the steps described in "Configuring REQMOD Service" or "Configuring REQMOD and RESPMOD Services". Big-IP will be configured to drop all connections when the ICAP service is down.
 
 F5 can be configured to forward HTTP data to the web server/web client in the case the ICAP server is unrechable. If you are using an ICAP server pool that contains more than one MetaDefender ICAP Server, F5 can also be configured to forward the HTTP content to a different pool member.
 
-### [Bypass ICAP server on service down](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#bypass-icap-server-on-service-down)
+### Bypass ICAP server on service down
 
 Note that bypassing ICAP on service down may lower your organisation's security as content will be forwarded without being scanned.
 
@@ -239,7 +239,7 @@ Note that bypassing ICAP on service down may lower your organisation's security 
 2. Set “Service Down Action” to “Ignore”.
 3. Click the "Update" button to apply the changes.
 
-### [Transfer content to different pool member](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#transfer-content-to-different-pool-member)
+### Transfer content to different pool member
 
 If you are using an ICAP server pool that contains more than one MetaDefender ICAP Server, you can also configure Big-IP to send the HTTP content to a different ICAP pool member.
 
@@ -248,7 +248,7 @@ If you are using an ICAP server pool that contains more than one MetaDefender IC
 3. Set the “Action on Service Down” property to “Reselect”.
 4. Click the "Update" button to apply the changes
 
-## [Throughput limitation by license](/docs/mdicap/v5.14.1/integrations/f5-big-ip-ltm#throughput-limitation-by-license)
+## Throughput limitation by license
 
 If you experience slow download/upload through F5 then there is a chance that your throughput is limited by F5 license.
 

@@ -2,6 +2,16 @@
 
 # Archive Module release notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## [v8.1.1](/docs/mdcore/release-notes/archive-module-release-notes#v811)
+
+Release date: 10/14/2026
+
+- Preserved the original file type when checking for file type mismatches during extraction.
+- Fixed a file type mismatch reported for files extracted from Inno Setup installers.
+- Stopped reporting a corrupted archive error for files extracted from ZLIB streams.
+- Fixed L01 extraction failing with "failed to process next entry".
+
 ## [v8.1.0](/docs/mdcore/release-notes/archive-module-release-notes#v810)
 
 Release date: 9/23/2026

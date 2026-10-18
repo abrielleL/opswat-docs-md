@@ -2,6 +2,8 @@
 
 # Release Notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Info
+
 In order to enhance our customers' experience, we will be introducing the software release in a phased approach, gradually extending it to different regions as follows:
 
 | Region | When | Time |
@@ -12,6 +14,16 @@ In order to enhance our customers' experience, we will be introducing the softwa
 | CA | 4th Monday of each month | 03:00AM - 05:00AM (EDT) |
 | US | 4th Wednesday of each month | 03:00AM - 05:00AM (EDT) |
 | AUS | 4th Wednesday of each month | 11:00PM - 01:00AM (AEST) |
+
+### October 2026
+
+| Product Area | Release Type |
+| --- | --- |
+| metadefender.com   - Release date - October 7, 2026 - Version - 3.9.0 | New Features and Enhancements   - **Easier navigation on the scan results page.** “Threats” is now **Threat analysis** and sits alongside “Threat intelligence”; existing links continue to work. “Similarity search” is now **Threat hunting** and appears first within Threat Intelligence. The Emulation Graph is shown directly beneath Adaptive Sandbox, and only when there is emulation data to display. Each stage of the Aether Pipeline can be selected to jump directly to its results. - **Password prompt for protected documents.** When a password-protected document is uploaded, MetaDefender Cloud now prompts for its password. Supplying the password rescans the file with full analysis; skipping the prompt retains the current verdict. - **Faster results for Community scans.** Community scans now begin with a hash lookup, so files MetaDefender Cloud has already analysed return results immediately. A rescan option is available when a fresh analysis is required. - **Clearer messages when limits are reached.** Reaching a scan limit now displays a message explaining the limit and the next step, tailored to anonymous, Community and Commercial users. Members of an organization with no limits available, or whose subscription has expired, see a banner linking to billing. - **Blocked reason shown in the results header.** When a file is blocked, the reason is highlighted at the top of the scan results. - **The rule used for a scan is shown on results.** Scan results now display the Rule applied to the scan and, for legacy rules, the scan profile used, so it is always clear how a file was processed. - **Workflow names are required.** New workflows must be given a name, and the name can be copied with a single click.   Fixed   - **Accurate results when an engine does not complete.** When no engine was able to scan a file, the Overview previously showed “No Threats Detected”; it now indicates that the scan did not complete. Engines that did not run show “Not Active” for all users, including those not signed in. A sandbox analysis that started but could not finish now shows “Aborted” together with the reason, rather than “Not Active”. - **Sandbox verdict colours and results that did not finish loading.** Sandbox verdict colours now match their severity: yellow for Suspicious, orange for Likely Malicious and red for Malicious. Results that never finished loading when Deep CDR timed out now display their final verdicts. - **IP addresses, domains and hashes on the Analyze page.** IP addresses, domains and hashes pasted into “Paste your URL” on the Analyze page returned an error instead of a result. They are now handled the same way as on the homepage: IP addresses and domains are scanned, hashes open their threat intelligence result, and where there is nothing to download, the reputation result is shown instead. - **AI Content Inspection tab availability.** The AI Content Inspection tab could be disabled even when the file had a result. It is now available whenever a result exists. - **Full Reason text in File Details.** Long Reason values were truncated in File Details. The full text is now available in a tooltip. - **First Submission and Last Analysis dates.** For files scanned more than once, First Submission and Last Analysis could display the same date. Each now shows the correct date. - **IP allowlist redirect.** Saving an IP allowlist could direct an organization administrator to the Maintenance page. Administrators are now taken to the IP Blocked page, where the allowlist can be reset. |
+| API   - Release date - October 7 - Released based on each region's maintenance window timeframe.  - Version - 4.81.2 | New Features and Enhancements  Fixed   - **All SIEM events are now sent for archive scans.** Completing an archive’s SIEM event could fail when the cached scan status did not yet contain its processing details, which also suppressed the event for the file that completed the archive. The archive and every file within it now receive their events. |
+| ICAP Cloud   - Release date - - Version - | New Features and Enhancements  Fixed |
+| Menlo Plugin   - Release date - - Version - | New Features and Enhancements  Fixed |
+| MetaDefender Storage Security Cloud   - Release date - - Version - | New Features and Enhancements  Fixed |
 
 ### **September 2026**
 

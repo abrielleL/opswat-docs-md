@@ -2,13 +2,13 @@
 
 # Does Multiscanning and Deep CDR count as one API request or two?
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Check Your License:
+
 This article applies to all paid MetaDefender Cloud license holders. For more information on our range of licensing and evaluation options, please [Read This](https://metadefender.opswat.com/licensing).
 
 The MetaDefender Cloud API is licensed by the number of API calls allowed.
 
-If you would like to run Multiscan and Deep CDR on every single file, that will count as two API calls per file.
-
-So, if you are expecting daily traffic of 10 000 files per day, and would like to run Multiscan and Deep CDR on each file, you will need to purchase at least 20 000 API calls per day.
+If you would like to run Multiscan and Deep CDR on every single file, that will count as a single API call per file.
 
 Support:
 

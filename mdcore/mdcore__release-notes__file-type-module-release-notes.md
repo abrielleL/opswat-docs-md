@@ -2,6 +2,17 @@
 
 # File Type Module release notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## [v8.1.1](/docs/mdcore/release-notes/file-type-module-release-notes#v811)
+
+Release date: 10/14/2026
+
+- Supported SZIP, IDX, and CAT detection.
+- Improved detection accuracy for machine learning model files in Parquet, ONNX, and SafeTensors formats.
+- Enhanced GGUF detection to cover big-endian files.
+- Enhanced LPKX and MPKX detection for large packages.
+- Increased detection confidence for WEBP files by validating the RIFF container structure.
+
 ## [v8.1.0](/docs/mdcore/release-notes/file-type-module-release-notes#v810)
 
 Release date: 9/23/2026

@@ -98,6 +98,8 @@ Once the feature is configured:
 2. Use the **live logs** on both the Low Side and High Side to monitor the transfer in real time.
 3. If the transfer completes successfully, your code will now be available on the High Side.
 
+> The Activity Log uses a real-time connection. Behind a TLS-terminating load balancer, it needs [ALLOWED_ORIGINS](https://www.opswat.com/docs/supply-chain/configuration/custom-configuration#allowed-origins).
+
 ![](https://uploads.developerhub.io/prod/jdK6/gfoykthc17waglxr04t2zbhb0ql4tjdvtbxwoknhyr5eumylovlf7tbczbz2kwwy.png)
 
 ---

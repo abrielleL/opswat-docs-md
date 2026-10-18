@@ -15,10 +15,10 @@ View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude abou
 
 Use to associate user with given MAC address or HWID.
 
-## [API URL](/docs/cm/developer-guidelines/link-user#api-url)
+## API URL
 
 https://gears.opswat.com/o/api/v2/devices/:value/link_user
-## [Request Parameters](/docs/cm/developer-guidelines/link-user#request-parameters)
+## Request Parameters
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
@@ -28,18 +28,18 @@ https://gears.opswat.com/o/api/v2/devices/:value/link_user
 | username | string | Body | Yes | User associates to the device. Length of *username* parameter should be in [1..256] |  |
 | group | string | Body | Optional | Group name of the user who associated to the device. Length of *group* parameter should be in [1..256] |  |
 
-## [Response HTTP Code](/docs/cm/developer-guidelines/link-user#response-http-code)
+## Response HTTP Code
 
-See details in the Response HTTP Code section in [this page](/docs/cm/developer-guidelines/apis)
+See details in the Response HTTP Code section in [this page](/developer-guidelines/apis)
 
-## [Response Parameters](/docs/cm/developer-guidelines/link-user#response-parameters)
+## Response Parameters
 
 | Key | DataType | Description |
 | --- | --- | --- |
 | result | int | **0** - failure **1** - success |
 | msg | string | Result details |
 
-## [Example](/docs/cm/developer-guidelines/link-user#example)
+## Example
 
 **Example Request:**
 

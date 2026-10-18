@@ -3,7 +3,7 @@
 # ARA JAGUAR 5000
 
 View as Markdown Ask ChatGPT about this page Ask Claude about this page
-## [Configuration via Web-based manager](/docs/mdicap/v5.14.1/integrations/ara-jaguar-5000#configuration-via-web-based-manager)
+## Configuration via Web-based manager
 
 1. In your browser log into Jaguar's Web Administration
 2. Go to the **Configuration** page
@@ -22,7 +22,7 @@ images/download/attachments/4864665/jaguar5k_webadmin.PNG
 
 images/download/attachments/4864665/jaguar5k_webadmin_2.PNG](<https://onlinehelp.opswat.com/icap/images/download/attachments/4864665/jaguar5k_webadmin_2.PNG>) | ![images/download/attachments/4864665/jaguar5k_webadmin_3.PNG
 
-## [Scanning HTTPS Content](/docs/mdicap/v5.14.1/integrations/ara-jaguar-5000#scanning-https-content)
+## Scanning HTTPS Content
 
 1. Go to the Configuration page
 2. From the menu on the left, select SSL under the Protocol group

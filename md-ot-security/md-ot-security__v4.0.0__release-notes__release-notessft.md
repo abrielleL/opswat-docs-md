@@ -9,7 +9,7 @@ View as Markdown Ask ChatGPT about this page Ask Claude about this page
 | **Release date** | 30 October 2025 |
 | **Scope** | Enhance current features and add new features. |
 
-## [New Features, Improvements and Enhancements](/docs/md-ot-security/v4.0.0/release-notes/release-notessft#new-features-improvements-and-enhancements)
+## New Features, Improvements and Enhancements
 
 |  | Details |
 | --- | --- |

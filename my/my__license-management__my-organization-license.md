@@ -56,7 +56,7 @@ Below the overview chart, you’ll find a detailed list of your organization’s
 | Status | Active, Expiring or Expired. |
 | Start Date (UTC) | The date when the license becomes effective. |
 | Expiration Date (UTC) | The expiration date of the license. Please note License start and expiration dates are shown in **UTC (UTC+0)** for consistency across all environments and time zones. This may look different from other features of My OPSWAT Portal that use your local time zone. |
-| NewEntitlement | Maximum licensed instances. - **Regular license:** You purchase a fixed number of product instances, and each instance is activated individually against the OPSWAT Activation Server. Hover to see   - **Max Instances**: number of product instances the license covers   - **Deployed instances: **how many of those instances are currently activated - **Volume license:** A licensing model managed through OLMS (On-Premises License Management Server). Product instances connect to OLMS locally to obtain a license; when an instance stops, its license is automatically released and can be reused by another instance. Hover to see   - **Max Instances**: maximum concurrent instances that can hold a license   - **Max Offline Time**: maximum minutes an instance can continue using its license while disconnected from OLMS |
+| NewEntitlement | Maximum licensed instances. - **Regular license:** You purchase a fixed number of product instances, and each instance is activated individually against the OPSWAT Activation Server. Hover to see   - **Max Instances**: number of product instances the license covers   - **Deployed instances: **how many of those instances are currently activated   - For OPSWAT Central Management (CM7), My OPSWAT On-premises (CM8), My OPSWAT Central Management (CM10), MetaDefender Kiosk Linux, and MetaDefender Endpoint licenses, hovering will additionally show the **Max devices** value. - **Volume license:** A licensing model managed through OLMS (On-Premises License Management Server). Product instances connect to OLMS locally to obtain a license; when an instance stops, its license is automatically released and can be reused by another instance. Hover to see   - **Max Instances**: maximum concurrent instances that can hold a license   - **Max Offline Time**: maximum minutes an instance can continue using its license while disconnected from OLMS |
 | Type | Evaluation/Purchased - **Evaluated Licenses:** Temporary licenses used for evaluating a product. - **Purchased Licenses**: Licenses for on-premises products that have been purchased by the user account. |
 | Note | Custom remarks for each license key. |
 
@@ -102,3 +102,7 @@ A license held by both a main organization and a sub-organization is listed once
 ![](https://uploads.developerhub.io/prod/JYvy/7yjquib1vu9f1vm7k98woq6fmdy8dnc3jxsp08my9ntd11uh378g35r6uzf2j4m9.png)
 
 For organizations with sub-organizations, refer to additional details at [Organization and its sub-organizations' Licenses](https://www.opswat.com/docs/my/license-management/my-main-sub-organizations-licenses)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

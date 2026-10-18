@@ -16,8 +16,12 @@ The Analyze page lets you scan individual files without connecting a repository 
 
 ## Analysis results
 
-Each analysis appears in the **Analyze Jobs** table below the upload area, with its status and the detected threats, secrets, vulnerabilities, and license risks. Use the search field and filters to find a specific analysis, or **Delete all** to clean up the list.
+Each analysis appears in the **Analyze Jobs** table below the upload area, with its status, the detected threats, secrets, vulnerabilities, and license risks, and the quantum verdict. Use the search field to find a specific analysis, or **Delete all** to clean up the list.
 
-Click a job to open the detailed results of the file. The Results cards summarize what each technology found - **Metascan** (antivirus engines), **Proactive DLP** (secrets), and **Software Bill of Materials** (vulnerabilities) - and the tabs let you drill into each area. The **Export as** menu downloads the results:
+Click a completed job to open the detailed results of the file. The Results cards summarize what each technology found - **Metascan** (antivirus engines), **Proactive DLP** (secrets), **Software Bill of Materials** (vulnerabilities), and **Cryptographic Bill of Materials** (cryptographic assets) - and the tabs let you drill into each area. The Export as menu downloads the results:
 
-![](https://uploads.developerhub.io/prod/jdK6/2c60is4wxz2nbv2h34ubei4pxurmsk990eock6hoobwwltt1ud4oyxzkzfz6klvp.png)
+![](https://uploads.developerhub.io/prod/jdK6/pwtcsqgevmaz2rdpo2nf0xtlw80in09pkicet3nvmezm1z71gdvep5rnrk54fgu8.png)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

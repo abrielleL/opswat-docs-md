@@ -3,7 +3,7 @@
 # Dell EMC Isilon OneFS
 
 View as Markdown Ask ChatGPT about this page Ask Claude about this page
-## [On-Demand Scanning](/docs/mdicap/v5.14.1/integrations/dell-emc-isilon-onefs#on-demand-scanning)
+## On-Demand Scanning
 
 EMC Isilon OneFS has the ability to scan files before they are opened, or after they are closed.
 
@@ -13,7 +13,7 @@ Not compatible with Deep CDR
 
 EMC Isilon OneFS On-Demand Scanning is not currently compatible with OPSWAT [Deep CDR](https://onlinehelp.opswat.com/cdr/).
 
-## [Configure ICAP Servers](/docs/mdicap/v5.14.1/integrations/dell-emc-isilon-onefs#configure-icap-servers)
+## Configure ICAP Servers
 
 From the OneFS Storage Administration WebUI, navigate to **Data Protection → Antivirus → ICAP Servers**
 
@@ -24,7 +24,7 @@ From the OneFS Storage Administration WebUI, navigate to **Data Protection → A
 - Click **Add server**.
 - Repeat as necessary for all ICAP servers.
 
-## [Enable the Antivirus scanning service](/docs/mdicap/v5.14.1/integrations/dell-emc-isilon-onefs#enable-the-antivirus-scanning-service)
+## Enable the Antivirus scanning service
 
 From the OneFS Storage Administration WebUI, navigate to **Data Protection → Antivirus → Settings**
 
@@ -43,7 +43,7 @@ From the OneFS Storage Administration WebUI, navigate to **Data Protection → A
 - Configure scan report retention.
 - Click the **Save Changes** button.
 
-## [Review Detected Threats](/docs/mdicap/v5.14.1/integrations/dell-emc-isilon-onefs#review-detected-threats)
+## Review Detected Threats
 
 To review information on threats that have been detected, navigate to **Data Protection → Antivirus → Detected Threats.**
 
@@ -51,13 +51,13 @@ To review information on threats that have been detected, navigate to **Data Pro
 - Click the **View details** button next to a threat to view detailed information.
 - To release the file and allow it to be accessed by users, click the **More** drop-down box, and select **Release file**.
 
-## [Schedule scan of files](/docs/mdicap/v5.14.1/integrations/dell-emc-isilon-onefs#schedule-scan-of-files)
+## Schedule scan of files
 
 In addition to scanning files as they are opened or closed, OneFS can also scan files on a schedule (e.g. daily or weekly scan).
 
 To configure a scheduled scan policy, navigate to **Data protection → Antivirus → Policies.**
 
-## [Configure scheduled scan:](/docs/mdicap/v5.14.1/integrations/dell-emc-isilon-onefs#configure-scheduled-scan)
+## Configure scheduled scan:
 
 - Click the **Create an antivirus policy**.
 - Check the **Enable antivirus policy** checkbox.

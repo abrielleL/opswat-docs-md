@@ -6,7 +6,7 @@ View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
 **MetaDefender Aether** (previously known as MetaDefender Sandbox) is a next-generation unified Zero-Day detection solution, combining the proven capabilities of MetaDefender Sandbox with built-in Threat Intelligence, Threat Scoring and Threat Hunting - all delivered as a single adaptive detection pipeline.
 
-**MetaDefender Aether** combines four tightly integrated layers:
+**MetaDefender Aether** combines five tightly integrated layers:
 
 **Layer 1: Threat Reputation**
 

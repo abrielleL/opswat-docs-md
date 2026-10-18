@@ -10,8 +10,6 @@
 >
 > - CM8 = My OPSWAT On-premises **2025.4.1-OP** with the Product Management component **2025.4.1** (docs: [/docs/myop](https://www.opswat.com/docs/myop/configuration), [/docs/product-management](https://www.opswat.com/docs/product-management)).
 > - CM10 = My OPSWAT Central Management **10.7.x** (on-prem 10.7.26062, docs build 10.7.26091, [/docs/cm](https://www.opswat.com/docs/cm)).
->
-> **Basis:** Public OPSWAT documentation as of Sep 25, 2026. All screenshots are taken from the official documentation. Menu names and UI details were then verified on live systems (CM8 2025.4.1 lab, CM10 on-prem 10.7.26062 and CM10 STAG) during the review on Sep 29, 2026. All examples in this guide use **MetaDefender Kiosk**.
 
 **In This Guide**
 

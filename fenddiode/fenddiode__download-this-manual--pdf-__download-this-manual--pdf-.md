@@ -4,4 +4,4 @@
 
 View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
-Need an offline copy of this manual? Get it [here](https://api.developerhub.io/api/public/version/14394/pdf-download?k=efdec27844ef89ab21af86570b6e2f14135a60a0798176738bbde8518caf01cc)
+Need an offline copy of this manual? Get it [here](https://api.developerhub.io/api/public/version/14423/pdf-download?k=5e80e5e61d308d7066d2a5a93d15ebe464d5e04001aa944a941fd6f664c74b47)

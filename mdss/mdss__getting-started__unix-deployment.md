@@ -6,12 +6,12 @@
 
 | **Distribution** | **Supported versions** | Architecture |
 | ---- | ---- | ---- |
-| CentOS Stream | 9-x, 10-x (latest) | x86_64 (64-bit) |
-| Red Hat Enterprise Linux | 7.x, 8.x, 9.x, 10.x (latest) | x86_64 (64-bit) |
-| Rocky Linux | 8.x, 9.x, 10.x (latest) | x86_64 (64-bit) |
-| Alma Linux | 9.x, 10.x [latest] | x86_64 (64-bit) |
-| Debian | 10.x, 11.x, 12.x, 13.x (latest) | x86_64 (64-bit) |
-| Ubuntu | 18.x, 19.x, 20.x, 21.x, 22.x, 23.x, 24.x, 26.x (latest) | x86_64 (64-bit) |
+| CentOS Stream | 9.x, 10.x | x86_64 (64-bit) |
+| Red Hat Enterprise Linux | 8.x, 9.x, 10.x | x86_64 (64-bit) |
+| Rocky Linux | 8.x, 9.x, 10.x | x86_64 (64-bit) |
+| Alma Linux | 9.x, 10.x | x86_64 (64-bit) |
+| Debian | 11.x, 12.x, 13.x | x86_64 (64-bit) |
+| Ubuntu | 22.04, 24.04, 26.04 | x86_64 (64-bit) |
 | Amazon Linux | 2, 2023 | x86_64 (64-bit) |
 
 ## Installation details

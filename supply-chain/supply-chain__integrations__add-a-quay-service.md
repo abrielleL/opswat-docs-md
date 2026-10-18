@@ -10,9 +10,13 @@ In order to integrate Quay with MetaDefender Software Supply Chain, please follo
 ![](https://uploads.developerhub.io/prod/jdK6/x46g1lm8n338hlkayrmp38r24lhf4lm2nil5weu1sm05sot7knhuvuzjllib194s.png)
 
 3. Enter your **Registry URL**. Scroll to the end of this page for more details.
-4. Enter your **Application Token**. Scroll to the end of this page for more details.
-5. Enter your **Robot Token**. Scroll to the end of this page for more details.
+4. Enter your **Application Token**. It is used to list your repositories through the Quay API. Scroll to the end of this page for more details.
+5. Enter your **Robot Token**. It is used to log in to the registry and pull images for scanning. Scroll to the end of this page for more details.
 6. Select **Add Connection** in order to finish the process.
+
+> **Info**
+>
+> Both tokens are required. The Application Token alone cannot pull images, and the Robot Token alone cannot list repositories.
 
 ### Where can I find the Quay Registry URL?
 
@@ -63,3 +67,7 @@ To generate the Robot Token, please follow these steps:
 10. Click on **View (your-organization-robot-name).json**.
 11. Locate the **auth** field in the JSON configuration.
 12. Copy the value of **auth** without the quotation marks - this is your robot token.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

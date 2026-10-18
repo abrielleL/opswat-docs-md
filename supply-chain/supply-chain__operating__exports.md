@@ -30,9 +30,9 @@ Open a report from the Reports page and use the **Export as** menu in the upper-
 
 ![](https://uploads.developerhub.io/prod/jdK6/sic8jv0rropqzy0w5fcaztb72d7s9jadr91lu048v7fcu1unjbalvorusqggqjyp.png)
 
-- **PDF - SBOM with Dependencies: **the Software Bill of Materials, including transitive dependencies, as a document:
+- **PDF - SBOM with Dependencies:** the Software Bill of Materials as a document, including the dependencies of each package:
 
-![](https://uploads.developerhub.io/prod/jdK6/h0r2vt4xmzk50z7vssr575hyqsorx1g1eo287w1fem0y51mt2ciu9rjlar4rptbb.png)
+![](https://uploads.developerhub.io/prod/jdK6/eamr8l8lq7d78lps33j3fubxmqouqz27ohfs2ym6zqedba88n24vb6geubngv9ch.png)
 
 - **CycloneDX:** the SBOM in the standard CycloneDX format, for use in other tools:
 
@@ -45,3 +45,9 @@ Open a report from the Reports page and use the **Export as** menu in the upper-
 - **CSV - SBOM:** the SBOM as a spreadsheet:
 
 ![](https://uploads.developerhub.io/prod/jdK6/n9u4y528xjvnuwva3ojqspem23hqf3tjlal3tfi42li13fxkibhhqkvogujv0q4i.png)
+
+**Note:** Cryptographic Bill of Materials (CBOM) export is not supported yet. To review the cryptographic assets, use the Cryptography tab of the Reports page or of a report.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

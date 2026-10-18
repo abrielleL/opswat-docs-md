@@ -2,10 +2,13 @@
 
 # Monthly Update
 
-[This month's downloadable PDF (September 2026)](https://static.opswat.com/uploads/files/opswat-oesis-framework-release-announcement-september-2026.pdf)
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
+[This month's downloadable PDF (October 2026)](https://static.opswat.com/uploads/files/opswat-oesis-framework-release-announcement-october-2026.pdf)
 
 #### [Online Versions](/docs/mdsdk/newsletter/newsletter#online-versions)
 
+- [October 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-october-2026)
 - [September 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-september-2026)
 - [August 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-august-2026)
 - [July 2026](https://www.opswat.com/blog/oesis-framework-release-announcement-july)
