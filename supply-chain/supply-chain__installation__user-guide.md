@@ -28,9 +28,10 @@ Welcome to the MetaDefender Software Supply Chain guide. This guideline is inten
 |  | Amazon Elastic Container Registry (ECR) |
 |  | Quay |
 |  | Azure Container Registry (ACR) |
-| -  | Harbor |
-| Binary Services- | JFrog Artifactory |
-| -  | Sonatype Nexus Repository |
+|  | Harbor |
+|  | Sonatype Nexus Repository (Nexus Container) |
+| Binary Services | JFrog Artifactory |
+|  | Sonatype Nexus Repository (Nexus Binary) |
 
 **MetaDefender Software Supply Chain** offers enterprises the ability to protect their stored data from malicious malware attacks, data breaches and Zero-Day threats by using OPSWAT’s industry-leading Multiscanning and SBOM detection technologies. It helps organizations avoid compliance violations such as leaking sensitive data by leveraging the secret detection module.
 
@@ -48,7 +49,7 @@ With the native integration between MetaDefender Software Supply Chain and MetaD
 
 - Integration with:
   - Source code services such as GitHub, GitLab, Svn, Gitea, Bitbucket Cloud and DataCenter
-  - Container services such as DockerHub, Amazon ECR, Quay, JFrog Containers, Azure Containers and Harbor Registry Containers
+  - Container services such as DockerHub, Amazon ECR, Quay, JFrog Containers, Azure Containers, Harbor Registry Containers and Sonatype Nexus Repository
   - Binary services such as JFrog Artifactory and Sonatype Nexus Repository
 - Unified Dashboard
 - Superior Reporting
@@ -56,8 +57,15 @@ With the native integration between MetaDefender Software Supply Chain and MetaD
 - Easy Setup and Integrations
 - User Management
 - Automation and Customization of Workflows
+- [Event based scanning](https://www.opswat.com/docs/supply-chain/operating/triggering-an-automatic-scan): a push, a pull request or a new artifact starts a scan automatically
+- [Cross Domain Transfer](https://www.opswat.com/docs/supply-chain/configuration/cross-domain-transfer): scanned code and images move from a Low Side to a High Side environment
 - Monitoring and Logging for all user actions
 - Technologies:
   - Malware scanning with 5 AVs (default package): ClamAV, Avira, AhnLab, Varist, Tachyon.
   - Proactive DLP detects secrets in your source code and container.
   - SBOM detects opensource vulnerabilities, licenses.
+  - [Cryptography](https://www.opswat.com/docs/supply-chain/operating/cryptography) (CBOM) finds the cryptographic assets in scanned content and shows if they are quantum safe.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

@@ -2,6 +2,10 @@
 
 # Cryptography
 
+> **Prerequisite**
+>
+> Cryptography analysis needs MetaDefender Core 5.23.0 or later with the SBOM engine 5.0.0 or later. With an older version, the job shows **SBOM engine does not support CBOM** and no cryptographic assets.
+
 The **Cryptography** tab of the Reports page is the asset-centric view of your scan results: every cryptographic asset discovered across your scans, aggregated into a single Cryptographic Bill of Materials. The charts at the top show the number of assets by type, classical risk, and quantum security level.
 
 ![](https://uploads.developerhub.io/prod/jdK6/drk53bahceeb8lyixhqp9cf6keipf66lmy8vt6ls6uqu1x68x718x0wdtgh47pcc.png)

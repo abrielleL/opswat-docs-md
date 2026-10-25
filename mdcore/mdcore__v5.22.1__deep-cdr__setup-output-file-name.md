@@ -18,22 +18,22 @@ Available variables:
 - ${original.extension} - extension of the file to be sanitized
 - ${converted.extension} - extension based on the target file type
 
-## Example usage
+## [Example usage](/docs/mdcore/v5.22.1/deep-cdr/setup-output-file-name#example-usage)
 
 ${original.basename|long}_sanitized_${dataid}.${converted.extension}
 
 Example output:
 
 testfile_sanitized_db3761f43e4545ab886f5930dbb037f3.pdf
-## Variables
+## [Variables](/docs/mdcore/v5.22.1/deep-cdr/setup-output-file-name#variables)
 
-### Data ID
+### [Data ID](/docs/mdcore/v5.22.1/deep-cdr/setup-output-file-name#data-id)
 
 ${dataid}
 
 The result is the dataid of the sanitized file.
 
-### Original filename
+### [Original filename](/docs/mdcore/v5.22.1/deep-cdr/setup-output-file-name#original-filename)
 
 ${original.basename}
 ${original.basename|<attribute>}
@@ -43,7 +43,7 @@ ${original.basename|<attribute>}
 | short (default) | filename until the first '.', ie. **archive**.tar.gz |
 | long | filename until the last '.', ie. **archive.tar**.gz |
 
-### Original file extension
+### [Original file extension](/docs/mdcore/v5.22.1/deep-cdr/setup-output-file-name#original-file-extension)
 
 ${original.extension}
 ${original.extension|<attribute>}
@@ -53,13 +53,13 @@ ${original.extension|<attribute>}
 | short (default) | extension from the last '.', ie. archive.tar.**gz** |
 | long | extension from the first '.', ie. archive.**tar.gz** |
 
-### Converted file extension
+### [Converted file extension](/docs/mdcore/v5.22.1/deep-cdr/setup-output-file-name#converted-file-extension)
 
 ${converted.extension}
 
 The result is the selected target extension used for sanitization.
 
-### Date and time
+### [Date and time](/docs/mdcore/v5.22.1/deep-cdr/setup-output-file-name#date-and-time)
 
 ${datetime}
 ${datetime|epoch}

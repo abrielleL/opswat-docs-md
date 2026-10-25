@@ -4,7 +4,7 @@
 
 # Email Gateway Security
 
-#### 6.4.2 [Latest]
+#### 6.4.3 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mdemail/release-notes)
 

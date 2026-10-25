@@ -2,7 +2,23 @@
 
 # Metascan release notes
 
-Effective **August 1, 2026**, OPSWAT will discontinue offering the **RocketCyber anti-malware** engine for both **Windows** and **Linux** platforms and it will no longer be included in OPSWAT product bundles. **This change is due to the vendor’s end-of-life (EOL) announcement and discontinuation of support for the engine**.
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+### [V 4.2.15](/docs/mdcore/release-notes/metascan-release-notes#v-4215)
+
+Release date: 10/22/2026
+
+- Upgrade Avira Linux SDK to 4.15.32
+- Upgrade Avira Linux updater
+- Upgrade Avira Windows SDK to 4.15.32
+- Upgrade Avira Windows updater
+- Upgrade Bitdefender Linux SDK to 3.0.1.418
+- Upgrade AhnLab Linux SDK to 3.30.2.3
+- Upgrade AhnLab Windows SDK to 3.30.2.3
+- Upgrade OPSWAT Predictive Alin AI Linux SDK to 3.6.0
+- Upgrade OPSWAT Predictive Alin AI Windows SDK to 3.6.0
+- Upgrade OPSWAT Predictive Alin AI Cloud Linux SDK to 3.6.0
+- Upgrade Gridinsoft Windows SDK to 1.0.255
+- Upgrade Gridinsoft Windows updater
 
 ### [V 4.2.14](/docs/mdcore/release-notes/metascan-release-notes#v-4214)
 

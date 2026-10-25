@@ -23,7 +23,7 @@ MDSS supports basic and advanced deployments, with either managed or self-hosted
 
 Prefer a single file? [Download link](https://metascanbucket.s3.amazonaws.com/Metadefender/MetaDefender_Secure_Storage/4.6.1/MetaDefender_Storage_Security_4.6.1.pdf) for the complete guide in PDF format for OPSWAT MetaDefender Storage Security (MDSS) 4.6.1 Documentation
 
-SHA256: 0A3B65BB819200D1F237D36592D858A3C6C9F2FCB0935BFA35AF438DD868D93C
+SHA256: A81F5FD7659CC33BF09ED56BD23973EE307A6FD567E19D13250A2D89E5FA254E
 
 ---
 

@@ -141,10 +141,10 @@ When you click on a Case Number from any case list, you'll be taken to the **Cas
 | **Escalate** | Click if your case requires urgent attention. Reason for Escalation is required. |
 | **Case information** | View case number, contact name, organization, assigned agent, product, platform, issue type, version, license, severity level, created date, and current status. |
 | **Escalation** | Escalation status |
-| **Attachments** | Upload relevant files (**up to 30 GB**) Note All uploaded files can be downloaded from this view, except for FDS files submitted during the False Detection Report process. These files are restricted due to potential security risks. Warning Do not upload infected files or any files suspected of containing malware when submitting support cases. |
+| **Attachments** | Upload relevant files (**up to 30 GB**) Note All uploaded files can be downloaded from this view, except for FDS files submitted during the False Detection Report process. These files are restricted due to potential security risks. Note To download a file, you must be signed in to My OPSWAT Portal as a user who can access the case. A download link on its own does not give access to the file. Warning Do not upload infected files or any files suspected of containing malware when submitting support cases. |
 | **Close Case** (top-right corner) | Close case and submit ratings |
 | **Reopen Case** | Click the **Reopen Case** button, provide a required comment explaining why you are reopening, and confirm. The case status changes back to Under Review. Only available to close date < 14 days |
-| **Submitting a follow-up case ** | This button is available for cases closed more than 14 days. Enter a short reason for the follow-up when prompted. The new case is pre-filled from the original case and is automatically linked to it, so the full history stays connected. If a follow-up case already exists for the closed case, My OPSWAT warns you so you can review it before creating another. |
+| **Submitting a follow-up case** | This button is available for cases closed more than 14 days. Enter a short reason for the follow-up when prompted. The new case is pre-filled from the original case and is automatically linked to it, so the full history stays connected. If a follow-up case already exists for the closed case, My OPSWAT warns you so you can review it before creating another. |
 
 ## **Satisfaction Ratings**
 
@@ -152,10 +152,14 @@ Help improve support quality by rating your **closed cases**:
 
 | Icon | Meaning | Action |
 | ---- | ---- | ---- |
-| ⭐ **Yellow Star** | Already rated | Click to update rating  NoteRating can only be **updated** within **7 days** from Case Closed Date |
+| ⭐ **Yellow Star** | Already rated | Click to update rating NoteRating can only be **updated** within **7 days** from Case Closed Date |
 | Rate | Not yet rated | Click to provide feedback |
 | "--" | For OPEN case (Not CLOSED status) | Rating is disabled |
 
 > **Note**
 >
 > You can only rate your own **CLOSED** cases.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

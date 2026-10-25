@@ -17,7 +17,7 @@ This is a part of [OPSWAT Vulnerability Program](https://www.opswat.com/security
 
 ![](https://uploads.developerhub.io/prod/JYvy/khlwq6ljo2mizcwdf8nw8jw779ie7q6vmmffj5bcz79i7x611r9d7izh4s7od8b1.png)
 
-**Further reading: **[Vulnerability Disclosure](https://www.opswat.com/docs/my/others/vulnerability-disclosure)
+**Further reading: **[Vulnerability Disclosure](https://www.opswat.com/docs/my/trust-center/vulnerability-disclosure)
 
 ---
 
@@ -82,3 +82,7 @@ Bug fixes **Custom Identity Provider Sign-In on Microsoft Edge**
 Fixed an issue that prevented users from signing in through a custom identity provider (SSO) on Microsoft Edge.
 
 ###
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

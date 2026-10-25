@@ -15,6 +15,30 @@ Upgrading is usually a two-step process:
 
 When upgrading from 4.0.x behind a TLS-terminating load balancer, set [ALLOWED_ORIGINS](https://www.opswat.com/docs/supply-chain/configuration/custom-configuration#allowed-origins). Otherwise, the Cross Domain Transfer Activity Log stops loading.
 
+### Notes for upgrading to 4.2 and later
+
+#### Cross Domain Transfer import scan settings
+
+In 4.2, the High Side sets the import scan on each connection mapping, not in High Side Setup. The upgrade copies your 4.1 settings to each mapping:
+
+- **Scan Before Import** keeps its 4.1 value. If it was never set, it is on after the upgrade.
+- **Workflow** keeps the 4.1 scan workflow. If none was set, the mapping uses the **Default Workflow**.
+
+The 4.1 **Maximum Allowed Severity** and **Block transfer if secrets are found** settings are removed. To block vulnerabilities and secrets, set the **Blocked File Definition** of the mapping's workflow.
+
+After the upgrade, open each mapping on the High Side and check its import scan settings. For details, see [Cross Domain Transfer](https://www.opswat.com/docs/supply-chain/configuration/cross-domain-transfer#mapping-the-transfer).
+
+#### API keys
+
+In 4.2, each user has one API key. Existing API keys continue to work after the upgrade. When a user saves a new API key, MDSSC deletes that user's other keys.
+
+After you save a new API key, update every place that uses the old key:
+
+- the webhooks in your service providers
+- the **Authorization Token** in the Low Side setup of Cross Domain Transfer
+
+For details, see [Configuring an API Key](https://www.opswat.com/docs/supply-chain/configuration/configuring-an-api-key).
+
 ### Acquire the installer package
 
 In order to acquire the new package please visit My OPSWAT -> [Product Downloads](https://my.opswat.com/home/metadefender-software-supply-chain)

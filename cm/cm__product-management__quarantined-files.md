@@ -12,6 +12,7 @@ Note This feature requires** MetaDefender Core version 5.23 or later**.
 
 ![](https://uploads.developerhub.io/prod/97qW/17v4lb4obqnryx5weirijj4eu6fsjkk610rzpoe0bv2v5nwcn43bcsjtmfrals3f.png)
 
+- [Quarantined Files Permissions](https://www.opswat.com/docs/cm/product-management/quarantined-files#quarantined-files-permissions)
 - [Retrieve a Quarantined File](https://www.opswat.com/docs/cm/product-management/quarantined-files#retrieve-a-quarantined-file)
 - [Protect a Quarantined File](https://www.opswat.com/docs/cm/product-management/quarantined-files#protect-a-quarantined-file)
 - [Acting on Multiple Files At Once](https://www.opswat.com/docs/cm/product-management/quarantined-files#acting-on-multiple-files-at-once)
@@ -24,9 +25,49 @@ Note This feature requires** MetaDefender Core version 5.23 or later**.
 | ---- | ---- |
 | Supported Products | Supported for **MetaDefender Core** instances only. Other products (ICAP, MFT, Storage Security, Email Gateway Security, Sandbox) are not covered. |
 | Supported Deployment | - Supported on every deployment model: **Cloud**, **Windows (MSI)**, **Linux (RPM)**, **OVA appliance**, and **High Availability**. - Supported for air-gapped on-premises environments: The Core instance delivers the file over its own connection to My OPSWAT Central Management, so no internet access is needed. |
-| User Role Permission | - Quarantined Files has no permission of its own yet, so any user can protect, unprotect, and delete quarantined files within their inventory groups, regardless of their File Processing History role level. - My OPSWAT Central Management can be configured, per deployment, so that only Administrators can retrieve files. This restriction is off by default. It affects retrieval only; listing, protecting and deleting are unaffected. Note A dedicated Quarantined Files permission is planned for a later release. |
+| User Role Permission | Access is set by the Quarantined File's permission, including Hide, Read, and Write levels. See [Quarantined Files Permissions](https://www.opswat.com/docs/cm/product-management/quarantined-files#quarantined-files-permissions). - My OPSWAT Central Management can be configured, per deployment, so that only Administrators can retrieve files. This restriction is off by default. It affects retrieval only; listing, protecting and deleting are unaffected. Note After version 10.7.26100 release, **Quarantined Files** and **File Processing History **permissions are managed independently. Review to ensure the correct level is assigned. |
 | Connected Core Instance | The Core instance must be connected to My OPSWAT Central Management to retrieve, protect, unprotect, or delete a file. |
 | Archive Password for Retrieval | A retrieved file is always delivered inside a ZIP archive locked with a password **you** choose when you retrieve it. The password must: - be **1 to 64 characters** long, and - use only standard printable ASCII characters: English letters, digits, spaces, and common symbols. Accented letters and other non-ASCII characters aren't accepted, because they can make the archive fail to open in Windows Explorer. |
+
+## Quarantined Files Permissions
+
+The Quarantined Files permission controls what actions users can perform on quarantined files.
+
+Navigate to **User Management > Roles **to set permissions under File Security section.
+
+Note  Setting a permission level for the** entire File Security section** also applies that level to Quarantined Files.
+
+![](https://uploads.developerhub.io/prod/97qW/6bdwu62nupr9ktvegasbn085j3csybczmz54y5jh741f1xu6rvvqdjyapv3e79ta.png)
+
+| Level | What users with this role can do |
+| ---- | ---- |
+| **Hide** | Users cannot access Quarantined Files - The **Quarantined Files** page is hidden - Direct links to the page display: *"You do not have access to Quarantined Files"* |
+| **Read** | - Allowed actions: View the quarantined files list, open file details, retrieve files using Save with Password - Restricted actions: Protect, unprotect, and delete files - The **Protected** switch are greyed out, with the note: *You have read-only access to Quarantined Files* ![](https://uploads.developerhub.io/prod/97qW/wm0p6su78lii82rt5icyws6zadza8cjoyleg8l7rbh33lkh7sgy7y9hv3mszxtin.png) |
+| **Write** | - Perform all actions available at the Read level, plus: protect, unprotect and delete - Write access is only available for files stored on **Core instances where the user also has Inventory Write permission**. See [Inventory Permissions](https://www.opswat.com/docs/cm/product-management/quarantined-files#inventory-permissions) |
+
+### Inventory Permissions
+
+Quarantined Files permission controls what actions a user can perform. Inventory permission controls which Core instances those actions apply to.
+
+To fully manage quarantined files, a user must have Write permission for both Quarantined Files and Inventory.
+
+![](https://uploads.developerhub.io/prod/97qW/wv4lirn4sxj15psrmdj68zwv3mkffhf5smhs9y4z26o85a0x2oi490oyw9amg9zz.png)
+
+| Permission level for the group | What it means for users |
+| ---- | ---- |
+| **Hide** | Files in the inventory group are not listed and not reachable through a link |
+| **Read** | Files in the inventory group are listed, and can be viewed and retrieved. They cannot be protected, unprotected or deleted, even when the role's Quarantined Files permission is Write |
+| **Write** | Files in the inventory group are listed, can be viewed, retrieved, protected, unprotected and deleted (if the user's Quarantined Files permission is also Write) |
+
+New If a role's default Inventory permission is Hide, users cannot access quarantined files by default. They will only see files from inventory groups that have been explicitly assigned permission. If no inventory groups are assigned, the Quarantined Files list will be empty.
+
+### Default Permissions by Role
+
+![](https://uploads.developerhub.io/prod/97qW/l6sfnveal47ohexn3hzusqf8qmj3qmef9n0ddq0t464upqqebe20pm22t9oh5ysd.png)
+
+- Administrator and Security Admin: Write.
+- Read-Only, Security Auditor, and Help Desk: Read.
+- New custom roles are created with **Read **permission by default.
 
 ## Open Quarantined Files Page
 
@@ -107,7 +148,7 @@ From the left menu, navigate to **File Security > Quarantined Files**
 What to expect:
 
 - You can act on up to **50 files** at a time.
-- Each file is handled on its own.
+- Each file is handled on its own. If any selected file is in a group where your role can't change files, the whole action is refused, and no file is changed.
 - If some succeed and others fail, a summary shows how many succeeded and lists each file that failed, with the reason.
 - Retrieval isn't available for several files at once. Retrieve files one at a time.
 
@@ -148,7 +189,7 @@ Note A forced change updates **My OPSWAT Central Management only**. It doesn't c
 
 - **Your archive password stays private.** Central Management never generates, stores, or logs the archive password. The password is encrypted specifically for the target Core instance the moment you submit it, so only that instance can read it.
 - **Files never arrive unprotected.** A retrieved file always arrives inside a password-protected archive, never as a bare file. It's still potentially malicious: open it only in an environment meant for handling malware.
-- **Access follows your inventory groups.** In this release, your role's permissions don't restrict Quarantined Files; only the inventory groups the role permits do. Files on instances outside your groups aren't shown and can't be reached through a link.
+- **Access follows your inventory groups.** The Quarantined Files permission decides what you can do, and Inventory > Groups permission decides which Core instances' files you see and can change. See [Quarantined Files Permissions](https://www.opswat.com/docs/cm/product-management/quarantined-files#quarantined-files-permissions).
 
 ## Troubleshooting
 

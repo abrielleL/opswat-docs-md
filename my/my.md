@@ -4,7 +4,7 @@
 
 # My OPSWAT Portal
 
-#### 2026.3.7 [Latest]
+#### 2026.4.1 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/my/release-notes)
 

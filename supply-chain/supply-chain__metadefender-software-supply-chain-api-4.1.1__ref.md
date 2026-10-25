@@ -22,7 +22,7 @@ Please note that all issued tokens have a timestamp and signature associated in 
 
 - [MetaDefender Software Supply Chain Documentation](https://docs.opswat.com/supply-chain)
 - [Scalar UI Documentation](https://guides.scalar.com/scalar/scalar-api-references/getting-started)
-Serverhttp://localhost:8001Server Variables## Authenticationhttp BearerapiKey ApiKeyFields
+Serverhttp://10.30.160.70:8001Server Variables## Authenticationhttp BearerapiKey ApiKeyFields
 
 | Key | In |
 | --- | --- |
@@ -717,10 +717,6 @@ Auth NoneRequest Body application/*+jsonapplication/jsontext/json
 | --- | --- | --- | --- |
 | pushBehaviour | integer |  |  |
 | enabled | boolean |  |  |
-| scanBeforeImport | boolean |  |  |
-| scanWorkflowId | string |  |  |
-| maxAllowedSeverity Choice 1VulnerabilitySeverityThreshold |  |  |  |
-| blockOnSecrets | boolean |  |  |
 | scanTimeoutSeconds Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
 | pollIntervalSeconds Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
@@ -985,13 +981,15 @@ OK
 
 | object | object |  |  |
 | --- | --- | --- | --- |
-| configurations6 fields | array[object] |  |  |
+| configurations8 fields | array[object] |  |  |
 | id | string |  |  |
 | storageId | string |  |  |
 | storageName | string |  |  |
 | lowsideStorageName | string |  |  |
 | lowsideProtocolType | integer |  |  |
 | valid | boolean |  |  |
+| scanBeforeImport | boolean |  |  |
+| scanWorkflowId | string |  |  |
 | responseKey | string |  |  |
 | responseMessage | string |  |  |
 
@@ -1004,6 +1002,8 @@ Auth NoneRequest Body application/*+jsonapplication/jsontext/json
 | --- | --- | --- | --- |
 | storageId | string |  |  |
 | notificationId | string |  |  |
+| scanBeforeImport | boolean |  |  |
+| scanWorkflowId | string |  |  |
 
 POST /api/v1/cross-domain/storage-config/highsidecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
 
@@ -1034,6 +1034,8 @@ Request Body application/*+jsonapplication/jsontext/json
 | storageId | string |  |  |
 | storageName | string |  |  |
 | lowsideStorageName | string |  |  |
+| scanBeforeImport | boolean |  |  |
+| scanWorkflowId | string |  |  |
 
 PUT /api/v1/cross-domain/storage-config/highside/{id}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
 
@@ -1064,6 +1066,285 @@ OK
 | --- | --- | --- | --- |
 | responseKey | string |  |  |
 | responseMessage | string |  |  |
+
+404
+
+Not Found
+
+ Response
+## Crypto Assets
+
+Endpoints[GET/api/v1/crypto-assets](/docs/supply-chain/metadefender-software-supply-chain-api-4.1.1#getlists-the-crypto-assets-one-entry-per-asset-type-and-identity) [GET/api/v1/crypto-assets/summary](/docs/supply-chain/metadefender-software-supply-chain-api-4.1.1#getcounts-the-crypto-assets-by-nist-level-classical-risk-and-ass) [GET/api/v1/crypto-assets/{assetType}/jobs](/docs/supply-chain/metadefender-software-supply-chain-api-4.1.1#getlists-the-jobs-that-report-one-crypto-asset-newest-first-put-) [GET/api/v1/crypto-assets/{assetType}/files](/docs/supply-chain/metadefender-software-supply-chain-api-4.1.1#getlists-the-files-that-report-one-crypto-asset-by-path-put-the-) [GET/api/v1/crypto-assets/{assetType}](/docs/supply-chain/metadefender-software-supply-chain-api-4.1.1#getreads-one-crypto-asset-the-same-entry-the-list-returns-put-th)
+### Lists the crypto assets, one entry per asset type and identity. ScanId scopes the result to one job; without it the result covers every job. Pass IdentityKey as key to the detail, jobs and files endpoints. QuantumLevels filters on 0 to 6, unknown and not-applicable. Another level value returns 400. An unknown ScanId returns an empty page.
+
+Auth NoneQuery String
+
+| ScanId | string |  |  |
+| --- | --- | --- | --- |
+| Search | string |  |  |
+| QuantumLevels | array |  |  |
+| AssetTypes | array |  |  |
+| ClassicalRisks | array |  |  |
+| sortBy | integer |  |  |
+| sortDir | integer |  |  |
+| page |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| pageSize |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+
+GET /api/v1/crypto-assetscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+
+OK
+
+| object | object |  |  |
+| --- | --- | --- | --- |
+| page Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| pageSize Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| totalCount Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| hasMoreItems | boolean |  |  |
+| items18 fields | array[object] |  |  |
+| bomRef | string |  |  |
+| name | string |  |  |
+| assetType | string |  |  |
+| identityKey | string |  |  |
+| quantumLevel Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| isInherited | boolean |  |  |
+| classicalRisk | string |  |  |
+| quantumRisk | string |  |  |
+| overallRisk | string |  |  |
+| classicalSecurityLevel Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| isPqc | boolean |  |  |
+| recommendedReplacements3 fields | array[object] |  |  |
+| algorithm | string |  |  |
+| appliesTo | string |  |  |
+| nistStandard | string |  |  |
+| inheritedFrom3 fields | array[object] |  |  |
+| name | string |  |  |
+| assetType | string |  |  |
+| identityKey | string |  |  |
+| description | string |  |  |
+| quantumRationale | string |  |  |
+| evidences | array[object] |  |  |
+| line Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| match | string |  |  |
+| fileCount Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| jobCount Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+
+400
+
+Bad Request
+
+401
+
+Unauthorized
+
+ Response
+### Counts the crypto assets by NIST level, classical risk and asset type. ScanId scopes the result to one job; without it the result covers every job. An asset is not quantum safe when Core does not mark it quantum-safe. WorstFiles lists the top 5 files by not quantum safe assets. Without ScanId, WorstFiles uses only the newest completed job of each repository and reference. An unknown ScanId returns every count at 0.
+
+Auth NoneQuery String
+
+| ScanId | string |  |  |
+| --- | --- | --- | --- |
+
+GET /api/v1/crypto-assets/summarycURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+
+OK
+
+| object | object |  |  |
+| --- | --- | --- | --- |
+| totalFiles Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| filesWithNotQuantumSafeAssets Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| totalAssets Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| quantumLevels8 fields | object |  |  |
+| level0 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level1 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level2 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level3 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level4 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level5 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level6 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| unknown Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| classicalRisks | object |  |  |
+| assetTypes | object |  |  |
+| worstFiles4 fields | array[object] |  |  |
+| scanId | string |  |  |
+| scanResultId | string |  |  |
+| path | string |  |  |
+| notQuantumSafeCount Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+
+400
+
+Bad Request
+
+401
+
+Unauthorized
+
+ Response
+### Lists the jobs that report one crypto asset, newest first. Put the list entry AssetType in the path and its IdentityKey in key. A missing key returns 400. ScanId scopes the result to one job; without it the result covers every job. An unknown key or ScanId returns an empty page.
+
+Auth NonePath Params
+
+| assetType | string |  |  |
+| --- | --- | --- | --- |
+
+Query String
+
+| key | string |  |  |
+| --- | --- | --- | --- |
+| ScanId | string |  |  |
+| page |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| pageSize |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+
+GET /api/v1/crypto-assets/{assetType}/jobscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+
+OK
+
+| object | object |  |  |
+| --- | --- | --- | --- |
+| page Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| pageSize Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| totalCount Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| hasMoreItems | boolean |  |  |
+| items4 fields | array[object] |  |  |
+| jobId | string |  |  |
+| name | string |  |  |
+| scannedOn | date-time |  |  |
+| fileCount Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+
+400
+
+Bad Request
+
+401
+
+Unauthorized
+
+ Response
+### Lists the files that report one crypto asset, by path. Put the list entry AssetType in the path and its IdentityKey in key. A missing key returns 400. ScanId scopes the result to one job; without it the result covers every job. An asset inside an archive counts against the archive. An unknown key or ScanId returns an empty page.
+
+Auth NonePath Params
+
+| assetType | string |  |  |
+| --- | --- | --- | --- |
+
+Query String
+
+| key | string |  |  |
+| --- | --- | --- | --- |
+| ScanId | string |  |  |
+| page |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| pageSize |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+
+GET /api/v1/crypto-assets/{assetType}/filescURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+
+OK
+
+| object | object |  |  |
+| --- | --- | --- | --- |
+| page Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| pageSize Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| totalCount Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| hasMoreItems | boolean |  |  |
+| items4 fields | array[object] |  |  |
+| scanId | string |  |  |
+| scanResultId | string |  |  |
+| path | string |  |  |
+| quantumLevel Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+
+400
+
+Bad Request
+
+401
+
+Unauthorized
+
+ Response
+### Reads one crypto asset, the same entry the list returns. Put the list entry AssetType in the path and its IdentityKey in key. A missing key returns 400. ScanId scopes the result to one job; without it the result covers every job. An unknown key or ScanId returns 404.
+
+Auth NonePath Params
+
+| assetType | string |  |  |
+| --- | --- | --- | --- |
+
+Query String
+
+| key | string |  |  |
+| --- | --- | --- | --- |
+| ScanId | string |  |  |
+
+GET /api/v1/crypto-assets/{assetType}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+
+OK
+
+| object | object |  |  |
+| --- | --- | --- | --- |
+| bomRef | string |  |  |
+| name | string |  |  |
+| assetType | string |  |  |
+| identityKey | string |  |  |
+| quantumLevel Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| isInherited | boolean |  |  |
+| classicalRisk | string |  |  |
+| quantumRisk | string |  |  |
+| overallRisk | string |  |  |
+| classicalSecurityLevel Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| isPqc | boolean |  |  |
+| recommendedReplacements3 fields | array[object] |  |  |
+| algorithm | string |  |  |
+| appliesTo | string |  |  |
+| nistStandard | string |  |  |
+| inheritedFrom3 fields | array[object] |  |  |
+| name | string |  |  |
+| assetType | string |  |  |
+| identityKey | string |  |  |
+| description | string |  |  |
+| quantumRationale | string |  |  |
+| evidences | array[object] |  |  |
+| line Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| match | string |  |  |
+| fileCount Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| jobCount Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+
+Expand 400
+
+Bad Request
+
+401
+
+Unauthorized
 
 404
 
@@ -1821,6 +2102,7 @@ Auth NoneQuery String
 | Service | string |  |  |
 | Vulnerabilities | array |  |  |
 | LicenseRisks | array |  |  |
+| QuantumVerdict | array | Enum: `Safe`,`Unsafe`,`Unknown`,`None` |  |
 | Threats | boolean |  |  |
 | Secrets | boolean |  |  |
 | SortBy | string |  |  |
@@ -1841,7 +2123,7 @@ OK
 | totalCount Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
 | hasMoreItems | boolean |  |  |
-| jobs9 fields | array[object] |  |  |
+| jobs10 fields | array[object] |  |  |
 | jobId | string |  |  |
 | name | string |  |  |
 | priority | integer |  |  |
@@ -1862,6 +2144,7 @@ OK
 | repositoryMetadata | string |  |  |
 | scanInformation Choice 1JobScanInformationDto |  |  |  |
 | scanStatus Choice 1JobScanStatusDto |  |  |  |
+| importVerdict | string |  |  |
 
  Response
 ### Bulk delete jobs (trigger-agnostic)
@@ -2061,6 +2344,7 @@ OK
 | repositoryMetadata | string |  |  |
 | scanInformation Choice 1JobScanInformationDto |  |  |  |
 | scanStatus Choice 1JobScanStatusDto |  |  |  |
+| importVerdict | string |  |  |
 
 404
 
@@ -3923,7 +4207,7 @@ OK
 | repositoryName | string |  |  |
 | repositoryReference | string |  |  |
 | repositoryMetadata | string |  |  |
-| scanInformation12 fields | object |  |  |
+| scanInformation13 fields | object |  |  |
 | malware | boolean |  |  |
 | secret | boolean |  |  |
 | vulnerabilityIssues5 fields | object |  |  |
@@ -3963,6 +4247,14 @@ OK
 | integer | integer |  |  |
 | vulnerablePackages Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
+| cryptography5 fields | object |  |  |
+| totalCryptoAssets Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| notQuantumSafeAssets Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| filesWithNotQuantumSafeAssets Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| status Choice 1CryptoAnalysisStatus |  |  |  |
 | riskScore Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
 | riskBreakdown Choice 1RiskBreakdownDto |  |  |  |
@@ -3977,6 +4269,7 @@ OK
 | scanProgress Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
 | metadata | string |  |  |
+| importVerdict | string |  |  |
 
 404
 
@@ -4023,7 +4316,7 @@ OK
 | repositoryName | string |  |  |
 | repositoryReference | string |  |  |
 | repositoryMetadata | string |  |  |
-| scanInformation12 fields | object |  |  |
+| scanInformation13 fields | object |  |  |
 | malware | boolean |  |  |
 | secret | boolean |  |  |
 | vulnerabilityIssues5 fields | object |  |  |
@@ -4063,6 +4356,14 @@ OK
 | integer | integer |  |  |
 | vulnerablePackages Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
+| cryptography5 fields | object |  |  |
+| totalCryptoAssets Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| notQuantumSafeAssets Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| filesWithNotQuantumSafeAssets Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| status Choice 1CryptoAnalysisStatus |  |  |  |
 | riskScore Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
 | riskBreakdown Choice 1RiskBreakdownDto |  |  |  |
@@ -4077,6 +4378,7 @@ OK
 | scanProgress Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
 | metadata | string |  |  |
+| importVerdict | string |  |  |
 
  Response
 ### Get scan overview by scan ID
@@ -4101,7 +4403,7 @@ OK
 | repositoryName | string |  |  |
 | repositoryReference | string |  |  |
 | repositoryMetadata | string |  |  |
-| scanInformation12 fields | object |  |  |
+| scanInformation13 fields | object |  |  |
 | malware | boolean |  |  |
 | secret | boolean |  |  |
 | vulnerabilityIssues5 fields | object |  |  |
@@ -4141,6 +4443,14 @@ OK
 | integer | integer |  |  |
 | vulnerablePackages Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
+| cryptography5 fields | object |  |  |
+| totalCryptoAssets Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| notQuantumSafeAssets Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| filesWithNotQuantumSafeAssets Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| status Choice 1CryptoAnalysisStatus |  |  |  |
 | riskScore Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
 | riskBreakdown Choice 1RiskBreakdownDto |  |  |  |
@@ -4155,6 +4465,7 @@ OK
 | scanProgress Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
 | metadata | string |  |  |
+| importVerdict | string |  |  |
 
  Response
 ### Enumerate all scan results by repository ID
@@ -4180,7 +4491,7 @@ OK
 | repositoryName | string |  |  |
 | repositoryReference | string |  |  |
 | repositoryMetadata | string |  |  |
-| scanInformation12 fields | object |  |  |
+| scanInformation13 fields | object |  |  |
 | malware | boolean |  |  |
 | secret | boolean |  |  |
 | vulnerabilityIssues5 fields | object |  |  |
@@ -4220,6 +4531,14 @@ OK
 | integer | integer |  |  |
 | vulnerablePackages Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
+| cryptography5 fields | object |  |  |
+| totalCryptoAssets Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| notQuantumSafeAssets Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| filesWithNotQuantumSafeAssets Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| status Choice 1CryptoAnalysisStatus |  |  |  |
 | riskScore Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
 | riskBreakdown Choice 1RiskBreakdownDto |  |  |  |
@@ -4234,6 +4553,7 @@ OK
 | scanProgress Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
 | metadata | string |  |  |
+| importVerdict | string |  |  |
 
  Response
 ### Enumerate all scan schedules
@@ -4458,6 +4778,11 @@ Auth NonePath Params
 | scanResultId | string |  |  |
 | --- | --- | --- | --- |
 
+Query String
+
+| scanId | string |  |  |
+| --- | --- | --- | --- |
+
 GET /api/v1/scans/{scanResultId}/detailscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
 
 OK
@@ -4563,6 +4888,56 @@ OK
 | integer | integer |  |  |
 | command | string |  |  |
 | sha256 | string |  |  |
+| cbom4 fields | object |  |  |
+| totalAssets Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| notQuantumSafeAssets Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| quantumLevels8 fields | object |  |  |
+| level0 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level1 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level2 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level3 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level4 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level5 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level6 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| unknown Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| assets16 fields | array[object] |  |  |
+| bomRef | string |  |  |
+| name | string |  |  |
+| assetType | string |  |  |
+| identityKey | string |  |  |
+| quantumLevel Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| isInherited | boolean |  |  |
+| classicalRisk | string |  |  |
+| quantumRisk | string |  |  |
+| overallRisk | string |  |  |
+| classicalSecurityLevel Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| isPqc | boolean |  |  |
+| recommendedReplacements3 fields | array[object] |  |  |
+| algorithm | string |  |  |
+| appliesTo | string |  |  |
+| nistStandard | string |  |  |
+| inheritedFrom3 fields | array[object] |  |  |
+| name | string |  |  |
+| assetType | string |  |  |
+| identityKey | string |  |  |
+| description | string |  |  |
+| quantumRationale | string |  |  |
+| evidences | array[object] |  |  |
+| line Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| match | string |  |  |
 
  Response
 ### Get the archive entries of a file by its scan result ID
@@ -4574,8 +4949,9 @@ Auth NonePath Params
 
 Query String
 
-| page |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| scanId | string |  |  |
 | --- | --- | --- | --- |
+| page |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | pageSize |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 
 GET /api/v1/scans/{scanResultId}/childrencURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
@@ -4591,7 +4967,7 @@ OK
 | totalCount Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | integer | integer |  |  |
 | hasMoreItems | boolean |  |  |
-| children18 fields | array[object] |  |  |
+| children19 fields | array[object] |  |  |
 | fileId | string |  |  |
 | scanResultId | string |  |  |
 | parentId | string |  |  |
@@ -4691,6 +5067,56 @@ OK
 | integer | integer |  |  |
 | command | string |  |  |
 | sha256 | string |  |  |
+| cbom4 fields | object |  |  |
+| totalAssets Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| notQuantumSafeAssets Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| quantumLevels8 fields | object |  |  |
+| level0 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level1 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level2 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level3 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level4 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level5 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| level6 Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| unknown Choice 1Choice 2 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| assets16 fields | array[object] |  |  |
+| bomRef | string |  |  |
+| name | string |  |  |
+| assetType | string |  |  |
+| identityKey | string |  |  |
+| quantumLevel Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| isInherited | boolean |  |  |
+| classicalRisk | string |  |  |
+| quantumRisk | string |  |  |
+| overallRisk | string |  |  |
+| classicalSecurityLevel Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| isPqc | boolean |  |  |
+| recommendedReplacements3 fields | array[object] |  |  |
+| algorithm | string |  |  |
+| appliesTo | string |  |  |
+| nistStandard | string |  |  |
+| inheritedFrom3 fields | array[object] |  |  |
+| name | string |  |  |
+| assetType | string |  |  |
+| identityKey | string |  |  |
+| description | string |  |  |
+| quantumRationale | string |  |  |
+| evidences | array[object] |  |  |
+| line Choice 1Choice 2Choice 3 |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| integer | integer |  |  |
+| match | string |  |  |
 
  Response
 ### Get the dependencies of a file and its archive entries by its scan result ID
@@ -4704,8 +5130,9 @@ Auth NonePath Params
 
 Query String
 
-| page |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| scanId | string |  |  |
 | --- | --- | --- | --- |
+| page |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | pageSize |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | search | string |  |  |
 
@@ -4769,8 +5196,9 @@ Auth NonePath Params
 
 Query String
 
-| page |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
+| scanId | string |  |  |
 | --- | --- | --- | --- |
+| page |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | pageSize |  | pattern: `^-?(?:0|[1-9]\d*)$` |  |
 | search | string |  |  |
 
@@ -4975,7 +5403,6 @@ Auth NoneRequest Body application/*+jsonapplication/jsontext/json
 
 | object | object |  |  |
 | --- | --- | --- | --- |
-| credentials | string |  |  |
 | name | string |  |  |
 | vendorType | integer |  |  |
 | protocolType | integer |  |  |
@@ -5064,7 +5491,6 @@ Request Body application/*+jsonapplication/jsontext/json
 | object | object |  |  |
 | --- | --- | --- | --- |
 | name | string |  |  |
-| credentials | string |  |  |
 | hasNewCredentials | boolean |  |  |
 
 PUT /api/v1/services/{serviceId}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
@@ -5657,7 +6083,6 @@ Auth NoneRequest Body application/*+jsonapplication/jsontext/json
 | clientId | string |  |  |
 | clientSecret | string |  |  |
 | authority | string |  |  |
-| identityProviderCertificate | string |  |  |
 | identityProviderIssuer | string |  |  |
 | identityProviderLoginUrl | string |  |  |
 | identityProviderLogoutUrl | string |  |  |
@@ -5843,7 +6268,6 @@ Auth NoneRequest Body application/*+jsonapplication/jsontext/json
 | role Choice 1UserRole |  |  |  |
 | fullName | string |  |  |
 | userName | string |  |  |
-| password | string |  |  |
 | email | string |  |  |
 
 POST /api/v1/userscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
@@ -5856,7 +6280,6 @@ OK
 | role Choice 1UserRole |  |  |  |
 | fullName | string |  |  |
 | userName | string |  |  |
-| password | string |  |  |
 | email | string |  |  |
 | currentUserId | string |  |  |
 
@@ -5945,7 +6368,6 @@ Auth NoneRequest Body application/*+jsonapplication/jsontext/json
 | --- | --- | --- | --- |
 | fullName | string |  |  |
 | userName | string |  |  |
-| password | string |  |  |
 | email | string |  |  |
 
 POST /api/v1/users/registercURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
@@ -6054,8 +6476,6 @@ Auth NoneRequest Body application/*+jsonapplication/jsontext/json
 | --- | --- | --- | --- |
 | fullName | string |  |  |
 | email | string |  |  |
-| currentPassword | string |  |  |
-| newPassword | string |  |  |
 | showTutorial | boolean |  |  |
 | tablePreferences2 fields | array[object] |  |  |
 | tableId | string |  |  |
@@ -6117,7 +6537,6 @@ Auth NoneRequest Body application/*+jsonapplication/jsontext/json
 | object | object |  |  |
 | --- | --- | --- | --- |
 | username | string |  |  |
-| password | string |  |  |
 
 POST /api/v1/user/logincURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
 
@@ -6144,7 +6563,6 @@ Auth NoneRequest Body application/*+jsonapplication/jsontext/json
 
 | object | object |  |  |
 | --- | --- | --- | --- |
-| accessToken | string |  |  |
 
 POST /api/v1/user/sso/sessioncURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
 
@@ -6271,7 +6689,6 @@ Auth NoneRequest Body application/*+jsonapplication/jsontext/json
 | --- | --- | --- | --- |
 | sessionId | string |  |  |
 | includeCurrent | boolean |  |  |
-| currentPassword | string |  |  |
 
 POST /api/v1/user/sessions/terminatecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
 
@@ -6403,18 +6820,19 @@ Auth NoneRequest Body application/*+jsonapplication/jsontext/json
 | object | object |  |  |
 | --- | --- | --- | --- |
 | name | string |  |  |
-| description | string |  |  |
 | scanConfigurationId | string |  |  |
 | blockedFileDefinition | object |  |  |
 | mode | string |  |  |
 | configuration Choice 1ConfigurableBlockedFileSettingsDto |  |  |  |
 | fileRemediations3 fields | object |  |  |
 | sourceCode2 fields | object |  |  |
-| allowed | object |  |  |
+| allowed3 fields | object |  |  |
 | softDelete | boolean |  |  |
+| copy Choice 1RemediationDto |  |  |  |
 | keep | boolean |  |  |
-| blocked | object |  |  |
+| blocked3 fields | object |  |  |
 | softDelete | boolean |  |  |
+| copy Choice 1RemediationDto |  |  |  |
 | keep | boolean |  |  |
 | container2 fields | object |  |  |
 | allowed2 fields | object |  |  |
@@ -6497,11 +6915,13 @@ OK
 | configuration Choice 1ConfigurableBlockedFileSettingsDto |  |  |  |
 | fileRemediations3 fields | object |  |  |
 | sourceCode2 fields | object |  |  |
-| allowed | object |  |  |
+| allowed3 fields | object |  |  |
 | softDelete | boolean |  |  |
+| copy Choice 1RemediationDto |  |  |  |
 | keep | boolean |  |  |
-| blocked | object |  |  |
+| blocked3 fields | object |  |  |
 | softDelete | boolean |  |  |
+| copy Choice 1RemediationDto |  |  |  |
 | keep | boolean |  |  |
 | container2 fields | object |  |  |
 | allowed2 fields | object |  |  |
@@ -6558,7 +6978,6 @@ Request Body application/*+jsonapplication/jsontext/json
 | object | object |  |  |
 | --- | --- | --- | --- |
 | name | string |  |  |
-| description | string |  |  |
 | scanConfigurationId | string |  |  |
 | blockedFileDefinition Choice 1BlockedFileDefinitionDto |  |  |  |
 | fileRemediations Choice 1FileRemediationsDto |  |  |  |
@@ -6610,11 +7029,13 @@ OK
 | configuration Choice 1ConfigurableBlockedFileSettingsDto |  |  |  |
 | fileRemediations3 fields | object |  |  |
 | sourceCode2 fields | object |  |  |
-| allowed | object |  |  |
+| allowed3 fields | object |  |  |
 | softDelete | boolean |  |  |
+| copy Choice 1RemediationDto |  |  |  |
 | keep | boolean |  |  |
-| blocked | object |  |  |
+| blocked3 fields | object |  |  |
 | softDelete | boolean |  |  |
+| copy Choice 1RemediationDto |  |  |  |
 | keep | boolean |  |  |
 | container2 fields | object |  |  |
 | allowed2 fields | object |  |  |

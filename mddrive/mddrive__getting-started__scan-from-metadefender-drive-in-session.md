@@ -91,7 +91,7 @@ The Settings provides configuration for In-Session. The settings will be applied
 
 ## [Manage In-Session settings with Central Management](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#manage-in-session-settings-with-central-management)
 
-If MetaDefender Drive has been enrolled to OPSWAT Central Management, In-Session can be remotely configured from there
+If MetaDefender Drive has been enrolled to OPSWAT Central Management, In-Session can be remotely configured from there. This requires Central Management v.10.7.26091 at minimum.
 
 ## [View collected information of the scanned devices from Central Management](/docs/mddrive/getting-started/scan-from-metadefender-drive-in-session#view-collected-information-of-the-scanned-devices-from-central-management)
 

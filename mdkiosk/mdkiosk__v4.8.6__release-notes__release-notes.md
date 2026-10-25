@@ -9,10 +9,15 @@ View as Markdown Ask ChatGPT about this page Ask Claude about this page
 | **Release date** | 8 Oct 2026 |
 | **Scope** | This release strengthens Kiosk's security and administrative control with Application Integrity Enforcement, PIN verification for restricted workflows through Central Management (CM10), and user consent before original media is modified. It simplifies operations with hardened image upgrades from a USB drive, a refreshed Kiosk Console with built-in settings search, and flexible email notifications that tell users when their session needs attention. The release also improves the end-user experience with a more accurate Media Passport and a clearer Kiosk UI, expands media support to LVM partitions on removable drives and full-disk Acronis TIB backups, and includes a range of reliability fixes for startup, file transfer, encrypted files, and diagnostics. |
 
-| Kiosk 4.8.6.0528 |  |
+| **Kiosk 4.8.6.0639** |  |
 | --- | --- |
-| **Release date** |  |
-| **New Features** | 8 Oct 2026 |
+| **Release date** | 20 Oct 2026 |
+| **Enhancement** |  |
+| Password Required for Kiosk Configuration Backups | Creating a Kiosk configuration backup now always requires a password. The same password now also protects the MetaDefender Core configuration backup included in the file. |
+| Security Enhancements | Various security issues have been addressed to enhance the overall security of the system. |
+| **Kiosk 4.8.6.0528** |  |
+| **Release date** | 8 Oct 2026 |
+| **New Features** |  |
 | Kiosk Hardened Image Upgrade from a USB Drive  [Kiosk Hardened Image] | Administrators can now select a USB drive as a hardened image upgrade source in the Kiosk Console, alongside the existing My OPSWAT (Internet) and Folder sources, so offline deployments can apply a new hardened image directly at the Kiosk. When a USB drive containing a valid image package is inserted, the Kiosk UI detects the package, runs validation checks, and prompts for the Exit Password if one is configured before copying the package locally and starting the upgrade. |
 | PIN Verification for Restricted Workflows via Central Management (CM10) | Administrators can now require a PIN, created in My OPSWAT Central Management (CM10), before a user can open a specific workflow. When a user selects the restricted workflow, Kiosk prompts for the PIN and validates it with CM10 before allowing the session to continue. |
 | Refreshed Kiosk Console Design | The Kiosk Console has a refreshed look with updated colors, typography, spacing, and components, making pages cleaner, easier to read, and quicker to navigate for day-to-day administration. Navigation and behavior are unchanged. |

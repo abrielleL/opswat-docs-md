@@ -4,7 +4,7 @@
 
 # My OPSWAT Central Management
 
-#### 10.7.26092 [Latest]
+#### 10.7.26100 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/cm/release-notes)
 

@@ -2,6 +2,8 @@
 
 # How long is the support lifecycle for a specific version of OCMv7?
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 OPSWAT provides support on each release of OPSWAT Central Management (OCM) for 18 months after the publication of the **following** release of the product. So, once a new release is published, you have 18 more months of support on the previous release. However, OPSWAT may determine it necessary to end of support for specific versions less than 18 months.
 
 Keep in mind that bug fixes and enhancements are applied only to the next release of a product, not to the current release or historical releases - even when those releases are still under support.
@@ -18,7 +20,10 @@ Version 7.22.0 and earlier are end of supported. **OPSWAT recommends customers t
 
 | Release Number | Release Date | End of Life Date |
 | --- | --- | --- |
-| 7.37.0 | April 3, 2025 |  |
+| 7.40.0 | Jun 24, 2026 | Jan 31, 2027 |
+| 7.39.0 | May 23, 2025 | Jan 31, 2027 |
+| 7.38.0 | May 09, 2025 | Nov 13, 2026 |
+| 7.37.0 | Apr 04, 2025 | Oct 30, 2026 |
 | 7.36.0 | Nov 14, 2024 | Oct 3, 2026 |
 | 7.35.0 | August 21, 2024 | May 14, 2026 |
 | 7.34.0 | April 26, 2024 | Feb 21, 2026 |

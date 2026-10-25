@@ -2,6 +2,7 @@
 
 # Server profiles
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Overview](/docs/mdemail/configuration/server-profiles#overview)
 
 Email Gateway Security is surrounded by different services that together can provide the email processing capabilities.
@@ -252,6 +253,34 @@ Please note, that most SMTP servers limit the number of parallel inbound SMTP co
 Microsoft Exchange Server limitations
 
 For details about limitations on number of connections in case of the Microsoft Exchange Server, see <https://docs.microsoft.com/en-us/exchange/mail-flow/message-rate-limits>.
+
+## [Address rewrite](/docs/mdemail/configuration/server-profiles#address-rewrite)
+
+From version 6.4.3, server profiles of the *Outbound server* type have two address rewrite settings: **Address rewrite** and **Classification**. Both integration types, *SMTP connection* and *Microsoft 365 integration*, have them.
+
+**Address rewrite**
+
+Select which address rewrite entry rewrites the sender and recipient addresses of the emails that this server profile delivers:
+
+- *Inherited:* the default address rewrite entry is used, if there is one. This is the default value
+- *No rewrite:* addresses are not rewritten
+- An address rewrite entry
+
+A security rule can override this setting. For details see [Address rewrite](/docs/mdemail/configuration/address-rewrite).
+
+**Classification**
+
+Select where this server profile delivers emails:
+
+- *None:* in both directions. This is the default value
+- *Internal:* to your internal mail servers
+- *External:* to the internet
+
+The classification is used only for emails without a security rule: quarantine forwards, forwards of blocked emails and external quarantine copies. *Internal* uses the internal mapping rules of the entry, *External* uses the external mapping rules, and with *None* these emails are not rewritten. For emails that match a security rule, the direction of the rule decides which mapping rules are used.
+
+The setup wizard sets *Internal* on the outbound server profile that it creates. After an upgrade to version 6.4.3, existing server profiles have *None*.
+
+Server profiles of the *Outbound multi-delivery* type have no address rewrite settings. Each copy uses the settings of the *Outbound server* type server profile that delivers it.
 
 ## [Outbound multi-delivery server profiles](/docs/mdemail/configuration/server-profiles#outbound-multi-delivery-server-profiles)
 

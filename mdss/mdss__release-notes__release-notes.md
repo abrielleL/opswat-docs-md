@@ -8,6 +8,19 @@
 
 **End of support**: April 14, 2028
 
+> **Breaking change alert**
+>
+> From MDSS 4.6.0, the Lambda or cloud function must send the full file path as reported by the cloud provider. MDSS trims the configured folder location itself.
+>
+> **Impact: **Customers using event-based Real-Time Protection through a Lambda or cloud function on a cloud storage unit **added with a folder location**.
+>
+> **Additional details:** This keeps all cloud integrations consistent, and the function needs no code changes whether the unit has a folder location or not.
+>
+> **Mitigation**
+> **Q:** Is your storage unit added with a folder location?
+> **Yes: **When upgrading to 4.6.0, remove the code that strips the folder location from your cloud function.
+> **No: **nothing to do.
+
 #### **Enhancements**
 
 - **Workflow file filters in the web UI.** The file type, size and last modified filters introduced in 4.6.0 can now be set on the workflow diagram, in a File filters node between File discovery and Scan pool. You can pick whole file type categories or single extensions, add extensions outside the catalog under Other extensions, set a size range and a last modified window, and see the filters a workflow uses in the Workflows list, in the New job and Job details drawers, and as optional columns in Reports and Inventory.

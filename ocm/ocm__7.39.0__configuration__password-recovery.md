@@ -6,11 +6,11 @@ View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
 OPSWAT Central Management provides a solution for you to reset password by answering the security question that had been set up during configuration wizard.
 
-## Set up security question
+## [Set up security question](/docs/ocm/7.39.0/configuration/password-recovery#set-up-security-question)
 
 During set up wizard process, after administrator account set up step, you will be asked to fill in security information in order to recover your password in the future. You need to choose one from list of questions and answer it before going to next step. When all fields have been filled, click **NEXT** to continue.
 
-## Reset password
+## [Reset password](/docs/ocm/7.39.0/configuration/password-recovery#reset-password)
 
 In case you forgot your password and can not login into OPSWAT Central Management, you can reset your password by answering the security question.
 

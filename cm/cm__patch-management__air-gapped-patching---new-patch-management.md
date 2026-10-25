@@ -45,7 +45,7 @@ Refer to [Patch Dashboard](https://www.opswat.com/docs/cm/patch-management/patch
 
 ## **Enable air-gapped patching**
 
-To enable Endpoints to retrieve patches from My OPSWAT Central Management:
+To enable Endpoint to retrieve patches from My OPSWAT Central Management:
 
 1. Log in to My OPSWAT Central Management
 2. Navigate to Patch Management > Upload Patches > Operating System / Third Party Application
@@ -56,7 +56,7 @@ To enable Endpoints to retrieve patches from My OPSWAT Central Management:
 
 > **Obtaining patch packages**
 >
-> Your vendor, in partnership with OPSWAT, will provide the capability to download patch packages to upload & distribute via My OPSWAT Central Management to MD Endpoints.
+> Your vendor, in partnership with OPSWAT, will provide the capability to download patch packages to upload & distribute via My OPSWAT Central Management to MetaDefender Endpoint.
 >
 > Contact your vendor for further information on how to obtain patch packages.
 >
@@ -129,11 +129,11 @@ Choose a deployment method based on your target devices and intended purpose, th
 
 ## **Configure a Cache Node**
 
-By default, all Endpoints will reach out to My OPSWAT Central Management to download and apply patches.
+By default, all Endpoint will reach out to My OPSWAT Central Management to download and apply patches.
 
-This can introduce a large bottleneck on the server if there are many Endpoints enrolled for management.
+This can introduce a large bottleneck on the server if there are many Endpoint enrolled for management.
 
-To reduce this load, Endpoints can be selected to serve as a **Cache Node** to help distribute patches to other Endpoints instead if solely relying on My OPSWAT Central Management.
+To reduce this load, Endpoint can be selected to serve as a **Cache Node** to help distribute patches to other Endpoint instead if solely relying on My OPSWAT Central Management.
 
 Cache Nodes support distributing patches to configured device groups. Up to 2 devices can serve as a Cache Node for a specific group. A single Cache Node can span multiple groups.
 

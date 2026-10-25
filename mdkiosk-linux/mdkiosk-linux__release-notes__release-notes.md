@@ -2,7 +2,20 @@
 
 # Release Notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+## [5.7.7](/docs/mdkiosk-linux/release-notes/release-notes#577)
+
+| **22 Oct 2026** |  |
+| --- | --- |
+| Ubuntu 22.04 Operating System Support | Kiosk for Linux now runs on Ubuntu 22.04 as its underlying operating system. |
+| Remove Encrypted Files After a Scan | Users can now remove encrypted files detected during a scan session directly from the scan results once the session finishes, either one file at a time or all at once with “Remove All”. Kiosk confirms each removal with a “File Removed” message. |
+
 ## [5.7.6](/docs/mdkiosk-linux/release-notes/release-notes#576)
+
+| 8 April 2026 |  |
+| --- | --- |
+| Optimized scanning performance | Optimized the MetaDefender Linux Kiosk scanning pipeline to significantly improve performance when processing files, especially in large volumes of files. As a result, users experience shorter waiting periods and higher throughput on Kiosk used in high-volume environments |
+| Improve Linux Kiosk UI stability during operation | Addressed an issue where MetaDefender Linux Kiosk could become unresponsive during operation. The fix ensures that the Kiosk UI and background services remain responsive even under heavy load or extended usage. |
 
 | 8 April 2026 |  |
 | --- | --- |

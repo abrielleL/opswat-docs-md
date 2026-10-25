@@ -2,7 +2,7 @@
 
 # How long is the support lifecycle for a specific version of MetaDefender Managed File Transfer?
 
-Summarize Page    Connect to Cursor Connect to VS Code Check Your Version
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Check Your Version
 
 This article applies to all MetaDefender Managed File Transfer™ releases.
 
@@ -29,7 +29,9 @@ If upgrading from an older release, visit [Upgrading MetaDefender Managed File T
 
 | **Release number** | **Release date** | **End-of-life date** |
 | --- | --- | --- |
-| 3.11.4 | 06 July 2026 |  |
+| 3.11.6 | 9 Oct 2026 |  |
+| 3.11.5 | 24 Aug 2026 | 9 Apr 2028 |
+| 3.11.4 | 06 July 2026 | 24 Feb 2028 |
 | 3.11.3 | 18 May 2026 | 30 Dec 2027 |
 | 3.11.2 | 17 Mar 2026 | 18 Nov 2027 |
 | 3.11.1 | 09 Feb 2026 | 17 Sep 2027 |

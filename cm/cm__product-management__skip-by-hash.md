@@ -38,7 +38,7 @@ You create hash lists, assign them to Core policies, and every Core instance gov
 
 | Actions | Details |
 | ---- | ---- |
-| Add Hash | - Select action - Enter Hash value (MD5, SHA1, SHA256, or SHA512, any case) - Add an optional Description - If the action is Skip Engines, also choose which engines to exclude ![](https://uploads.developerhub.io/prod/97qW/6n932l2re5y7z7bemd046yf9druedx310srzry5zsfb53bx4930gdg40yj98ocjt.png) |
+| Add Hash | - Select action - Enter Hash value (MD5, SHA1, SHA256, or SHA512, any case) - Add an optional Description - If the action is Skip Engines, also choose which engines to exclude - (Optional) Choose an** Expiration Date**   - No expiration (default): The entry stays in place until you delete it   - 1 day, 3 days, 7 days, 14 days, 30 days: The entry expires that long after you click Add   - Custom: Enter a whole number (minimum 1) and choose Days or Hours Note MetaDefender Core** version 5.24.0 or later **shows the expiration date on centrally-managed entries. ![](https://uploads.developerhub.io/prod/97qW/wov5zhm73pcjnr6tusti1nsp3kin1oncm5n1v3gh0d5b7qgaoxujmnogjcba7p0y.png) |
 | Import Hash | - Select action - Upload a CSV (up to 500 MB, 10,000+ entries supported) Note Any rows with errors are skipped, you'll see which ones failed so you can fix and re-import. ![](https://uploads.developerhub.io/prod/97qW/msfdysziftrkr0loxcsodh7zsh0vzdz631c6ysmghonubk8ehbyeuaer6g2iabmi.png) |
 
 Note If the hash already exists in the list, you'll be asked to confirm overwriting the existing entry.
@@ -76,3 +76,12 @@ Open any hash list to view, edit, or delete entries.
 | Edit | You can change the action, description, and engines, but the hash value itself is read-only. To change a hash, delete and re-add. |
 | Delete | Removes the entry from the list and propagates the removal to all affected Core instances. |
 | Search and filter | - Search by hash or description (case-insensitive substring match). - Filter by action type (Blocklist / Allowlist / Skip Engines) |
+
+## What Happens When an Entry Expires?
+
+1. **My OPSWAT Central Management removes the entry.** This usually happens within about a minute of the expiration time.
+2. **Each Core instance removes the hash on its next sync.** Until then, the Core instance keeps applying the entry. Offline instances pick up the removal when they reconnect.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

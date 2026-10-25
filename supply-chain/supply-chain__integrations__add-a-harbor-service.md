@@ -57,3 +57,16 @@ You have two ways of authentication for Harbor:
     - In MetaDefender Software Supply Chain:
       - **Harbor Username**: enter the full robot name shown by Harbor (for example, `robot$harbor-mdssc`)
       - **Password or Robot Secret**: paste the robot secret
+
+### Permissions for copy remediation and Cross Domain Transfer
+
+Copy remediation and Cross Domain Transfer import push images to a Harbor connection. That connection needs more permissions than scanning:
+
+- **Push:** grant `repository`: push on the destination projects. For a user account, use a project role that can push, for example **Developer**.
+- **Project creation:** if the destination project does not exist, MDSSC creates it. Grant the system permission `project`: create, or create the project in Harbor first.
+
+If the image name has no project, MDSSC uses the `library` project.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

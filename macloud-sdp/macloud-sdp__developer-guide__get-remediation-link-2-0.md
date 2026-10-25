@@ -14,10 +14,10 @@ View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude abou
 
 Use to fetch a remediation link for a given device
 
-## API URL
+## [API URL](/docs/cm/developer-guidelines/get-remediation-link-2-0#api-url)
 
 https://gears.opswat.com/o/api/v2/devices/:value/remediation
-## Request Parameters
+## [Request Parameters](/docs/cm/developer-guidelines/get-remediation-link-2-0#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
@@ -25,7 +25,7 @@ https://gears.opswat.com/o/api/v2/devices/:value/remediation
 | value | string | URL | Yes | HWID or MAC address of the device |  |
 | opt | sint | URL | Optional | Type of the given value in the URL.  1 - the given value is HWID. 0 - the given value is MAC Address | 0 |
 
-## Response HTTP Code
+## [Response HTTP Code](/docs/cm/developer-guidelines/get-remediation-link-2-0#response-http-code)
 
 | HTTP Code | Description |
 | --- | --- |
@@ -33,7 +33,7 @@ https://gears.opswat.com/o/api/v2/devices/:value/remediation
 | 401 | Unauthorized. Your access_token is invalid or expired |
 | 404 | Not found |
 
-## Response Parameters
+## [Response Parameters](/docs/cm/developer-guidelines/get-remediation-link-2-0#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -41,7 +41,7 @@ https://gears.opswat.com/o/api/v2/devices/:value/remediation
 | result | int | (optional) indicate if the request is processed successfully.   - 0: failure |
 | msg | string | (optional) error details |
 
-## Example
+## [Example](/docs/cm/developer-guidelines/get-remediation-link-2-0#example)
 
 **Example Request**
 

@@ -45,6 +45,17 @@ To generate an Access Token, please follow these steps:
 >
 > By configuring an expiration date for temporary access (e.g., 30 days), the integration with MetaDefender Software Supply Chain will be operational exclusively for the specified duration. Once this period elapses, you will have to create a new token and update the connection.
 
+### Permissions for copy remediation
+
+Copy remediation pushes the scanned repository to a destination repository. The destination connection needs write access to that repository:
+
+- **Personal Access Token (classic):** the `repo` scope above gives write access.
+- **GitHub App:** grant **Contents: Read and write**. For **Create Pull Request**, also grant **Pull requests: Read and write**.
+
+The destination repository must already exist. MDSSC does not create it.
+
+With **Push Directly**, MDSSC pushes to the branch that has the same name as the scanned branch. A branch protection rule on that branch can stop the copy. To avoid this, use **Create Pull Request**.
+
 ### Registering a new GitHub App
 
 1. Log in to [GitHub](https://github.com/) and go to **Settings**.
@@ -59,3 +70,7 @@ To generate an Access Token, please follow these steps:
 10. Navigate to Settings -> Developer settings and click on your GitHub App. Copy the App ID from here and provide it in the input field.
 11. Navigate to **Install App**, click on the configure icon and in the URL you will find the **Installation ID** (e.g. [https://github.com/settings/installations/**{InstallationID}](https://github.com/settings/installations/**%7BInstallationID%7D)**).
 12. Copy the contents of your previously downloaded **Private Key** (including the headers) and paste them in the input field.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/supply-chain/llms.txt)

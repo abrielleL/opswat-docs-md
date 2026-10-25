@@ -33,12 +33,12 @@ Download the following packages:
       - Dell 18s
       - Dell 17s
       - Dell 15s
-      - Lenovo M70a
    2. Kiosk Desktop:
 
       - Dell Pro 24
       - Dell 7420
       - Dell 7410
+      - Lenovo M70a
    3. Kiosk Mobile/Mini:
 
       - Dell 7230

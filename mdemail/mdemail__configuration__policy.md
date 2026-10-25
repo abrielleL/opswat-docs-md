@@ -2,9 +2,11 @@
 
 # Policy
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
+
 The policy how emails are handled in Email Gateway Security can be configured by the rules under the **Security Rules** page.
 
-### Enable/Disable Security Rules
+### [Enable/Disable Security Rules](/docs/mdemail/configuration/policy#enabledisable-security-rules)
 
 If you temporarily want to disable one or more Security Rules in MetaDefender Email Gateway Security, select the rule(s) to disable in the list and click the icon. To enable the rule again, select the rule(s) to enable and click the icon.
 
@@ -16,7 +18,7 @@ Disabled rules still do rescan
 
 A disabled rule will still apply when attempting to perform a Rescan of the email.
 
-### Open relay
+### [Open relay](/docs/mdemail/configuration/policy#open-relay)
 
 MetaDefender Email Gateway Security displays warnings in case of Security Rules that have no filters set and as so have the potential to cause [open relay](https://en.wikipedia.org/wiki/Open_mail_relay).
 
@@ -32,7 +34,7 @@ Open relay configuration still possible
 
 Email Gateway Security can still be configured in a way to end up in open relay. Ineffective filters (a filter is set but does not effectively filter for anything, e.g. `.*` as the *Sender domain or address filter*) can cause such situations.
 
-#### Intended open relay
+#### [Intended open relay](/docs/mdemail/configuration/policy#intended-open-relay)
 
 Email Gateway Security may be configured as an open relay deliberately e.g. when there are other controls in the email processing pipeline that compensate for this, or when open relay is desired.
 
@@ -40,7 +42,7 @@ Suppress warning messages
 
 To suppress warning messages for potential open relay, configure the problematic security rules with filters -that may even be ineffective.
 
-### Direction
+### [Direction](/docs/mdemail/configuration/policy#direction)
 
 In traditional configurations MetaDefender Email Gateway Security is wedged between the organization's *email gateway* and *mail server* (see the image below). In case of *inbound* email directions the email is received from the email gateway and sent towards the mail server. In case of *outbound* directions the email is received from the mail server and sent towards the email gateway.
 
@@ -61,11 +63,11 @@ When this option is not enabled, and the recipient of the email is not accepted 
 
 When this option is enabled with no further filtering, then for each email the first rule will match, that will be able to forward that email.
 
-2. Select the appropriate SMTP destination in **Security rules >*rule*/ GENERAL / SMTP relay server profile** to define where emails matching this rule should be sent next after processing. For further details about server profiles see [Configuration/Server profiles](/configuration/server-profiles).
+2. Select the appropriate SMTP destination in **Security rules >*rule*/ GENERAL / SMTP relay server profile** to define where emails matching this rule should be sent next after processing. For further details about server profiles see [Configuration/Server profiles](/docs/mdemail/configuration/server-profiles).
 
 When the filter and the SMTP relay are set appropriately to match emails coming from or going to a certain direction, then the **Security rules >*rule*/ GENERAL / Rule direction** can be set accordingly to *Inbound* or *Outbound* depending on the direction of the email flow.
 
-#### DKIM signing
+#### [DKIM signing](/docs/mdemail/configuration/policy#dkim-signing)
 
 These options enables signing of emails with DKIM (DomainKeys Identified Mail), both for inbound email (ARC) and outbound (DKIM)
 
@@ -98,7 +100,7 @@ Use sender's domain
 
 With the *Use sender's domain* option enabled, Email Gateway Security will automatically take the domain part from the SMTP sender email address (`MAIL FROM`) and use it as the *signer domain* in DKIM or ARC signatures.
 
-## Priority
+## [Priority](/docs/mdemail/configuration/policy#priority)
 
 Email Gateway Security supports the following three priority queues when processing emails:
 
@@ -116,9 +118,9 @@ Default
 
 The default priority for each rule is *Normal*.
 
-### Email History
+### [Email History](/docs/mdemail/configuration/policy#email-history)
 
-The priority of the email is displayed in [Operating/Email History](/operating/email-history). The following icons represent each priority:
+The priority of the email is displayed in [Operating/Email History](/docs/mdemail/operating/email-history). The following icons represent each priority:
 
 1. High: **↑**
 2. Low: **↓**
@@ -127,7 +129,7 @@ Normal priority
 
 For Normal priority there is no icon in the Email History.
 
-## Rule order
+## [Rule order](/docs/mdemail/configuration/policy#rule-order)
 
 Several security rules can be created that may target different messages from different sources going to different recipients. However, care must be taken how these rules are set up and ordered, as there is a *first match* and a *no match* policy (see the next two sections).
 
@@ -137,11 +139,11 @@ Reordering Security Rules
 
 The order of the rules can be set by drag and drop using the ⋮⋮⋮ icon in front of the rule entry (when the drag and drop is active, the mouse pointer changes to , see the image below).
 
-### First match policy
+### [First match policy](/docs/mdemail/configuration/policy#first-match-policy)
 
 If there are more matching rules in the system, then the email message will be accepted/rejected and processed according to the security policy of the first matching rule in the list.
 
-### No match policy
+### [No match policy](/docs/mdemail/configuration/policy#no-match-policy)
 
 If there is no matching rule in the system (or no rule at all), then the email message will be rejected.
 
@@ -149,19 +151,19 @@ Risk of blocking email flow
 
 Deleting all security rules from the system results all email messages being blocked.
 
-## Security rule configuration
+## [Security rule configuration](/docs/mdemail/configuration/policy#security-rule-configuration)
 
-### Filtering
+### [Filtering](/docs/mdemail/configuration/policy#filtering)
 
-#### Recipient verification
+#### [Recipient verification](/docs/mdemail/configuration/policy#recipient-verification)
 
 When *SMTP relay recipient verification* is enabled for the rule, then Email Gateway Security will attempt to initiate sending an email to the recipient via the SMTP servers of the SMTP server profile configured for the rule (GENERAL / SMTP relay server profile).
 
 The rule is applied to the email only, if the connection initiation succeeds.
 
-For details see [Configuration/Recipient verification](/configuration/recipient-verification).
+For details see [Configuration/Recipient verification](/docs/mdemail/configuration/recipient-verification).
 
-#### Sender IP address conditions
+#### [Sender IP address conditions](/docs/mdemail/configuration/policy#sender-ip-address-conditions)
 
 Sender IP addresses are the addresses of infrastructure elements in the deployment, from which MetaDefender Email Gateway Security is allowed to receive emails according to this rule.
 
@@ -179,7 +181,7 @@ Relation
 
 There is **OR** relation among entries in sender IP address conditions.
 
-#### Sender domain or address conditions
+#### [Sender domain or address conditions](/docs/mdemail/configuration/policy#sender-domain-or-address-conditions)
 
 Sender filter makes possible to apply security rule based on from what email address the email was sent. The value is taken from the SMTP communication’s *MAIL FROM* command that holds an email address.
 
@@ -210,7 +212,7 @@ Relation
 
 There is **OR** relation among the sender domain or email address conditions.
 
-#### Recipient domain or address conditions
+#### [Recipient domain or address conditions](/docs/mdemail/configuration/policy#recipient-domain-or-address-conditions)
 
 Recipient conditions can help to restrict emails matched by the rule to specific recipients. The value is taken from the SMTP communication’s *RCPT TO* command that holds an email address.
 
@@ -224,7 +226,7 @@ This kind of defense may protect against unnecessary overloads or even against m
 
 The field details are identical to the field details of the sender domain or address conditions (for details see the *Sender domain or address conditions* section).
 
-#### Email header conditions
+#### [Email header conditions](/docs/mdemail/configuration/policy#email-header-conditions)
 
 Email header conditions help to define email processing based on the email headers rather than SMTP properties (for example as email and SMTP properties are sometimes not in-line, e.g. email *From* and SMTP *MAIL FROM* may be different).
 
@@ -232,7 +234,7 @@ Accepted recipients may not match
 
 Header filters might cause already accepted recipients to finally match no rule. When there is no matching rule, the email (for the recipients that have no matching rule) can not be processed and delivered. Such messages are retained in Email Gateway Security's Email History with the classification *Forbidden*.
 
-For details see the *Forbidden* subsection in [Permanent failure statuses](/operating/email-history#permanent-failure-statuses) and [Failed and Forbidden emails](/operating/email-history#failed-and-forbidden-emails).
+For details see the *Forbidden* subsection in [Permanent failure statuses](/docs/mdemail/operating/email-history#permanent-failure-statuses) and [Failed and Forbidden emails](/docs/mdemail/operating/email-history#failed-and-forbidden-emails).
 
 **Field details**
 
@@ -275,7 +277,7 @@ Regular expressions for the header value are always treated with case insensitiv
 
 For example *hello* as the header value pattern will match both *hello* and *Hello* even when case insensitive option is not applied.
 
-#### Importing from CSV
+#### [Importing from CSV](/docs/mdemail/configuration/policy#importing-from-csv)
 
 Entries for the `Sender IP address filter (PREVIOUS HOP)`, `Sender domain or address filter (MAIL FROM)`, `Recipient domain or address filter (RCPT TO)` and `Email header filter` filters can be imported from comma separated value (CSV) files. The values imported from a file are added only on the GUI, ignoring values that already have an entry.
 
@@ -293,17 +295,17 @@ example:
 
 `"From","mdemailsecurity@opswat.com"`
 
-#### Exporting to CSV
+#### [Exporting to CSV](/docs/mdemail/configuration/policy#exporting-to-csv)
 
 Visible values are exported
 
 The values exported to a CSV file export only what is visible on the GUI. The export ignores what values are actually present in the database in case the modifications have not been saved yet.
 
-#### Bulk delete filter conditions
+#### [Bulk delete filter conditions](/docs/mdemail/configuration/policy#bulk-delete-filter-conditions)
 
 Administrators can select and delete multiple entries at once across all security rule filter categories, including Sender IP address, sender domain or address, recipient domain or address, and email header filters.
 
-### SMTP relay
+### [SMTP relay](/docs/mdemail/configuration/policy#smtp-relay)
 
 After processing, emails must be forwarded by Email Gateway Security to an SMTP destination so that recipients can receive them.
 
@@ -315,35 +317,35 @@ There are two ways of SMTP delivery:
 
 2. Multi-delivery: when an `SMTP multi-delivery` type server profile is selected for the **SMTP relay server profile**, the email is intended to get delivered to multiple SMTP servers. For each member `SMTP server` type server profile of the `SMTP multi-delivery` type server profile the destination SMTP server is selected according to the server preference settings in the `SMTP server` type server profile.
 
-For further details about server profiles see [Configuration/Server profiles](/configuration/server-profiles).
+For further details about server profiles see [Configuration/Server profiles](/docs/mdemail/configuration/server-profiles).
 
-### Rule actions
+### [Rule actions](/docs/mdemail/configuration/policy#rule-actions)
 
 It is possible to add disclaimers and/or tags to all emails processed by a specific security rule.
 
-#### **Rule disclaimer**
+#### [**Rule disclaimer**](/docs/mdemail/configuration/policy#rule-disclaimer)
 
 To add a disclaimer to all emails processed by this specific rule, enable the option **Security rules >*rule*/ GENERAL /** **Rule disclaimer** and configure the disclaimer content using the disclaimer editor.
 
-#### **Rule email headers**
+#### [**Rule email headers**](/docs/mdemail/configuration/policy#rule-email-headers)
 
 To add one or more custom email headers to all emails processed by this specific rule, click on the option **Security rules >*rule*/ GENERAL /** **Rule email headers** and complete the configuration in the header editor.
 
-#### **Rule tags**
+#### [**Rule tags**](/docs/mdemail/configuration/policy#rule-tags)
 
 To add one or more tags to all emails processed by this specific rule, click on the option **Security rules >*rule*/ GENERAL /** **Rule tags** and complete the configuration in the tag editor.
 
-### Security policy
+### [Security policy](/docs/mdemail/configuration/policy#security-policy)
 
 The security policy of a certain rule is defined by the settings on the SCAN, ADVANCED THREAT PREVENTION, ZERO-DAY MALWARE PREVENTION, ANTI-PHISHING, UPLOAD ATTACHMENTS and ADVANCED tabs.
 
-#### Scan
+#### [Scan](/docs/mdemail/configuration/policy#scan)
 
 On the *Scan* tab of a certain rule it can be defined if emails matching this rule must be scanned at all, or not.
 
 **MetaDefender Core server profile**
 
-A *MetaDefender Core* server profile to which emails are sent for malware scanning and zero-day malware prevention. For further details see [Configuration/Server profiles](/configuration/server-profiles).
+A *MetaDefender Core* server profile to which emails are sent for malware scanning and zero-day malware prevention. For further details see [Configuration/Server profiles](/docs/mdemail/configuration/server-profiles).
 
 **MetaDefender Core Workflow**
 
@@ -411,19 +413,19 @@ Hash lookups give a benefit only when parts of the email were previously scanned
 
 If the email part does not exist in the cache, then the time of the hash lookup adds to the time of the processing and as so for such a case the total processing time will be longer than without the hash lookup.
 
-Enabling *Force scan on mismatch* the hash lookup will be omitted when the actual file name and the cached file name do not match. In this case the header, body or attachment will be forcibly scanned, even if the result already exists in the cache based on the hash of the file. For further details see [Configuration/Email History/Malware scan details](/operating/email-history#malware-scan-details).
+Enabling *Force scan on mismatch* the hash lookup will be omitted when the actual file name and the cached file name do not match. In this case the header, body or attachment will be forcibly scanned, even if the result already exists in the cache based on the hash of the file. For further details see [Configuration/Email History/Malware scan details](/docs/mdemail/operating/email-history#malware-scan-details).
 
-#### Advanced Threat Prevention
+#### [Advanced Threat Prevention](/docs/mdemail/configuration/policy#advanced-threat-prevention)
 
 Using [multiscanning](https://www.opswat.com/technologies/multiscanning), Email Gateway Security can utilize even 20 anti-malware engines to prevent advanced, unknown threats.
 
 On this tab it can be configured what Email Gateway Security should do if its Advanced Threat Prevention feature found malware in one or more components of the email.
 
-If *Quarantine original email* is enabled, then the original copy of the email is put into the [Operating/Quarantine](/operating/quarantine) regardless of how *Handling of the email* is set.
+If *Quarantine original email* is enabled, then the original copy of the email is put into the [Operating/Quarantine](/docs/mdemail/operating/quarantine) regardless of how *Handling of the email* is set.
 
 *Handling of the email* may be:
 
-- Block email: the email is blocked. If *Notify recipients if email is blocked* is enabled, then a notification will be sent to the recipients. For further details see [Configuration/Alert, notification and quarantine report emails](/configuration/alert--notification-and-quarantine-report-emails).
+- Block email: the email is blocked. If *Notify recipients if email is blocked* is enabled, then a notification will be sent to the recipients. For further details see [Configuration/Alert, notification and quarantine report emails](/docs/mdemail/configuration/alert--notification-and-quarantine-report-emails).
 
 - Delete blocked contents: the blocked contents (e.g. infected attachments) are removed from the email. The remaining is delivered.
 - Deliver blocked contents: the email is delivered containing the potentially malicious (infected) contents.
@@ -456,7 +458,7 @@ By default, each rule uses the built-in (`default`) notification template.
 
 Selecting a custom variant overrides the default for notifications triggered by this rule, allowing different recipient groups to receive customized notifications.
 
-For details see [Alert, notification and quarantine report emails](/configuration/user-interface-customization#alert-notification-and-quarantine-report-emails).
+For details see [Alert, notification and quarantine report emails](/docs/mdemail/configuration/user-interface-customization#alert-notification-and-quarantine-report-emails).
 
 ***Send notification for original sender***
 
@@ -504,7 +506,7 @@ Password formulas
 
 Email Gateway Security use regular expressions to find the password in the email body. These regular expressions can be configured under **Settings > General** */ Attachment password patterns*.
 
-For details see [Attachment password patterns](/configuration/settings#attachment-password-patterns).
+For details see [Attachment password patterns](/docs/mdemail/configuration/settings#attachment-password-patterns).
 
 In case password(s) cannot be located in the email body, a notification email can be sent (*Handling of the email* is set to *Block email*) or disclaimer can be added (*Handling of the email* is set to *Delete blocked contents*) to the email, allowing the recipient to provide the password and rescan the email.
 
@@ -551,15 +553,15 @@ JsonCopy{
 }
 }
 
-#### Zero-Day Malware Prevention
+#### [Zero-Day Malware Prevention](/docs/mdemail/configuration/policy#zero-day-malware-prevention)
 
 Using [content disarm and reconstruction](https://www.opswat.com/technologies/data-sanitization), Email Gateway Security can prevent zero-day malware in [over 100 common file types](http://onlinehelp.opswat.com/cdr/).
 
-The content disarm and reconstruction capabilities can be configured for each MetaDefender Core server. For further details see [Configuration/Server profiles](/configuration/server-profiles).
+The content disarm and reconstruction capabilities can be configured for each MetaDefender Core server. For further details see [Configuration/Server profiles](/docs/mdemail/configuration/server-profiles).
 
 On this tab it can be configured what Email Gateway Security should do if its Zero-Day Malware Prevention feature applied disarm and reconstruction to one or more components of the email.
 
-If *Quarantine original email* is enabled, then the original copy of the email is put into the [Operating/Quarantine](/operating/quarantine).
+If *Quarantine original email* is enabled, then the original copy of the email is put into the [Operating/Quarantine](/docs/mdemail/operating/quarantine).
 
 **Overriding sanitization behavior**
 
@@ -590,9 +592,9 @@ Selecting attachment or email body categories in *Send original file, if sanitiz
 
 Especially when the MetaDefender Core side workflow—that handled the file for which the sanitization failed—has no other control (Multiscanning, Proactive DLP, Adaptive Sandbox, etc.) enabled that could detect the malicious email component.
 
-#### Data loss prevention
+#### [Data loss prevention](/docs/mdemail/configuration/policy#data-loss-prevention)
 
-When Proactive Data Loss Prevention is licensed (see [Installation/Licensing](/installation/licensing)), certain behavior of the technology can be modified on this tab.
+When Proactive Data Loss Prevention is licensed (see [Installation/Licensing](/docs/mdemail/installation/licensing)), certain behavior of the technology can be modified on this tab.
 
 Enabling *Send sanitized version of blocked files only if redacted* can influence the setting under *Zero-Day Malware Prevention / Override sanitization behavior / Send sanitized version of blocked files*. A sanitized version is sent only, if it could have been successfully redacted, too.
 
@@ -622,13 +624,13 @@ The *Send redacted version of blocked files* option can be enabled only when for
 1. on the *Advanced Threat Prevention* tab the *Handling of the email* option is set to *Delete blocked contents* AND
 2. on the *Zero-Day Malware Prevention* tab the *Override sanitization behavior* option is disabled.
 
-#### Anti-phishing and anti-spam
+#### [Anti-phishing and anti-spam](/docs/mdemail/configuration/policy#anti-phishing-and-anti-spam)
 
 Email Gateway Security provides cutting edge anti-spam and anti-phishing protection. Spam and phishing are handled by the same component so the settings are quite similar. For specific settings see the two subsections at the end of this section.
 
 **Probability level**
 
-The anti-spam and anti-phishing component use the *Probability level* setting to tell the component what it should treat as *Possible spam* or *Possible phishing* (for details see [Operating/Email classifications](/operating/email-classifications)) and what is known *Spam* or *Phishing* (for details see [Operating/Email classifications](/operating/email-classifications)).
+The anti-spam and anti-phishing component use the *Probability level* setting to tell the component what it should treat as *Possible spam* or *Possible phishing* (for details see [Operating/Email classifications](/docs/mdemail/operating/email-classifications)) and what is known *Spam* or *Phishing* (for details see [Operating/Email classifications](/docs/mdemail/operating/email-classifications)).
 
 Probability levels
 
@@ -667,9 +669,9 @@ The following actions are available:
 | **Action** | **Description** |
 | --- | --- |
 | Reject | Perform an IP reputation check and if turns out to be a (potential) spam or phishing sender, then reject the email on the SMTP level. The email will show up in **Audit > Refused Emails**. |
-| Delete | Receive the email, perform an IP reputation and/or content check, and if turns out to be a (potential) spam or phishing, then delete it. The email will show up in **Audit > Email History** with some additional details as if it was rejected and with the appropriate classifications added (for details see [Operating/Email History](/operating/email-history) and [Operating/Email classifications](/operating/email-classifications)). |
-| Quarantine | Receive the email, perform an IP reputation and/or content check, and if turns out to be a (potential) spam or phishing, then quarantine it (just like infected emails). The email will show up in **Quarantine** with the appropriate classifications added (for details see [Operating/Quarantine](/operating/quarantine) and [Operating/Email classifications](/operating/email-classifications)). |
-| Deliver | Receive the email, perform an IP reputation and/or content check, but even if it turns out to be a (potential) spam or phishing, deliver it (just like clean emails). The email will show up in **Audit > Email History** with the appropriate classifications added (for details see [Operating/Email History](/operating/email-history) and [Operating/Email classifications](/operating/email-classifications)). |
+| Delete | Receive the email, perform an IP reputation and/or content check, and if turns out to be a (potential) spam or phishing, then delete it. The email will show up in **Audit > Email History** with some additional details as if it was rejected and with the appropriate classifications added (for details see [Operating/Email History](/docs/mdemail/operating/email-history) and [Operating/Email classifications](/docs/mdemail/operating/email-classifications)). |
+| Quarantine | Receive the email, perform an IP reputation and/or content check, and if turns out to be a (potential) spam or phishing, then quarantine it (just like infected emails). The email will show up in **Quarantine** with the appropriate classifications added (for details see [Operating/Quarantine](/docs/mdemail/operating/quarantine) and [Operating/Email classifications](/docs/mdemail/operating/email-classifications)). |
+| Deliver | Receive the email, perform an IP reputation and/or content check, but even if it turns out to be a (potential) spam or phishing, deliver it (just like clean emails). The email will show up in **Audit > Email History** with the appropriate classifications added (for details see [Operating/Email History](/docs/mdemail/operating/email-history) and [Operating/Email classifications](/docs/mdemail/operating/email-classifications)). |
 | Add headers | If the known or potential *action* is set to *Deliver*, then headers can be added to the email for each case. These headers can indicate for example to the receiving side that a (potential) phishing has just been received. |
 
 **Blocked notifications**
@@ -682,7 +684,7 @@ It is supported to amend an email detected as known spam or - phishing or potent
 
 Disclaimers won't be appended to the email when the email is *released*, *forwarded* or *downloaded* from the Quarantine.
 
-For details see the *Full rescan email* and *Anti-malware rescan email* sections in [Supported functions](/operating/quarantine-reports#supported-functions); and [Disclaimers](/configuration/disclaimers).
+For details see the *Full rescan email* and *Anti-malware rescan email* sections in [Supported functions](/docs/mdemail/operating/quarantine-reports#supported-functions); and [Disclaimers](/docs/mdemail/configuration/disclaimers).
 
 **Anti-spam specific settings**
 
@@ -727,7 +729,7 @@ It is supported to tune what DMARC policies to handle as `Phishing` or `Possible
 
 By default, `Reject` and `Quarantine` are handled as known phishing and classified and as `Phishing`.
 
-For details see the *Actions for known or potential phishing and spam* section above and [Registry configuration](/configuration/registry-configuration).
+For details see the *Actions for known or potential phishing and spam* section above and [Registry configuration](/docs/mdemail/configuration/registry-configuration).
 
 DMARC reporting is not yet supported
 
@@ -777,7 +779,7 @@ As a prerequisite DKIM certificates need to be configured under **Settings > Sec
 2. Signer Domain: The domain for which to create the DKIM-like ARC signatures. The next email processing server will look up the public keys in the DNS records of this domain to verify Email Gateway Security's ARC signatures.
 3. DNS Selector: Specifies the DNS location of the public key. Receiving servers use this selector to find the public key.
 
-#### Upload attachments
+#### [Upload attachments](/docs/mdemail/configuration/policy#upload-attachments)
 
 **Prerequisites**
 
@@ -785,19 +787,19 @@ Configuring the *Upload attachments* capability requires some technical understa
 
 For details about MetaDefender Managed File Transfer see [https://onlinehelp.opswat.com/mdmft/](https://onlinehelp.opswat.com/vault/).
 
-For details about integrating Email Gateway Security and Managed File Transfer see [Integrations/Integration with MetaDefender Managed File Transfer](/integrations/integration-with-metadefender-mft).
+For details about integrating Email Gateway Security and Managed File Transfer see [Integrations/Integration with MetaDefender Managed File Transfer](/docs/mdemail/integrations/integration-with-metadefender-mft).
 
-The *Upload attachments* capability requires a MetaDefender Managed File Transfer server profile to be configured and set for the *MetaDefender Managed File Transfer* *server profile* value. For details see [Configuration/Server profiles](/configuration/server-profiles).
+The *Upload attachments* capability requires a MetaDefender Managed File Transfer server profile to be configured and set for the *MetaDefender Managed File Transfer* *server profile* value. For details see [Configuration/Server profiles](/docs/mdemail/configuration/server-profiles).
 
 **Attachment notice**
 
 Setting the *Attachment notice* a custom notification text can be configured to be appended to emails notifying recipients about where they can access their files in MetaDefender Managed File Transfer.
 
-The *Attachment notice* works the same way as other disclaimers do. For details see [Configuration/Disclaimers](/configuration/disclaimers).
+The *Attachment notice* works the same way as other disclaimers do. For details see [Configuration/Disclaimers](/docs/mdemail/configuration/disclaimers).
 
 Required disclaimer variable
 
-You should not remove **%[]mft_list[]%** from the notification texts as it would lead to missing URLs. For details see [Configuration/Disclaimers](/configuration/disclaimers).
+You should not remove **%[]mft_list[]%** from the notification texts as it would lead to missing URLs. For details see [Configuration/Disclaimers](/docs/mdemail/configuration/disclaimers).
 
 **Upload blocked attachments**
 
@@ -807,7 +809,7 @@ By selecting this option, the original copy of every attachment which was blocke
 
 By selecting this option, the sanitized copy of every attachment which was [sanitized](https://onlinehelp.opswat.com/cdr/) will be uploaded to MetaDefender Managed File Transfer.
 
-To upload the original copy of the sanitized attachments see [Configuration/Policy](/configuration/policy).
+To upload the original copy of the sanitized attachments see [Configuration/Policy](/docs/mdemail/configuration/policy).
 
 **Upload partially sanitized attachments**
 
@@ -835,7 +837,7 @@ If both *Upload original of sanitized attachments* and *Upload attachments that 
 
 **Upload bypassed attachments**
 
-By selecting this option every attachment that was bypassed (for details see [Operating/Bypassing](/operating/bypassing)) by Email Gateway Security will be uploaded to MetaDefender Managed File Transfer.
+By selecting this option every attachment that was bypassed (for details see [Operating/Bypassing](/docs/mdemail/operating/bypassing)) by Email Gateway Security will be uploaded to MetaDefender Managed File Transfer.
 
 **Upload allowed attachments**
 
@@ -861,7 +863,7 @@ For this functionality to work, Email Gateway Security must be integrated to MFT
 
 This is how such an API key is defined on the MFT side (for details see For details see <https://www.opswat.com/docs/mdmft/end-user-guide/supervisor-approval> and <https://www.opswat.com/docs/mdmft/configuration/api-keys>):
 
-This is how such an API key is used with a *MetaDefender Managed File Transfer* type server profile (for details see [Server profiles](/configuration/server-profiles)):
+This is how such an API key is used with a *MetaDefender Managed File Transfer* type server profile (for details see [Server profiles](/docs/mdemail/configuration/server-profiles)):
 
 ***Remove uploaded attachments from email***
 
@@ -889,7 +891,7 @@ Based on the email addresses, the files will be uploaded to the recipients' own 
 
 Default account
 
-The account on MetaDefender Managed File Transfer that is assigned to the API key specified in the MetaDefender Managed File Transfer server profile (see [Configuration/Server profiles](/configuration/server-profiles)) set for the Email Gateway Security rule that matched the email.
+The account on MetaDefender Managed File Transfer that is assigned to the API key specified in the MetaDefender Managed File Transfer server profile (see [Configuration/Server profiles](/docs/mdemail/configuration/server-profiles)) set for the Email Gateway Security rule that matched the email.
 
 Upload to default account for each email address for each email
 
@@ -903,7 +905,7 @@ A temporary account created on MetaDefender Managed File Transfer. These account
 
 The PIN length and the account expiry window can be configured in the Upload attachments tab or the security rule.
 
-The PIN can be made available to the recipients using the `mft_name` or `mft_user` disclaimer variables. For details see [Disclaimer variables](/configuration/disclaimers#disclaimer-variables).
+The PIN can be made available to the recipients using the `mft_name` or `mft_user` disclaimer variables. For details see [Disclaimer variables](/docs/mdemail/configuration/disclaimers#disclaimer-variables).
 
 This PIN then needs to be used on the MetaDefender Managed File Transfer login page for Guest accounts. When the upload might end up in creating a guest account, then the recipients' attention needs to be called to this fact and the way how they can authenticate on MetaDefender Managed File Transfer.
 
@@ -913,7 +915,7 @@ For each email and for each recipient email addresses a dedicated guest account 
 
 This might result a huge number of guest accounts created on MetaDefender Managed File Transfer.
 
-[Disclaimer variables](/configuration/disclaimers#disclaimer-variables)
+[Disclaimer variables](/docs/mdemail/configuration/disclaimers#disclaimer-variables)
 
 | Option | Details |
 | --- | --- |
@@ -927,7 +929,7 @@ Example: Impersonate when possible, otherwise upload to default account
 
 Impersonation works for the email address `one@local` but the address `two@local` will fall back to the default account `admin`.
 
-#### Advanced
+#### [Advanced](/docs/mdemail/configuration/policy#advanced)
 
 **Signed email settings**
 
@@ -941,7 +943,23 @@ This feature allows you to add additional recipients to every email processed by
 
 When this feature is enabled the configured notifications are sent again if the email is kept quarantined after a _[_*full rescan*](%5Bhttps://www.opswat.com/docs/mdemail/operating/quarantine-reports#full-rescan-email) or](https://www.opswat.com/docs/mdemail/operating/quarantine-reports#full-rescan-email)or) [*anti-malware rescan*](https://www.opswat.com/docs/mdemail/operating/quarantine-reports#anti-malware-rescan-email).
 
+**Address rewrite**
+
+Select which address rewrite entry rewrites the sender and recipient addresses of the emails that match this security rule:
+
+- *Inherited:* the outbound server profile or the default entry decides. This is the default value
+- *No rewrite:* addresses are not rewritten for the emails that match this rule
+- An address rewrite entry: inbound rules use the internal mapping rules of the entry, and outbound rules use the external mapping rules
+
+When an entry is used, the *SMTP sender or recipient rewriting* settings below are ignored for that email. For details see [Address rewrite](/docs/mdemail/configuration/address-rewrite).
+
 **SMTP sender or recipient rewriting**
+
+SMTP rewrite is deprecated
+
+SMTP rewrite is deprecated, and it is planned to remove it in an upcoming release of Email Gateway Security. From version 6.4.3, use [address rewrite](/docs/mdemail/configuration/address-rewrite) instead. Until then, SMTP rewrite applies only when no address rewrite entry is selected for the email.
+
+**If you use SMTP rewrite, move your settings to address rewrite entries.** For details see [Migrate from SMTP rewrite to address rewrite](/docs/mdemail/configuration/migrate-from-smtp-rewrite-to-address-rewrite).
 
 With this configuration it is supported to replace the *domain part* of the email addresses in the *MAIL FROM* and/or the *RCPT TO* SMTP commands to the configured value(s) during the SMTP submission to the SMTP relay configured for the rule.
 
@@ -955,7 +973,7 @@ SMTP rewriting logs
 
 SMTP rewriting events are logged to the product log on INFO level.
 
-Also, the *Processing history* of the *Email details* show an entry for the SMTP rewriting. For details see [Email details](/operating/email-history#email-details).
+Also, the *Processing history* of the *Email details* show an entry for the SMTP rewriting. For details see [Email details](/docs/mdemail/operating/email-history#email-details).
 
 **Group disclaimer settings**
 
@@ -969,7 +987,7 @@ Retry
 
 Email Gateway Security can be configured to retry to process emails. If an option is set to *Retry*, *Bypass if all retry fail* or *Quarantine if all retry fail*, then the retry mechanism under **Settings > General / Email** is applied.
 
-For details see [Configuration/Settings](/configuration/settings).
+For details see [Configuration/Settings](/docs/mdemail/configuration/settings).
 
 The decision tree for the retry mechanism under *Override SMTP results*:
 
@@ -979,7 +997,7 @@ Risk of potentially harmful content
 
 If *Bypass on first failure* or *Bypass if all retry fail* is configured for certain settings, and the email gets bypassed finally, then the original, potentially harmful email is delivered.
 
-The recipient may be notified about the fact of bypassing. To do so set the *Bypass email disclaimer*. For details see [Configuration/Disclaimers](/configuration/disclaimers).
+The recipient may be notified about the fact of bypassing. To do so set the *Bypass email disclaimer*. For details see [Configuration/Disclaimers](/docs/mdemail/configuration/disclaimers).
 
 Risk of reverse NDR attack
 

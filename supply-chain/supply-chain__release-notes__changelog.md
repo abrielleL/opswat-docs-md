@@ -9,9 +9,9 @@ Release Date: October 14, 2026
 **Highlights**
 
 - **Cryptographic Bill of Materials (CBOM) and Quantum Safety:** MDSSC now finds the cryptographic assets in scanned content, such as algorithms and certificates. Each job, file and repository shows a quantum-safety verdict, and a new Cryptography dashboard summarizes the assets across all jobs.
-- **Event-Based Scans for Harbor and Nexus Binaries:** Harbor and Nexus Repository can now send webhook events to MDSSC. A new or updated artifact starts a scan automatically.
+- **Event-Based Scans for Harbor and Nexus Binaries:** Harbor and Nexus Binary connections can now send webhook events to MDSSC. A pushed Harbor image, or a new or updated Nexus component, starts a scan automatically.
 - **Copy Remediation for Harbor and GitHub:** Copy remediation is now available for Harbor and GitHub connections.
-- **Cross-Domain Transfer Improvements:** Each high-side connection mapping now selects its own import scan workflow. The high side skips files it already scanned, and malicious, unreadable, failed and canceled files always block a transfer.
+- **Cross-Domain Transfer Improvements:** Each high-side connection mapping now selects its own import scan workflow. When the workflow has Hash Scanning on, the high side skips files it already scanned. Infected files, and files that fail to scan or are canceled, always block a transfer.
 
 **Improvements**
 

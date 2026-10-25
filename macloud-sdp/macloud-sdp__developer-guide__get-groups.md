@@ -16,10 +16,10 @@ View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude abou
 
 Use to fetch groups in an account
 
-## API URL
+## [API URL](/docs/cm/developer-guidelines/get-groups#api-url)
 
 https://gears.opswat.com/o/api/v3/groups
-## Request Parameters
+## [Request Parameters](/docs/cm/developer-guidelines/get-groups#request-parameters)
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
@@ -31,11 +31,11 @@ https://gears.opswat.com/o/api/v3/groups
 | sort.field | string | Body | Optional | Specify which field will be sorted by  Values can be: **group_name, domain_name, policy_name, number_of_devices, last_update**. | group_name |
 | sort.order | string | Body | Optional | Specify sort order. Values can be:   - asc: sort devices in ascending order. - desc: sort devices in descending order. | asc |
 
-## Response HTTP Code
+## [Response HTTP Code](/docs/cm/developer-guidelines/get-groups#response-http-code)
 
-See details in the Response HTTP Code section in [this page](/developer-guidelines/apis)
+See details in the Response HTTP Code section in [this page](/docs/cm/developer-guidelines/apis)
 
-## Response Parameters
+## [Response Parameters](/docs/cm/developer-guidelines/get-groups#response-parameters)
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -50,7 +50,7 @@ See details in the Response HTTP Code section in [this page](/developer-guidelin
 | created_date | string | A timestamp in GMT format when this group is created |
 | last_modified | string | The last timestamp in GMT format when this group is updated |
 
-## Example
+## [Example](/docs/cm/developer-guidelines/get-groups#example)
 
 **Example Request**
 

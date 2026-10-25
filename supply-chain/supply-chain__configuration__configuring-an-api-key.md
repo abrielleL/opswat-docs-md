@@ -24,6 +24,15 @@ A popup window will appear:
 
 4. Click **Save and Copy** to activate the new API Key and replace any existing key.
 
+> **Update the places that use the old key**
+>
+> Each user has one API key. When you save a new key, the old key stops working. Update the new key in these places:
+>
+> - **Webhooks:** the webhook secret or the `ApiKey` header in your service providers. A webhook uses the API key of the user who created the webhook URL.
+> - **Cross Domain Transfer:** the **Authorization Token** in the Low Side setup, if the key belongs to a High Side user.
+>
+> Events and transfers fail until you update the key.
+
 ## Use the API Key in a request
 
 Include your API key in the HTTP request headers using the `ApiKey` header.

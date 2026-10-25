@@ -5,7 +5,7 @@
 View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [UI](/docs/mdkiosk/v4.8.6/troubleshooting/troubleshooting-issues#ui)
 
-With some high resolution touch screens, click events from a mouse are not registered if the Scale and Layout display setting is set to greater than 100%. Workaround is to hold the right mouse button to ensure the left button click is respected
+With some high resolution touch screens, click events from a mouse are not registered if the Scale and Layout display setting is set to greater than 100%. A workaround is to hold the right mouse button to ensure the left button click is registered
 
 ## [Physical Input Devices](/docs/mdkiosk/v4.8.6/troubleshooting/troubleshooting-issues#physical-input-devices)
 
@@ -13,7 +13,7 @@ Customers have reported some localization issues with older versions of Windows 
 
 ## [Joining a Hardware Kiosk to a domain](/docs/mdkiosk/v4.8.6/troubleshooting/troubleshooting-issues#joining-a-hardware-kiosk-to-a-domain)
 
-In some cases, joining a Kiosk to a domain will fail. The Netlogon service fails to start with error: "Windows could not start the Netlogon service on Local Computer. Error 1058...". Verify if any recent network settings have been modified. Restart the system to ensure network setting changes have been correctly applied and the Netlogon service can start as expected.
+In some cases, joining a Kiosk to a domain will fail. The Netlogon service fails to start with the error: "Windows could not start the Netlogon service on Local Computer. Error 1058...". Verify if any recent network settings have been modified. Restart the system to ensure network setting changes have been correctly applied and the Netlogon service can start as expected.
 
 ## [Core Hardware Requirements Warning on Kiosk Mobile](/docs/mdkiosk/v4.8.6/troubleshooting/troubleshooting-issues#core-hardware-requirements-warning-on-kiosk-mobile)
 
@@ -44,10 +44,12 @@ The support package contains the following elements:
 
 **Creating the package**
 
-From **Kiosk Console**, navigate to **Logs** section. Click on **Download support package**. The support package will be named *MetaDefender___Kiosk_Debug.zip.*
+From **Kiosk Console**, navigate to the **Settings **-> **Logs** section. Click on **Download support package**. The support package will be named *MetaDefender___Kiosk_Debug.zip.*
 
-Alternatively, we can collect these information via command line tool. Run cmd.exe with administrator permissions, run the following command line:
+Alternatively, we can collect this information via the command line tool. Run cmd.exe with administrator permissions, and run the following command line:
 
 `"C:\Program Files (x86)\OPSWAT\Metadefender Kiosk\Client\omdDebugTool.exe" ALL`
 
 The logs will be collected and stored under "C:\Users<username>\AppData\Local\Temp"
+
+**ℹ️ Support:** If **Further Assistance** is required, please proceed to log a [support case or chatting with our support engineer](https://my.opswat.com/support).

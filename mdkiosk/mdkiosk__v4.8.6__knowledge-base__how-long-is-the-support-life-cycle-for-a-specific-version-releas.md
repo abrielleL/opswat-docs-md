@@ -29,13 +29,19 @@ Visit [Installation Documentation](https://docs.opswat.com/mdkiosk/installation)
 
 | **Release number** | **Release date** | **End-of-life date** |
 | --- | --- | --- |
-| 4.7.11 | 5 December | 5 Jun 2027 |
+| 4.8.5 | 18 Sep 2026 | 30 Mar 2028 |
+| 4.8.4 | 06 Aug 2026 | 10 Mar 2028 |
+| 4.8.3 | 26 Jul 2026 | 27 Jan 2028 |
+| 4.8.2 | 09 Jul 2026 | 17 Dec 2027 |
+| 4.8.1 | 09 Apr 2026 | 30 Dec 2027 |
+| 4.8.0 | 02 Feb 2026 | 30 Sep 2027 |
+| 4.7.11 | 5 Dec 2025 | 5 Jun 2027 |
 | 4.7.10 | 14 Oct 2025 | 14 April 2027 |
 | 4.7.9 | 29 Aug 2025 | 29 Feb 2027 |
 | 4.7.8 | 28 July 2025 | 28 Jan 2027 |
 | 4.7.7 | 11 July 2025 | 11 Jan 2027 |
 | 4.7.6 | 04 Jun 2025 | 11 Jan 2027 |
-| 4.7.5 | 10 Apr 2025 | 04 Dec 2026 |
+| 4.7.5 | 10 Apr 2025 | 05 Dec 2026 |
 | 4.7.4 | 07 Mar 2025 | 10 Oct 2026 |
 | 4.7.3 | 30 Dec 2024 | 07 Sep 2026 |
 | 4.7.2 | 04 Nov 2024 | 30 Jun 2026 |

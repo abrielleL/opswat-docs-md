@@ -62,6 +62,7 @@ The resources listed below (CPU, RAM, disk space) are the minimum recommended fo
 - SSD is recommended for system where MetaDefender Core is installed.
 - See more disk space details in [Storage Usage Information](/docs/mdcore/v5.22.1/installation/recommended-system-configuration#storage-usage-information).
 - For virtualization deployments such as VMware, Hyper-V, and XenServer, we recommend static resource allocation for CPU, RAM, and SSD storage to prevent stability issues.
+- For any additional AV custom engine, add at least 1 GB of additional RAM and 1 additional CPU cores.
 - If Deep CDR and/or Proactive DLP are licensed, add at least 8 GB of additional RAM and 4 additional CPU cores (for a total of at least 12 CPU cores).
 - If Embedded Adaptive Sandbox licensed, add at least 8 GB of additional RAM and 4 additional CPU cores (for a total of at least 12 CPU cores).
 - SBOM processing requires additional disk space. Ensure at least 15 GB of free disk is available for the engine to operate properly.
@@ -148,6 +149,7 @@ The resources listed below (CPU, RAM, disk space) are the minimum recommended fo
 - SSD is recommended for system where MetaDefender Core resides on.
 - See more disk space details in [Storage Usage Information](/docs/mdcore/v5.22.1/installation/recommended-system-configuration#storage-usage-information).
 - For virtualization deployments such as VMware, Hyper-V, and XenServer, we recommend static resource allocation for CPU, RAM, and SSD storage to prevent stability issues.
+- For any additional AV custom engine, add at least 1 GB of additional RAM and 1 additional CPU cores.
 - If Deep CDR and/or Proactive DLP are licensed, add at least 8 GB of additional RAM and 4 additional CPU cores (for a total of at least 12 CPU cores).
 - If the Embedded Adaptive Sandbox is licensed, add at least 8 GB of additional RAM and 4 additional CPU cores (for a total of at least 12 CPU cores).
 - SBOM processing requires additional disk space. Ensure at least 15 GB of free disk is available for the engine to operate properly.
