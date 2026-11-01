@@ -2,7 +2,7 @@
 
 ### METADEFENDER
 
-# Aether(Sandbox)
+# Aether Sandbox
 
 #### 3.3.0 [Latest]
 

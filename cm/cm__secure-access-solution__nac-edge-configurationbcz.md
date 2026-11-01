@@ -2,6 +2,7 @@
 
 # NAC Edge Configuration
 
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ### Overview
 
 The following guide covers steps to configure NAC Edge server. By configuring NAC Edge server, multiple Authentication Method become available to the environment:
@@ -10,7 +11,3 @@ The following guide covers steps to configure NAC Edge server. By configuring NA
 - **EAP-PEAP Authentication**
 - **EAP-TTLS Authentication**
 - **MAC Authentication Bypass (MAB)**
-
----
-
-[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

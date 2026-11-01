@@ -46,24 +46,7 @@ https://gears.opswat.com/o/api/v2.2/devices/00:0c:29:f2:7a:29/remediation?access
 
 **Example Response**
 
-//if the given device has issues
-{
-"remediation_link" : "https://gears.opswat.com/gears/remediation/AKLOMFNH123518/00:0c:29:f2:7a:29/123AG138545132156/remediation.html"
-}
- 
- 
-//if the given device has no issues
-{
-"result": 0,
-"msg": "Device has no issues"
-}
- 
- 
-//if the given device is not found in the associated account
-{
-"result": 0,
-"msg": "Device not found"
-}
+//if the given device has issues{ "remediation_link" : "https://gears.opswat.com/gears/remediation/AKLOMFNH123518/00:0c:29:f2:7a:29/123AG138545132156/remediation.html"}  //if the given device has no issues{ "result": 0, "msg": "Device has no issues"}  //if the given device is not found in the associated account{ "result": 0, "msg": "Device not found"}
 ## [History](/docs/cm/developer-guidelines/get-remediation-link-v2-2#history)
 
 | Version | URL |
