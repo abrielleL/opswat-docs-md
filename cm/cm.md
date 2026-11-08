@@ -34,7 +34,9 @@ Getting Started[##### Introduction
 
 ######](/docs/cm/developer-guidelines)Support[##### Knowledge Base
 
-###### Answers to common questions about the product capabilities, and related articles on popular topics.](/docs/cm/knowledge-base)
+###### Answers to common questions about the product capabilities, and related articles on popular topics.](/docs/cm/knowledge-base)[##### Product Integration
+
+###### Explore feature support and management capabilities across integrated OPSWAT products.](/docs/cm/product-integration)
 
 ## References
 
