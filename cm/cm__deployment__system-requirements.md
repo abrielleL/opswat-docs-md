@@ -2,97 +2,103 @@
 
 # System Requirements
 
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 To deploy My OPSWAT Central Management On-Premises, ensure your system meets the minimum requirements for your deployment mode.
 
-> **Info**
->
-> Only 64-bit platforms are supported.
+Info
 
-Jump to: [MSI Installation  - Windows](https://www.opswat.com/docs/cm/deployment/system-requirements#msi-installation--windows) | [RPM Installation - Linux [RHEL]](https://www.opswat.com/docs/cm/deployment/system-requirements#rpm-installation--linux-rhel) | [Virtual Appliance[OVA]](https://www.opswat.com/docs/cm/deployment/system-requirements#virtual-appliance-ova)
+Only 64-bit platforms are supported.
 
-## Common Requirements
+Jump to: [MSI Installation - Windows](https://www.opswat.com/docs/cm/deployment/system-requirements#msi-installation--windows) | [RPM Installation - Linux [RHEL]](https://www.opswat.com/docs/cm/deployment/system-requirements#rpm-installation--linux-rhel) | [Virtual Appliance[OVA]](https://www.opswat.com/docs/cm/deployment/system-requirements#virtual-appliance-ova)
+
+## [Common Requirements](/docs/cm/deployment/system-requirements#common-requirements)
 
 These requirements apply to all deployment modes.
 
-### Hardware
+### [Hardware](/docs/cm/deployment/system-requirements#hardware)
 
 | Component | Minimum |
-| ---- | ---- |
+| --- | --- |
 | CPU | 8 vCPUs, AVX2 support |
 | Memory | 32 GB RAM |
 | Storage | 500 GB SSD (see [Storage Usage Information](https://www.opswat.com/docs/cm/deployment/system-requirements#storage-usage-information) for sizing guidance) |
 
-### Networking and Port Requirements
+### [Networking and Port Requirements](/docs/cm/deployment/system-requirements#networking-and-port-requirements)
 
 | Port | Protocol | Direction | Destination / Source | Purpose |
-| ---- | ---- | ---- | ---- | ---- |
+| --- | --- | --- | --- | --- |
 | 9000 | TCP | Inbound | Product instances | Communications from products to My OPSWAT Central Management |
-| 443 | TCP | Outbound | [https://update.dl.opswat.com](https://update.dl.opswat.com), [https://opswat-gears-cloud.s3-us-west-2.amazonaws.com/](https://opswat-gears-cloud.s3-us-west-2.amazonaws.com/) | Product/module updates (if enabled) |
-| 443 | TCP | Outbound | [https://activation.dl.opswat.com](https://activation.dl.opswat.com) | License activation (if online) |
+| 443 | TCP | Outbound | <https://update.dl.opswat.com>, <https://opswat-gears-cloud.s3-us-west-2.amazonaws.com/> | Product/module updates (if enabled) |
+| 443 | TCP | Outbound | <https://activation.dl.opswat.com> | License activation (if online) |
 | 443 | TCP | Outbound | Configured proxy servers | Outbound traffic via proxy (if configured) |
 | `<SMTP port>` | TCP | Outbound | Configured SMTP server | Send emails (if configured) |
 | `<IdP port>` | TCP | Outbound | Configured IdP servers | SSO user directory authentication (if configured) |
-| 443 | TCP | Outbound | [https://metascanbucket.s3.amazonaws.com/](https://metascanbucket.s3.amazonaws.com/), [https://opswat-gears-cloud-clients.s3.us-west-2.amazonaws.com/](https://opswat-gears-cloud-clients.s3.us-west-2.amazonaws.com/), [https://s3.amazonaws.com/mem-onpremise/production/patch/](https://s3.amazonaws.com/mem-onpremise/production/patch/), [https://s3.amazonaws.com/mem-onpremise/production/vulnerability/](https://s3.amazonaws.com/mem-onpremise/production/vulnerability/) | MetaDefender Endpoint updates (if enabled) |
+| 443 | TCP | Outbound | <https://metascanbucket.s3.amazonaws.com/>, <https://opswat-gears-cloud-clients.s3.us-west-2.amazonaws.com/>, <https://s3.amazonaws.com/mem-onpremise/production/patch/>, <https://s3.amazonaws.com/mem-onpremise/production/vulnerability/> | MetaDefender Endpoint updates (if enabled) |
+| 30078 | UDP | Inbound | MetaDefender Kiosk devices on the same subnet | Kiosk auto-discovery (zero-touch enrollment). Optional. |
 
-> **Note**
->
-> - Internal ports ranging from 30000 to 30071. Conflicts within this port range can lead to improper system behavior.
-> - If you route traffic through proxy servers, there's no need to set up outbound rules for other outbound connections, except the proxy connections.
-> - To ensure proper communication between product instances and the My OPSWAT Central Management, the **FQDN and ports** must be allowed through your **firewall** or **proxy**.
+Note
 
-## MSI Installation — Windows
+- Internal ports ranging from 30000 to 30071. Conflicts within this port range can lead to improper system behavior.
+- If you route traffic through proxy servers, there's no need to set up outbound rules for other outbound connections, except the proxy connections.
+- To ensure proper communication between product instances and the My OPSWAT Central Management, the **FQDN and ports** must be allowed through your **firewall** or **proxy**.
+- **MetaDefender Kiosk auto-discovery (UDP 30078)**. Kiosk instances find My OPSWAT Central Management by broadcasting a UDP probe on the local network. The port must accept inbound UDP from the Kiosk subnet. Discovery works only inside the same IPv4 subnet (one L2 broadcast domain). Kiosk instances on another VLAN or a routed network must be given the My OPSWAT Central Management URL manually. After discovery, Kiosk instances enroll over the product communication port listed above.
 
-### Operating System
+  - RPM / OVA: the installer adds a firewall rule for this port automatically (best effort). If the host uses a different firewall, open the port manually.
+  - MSI (Windows): the installer does not create a Windows Firewall rule. Open the port manually
+## [MSI Installation — Windows](/docs/cm/deployment/system-requirements#msi-installation--windows)
+
+### [Operating System](/docs/cm/deployment/system-requirements#operating-system)
 
 | OS Family | Supported Versions |
-| ---- | ---- |
+| --- | --- |
 | Microsoft Windows | 11 |
 | Microsoft Windows Server | 2016, 2019, 2022, 2025 |
 
-> **Info**
->
-> Note: Windows Server 2016 must have all patches installed.
+Info
 
-### Prerequisites
+Note: Windows Server 2016 must have all patches installed.
+
+### [Prerequisites](/docs/cm/deployment/system-requirements#prerequisites)
 
 | Prerequisite | Required Version | Download |
-| ---- | ---- | ---- |
+| --- | --- | --- |
 | Visual C++ Redistributable | 14.36.32532.0+ (64-bit) | [Download](https://aka.ms/vs/17/release/vc_redist.x64.exe) |
 | .NET Framework | 4.8+ (64-bit) | [Download](https://download.microsoft.com/download/f/3/a/f3a6af84-da23-40a5-8d1c-49cc10c8e76f/NDP48-x86-x64-AllOS-ENU.exe) |
 | .NET Desktop Runtime | 8.0.0+ (64-bit) | [Download](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.23-windows-x64-installer) |
 
-### Directory Paths
+### [Directory Paths](/docs/cm/deployment/system-requirements#directory-paths)
 
 | Directory | Default Path |
-| ---- | ---- |
+| --- | --- |
 | Installation, Data backup | C:\Program Files\OPSWAT\MOCM |
 | Troubleshooting log files | C:\ProgramData\OPSWAT\MOCM\Logs |
 
-## RPM Installation — Linux (RHEL)
+## [RPM Installation — Linux (RHEL)](/docs/cm/deployment/system-requirements#rpm-installation--linux-rhel)
 
-> **Info Version Applicability**
->
-> The requirements below apply to My OPSWAT Central Management **10.7.26080 and later**, where the supporting components (nginx, RabbitMQ, Valkey) are bundled with the RPM package. Their configuration and data are stored under the My OPSWAT Central Management directories, as listed in [Directory Paths](https://www.opswat.com/docs/cm/deployment/system-requirements#directory-paths-2).
->
-> For **10.7.26070 and earlier**:
->
-> - nginx, rabbitmq-server, redis and erlang must be installed separately before the RPM installer.
-> - These components use their own system directories (`/etc/nginx`, `/usr/share/nginx`, `/etc/rabbitmq`, `/var/lib/rabbitmq`, `/etc/redis`, `/var/lib/redis`).
->
-> Please refer to the documentation for version [**10.7.26070**](https://www.opswat.com/docs/cm/10.7.26070/deployment/system-requirements#rpm-installation--linux-rhel) using the version selector at the top of this page.
+**Info Version Applicability**
 
-### Operating System
+The requirements below apply to My OPSWAT Central Management **10.7.26080 and later**, where the supporting components (nginx, RabbitMQ, Valkey) are bundled with the RPM package. Their configuration and data are stored under the My OPSWAT Central Management directories, as listed in [Directory Paths](https://www.opswat.com/docs/cm/deployment/system-requirements#directory-paths-2).
+
+For **10.7.26070 and earlier**:
+
+- nginx, rabbitmq-server, redis and erlang must be installed separately before the RPM installer.
+- These components use their own system directories (`/etc/nginx`, `/usr/share/nginx`, `/etc/rabbitmq`, `/var/lib/rabbitmq`, `/etc/redis`, `/var/lib/redis`).
+
+Please refer to the documentation for version [**10.7.26070**](https://www.opswat.com/docs/cm/10.7.26070/deployment/system-requirements#rpm-installation--linux-rhel) using the version selector at the top of this page.
+
+### [Operating System](/docs/cm/deployment/system-requirements#operating-system)
 
 Red Hat Enterprise Linux **9.4 or later** (64-bit only).
 
-### Required Packages
+### [Required Packages](/docs/cm/deployment/system-requirements#required-packages)
 
 The following packages are set as the RPM package's "Requires" dependencies.
 
 Note that when installing the main package via dnf or yum, these dependecies will be automatically installed by default if a valid upstream repository is available.
 
 | Package | Required Minimum Version | Installation Guide |
-| ---- | ---- | ---- |
+| --- | --- | --- |
 | openssl | No minimum | Available via `dnf install openssl` |
 | glibc | 2.34 | Available via `dnf install glibc` |
 | libgcc | 11.2.1 | Available via `dnf install libgcc` |
@@ -110,14 +116,14 @@ Note that when installing the main package via dnf or yum, these dependecies wil
 | libxcrypt | 4.4.18 | Available via `dnf install libxcrypt` |
 | pcre2 | 10.37 | Available via `dnf install pcre2` |
 
-> **Info**
->
-> Note: RPM installation requires only the packages above. No hypervisor or VMware requirement — it runs on any infrastructure (VMware, cloud VMs, bare metal, etc.).
+Info
 
-### Directory Paths
+Note: RPM installation requires only the packages above. No hypervisor or VMware requirement — it runs on any infrastructure (VMware, cloud VMs, bare metal, etc.).
+
+### [Directory Paths](/docs/cm/deployment/system-requirements#directory-paths)
 
 | Directory | Default Path |
-| ---- | ---- |
+| --- | --- |
 | Main installation folder | /opt/mocm |
 | Service folder | /usr/lib/systemd/system |
 | Event log folder | /var/log/mocm |
@@ -130,27 +136,27 @@ Note that when installing the main package via dnf or yum, these dependecies wil
 | Valkey config | /etc/opt/mocm/valkey |
 | Valkey data | /var/lib/mocm/valkey |
 
-## Virtual Appliance (OVA)
+## [Virtual Appliance (OVA)](/docs/cm/deployment/system-requirements#virtual-appliance-ova)
 
-> **Info**
->
-> Note: VMware requirements below apply only to Virtual Appliance (OVA) deployment. They are NOT required for MSI or RPM installations.
+Info
 
-### Hypervisor Requirements
+Note: VMware requirements below apply only to Virtual Appliance (OVA) deployment. They are NOT required for MSI or RPM installations.
+
+### [Hypervisor Requirements](/docs/cm/deployment/system-requirements#hypervisor-requirements)
 
 - VMware vSphere 7.0 U3 or 8.0
 - VMware Workstation Player 17
 
-### Directory Paths
+### [Directory Paths](/docs/cm/deployment/system-requirements#directory-paths)
 
-> **Info Version Applicability**
->
-> The folder structure below applies to My OPSWAT Central Management **10.7.26080 and later**, where the configuration and data of the supporting components (nginx, RabbitMQ, Valkey) are stored under the My OPSWAT Central Management directories.
->
-> For **10.7.26070 and earlier**, these components use their own system directories (`/etc/nginx`, `/usr/share/nginx`, `/etc/rabbitmq`, `/var/lib/rabbitmq`, `/etc/redis`, `/var/lib/redis`). Please refer to the documentation for version **10.7.26070** using the version selector at the top of this page.
+**Info Version Applicability**
+
+The folder structure below applies to My OPSWAT Central Management **10.7.26080 and later**, where the configuration and data of the supporting components (nginx, RabbitMQ, Valkey) are stored under the My OPSWAT Central Management directories.
+
+For **10.7.26070 and earlier**, these components use their own system directories (`/etc/nginx`, `/usr/share/nginx`, `/etc/rabbitmq`, `/var/lib/rabbitmq`, `/etc/redis`, `/var/lib/redis`). Please refer to the documentation for version **10.7.26070** using the version selector at the top of this page.
 
 | Directory | Default Path |
-| ---- | ---- |
+| --- | --- |
 | Main installation folder | /var/opt/mocm |
 | Service folder | /etc/systemd/system |
 | Event log folder | /var/log/mocm |
@@ -163,21 +169,21 @@ Note that when installing the main package via dnf or yum, these dependecies wil
 | Valkey config | /etc/opt/mocm/valkey |
 | Valkey data | /var/lib/mocm/valkey |
 
-## Sizing Guidance
+## [Sizing Guidance](/docs/cm/deployment/system-requirements#sizing-guidance)
 
 My OPSWAT Central Management is sized by the **volume of reports (objects)** its enrolled instances send — mainly the total files scanned per hour across all MetaDefender Cores — plus your **data retention period**, not by the number of products. Use the minimum requirements as a baseline and scale to your expected load:
 
 | CPU | RAM | Sustained load (objects/hr, all Cores) | Disk growth |
-| ---- | ---- | ---- | ---- |
+| --- | --- | --- | --- |
 | 8 | 32 GB | ~1 million/hr (~24 million/day) | ~235 GB/month |
 | 12 | 48 GB | ~3 million/hr (~72 million/day) | ~700 GB/month |
 | 16 | 64 GB | ~5 million/hr (~120 million/day) | ~1,220 GB/month |
 
-Memory saturates first as load grows; provision disk to your retention period. The disk-growth figures above were measured with *Do not store raw report data for allowed files *enabled, which significantly reduces disk usage. For product-specific disk estimates, see [Storage Usage Information](https://www.opswat.com/docs/cm/deployment/system-requirements#storage-usage-information).
+Memory saturates first as load grows; provision disk to your retention period. The disk-growth figures above were measured with *Do not store raw report data for allowed files* enabled, which significantly reduces disk usage. For product-specific disk estimates, see [Storage Usage Information](https://www.opswat.com/docs/cm/deployment/system-requirements#storage-usage-information).
 
-> These figures are sizing guidelines based on OPSWAT performance and load testing (5 MetaDefender Core + 5 MetaDefender Kiosk, 30-day retention). Actual resource usage varies with your report volume, retention period, and environment, so use them as a starting point and validate against your own workload. For the full methodology and detailed results, see [Performance and Sizing for My OPSWAT Central Management](https://www.opswat.com/docs/cm/deployment/Performance-and-Sizing-for-My-OPSWAT-Central-Management).
+These figures are sizing guidelines based on OPSWAT performance and load testing (5 MetaDefender Core + 5 MetaDefender Kiosk, 30-day retention). Actual resource usage varies with your report volume, retention period, and environment, so use them as a starting point and validate against your own workload. For the full methodology and detailed results, see [Performance and Sizing for My OPSWAT Central Management](https://www.opswat.com/docs/cm/deployment/Performance-and-Sizing-for-My-OPSWAT-Central-Management).
 
-## Storage Usage Information
+## [Storage Usage Information](/docs/cm/deployment/system-requirements#storage-usage-information)
 
 **MetaDefender Endpoint**
 
@@ -222,14 +228,10 @@ Total disk space requirement:
 
 Disk space needed to manage Cores with 20 engines & 1 million scanned files: **300 GB**
 
-## Browser Versions Supported
+## [Browser Versions Supported](/docs/cm/deployment/system-requirements#browser-versions-supported)
 
 Supported browsers for launching the My OPSWAT Central Management console are Chrome, Firefox, and Microsoft Edge on desktop (mobile view has not been supported yet, but in our roadmap). We recommend that you should use the most current version of the browser.
 
-## Screen Resolution
+## [Screen Resolution](/docs/cm/deployment/system-requirements#screen-resolution)
 
 We recommend that you use a screen resolution of 1300x768 or larger to properly display My OPSWAT Central Management console interface.
-
----
-
-[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

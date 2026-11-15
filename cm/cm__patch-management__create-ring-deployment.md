@@ -2,45 +2,40 @@
 
 # Create Ring Deployment
 
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 Set up a reusable deployment configuration, then stage its rollout into rings in the steps that follow.
 
-> **Please Note**
->
-> - Ring deployment only support **Window patches**. Non-Window devices will be automatically excluded.
-> - [Driver & Firmware Updates](https://www.opswat.com/docs/cm/patch-management/driver---firmware-settings-on-endpoint) is supported on **Dell **and **Lenovo Windows devices **only.
+**Please Note**
 
-![](https://uploads.developerhub.io/prod/97qW/br6id2aew6kejdyqc8ya513j7hxt58bpfb9io6sc44v121tkq75zafqv6p3oefo1.png)
+- Ring deployment only support **Window patches**. Non-Window devices will be automatically excluded.
+- [Driver & Firmware Updates](/docs/cm/patch-management/driver---firmware-settings-on-endpoint) is supported on **Dell** and **Lenovo Windows devices** only.
 
-## Create Ring Deployment
+## [Create Ring Deployment](/docs/cm/patch-management/create-ring-deployment#create-ring-deployment)
 
 1. In the left navigation, select **Patch Management > Jobs**
-2. Select **Create Deployment**, then choose **Ring **from the dropdown
+2. Select **Create Deployment**, then choose **Ring** from the dropdown
 3. In the dialog, choose what to deploy:
+
    1. For Windows Patches
    2. For Application Patches
    3. For Driver & Firmware Updates
 
-![](https://uploads.developerhub.io/prod/97qW/tzw46j4wjytvxbuf2uyzxm4fgc5y5ognff27cymluml14dk9q2a76q05kj9ubdvn.png)
-
-## Configure Ring Deployment
+## [Configure Ring Deployment](/docs/cm/patch-management/create-ring-deployment#configure-ring-deployment)
 
 | Configuration | Details |
-| ---- | ---- |
-| Name and describe the deployment | Enter a Name, a short Description, and any Tags you want to filter by later ![](https://uploads.developerhub.io/prod/97qW/s5724xwzoa1rqqsb6w0ogx4eocuv2f1r0puqq0ugtww0hpbejb1ce3q7bds6h8op.png) |
-| Choose what gets installed | Use condition-based selection to automatically include updates that match criteria, or pick Specific Patches / Specific Applications manually Note* Rejected and unsupported items are automatically excluded, even if they match your selection criteria* ![](https://uploads.developerhub.io/prod/97qW/elttqiu4z08wsd66i4bdcv63fq1mzwd494a575a6shrhwo7nvabuej79e43rh9xf.png) |
-| Set how often the deployment runs | Set the Date and Start time. Add an End time if you want it to stop automatically. Refer to [Ring Schedule ](https://www.opswat.com/docs/cm/patch-management/how-ring-deployment-works#ring-schedule-)to understand how it works ![](https://uploads.developerhub.io/prod/97qW/wqgh51ie3aihj3od1nh9dk6ookdo83uev3zqbu7yr0tcx005em0ap0kgiohj4p4v.png) Note * If no end time is specified, the deployment is marked complete only once every endpoint finishes and reports back to My OPSWAT Central Management. Offline endpoints during the window are marked Unreachable.* |
-| Control when deployments can occur | Configure a Maintenance Window to limit deployments to approved times. Refer to [Maintenance Window](https://www.opswat.com/docs/cm/patch-management/how-ring-deployment-works#maintenance-window) to understand how it works ![](https://uploads.developerhub.io/prod/97qW/zdk3oqp0vr4f6e39bd844tvsnbvnl6b49tdtaynwmc0gzs06cin1zkrgecw6g4v4.png) |
-| Stage your rollout across rings | Configure deployment rings under Targets for Ring Deployment. Refer to [Targets for Ring Deployment](https://www.opswat.com/docs/cm/patch-management/how-ring-deployment-works#targets-for-ring-deployment)[ ](https://www.opswat.com/docs/cm/patch-management/how-ring-deployment-works#what-is-auto-promote-and-manual-promote)to understand how they work Note* You can configure up to ****10 rings**** per deployment. At least one ring is required before saving.* ![](https://uploads.developerhub.io/prod/97qW/k9hzzajwcfbawd9lhroh4hd68ewm38br54xshdom2yrzu3352jgcv60rwfbn3axx.png) |
-| Control restart and user notifications | Configure Reboot Options (Windows) or Update Notification (Application) to reduce user disruption ![](https://uploads.developerhub.io/prod/97qW/ficzv9hn1nxrcnu09783cwnexgo9ye69lb6x617xzq8tff3l0nv2bc2byjrjti8n.png) ![](https://uploads.developerhub.io/prod/97qW/goj5q50nwk80jfvzc3vemm8lv3cgbmwsy951f9nmab54fntjpx7zv3r5jh1l5p0i.png) |
-| Get notified when it's done | Add one or more email addresses under Report to receive a summary ![](https://uploads.developerhub.io/prod/97qW/rl51j2sr4r5yhvy08w3o8sam22u80qiknqy80xlcry3lpaottwockhl5o0fpje7e.png) |
+| --- | --- |
+| Name and describe the deployment | Enter a Name, a short Description, and any Tags you want to filter by later |
+| Choose what gets installed | Use condition-based selection to automatically include updates that match criteria, or pick Specific Patches / Specific Applications manually  Note *Rejected and unsupported items are automatically excluded, even if they match your selection criteria* |
+| Set how often the deployment runs | Set the Date and Start time. Add an End time if you want it to stop automatically. Refer to [Ring Schedule](/docs/cm/patch-management/how-ring-deployment-works#ring-schedule-) to understand how it works      Note  *If no end time is specified, the deployment is marked complete only once every endpoint finishes and reports back to My OPSWAT Central Management. Offline endpoints during the window are marked Unreachable.* |
+| Control when deployments can occur | Configure a Maintenance Window to limit deployments to approved times. Refer to [Maintenance Window](/docs/cm/patch-management/how-ring-deployment-works#maintenance-window) to understand how it works |
+| Stage your rollout across rings | Configure deployment rings under Targets for Ring Deployment. Refer to [Targets for Ring Deployment](/docs/cm/patch-management/how-ring-deployment-works#targets-for-ring-deployment)to understand how they work  Note *You can configure up to* ***10 rings*** *per deployment. At least one ring is required before saving.* |
+| Control restart and user notifications | Configure Reboot Options (Windows) or Update Notification (Application) to reduce user disruption |
+| Get notified when it's done | Add one or more email addresses under Report to receive a summary |
 
-## Next Steps
+## [Next Steps](/docs/cm/patch-management/create-ring-deployment#next-steps)
 
-- Track a specific deployment in [Monitor Deployment](https://www.opswat.com/docs/cm/patch-management/monitor-deployment)
-- Configure point-in-time patch reports with [Custom Patch Reports](https://www.opswat.com/docs/cm/patch-management/custom-patch-reports)
-- Set real-time alerts for key patch events under [Patch Notification](https://www.opswat.com/docs/cm/patch-management/patch-notification)
-- Define SLA timeframes to maintain compliance visibility via [Patch SLA](https://www.opswat.com/docs/cm/patch-management/patch-sla)
-
----
-
-[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)
+- Track a specific deployment in [Monitor Deployment](/docs/cm/patch-management/monitor-deployment)
+- Configure point-in-time patch reports with [Custom Patch Reports](/docs/cm/patch-management/custom-patch-reports)
+- Set real-time alerts for key patch events under [Patch Notification](/docs/cm/patch-management/patch-notification)
+- Define SLA timeframes to maintain compliance visibility via [Patch SLA](/docs/cm/patch-management/patch-sla)

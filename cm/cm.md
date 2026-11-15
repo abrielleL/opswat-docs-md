@@ -4,7 +4,7 @@
 
 # My OPSWAT Central Management
 
-#### 10.7.26100 [Latest]
+#### 10.8.26110 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/cm/release-notes)
 
@@ -20,7 +20,9 @@ Getting Started[##### Introduction
 
 ######](/docs/cm/secure-access-solution)[##### Endpoint Security Solution
 
-######](/docs/cm/endpoint-security-solution)[##### Product Management
+######](/docs/cm/endpoint-security-solution)[##### File Security Solution
+
+######](/docs/cm/file-security-solution)[##### Product Management
 
 ######](/docs/cm/product-management)[##### Patch Management
 

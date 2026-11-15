@@ -11,9 +11,9 @@ The Fend Data Diode is capable of communicating directly with Modbus RTU and TCP
 
 The input side of the Fend Data Diode has two ways of communicating with your Modbus network.
 
-### [Option 1: Modbus Master/Client Mode](/docs/fenddiode/deployment-examples/modbus-examples#option-1-modbus-masterclient-mode)
+### [Option 1: Modbus Client Mode](/docs/fenddiode/deployment-examples/modbus-examples#option-1-modbus-client-mode)
 
-In Master/Client mode the input side of the diode acts as a Modbus Master/Client and actively polls Modbus devices on the target network. **Important Note: Modbus RTU** ***serial*** **networks cannot have more than one active master on the network at a time. If there is another master on a serial Modbus RTU network, you must use Listen mode (see below). This does** ***not*** **apply to Modbus TCP.**
+In Client mode the input side of the diode acts as a Modbus Client and actively polls Modbus devices on the target network. **Important Note: Modbus RTU** ***serial*** **networks cannot have more than one active client on the network at a time. If there is another client on a serial Modbus RTU network, you must use Listen mode (see below). This does** ***not*** **apply to Modbus TCP.**
 
 ### [Option 2: Listen Mode (Passive Tap)](/docs/fenddiode/deployment-examples/modbus-examples#option-2-listen-mode-passive-tap)
 
@@ -21,13 +21,13 @@ Listen mode requires a tapped connection (or port mirror) from an existing Modbu
 
 ## [Output Side Options](/docs/fenddiode/deployment-examples/modbus-examples#output-side-options)
 
-### [Option 1: Modbus Slave/Server](/docs/fenddiode/deployment-examples/modbus-examples#option-1-modbus-slaveserver)
+### [Option 1: Modbus Server](/docs/fenddiode/deployment-examples/modbus-examples#option-1-modbus-server)
 
-In this mode the output side of the diode is acting as a Modbus Slave/Server holding data and waiting to be polled by a Modbus Master/Client on the outside network. This operating mode can be used with input side Master/Client or Listen modes. This allows the flexibility of interacting with the Modbus network, or passively creating a gateway to the network. Here are two diagrams outlining these configurations:
+In this mode the output side of the diode is acting as a Modbus Server holding data and waiting to be polled by a Modbus Client on the outside network. This operating mode can be used with input side Client or Listen modes. This allows the flexibility of interacting with the Modbus network, or passively creating a gateway to the network. Here are two diagrams outlining these configurations:
 
 ### [Option 2: Modbus Protocol Converter - MQTT Publisher, TCP Client (JSON Protocol Conversion), or Fend Cloud](/docs/fenddiode/deployment-examples/modbus-examples#option-2-modbus-protocol-converter---mqtt-publisher-tcp-client-json-protocol-conversion-or-fend-cloud)
 
-In protocol conversion mode, the output side of the diode is converting the original Modbus data into a JSON format to be sent to Fend Cloud, over MQTT Publisher, or to a local TCP server for logging. This operating mode can be used with input side Master/Client (Request/Response) or Listen modes. Here are two diagrams outlining these configurations:
+In protocol conversion mode, the output side of the diode is converting the original Modbus data into a JSON format to be sent to Fend Cloud, over MQTT Publisher, or to a local TCP server for logging. This operating mode can be used with input side Client (Request/Response) or Listen modes. Here are two diagrams outlining these configurations:
 
 ## [Fend Diode Modbus Compatibility](/docs/fenddiode/deployment-examples/modbus-examples#fend-diode-modbus-compatibility)
 
@@ -50,13 +50,13 @@ The Fend Data Diode currently supports function codes 1, 2, 3, and 4 along with 
 
 Note: Function codes 1 and 2 support binary states (1 or 0) only. If using function codes 1 or 2 leave the data type on the default selection, “U16”.
 
-## [Modbus Master/Client Setup Examples](/docs/fenddiode/deployment-examples/modbus-examples#modbus-masterclient-setup-examples)
+## [Modbus Client Setup Examples](/docs/fenddiode/deployment-examples/modbus-examples#modbus-client-setup-examples)
 
-When setting up a diode for Modbus Master/Client mode please use the following table for the number of devices, groups and registers supported.
+When setting up a diode for Modbus Client mode please use the following table for the number of devices, groups and registers supported.
 
 [Appendix I: Modbus Polling Cycle Timings](https://www.opswat.com/docs/fenddiode/appendices/appendix-i-recommended-transfer-timings-by-protocol#modbus-polling-cycle-timings)
 
-### [Example 1: Diode Settings for Modbus TCP Master/Client to Fend Cloud (AWS)](/docs/fenddiode/deployment-examples/modbus-examples#example-1-diode-settings-for-modbus-tcp-masterclient-to-fend-cloud-aws)
+### [Example 1: Diode Settings for Modbus TCP Client to Fend Cloud (AWS)](/docs/fenddiode/deployment-examples/modbus-examples#example-1-diode-settings-for-modbus-tcp-client-to-fend-cloud-aws)
 
 #### [Diode Input Side Settings](/docs/fenddiode/deployment-examples/modbus-examples#diode-input-side-settings)
 
@@ -68,7 +68,7 @@ Under Input Side -> Interface Settings -> Select the Ethernet radio button and s
 2. Set the Diode IP Address of the diode to ensure that it has a unique address on the network.
 3. Set the Subnet Mask and Gateway IP Address appropriately for the diode to communicate on the protected network.
 
-Under Input Side -> Protocol Settings -> Select Modbus TCP Master/Client from the dropdown and set the following:
+Under Input Side -> Protocol Settings -> Select Modbus TCP Client from the dropdown and set the following:
 
 1. Check the “Read/Transmit Timeout” setting. This is the length of time the diode will wait for a response from the target Modbus device before timing out. The default value is 100msec. Change as needed.
 2. Set the polling time (how often the diode will request updated values from the targeted Modbus devices) using the **AWS Publish Cycle Timings** found in [**Appendix I: Recommended Transfer Timings by Protocol**](https://www.opswat.com/docs/fenddiode/appendices/appendix-i-recommended-transfer-timings-by-protocol)**.**
@@ -115,11 +115,11 @@ Fend data diodes are able to be used in cellular mode only if they have a Fend C
 3. Plug in power to both sides of the diode.
 4. Confirm that data is flowing into AWS using your Fend web app login.
 
-### [Example 2: Diode Settings for Modbus TCP Master/Client to Modbus TCP Slave/Server](/docs/fenddiode/deployment-examples/modbus-examples#example-2-diode-settings-for-modbus-tcp-masterclient-to-modbus-tcp-slaveserver)
+### [Example 2: Diode Settings for Modbus TCP Client to Modbus TCP Server](/docs/fenddiode/deployment-examples/modbus-examples#example-2-diode-settings-for-modbus-tcp-client-to-modbus-tcp-server)
 
 #### [Diode Input Side Settings](/docs/fenddiode/deployment-examples/modbus-examples#diode-input-side-settings)
 
-To configure the diode to act as a Modbus TCP master/client, start with the input-side diode settings
+To configure the diode to act as a Modbus TCP client, start with the input-side diode settings
 
 Under Input Side -> Interface Settings -> Select the Ethernet radio button and set the following:
 
@@ -127,14 +127,14 @@ Under Input Side -> Interface Settings -> Select the Ethernet radio button and s
 2. Set the Diode IP Address of the diode to ensure that it has a unique address on the network.
 3. Set the Subnet Mask and Gateway IP Address appropriately for the diode to communicate on the protected network.
 
-Under Input Side -> Protocol Settings -> Select Modbus TCP Master/Client from the dropdown and set the following:
+Under Input Side -> Protocol Settings -> Select Modbus TCP Client from the dropdown and set the following:
 
 1. Check the “Read/Transmit Timeout” setting. This is the length of time the diode will wait for a response from the target Modbus device before timing out. The default value is 100msec. Change as needed.
 2. Set the polling time (how often the diode will request updated values from the targeted Modbus devices).
 3. Click the green plus symbol to add a target Modbus device for monitoring. Up to 32 devices are supported.
 4. A new item will be listed below that will look similar to “01 1 192.168.1.100 (0)”. Double click it to configure the device. A new window will appear.
 5. In the “Target Modbus Unit ID” field, enter in the target Modbus device ID.
-6. If you wish to re assign the Unit ID of the target Modbus device, so it appears differently on the output side of the diode, you can do so via the Mapping Enabled option. Enable this setting and assign a ‘Map ID’ which will be the new Modbus Unit ID used for accessing the device data on from the output side Modbus Slave.
+6. If you wish to re assign the Unit ID of the target Modbus device, so it appears differently on the output side of the diode, you can do so via the Mapping Enabled option. Enable this setting and assign a ‘Map ID’ which will be the new Modbus Unit ID used for accessing the device data on from the output side Modbus Server.
 7. Enter the target Modbus device’s IP address in the “Target IP Address” field.
 8. Set the byte order and word order settings.
 9. Clicking the green plus button below “IP” will add a new register group for the open device. There can be a maximum of 500 register groups across all devices.
@@ -149,7 +149,7 @@ Additionally, with the output side of the diode in Modbus mode, exception codes 
 
 #### [Diode Output Side Settings](/docs/fenddiode/deployment-examples/modbus-examples#diode-output-side-settings)
 
-To set up the output side of the diode as a Modbus TCP slave/server device, do the following:
+To set up the output side of the diode as a Modbus TCP server device, do the following:
 
 Under Output Side -> Interface Settings -> Select the Ethernet radio button and set the following:
 
@@ -160,7 +160,7 @@ Under Output Side -> Interface Settings -> Select the Ethernet radio button and 
 
 Under **Output Side -> Protocol Settings -> Select Modbus TCP** from the dropdown and set the following fields:
 
-1. Enter the socket timeout for the diode output side Modbus slave device. This sets the length of time before an idle Modbus client connection will be logged out of the diode’s output side Modbus server.
+1. Enter the socket timeout for the diode output side Modbus server device. This sets the length of time before an idle Modbus client connection will be logged out of the diode’s output side Modbus server.
 
 Finally, when done updating all settings **press the “Save & Exit”** button located at the top right of the Diode Web Configuration tool to close your session and allow the diode to reboot to ensure the new settings are loaded.
 
@@ -171,11 +171,11 @@ Finally, when done updating all settings **press the “Save & Exit”** button 
 3. Plug in power to both sides of the diode.
 4. Confirm that data is flowing from the primary network to the secondary network.
 
-### [Example 3: Diode Settings for Modbus TCP Master/Client to MQTT Publisher](/docs/fenddiode/deployment-examples/modbus-examples#example-3-diode-settings-for-modbus-tcp-masterclient-to-mqtt-publisher)
+### [Example 3: Diode Settings for Modbus TCP Client to MQTT Publisher](/docs/fenddiode/deployment-examples/modbus-examples#example-3-diode-settings-for-modbus-tcp-client-to-mqtt-publisher)
 
 #### [Diode Input Side Settings](/docs/fenddiode/deployment-examples/modbus-examples#diode-input-side-settings)
 
-To configure the diode to act as a Modbus TCP master/client, start with the input-side diode settings
+To configure the diode to act as a Modbus TCP client, start with the input-side diode settings
 
 Under Input Side -> Interface Settings -> Select the Ethernet radio button and set the following:
 
@@ -183,14 +183,14 @@ Under Input Side -> Interface Settings -> Select the Ethernet radio button and s
 2. Set the Diode IP Address of the diode to ensure that it has a unique address on the network.
 3. Set the Subnet Mask and Gateway IP Address appropriately for the diode to communicate on the protected network.
 
-Under Input Side -> Protocol Settings -> Select Modbus TCP Master/Client from the dropdown and set the following:
+Under Input Side -> Protocol Settings -> Select Modbus TCP Client from the dropdown and set the following:
 
 1. Check the “Read/Transmit Timeout” setting. This is the length of time the diode will wait for a response from the target Modbus device before timing out. The default value is 100msec. Change as needed.
 2. Set the polling time (how often the diode will request updated values from the targeted Modbus devices).
 3. Click the green plus symbol to add a target Modbus device for monitoring. Up to 32 devices are supported.
 4. A new item will be listed below that will look similar to “01 1 192.168.1.100 (0)”. Double click it to configure the device. A new window will appear.
 5. In the “Target Modbus Unit ID” field, enter in the target Modbus device ID.
-6. If you wish to re assign the Unit ID of the target Modbus device, so it appears differently on the output side of the diode, you can do so via the Mapping Enabled option. Enable this setting and assign a ‘Map ID’ which will be the new Modbus Unit ID used for accessing the device data on from the output side Modbus Slave.
+6. If you wish to re assign the Unit ID of the target Modbus device, so it appears differently on the output side of the diode, you can do so via the Mapping Enabled option. Enable this setting and assign a ‘Map ID’ which will be the new Modbus Unit ID used for accessing the device data on from the output side Modbus Server.
 7. Enter the target Modbus device’s IP address in the “Target IP Address” field.
 8. Set the byte order and word order settings.
 9. Clicking the green plus button below “IP” will add a new register group for the open device. There can be a maximum of 500 register groups across all devices.
@@ -247,7 +247,7 @@ Under **Output Side -> Protocol Settings -> Select MQTT Publisher** from the dro
 
 A diode in listen mode on the input is able to capture all traffic in a Modbus network unobtrusively. For RTU devices this can be achieved through tapping the serial lines. In the case of Modbus TCP, the Modbus network will need to be port mirrored for the diode to capture the data. All traffic from the Modbus controller and devices will be captured by the diode and sent to its destination on the world side.
 
-For the best results, the input side of the diode will need to be configured with the Modbus network topology. If the input side of the diode is set to Modbus Listen mode with output side set to Fend Cloud or JSON conversion and no Modbus network configuration is given, the output data will be sent as raw hexadecimal only. In order to provide data types and final calculated values you must setup the diode in a similar manner to Master/Client (Request/Response) mode as outlined in [Example 3](https://www.opswat.com/docs/fenddiode/deployment-examples/modbus-examples#example-3-diode-settings-for-modbus-tcp-listen-mode-to-local-tcp-server---tcp-client-json-protocol-conversion) below.
+For the best results, the input side of the diode will need to be configured with the Modbus network topology. If the input side of the diode is set to Modbus Listen mode with output side set to Fend Cloud or JSON conversion and no Modbus network configuration is given, the output data will be sent as raw hexadecimal only. In order to provide data types and final calculated values you must setup the diode in a similar manner to Client (Request/Response) mode as outlined in [Example 3](https://www.opswat.com/docs/fenddiode/deployment-examples/modbus-examples#example-3-diode-settings-for-modbus-tcp-listen-mode-to-local-tcp-server---tcp-client-json-protocol-conversion) below.
 
 ### [Diode Output Options](/docs/fenddiode/deployment-examples/modbus-examples#diode-output-options)
 
@@ -307,7 +307,7 @@ Finally, when done updating all settings press the “Save & Exit” button loca
 4. Plug in power to both sides of the diode.
 5. Verify data is received on the outbound network.
 
-### [Example 5: Diode Settings for Modbus RTU Listen Mode to Modbus TCP Slave/Server (Modbus RTU to IP Conversion)](/docs/fenddiode/deployment-examples/modbus-examples#example-5-diode-settings-for-modbus-rtu-listen-mode-to-modbus-tcp-slaveserver-modbus-rtu-to-ip-conversion)
+### [Example 5: Diode Settings for Modbus RTU Listen Mode to Modbus TCP Server (Modbus RTU to IP Conversion)](/docs/fenddiode/deployment-examples/modbus-examples#example-5-diode-settings-for-modbus-rtu-listen-mode-to-modbus-tcp-server-modbus-rtu-to-ip-conversion)
 
 #### [Diode Input Side Settings](/docs/fenddiode/deployment-examples/modbus-examples#diode-input-side-settings)
 
@@ -339,7 +339,7 @@ Under **Input Side -> Protocol Settings -> Select Modbus RTU Listen** from the d
 
 #### [Diode Output Side Settings](/docs/fenddiode/deployment-examples/modbus-examples#diode-output-side-settings)
 
-To set up the output side of the diode as a Modbus TCP slave/server device, do the following:
+To set up the output side of the diode as a Modbus TCP server device, do the following:
 
 Under Output Side -> Interface Settings -> Select the Ethernet radio button and set the following:
 
@@ -350,7 +350,7 @@ Under Output Side -> Interface Settings -> Select the Ethernet radio button and 
 
 Under **Output Side -> Protocol Settings -> Select Modbus TCP** from the dropdown and set the following fields:
 
-1. Enter the socket timeout for the diode output side Modbus slave device. This sets the length of time before an idle Modbus client connection will be logged out of the diode’s output side Modbus server.
+1. Enter the socket timeout for the diode output side Modbus server device. This sets the length of time before an idle Modbus client connection will be logged out of the diode’s output side Modbus server.
 
 Finally, when done updating all settings **press the “Save & Exit”** button located at the top right of the Diode Web Configuration tool to close your session and allow the diode to reboot to ensure the new settings are loaded.
 
@@ -365,7 +365,7 @@ Finally, when done updating all settings **press the “Save & Exit”** button 
 
 ### [Q: Why am I getting intermittent polling requests with timeouts in Modbus RTU serial mode?](/docs/fenddiode/deployment-examples/modbus-examples#q-why-am-i-getting-intermittent-polling-requests-with-timeouts-in-modbus-rtu-serial-mode)
 
-A: After checking your device configuration and verifying that the Device ID, register addresses, and timeouts are all correct as outlined in [**Fend Diode Modbus Compatibility**](https://www.opswat.com/docs/fenddiode/deployment-examples/modbus-examples#fend-diode-modbus-compatibility) and [**Modbus RTU Settings**](https://www.opswat.com/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-rtu-masterclient), please also ensure that only one RTU master is present on the serial network at a time. Modbus RTU serial networks cannot have more than one active master on the network at a time. If there is another master on a serial Modbus RTU network, you must use the data diode in Listen mode. This does not apply to Modbus TCP networks.
+A: After checking your device configuration and verifying that the Device ID, register addresses, and timeouts are all correct as outlined in [**Fend Diode Modbus Compatibility**](https://www.opswat.com/docs/fenddiode/deployment-examples/modbus-examples#fend-diode-modbus-compatibility) and [**Modbus RTU Settings**](https://www.opswat.com/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-rtu-masterclient), please also ensure that only one RTU client is present on the serial network at a time. Modbus RTU serial networks cannot have more than one active client on the network at a time. If there is another client on a serial Modbus RTU network, you must use the data diode in Listen mode. This does not apply to Modbus TCP networks.
 
 ### [Q: When using the Fend diode for Modbus TCP data, how many unique Modbus TCP clients can connect to the output side Modbus server on the diode to collect data?](/docs/fenddiode/deployment-examples/modbus-examples#q--when-using-the-fend-diode-for-modbus-tcp-data-how-many-unique-modbus-tcp-clients-can-connect-to-the-output-side-modbus-server-on-the-diode-to-collect-data)
 

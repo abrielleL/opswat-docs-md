@@ -10,13 +10,13 @@ The options in this section will dynamically update based on the communications 
 ## [RS485 Protocol Options](/docs/fenddiode/configuration-settings/input-side-protocol-settings#rs485-protocol-options)
 
 - BACnet MSTP Listen – Sets the input side to listen for and pass through inbound BACnet MSTP serial data communication.
-- Modbus RTU Master/Client – Sets the input side to act a Modbus RTU master/client for inbound serial data communication
+- Modbus RTU Client – Sets the input side to act a Modbus RTU client for inbound serial data communication
 - Modbus RTU Listen – Sets the input side to listen for and pass through inbound Modbus RTU for serial data communication
 
 ## [Ethernet Protocol Options](/docs/fenddiode/configuration-settings/input-side-protocol-settings#ethernet-protocol-options)
 
 - BACnet IP Listen – For use with port mirroring, sets the input side to listen for and pass through inbound BACnet Ethernet data communication
-- Modbus TCP Master/Client - Sets the input side to act a Modbus TCP master/client for inbound Ethernet data communication
+- Modbus TCP Client - Sets the input side to act a Modbus TCP client for inbound Ethernet data communication
 - Modbus TCP Listen - For use with port mirroring, sets the input side to listen for and pass through inbound Modbus TCP for Ethernet data communication
 - FTP Server - Sets the input side to act as an FTP server for inbound Ethernet data communication
 - FTPS Server - Sets the input side to act as an FTPS server for inbound Ethernet data communication
@@ -212,7 +212,7 @@ All Fend Diodes that shipped with firmware version 4.2.5+ come with pre-installe
 
   - [Checked: Send ACK, Unchecked: Do not send ACK]
 
-## [Modbus TCP Master/Client](/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-tcp-masterclient)
+## [Modbus TCP Client](/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-tcp-client)
 
 ### [Global Modbus TCP Device Settings](/docs/fenddiode/configuration-settings/input-side-protocol-settings#global-modbus-tcp-device-settings)
 
@@ -310,7 +310,7 @@ For example: to address a single 16-bit holding register at “40001”, select 
 
 ## [Modbus TCP Listen](/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-tcp-listen)
 
-For listen mode, no additional settings are required. When the diode is connected to a port mirror or SPAN port that is forwarding an active Modbus networks traffic, the diode will begin forwarding all traffic to the output side. This means basic Modbus data will be available in Fend Cloud or on the output side Modbus slave/server just like that!
+For listen mode, no additional settings are required. When the diode is connected to a port mirror or SPAN port that is forwarding an active Modbus networks traffic, the diode will begin forwarding all traffic to the output side. This means basic Modbus data will be available in Fend Cloud or on the output side Modbus server just like that!
 
 However, if you wish to get extra functionality out of the diode you can provide some optional settings.
 
@@ -322,7 +322,7 @@ For protocol conversion setups (i.e. Modbus to Fend Cloud or Modbus to TCP Clien
 - Request Register Address
 - Request Register Raw Value
 
-By entering the configuration of the source Modbus network into the diode as described in the settings overview for [Modbus TCP Master/Client](https://www.opswat.com/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-tcp-masterclient) and in the installation examples shown in [Modbus Installation Instructions](https://www.opswat.com/docs/fenddiode/deployment-examples/modbus-examples), the listen-mode diode will be able to append additional meta data fields to the raw Modbus data including:
+By entering the configuration of the source Modbus network into the diode as described in the settings overview for [Modbus TCP Client](https://www.opswat.com/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-tcp-masterclient) and in the installation examples shown in [Modbus Installation Instructions](https://www.opswat.com/docs/fenddiode/deployment-examples/modbus-examples), the listen-mode diode will be able to append additional meta data fields to the raw Modbus data including:
 
 - Data Type
 - Byte Order
@@ -339,7 +339,7 @@ There are no additional settings for BACnet IP Listen at this time.
 
 There are no additional settings for LON Listen at this time.
 
-## [Modbus RTU Master/Client](/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-rtu-masterclient)
+## [Modbus RTU Client](/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-rtu-client)
 
 ### [Global Modbus RTU Device Settings](/docs/fenddiode/configuration-settings/input-side-protocol-settings#global-modbus-rtu-device-settings)
 
@@ -431,7 +431,7 @@ There are no additional settings for LON Listen at this time.
 
 ## [Modbus RTU Listen](/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-rtu-listen)
 
-For listen mode, no additional settings are required. When the diode is connected to a port mirror or SPAN port that is forwarding an active Modbus networks traffic, the diode will begin forwarding all traffic to the output side. This means Modbus data will be available in Fend Cloud or on the output side’s Modbus Slave just like that! However, if you wish to get extra functionality out of the diode you can provide some optional settings.
+For listen mode, no additional settings are required. When the diode is connected to a port mirror or SPAN port that is forwarding an active Modbus networks traffic, the diode will begin forwarding all traffic to the output side. This means Modbus data will be available in Fend Cloud or on the output side’s Modbus server just like that! However, if you wish to get extra functionality out of the diode you can provide some optional settings.
 
 For protocol conversion setups (i.e. Fend Cloud or TCP Client JSON Protocol Conversion) a default blank Modbus Listen setup will deliver JSON that only includes the following register information:
 
@@ -440,7 +440,7 @@ For protocol conversion setups (i.e. Fend Cloud or TCP Client JSON Protocol Conv
 - Request Register Address
 - Request Register Raw Value
 
-By entering the configuration of the source Modbus network into the diode as described in the settings overview for [Modbus RTU Master/Client](https://www.opswat.com/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-rtu-masterclient) and in the installation examples shown in [Modbus Installation Instructions](https://www.opswat.com/docs/fenddiode/deployment-examples/modbus-examples), the listen-mode diode will be able to append additional meta data fields to the raw Modbus data including:
+By entering the configuration of the source Modbus network into the diode as described in the settings overview for [Modbus RTU Client](https://www.opswat.com/docs/fenddiode/configuration-settings/input-side-protocol-settings#modbus-rtu-masterclient) and in the installation examples shown in [Modbus Installation Instructions](https://www.opswat.com/docs/fenddiode/deployment-examples/modbus-examples), the listen-mode diode will be able to append additional meta data fields to the raw Modbus data including:
 
 - Data Type
 - Byte Order

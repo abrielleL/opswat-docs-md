@@ -2,9 +2,11 @@
 
 # Managing Allowlist CVEs
 
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 In addition to viewing and managing vulnerabilities, Administrators can also manage their allow list in My OPSWAT Central Management.
 
-## Adding to Allowlist - Single CVE
+## [Adding to Allowlist - Single CVE](/docs/cm/endpoint-security-solution/managing-allowlist-cves#adding-to-allowlist---single-cve)
 
 When Administrators are looking to add a single CVE to their allow list, they can do the following:
 
@@ -15,7 +17,7 @@ When Administrators are looking to add a single CVE to their allow list, they ca
 
 To review what level the CVEs are listed under for the allowlist, review the **Allowlist Level** column in the **Vulnerabilities** section.
 
-## Adding to Allowlist - Multiple CVEs
+## [Adding to Allowlist - Multiple CVEs](/docs/cm/endpoint-security-solution/managing-allowlist-cves#adding-to-allowlist---multiple-cves)
 
 There are two methods to adding multiple CVEs to the allowlist. The first option is to follow the steps in the above section, or to do a CVE list upload
 
@@ -30,7 +32,7 @@ For adding multiple CVEs via a CVE list upload, the Administrators can do the fo
 
 To review what level the CVEs are listed under for the allowlist, review the **Allowlist Level** column in the **Vulnerabilities** section.
 
-## Removing CVEs from the Allowlist - Single CVE
+## [Removing CVEs from the Allowlist - Single CVE](/docs/cm/endpoint-security-solution/managing-allowlist-cves#removing-cves-from-the-allowlist---single-cve)
 
 To remove a single CVE from the allowlist, Administrators need to do the following:
 
@@ -39,7 +41,7 @@ To remove a single CVE from the allowlist, Administrators need to do the followi
 3. A pop up will appear to confirm the removal of the CVE.
 4. Confirm with PIN and **Save**.
 
-## Removing CVEs from the Allowlist - Multiple CVEs
+## [Removing CVEs from the Allowlist - Multiple CVEs](/docs/cm/endpoint-security-solution/managing-allowlist-cves#removing-cves-from-the-allowlist---multiple-cves)
 
 To remove multiple CVEs from the allowlist, Administrators need to do the following:
 
@@ -49,7 +51,3 @@ To remove multiple CVEs from the allowlist, Administrators need to do the follow
 4. Confirm with PIN and **Save**.
 
 To review what level the CVEs are listed under for the allowlist, review the **Allowlist Level** column in the **Vulnerabilities** section.
-
----
-
-[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

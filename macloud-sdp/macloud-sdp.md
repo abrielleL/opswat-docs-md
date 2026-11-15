@@ -4,7 +4,7 @@
 
 # My OPSWAT Central Management
 
-#### 10.7.26100 [Latest]
+#### 10.8.26110 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/cm/release-notes)
 
@@ -20,7 +20,9 @@ Getting Started[##### Introduction
 
 ######](/docs/cm/secure-access-solution)[##### Endpoint Security Solution
 
-######](/docs/cm/endpoint-security-solution)[##### Product Management
+######](/docs/cm/endpoint-security-solution)[##### File Security Solution
+
+######](/docs/cm/file-security-solution)[##### Product Management
 
 ######](/docs/cm/product-management)[##### Patch Management
 
@@ -34,7 +36,9 @@ Getting Started[##### Introduction
 
 ######](/docs/cm/developer-guidelines)Support[##### Knowledge Base
 
-###### Answers to common questions about the product capabilities, and related articles on popular topics.](/docs/cm/knowledge-base)
+###### Answers to common questions about the product capabilities, and related articles on popular topics.](/docs/cm/knowledge-base)[##### Product Integration
+
+###### Explore feature support and management capabilities across integrated OPSWAT products.](/docs/cm/product-integration)
 
 ## References
 

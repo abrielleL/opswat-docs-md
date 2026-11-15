@@ -2,10 +2,8 @@
 
 # Documentation
 
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 You can view the documentation online or download the PDF version using the link below:
 
-[My OPSWAT Central Management v10.7.26092 Documentation (PDF)](https://api.developerhub.io/api/public/version/14364/pdf-download?k=b9946de7adc7f67a47128224ccc1b1f0e75ee689436daf043f42d5c84127cbbf)
-
----
-
-[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)
+[My OPSWAT Central Management v10.8.26110 Documentation (PDF)](https://api.developerhub.io/api/public/version/14472/pdf-download?k=7603cff27a2d42a153b0a4f00e3fd7478759ae7426ce6fa392e64fd7cc81f56d)

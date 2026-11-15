@@ -17,7 +17,7 @@ Released: 09/01/2024
    5. Added Modbus unit ID remapping. Map Modbus IDs from input devices to different Modbus IDs on the output side of the diode.
    6. Total available groups now shared across all devices for more flexibility. Increased the maximum number of groups to 500 for Modbus TCP and 500 for Modbus RTU
    7. Increased the maximum number of polling groups per device to 500 (up from 32)
-   8. Improved protocol selection experience for Modbus. Modbus master/client and Modbus listen modes are now selectable as separate options in the main protocol dropdown menu.
+   8. Improved protocol selection experience for Modbus. Modbus client/server and Modbus listen modes are now selectable as separate options in the main protocol dropdown menu.
    9. Improved Modbus diagnostic messages
 2. Added SFTP client timeout setting
 3. Enabled NTP client in TCP JSON mode to provide timestamps for Modbus JSON output over TCP

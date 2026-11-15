@@ -1,16 +1,11 @@
 <!-- source: https://www.opswat.com/docs/cm/endpoint-security-solution/backup---restore -->
 
-# Backup & Restore
+# Backup & Restore for MetaDefender Endpoint
 
 View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
-Backup & Restore is a feature in My OPSWAT Central Management that lets you automatically back up the full system image of Windows endpoints across your organization. When a machine fails or needs to be rolled back, you can restore it to a known-good point in time from the same console.
+Backup & Restore lets you back up configuration of every MetaDefender Endpoint. If a Endpoint is misconfigured or needs to be rolled back, you restore it to a known-good configuration from the same console.
 
-You open the feature from the left-hand menu under **Backup Restore**.
-
-This feature is available only through on-demand configuration. Please contact [OPSWAT Support](https://www.opswat.com/support/contact-support) for assistance.
-
-- [Main Screens and Navigation](/docs/cm/endpoint-security-solution/backup---restore#main-screen)
 - [Backup Workflows](/docs/cm/endpoint-security-solution/backup---restore#backup-workflows)
 
   - [Create Backup Job](/docs/cm/endpoint-security-solution/backup---restore#create-backup-job)
@@ -28,32 +23,19 @@ This feature is available only through on-demand configuration. Please contact [
 
 ## [Before You Begin](/docs/cm/endpoint-security-solution/backup---restore#before-you-begin)
 
-Keep the following in mind before creating a backup job:
+Keep the following in mind:
 
 | Requirement | Backup | Restore |
 | --- | --- | --- |
 | **License** | MA-BKR | MA-BKR |
 | **Operating System** | Windows | Windows |
 | **Supported Devices** | Windows devices running MetaDefender Endpoint **version 7.6.2607.xxx or later**. Non-Windows devices and devices on older versions are automatically excluded from any target you select. | Windows devices running MetaDefender Endpoint **version 7.6.2609 or later.** Non-Windows and older version devices are excluded. |
+| **Encryption** | Encryption with passphrase requires MetaDefender Endpoint **version 7.6.2611 or later.** Encryption works for every backup scope: Files or Folders, Partitions and System Image. | |
 | **Storage** | You need at least one reachable storage destination (for example a shared folder path such as `\\server\share`). An unreachable or misconfigured destination is rejected when you create the job. | At least one successful backup of the source device, taken on My OPSWAT Central Management 10.7.26092 or later. |
 
 1. Devices that don't meet the OS or version requirement are excluded from the target list automatically.
 2. Restore needs a newer device version than backup does. On the same fleet, the restore device picker can show fewer devices than the backup picker. If you can back up a device but can't restore it, check its MetaDefender Endpoint version first.
 3. Every full backup stores a complete image, so make sure the destination has enough free space.
-
-## [**Main Screens and Navigation**](/docs/cm/endpoint-security-solution/backup---restore#main-screens-and-navigation)
-
-Backup & Restore has the following **sub-pages:**
-
-| Sub-pages | Details |
-| --- | --- |
-| **Dashboard** | See fleet-wide backup coverage, run statuses, top failure reasons, and the devices that need attention |
-| **Backup** | Create and manage backup jobs, including two tabs:   1. **Active Jobs** lists every backup job that is currently set up, with its status, target, schedule, and a per-status device count. This gives you a quick view of how the latest run is going across all targeted devices     When a job finishes a run, it moves automatically to the **History** tab. If the job is recurring (Hourly, Daily, Weekly, or Monthly), a new active job is created automatically to handle the next scheduled run   2. **History** tab records each completed run with its start and end time and the number of devices that ended in each status. Use it to audit past backups and confirm whether they succeeded |
-| **Devices** | Lets you browse the backups that have been stored by device, as well as the backup scope, destination, size, and the time of the last backup for each device |
-| **File Browser** | Shows what has actually been stored by file, you can see the backup scope, destination, size, and the time of the last backup for each device |
-| **Restore** | Create and manage restore jobs. The job list shows restores that are scheduled or in progress, and the **History** tab records finished restores. |
-| **Reports** | Automated and on-demand report definitions (PDF/CSV) with scheduled stakeholder email delivery |
-| **Notifications** |  |
 
 ### [**Backup & Restore Job Status**](/docs/cm/endpoint-security-solution/backup---restore#backup--restore-job-status)
 
@@ -75,7 +57,7 @@ You create backup jobs, choose which devices to protect, decide where the backup
 
 ### [Create Backup Job](/docs/cm/endpoint-security-solution/backup---restore#create-backup-job)
 
-Navigate to **Backup Restore → Backup → Create Backup Job**
+Navigate to **Backup Restore → Backup → MetaDefender Endpoint tab → Create Backup Job**
 
 | Step | Details |
 | --- | --- |
@@ -83,8 +65,9 @@ Navigate to **Backup Restore → Backup → Create Backup Job**
 | **Step 2: Choose target devices to back up** | *Please note only Windows devices running MetaDefender Endpoint 7.6.2607.xxx or later can be backed up.*   1. All Groups applies to every device group 2. Specific Groups applies only to the groups you pick 3. Specific Devices applies only to the individual devices you select |
 | **Step 3: Configure Backup Scope and Backup Mode** | 1. Backup Scope is currently fixed to **Full Image.** It captures all volumes needed to restore the operating system, including the system, boot, and recovery partitions; non-OS data volumes are excluded    2. Backup Mode: Select preferred backup mode     1. **Full**: captures all selected data on every run. Because every run stores a complete image, make sure your destination has enough free space    2. **Incremental**: the job's first run still captures a complete (full) image; every run after that captures only what changed since the previous backup, so it finishes faster and takes less space. A full backup plus the incremental backups that follow it form a **chain** |
 | **Step 4: Configure Backup Destination** | Choose where backups are stored:   1. Mirror sends the backup to all destinations at the same time 2. Failover sends it to the primary destination and falls back to the others if that one is unavailable. 3. For each destination, pick a **Type** and enter the path     1. **Shared Folder**: enter the UNC path (for example `\\server\share`)    2. **Vault**: select a pre-configured Storage Vault to store backups in a managed, cataloged repository. To set one up first, see [Storage Vault Catalog](/docs/cm/endpoint-security-solution/backup---restore#storage-vault-catalog) 4. Use **Add Destination** to add more. An unreachable or misconfigured destination will be rejected |
-| **Step 5: Set up a schedule when backups run on target devices** | 1. **Frequency** can be Once, Hourly, Daily, Weekly, or Monthly; depending on the choice, the form asks for the matching details (for example days of the week for Weekly, or a day of the month for Monthly) 2. For **Timezone**, choose Local device time to run by each device’s own local time, or pick a specific timezone (such as UTC+7) so all devices run at the same moment. For a one-time schedule, the system rejects a start time that is already in the past 3. **Max Backup Duration** (optional) limits how many hours a backup may run on a device. If a device exceeds this window before finishing, that run is marked Failed. If you leave it empty, a default limit of about 24 hours applies |
-| **Step 6: Complete** | Click **Create** to save the job, or **Discard** to cancel |
+| **Step 5: Encryption** | Encryption requires **MetaDefender Endpoint 7.6.2611 or later**.  Tick **Encrypt backups with a passphrase**, then type in passphrase and confirm (12 to 100 characters, including spaces).      Note Keep the passphrase safe. My OPSWAT Central Management never shows it again. If it is lost, the backups cannot be restored, you'll need to create a new job with new passphrase |
+| **Step 6: Set up a schedule when backups run on target devices** | 1. **Frequency** can be Once, Hourly, Daily, Weekly, or Monthly; depending on the choice, the form asks for the matching details (for example days of the week for Weekly, or a day of the month for Monthly) 2. For **Timezone**, choose Local device time to run by each device’s own local time, or pick a specific timezone (such as UTC+7) so all devices run at the same moment. For a one-time schedule, the system rejects a start time that is already in the past 3. **Max Backup Duration** (optional) limits how many hours a backup may run on a device. If a device exceeds this window before finishing, that run is marked Failed. If you leave it empty, a default limit of about 24 hours applies |
+| **Step 7: Complete** | Click **Create** to save the job, or **Discard** to cancel |
 
 ### [Storage Vault Catalog](/docs/cm/endpoint-security-solution/backup---restore#storage-vault-catalog)
 
@@ -114,7 +97,7 @@ Use the **Action menu** at the top right to manage the job:
 | --- | --- |
 | **Clone** | Duplicate the job's settings into a new job |
 | **Stop** | Stop a running or pending job. Devices that are backing up receive a stop command and are marked as failed by force stop, while devices that have not yet started are removed from the queue. A stopped job can be started again with **Start**, which recalculates the next run time from the schedule |
-| **Edit** | Change the job's settings, such as its schedule or targets |
+| **Edit** | Change the job's settings, such as its schedule or targets. When you edit an encrypted job, the passphrase cannot be viewed or changed. |
 | **Delete** | Remove the job. You cannot delete a job while it is running, so stop it first |
 
 ### [Monitor Backup Progress and Results](/docs/cm/endpoint-security-solution/backup---restore#monitor-backup-progress-and-results)
@@ -124,6 +107,8 @@ While a backup runs, each device reports a completion percentage. When it finish
 - **Success**: the backup completed.
 - **Partial Success**: the backup finished but with some issues.
 - **Failed**: the backup didn't complete, ran past its Max Backup Duration, or was force-stopped.
+
+For Encrypted job, you'll see an **Encrypted** tag next to the job name.
 
 Results are summarized in **Active Jobs** and recorded in **History**. Every backup event is also written to the event log, so you can review each device's history: started, progress percentage, completed, failed, or completed with issues. Log entries expire according to your data retention policy.
 
@@ -190,6 +175,7 @@ To restore an endpoint from a captured backup point, navigate to **Backup Restor
 | --- | --- |
 | **General** | Enter a unique **Job Name** (duplicate names are rejected) and an optional **Description** |
 | **Source & Restore Point** | Select the source device, then choose a restore point. Only devices with at least one successful backup are offered  How much is restored depends on the backup's mode:   - **Full Backup**: Restores the standalone system image - **Incremental Backup**: Automatically verifies and replays the chain from the baseline full image to the selected increment    - **Automatically restart the device:** Choose whether to restart the device automatically. This option appears only for full image restore points, and it's on by default. |
+| **Backup Passphrase** | Type in the backup passphrase of that backup job |
 | **Target Devices** | - Select one or more specific devices to write the backup onto. - Restore supports specific devices only. You can't target groups. - A target can be the source device itself or a different machine. |
 | **Schedule** | Choose **Run immediately** or **Run on schedule** with designated date, time, and timezone     - **Max Restore Duration**: Set timeout limit (default: **48 hours**). Devices exceeding this window fail automatically. |
 
@@ -221,9 +207,9 @@ Open a restore job from the job list to manage it. Restore jobs support **Clone*
 | --- | --- |
 | **Stop** | Stops only the devices that haven't started yet. Those devices are marked **Failed**, with the reason that an administrator cancelled them. Devices that are **already restoring keep going**, because their disk is partway through being rewritten. Before you confirm, the dialog lists the devices that will be stopped      What happens after **Stop** depends on whether the job has run:   - **Never run:** the job stays in the list as **Stopped**. You can edit it and start it again - **Already running:** the job moves to History once its last active device finishes |
 | **Start** | Re-enables a job that **has never run**. A job that has already run can't be started again. Re-running it could send a second restore to devices that are still rewriting their disks |
-| **Edit** | Changes the job's settings. Available only when the job **has no run in progress** |
+| **Edit** | Changes the job's settings. Available only when the job **has no run in progress**  For encrypted job, you can edit:   - Pick other encrypted restore point from the same device - Pick an encrypted point from another device - Pick an unencrypted point |
 | **Delete** | Removes the job. Unlike backup jobs, you can delete a restore job in any state, without stopping it first |
-| **Clone** | Duplicate the restore job's settings into a new job |
+| **Clone** | Duplicate the restore job's settings into a new job. Clone of an encrypted restore job asks for the passphrase again. |
 
 ### [Monitor Restore Progress and History](/docs/cm/endpoint-security-solution/backup---restore#monitor-restore-progress-and-history)
 
@@ -339,4 +325,5 @@ A few things to keep in mind:
 - The feature requires the MA-BKR license (SKU MA-BKR).
 - Any credentials used to reach a storage destination are always stored encrypted, so passwords are never exposed.
 - Each device has an execution time limit; if a backup runs too long (around 24 hours by default when no custom Max Backup Duration is set), it is marked as Failed.
-- The backup feature is available only on Windows devices running MetaDefender Endpoint version **7.6.2607.xxx or later**. Restore requires **7.6.2609.xxx or later**.
+- Encrypted passphrase is stored until all endpoints finish or time out, or the restore job is stopped or deleted. If a job is stopped during an active restore, the passphrase is retained until all ongoing restores finish; to restart a job stopped before execution, edit the job and re-enter the passphrase.
+- The backup feature is available only on Windows devices running MetaDefender Endpoint version **7.6.2607.xxx or later**. Restore requires **7.6.2609.xxx or later**. Backup with encrypted passphrase requires **version 7.6.2611** or later.

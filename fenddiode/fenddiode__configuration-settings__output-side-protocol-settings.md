@@ -9,11 +9,11 @@ The options in this section will dynamically update based on the communications 
 
 ### [RS485 Protocol Options](/docs/fenddiode/configuration-settings/output-side-protocol-settings#rs485-protocol-options)
 
-- Modbus RTU Slave/Server – Sets the output side to act as a Modbus RTU slave/server for outbound serial data communication
+- Modbus RTU Server – Sets the output side to act as a Modbus RTU server for outbound serial data communication
 
 ### [Ethernet Protocol Options](/docs/fenddiode/configuration-settings/output-side-protocol-settings#ethernet-protocol-options)
 
-- Modbus TCP Slave/Server - Sets the output side to act as a Modbus TCP slave/server for outbound Ethernet data communication
+- Modbus TCP Server - Sets the output side to act as a Modbus TCP server for outbound Ethernet data communication
 - FTP Client - Sets the output side to act as an FTP client for outbound Ethernet data communication
 - FTPS Client - Sets the output side to act as an FTPS client for outbound Ethernet data communication
 - SFTP Client – Sets the output side to act as an SFTP client for outbound Ethernet data communication
@@ -199,13 +199,13 @@ SFTP Public Host Key – **Strongly Encouraged**. This key is used to verify the
 
 All Fend Diodes that shipped with firmware version 4.2.5+ come with pre-installed unique default keys for SFTP mode. For the output side SFTP Client, the keys provided are the Private and Public Auth Keys. The provided key type is ed25519. If your organization’s key management policies require different keys, you can clear the defaults and provide custom keys that meet your policies per the supported key types listed above.
 
-## [Modbus TCP Slave/Server](/docs/fenddiode/configuration-settings/output-side-protocol-settings#modbus-tcp-slaveserver)
+## [Modbus TCP Server](/docs/fenddiode/configuration-settings/output-side-protocol-settings#modbus-tcp-server)
 
 - TCP Socket Timeout (s) – Sets the length of time before an idle Modbus client connection will be logged out of the diode’s output side Modbus server.
 
   - [0-255, in seconds, a “0” setting means the connection will never timeout]
 
-## [Modbus RTU Slave/Server](/docs/fenddiode/configuration-settings/output-side-protocol-settings#modbus-rtu-slaveserver)
+## [Modbus RTU Server](/docs/fenddiode/configuration-settings/output-side-protocol-settings#modbus-rtu-server)
 
 There are no additional settings for Modbus RTU at this time. In Modbus RTU mode the outbound side of the diode will act as a Modbus device.
 

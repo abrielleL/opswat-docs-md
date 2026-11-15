@@ -52,7 +52,7 @@ Auth apiKeyRequest Body multipart/form-data
 | ocr_qr | boolean | Extract string with OCR and process QR codes |  |
 | phishing_detection | boolean | Phishing detection for URLs, emails and HTML pages |  |
 
-Expand POST /api/scan/filecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+Expand POST /api/scan/filecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -126,7 +126,7 @@ Auth apiKeyRequest Body application/x-www-form-urlencoded
 | ocr_qr | boolean | Extract string with OCR and process QR codes |  |
 | phishing_detection | boolean | Phishing detection for URLs, emails and HTML pages |  |
 
-Expand POST /api/scan/urlcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+Expand POST /api/scan/urlcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -163,7 +163,7 @@ Too many requests
 
 Add/edit scan profile
 
-Auth apiKeyRequest Body application/json
+Auth apiKeyRequest Body application/jsonExpand all
 
 | ScanProfilePayload | object | User provided data to edit scan profile |  |
 | --- | --- | --- | --- |
@@ -240,7 +240,7 @@ Query String
 | sorting | array | Sort parameters to be applied to fetched report data |  |
 | other | array | Extra options to get special data |  |
 
-GET /api/scan/{flow_id}/reportcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/scan/{flow_id}/reportcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -459,7 +459,7 @@ Auth apiKeyQuery String
 | --- | --- | --- | --- |
 | page_size | integer | Default: 10 |  |
 
-GET /api/users/me/downloadscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/users/me/downloadscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -508,7 +508,7 @@ Query String
 | sorting | array | Sort parameters to be applied to fetched report data |  |
 | other | array | Extra options to get special data |  |
 
-GET /api/reports/{report_id}/{file_hash}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/reports/{report_id}/{file_hash}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -901,7 +901,7 @@ GET /api/files/{hash}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses 
 
 Successful Response
 
-GetSingleFileResponse<unnamed>
+Any ofGetSingleFileResponse<unnamed>
 
 | GetSingleFileResponse | object | Model for get_single_file() endpoint |  |
 | --- | --- | --- | --- |
@@ -1240,7 +1240,7 @@ Successful Response
 
 Get user profile data
 
-Auth apiKeyGET /api/users/profilecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+Auth apiKeyGET /api/users/profilecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -1300,7 +1300,7 @@ Auth apiKeyRequest Body multipart/form-data
 | timezone | string | An enumeration.  Enum: `Africa/Abidjan`,`Africa/Accra`,`Africa/Addis_Ababa`,`Africa/Algiers`,`Africa/Asmara`,`Africa/Asmera`,`Africa/Bamako`,`Africa/Bangui`,`Africa/Banjul`,`Africa/Bissau`,`Africa/Blantyre`,`Africa/Brazzaville`,`Africa/Bujumbura`,`Africa/Cairo`,`Africa/Casablanca`,`Africa/Ceuta`,`Africa/Conakry`,`Africa/Dakar`,`Africa/Dar_es_Salaam`,`Africa/Djibouti`,`Africa/Douala`,`Africa/El_Aaiun`,`Africa/Freetown`,`Africa/Gaborone`,`Africa/Harare`,`Africa/Johannesburg`,`Africa/Juba`,`Africa/Kampala`,`Africa/Khartoum`,`Africa/Kigali`,`Africa/Kinshasa`,`Africa/Lagos`,`Africa/Libreville`,`Africa/Lome`,`Africa/Luanda`,`Africa/Lubumbashi`,`Africa/Lusaka`,`Africa/Malabo`,`Africa/Maputo`,`Africa/Maseru`,`Africa/Mbabane`,`Africa/Mogadishu`,`Africa/Monrovia`,`Africa/Nairobi`,`Africa/Ndjamena`,`Africa/Niamey`,`Africa/Nouakchott`,`Africa/Ouagadougou`,`Africa/Porto-Novo`,`Africa/Sao_Tome`,`Africa/Timbuktu`,`Africa/Tripoli`,`Africa/Tunis`,`Africa/Windhoek`,`America/Adak`,`America/Anchorage`,`America/Anguilla`,`America/Antigua`,`America/Araguaina`,`America/Argentina/Buenos_Aires`,`America/Argentina/Catamarca`,`America/Argentina/ComodRivadavia`,`America/Argentina/Cordoba`,`America/Argentina/Jujuy`,`America/Argentina/La_Rioja`,`America/Argentina/Mendoza`,`America/Argentina/Rio_Gallegos`,`America/Argentina/Salta`,`America/Argentina/San_Juan`,`America/Argentina/San_Luis`,`America/Argentina/Tucuman`,`America/Argentina/Ushuaia`,`America/Aruba`,`America/Asuncion`,`America/Atikokan`,`America/Atka`,`America/Bahia`,`America/Bahia_Banderas`,`America/Barbados`,`America/Belem`,`America/Belize`,`America/Blanc-Sablon`,`America/Boa_Vista`,`America/Bogota`,`America/Boise`,`America/Buenos_Aires`,`America/Cambridge_Bay`,`America/Campo_Grande`,`America/Cancun`,`America/Caracas`,`America/Catamarca`,`America/Cayenne`,`America/Cayman`,`America/Chicago`,`America/Chihuahua`,`America/Coral_Harbour`,`America/Cordoba`,`America/Costa_Rica`,`America/Creston`,`America/Cuiaba`,`America/Curacao`,`America/Danmarkshavn`,`America/Dawson`,`America/Dawson_Creek`,`America/Denver`,`America/Detroit`,`America/Dominica`,`America/Edmonton`,`America/Eirunepe`,`America/El_Salvador`,`America/Ensenada`,`America/Fort_Nelson`,`America/Fort_Wayne`,`America/Fortaleza`,`America/Glace_Bay`,`America/Godthab`,`America/Goose_Bay`,`America/Grand_Turk`,`America/Grenada`,`America/Guadeloupe`,`America/Guatemala`,`America/Guayaquil`,`America/Guyana`,`America/Halifax`,`America/Havana`,`America/Hermosillo`,`America/Indiana/Indianapolis`,`America/Indiana/Knox`,`America/Indiana/Marengo`,`America/Indiana/Petersburg`,`America/Indiana/Tell_City`,`America/Indiana/Vevay`,`America/Indiana/Vincennes`,`America/Indiana/Winamac`,`America/Indianapolis`,`America/Inuvik`,`America/Iqaluit`,`America/Jamaica`,`America/Jujuy`,`America/Juneau`,`America/Kentucky/Louisville`,`America/Kentucky/Monticello`,`America/Knox_IN`,`America/Kralendijk`,`America/La_Paz`,`America/Lima`,`America/Los_Angeles`,`America/Louisville`,`America/Lower_Princes`,`America/Maceio`,`America/Managua`,`America/Manaus`,`America/Marigot`,`America/Martinique`,`America/Matamoros`,`America/Mazatlan`,`America/Mendoza`,`America/Menominee`,`America/Merida`,`America/Metlakatla`,`America/Mexico_City`,`America/Miquelon`,`America/Moncton`,`America/Monterrey`,`America/Montevideo`,`America/Montreal`,`America/Montserrat`,`America/Nassau`,`America/New_York`,`America/Nipigon`,`America/Nome`,`America/Noronha`,`America/North_Dakota/Beulah`,`America/North_Dakota/Center`,`America/North_Dakota/New_Salem`,`America/Ojinaga`,`America/Panama`,`America/Pangnirtung`,`America/Paramaribo`,`America/Phoenix`,`America/Port-au-Prince`,`America/Port_of_Spain`,`America/Porto_Acre`,`America/Porto_Velho`,`America/Puerto_Rico`,`America/Punta_Arenas`,`America/Rainy_River`,`America/Rankin_Inlet`,`America/Recife`,`America/Regina`,`America/Resolute`,`America/Rio_Branco`,`America/Rosario`,`America/Santa_Isabel`,`America/Santarem`,`America/Santiago`,`America/Santo_Domingo`,`America/Sao_Paulo`,`America/Scoresbysund`,`America/Shiprock`,`America/Sitka`,`America/St_Barthelemy`,`America/St_Johns`,`America/St_Kitts`,`America/St_Lucia`,`America/St_Thomas`,`America/St_Vincent`,`America/Swift_Current`,`America/Tegucigalpa`,`America/Thule`,`America/Thunder_Bay`,`America/Tijuana`,`America/Toronto`,`America/Tortola`,`America/Vancouver`,`America/Virgin`,`America/Whitehorse`,`America/Winnipeg`,`America/Yakutat`,`America/Yellowknife`,`Antarctica/Casey`,`Antarctica/Davis`,`Antarctica/DumontDUrville`,`Antarctica/Macquarie`,`Antarctica/Mawson`,`Antarctica/McMurdo`,`Antarctica/Palmer`,`Antarctica/Rothera`,`Antarctica/South_Pole`,`Antarctica/Syowa`,`Antarctica/Troll`,`Antarctica/Vostok`,`Arctic/Longyearbyen`,`Asia/Aden`,`Asia/Almaty`,`Asia/Amman`,`Asia/Anadyr`,`Asia/Aqtau`,`Asia/Aqtobe`,`Asia/Ashgabat`,`Asia/Ashkhabad`,`Asia/Atyrau`,`Asia/Baghdad`,`Asia/Bahrain`,`Asia/Baku`,`Asia/Bangkok`,`Asia/Barnaul`,`Asia/Beirut`,`Asia/Bishkek`,`Asia/Brunei`,`Asia/Calcutta`,`Asia/Chita`,`Asia/Choibalsan`,`Asia/Chongqing`,`Asia/Chungking`,`Asia/Colombo`,`Asia/Dacca`,`Asia/Damascus`,`Asia/Dhaka`,`Asia/Dili`,`Asia/Dubai`,`Asia/Dushanbe`,`Asia/Famagusta`,`Asia/Gaza`,`Asia/Harbin`,`Asia/Hebron`,`Asia/Ho_Chi_Minh`,`Asia/Hong_Kong`,`Asia/Hovd`,`Asia/Irkutsk`,`Asia/Istanbul`,`Asia/Jakarta`,`Asia/Jayapura`,`Asia/Jerusalem`,`Asia/Kabul`,`Asia/Kamchatka`,`Asia/Karachi`,`Asia/Kashgar`,`Asia/Kathmandu`,`Asia/Katmandu`,`Asia/Khandyga`,`Asia/Kolkata`,`Asia/Krasnoyarsk`,`Asia/Kuala_Lumpur`,`Asia/Kuching`,`Asia/Kuwait`,`Asia/Macao`,`Asia/Macau`,`Asia/Magadan`,`Asia/Makassar`,`Asia/Manila`,`Asia/Muscat`,`Asia/Nicosia`,`Asia/Novokuznetsk`,`Asia/Novosibirsk`,`Asia/Omsk`,`Asia/Oral`,`Asia/Phnom_Penh`,`Asia/Pontianak`,`Asia/Pyongyang`,`Asia/Qatar`,`Asia/Qostanay`,`Asia/Qyzylorda`,`Asia/Rangoon`,`Asia/Riyadh`,`Asia/Saigon`,`Asia/Sakhalin`,`Asia/Samarkand`,`Asia/Seoul`,`Asia/Shanghai`,`Asia/Singapore`,`Asia/Srednekolymsk`,`Asia/Taipei`,`Asia/Tashkent`,`Asia/Tbilisi`,`Asia/Tehran`,`Asia/Tel_Aviv`,`Asia/Thimbu`,`Asia/Thimphu`,`Asia/Tokyo`,`Asia/Tomsk`,`Asia/Ujung_Pandang`,`Asia/Ulaanbaatar`,`Asia/Ulan_Bator`,`Asia/Urumqi`,`Asia/Ust-Nera`,`Asia/Vientiane`,`Asia/Vladivostok`,`Asia/Yakutsk`,`Asia/Yangon`,`Asia/Yekaterinburg`,`Asia/Yerevan`,`Atlantic/Azores`,`Atlantic/Bermuda`,`Atlantic/Canary`,`Atlantic/Cape_Verde`,`Atlantic/Faeroe`,`Atlantic/Faroe`,`Atlantic/Jan_Mayen`,`Atlantic/Madeira`,`Atlantic/Reykjavik`,`Atlantic/South_Georgia`,`Atlantic/St_Helena`,`Atlantic/Stanley`,`Australia/ACT`,`Australia/Adelaide`,`Australia/Brisbane`,`Australia/Broken_Hill`,`Australia/Canberra`,`Australia/Currie`,`Australia/Darwin`,`Australia/Eucla`,`Australia/Hobart`,`Australia/LHI`,`Australia/Lindeman`,`Australia/Lord_Howe`,`Australia/Melbourne`,`Australia/NSW`,`Australia/North`,`Australia/Perth`,`Australia/Queensland`,`Australia/South`,`Australia/Sydney`,`Australia/Tasmania`,`Australia/Victoria`,`Australia/West`,`Australia/Yancowinna`,`Brazil/Acre`,`Brazil/DeNoronha`,`Brazil/East`,`Brazil/West`,`CET`,`CST6CDT`,`Canada/Atlantic`,`Canada/Central`,`Canada/Eastern`,`Canada/Mountain`,`Canada/Newfoundland`,`Canada/Pacific`,`Canada/Saskatchewan`,`Canada/Yukon`,`Chile/Continental`,`Chile/EasterIsland`,`Cuba`,`EET`,`EST5EDT`,`Egypt`,`Eire`,`Etc/GMT`,`Etc/GMT+0`,`Etc/GMT+1`,`Etc/GMT+10`,`Etc/GMT+11`,`Etc/GMT+12`,`Etc/GMT+2`,`Etc/GMT+3`,`Etc/GMT+4`,`Etc/GMT+5`,`Etc/GMT+6`,`Etc/GMT+7`,`Etc/GMT+8`,`Etc/GMT+9`,`Etc/GMT-0`,`Etc/GMT-1`,`Etc/GMT-10`,`Etc/GMT-11`,`Etc/GMT-12`,`Etc/GMT-13`,`Etc/GMT-14`,`Etc/GMT-2`,`Etc/GMT-3`,`Etc/GMT-4`,`Etc/GMT-5`,`Etc/GMT-6`,`Etc/GMT-7`,`Etc/GMT-8`,`Etc/GMT-9`,`Etc/GMT0`,`Etc/Greenwich`,`Etc/UCT`,`Etc/UTC`,`Etc/Universal`,`Etc/Zulu`,`Europe/Amsterdam`,`Europe/Andorra`,`Europe/Astrakhan`,`Europe/Athens`,`Europe/Belfast`,`Europe/Belgrade`,`Europe/Berlin`,`Europe/Bratislava`,`Europe/Brussels`,`Europe/Bucharest`,`Europe/Budapest`,`Europe/Busingen`,`Europe/Chisinau`,`Europe/Copenhagen`,`Europe/Dublin`,`Europe/Gibraltar`,`Europe/Guernsey`,`Europe/Helsinki`,`Europe/Isle_of_Man`,`Europe/Istanbul`,`Europe/Jersey`,`Europe/Kaliningrad`,`Europe/Kiev`,`Europe/Kirov`,`Europe/Lisbon`,`Europe/Ljubljana`,`Europe/London`,`Europe/Luxembourg`,`Europe/Madrid`,`Europe/Malta`,`Europe/Mariehamn`,`Europe/Minsk`,`Europe/Monaco`,`Europe/Moscow`,`Europe/Nicosia`,`Europe/Oslo`,`Europe/Paris`,`Europe/Podgorica`,`Europe/Prague`,`Europe/Riga`,`Europe/Rome`,`Europe/Samara`,`Europe/San_Marino`,`Europe/Sarajevo`,`Europe/Saratov`,`Europe/Simferopol`,`Europe/Skopje`,`Europe/Sofia`,`Europe/Stockholm`,`Europe/Tallinn`,`Europe/Tirane`,`Europe/Tiraspol`,`Europe/Ulyanovsk`,`Europe/Uzhgorod`,`Europe/Vaduz`,`Europe/Vatican`,`Europe/Vienna`,`Europe/Vilnius`,`Europe/Volgograd`,`Europe/Warsaw`,`Europe/Zagreb`,`Europe/Zaporozhye`,`Europe/Zurich`,`GB`,`GB-Eire`,`GMT`,`GMT0`,`Greenwich`,`Hongkong`,`Iceland`,`Indian/Antananarivo`,`Indian/Chagos`,`Indian/Christmas`,`Indian/Cocos`,`Indian/Comoro`,`Indian/Kerguelen`,`Indian/Mahe`,`Indian/Maldives`,`Indian/Mauritius`,`Indian/Mayotte`,`Indian/Reunion`,`Iran`,`Israel`,`Jamaica`,`Japan`,`Kwajalein`,`Libya`,`MET`,`MST7MDT`,`Mexico/BajaNorte`,`Mexico/BajaSur`,`Mexico/General`,`NZ`,`NZ-CHAT`,`Navajo`,`PRC`,`PST8PDT`,`Pacific/Apia`,`Pacific/Auckland`,`Pacific/Bougainville`,`Pacific/Chatham`,`Pacific/Chuuk`,`Pacific/Easter`,`Pacific/Efate`,`Pacific/Enderbury`,`Pacific/Fakaofo`,`Pacific/Fiji`,`Pacific/Funafuti`,`Pacific/Galapagos`,`Pacific/Gambier`,`Pacific/Guadalcanal`,`Pacific/Guam`,`Pacific/Honolulu`,`Pacific/Johnston`,`Pacific/Kiritimati`,`Pacific/Kosrae`,`Pacific/Kwajalein`,`Pacific/Majuro`,`Pacific/Marquesas`,`Pacific/Midway`,`Pacific/Nauru`,`Pacific/Niue`,`Pacific/Norfolk`,`Pacific/Noumea`,`Pacific/Pago_Pago`,`Pacific/Palau`,`Pacific/Pitcairn`,`Pacific/Pohnpei`,`Pacific/Ponape`,`Pacific/Port_Moresby`,`Pacific/Rarotonga`,`Pacific/Saipan`,`Pacific/Samoa`,`Pacific/Tahiti`,`Pacific/Tarawa`,`Pacific/Tongatapu`,`Pacific/Truk`,`Pacific/Wake`,`Pacific/Wallis`,`Pacific/Yap`,`Poland`,`Portugal`,`ROK`,`Singapore`,`Turkey`,`UCT`,`US/Alaska`,`US/Aleutian`,`US/Arizona`,`US/Central`,`US/East-Indiana`,`US/Eastern`,`US/Hawaii`,`US/Indiana-Starke`,`US/Michigan`,`US/Mountain`,`US/Pacific`,`US/Pacific-New`,`US/Samoa`,`UTC`,`Universal`,`W-SU`,`WET`,`Zulu` |  |
 | locale | string | An enumeration.  Enum: `de`,`en`,`hu`,`it`,`nl`,`sv` |  |
 
-Expand POST /api/users/profilecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+Expand POST /api/users/profilecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -1608,7 +1608,7 @@ Auth apiKeyQuery String
 | all_users | boolean | Default: false |  |
 | period | string |  |  |
 
-GET /api/users/statcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/users/statcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -1689,7 +1689,7 @@ Auth apiKeyQuery String
 | asc_order | array | Statistic types that should be sorted ascending  Default: [] |  |
 | desc_order | array | Statistic types that should be sorted descending  Default: [] |  |
 
-GET /api/users/stat/reportscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/users/stat/reportscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -1736,7 +1736,7 @@ Request Body application/json
 | stat_name VerdictDateGenericStatNameVerdictDateStandaloneStatName |  |  |  |
 | VerdictDateGenericStatName | string | Name of statistics types that should be stored together in a single collection  Enum: `count_malicious_signal_groups`,`count_mitre_techniques_by_period`,`frequent_yara_tags`,`frequent_malware_tags`,`count_yaras_per_period`,`count_malicious_reports_by_extension`,`count_api_calls`,`count_top_level_domains`,`count_malicious_reports_by_language`,`count_phishing_brands`,`count_malicious_reports_by_country`,`count_malicious_ips`,`count_malicious_ips_ratio`,`count_iocs_per_period`,`average_scan_time` |  |
 
-POST /api/users/stat/reports/verdicts/amountcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+POST /api/users/stat/reports/verdicts/amountcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -1749,7 +1749,7 @@ Successful Response
 | verdicts | object |  |  |
 | * | integer |  |  |
 
-400
+Expand 400
 
 Bad request
 
@@ -1782,7 +1782,7 @@ Request Body application/json
 | stat_name VerdictDateGenericStatNameVerdictDateStandaloneStatName |  |  |  |
 | VerdictDateGenericStatName | string | Name of statistics types that should be stored together in a single collection  Enum: `count_malicious_signal_groups`,`count_mitre_techniques_by_period`,`frequent_yara_tags`,`frequent_malware_tags`,`count_yaras_per_period`,`count_malicious_reports_by_extension`,`count_api_calls`,`count_top_level_domains`,`count_malicious_reports_by_language`,`count_phishing_brands`,`count_malicious_reports_by_country`,`count_malicious_ips`,`count_malicious_ips_ratio`,`count_iocs_per_period`,`average_scan_time` |  |
 
-POST /api/users/stat/reports/verdicts/datescURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+POST /api/users/stat/reports/verdicts/datescURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -1797,7 +1797,7 @@ Successful Response
 | * | object |  |  |
 | * | integer |  |  |
 
-400
+Expand 400
 
 Bad request
 
@@ -1824,7 +1824,7 @@ GET /api/users/stat/malicious-ipscURLRequestRequestsnet/httpGuzzleHttpClientOkHt
 
 Successful Response
 
-AppStat.__pydantic_model__UserStat.__pydantic_model__
+Any ofAppStat.__pydantic_model__UserStat.__pydantic_model__
 
 | AppStat | object | Generic statistic record.  Can hold statistics of any type. |  |
 | --- | --- | --- | --- |
@@ -1960,7 +1960,7 @@ Successful Response
 
 Obtain project configuration to use on front-end
 
-Auth apiKeyGET /api/system/configcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+Auth apiKeyGET /api/system/configcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -2089,7 +2089,7 @@ Validation Error
 
 Obtain signal groups list
 
-Auth apiKeyGET /api/system/signal-groupscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+Auth apiKeyGET /api/system/signal-groupscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -2249,7 +2249,7 @@ Item not found
 
 Obtain MITRE tactics and techniques
 
-Auth apiKeyGET /api/system/mitrecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+Auth apiKeyGET /api/system/mitrecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -2317,7 +2317,7 @@ Validation Error
 
 Do an immediate healthcheck and return the state
 
-Auth apiKeyGET /api/system/do-healthcheckcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+Auth apiKeyGET /api/system/do-healthcheckcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -2379,7 +2379,7 @@ Auth apiKeyQuery String
 | --- | --- | --- | --- |
 | days_from | integer | Default: 0 |  |
 
-GET /api/system/query-full-healthcheckcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/system/query-full-healthcheckcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -2466,7 +2466,7 @@ Validation Error
 
 Get license information
 
-Auth apiKeyGET /api/system/licensecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+Auth apiKeyGET /api/system/licensecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -2497,7 +2497,7 @@ Auth apiKeyRequest Body application/json
 | app_server | string |  |  |
 | license_key | string |  |  |
 
-POST /api/system/license/activate/onlinecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+POST /api/system/license/activate/onlinecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -2535,7 +2535,7 @@ Auth apiKeyRequest Body application/x-www-form-urlencoded
 | --- | --- | --- | --- |
 | app_server | string |  |  |
 
-POST /api/system/license/activate/offlinecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+POST /api/system/license/activate/offlinecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -2572,7 +2572,7 @@ Auth apiKeyQuery String
 | app_server | string |  |  |
 | --- | --- | --- | --- |
 
-DELETE /api/system/license/deactivatecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+DELETE /api/system/license/deactivatecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -2879,7 +2879,7 @@ Validation Error
 
 Get all api quota settings
 
-Auth apiKeyGET /api/admin/settings/api-quotacURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+Auth apiKeyGET /api/admin/settings/api-quotacURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -2910,7 +2910,7 @@ Not authorized
 
 Save single API quota setting
 
-Auth apiKeyRequest Body application/json
+Auth apiKeyRequest Body application/jsonExpand all
 
 | SaveApiQuotaSettingRequest | object | Request model to save api quota setting |  |
 | --- | --- | --- | --- |
@@ -3068,7 +3068,7 @@ Not authorized
 
 Update settings of external auth service
 
-Auth apiKeyRequest Body SaveOAuthServicePayloadSaveSamlServicePayloadapplication/json
+Auth apiKeyRequest Body application/jsonAny ofSaveOAuthServicePayloadSaveSamlServicePayload
 
 | SaveOAuthServicePayload | object | Request model to save OAuth service |  |
 | --- | --- | --- | --- |
@@ -3150,7 +3150,7 @@ Auth apiKeyQuery String
 | filter | string |  |  |
 | group | string |  |  |
 
-GET /api/admin/userscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/admin/userscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -3470,7 +3470,7 @@ Auth apiKeyQuery String
 | filter | string |  |  |
 | sort | string | Enum: `date`,`count`,`note` |  |
 
-GET /api/admin/errorscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/admin/errorscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -3639,7 +3639,7 @@ Auth apiKeyQuery String
 | filter | string |  |  |
 | sort | string | Enum: `date`,`note` |  |
 
-GET /api/admin/logscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/admin/logscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -3962,7 +3962,7 @@ Auth apiKeyQuery String
 | category | string | Enum: `statistics`,`scan`,`system`,`reports`,`patches` |  |
 | --- | --- | --- | --- |
 
-GET /api/admin/jobscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/admin/jobscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -4302,7 +4302,7 @@ Auth apiKeyQuery String
 | page | integer | minimum: 1  Default: 1 |  |
 | --- | --- | --- | --- |
 
-GET /api/admin/emailscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/admin/emailscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -4389,7 +4389,7 @@ Auth apiKeyQuery String
 | state | string | Enum: `queued_for_download`,`downloading`,`queued_for_scan`,`scanning`,`scan_completed` |  |
 | verdict | string | Enum: `unknown`,`benign`,`informational`,`no_threat`,`suspicious`,`likely_malicious`,`malicious` |  |
 
-GET /api/admin/scan-sources/filescURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/admin/scan-sources/filescURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -4434,7 +4434,7 @@ Auth apiKeyQuery String
 | page | integer | minimum: 1  Default: 1 |  |
 | --- | --- | --- | --- |
 
-GET /api/admin/scan-sources/configcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/admin/scan-sources/configcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -4483,7 +4483,7 @@ Validation Error
 
 Add or edit scan source config record
 
-Auth apiKeyRequest Body application/json
+Auth apiKeyRequest Body application/jsonExpand all
 
 | EmailSourceConfigRequest | object |  |  |
 | --- | --- | --- | --- |
@@ -4610,7 +4610,7 @@ Auth apiKeyQuery String
 | --- | --- | --- | --- |
 | config | string |  |  |
 
-GET /api/admin/scan-sources/subjobscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/admin/scan-sources/subjobscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -4657,7 +4657,7 @@ Auth apiKeyPath Params
 | job_id | string |  |  |
 | --- | --- | --- | --- |
 
-GET /api/admin/scan-sources/subjobs/{job_id}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/admin/scan-sources/subjobs/{job_id}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -4776,7 +4776,7 @@ Request Body application/json
 | unc_path | array[string] | Default: [] |  |
 | days | integer | Default: -1 |  |
 
-Expand POST /api/threatintel/get-prevalencecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+Expand POST /api/threatintel/get-prevalencecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -4854,7 +4854,7 @@ Auth apiKeyQuery String
 | authentihash | string |  |  |
 | days | integer | Default: -1 |  |
 
-GET /api/threatintel/get-similarscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/threatintel/get-similarscURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -4991,7 +4991,7 @@ Auth apiKeyQuery String
 | verdict | string | Enum: `unknown`,`benign`,`informational`,`no_threat`,`suspicious`,`likely_malicious`,`malicious` |  |
 | tags | array |  |  |
 
-GET /api/similarity-search/similaritycURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/similarity-search/similaritycURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -5115,7 +5115,7 @@ Auth apiKeyQuery String
 | --- | --- | --- | --- |
 | hashes | array | Array of one or more hashes |  |
 
-GET /api/backend/reputationcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/backend/reputationcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -5151,7 +5151,7 @@ Auth apiKeyQuery String
 | sha256 | string |  |  |
 | --- | --- | --- | --- |
 
-GET /api/reputation/hashcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/reputation/hashcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -5198,7 +5198,7 @@ Auth apiKeyRequest Body application/json
 | array | array[string] |  |  |
 | --- | --- | --- | --- |
 
-POST /api/reputation/hashcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+POST /api/reputation/hashcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -5250,7 +5250,7 @@ Query String
 | ioc_value | string |  |  |
 | --- | --- | --- | --- |
 
-GET /api/reputation/{ioc_type}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /api/reputation/{ioc_type}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -5302,7 +5302,7 @@ Request Body application/json
 | array | array[string] |  |  |
 | --- | --- | --- | --- |
 
-POST /api/reputation/{ioc_type}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+POST /api/reputation/{ioc_type}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
@@ -5361,7 +5361,7 @@ Successful Response
 
 Return API json data to be used by docs UI
 
-Auth apiKeyGET /openapi.jsoncURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+Auth apiKeyGET /openapi.jsoncURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Successful Response
 
