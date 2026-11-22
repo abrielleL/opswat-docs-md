@@ -2,20 +2,22 @@
 
 # Online Activation
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 MetaDefender Cluster (MD Cluster) supports seamless license activation for every deployed **MetaDefender** **Core** instance. The license key must be provided to MD Cluster **Control Center** and will be manually activated on each individual **MetaDefender Core** instance. If necessary, multiple license keys may also be supplied.
 
 ## [Adding License](/docs/mdcluster/installation/md-cluster-online-activation#adding-license)
 
 1. Sign in to MD Cluster **Control Center** console.
-2. Go to `Inventory` > `Licenses` and select `Add license`.
-3. Input your license key and click `Add`.
+2. Go to `Library` > `Licenses` and select `Add License`.
+3. Input your license key in `License Key` and click `Add`.
 
 ## [License Activation](/docs/mdcluster/installation/md-cluster-online-activation#license-activation)
 
 1. Sign in to MD Cluster **Control Center** console.
-2. From the left side bar, go to `Inventory` > `Licenses`.
-3. From the list of available licenses, choose the key you wish to use for activation.
-4. Click `Activate` to apply the license key to the appropriate instance(s).
+2. From the left side bar, go to `Library` > `Licenses` (`Online License` tab).
+3. From the list of available licenses, open the actions menu (**...**) of the key you wish to use for activation.
+4. Click `Activate`, then confirm with `Activate` in the `Activate License` dialog to apply the license key to the appropriate instance(s).
 
 Info
 
@@ -28,9 +30,9 @@ You can view the number of activated instances and available slots by selecting 
 Follow these steps to deactivate your license:
 
 1. Sign in to MD Cluster **Control Center** console.
-2. From the left side bar, select `Inventory` > `Licenses`.
-3. From the list of available licenses, choose the key you wish to use for deactivation.
-4. Click Deactivate to remove the license from all **MetaDefender** **Core** instances currently activated with the license key.
+2. From the left side bar, select `Library` > `Licenses` (`Online License` tab).
+3. From the list of available licenses, open the actions menu (**...**) of the key you wish to use for deactivation.
+4. Click `Deactivate`, then confirm in the `Deactivate License` dialog to remove the license from all **MetaDefender** **Core** instances currently activated with the license key.
 
 Info
 

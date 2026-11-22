@@ -137,7 +137,7 @@ When you click on a Case Number from any case list, you'll be taken to the **Cas
 | Item | Description |
 | ---- | ---- |
 | **Case name and description** |  |
-| **Watch a Case (CC)** | Add email addresses to receive email notification on case updates ![](https://uploads.developerhub.io/prod/JYvy/1gaumt69gggl6voxnhhs3wmf5fj1ptu5jkpir3gpjrh3ablsdhskpwotwr7z45qz.png) |
+| **Watch a Case (CC)** | Add email addresses to receive email notification on case updates ![](https://uploads.developerhub.io/prod/JYvy/1gaumt69gggl6voxnhhs3wmf5fj1ptu5jkpir3gpjrh3ablsdhskpwotwr7z45qz.png) New If your organization has turned on [Default Support Case Watchers](https://www.opswat.com/docs/my/my-organization/notifications), the contacts on that list are added as watchers automatically when a new case of your organization is submitted in My OPSWAT Portal. |
 | **Escalate** | Click if your case requires urgent attention. Reason for Escalation is required. |
 | **Case information** | View case number, contact name, organization, assigned agent, product, platform, issue type, version, license, severity level, created date, and current status. |
 | **Escalation** | Escalation status |

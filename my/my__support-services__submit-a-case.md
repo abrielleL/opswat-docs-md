@@ -26,7 +26,7 @@ Once you're ready to escalate an issue, click **Submit Case**. A guided form wil
 | 2 | Platform (if applicable) | If the product supports multiple platforms, you’ll be prompted to select one (e.g., Windows, Linux). ![](https://uploads.developerhub.io/prod/JYvy/g5uog0arzu3eh8d97j7asul9ffa4msy76h1po0j4tabks458lta49doaolas6rk7.png) |
 | 3 | Issue Type | Choose the nature of your issue, such as configuration, installation, or unexpected behavior, ensuring clear and consistent reporting. ![](https://uploads.developerhub.io/prod/JYvy/uijs82offk4ndsc9423a8aesoew2szts9q7dv7m3yelfid05kgh8z93j9naohvv1.png) |
 | 4 | Severity | Indicate how critical the issue is ![](https://uploads.developerhub.io/prod/JYvy/xhpy3zxauu21ew2nra36kl0374wcpu1bh43as3542ml3eupoajm6ol3hv4s42vns.png) NoteBased on your org's support level and severity, you'll see an estimated initial response time. |
-| 5 | Add License & Version | Select the license key and product version using dropdowns, or enter manually. |
+| 5 | Add License & Version | Select the license key and product version using dropdowns, or enter manually.  New With the [Unassigned license keys visible](https://www.opswat.com/docs/my/my-organization/security#unassigned-license-keys-visible) setting on, you'll see assigned license keys plus license keys with no owner. If it's off, you'll only see license keys you own. To submit a case for a license key you don't own, simply type the license key. |
 | 6 | Subject & description | Provide a: - **Subject –** short, clear title (max 255 characters) - **Description** – detailed explanation of the issue (max 5000 characters) ![](https://uploads.developerhub.io/prod/JYvy/9q2n7z019dz1sp3iud9mu6ar8nwg5r5z7hexlboh9uoawwao0pcps4hv3kh1m9cv.png) |
 | 7 | Review AI Suggestions (If Any) | Before submission, the AI assistant may suggest relevant knowledge base articles based on your input. If no relevant articles are found, users are directed to the next step. ![](https://uploads.developerhub.io/prod/JYvy/xsrhp9np7lj34yyxq60gevxl277zwggrh02b9d6ai46dfm87l4dn8pa6rxsllyr3.png)You then can decide to choose **I resolved the issue** or **Continue to Submit Case** Note If [AI Assistance](https://www.opswat.com/docs/my/my-organization/security#ai-assistance) is disabled, this step is skipped. |
 | 8 | Upload Supporting Files | You can attach up to 5 files with a maximum total upload size of 2 GB. Note  To upload files larger than 2 GB, go to the [Case Details](https://www.opswat.com/docs/my/support-services/support-case-management#case-details) page and use the *Files & CC’s* tab after the case is submitted. ![](https://uploads.developerhub.io/prod/JYvy/xrmuj8uxizasdcmat6p0tjtgghmbo52b9m9vq6gg80lqyzccs0ryt0v6eqfj7m2f.png) |
@@ -46,3 +46,7 @@ OPSWAT Academy learners can submit and track Academy support cases in My OPSWAT 
 4. Complete the remaining fields and submit.
 
 Academy cases appear in your case lists and support comments, escalation, and follow-up, just like other support cases.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

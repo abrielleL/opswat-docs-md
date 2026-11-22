@@ -2,19 +2,22 @@
 
 # Data Sanitization on MetaDefender Cloud
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [MetaDefender Cloud Deep CDR](/docs/mdcloud/operation/data-sanitization-on-metadefender-cloud#metadefender-cloud-deep-cdr)
 
 [Data sanitization, also known as Deep Content Disarm and Reconstruction (CDR)](https://www.opswat.com/technologies/data-sanitization), is the process of breaking down a file, removing exploitable content, and then reconstructing the file with all original content and functionality restored. This process renders files safe by stripping potentially malicious or insecure content – macros and hyperlinks, for example.
 
 ## [How It Works](/docs/mdcloud/operation/data-sanitization-on-metadefender-cloud#how-it-works)
 
-MetaDefender Cloud sanitizes files after first scanning them for malware with 20+ anti-malware engines. After multiscanning is complete, MetaDefender Cloud creates a sanitized version of every file. The sanitized file is available for immediate download. To download the file, click "Sanitized File" above the displayed multiscanning results, then click "Download Sanitized."
+MetaDefender Cloud scans the file with 20+ anti-malware engines and, in parallel can build a sanitized version. When the scan finishes, open **Download** on the results page and choose **Sanitized file**, or call `GET /v4/file/converted/{data_id}`.
 
-Data sanitization (CDR) does not modify or alter the content within a file. It simply removes the exploitable objects within the file.
+**When sanitization is skipped.** Some files are not sanitized, for example digitally signed files. The result tells you why in `process_info.post_processing.sanitization_details.skipped_reason`. When sanitization fails, the Deep CDR card reads Sanitization Failed with the reason, and no sanitized file is offered.
 
-Our data sanitization (CDR) technology supports over 150 file types including common file types such as DOC(X), XLS (X), PPT(X), and PDF, and we are always adding more in order to expand the protection afforded by data sanitization.
+**Sanitized file names.** The sanitized file keeps the whole original name with a suffix: `quarterly.report.v2.final.txt` becomes `quarterly.report.v2.final_sanitized_by_OPSWAT_Metadefender.txt`. Custom workflows can set their own naming pattern.
 
-The Deep CDR engine is always the latest version on MetaDefender Cloud. The engine configuration is standard and no file conversion is performed.
+**Retention.** The sanitized version is kept for 24 hours, whether or not the scan was private. After that it is deleted. You can delete it earlier with the delete-sanitized-version endpoint.
+
+**Configuration.** The table below shows the default Deep CDR configuration, which applies to the standard workflow. On a paid plan you can change it in a custom workflow: open Secure Pipeline Studio, add or select the Deep CDR engine, and adjust its file-type settings or apply an engine profile. Deep CDR keeps the format of the original file; a PDF comes back as a PDF.
 
 ## [Supported File Types](/docs/mdcloud/operation/data-sanitization-on-metadefender-cloud#supported-file-types)
 
@@ -186,7 +189,7 @@ In the UI, please make sure to enable "Deep CDR" on the advanced scanning menu:
 
 We offer a REST API for data sanitization (CDR) to allow users to incorporate the technology's capabilities into their own solutions.
 
-Visit [MetaDefender Cloud API v4](/v-4/metadefender-cloud-api-v4/ref#Data Sanitization Cdr) to learn more about this API.
+Visit <https://www.opswat.com/docs/mdcloud/metadefender-cloud-api-v4#file-sanitized> to learn more about this API.
 
 ## [Private Deep CDR](/docs/mdcloud/operation/data-sanitization-on-metadefender-cloud#private-deep-cdr)
 
@@ -194,7 +197,7 @@ Whether uploading files in private mode or not the sanitized version of the file
 
 ## [Deep CDR Configuration - Advance settings](/docs/mdcloud/operation/data-sanitization-on-metadefender-cloud#deep-cdr-configuration---advance-settings)
 
-The table below explains how Deep CDR is configured on MetaDefender Cloud. This configuration is standard for all users and cannot be adapted to specific user needs.
+The table below explains how Deep CDR is configured on MetaDefender Cloud. This configuration is standard for all users but can be adapted through custom workflows.
 
 Deep CDR is configured to keep the format of the original file (e.g: sanitized versions of PDFs will also be PDFs, we won’t convert them to images or any other format)
 

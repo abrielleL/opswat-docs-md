@@ -4,7 +4,7 @@
 
 # Core
 
-#### v5.23.0 [Latest]
+#### v5.24.2 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mdcore/release-notes)
 
@@ -82,7 +82,11 @@ Learn more](/docs/mdcore/file-structure-validation) [##### Utilities engines
 
 ###### Dedicated section for the Utilities engines: File Type Verification, Archive Extraction and Yara.
 
-Learn more](/docs/mdcore/utilities-engines) [##### MetaDefender Core API
+Learn more](/docs/mdcore/utilities-engines) [##### MetaDefender Core CLI (mdcli)
+
+######
+
+Learn more](/docs/mdcore/metadefender-core-cli--mdcli-) [##### MetaDefender Core API
 
 ######
 

@@ -2,6 +2,60 @@
 
 # Changelog
 
+## Version 4.3.2
+
+Release Date: November 19, 2026
+
+**Security Fixes**
+
+- Updated the web client image to nginx 1.31.9.
+
+## Version 4.3.1
+
+Release Date: November 16, 2026
+
+**Security Fixes**
+
+- The built-in database uses PostgreSQL 17.12, which includes the PostgreSQL security fixes of November 12, 2026
+
+## Version 4.3.0
+
+Release Date: November 11, 2026
+
+**Highlights**
+
+- **Compare Scans:** You can now compare up to 6 scans of the same repository or uploaded file. The CVE Changes view shows which CVEs are new, resolved or persisting, and MDSSC warns you when the scans used different workflows.
+- **Background Scan Deletion and Cancel All:** Scan deletions now run in the background, and a notification shows their progress. You can cancel all running scans at once and delete them right after.
+- **mdssc Command Line:** One mdssc command now starts, stops, updates and checks MDSSC. New commands create support packages and back up and restore MDSSC. Tab completion and mdssc <command> --help are available, and the -c and -u flags still work.
+- **Cross Domain Administrator:** Cross-domain transfer setup now needs the Cross Domain Administrator privilege, which a holder grants to other Administrators on the Users page. The low side now sends a High-Side Receive Key, which works only for cross-domain transfers. Personal API keys no longer work for transfers.
+- **MDSS Platform 2.7:** MDSSC now runs on MDSS platform 2.7.1. Read the upgrade notes before you upgrade from an earlier version.
+
+**Improvements**
+
+- **Security Hardening**: A role change applies to the user's open session at once. A Tenant Administrator can no longer grant the Administrator role. Session cookies use the Secure flag and the __Host- prefix.
+- **HTTPS Behind a Proxy:** Set HTTPS_BEHIND_PROXY=yes when a load balancer ends TLS in front of MDSSC.
+- **SSO Users**: Profile fields that the identity provider owns are read-only.
+- **Container Scans:** Files and packages show the build step and layer they come from.
+- **Packages:** Packages with the same name in different ecosystems, such as npm and PyPI, show separately.
+- **Reports:** The scan list shows who started each scan. Filters stay active after a refresh or a page reload.
+- **Removed Options:** The mdssc -u vacuum and mdssc -u export_settings options are removed.
+
+**Bug Fixes**
+
+- Container scans now scan files outside the image layers, and copy remediation no longer transfers them unscanned
+- Harbor copy remediation no longer copies vulnerable images that carry an SBOM
+- A cross-domain transfer keeps a multi-architecture image as one image
+- A cross-domain transfer of a private GitHub repository no longer fails at Exporting
+- Scan Now of a GitHub branch that does not exist now fails with an error
+- Repositories with long or duplicate file paths now extract correctly
+- Analyze uploads larger than 1 MB no longer fail, and a large archive no longer stops scanning on the server
+- CycloneDX export now works for uploaded-file scans
+- PDF exports use a different file name for each report type and show the correct trigger event
+- The External Logger rejects an empty server address instead of dropping all log events
+- On Podman, mdssc -c start finds compose in /usr/local/bin, and mdssc -u import_db no longer hangs
+- A deb upgrade runs mdssc -u configure again
+- Scripts in /etc/mdssc are no longer world-writable
+
 ## Version 4.2.0
 
 Release Date: October 14, 2026

@@ -21,7 +21,7 @@ OEM customers can now view their OEM-specific licenses right in the Portal, with
 
 **Access path:** Left menu > OEM Portal
 
-**Further reading:** [OEM Portal](https://www.opswat.com/docs/my/others/oem-portal)
+**Further reading:** [OEM Portal](https://www.opswat.com/docs/my/oem-portal/oem-portal)
 
 ---
 
@@ -48,3 +48,7 @@ Organizations with an active OPSWAT Academy enterprise subscription can now see 
 **Access path:** OPSWAT Academy > Cyber League
 
 **Further reading:** [Academy](https://www.opswat.com/docs/my/academy/academy)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

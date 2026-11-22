@@ -2,7 +2,7 @@
 
 # Risks with range request
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 Hypertext Transfer Protocol (HTTP) clients often encounter interrupted data transfers as a result of canceled requests or dropped connections. When a client has stored a partial representation, it is desirable to request the remainder of that representation in a subsequent request rather than transfer the entire representation. Likewise, devices with limited local storage might benefit from being able to request only a subset of a larger representation, such as a single page of a very large document, or the dimensions of an embedded image. [[RFC 7233](https://tools.ietf.org/html/rfc7233)]
 

@@ -43,11 +43,11 @@ Supported account operations:
 
 Warning
 
-If the "Aggregate all file/folder actions" option is disabled, make sure the creator user exists on the destination Managed File Transfer.
+If the "Aggregate all file/folder actions" option is disabled, a guest account is owned on the destination Managed File Transfer by its creator if that user exists there; otherwise by the user who generated the API key.
 
 Info
 
-Guest accounts created while the "Aggregate all file/folder actions" option is enabled will appear on the destination Managed File Transfer as owned by the user who created the API key.
+Guest accounts created while "Aggregate all file/folder actions" is enabled are owned on the destination by the impersonated user; if that user does not exist there, by the guest's creator; otherwise by the user who generated the API key.
 
 ## [Configuration](/docs/mdmft/configuration/vault-to-vault#configuration)
 
@@ -103,11 +103,11 @@ Files will not upload to the destination Managed File Transfer unless:
 
 Note
 
-The impersonated user must exist on both Managed File Transfer instances. This requires both instances to either integrate with the same Active Directory or have the same local accounts created. If the impersonated user does not exist, all requests will be made on behalf of the user who generated the API key.
+The impersonated user should exist on both Managed File Transfer instances. This requires both instances to either integrate with the same Active Directory or have the same local accounts created. If the impersonated user does not exist on the destination, each request is made on behalf of the original user if a user with the same username exists there; otherwise on behalf of the user who generated the API key. A missing impersonated user does not block transfers.
 
 Note
 
-Guest accounts created with impersonation will be owned by the impersonated user. If the impersonated user does not exist on the destination Managed File Transfer, the accounts will be owned by the API key owner.
+Guest accounts created with impersonation will be owned by the impersonated user. If the impersonated user does not exist on the destination Managed File Transfer, the guest account is owned by its creator if that user exists there; otherwise by the user who generated the API key.
 
 Guest welcome notifications (if configured for the destination Managed File Transfer) will be sent to the email address of the guest account and the *creator* on the first Managed File Transfer.
 
@@ -122,6 +122,19 @@ While this option is enabled, destination MFTs do not send upload-successful, sh
 Warning
 
 Do not change this option while web UI uploads are in progress. If it is turned off in the middle of an upload, some files of that upload may not be sent to the destination MFT. To send the missing files, use **Sync to Destination MFT**.
+
+7. **Outbound Bandwidth Throttling**: Limits the combined bandwidth of all MFT to MFT transfers that this MFT sends, so that synchronization does not slow down other traffic on the network (default is off). The limit is shared by all destinations; it is not a limit per destination or per file. Only MFT to MFT traffic is limited: user uploads, downloads and all other traffic are not affected. A changed limit applies within a few seconds, including to transfers that are already in progress. No service restart is needed.
+
+   1. **Limit Outbound Bandwidth**: Toggle on to apply the limit. While it is off, transfers are not limited and the stored value is kept.
+   2. **Maximum Bandwidth** and **Unit**: The limit, in Kbps, Mbps (default) or Gbps. The valid range is 1 Mbps to 100 Gbps. Decimal values are accepted, for example 1.5 Mbps.
+
+Info
+
+The limit is measured on file data, so network usage can be a few percent higher because of protocol overhead. Files that this MFT only relays for another MFT are not counted. In a High Availability deployment, the limit is applied by the active node and stays in effect after a failover.
+
+Note
+
+A low limit makes large synchronizations take longer. At 10 Mbps, about 4.5 GB is transferred per hour. If the limit is turned on while a large file is already being transferred without a limit, the transfer of that file may fail once. It is retried automatically.
 
 ### [Connecting with an Upstream Managed File Transfer Instance](/docs/mdmft/configuration/vault-to-vault#connecting-with-an-upstream-managed-file-transfer-instance)
 

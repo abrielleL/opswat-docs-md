@@ -2,7 +2,7 @@
 
 # Step-by-step guide
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 1. Open the Symantec Blue Coat ProxySG management console using a web browser (default URL: http://<bluecoat proxy IP>:8082/)
 2. When prompted, enter your user name and password and click "Ok".

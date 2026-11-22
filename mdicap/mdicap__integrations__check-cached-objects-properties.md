@@ -2,7 +2,7 @@
 
 # Check cached objects properties
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 This article describes how to check if an object is cached by Symantec Blue Coat ProxySG and its current properties.
 

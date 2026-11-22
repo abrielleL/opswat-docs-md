@@ -2,157 +2,211 @@
 
 # On-Premise Release Notes
 
-View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## My OPSWAT Central Management v10.8.26110.2845
 
-| **Version** | v10.7.26092 |
-| --- | --- |
-| **Release date** | October 6, 2026 |
-| **Release Summary** | This release strengthens **file security** with the new **File Audit Trail**, which traces a file's full journey in a single view. **Endpoint & Patch Management** expands patch control with **Dell and Lenovo driver & firmware updates**, **pre- and post-deployment automation scripts**, and **real-time performance monitoring & alerting**. Remote product management and visibility extend with quarantined file retrieval for MetaDefender Core, reboot and shutdown for MetaDefender Industrial Firewall devices, and installed applications visibility for MetaDefender Drive scanned-host records. |
+| **Version** | v10.8.26110.2845 |
+| ---- | ---- |
+| **Release date** | Nov 20, 2026 |
 
-## [Peripheral Media Protection Solution](/docs/cm/release-notes/on-prem-latest-release-notes#peripheral-media-protection-solution)
+Enhancements **Security Update: Nginx Upgraded to 1.31.9 to Address Critical Vulnerability**
 
-New Features **Auto-Enrollment for MetaDefender Kiosk in On-Premises Deployments**
+The Nginx web server has been upgraded to version 1.31.9, resolving critical security vulnerability CVE-2026-123007 and enforces stricter request validation to protect your deployment from potential exploits.
 
-MetaDefender Kiosk devices can now discover My OPSWAT Central Management On-premises server on the local network and send enrollment request automatically. Administrators can centrally review and approve requests, replacing manual one-by-one configuration.
+| **Version** | **v10.8.26110** |
+| ---- | ---- |
+| **Release date** | Nov 17, 2026 |
+| **Release Summary** | This release expands centralized management capabilities across supported products. **Secure Access **now supports fully air-gapped SDP deployments, while **Endpoint Security** adds application allowlisting and performance monitoring for macOS and Linux. **Peripheral Media Protection **introduces backup & restore for MetaDefender Kiosk, alongside remote reboot & shutdown controls. **Additional improvements** include centralized upgrade management, encrypted backups, and automated file transfer job management. |
 
-See [Enroll MetaDefender Kiosk](/docs/cm/product-management/metadefender-kiosk) for detailed instructions.
+### **Peripheral Media Protection Solution**
 
-New Features **Support Automatic Direction-Based Workflow for Peripheral Media Protection**
+New Features **Back Up and Restore for MetaDefender Kiosk Configuration**
 
-Peripheral Media Protection now automatically applies the right scan workflow based on file transfer direction.
+Administrators can now back up and restore MetaDefender Kiosk configurations, with password-protected backups, manual or scheduled jobs, and centralized view into job records.
 
-New Features **One-Time PIN Verification for Restricted MetaDefender Kiosk Workflows**
+Refer to [Backup & Restore for MetaDefender Kiosk](https://www.opswat.com/docs/cm/product-management/backup---restore-for-metadefender-kiosk) guideline for details.
 
-Administrators can generate one-time PINs that grant end users temporary access to restricted MetaDefender Kiosk workflows.
+![](https://uploads.developerhub.io/prod/97qW/b32mw07bhubngm3259yp0ahf66bz61674o93rlfmzvz97skcn9f5f132fui3vb8a.png)
 
-New Features **On-Access File Scanning Protection Mode Configuration for macOS**
+New Features **Remote Reboot and Shut Down for MetaDefender Kiosk**
 
-Administrators can now configure On-Access File Scanning for macOS endpoints within Peripheral Media Protection policies.
+Remote reboot and shutdown are now supported for enrolled MetaDefender Kiosk devices **version 4.8.7 or later**.
 
-Enhancements **Added "Allowed and Blocked Media by Group" Widgets to Peripheral Media Protection Dashboard**
+Refer to [Remote Reboot and Shutdown](https://www.opswat.com/docs/cm/product-management/remote-reboot-and-shutdown) guidelines for more details.
 
-The Peripheral Media Protection dashboard now includes dedicated widgets showing allowed and blocked removable media activity grouped by device groups.
+![](https://uploads.developerhub.io/prod/97qW/w4vhe40ejt0gqy43lfzmcy6jioux3s7qj56ewz39i8mgos62088jpa1i4zqls7bv.png)
 
-Refer to [Peripheral Media Protection](/docs/cm/product-management/peripheral-media-protection) for more details.
+Enhancements **Support Additional Filters for Peripheral Media Protection Dashboard**
 
-## [Endpoint Security Solution](/docs/cm/release-notes/on-prem-latest-release-notes#endpoint-security-solution)
+The Peripheral Media Protection dashboard now supports filtering by device type, location, device, and user, with additional option to exclude specific groups from the results.
 
-New Features **Patch Management Now Supports Driver and Firmware Updates**
+Refer to [Peripheral Media Protection](https://www.opswat.com/docs/cm/product-management/peripheral-media-protection) guidelines for detailed instruction.
 
-Administrators can now detect outdated drivers, firmware, and BIOS on Dell and Lenovo Windows devices and deploy OEM vendor updates directly through on-demand, policy, and ring deployments.
+![](https://uploads.developerhub.io/prod/97qW/65nu6q0dc5ozrlg5glnh5xn5sfmgvpkh30q65oaybinnkcbet8maknlpjffesj26.png)
 
-Refer to [Driver & Firmware Updates](/docs/cm/patch-management/driver---firmware-settings-on-endpoint) for more details.
+### **Endpoint Security Solution**
 
-New Features **Automation Scripts Now Available for On-Demand Patch Deployments**
+New Features** Approve Temporary End-User Access with Challenge-Response Codes**
 
-Administrators can execute custom pre- and post-deployment scripts during on-demand updates (e.g., stopping services, taking backups, or verifying application health post-install).
+Administrators can now generate challenge-response codes for MetaDefender Endpoint and MetaDefender Endpoint Validation to approve temporary access requests from end users.
 
-Refer to [Deployment Scripts](/docs/cm/patch-management/deployment-scripts) guidelines.
+![](https://uploads.developerhub.io/prod/97qW/8x9ec1qtsa1ziu0nvur56fklagktkqcxcr7ybnwtejxdk038y50e5ty76keo4x14.png)
 
-New Features **Real-Time Endpoint Performance Monitoring and Incident Alerts**
+New Features** Control Application Allowlisting and Blocklisting for Managed MetaDefender Endpoint**
 
-Administrators can monitor critical endpoint metrics from a single view, including CPU, memory, disk, and network usage, with configurable thresholds and automated alerts for high resource usage.
+Administrators can now configure application allowlists and blocklists for managed MetaDefender Endpoint devices, defining which applications are permitted or blocked from running.
 
-Refer to [Endpoint Performance Monitoring](/docs/cm/endpoint-security-solution/endpoint-performance-monitoring) guidelines for more details.
+![](https://uploads.developerhub.io/prod/97qW/133y51xhlobk558ttjuemujfkq6juu0e4rwd5cq73wmwuesiiuul0zqr694nnp58.png)
 
-Enhancements **End-to-End Backup & Restore Workflow**
+New Features **View Security Score for MetaDefender Endpoint**
 
-Backup & Restore now supports end-to-end recovery process, with integrated restore capabilities, real-time dashboard to monitor backup status and system health, plus automated reports and configurable notifications to stay informed and respond faster.
+A new Security Score data table helps administrators review score information for enrolled MetaDefender Endpoint.
 
-Refer to [Backup & Restore](/docs/cm/endpoint-security-solution/backup---restore) guidelines for more details
+![](https://uploads.developerhub.io/prod/97qW/yektom9bd4fdquvdum1x1r18nc48xz34yxrivokl8x44xmkl4au82jrxvs6y4g9z.png)
 
-Note This feature is available only through on-demand configuration. Please contact [OPSWAT Support](https://www.opswat.com/support/contact-support) for assistance.
+Enhancements **View Third-Party Applications by Installed or Not Installed Status**
 
-**Enhancements Hide Unapproved Patches and Block Automatic Updates on MetaDefender Endpoint**
+Administrators can now view and filter third-party applications by installed or not installed status. Available on MetaDefender Endpoint Windows persistent agent version 7.6.2612 or later.
 
-A new setting allows admins to hide unapproved patches and prevent them from being updated automatically on MetaDefender Endpoint.
+View [Third Party Applications](https://www.opswat.com/docs/cm/patch-management/patch-centric-third-party-applications) for more details.
 
-To enable this feature, go to: Settings > Global > Endpoint Clients > Select **Only display allowed updates on MetaDefender Endpoint user interface.**
+![](https://uploads.developerhub.io/prod/97qW/n7f7rlebjdmrn1mq443ons3um3nsvb98r1i0zbo9sie9e2q5kwiizl3i4wmadr4h.png)
 
-Enhancements **Force-Close Microsoft Applications During OS Missing Patches Deployments**
+Enhancements** Manage Patch Settings and Events in One Place**
 
-Offline Patch Settings now include an option to force-close running Microsoft applications before OS updates are installed.
+Administrators can now access patch settings and related events directly within the Patch Management solution, bringing patch configuration and event monitoring together in one place.
 
-Enhancements **Cache Nodes Now Download and Distribute Specific Application Versions**
+![](https://uploads.developerhub.io/prod/97qW/9p9v1t2up8xt59c59c7mzgrmiaystmnsglzpgkuqawqwm6yuumgxk5062waxtqqq.png)
 
-Cache nodes can now keep every application version, enabling Endpoint to get the required version locally rather than downloading it from the main server.
+Enhancements** Temporarily Exempt Devices from Compliance Checks**
 
-Enhancement**Handle Ubuntu Phased Updates in Patch Compliance**
+Administrators can now exempt individual devices or device groups from compliance checks for a timed period.
 
-Patch compliance reporting now accounts for Ubuntu phased updates, eliminating false-positive non-compliance alerts for devices not yet eligible for phased rollouts.
+![](https://uploads.developerhub.io/prod/97qW/slhe9zgcb90rfxemej6bi2lnjzqit87mfysrkbpm3bchbzxpbbb855t5uujkk4an.png)
 
-## [Portable Malware Scanning](/docs/cm/release-notes/on-prem-latest-release-notes#portable-malware-scanning-)
+Enhancements** Support** **Encrypt MetaDefender Endpoint Backups with a Passphrase**
 
-New Features **Installed Applications Visibility on MetaDefender Drive Scanned Hosts**
+Admins can turn on passphrase encryption when creating a backup job, adding a protection requirement when restoring backup data. Requires MetaDefender Endpoint **version 7.6.2611 or later**.
 
-Scanned host records now list the installed applications detected by MetaDefender Drive, including application name, version, publisher, scope, install date, install location, and size.
+Refer to [Backup & Restore for MetaDefender Endpoint](https://www.opswat.com/docs/cm/endpoint-security-solution/backup---restore) guidelines for more details.
 
-New Features **Show License Details for MetaDefender Drive**
+![](https://uploads.developerhub.io/prod/97qW/g6gcdv1tjjn68gw2ti7s05jr8yxg27svwd9znpoz8y256ipmng5qbxhf5nvxeh94.png)
 
-Administrators can now view license details for managed MetaDefender Drive devices, including license status and expiration dates.
+Enhancements **Recognize Windows 10 with Extended Security Updates as a Supported OS**
 
-Enhancements **Display System Information for MetaDefender Drive Scanned Hosts**
+Windows 10 22H2 devices covered by Extended Security Updates are now correctly recognized as running a supported operating system.
 
-Administrators can now view detailed system information for scanned hosts, including BIOS details, CPU architecture, storage capacity, operating system specifications, and more.
+![](https://uploads.developerhub.io/prod/97qW/m90fb2ryom2r1inwogeem864gdrqoe0pgwzibc5j4wxdf30up2boahljnruqys8x.png)
 
-## [OT and Cyber-Physical Systems Solution](/docs/cm/release-notes/on-prem-latest-release-notes#ot-and-cyber-physical-systems-solution)
+Enhancements **Display Detected Applications in MetaDefender Endpoint Device Details**
 
-New Features **Remote Reboot and Shut Down for MetaDefender Industrial Firewall**
+Device Details page now displays both managed and unmanaged third-party applications detected on Windows endpoints.
 
-Administrators can remotely reboot or shut down MetaDefender Industrial Firewall devices from the console, eliminating the need for manual, on-site intervention.
+![](https://uploads.developerhub.io/prod/97qW/359sgdy9aba3bmbt3qmvfzagf9k8d36mb4i0l5vchzf73q799955nqncpczscyuq.png)
 
-**Please Note**: This feature is supported for MetaDefender Industrial Firewall version 3.5.1 or later.
+Enhancements **Endpoint Performance Monitoring Now Supports macOS and Linux**
 
-New Features **Support Syslog Forwarder for MetaDefender Industrial Firewall**
+Endpoint performance monitoring now extends to devices running the MetaDefender Endpoint agent on macOS and Linux.
 
-Added Syslog Profile support for MetaDefender Industrial Firewall, enabling administrators to centrally configure and apply syslog forwarding settings across multiple firewall devices.
+See [Endpoint Performance Monitoring](https://www.opswat.com/docs/cm/endpoint-security-solution/endpoint-performance-monitoring) for more details.
 
-Refer to [Syslog Profile](/docs/cm/integrations/syslog-profile) guidelines for detailed instruction.
+![](https://uploads.developerhub.io/prod/97qW/npffz7mf04gh3qwef6reuz1iqo2f26sfgv9ekx80yf1ejr29ylcm91rc6tstrvkp.png)
 
-**Enhancements Support Toolkit Upgrade for MetaDefender Industrial Firewall**
+Enhancements**Display Only Patches Available in the Local Patch Repository**
 
-Support OPSWAT Industrial OS platform and Toolkit upgrade for MetaDefender Industrial Firewall. Refer to [Update Application](/docs/cm/product-management/update-application) guideline for more details.
+Administrators can configure to view only patches available from the Local Patch Repository, so every listed patch is ready to deploy without checking upload status.
 
-## [File Security Solution](/docs/cm/release-notes/on-prem-latest-release-notes#file-security-solution)
+![](https://uploads.developerhub.io/prod/97qW/tnhg72evoph4plruc8l2v1vae9tdf7gqmnl1dd8s68707io9amfoawjtpcbvao5p.png)
 
-New Features **End-to-End File Audit Trail**
+Enhancements **Faster Server Response for Large MetaDefender Endpoint Deployments**
 
-File Audit Trail gives administrators one centralized view of a file's full journey, displaying each product that handled it, detailing scan outcome, processing timestamps, and file alterations.
+Reduce response times for On-Premises deployments with a large number of managed endpoints.
 
-Refer to [File Audit Trail](/docs/cm/file-security-solution/File-Audit-Trail) guidelines for more details.
+### **Portable Malware Scanning**
 
-New Features **Retrieve Quarantine Files from MetaDefender Core**
+New Features **Track** **Quarantine Files in MetaDefender Drive In-Session Scan Reports**
 
-Administrators can now view and remotely retrieve quarantined files from MetaDefender Core from centralized console. Administrators can also mark files as protected to prevent automatic cleanup.
+Track and export quarantined file details directly from MetaDefender Drive in-session scan reports. 
 
-See [Quarantined Files](/docs/cm/file-security-solution/quarantined-files) guidelines for detailed instructions.
+![](https://uploads.developerhub.io/prod/97qW/2j1sjfg1krpyosyi8udwglhi31wxw4yxxbsqh1694s274zy9bwajio3c8b46cwvo.png)
 
-New Features **Centralized Password Storage Management for MetaDefender Core**
+### **File Security Solution**
 
-Password Storage entries can now be created, edited, and deleted in one central place and synced out to every managed MetaDefender Core instance.
+New Features ** Centrally Manage MetaDefender Managed File Transfer Automated Jobs **
 
-Refer to [Password Storage](/docs/cm/file-security-solution/password-storage) for detailed instruction.
+Administrators can now configure, trigger, and review MetaDefender Managed File Transfer automated jobs from one console.
 
-## [Additional Features](/docs/cm/release-notes/on-prem-latest-release-notes#additional-features)
+Refer to [MetaDefender Managed File Transfer Automation Jobs](https://www.opswat.com/docs/cm/product-management/metadefender-managed-file-transfer-automation-jobs) guidelines for more details.
 
-New Features **Centralized System Usage Monitoring and Alerting**
+![](https://uploads.developerhub.io/prod/97qW/osnjrhaebkwvodz4w9sxwl2d94gjqgd2qgm6aeybmqeqrp7uw8yuowptnitxmn5x.png)
 
-Monitor My OPSWAT Central Management On-Premises system usage in one place, including CPU, memory, and disk utilization, with custom thresholds configuration and automated email alerts for resource issues.
+New Features **Remote Application Upgrade for MetaDefender ICAP Server**
 
-Refer to [System Usage](/docs/cm/configurations/system-usage) guidelines for more details.
+Remotely roll out software upgrades for MetaDefender ICAP Server across individual device and group, reducing manual maintenance effort.
 
-New Features **Configure File Storage Limits**
+Refer to [Remote Application Update](https://www.opswat.com/docs/cm/product-management/application-update-overview) guidelines for more details.
 
-Admins can configure custom limits for system-generated files, defining maximum file sizes, file counts per owner, and accepted file types.
+![](https://uploads.developerhub.io/prod/97qW/61fvfnbi4xpf248abonc14i6zsl5rwk0wyd4u9gr2ga8oyzvl9uzrkp8c1c3l9sf.png)
 
-New Features **Redesigned Enroll Product Page**
+Enhancements** Support Additional Filters for File Security Dashboard**
 
-Enroll Product page has been redesigned to provide a single-glance view of the onboarding path, clearly separating standalone product setup from endpoint device deployment.
+**Admins can view **scanned file counts alongside object counts on the MetaDefender Core dashboard, and filter processing metrics by individual instance on both MetaDefender Core and MetaDefender ICAP Server dashboards.
 
-New Features **Display Map and Location Details**
+![](https://uploads.developerhub.io/prod/97qW/ti5ifcyvdhcnybsfa6wqbtkqaq7agx423snsv08luqhro8ti5wstpjanenqxw3ed.png)
 
-Administrators can view device location details on an interactive map and access the location directly in Google Maps from the device marker.
+Enhancements** Display New Engine Results in File Processing History**
 
-Enhancements **Set Active Directory as Default Login Method**
+File processing history details now display two new engine results:
 
-Active Directory can now be selected as the default login method, saving users from manually switching directories for every login.
+1. **OPSWAT Alin AI Deflection**: show verdict banner and scan details in a dedicated tab.
+
+![](https://uploads.developerhub.io/prod/97qW/nyva7dry38n8vv2hng0v12t9t5xeyb4gfch6mpy6lcnikuz6fhnwkkdmo494d9fd.png)
+
+2. **OPSWAT Predictive Alin AI**: show verdict banner with scan results available under the Metascan™ tab.
+
+![](https://uploads.developerhub.io/prod/97qW/7k3rdlrj0qr7e1is34ih8dzhaffol86bzfexh5v3kpr2lo6euysmow0hgi6bbent.png)
+
+Bug Fixes **Correct “Last Updated” Sorting on MetaDefender Core Policy List**
+
+Fixed an issue where sorting the “Last Updated” column on the MetaDefender Core policy list ordered policies by creation date instead of last updated date.
+
+Bug Fixes **Correct Engine Download Links After Switching to Internet Mode**
+
+Resolved an issue where switching your module update source from Manual/Folder to Internet mode caused newly downloaded engines to use incorrect URLs.
+
+### Secure Access Solution
+
+New Features **Fully on-premises SDP Support**
+
+Integrate with on-premises SDP Controllers to centrally manage SDP gateways, access pools, and user policies in fully air-gapped environments.
+
+![](https://uploads.developerhub.io/prod/97qW/77xvb1kgbesea8k6cblelbjygr987j2omrt7li3ur96m45y4dj8ijidgfyv7m244.png)
+
+New Features **IPv6 Support for Protected Applications**
+
+SDP now supports secure access to IPv6-only protected applications. Administrators can define protected applications by IPv6 address or prefix, and configure IPv6 on the gateway to reach them.
+
+Refer to [Add Protected Applications](https://www.opswat.com/docs/cm/secure-access-solution/add-protected-applications) guidelines for more details.
+
+![](https://uploads.developerhub.io/prod/97qW/7fj1celorc3am5hjamzv9zf6unri6ch8xi8empjuvkzlhup8y54riochw42sxdm2.png)
+
+### **Additional Features**
+
+New Features** Built-in Syslog Server and Proxy Support**
+
+My OPSWAT Central Management now collects logs from managed products over UDP, TCP, or TLS and forwards them to external Syslog servers through a single profile.
+
+![](https://uploads.developerhub.io/prod/97qW/vv43n6x7m8s2i0jo3d3fjtsedlt0j2pcbl7co0bf5j1uth72adeszddrn2dq9cts.png)
+
+Enhancements **Redesigned Platform Interface**
+
+The platform interface has been revamped to provide administrators with streamlined navigation and a consistent visual experience across product consoles.
+
+![](https://uploads.developerhub.io/prod/97qW/r7vs147dn5b4ur7itdqti8xwd4oowwahtavtmzc6d8icr63skpsdgadevenw9jsv.png)
+
+Enhancements** Improved Security User Management Module**
+
+The Security User Management module now includes improvements to account handling, permission management, and system stability for more secure and reliable user administration.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

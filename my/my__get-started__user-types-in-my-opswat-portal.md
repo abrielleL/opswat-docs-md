@@ -7,7 +7,7 @@ My OPSWAT Portal supports two user types: **Personal User** and **Organization U
 - **Personal User**: You’re not yet tied to any organization.
 - **Organization User**: You belong to at least one organization, which gain access to extra, organization-level features.
 
-While all users can access basic features, joining an organization unlocks additional capabilities essential for managing licenses, role-based access control, and more.
+While all users can access basic features, joining an organization unlocks additional capabilities available to OPSWAT customers and partners, including license management, hardware order tracking, role-based access control, and more.
 
 ### Personal User
 
@@ -21,6 +21,7 @@ As a Personal User, you can access core, self-service features without belonging
 - [Access to Cloud Services](https://www.opswat.com/docs/my/others/cloud-services) - Access and evaluate OPSWAT's cloud services.​
 - [Product Feedback](https://www.opswat.com/docs/my/others/feedback) - Leave your feedbacks on OPSWAT's products and services you're using.
 - [Report False Detection](https://www.opswat.com/docs/my/support-services/report-false-detection) - Report files you feel have been wrongly flagged as malicious by an OPSWAT Product.
+- [Trust Center](https://www.opswat.com/docs/my/trust-center/trust-center)  - Access OPSWAT security and trust info.
 
 ### How to Check Organization Status
 
@@ -42,15 +43,18 @@ As a Personal User, you can access core, self-service features without belonging
 
 Once you belong to at least one organization (and have the proper role permissions), you get everything a Personal User sees—plus:
 
-- [My Organization - General Information](https://www.opswat.com/docs/my/my-organization/general-information) - Configure your organization’s basic settings and approved domains.
-- [My Organization - Users and Roles](https://www.opswat.com/docs/my/my-organization/users-and-roles) - Invite users, assign roles, and control access via RBAC.
-- [My Organization - Security](https://www.opswat.com/docs/my/my-organization/security) - Configure organization-level security.
+- [My Organization ](https://www.opswat.com/docs/my/my-organization/general-information) - Manage users and roles, configure organization-level settings.
 - [Support (Organization-wide)](https://www.opswat.com/docs/my/support-services/support-services) - View organization's support benefits, including: Response time ETA, Support level, Your OPSWAT team, and more.
 - [License Management](https://www.opswat.com/docs/my/license-management/license-management) - See and manage your organization’s licenses.
+- [Hardware Inventory](https://www.opswat.com/docs/my/hardware-orders/hardware-orders) - Track hardware orders, manage inventory and submit RMA.
 
 > **Next steps**
 >
-> - If you’re a Personal User wanting organization-level features, ask your Admin to invite you or set up an approved email domain so you can request to join. Further reading at
+> - If you’re a Personal User wanting organization-level features, ask your Admin to invite you or set up an approved email domain so you can request to join. Further reading at [How to Request Access](https://www.opswat.com/docs/my/my-information/organizations#how-to-request-access)
 > - If you’re an Organization User missing a tab, check your permissions or reach out to your Admin for access.
 
 If you need assistance joining an organization or have questions about user types, reach out to [OPSWAT support](https://my.opswat.com/support).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

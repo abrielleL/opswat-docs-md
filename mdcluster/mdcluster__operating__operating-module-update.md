@@ -1,8 +1,10 @@
 <!-- source: https://www.opswat.com/docs/mdcluster/operating/operating-module-update -->
 
-# Module update
+# Engine update
 
-This section will allow the system administrator to select one of three update modes offered by MetaDefender Cluster (MD Cluster).
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
+This section (**Settings** > **Engine Update**) will allow the system administrator to select one of three update modes offered by MetaDefender Cluster (MD Cluster).
 
 ### [Online](/docs/mdcluster/operating/operating-module-update#online)
 
@@ -16,6 +18,6 @@ Refer to [the steps](/docs/mdcluster/installation/md-cluster-module-update#offli
 
 ### [Local folder](/docs/mdcluster/operating/operating-module-update#local-folder)
 
-In this mode, the administrators need to input the path to a folder where module packages will be added. MD Cluster **Control Center** subsequently gathers the packages from there and starts the module update process.
+In this mode, the administrators need to input the path to a folder in `Pick up Updates From` where module packages will be added. MD Cluster **Control Center** subsequently gathers the packages from there and starts the module update process.
 
-`Delete files after import` option can be selected so that MD Cluster **Control Center** can wipe all packages upon success.
+`Delete Files After Import` option can be selected so that MD Cluster **Control Center** can wipe all packages upon success.

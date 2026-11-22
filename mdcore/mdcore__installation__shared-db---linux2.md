@@ -2,30 +2,32 @@
 
 # Shared DB - Linux
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Disclaimer
+
 These results should be viewed as guidelines and not performance guarantees, since there are many variables that affect performance (file set, network configurations, hardware characteristics, etc.). If throughput is important to your implementation, OPSWAT recommends site-specific benchmarking before implementing a production solution.
 
-## [Environment](/docs/mdcore/installation/shared-db---linux2#environment)
+## Environment
 
 Using AWS environment with the specification below:
 
-### [MetaDefender Core](/docs/mdcore/installation/shared-db---linux2#metadefender-core)
+### MetaDefender Core
 
 |  | OS | AWS instance type | vCPU | Memory (GB) | Network bandwidth (Gbps) | Disk type | Benchmark |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | MetaDefender Core #1 | Ubuntu 24.04 | c5a.8xlarge | 32 | 64 | Up to 10 | SSD | [Amazon EC2 c5a.8xlarge - Geekbench](https://browser.geekbench.com/v6/cpu/18663079) |
 | MetaDefender Core #2 | Ubuntu 24.04 | c5a.8xlarge | 32 | 64 | Up to 10 | SSD | [Amazon EC2 c5a.8xlarge - Geekbench](https://browser.geekbench.com/v6/cpu/18663079) |
 
-### [RDS](/docs/mdcore/installation/shared-db---linux2#rds)
+### RDS
 
 | OS | AWS instance type | vCPU | Memory (GB) | Network bandwidth (Gbps) | Disk type |
 | --- | --- | --- | --- | --- | --- |
 | Windows Server 2022 | db.m7i.4xlarge | 16 | 64 | Up to 10 | SSD |
 
-### [Deployment Model](/docs/mdcore/installation/shared-db---linux2#deployment-model)
+### Deployment Model
 
 Using a AWS Load Balancer to distribute files sent from the client tool to two (2) different MetaDefender Core servers applying Round Robin algorithm. With this algorithm, each MetaDefender Core server is supposed to receive same number of requests.
 
-### [Client tool](/docs/mdcore/installation/shared-db---linux2#client-tool)
+### Client tool
 
 A simple tool written in Python to collect files in a designated folder and submit requests to Load Balancer mentioned above.
 
@@ -65,7 +67,7 @@ return None, None, None
 | --- | --- | --- | --- | --- | --- |
 | CentOS 7 | c5.4xlarge | 16 | 32 | Up to 10 | SSD |
 
-## [Dataset](/docs/mdcore/installation/shared-db---linux2#dataset)
+## Dataset
 
 Detailed information of dataset below will be used for testing:
 
@@ -92,32 +94,32 @@ Detailed information of dataset below will be used for testing:
 | **Summary (compressed)** |  | 5000 | 7728.5 MB | 1.55 MB average file size |
 | **Summary (extracted)** |  | 5260 | 7759.5 MB | 1.48 MB average file size |
 
-## [Product Information](/docs/mdcore/installation/shared-db---linux2#product-information)
+## Product Information
 
-- Product versions:
+Product versions:
 
-  - MetaDefender Core version 5.22.0
-  - Engines:
+- MetaDefender Core version 5.23.0
+- Engines:
 
-    - Metascan 5: Ahnlab, Bitdefender, ClamAV, ESET, K7
-    - Metascan 10: Metascan 5 + Avira, Varist, IKARUS, Quick Heal, TACHYON
-    - Metascan 20: Metascan 10 + Lionic, CMC, CrowdStrike Falcon ML, Aurora, Trellix, Xcitium, RocketCyber, Sophos, Webroot SMD, Xvirus Anti-Malware
-    - Deep CDR: 8.0.3
-    - Proactive DLP: 3.4.1
-    - Archive: 8.0.3
-    - File type analysis: 8.0.3
-    - File-based vulnerability assessment: 4.57-236
-    - Adaptive Sandbox: 3.2.0
+  - Metascan 5: Ahnlab, Bitdefender, ClamAV, ESET, K7
+  - Metascan 10: Metascan 5 + Avira, Varist, IKARUS, Quick Heal, TACHYON
+  - Metascan 20: Metascan 10 + Lionic, CMC, CrowdStrike Falcon ML, Aurora, Trellix, Xcitium, RocketCyber, Sophos, Webroot SMD, Xvirus Anti-Malware
+  - Deep CDR: 8.1.1
+  - Proactive DLP: 3.4.2
+  - Archive: 8.1.1
+  - File type analysis: 8.1.1
+  - File-based vulnerability assessment: 4.3.0.0
+  - Adaptive Sandbox: 3.3.0
 
-## [MetaDefender Core settings](/docs/mdcore/installation/shared-db---linux2#metadefender-core-settings)
+## MetaDefender Core settings
 
-### [General settings](/docs/mdcore/installation/shared-db---linux2#general-settings)
+### General settings
 
 - Turn off data retention
 - Turn off engine update
 - Max file size: 99999999
 
-### [Archive extraction settings](/docs/mdcore/installation/shared-db---linux2#archive-extraction-settings)
+### Archive extraction settings
 
 - Max recursion level: 99999999
 - Max number of extracted files: 99999999
@@ -127,25 +129,25 @@ Detailed information of dataset below will be used for testing:
 
   - Extracted partially: true
 
-### [Metascan AV settings](/docs/mdcore/installation/shared-db---linux2#metascan-av-settings)
+### Metascan AV settings
 
 - Scan timeout: 10 minutes
 - Per engine scan timeout: 1 minutes
 
-### [Adaptive Sandbox](/docs/mdcore/installation/shared-db---linux2#adaptive-sandbox)
+### Adaptive Sandbox
 
 - Max file size: 18446744073709 MB (max)
 - Timeout: 86400 (max)
 
-## [Performance test results](/docs/mdcore/installation/shared-db---linux2#performance-test-results)
+## Performance test results
 
-### [MetaDefender Core with single engine (technology)](/docs/mdcore/installation/shared-db---linux2#metadefender-core-with-single-engine-technology)
+### MetaDefender Core with single engine (technology)
 
 **Summary metrics:**
 
 **System resource utilization:**
 
-### [MetaDefender Core with common engine packages](/docs/mdcore/installation/shared-db---linux2#metadefender-core-with-common-engine-packages)
+### MetaDefender Core with common engine packages
 
 **Summary metrics:**
 
@@ -165,4 +167,4 @@ Adding more Core servers to this model will increase more load on the shared dat
 
 Continuing to add more Core servers to this model may result in increased strain on the shared database. As such, it is crucial to ensure that the database is optimized to handle the additional load effectively. Users can consider adjusting default database settings of PostgresSQL to optimize for more data load if needed. Here is where we can adjust PostgresSQL database settings: <PostgreSQL install location\version>\data\postgresql.conf.
 
-Besides that, MD Core also supports a parameter (db_connection) for users to specify max connections that MD Core can handle, take a look at this guideline: [MetaDefender Configuration](/docs/mdcore/configuration/metadefender-configuration#internal).
+Besides that, MD Core also supports a parameter (db_connection) for users to specify max connections that MD Core can handle, take a look at this guideline: [MetaDefender Configuration](/configuration/metadefender-configuration#internal).

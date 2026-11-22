@@ -2,7 +2,36 @@
 
 # File Type Module release notes
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## [v8.1.3](/docs/mdcore/release-notes/file-type-module-release-notes#v813)
+
+Release date: 11/18/2026
+
+- Supported NITF and COMTRADE single-file format detection.
+- Added a configurable ZIP signature search range.
+- Improved Adobe Illustrator detection accuracy.
+- Improved detection performance for AEM, VTAR, and CRX files.
+- Fixed arbitrary data being detected as LZMA and blocked as failed to extract.
+
+## [v8.1.2](/docs/mdcore/release-notes/file-type-module-release-notes#v812)
+
+Release date: 11/4/2026
+
+- Supported NFO, CXS, and WDP detection.
+- Improved DBF detection accuracy with a new native analyzer.
+- Improved detection by Machine Learning:
+
+  - Reduced false-positive classification of plain text files as batch files.
+- Improved detection performance:
+
+  - Reduced detection time for files that no analyzer recognizes.
+  - Returned results earlier for WMF and ICO files.
+  - Skipped third-party detection when a native analyzer already has the best possible result.
+  - Ran custom detection rules independently, so a single custom rule no longer slows down every file.
+  - Limited how much data is read from large unrecognized files, preventing scan failures on very large files.
+- Supported the new AI policy license flag that keeps AI-backed features turned off for customers who are not permitted to use AI.
+- Fixed an engine crash when a file is removed while it is being detected.
+
 ## [v8.1.1](/docs/mdcore/release-notes/file-type-module-release-notes#v811)
 
 Release date: 10/14/2026

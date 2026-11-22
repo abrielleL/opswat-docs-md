@@ -2,7 +2,7 @@
 
 # Language
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 Under "Settings" → "Language", administrators can configure language (localization).
 
@@ -12,7 +12,7 @@ If most users require a non-English language, use this option to change the defa
 
 ## [Adding a Custom Language](/docs/mdmft/configuration/language#adding-a-custom-language)
 
-By default, MetaDefender Managed File Transfer includes *English*, *Japanese* and *French* languages. Administrators can download these language files and translate the texts to make a new language available in MetaDefender Managed File Transfer.
+By default, MetaDefender Managed File Transfer™ includes *English*, *Japanese,* *French* and *German* languages. Administrators can download these language files and translate the texts to make a new language available in MetaDefender® MFT.
 
 **Step-by-step Guide to Add a Custom Language**
 
@@ -38,9 +38,13 @@ Info
 
 The development team consistently adds or removes text with nearly every release due to new functionalities. Repeat the above translation process after each upgrade to ensure all texts are translated.
 
+**Note:** When you upgrade MetaDefender® MFT, the installer replaces the built-in language files (English, French, Japanese, and German) with the official versions. If you customized one of these languages, your custom version is overwritten. The installer keeps a copy of your previous version in the backup folder, so you can recover your translations from there.
+
+Custom languages you added in addition to the built-in ones are not affected.
+
 Follow these steps:
 
-1. After upgrading MetaDefender Managed File Transfer, select the language to update at *step 1***.**
+1. After upgrading MetaDefender Managed File Transfer™, select the language to update at *step 1***.**
 2. Select the same language at *step 2* and download it at *step 3***.**
 3. Translate texts still in English (new texts added by the development team).
 4. Upload the file after translating the new texts.

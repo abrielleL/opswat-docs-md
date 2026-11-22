@@ -24,11 +24,11 @@ Manage user access and permissions using Role-Based Access Control (RBAC). Invit
 
 👉 [Explore Users and Roles Management](https://www.opswat.com/docs/my/my-organization/users-and-roles)
 
-### 3. Security
+### 3. Settings
 
-Configure security settings to protect your organization's data.
+Configure your organization's settings, including Multi-Factor Authentication, data retention, AI Assistance and Unassigned license keys visible. This tab was previously named **Security**.
 
-👉 [Configure Security Settings](https://www.opswat.com/docs/my/my-organization/security)
+👉 [Configure Settings](https://www.opswat.com/docs/my/my-organization/security)
 
 ### 4. Critical Alert Users
 
@@ -47,3 +47,13 @@ Track and review a log of significant events within your organization, such as u
 Easily view and switch between all organizations you're joining.
 
 👉 [View Organization List](https://www.opswat.com/docs/my/my-organization/organization-list)
+
+### 7. Notifications
+
+Keep a list of default support case watchers, who are added to every new support case of your organization submitted in My OPSWAT Portal.
+
+👉 [Manage Default Support Case Watchers](https://www.opswat.com/docs/my/my-organization/notifications)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

@@ -2,7 +2,7 @@
 
 # FortiGate
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 This documentation is based on FortiGate 5.4.3 documentation using web-based manager and CLI. For different version of FortiGate or missing information, refer to FortiGate user guides.
 

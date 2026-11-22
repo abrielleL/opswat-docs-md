@@ -2,7 +2,7 @@
 
 # HTTP Header Parsing
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 In this page, we document HTTP header that MetaDefender ICAP Server is using for logging and scanning.
 

@@ -4,7 +4,7 @@
 
 # Update Downloader
 
-#### v3.6.0 [Latest]
+#### v3.6.1 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mddownloader/release-notes)
 

@@ -2,7 +2,9 @@
 
 # Services
 
-This section will allow the user to add all necessary services for MetaDefender Cluster to fully function.
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
+This section (**Library** > **Services**) will allow the user to add all necessary services for MetaDefender Cluster to fully function. To add a connection, click the **+** button on the row of the service type and fill out the **Add Service** panel.
 
 ### [Data Lake and Data Warehouse](/docs/mdcluster/operating/md-cluster-operating-services#data-lake-and-data-warehouse)
 
@@ -40,12 +42,12 @@ Add the File Storage server in this section. Fill out all required fields. If Hi
 
 ### [File Storage Settings](/docs/mdcluster/operating/md-cluster-operating-services#file-storage-settings)
 
-Values found in the File Storage Settings can be left in its default settings. However, when configuring High Availability for File Storage. Ensure that the Minimum replica and Maximum replica has been configured correctly. For more information on High Availability for File Storage, click [here](/docs/mdcluster/configurations/file-storage-ha).
+To open the File Storage Settings, click the gear (**Settings**) button on the **File Storage** row. Values found in the File Storage Settings can be left in its default settings. However, when configuring High Availability for File Storage. Ensure that the Minimum replica and Maximum replica has been configured correctly. For more information on High Availability for File Storage, click [here](/docs/mdcluster/configurations/file-storage-ha).
 
-- Min replica: The minimum number of data copies that must be written for the operation to succeed.
-- Max replica: The maximum of data copies stored across the system.
-- Clean up range: The number of days, weeks or months until clean up of files that are sanitized, watermarked files and files processed by Proactive DLP.
-- Data protection at rest: The protection mechanism is applied to the files stored in File Storage. By default, all files are salted before being they are saved to disk.
+- Min Replica: The minimum number of data copies that must be written for the operation to succeed.
+- Max Replica: The maximum of data copies stored across the system.
+- Clean up Range: The number of days, weeks or months until clean up of files that are sanitized, watermarked files and files processed by Proactive DLP.
+- Data Protection at Rest: The protection mechanism is applied to the files stored in File Storage. By default, all files are salted before being they are saved to disk.
 
 ### [Import Services](/docs/mdcluster/operating/md-cluster-operating-services#import-services)
 
@@ -58,8 +60,8 @@ To import services:
 
 1. On the **Services** page, click **Import Services** in the upper-right corner.
 
-2. In the **Import Services** dialog, click **Download YAML Template** to download a sample file. Update the file with the connection details for the service types you want to import, and remove any service type sections that you do not want to import.
+2. In the **Import Services** dialog, click **Download YML Template** to download a sample file. Update the file with the connection details for the service types you want to import, and remove any service type sections that you do not want to import.
 
-3. Drag the completed YAML file into the upload area, or click **Browse** to select the file from your computer.
+3. Drag the completed YAML file into the upload area, or click the upload area to browse and select the file from your computer.
 
 4. Click **Import** to apply the new service connections.

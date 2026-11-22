@@ -2,53 +2,49 @@
 
 # SAML SSO
 
-My OPSWAT Central Mangement integrates with a third-party Single Sign-on Service (SSO), enabling Administrators to configure end-user authentication via multiple Identity Providers (IdP).
+My OPSWAT Central Management integrates with a third-party SAML Single Sign-On (SSO) service, enabling Administrators to authenticate NAC end users through their own Identity Provider (IdP).
 
 ## How to configure on My OPSWAT Central Management console
 
 ### Setup SSO - End User Authentication
 
-To integrate **My OPSWAT Central Mangement** with your own SSO service,
+1. Log into the **My OPSWAT Central Management** console with admin permissions
+2. Navigate to RADIUS NAC > Captive Portal > SSO
+3. Copy the ACS URL and Entity ID provided by NAC. You will need them to configure the Identity Provider
+4. Click the **Choose File** button to import the IdP metadata file you got from the Identity Provider
+5. Enter an IdP Name. This is for your reference
+6. Click the **Save** button
 
-1. Log into the **My OPSWAT Central Mangement** console with admin permissions
-2. Navigate to User Management > SSO > End User Authentication
-3. On the Console tab, enable "Enable Single Sign On"
-4. Enter an IdP Name. This is for your reference
-5. Click the **Choose File** button to upload an IdP X.509 certificate .pem file that you got from the Identity Provider.
-6. Enter Issuer you got earlier from the identity provider
-7. Enter the IdP SSO URL you got earlier from the identity provider
-8. Enter the IdP Log out URL and Error URL you got earlier from the identity provider if any
-9. Click the **Save** button.
+## How to configure on Okta
 
-You can find detailed setup guideline for some identity providers below:
+1. On the Okta SAML application, select General > Edit SAML Settings
+2. Check "Use this for Recipient URL and Destination URL"
+3. Fill Single sign-on URL with the My OPSWAT Central Management ACS URL
+4. Fill Audience URI (SP Entity ID) with the My OPSWAT Central Management Entity ID
+5. Set Default RelayState to **source=agent**
+6. Configure attribute mapping:
+   1. On the SAML application, select the Sign On tab
+   2. Scroll down to the Attribute statements section
+   3. Click **Add Expression** and map the needed attributes. For example, if an Okta user has the profile attribute Organization = OPSWAT, map it to return the user's organization value
+   4. To get the Okta user's group attributes (group name, group description), add them the same way
+7. On the Assignments tab, assign the users or groups who can sign in
+8. On the Sign On tab, download the IdP metadata file and import it into My OPSWAT Central Management
 
-[Setup SSO with Okta](https://docs.opswat.com/macloud-sdp/secure-access/provision-users-through-your-okta)
+## Configure Access Rules
 
-[Setup SSO with Microsoft Azure](https://docs.opswat.com/macloud-sdp/secure-access/provision-users-through-your-microsoft-azure)
+1. Navigate to RADIUS NAC > Rules and click **Add a new rule**
+2. Set up a rule using the SSO user attributes mapped above as conditions (ex: Organization = OPSWAT, or a group name)
+3. Select the access to grant, then click the **Save** button
 
-[Setup SSO with JumpCloud](https://docs.opswat.com/macloud-sdp/secure-access/provision-users-through-your-jumpcloud)
-
-### Configure Access Rules
-
-To configure Access Rules for Network Vendors that support DNAT (ex: Aruba), perform the below steps:
-
-1. On the **Access Profiles** tab, create an Access Profile for Captive Portal
-2. On **Aruba** dropdown, declare a value (ex: **ORG_B_2024RDR**) for Aruba-User-Role attributes
-
-![](https://uploads.developerhub.io/prod/97qW/n1myl33na2742509ih56up343wucn1c8e6sthav4g6vrfr0jaga4uevs4bnew8vc.png)
-
-3. Set up a rule for BYOD, Guest devices using devices’ authentication status condition
-
-## How to configure on Aruba
-
-1. On the Network Vendor (ex: Aruba) console, create an ACL (Network Access Control List) to forward traffic to your Captive portal server.
-
-![](https://uploads.developerhub.io/prod/97qW/y6y9nv4ch0bxqwnyan5he1hj601v4n4fduyjmu4g6yjtfvttwdahyxgujbb0pmio.png)
+For example, set up a rule that requires MFA for devices whose users sign in via SAML SSO.
 
 **How to verify**:
 
-1. Using a test device & Connect to the Network
-2. If the Device's authentication status is **Unauthenticated** via the authentication method **SAML SSO,** it will match the **Unauthenticated Device Rule** above and the user will be redirected to the Captive Portal pages
-3. Grant access using Single-sign options
-4. After the authorization flow, the device should be switched to the correct VLAN
-5. Confirm with Admin using RADIUS Events
+1. Using a test device, connect to the network
+2. Sign in using the Single Sign-On option with an assigned Okta user
+3. After the authorization flow, the device should get the access set by the matching rule
+4. Confirm with Admin using RADIUS Events
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

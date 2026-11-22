@@ -209,6 +209,11 @@ Endpoints[POST/admin/engine/{engineId}/pin](/docs/mdcore/metadefender-core#engin
 Health check and statistics about MetaDefender Core usage.
 
 Endpoints[GET/admin/stat/server](/docs/mdcore/metadefender-core#getserverstats) [GET/version](/docs/mdcore/metadefender-core#productversion) [GET/stat/engines](/docs/mdcore/metadefender-core#enginesstatus) [GET/stat/nodes](/docs/mdcore/metadefender-core#nodesstatus) [GET/stat/activeperformance](/docs/mdcore/metadefender-core#activeperformance) [GET/stat/user/totalprocess](/docs/mdcore/metadefender-core#getusertotalprocess) [GET/readyz](/docs/mdcore/metadefender-core#healthcheck) Show 
+## Supportpackage
+
+Generate, list, download and delete support packages. Will require admin apikey.
+
+Endpoints[GET/admin/supportpackage](/docs/mdcore/metadefender-core#getsupportpackages) [GET/admin/supportpackage/generate](/docs/mdcore/metadefender-core#generatesupportpackage) [GET/admin/supportpackage/{id}](/docs/mdcore/metadefender-core#downloadsupportpackage) [DELETE/admin/supportpackage/{id}](/docs/mdcore/metadefender-core#deletesupportpackage) Show 
 ## Management
 
 Endpoints[POST/admin/update/folder](/docs/mdcore/metadefender-core#postforce-update-folder-trigger) [PUT/pincode](/docs/mdcore/metadefender-core#updatepincode) [HEAD/pincode](/docs/mdcore/metadefender-core#checkpincodeexists) [POST/admin/pincode/validate](/docs/mdcore/metadefender-core#validatepincode) Show 

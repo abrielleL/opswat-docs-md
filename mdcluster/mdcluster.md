@@ -4,7 +4,7 @@
 
 # Cluster
 
-#### v2.10.0 [Latest]
+#### v2.11.1 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mdcluster/release-notes)
 

@@ -2,6 +2,8 @@
 
 # Docker image published on OPSWAT Docker Hub
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Info
+
 OPSWAT publish all official **public** docker images on Docker Hub:
 
 `opswat/metadefendercore-<os-type>:<version>`
@@ -20,7 +22,7 @@ More information:
 
 <https://hub.docker.com/r/opswat/metadefendercore-rocky-nonroot>
 
-## [Pull from the OPSWAT Docker Hub repository](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#pull-from-the-opswat-docker-hub-repository)
+## Pull from the OPSWAT Docker Hub repository
 
 pull imageCopydocker pull <repository>/metadefendercore-<platform>[:<version>]
 
@@ -31,7 +33,10 @@ pull imageCopydocker pull <repository>/metadefendercore-<platform>[:<version>]
 Example:
 
 pull debianCopydocker pull opswat/metadefendercore-debian:latest
-## [Run MetaDefender Core Docker image](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#run-metadefender-core-docker-image)
+
+For the OS packages installed in each image, see [Image dependencies](#image-dependencies).
+
+## Run MetaDefender Core Docker image
 
 docker run cmdCopydocker run -d [--name <container_name>] \
 [-e "<env_var>=<value>"] \
@@ -44,7 +49,7 @@ For IKARUS, `--shm-size=1gb` should be added when starting the docker.
 
 If you're using Kubernetes (K8S), the section below should be specified in the yaml file:
 
-### [[Parameter] Container Name](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#parameter-container-name)
+### [Parameter] Container Name
 
 **Argument**: `--name <container_name>`
 
@@ -52,7 +57,7 @@ If you're using Kubernetes (K8S), the section below should be specified in the y
 
 **Example**: `--name mdcore01`
 
-### [[Parameter] Init Details (Environmental Variables & Ignition File)](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#parameter-init-details-environmental-variables--ignition-file)
+### [Parameter] Init Details (Environmental Variables & Ignition File)
 
 **Argument**: `-v <ignition_folder>:<container_ignition_folder> -e "<env_var>=<value>"`
 
@@ -64,7 +69,7 @@ You must configure MetaDefender Core (default local admin account, database conn
 2. Using environmental variables (`-e`)
 3. Using `IGNITION_JSON`
 
-#### [Option 1: Using environmental variables](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#option-1-using-environmental-variables)
+#### Option 1: Using environmental variables
 
 `-e "<env_var>=<value>"` : set an environmental variable to configure, each environmental variable need one -e argument.
 
@@ -95,8 +100,8 @@ Available environmental variables:
 | MDCORE_SSL_PROTOCOLS | optional | Specify the TLS version. Accepted values (case-insensitive): `TLSv1.2,TLSv1.3` |
 | MDCORE_SSL_ADVANCED_CONFIGS | optional | Configure advanced SSL settings such as cipher suites, session timeout, and caching. Accepted values (case-insensitive):  `ssl_verify_depth 10; ssl_session_cache none;` *In case of using docker-compose, they should not input single quote `'` and double quote `"` |
 | MDCORE_DB_NAME | optional | Used for customizing the PostgreSQL database name of MetaDefender Core.  By default, in shared DB mode, it is `metadefender_core` Name must begin with a letter (`a`-`z`) or underscore (`_`). Subsequent characters in a name can be letters, digits (`0`-`9`), or underscores. Maximum length is 63. |
-| MDCORE_DB_PRIVATE_USERNAME | optional | PostgreSQL server's internal user created for MetaDefender Core own operational purpose. If not specified, then MetaDefender Core will auto generate this user. Details: [Customize Internal PostgreSQL User](/docs/mdcore/troubleshooting/customize-internal-postgresql-user) |
-| MDCORE_DB_PRIVATE_PASSWORD | optional | PostgreSQL server's internal user password created for MetaDefender Core own operational purpose. If not specified, then MetaDefender Core will auto generate this user. Details: [Customize Internal PostgreSQL User](/docs/mdcore/troubleshooting/customize-internal-postgresql-user) |
+| MDCORE_DB_PRIVATE_USERNAME | optional | PostgreSQL server's internal user created for MetaDefender Core own operational purpose. If not specified, then MetaDefender Core will auto generate this user. Details: [Customize Internal PostgreSQL User](/troubleshooting/customize-internal-postgresql-user) |
+| MDCORE_DB_PRIVATE_PASSWORD | optional | PostgreSQL server's internal user password created for MetaDefender Core own operational purpose. If not specified, then MetaDefender Core will auto generate this user. Details: [Customize Internal PostgreSQL User](/troubleshooting/customize-internal-postgresql-user) |
 | PROXY | optional | **Default**: false  If the user wants to use proxy, set it to **true** |
 | PROXY_HOST | optional | Default: empty string This field is **required** if PROXY is set to **true** |
 | PROXY_PORT | optional | Default: empty string This field is **required** if PROXY is set to **true** |
@@ -107,7 +112,7 @@ Available environmental variables:
 | MDCORE_QUEUE_THRESHOLD | optional | Health check criteria.  Threshold for scan queue. Unit is %. Default: 100 (%).  When allocated slots percentage exceeds the threshold, MetaDefender Core will set itself unhealthy. |
 | MDCORE_MINIMUM_NUMBER_AV | optional | Health check criteria.  Minimum number of AV engines. Default: 0. When number of active AV engines is less than or equal to the predefined value, MetaDefender Core will set itself unhealthy. |
 | MDCORE_REQUIRED_ENGINES | optional | Health check criteria.  A list of mandatory engines. Default: all the engines of a license. When any predefined engines are not active, MetaDefender Core will set itself unhealthy. |
-| MDCORE_REQUIRED_ENGINES_THRESHOLD | optional | Use this setting to define threshold policies for required engines. [Format](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#format) Provide the value in the following JSON format:  `[{ "id": "<engine_id>", "enable": <true|false>, "threshold": <number_of_days> }]` [Example](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#example) `[{ "id": "clamav", "enable": true, "threshold": 7 }, { "id": "avira", "enable": false, "threshold": 5 }]`  If this setting is **undefined** or **empty**, the Health Check feature treats threshold validation as **disabled** for all required engines.  **Important**: If the engines are not in the `MDCORE_REQUIRED_ENGINES` variable, it will fail to set up the health check |
+| MDCORE_REQUIRED_ENGINES_THRESHOLD | optional | Use this setting to define threshold policies for required engines. Format Provide the value in the following JSON format:  `[{ "id": "<engine_id>", "enable": <true|false>, "threshold": <number_of_days> }]` Example `[{ "id": "clamav", "enable": true, "threshold": 7 }, { "id": "avira", "enable": false, "threshold": 5 }]`  If this setting is **undefined** or **empty**, the Health Check feature treats threshold validation as **disabled** for all required engines.  **Important**: If the engines are not in the `MDCORE_REQUIRED_ENGINES` variable, it will fail to set up the health check |
 | MDCORE_DISK_SPACE_THRESHOLD | optional | Use this setting to define the threshold policy for disk space  If **unset** or **empty**, Health Check treats this value as `0`, which disables disk space threshold validation.  To configure a threshold, enter an integer value representing the percentage (`%`). |
 | UPGRADE_DB | optional | **true**   - Enable database upgrade process. This migrates Workflow Rules and other settings. - Require `MDCORE_UPGRADE_FROM_DB_NAME`variable. - Require super-user permission for `DB_USER`. - Only support shared-database mode `DB_MODE=4` and remote PostgreSQL `DB_TYPE=remote` .   **false / not defined**   - Database upgrade process will not run. |
 | MDCORE_UPGRADE_FROM_DB_NAME | optional | **Required** when UPGRADE_DB = true  If this variable does not exist, upgrade process will exit with code 1. |
@@ -172,20 +177,20 @@ Warning
 
 When deploying in a Kubernetes environment with multiple replicas and a remote database, avoid setting the same instance name across all Pods. Specifically, be cautious when using the `MD_INSTANCE_NAME` environment variable or the `global/instance_name` field in `CORE_CONF_JSON`. Using a shared instance name will cause all Pods to use the same database private user. If any Pod restarts, this private user’s password will be regenerated, resulting in the other Pods becoming non-functional.
 
-#### [Option 2: Using ignition file](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#option-2-using-ignition-file)
+#### Option 2: Using ignition file
 
 `-v <ignition_folder>:<container_ignition_folder>` - (optional) mounting the folder containing the ignition file to the container’s folder
 
 - `<ignition_folder>` - ignition folder path containing the ignition file `<ignition_folder>/ometascan.conf`
 
-  - [Deployment automation support](/docs/mdcore/installation/deployment-automation-support)
+  - [Deployment automation support](/installation/deployment-automation-support)
 - `<container_ignition_folder>` - container’s folder to be mounted to `/opt/ometascan/core_data/opswat` (by default)
 
 Info
 
 The `internal/data_directory` parameter is **not** supported in the `ometascan.conf` ignition file when using containerized deployments. Any configuration of this parameter will be ignored.
 
-#### [Example](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#example)
+#### Example
 
 Setup a PostgreSQL version 14 server. After that, we assume that remote PostgreSQL server’s information is
 
@@ -290,7 +295,7 @@ docker run -d --name core01 \
 -e "LICENSE_KEY=..." \
 -v /ignition_folder:/opt/ometascan/core_data/opswat \
 -p 8008:8008 opswat/metadefendercore-debian:latest
-### [[Parameter] User](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#parameter-user)
+### [Parameter] User
 
 **Argument**: `-u <user ID>`
 
@@ -306,7 +311,7 @@ When running container with non-root user (`-u <user ID>` param), you are expect
 
 1. Grant write permission for others (e.g. chmod 777)
 2. Change owner to uid 1011 or gid 1011 (e.g. chown 1011:1011), then grant write permission for owner or group owner (e.g.: chmod 755)
-### [[Parameter] Host Folder](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#parameter-host-folder)
+### [Parameter] Host Folder
 
 **Argument**: `-v <host_folder>:<container_folder>`
 
@@ -314,7 +319,7 @@ When running container with non-root user (`-u <user ID>` param), you are expect
 
 **Example**: `-v /var/mdcore:/temp`
 
-### [[Parameter] REST Port](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#parameter-rest-port)
+### [Parameter] REST Port
 
 **Argument**: `-p <rest_port>:<internal_port>`
 
@@ -322,7 +327,7 @@ When running container with non-root user (`-u <user ID>` param), you are expect
 
 **Example**: `-p 30808:8008`
 
-### [[Parameter] Image Name](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#parameter-image-name)
+### [Parameter] Image Name
 
 **Argument**: `<image_name>`
 
@@ -330,7 +335,7 @@ When running container with non-root user (`-u <user ID>` param), you are expect
 
 **Example**: `mdcore:debian`
 
-## [Start / Stop container](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#start--stop-container)
+## Start / Stop container
 
 start containerCopydocker start <container_name>docker stopCopydocker stop -t <timeout> <container_name>
 
@@ -341,7 +346,7 @@ Example:
 
 docker stopCopydocker stop -t 30 core01
 docker start core01
-## [Access to view MetaDefender Core logs](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#access-to-view-metadefender-core-logs)
+## Access to view MetaDefender Core logs
 
 get logsCopydocker logs [-f] [-n <number_of_lines>] <container_name>
 
@@ -352,7 +357,7 @@ get logsCopydocker logs [-f] [-n <number_of_lines>] <container_name>
 Example:
 
 tail logsCopydocker logs -f -n 100 core01
-## [Collecting Logs by Generating a Support Package](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#collecting-logs-by-generating-a-support-package)
+## Collecting Logs by Generating a Support Package
 
 BashCopy#Step 1: Run the following command to generate support package file
 docker exec <container_name> /bin/bash -c "cd /opt/ometascan/core_data && /opt/ometascan/usr/bin/ometascan-collect-support-data.sh"
@@ -368,14 +373,14 @@ Example:
 BashCopydocker exec mdcore /bin/bash -c "cd /opt/ometascan/core_data && /opt/ometascan/usr/bin/ometascan-collect-support-data.sh"
 #output: Support file created: ometascan-5.14.1-1-support-1666784477.tar.gz
 docker cp mdcore:/opt/ometascan/core_data/ometascan-5.14.1-1-support-1666784477.tar.gz ./
-## [Configure MetaDefender settings](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#configure-metadefender-settings)
+## Configure MetaDefender settings
 
 You can modify the `/etc/ometascan/ometascan.conf` file. It can be modified in 2 ways:
 
 - Directly inside the container by using docker exec to go inside the container and modify
 - Mount the `/etc/ometascan` folder to host when starting the container, then modify the file on host folder
 
-## [Database Maintenance](/docs/mdcore/container-deployment/docker-image-published-on-opswat-docker-hub#database-maintenance)
+## Database Maintenance
 
 BashCopy#Run the following command
 docker exec <container_name> /bin/bash -c "/opt/ometascan/usr/sbin/ometascan-vacuum-db"
@@ -406,3 +411,96 @@ Running vacuum DONE
 - `<container_name>`: The name of the container.
 
 Reference: [Database Maintenance | MetaDefender Core 4.19.0 or above](https://www.opswat.com/docs/mdcore/operating/database-maintenance---metadefender-core-4-19-0-or-above)
+
+## Image dependencies
+
+The MetaDefender Core 5.24.2 container images install 28 main OS packages on Debian and 33 on Rocky Linux, on top of the base OS image. Versions below were read from the images built on 2026-11-20.
+
+|  | Debian | Rocky Linux |
+| --- | --- | --- |
+| Image | `opswat/metadefendercore-debian:5.24.2`, `opswat/metadefendercore-debian-nonroot:5.24.2` | `opswat/metadefendercore-rocky:5.24.2`, `opswat/metadefendercore-rocky-nonroot:5.24.2` |
+| Base image | `debian:12-slim` | `rockylinux:9-minimal` |
+| OS release in image | Debian GNU/Linux 12.15 (bookworm) | Rocky Linux 9.9 (Blue Onyx) |
+| Architecture | amd64 | amd64 |
+| Total OS packages installed | 234 | 395 |
+
+Main dependencies only
+
+The packages listed here are the main dependencies: the ones the image build installs by name. They are not the complete package set of the image.
+
+During installation the package manager (`apt` on Debian, `dnf` on Rocky Linux) also installs the dependencies of these packages, and the dependencies of those in turn. That is why the images hold 234 (Debian) and 395 (Rocky Linux) OS packages in total.
+
+Versions of unpinned packages are whatever the distribution repositories served on the build date, so they change from one image build to the next.
+
+### Debian image
+
+| Package | Version | Needed by | Source |
+| --- | --- | --- | --- |
+| grep | 3.8-5 | Core | Debian 12 |
+| gpg | 2.2.40-1.1+deb12u2 | Core (repository keys) | Debian 12 |
+| curl | 7.88.1-10+deb12u15 | Core | Debian 12 |
+| apt-transport-https | 2.6.2 | Core (repository access) | Debian 12 |
+| ca-certificates | 20250419~deb12u2 | Core | Debian 12 |
+| procps | 2:4.0.2-3 | Core | Debian 12 |
+| iproute2 | 6.1.0-3 | Core | Debian 12 |
+| lib32stdc++6 | 12.2.0-14+deb12u1 | Core (32-bit runtime) | Debian 12 |
+| libc6-i386 | 2.36-9+deb12u14 | Core (32-bit runtime) | Debian 12 |
+| libfontconfig1 | 2.14.1-4 | Core | Debian 12 |
+| libfreetype6 | 2.12.1+dfsg-5+deb12u4 | Core | Debian 12 |
+| libx11-6 | 2:1.8.4-2+deb12u2 | Core | Debian 12 |
+| libxrender1 | 1:0.9.10-1.1 | Core | Debian 12 |
+| dotnet-runtime-8.0 | 8.0.34-1 | Archive engine | Microsoft (`packages.microsoft.com`) |
+| libgomp1 | 12.2.0-14+deb12u1 | Deep CDR engine | Debian 12 |
+| libncurses5 | 6.4-4 | Deep CDR engine | Debian 12 |
+| libexif12 | 0.6.24-1+deb12u1 | Deep CDR engine (libgdiplus) | Debian 12 |
+| libwebp6 | 0.6.1-2.1+deb11u2 | Deep CDR engine (libgdiplus) | Debian 11 package, pinned |
+| libtiff5 | 4.2.0-1+deb11u8 | Deep CDR engine (libgdiplus) | Debian 11 security package, pinned (`snapshot.debian.org`) |
+| libgdiplus | 6.0.4+dfsg-2 | Deep CDR engine | Debian 11 package, pinned |
+| libmagic1 | 1:5.44-3 | Sandbox engine | Debian 12 |
+| temurin-21-jre | 21.0.13.1.0+2-0 | Sandbox engine (Java 21) | Eclipse Adoptium (`packages.adoptium.net`) |
+| ttf-mscorefonts-installer | 3.8.1 | Proactive DLP engine | Debian 12 `contrib` |
+| postgresql-18 | 18.7-1.pgdg12+5 | Container startup (database tools) | PostgreSQL PGDG (`apt.postgresql.org`) |
+| python3 | 3.11.2-1+b1 | Container startup | Debian 12 |
+| python3-pip | 23.0.1+dfsg-1 | Container startup | Debian 12 |
+| jq | 1.6-2.1+deb12u3 | Container startup | Debian 12 |
+| locales | 2.36-9+deb12u14 | Container startup (`en_US.UTF-8`) | Debian 12 |
+| kubernetes (Python) | 37.0.3 | Container startup | PyPI, via `pip` |
+
+### Rocky Linux image
+
+| Package | Version | Needed by | Source |
+| --- | --- | --- | --- |
+| yum | 4.14.0-37.el9.rocky.0.1 | Image build (package manager) | Rocky Linux 9 |
+| dejavu-sans-fonts | 2.37-18.el9 | Core | Rocky Linux 9 |
+| fontconfig | 2.14.0-2.el9_1 | Core | Rocky Linux 9 |
+| fonts-filesystem | 2.0.5-7.el9.1 | Core | Rocky Linux 9 |
+| glibc | 2.34-290.el9_9 | Core | Rocky Linux 9 |
+| glibc-gconv-extra | 2.34-290.el9_9 | Core | Rocky Linux 9 |
+| libX11 | 1.8.12-1.el9_8.1 | Core | Rocky Linux 9 |
+| libX11-common | 1.8.12-1.el9_8.1 | Core | Rocky Linux 9 |
+| libXau | 1.0.9-8.el9 | Core | Rocky Linux 9 |
+| libXext | 1.3.4-8.el9 | Core | Rocky Linux 9 |
+| libXrender | 0.9.10-17.el9_9.1 | Core | Rocky Linux 9 |
+| libgcc | 11.5.0-17.el9_9 | Core | Rocky Linux 9 |
+| libpng | 1.6.37-17.el9 | Core | Rocky Linux 9 |
+| libstdc++ (x86_64 and i686) | 11.5.0-17.el9_9 | Core (64-bit and 32-bit runtime) | Rocky Linux 9 |
+| libxcb | 1.13.1-9.el9 | Core | Rocky Linux 9 |
+| pcre | 8.44-4.el9 | Core | Rocky Linux 9 |
+| iproute | 6.17.0-3.el9 | Core | Rocky Linux 9 |
+| procps-ng | 3.3.17-15.el9 | Core | Rocky Linux 9 |
+| tar | 1.34-13.el9_8 | Core | Rocky Linux 9 |
+| dotnet-runtime-8.0 | 8.0.34-1.el9_9 | Archive engine | Rocky Linux 9 |
+| libgdiplus | 6.1-1.el9 | Deep CDR and File Type engines | EPEL 9 |
+| libgomp | 11.5.0-17.el9_9 | Deep CDR and File Type engines | Rocky Linux 9 |
+| ncurses-compat-libs | 6.2-8.20210508.1.el9 | Deep CDR and File Type engines | Rocky Linux 9 |
+| libnsl | 2.34-290.el9_9 | Deep CDR and File Type engines | Rocky Linux 9 |
+| compat-openssl11 | 1.1.1k-5.el9_9.5 | Deep CDR and File Type engines | Rocky Linux 9 |
+| java-21-openjdk | 21.0.13.1.2-1.2.el9 | Sandbox engine (Java 21) | Rocky Linux 9 |
+| xorg-x11-font-utils | 7.5-53.el9 | Proactive DLP engine | Rocky Linux 9 `devel` |
+| msttcore-fonts-installer | 2.6-1 | Proactive DLP engine | SourceForge `mscorefonts2` RPM |
+| python3 | 3.9.25-16.el9_9 | Container startup | Rocky Linux 9 |
+| python3-pip | 21.3.1-2.el9_8.rocky.0.1 | Container startup | Rocky Linux 9 |
+| jq | 1.6-21.el9_9 | Container startup | Rocky Linux 9 |
+| cpio | 2.13-16.el9 | Image build (unpacking the Core RPM) | Rocky Linux 9 |
+| postgresql18 | 18.7-1PGDG.rhel9.9 | Container startup (database tools) | PostgreSQL PGDG (`download.postgresql.org`) |
+| kubernetes (Python) | 35.0.0 | Container startup | PyPI, via `pip` |

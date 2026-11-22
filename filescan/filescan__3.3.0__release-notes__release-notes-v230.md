@@ -2,8 +2,8 @@
 
 # Release Notes for v2.3.0
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
-## [Date: 23 May, 2025](/docs/filescan/3.3.0/release-notes/release-notes-v230#date-23-may-2025)
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## Date: 23 May, 2025
 
 **What's New**
 
@@ -40,7 +40,7 @@ View as Markdown Ask ChatGPT about this page Ask Claude about this page
 - **URL Handling:** Fixed issues with multi-redirected URLs, reputation lookups, and file type misdetection.
 - **Zombie Process Fix:** Resolved an issue with the URL render process generating zombie processes, enhancing system stability.
 
-## [**Threat Detection Release Notes**](/docs/filescan/3.3.0/release-notes/release-notes-v230#threat-detection-release-notes)
+## **Threat Detection Release Notes**
 
 **What's New**
 

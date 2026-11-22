@@ -2,14 +2,14 @@
 
 # MetaDefender Core Documentation
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 The users can consult this web page or, alternatively, they can download the manual in pdf format from the link below:
 
 **MetaDefender Core manual**
 
-- [Download link](https://metascanbucket.s3.dualstack.us-west-1.amazonaws.com/Metadefender/Core/docs/MetaDefender%20Core%20-%20v5.23.0.pdf)
-- SHA256: A18C9C40D9E125111FCAF0685221A4A107DE6DF6DE08C75C718A5D50D5AE1764
+- [Download link](https://metascanbucket.s3.dualstack.us-west-1.amazonaws.com/Metadefender/Core/docs/MetaDefender%20Core%20-%20v5.24.2.pdf)
+- SHA256: ACD09D168202520035B2A0F87F432C0F95B0498C10E08CBC86F0D3B425D8E88F
 
 **OPSWAT MetaDefender AGD Documentation_v1.9**
 

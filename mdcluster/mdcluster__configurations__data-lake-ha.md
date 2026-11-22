@@ -2,6 +2,7 @@
 
 # High Availability support for PostgreSQL Data lake
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ### [Installation](/docs/mdcluster/configurations/data-lake-ha#installation)
 
 Info
@@ -228,11 +229,11 @@ $ repmgr -f <standby_repmgr_config_file_path> \
 standby register
 ### [Setup instructions](/docs/mdcluster/configurations/data-lake-ha#setup-instructions)
 
-1. Sign to MD Cluster **Control Center** console with your Administrator account.
-2. Navigate to `Inventory` > `Services`.
-3. Expand the `Data Lake` group.
-4. Click `Add service`.
+1. Sign in to MD Cluster **Control Center** console with your Administrator account.
+2. Navigate to `Library` > `Services`.
+3. Locate the `Data Lake` group.
+4. Click the `+` (Add a Data Lake service) button on the right side of the group.
 5. Enter the values for `Name`, `Host`, `Port`, `Username` and `Password` fields of individual PostgreSQL instance.
-6. Click the Check icon in the bottom right to complete.
+6. Click `Add` to complete.
 
-7. Ensure all PostgreSQL instances are reachable by the MD Cluster **Control Center.**
+7. Expand the `Data Lake` group and ensure all PostgreSQL instances are reachable by the MD Cluster **Control Center.**

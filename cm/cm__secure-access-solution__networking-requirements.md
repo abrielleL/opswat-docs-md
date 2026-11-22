@@ -71,6 +71,15 @@ Using STUN services, Gateways and Clients are able to connect through many netwo
 | Port 30000/UDP | Gateways expect to receive most traffic from the Client on port 30000/UDP. |
 | Port 30001/UDP | When a connection is initializing, the client may need to send a single packet to open the firewall, on port 30001/UDP. |
 
+### **Gateway-to-Application Communication**
+
+Gateways reach protected applications over IPv4 or IPv6, matching the application's address. Traffic from clients reaches the application with the gateway's own address as its source, so allow the gateway's addresses in the application's firewall.
+
+- **IPv4 applications**: the gateway needs an IPv4 address on a network that can reach them. Source address: the gateway's IPv4 address.
+- **IPv6 applications**: the gateway needs an IPv6 address on a network that can reach them. Source address: the gateway's IPv6 address.
+
+Clients always connect to the gateway over IPv4, whichever IP version the application uses. The gateway's addresses are shown in the Gateway Configuration Tool under [F7] Network Info.
+
 ### NTP
 
 NTP ensures the system clock of Gateways remains highly accurate. An accurate system clock is required for cryptographic security. Client connections may fail if the Gateway clock and Client clock disagree by more than a few seconds. Traffic should be allowed from Gateways on port 123/UDP to the following pools of public NTP servers (administrators requiring specific addresses for their region can find more information at [ntppool.org](https://www.ntppool.org/zone/@)):
@@ -91,3 +100,7 @@ Network traffic allowed by the administrator for SDP components (Gateway and Cli
 - **NTP** - OPSWAT relies on public NTP servers to synchronize gateways.
 
 ![](https://uploads.developerhub.io/prod/97qW/ejvjabrjp0kpd9ae60ku0wxww1zf8mbxflb9ntiedm3gl5mtjexpm4o17gkewe03.png)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

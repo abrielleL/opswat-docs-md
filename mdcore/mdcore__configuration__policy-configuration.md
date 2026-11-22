@@ -2,7 +2,7 @@
 
 # Policy Configuration
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 The MetaDefender Core server can be configured to use different scanning profiles for different clients. The selection is based on the client's source IP address.
 

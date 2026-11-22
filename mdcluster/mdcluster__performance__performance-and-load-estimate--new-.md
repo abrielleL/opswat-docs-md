@@ -2,6 +2,8 @@
 
 # Performance and Load Estimation
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Disclaimer
+
 These results should be viewed as guidelines and not performance guarantees, since there are many variables that affect performance (file set, network configurations, hardware characteristics, etc.). If throughput is important to your implementation, OPSWAT recommends site-specific benchmarking before implementing a production solution.
 
 ## [Factors that affect performance](/docs/mdcluster/performance/performance-and-load-estimate--new-#factors-that-affect-performance)
@@ -19,7 +21,6 @@ These results should be viewed as guidelines and not performance guarantees, sin
     - Different file types (e.g., document, image, executable)
     - Archive file or compound document format files
   - File size
-
 - Client tool (the tool submits files to the system)
 
 ## [Performance metrics](/docs/mdcluster/performance/performance-and-load-estimate--new-#performance-metrics)
@@ -120,4 +121,4 @@ Multiple tests are conducted using **5** MetaDefender Core instances across two 
 | --- | --- |
 | Aggressively submitted 2M non-archive files at a rate of 800 files per second. |  |
 | Submitted 400 medium archive files at a rate of 1 files per second. |  |
-| Submitted 7 large CAB files    **Archive distribution (MD Cluster only)**  In workflow, setting "Load shared among MetaDefender Core instances for archive processing" is enabled. |  |
+| Submitted 7 large CAB files    **Archive distribution (MD Cluster only)**  In the workflow `General` settings, "Load Shared Among MetaDefender Core Instances for Archive Processing" is enabled. |  |

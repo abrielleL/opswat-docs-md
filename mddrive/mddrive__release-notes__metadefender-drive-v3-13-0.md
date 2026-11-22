@@ -2,7 +2,7 @@
 
 # MetaDefender Drive v3.13.0
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 | [MetaDefender Drive v3.13.0](/docs/mddrive/release-notes/metadefender-drive-v3-13-0#metadefender-drive-v3130) Released on Apr 08, 2022 | This is a major release that adds new feature as well as improvement and stability |
 | --- | --- |

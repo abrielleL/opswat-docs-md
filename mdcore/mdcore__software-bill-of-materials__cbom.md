@@ -2,7 +2,7 @@
 
 # Cryptographic Bill of Materials (CBOM)
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 > **Applies to:** SBOM engine 5.0.0+ and MetaDefender Core 5.23+.
 
 ## [What a CBOM is](/docs/mdcore/software-bill-of-materials/cbom#what-a-cbom-is)
@@ -66,6 +66,13 @@ CBOM finds cryptography in four kinds of input: key files, package manifests, so
 | **KEY CONTAINER** | `*.p12`, `*.pfx`, `*.jks`, `*.jceks`, `*.bcfks`, `*.keystore` · encrypted PEM private keys |
 | **WINDOWS PE** | `*.exe`, `*.dll`, `*.sys` and any PE image: Authenticode signing certificates |
 
+4. ### [Infrastructure as code](/docs/mdcore/software-bill-of-materials/cbom#infrastructure-as-code)
+
+| **NAME** | **Files** |
+| --- | --- |
+| **TERRAFORM** | `*.tf`, `*.tfvars`: includes the ALB `ssl_policy` |
+| **CLOUDFORMATION** | `*.yaml`, `*.yml`, `*.template`, `*.json` with `AWSTemplateFormatVersion` or `AWS::`, up to 1 MB |
+
 ### [Key files](/docs/mdcore/software-bill-of-materials/cbom#key-files)
 
 CBOM parses private and public key files such as PEM-encoded keys. It reports the key itself as related crypto material (for example an RSA key) and the algorithms protecting it: for an encrypted key, the cipher (such as AES-256-CBC) and the key-derivation function (such as PBKDF2).
@@ -91,13 +98,13 @@ Each asset is graded on two independent axes, so you can see both what is weak t
 | Classical risk | Acceptable · Deprecated · Disallowed · Unknown | Strength against today's (non-quantum) attacks |
 | Quantum risk | Quantum-safe · Quantum-weakened · Quantum-vulnerable · Unknown | Resistance to an attacker with a cryptographically relevant quantum computer |
 
-An asset's **Overall Risk** is **Safe** only when it is both classically Acceptable **and** Quantum-safe; anything else is **Unsafe**. Assets that have no quantum grading yet are counted as Unsafe, so modern libraries and ciphers can appear as Unsafe.
+An asset's **Overall Risk** is **Safe** only when it is both classically Acceptable **and** Quantum-safe; Overall Risk is Safe, Unknown or Unsafe. Assets without enough grading data are Unknown, not Unsafe.
 
 For assets that are not quantum-safe, CBOM recommends a post-quantum replacement. Some assets need more than one: RSA, for example, is replaced by ML-KEM (FIPS 203) for key establishment and ML-DSA (FIPS 204) for signatures.
 
 ## [CBOM verdict](/docs/mdcore/software-bill-of-materials/cbom#cbom-verdict)
 
-CBOM gives each scan one of four verdicts: **Cryptography Found**, **Risk Cryptography Found**, **No Cryptography Found**. The verdict is advisory only and never blocks a file.
+CBOM gives each scan one of three verdicts: **Cryptography Found**, **Risk Cryptography Found**, **No Cryptography Found**. The file is blocked when its risk meets the *Block on Cryptographic Risk* setting (default: None, which never blocks).
 
 For the full result structure, see [CBOM JSON response](cbom-json-response).
 
@@ -107,4 +114,4 @@ CBOM results can be exported on their own or together with the other BOM types, 
 
 ## [Enabling CBOM](/docs/mdcore/software-bill-of-materials/cbom#enabling-cbom)
 
-To enable CBOM, go to **Workflow > *Workflow name* > SBOM**.
+CBOM is enabled by default. To configure it, go to **Workflow** > **Workflow name** > **CBOM Module**. Requires MetaDefender Core 5.23 or later.

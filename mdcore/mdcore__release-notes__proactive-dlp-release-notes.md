@@ -2,6 +2,38 @@
 
 # Proactive DLP release notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## [v3.6.0](/docs/mdcore/release-notes/proactive-dlp-release-notes#v360)
+
+Release date: 11/10/2026
+
+- Added OCR support for Simplified and Traditional Chinese
+- Added built-in Airline Booking Reference (PNR) detection in TXT, DOCX, PPTX, and PDF files, supporting English, Hebrew, Arabic, Russian, and German
+- Improved font-size obfuscation detection in Excel WordArt and PowerPoint SmartArt
+- Enhanced ISIN validation and detection accuracy to reduce false positives
+- Fixed Hebrew regex detection issues in PDF files, including reversed text, line boundaries, and multiline matching
+- Improved PDF text extraction and scanning for Type 3 fonts and special characters
+- Fixed incorrect hit column positions in large text files
+- Reduced false positives involving hexadecimal values, Israeli National IDs, and incorrectly grouped ISIN numbers
+- Fixed text extraction issues involving ligatures in LibreOffice generated PDFs
+- Updated third-party dependencies to address security vulnerabilities
+
+## [v3.5.0](/docs/mdcore/release-notes/proactive-dlp-release-notes#v350)
+
+Release date: 10/28/2026
+
+- Added detection capabilities for retinal scans and fingerprints across the backend and UI, organizing biometric detection (including face detection) under a unified category
+- Enabled redaction (masking and substitution) of sensitive data found in document metadata properties across Microsoft Office and RTF formats (DOC/DOCX/DOCM, XLS/XLSX/XLSM, PPT/PPTX/PPTM, RTF) supporting predefined types and custom regex rules
+- Implemented backend support for advanced file type configurations and handling
+- Added 20 new predefined sensitive information types across multiple countries and regions, including national identification numbers, tax identifiers, social security numbers, healthcare identifiers, and Passport Number. Each new type includes validation rules, contextual keyword support, and parser test coverage to improve detection accuracy and reduce false positives (The full list can be found here: [LINK](https://www.opswat.com/docs/mdcore/proactive-dlp/detect-sensitive-information) )
+- Upgraded the engine runtime and dependencies to .NET 10
+- Minimum MetaDefender Core version raised to 5.14.0
+- Fixed an issue where redacting RTF documents containing Right-to-Left (RTL) text mistakenly applied RTL alignment to unrelated sections
+- Resolved an engine crash that occurred when scanning large text files with AI detection enabled
+- Fixed an issue where regular expression pattern matching and sensitive data detection failed for Hebrew text inside PDF documents
+- Fixed scan failures on large sector-split text files
+- Fixed a Linux engine crash when several PowerPoint presentations were scanned at the same time
+
 ## [v3.4.2](/docs/mdcore/release-notes/proactive-dlp-release-notes#v342)
 
 Release date: 9/10/2026

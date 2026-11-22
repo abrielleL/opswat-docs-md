@@ -2,7 +2,7 @@
 
 # Getting Started with MetaDefender Drive Smart Touch
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 **MetaDefender Drive with Smart Touch** features a mobile form factor to add more flexibility and connectivity to transient device scanning. Similar to other form factors, it ships as an out-of-the-box solution with the latest software and scanning engine versions installed.
 
@@ -89,3 +89,8 @@ To generate a support package for MetaDefender Drive with Smart Touch, ensure yo
 About the Process
 
 This process is to generate support packages for MetaDefender Drive with **Smart Touch**. To generate a support package for MetaDefender Drive, please follow the instruction on [this page](https://www.opswat.com/docs/mddrive/troubleshooting/generate-support-packages).
+
+To **keep MetaDefender Drive with Smart Touch up-to-date and manged**, follow these instructions
+
+- [MetaDefender Drive Toolkit](/docs/mddrive/getting-started/drive-toolkit)
+- [Manage MetaDefender Drives with OPSWAT Management](/docs/mddrive/configuration/managing-drives-with-central-management)

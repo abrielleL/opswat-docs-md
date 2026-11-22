@@ -2,7 +2,7 @@
 
 # Uploading Files
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 To upload files, click the "Upload Files" button. A new window will appear.
 
@@ -113,17 +113,13 @@ The idle session timeout is temporarily suspended during file uploads. The absol
 
 ## [Recovering from Errors During the Upload Process](/docs/mdmft/operating/upload-files#recovering-from-errors-during-the-upload-process)
 
-a { text-decoration: none; color: #464feb; } tr th, tr td { border: 1px solid #e6e6e6; } tr th { background-color: #f5f5f5; }
-
 - logs out
 - cancels the upload
-- a { text-decoration: none; color: #464feb; } tr th, tr td { border: 1px solid #e6e6e6; } tr th { background-color: #f5f5f5; } closes the browser tab or window a { text-decoration: none; color: #464feb; } tr th, tr td { border: 1px solid #e6e6e6; } tr th { background-color: #f5f5f5; }
+- closes the browser tab or window
 
 the files that were successfully uploaded prior to the interruption will remain persisted in MetaDefender Managed File Transfer™.
 
 Warning
-
-a { text-decoration: none; color: #464feb; } tr th, tr td { border: 1px solid #e6e6e6; } tr th { background-color: #f5f5f5; }
 
 It is not possible to resume the upload process for files that were partially uploaded or had not yet begun uploading. These files must be uploaded again.
 

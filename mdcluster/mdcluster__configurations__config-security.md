@@ -2,6 +2,7 @@
 
 # Security
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ### [Setup HTTPS](/docs/mdcluster/configurations/config-security#setup-https)
 
 Transport Layer Security (TLS) is a cryptographic protocol that provides communications security over a computer network. Websites, like the Web Management Console, are able to use TLS to secure all communications between their servers and web browsers.
@@ -14,11 +15,11 @@ HTTPS is not enabled by default. As a consequence sessions between the wizard's 
 
 Steps to setup this feature:
 
-1. Go to `Inventory`> `Certificates`
-2. Click `Add certificate`
+1. Go to `Library`> `Certificates`
+2. Click `Add Certificate`
 
-   1. To add a certificate using a file path, choose `Add by path` and enter the location of both the certificate and its corresponding private key file.
-   2. To upload certificate file, select `Upload file`.
+   1. To add a certificate using a file path, choose `Add From Local Path` and enter the location of both the certificate and its corresponding private key file.
+   2. To upload certificate file, select `Add By Uploading File`.
 
 Certificate YML sample file:
 
@@ -114,7 +115,8 @@ e2Hl/7M0c/lbZ4FvXgARlex2rkgS0Ka06HE=
 
 3. Go to `Settings` > `Security`
 4. On the `Secure Connection` section, click `Details`
-5. Select `Enable Certificate` , then select your certificate added in step 2.
+5. Turn on `Enable Certificate` , then select your certificate added in step 2.
+6. Click `Save Changes`.
 
 Warning
 
@@ -130,30 +132,30 @@ These password policies changes only apply to new user creations and future pass
 
 Local users' password can be enforced to meet requirements set by administrators, which includes following constraints:
 
-- **Enforce password policy:**
+- **Enforce Password History** (**Passwords Remembered (0-24)**):
 
   - Determines the number of unique new passwords that must be associated with a user account before an old password can be reused
   - Range: [0-24]
   - Default: 0 (to disable enforcement)
-- **Minimum password length:**
+- **Enforce Min Password Length** (**Min Password Length (0-30)**):
 
   - The least number of characters that can make up a password for a user account
   - Range: [0-30]
   - Default: 0 (to disable enforcement)
-- **Password must meet complexity requirements:**
+- **Password Must Meet Complexity Requirements:**
 
   - Determines whether passwords must meet a series of guidelines that are considered important for a strong password.
-  - Default: unchecked
+  - Default: Disabled
 
 ### [Session policies](/docs/mdcluster/configurations/config-security#session-policies)
 
 Administrators can enforce session policies for local users to ensure compliance with organizational requirements, using the following settings:
 
-- **Enable idle session timeout:**
+- **Enable Idle Session Timeout:**
 
   - Idle timeout automatically terminates a user's session based on how long since their last recorded activity.
   - Default: 300 seconds.
-- **Enable session timeout**
+- **Enable Session Timeout**
 
   - Absolute timeout terminates an individual user's session after a fixed duration, regardless of any user activity.
   - Default: 0 (to disable enforcement)

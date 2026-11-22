@@ -2,6 +2,7 @@
 
 # Log Rotation and Retention
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [Do I need to change this?](/docs/mdcore/configuration/log-rotation-and-retention#do-i-need-to-change-this)
 
 Most users can leave these settings at their defaults. MetaDefender Core already rotates and manages log files automatically. The default values match the behavior that has been in place for years:

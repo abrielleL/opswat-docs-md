@@ -2,8 +2,8 @@
 
 # Release Notes for v2.2.0
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
-## [Date: 6 February, 2025](/docs/filescan/3.3.0/release-notes/release-notes-v220#date-6-february-2025)
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## Date: 6 February, 2025
 
 **What's New**
 
@@ -15,28 +15,28 @@ View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
 - **Mitigation for Bloated Executables**: A new mitigation feature identifies intentionally bloated executables that attempt to bypass sandbox environments. This enhances the platform's ability to analyze suspicious files that may try to evade detection. auto$
 
-- **Adaptive Threat Indicators**: Threat indicators are now context-aware, allowing for more accurate identification of threats and a reduction in false positives. [Adaptive Threat Context](/docs/filescan/3.3.0/datasheet/adaptive-threat-context)
+- **Adaptive Threat Indicators**: Threat indicators are now context-aware, allowing for more accurate identification of threats and a reduction in false positives. [Adaptive Threat Context](/datasheet/adaptive-threat-context)
 
-- **New Malware Family Detection**: Detection capabilities have been extended to include notable malware families such as WezRat, Remcos, Lumma Stealer, among others. This expands our database and improves detection across a wider array of threats. [Supported malware families via YARA](/docs/filescan/3.3.0/datasheet/supported-malware-families-via-yara)
+- **New Malware Family Detection**: Detection capabilities have been extended to include notable malware families such as WezRat, Remcos, Lumma Stealer, among others. This expands our database and improves detection across a wider array of threats. [Supported malware families via YARA](/datasheet/supported-malware-families-via-yara)
 - **JavaScript-Compiled PE File Support**: We’ve added unpacking and decompilation support for JavaScript-compiled PE files, enabling better analysis of malicious payloads that may be delivered through JavaScript.
 - **Malicious Techniques Detection**: MetaDefender now identifies and flags malicious techniques such as disabling Data Execution Prevention (DEP), Authenticode evasion (SigFlip), and misleading script encoding. This enhances the platform's ability to spot sophisticated attack vectors.
 - **Extended Threat Hunting Capabilities**: Threat hunting has been enhanced to identify open file directories, aiding in deeper investigation into suspicious activity.
 - **New Similarity-Based Hashes**: Added new similarity-based hashes like .NET TypeRefHash and Gimphash, improving the detection of related malicious files through their structural similarities.
-- **WebDAV Communications Identification**: MetaDefender can now identify WebDAV communications, improving the detection of network-based attacks that use this protocol. [Aether Tags](/docs/filescan/3.3.0/datasheet/sandbox-tags)
-- **Enhanced Phishing Detection**: We’ve added 38 new brands to our phishing detection capabilities, significantly improving the platform’s overall phishing detection accuracy. Additionally, phishing URL rendering now bypasses SSL certification for missing sites. [What brands can the Brand Spoofing Detector catch?](/docs/filescan/3.3.0/datasheet/detected-brands)
-- **Login Support for SAML & OKTA**: We now support SAML (protocol) and OKTA (identity provider) for secure, flexible login options in enterprise environments. [Okta](/docs/filescan/3.3.0/adminguide/okta)
+- **WebDAV Communications Identification**: MetaDefender can now identify WebDAV communications, improving the detection of network-based attacks that use this protocol. [Aether Tags](/datasheet/sandbox-tags)
+- **Enhanced Phishing Detection**: We’ve added 38 new brands to our phishing detection capabilities, significantly improving the platform’s overall phishing detection accuracy. Additionally, phishing URL rendering now bypasses SSL certification for missing sites. [What brands can the Brand Spoofing Detector catch?](/datasheet/detected-brands)
+- **Login Support for SAML & OKTA**: We now support SAML (protocol) and OKTA (identity provider) for secure, flexible login options in enterprise environments. [Okta](/adminguide/okta)
 - **Scan Execution Profiles**: Administrators can now create and manage custom scan execution profiles, providing more control over how different file types and threats are analyzed.
 - **Support for Password-Protected Office Documents**: MetaDefender now supports the analysis of password-protected Office documents, improving its ability to handle encrypted files during analysis.
 - **UNC Paths on IOCs Page**: The IOCs (Indicators of Compromise) page now supports UNC path display, providing easier access to file locations in network environments.
-- **Exported Reports (My Downloads)**: Users can now view exported reports directly on the "My Downloads" page, streamlining access to previously generated reports. [Output Report Formats](/docs/filescan/3.3.0/datasheet/export-formats)
-- **Settings for HTML & PDF Report Generator**: Added customizable settings for generating HTML & PDF reports, offering greater flexibility in report formats and content. [Output Report Formats](/docs/filescan/3.3.0/datasheet/export-formats)
+- **Exported Reports (My Downloads)**: Users can now view exported reports directly on the "My Downloads" page, streamlining access to previously generated reports. [Output Report Formats](/datasheet/export-formats)
+- **Settings for HTML & PDF Report Generator**: Added customizable settings for generating HTML & PDF reports, offering greater flexibility in report formats and content. [Output Report Formats](/datasheet/export-formats)
 - **Certificate Details for RDP Files**: MetaDefender now provides detailed certificate information for RDP (Remote Desktop Protocol) files, aiding in deeper analysis of network-based threats.
 - **ODF File Details**: Support for ODF (Open Document Format) files has been enhanced, now showing more detailed analysis of these file types.
 - **More Detailed Information for GoLang Files**: We've expanded the level of detail provided in the analysis of GoLang files, improving detection of threats in this increasingly popular language.
-- **Similarity Search for All File Types**: Similarity search now supports all file types, not just PE files, expanding its ability to detect malicious files based on structural similarities. [Threat Pattern Correlator - Support for Non-Executables](/docs/filescan/3.3.0/datasheet/threat-pattern-correlator-nonpe)
-- **Support for Online Installation on RedHat 9**: MetaDefender now supports online installation on the RedHat 9 operating system, expanding compatibility for enterprise deployments. [Technical Requirements](/docs/filescan/3.3.0/installation/technical-requirements)
+- **Similarity Search for All File Types**: Similarity search now supports all file types, not just PE files, expanding its ability to detect malicious files based on structural similarities. [Threat Pattern Correlator - Support for Non-Executables](/datasheet/threat-pattern-correlator-nonpe)
+- **Support for Online Installation on RedHat 9**: MetaDefender now supports online installation on the RedHat 9 operating system, expanding compatibility for enterprise deployments. [Technical Requirements](/installation/technical-requirements)
 - **Rename "Threat Intelligence" to "Similarity Search"**: The "Threat Intelligence" feature has been renamed to "Similarity Search" to better reflect its functionality.
-- **WebThreat URL Threat Detection Model:** Enabling advanced phishing detection through network data analysis for enhanced URL threat protection. [Web Threat Analyzer Overview](/docs/filescan/3.3.0/datasheet/webthreat)
+- **WebThreat URL Threat Detection Model:** Enabling advanced phishing detection through network data analysis for enhanced URL threat protection. [Web Threat Analyzer Overview](/datasheet/webthreat)
 
 **Improvements**
 

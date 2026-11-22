@@ -8,11 +8,11 @@
 
 > **Pro Tip:**
 >
-> The MetaDefender Endpoint is a lightweight, unobtrusive application, designed to run on every device that is being managed by your account on either MetaDefender IT-OT Access or OPSWAT Central Management v7 (OCM).
+> The MetaDefender Endpoint is a lightweight, unobtrusive application, designed to run on every device that is being managed by your account on My OPSWAT Central Management.
 >
 > MetaDefender Endpoint delivers the device’s security status to the OPSWAT servers and, in turn, channels commands from the servers back to the device to resolve any issues.
 
-## [MetaDefender Client / MetaDefender Endpoint feature comparison:](https://docs.opswat.com/macloud-sdp/kb/what-features-of-metadefender-client-are-available-in-opswat-cli#metadefender-client--metadefender-endpoint-feature-comparison)
+## [MetaDefender Endpoint feature comparison:](https://docs.opswat.com/macloud-sdp/kb/what-features-of-metadefender-client-are-available-in-opswat-cli#metadefender-client--metadefender-endpoint-feature-comparison)
 
 | Feature | Standalone | OCM v7 Managed | MDITOT Managed | Notes |
 | ---- | ---- | ---- | ---- | ---- |
@@ -60,3 +60,7 @@
 > **Support:**
 >
 > For any queries or concerns regarding **MetaDefender Endpoint Features And Functionality**, please open a [Support Case](https://www.opswat.com/support) with the OPSWAT team via phone, online chat or form, or feel free to ask the community on our [OPSWAT Expert Forum](https://go.opswat.com/OPSWATCommunity/s/).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/mdendpoint/llms.txt)

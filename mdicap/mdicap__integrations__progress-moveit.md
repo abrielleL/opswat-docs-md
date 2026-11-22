@@ -2,7 +2,7 @@
 
 # Progress MOVEit
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 Progress (former Ipswitch) MOVEit is a Managed File Transfer solution that allows a very simple integration with MetaDefender ICAP leveraging the Multiscanning technology.
 

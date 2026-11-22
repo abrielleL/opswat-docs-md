@@ -2,16 +2,20 @@
 
 # Container image
 
-Support a .tar input file which is generated from **docker save** command
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
-Support OS libraries in
+Upload the .tar file written by docker save as is. Do not compress it. The engine also accepts a single-layer tar containing layer.tar, manifest.json and sbom_metadata.json. Only operating-system packages are reported. Application packages inside the image (npm, PyPI, Maven, …) are not scanned; to cover them, scan the application's source code or lockfile.
+
+Supported OS package sources:
 
 - Alpine Linux
-- RedHat
+- Red Hat Enterprise Linux
 - CentOS
-- Rocky
+- Rocky Linux
 - Oracle Linux
 - Ubuntu
 - Debian
-- SUSE
-- Amazon Linux 2023
+- SUSE Linux Enterprise / openSUSE
+- Amazon Linux
+- AlmaLinux
+- Fedora

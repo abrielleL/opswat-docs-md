@@ -2,7 +2,7 @@
 
 # MetaDefender Drive v3.9.2
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 | **MetaDefender Drive v3.9.2** Released on Jul 09, 2021 | This is a major release that adds new feature as well as improvement and stability |
 | --- | --- |

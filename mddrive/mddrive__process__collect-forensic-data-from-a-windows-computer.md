@@ -2,6 +2,7 @@
 
 # Collect Forensic Windows Artifacts with MetaDefender Drive
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [Overview](/docs/mddrive/process/collect-forensic-data-from-a-windows-computer#overview)
 
 **Forensic Collection** is a processing option in MetaDefender Drive that copies digital evidence from a target Windows machine for offline investigation and analysis. Instead of scanning files for threats, it gathers a predefined set of Windows forensic artifacts — such as the NTFS Master File Table, event logs, registry hives, prefetch files, browser history, and more — and writes them to a USB storage device that you choose.
@@ -13,6 +14,7 @@ Because MetaDefender Drive boots the target machine from its own trusted environ
 - **MetaDefender Drive v4.4.6 or later.**
 - A **USB storage device** with enough free space for the collection. A full collection can be several gigabytes or more, depending on the target machine.
 - The target machine booted into MetaDefender Drive, with its internal Windows disk(s) detected.
+- **Forensic Collection Settings** are properly configured (directly on MetaDefender Drive or remotely via Central Management)
 
 ## [Artifacts Collected](/docs/mddrive/process/collect-forensic-data-from-a-windows-computer#artifacts-collected)
 

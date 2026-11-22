@@ -2,139 +2,22 @@
 
 # Release notes
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
-| **Version** | 5.23.0 |
+| **Version** | 5.24.2 |
 | --- | --- |
-| **Release date** | 05 October 2026 |
-| **Scope** | This release adds CBOM/AIBOM detection with dashboard and export support, MOCM quarantine download and Password Storage sync, and workflow controls to stop on a blocked archive file or require password-protected files. It also brings per-file-type Proactive DLP, customizable email notification templates, and configurable required headers on the file analysis API. |
+| **Release date** | 20 November 2026 |
+| **Scope** | This minor version includes new version of NGINX. |
 
 Before you upgrade MetaDefender Core:
 
 Making sure to check out the [Known Limitations](/docs/mdcore/release-notes/release-notes#known-limitations).
 
-## [New Features, Improvements and Enhancements](/docs/mdcore/release-notes/release-notes#new-features-improvements-and-enhancements)
-
-### [Beyond SBOM: CBOM and AIBOM detection](/docs/mdcore/release-notes/release-notes#beyond-sbom-cbom-and-aibom-detection)
-
-The Bill of Materials engine now supports CBOM and AIBOM detection. CBOM inventories cryptographic assets and evaluates quantum resistance, while AIBOM identifies AI models and associated licenses.
-
-CBOM and AIBOM findings appear in processing results and on the Security dashboard. Results for individual files, including files in archives and batches, can be exported as JSON, PDF, or HTML.
-
-### [Retrieve and manage quarantined files from Central Management](/docs/mdcore/release-notes/release-notes#retrieve-and-manage-quarantined-files-from-central-management)
-
-Administrators can now download quarantined files from My OPSWAT Central Management (MOCM) without accessing the instance console or opening an inbound port. This supports restricted environments where instances permit only outbound connections.
-
-Files are delivered on demand through the existing Central Management connection as password-protected archives. Administrators can also protect, unprotect, and delete quarantined items using the same permissions required by the instance console.
-
-### [Password Storage synchronized with Central Management](/docs/mdcore/release-notes/release-notes#password-storage-synchronized-with-central-management)
-
-Password Storage is now synchronized from MOCM to enrolled instances, similar to post actions and external scanners. Workflow policies that reference a password storage can therefore be applied consistently across an instance group.
-
-Centrally managed storages are labeled by origin, remain read-only on the instance, and are preserved when a configuration is imported.
-
-### [Stop processing an archive as soon as a blocked file is found](/docs/mdcore/release-notes/release-notes#stop-processing-an-archive-as-soon-as-a-blocked-file-is-found)
-
-A workflow can now stop further archive extraction and scanning as soon as an extracted file is blocked for a configured reason, reducing unnecessary processing.
-
-Files already being scanned complete their current stage. The option applies independently to each archive.
-
-### [Accept only password-protected files](/docs/mdcore/release-notes/release-notes#accept-only-password-protected-files)
-
-The new **Block unencrypted files** workflow option blocks files that are not password protected with the reason *Password Protection Required*. Password-protected files are processed when the correct password is provided and blocked when no password is supplied.
-
-This option is available for MetaDefender Core standalone deployments.
-
-### [Per-file-type configuration for Proactive DLP](/docs/mdcore/release-notes/release-notes#per-file-type-configuration-for-proactive-dlp)
-
-Proactive DLP detection and redaction settings can now be configured by file type, allowing different policies for formats such as PDF and Office documents.
-
-Per-file-type settings apply when Proactive DLP is enabled for that file type and require a supported Proactive DLP engine version.
-
-### [Customize Core email notification templates](/docs/mdcore/release-notes/release-notes#customize-core-email-notification-templates)
-
-Core email notifications can use customized message templates instead of only the built-in wording.
-Administrators can adapt notification content to their organization’s language, branding, or operational guidance.
-This covers the various notification types Core already sends, so outbound mail matches local process needs.
-
-Please check for more details: [Email Template](/docs/mdcore/configuration/email-template)
-
-### [Enforce required headers on file analysis API](/docs/mdcore/release-notes/release-notes#enforce-required-headers-on-file-analysis-api)
-
-Administrators can configure which HTTP headers must be present on file analysis requests (for example `filename`).
-If a required header is missing, MetaDefender Core rejects the submission with a clear API error instead of accepting an incomplete request. This keeps Processing History and audit trails identifiable when business units submit files in bulk.
-The list of required headers is configurable so each deployment can enforce only what it needs.
-
----
-
-**Further Enhancements**
-
-**1) Large SBOM and vulnerability reports without the wait**
-
-SBOM and vulnerability reports can now be generated in the background as PDF or HTML. Completed reports are stored and reused instead of being generated again.
-
-A new reports tray shows progress and provides download or retry actions from any console page. The export timeout, previously fixed at ten minutes, is now configurable in Settings.
-
-**2) Clearer overall results when no AV engine is licensed**
-
-For deployments without licensed antivirus engines, a new workflow option allows the overall result to reflect engines that analyzed the file, such as Adaptive Sandbox, instead of returning *Not Scanned* solely because no antivirus engine participated. Existing behavior remains the default.
-
-**3) More accurate File Structure Validation results**
-
-Internally generated files, empty directories, and symbolic links that are intentionally not scanned are no longer included when File Structure Validation results are rolled up to the original file. The result view also opens the tab containing the issue first.
-
-**4) Faster processing history at scale**
-
-Per-engine summaries are now calculated when scan results are stored rather than on each request, improving Processing History performance for large deployments and bulk integrations such as MOCM.
-
-**5) Processing History stays readable whatever an engine returns**
-
-Engine results are sanitized before storage so unusual characters no longer cause blank threat details in Processing History.
-
-**6) Deep File Inspection**
-
-File Structure Validation is now named **Deep File Inspection** throughout the console. It has a dedicated workflow section, processing-result tab, and Processing History column.
-
-**9) Clearer Adaptive Sandbox license notice**
-
-Adaptive Sandbox now shows a license notice only when the daily limit is reached, including the limit and remaining scans. The previous generic partial-data notice has been removed.
-
-**10) Active performance statistics by source system**
-
-Integrators can include a reserved source identifier in scan metadata to filter active performance statistics by submitting system and detect when a source stops submitting files.
-
-**11) Email notification when processing time exceeds a threshold**
-
-A new email notification can alert administrators when a file’s processing time crosses a configured threshold. The threshold is set in Core email-notification settings (for example 60 minutes). The scan itself continues; the alert is informational so operators can investigate slow or stuck work.
-Useful for monitoring long-running or queue-backed workloads without watching the UI continuously.
-
-**12) Timeout filters on History Scheduled Reports**
-
-History Scheduled Reports can filter on timeout-related verdicts. Administrators can schedule reports (and related alerts) that surface files which timed out or were not completed in time.
-
-**13) Redact license key in logs**
-
-An option can redact the license key wherever it appears in log output. When enabled, only the last four characters remain visible for identification; the rest is masked.
-
----
-
 **Security Enhancements**
 
-- Archive passwords kept out of debug logs: passwords retrieved from Password Storage to open protected archives are no longer written to debug logs.
-- Log file settings from Central Management are validated: log file name validation now also applies to settings pushed from My OPSWAT Central Management.
-- Upgraded 3rd-party libraries:
+Upgraded 3rd-party libraries:
 
-  - OpenSSL v3.5.9
-  - NGINX v1.30.5
-  - 7-Zip v26.03
-
----
-
-**Bug Fixes**
-
-- Fixed an issue that caused a server error after uploading a split archive part larger than 2 GB.
-
----
+- NGINX v1.30.7
 
 New Prerequisites for Core Modules
 

@@ -2,9 +2,11 @@
 
 # Centralized Scanning Profile - Unenrolling from OPSWAT Central Management
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 Unenrolling removes the Centralized Profile from a MetaDefender Drive. The profile loses its approver and its security code. You can do this from OPSWAT Central Management (OCM).
 
-To set the profile up, see [Centralized Scanning Profile - Provisioning from OPSWAT Central Management](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-central-management).
+To set the profile up, see [Centralized Scanning Profile - Provisioning from OPSWAT Central Management.](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-ocm)
 
 ## [Unenroll the Centralized Profile](/docs/mddrive/configuration/centralized-scanning-profile-unenroll-from-ocm#unenroll-the-centralized-profile)
 
@@ -17,7 +19,7 @@ To set the profile up, see [Centralized Scanning Profile - Provisioning from OPS
 
 - The profile no longer has an approver or a security code.
 - Remove the drive's entry from the approver's authenticator app.
-- To use the profile again, enroll it again. See [Provisioning from OPSWAT Central Management](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-central-management).
+- To use the profile again, enroll it again.
 
 ## [Related pages](/docs/mddrive/configuration/centralized-scanning-profile-unenroll-from-ocm#related-pages)
 

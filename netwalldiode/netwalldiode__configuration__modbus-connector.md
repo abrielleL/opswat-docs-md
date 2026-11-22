@@ -2,6 +2,8 @@
 
 # Modbus Connector
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 The Modbus Connector enables transfer of Modbus data unidirectionally across the MetaDefender Optical Diode (hereinafter Optical Diode). The Modbus Connector is configured on the Optical Diode on both the BLUE and RED sides.
 
 Configuring the Modbus Connector on Optical Diode BLUE creates a Modbus client on the BLUE side and a Modbus server on the RED side.
@@ -23,7 +25,7 @@ In the Modbus Connector, all Poll records are zero based.
    2. **Port**: Modbus port on the Modbus server.
    3. Enter the following Modbus-specific information to configure Modbus Poll records:
 
-      - **Unit ID**: This field is used for intra-system routing purpose. It is typically used to communicate to a MODBUS+ or a MODBUS serial line slave through a gateway between an Ethernet TCP-IP network and a MODBUS serial line. This field is set by the MODBUS Client in the request and must be returned with the same value in the response by the server. The Unit Identifier is used to communicate via devices such as bridges, routers and gateways that use a single IP address to support multiple independent MODBUS end units.
+      - **Unit ID**: This field is used for intra-system routing purpose. It is typically used to communicate to a MODBUS+ or a MODBUS serial line server through a gateway between an Ethernet TCP-IP network and a MODBUS serial line. This field is set by the MODBUS Client in the request and must be returned with the same value in the response by the server. The Unit Identifier is used to communicate via devices such as bridges, routers and gateways that use a single IP address to support multiple independent MODBUS end units.
       - **Unit ID (Red)**: Same as before but for the RED side
       - **Start Address:** Start address for the Poll record
       - **# of Elements:** Number of elements the poll will check
@@ -72,7 +74,7 @@ Optical Diode RED - Modbus Configuration
 2. In the **Action** menu, select **Add Poll Rec**.
 3. Click on **Edit or Delete** menu and edit the fields.
 4. Click S**ubmit** to save the changes.
-5. Click on Delete or Edit the record. A confirmation pane displays. Click Yes to confirm your action.
+5. Click on **Delete or Edit** the record. A confirmation pane displays. Click **Yes** to confirm your action.
 
 Modbus - Edit/Delete Poll Records
 

@@ -8,7 +8,7 @@ OPSWAT Central Management's MetaDefender Core Dashboard gives a general overview
 
 Warning
 
-The MetaDefender Core Dashboard feature is only compatible with MetaDefender Core instances of version 4.18+. Because of the integration with ELK technology, the MetaDefender Core Dashboard function requires users to [configure ELK settings on both OPSWAT Central Management](/docs/ocm/configuration/elasticsearch-and-logstash-server-integration-setting) and [the managed MetaDefender Core instances](https://onlinehelp.opswat.com/corev4/3.2.1.__Startup_Core_Configuration.html).
+The MetaDefender Core Dashboard feature is only compatible with MetaDefender Core instances of version 4.18+. Because of the integration with ELK technology, the MetaDefender Core Dashboard function requires users to [configure ELK settings on both OPSWAT Central Management](/configuration/elasticsearch-and-logstash-server-integration-setting) and [the managed MetaDefender Core instances](https://onlinehelp.opswat.com/corev4/3.2.1.__Startup_Core_Configuration.html).
 
 Warning
 
@@ -18,7 +18,7 @@ If you have not yet configured ELK settings, MetaDefender Core Dashboard will sh
 
 After the Elasticsearch and Logstash servers are successfully configured and at least one MetaDefender Core instance with correct Logstash server configuration is connected, the MetaDefender Core Dashboard will be displayed properly.
 
-## [Processing Overview](/docs/ocm/integrations/metadefender-core-dashboard#processing-overview)
+## Processing Overview
 
 Processing Overview shows the combined objects processing history of the managed MetaDefender Core instances. The line chart shows the number of objects processed or blocked by date. The donut chart breaks down the block reasons for the object blocked. The bar chart break downs the object blocked or processed by file types. Miscellaneous statistics are also listed such as the number of objects with sensitive data found with MetaDefender Core's Proactive DLP function or the number of threats sanitized by MetaDefender Core's CDR function. The result can be further refined via the **Filter** function, which can be set to show the last 24 hours, the last 7 days or the last 30 days. Users can also set the refresh interval or perform a manual refresh via the **Refresh** buttons.
 
@@ -26,11 +26,11 @@ Info
 
 Objects refers to the files processed by MetaDefender Core instances, including child files contained in a parent archive-type file.
 
-## [Instances](/docs/ocm/integrations/metadefender-core-dashboard#instances)
+## Instances
 
 The Instances section shows the MetaDefender Core instances under management. Each instance is listed with its license status and scan queue.
 
-## [Configuration of data collection frequency](/docs/ocm/integrations/metadefender-core-dashboard#configuration-of-data-collection-frequency)
+## Configuration of data collection frequency
 
 The data collection frequency for the MetaDefender Core dashboard can be configured in a configuration file located at:
 

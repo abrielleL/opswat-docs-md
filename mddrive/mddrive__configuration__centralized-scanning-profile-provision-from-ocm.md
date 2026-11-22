@@ -2,9 +2,11 @@
 
 # Centralized Scanning Profile - Provisioning from OPSWAT Central Management
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 You can set up the Centralized Scanning Profile of a MetaDefender Drive from OPSWAT Central Management (OCM). The profile assigns an approver to the drive. The approver adds the drive to a 2-FA authenticator app and provides the 6-digit code to operators who need to unlock restricted actions.
 
-This page covers enrolling the profile. To remove it, see [Centralized Scanning Profile - Unenrolling from OPSWAT Central Management](/docs/mddrive/configuration/centralized-scanning-profile-unenroll-from-central-management).
+This page covers enrolling the profile. To remove it, see [Centralized Scanning Profile - Unenrolling from OPSWAT Central Management.](/docs/mddrive/configuration/centralized-scanning-profile-unenroll-from-ocm)
 
 ## [Before you begin](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-ocm#before-you-begin)
 

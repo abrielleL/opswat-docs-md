@@ -37,6 +37,7 @@ OMVA is supported on the following operating systems:
 | Windows Server 2016* | OS version is not available in 32-bit | Yes |  |
 | Windows Server 2019* | OS version is not available in 32-bit | Yes |  |
 | Windows Server 2022* | OS version is not available in 32-bit | Yes |  |
+| Windows Server 2025 | OS version is not available in 32-bit | Yes |  |
 
 > ***NOTE**
 >
@@ -203,3 +204,7 @@ Enter in the new password to configure. Click `Generate` to create a new filenam
 When the ***"Enable boot protection*****"** option is checked, the OMVA application will block access to any external removable media drives that are connected before the system boots up.
 
 To update existing installations, the previous OMVA must be uninstalled with the default password. Then install the newly renamed OMVA installer.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/mdendpoint/llms.txt)

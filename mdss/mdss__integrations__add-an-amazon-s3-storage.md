@@ -118,12 +118,8 @@ To be able to use **autodiscovery**, additional AWS policies are required:
 In order to use an S3 compatible storage unit the following requirements should be met:
 
 - A valid TLS endpoint. since we are enforcing HTTPS for all S3 integrations. A valid certificate is also required. Please note that there is an option to add a custom certificate
-- The storage should be configured to use or support the *virtual-hosted* addressing model, not path based.
 
-The following object storage providers have been validated but any provider that meets the requirements and implements the S3 compatible open standard will work with MDSS:
-
-- MinIO Object Storage
-- Ceph Object Gateway
+We can integrate with any provider that meets the requirements and implements the S3 compatible open standard.
 
 ## Configure UserAgent
 

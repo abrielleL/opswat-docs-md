@@ -2,18 +2,18 @@
 
 # What Operating Systems Does OESIS Support?
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
-### Overview
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+### [Overview](/docs/mdsdk/knowledge-base/what-operating-systems-does-oesis-support#overview)
 
 OESIS supports Windows, macOS, and Linux platforms. This article provides a comprehensive reference of all supported operating system versions, their compatible CPU architectures, and the availability of key OESIS modules — including device Posture (Detection), Vulnerability Assessment, Patch Management, and AppRemover.
 
-### Terminology
+### [Terminology](/docs/mdsdk/knowledge-base/what-operating-systems-does-oesis-support#terminology)
 
 - **End-of-support (EOS):** A product lifecycle status indicating that OESIS will no longer provide maintenance updates, feature enhancements, or bug fixes for the affected OS version. Customers are strongly encouraged to upgrade to a supported platform to ensure continued security and stability.
 
-### OS Support Matrix
+### [OS Support Matrix](/docs/mdsdk/knowledge-base/what-operating-systems-does-oesis-support#os-support-matrix)
 
-#### Legend
+#### [Legend](/docs/mdsdk/knowledge-base/what-operating-systems-does-oesis-support#legend)
 
 | Symbol | Description |
 | --- | --- |
@@ -21,7 +21,7 @@ OESIS supports Windows, macOS, and Linux platforms. This article provides a comp
 | 🚫 | Not Support |
 | ⚠️ | Support, but in the EOL/EOS Plan or maintenance |
 
-#### Windows Matrix
+#### [Windows Matrix](/docs/mdsdk/knowledge-base/what-operating-systems-does-oesis-support#windows-matrix)
 
 | OS | Arch | Compliance | AppRemover | Vulnerability Assessment | Patch Management |
 | --- | --- | --- | --- | --- | --- |
@@ -43,7 +43,7 @@ OESIS supports Windows, macOS, and Linux platforms. This article provides a comp
 | Windows Server 2003 | x86, x86-64 | 🚫 | 🚫 | 🚫 | 🚫 |
 | Windows XP | x86, x86-64 | 🚫 | 🚫 | 🚫 | 🚫 |
 
-#### macOS Matrix
+#### [macOS Matrix](/docs/mdsdk/knowledge-base/what-operating-systems-does-oesis-support#macos-matrix)
 
 | OS | Arch | Compliance | AppRemover | Vulnerability Assessment | Patch Management |
 | --- | --- | --- | --- | --- | --- |
@@ -61,11 +61,11 @@ OESIS supports Windows, macOS, and Linux platforms. This article provides a comp
 | macOS El Capitan | x86-64 | ⚠️ (Maintain only, no QA) | 🚫 | 🚫 | 🚫 |
 | macOS Yosemite | x86-64 | ⚠️ (Maintain only, no QA) | 🚫 | 🚫 | 🚫 |
 
-#### Linux Matrix
+#### [Linux Matrix](/docs/mdsdk/knowledge-base/what-operating-systems-does-oesis-support#linux-matrix)
 
 | OS | Arch | Compliance | AppRemover | Vulnerability Assessment | Patch Management |
 | --- | --- | --- | --- | --- | --- |
-| Ubuntu | x86, x86-64 | ✅ | 🚫 | ✅ | ✅ (20.04, 22.04, 24.04, 25.04, 26.04)  (26.10 is scheduled at the end of Oct) |
+| Ubuntu | x86, x86-64 | ✅ | 🚫 | ✅ | ✅ (20.04, 22.04, 24.04, 25.04, 26.04) |
 | Linux Mint | x86, x86-64 | ✅ | 🚫 | ✅ | ✅ (20, 21, 22) |
 | Debian | x86, x86-64 | ✅ | 🚫 | ✅ | ✅ (11, 12, 13) |
 | Red Hat Enterprise Linux | x86, x86-64 | ✅ | 🚫 | ✅ | ✅ (8, 9, 10) |

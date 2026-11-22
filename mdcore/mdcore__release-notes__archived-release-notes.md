@@ -2,8 +2,286 @@
 
 # Archived release notes
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## Version v5.24.1
+
+Release Date: 18 November 2026
+
+**Adaptive Sandbox for emails whose attachments contain active content**
+
+Adaptive Sandbox can now analyze a container file, such as an MSG email, based on its attachments. A new workflow option, **Include Aggregated Sanitization Details**, under Archive Sanitization on the rule's Compression tab, adds the Deep CDR details of each attachment to the result of the container file. With **Attachment** selected in *Enable for Active Content(s) found by Deep CDR* on the Adaptive Sandbox tab, an MSG file that has an attachment is sent to Adaptive Sandbox.
+
+Default: off.
+
+Requirements and limitation:
+
+- Archive Compression and Archive Extraction engines 8.1.3 or later are required.
+- The current Adaptive Sandbox release (3.3.1) is supported. No Adaptive Sandbox upgrade is needed.
+- Triggering on active content nested inside an attachment or the email body, such as a hyperlink or a macro, is not supported yet and requires a later Adaptive Sandbox version.
+- Password-protected Office and password-protected PDF attachments are not yet included in the aggregated sanitization details of an MSG or EML file, so active content inside them does not trigger Adaptive Sandbox for the email; other attachments are processed as usual, and this will be enhanced in an upcoming release.
+
+---
+
+**Further Enhancements**
+
+**1) Engine update source shown consistently in Central Management**
+
+For instances managed by My OPSWAT Central Management, the engine update source in a Central Management policy now reads *My OPSWAT Central Management* instead of *Internet*, matching what the MetaDefender Core console shows.
+
+**2) Updated Explore section on the Resources page**
+
+The Explore section of the Resources page now includes File Structure Validation, and OPSWAT SBOM has been renamed OPSWAT BOM.
+
+---
+
+**Security Enhancements**
+
+Upgraded 3rd-party libraries:
+
+- SQLite v3.54.1
+- PostgreSQL v18.7
+
+---
+
+**Bug Fixes**
+
+- Fixed an issue where MetaDefender Core could become unresponsive until restarted when many scan or result requests arrived simultaneously shortly after service startup.
+- Fixed an issue where MetaDefender Core could consume excessive memory and crash when scanning large archives with Proactive DLP enabled and a high scan queue size (for example, 10,000).
+
+## Version v5.24.0
+
+Release Date: 04 November 2026
+
+**Keep instance-specific settings under a Central Management group policy**
+
+A My OPSWAT Central Management (MOCM) group policy can now leave selected settings to each instance, while every other setting continues to sync from the policy. A new exclusions tab in the policy covers:
+
+- **HTTPS certificate:** each instance keeps its own host-specific certificate instead of receiving one certificate for the whole group.
+- **Adaptive Sandbox:** each instance keeps its own Sandbox connection, such as the server address and API key, so instances in the same group can use different Sandbox servers.
+
+Turning an exclusion off applies the policy values again on the next sync, with no need to re-enroll the instance.
+
+**Splunk configuration from Central Management**
+
+Splunk integration can now be configured from My OPSWAT Central Management for instances it manages. In the setup wizard, the Splunk step now comes before Central Management enrollment and is skipped once the instance is enrolled, since Central Management then owns that setting.
+
+**Engine lifecycle notifications**
+
+Administrators are now told when an engine needs attention:
+
+- **End of support:** a console notification appears when an engine is near or past its end of support.
+
+- **Newer MetaDefender Core required:** an engine package that requires a newer version of MetaDefender Core is no longer installed, whether it arrives by download, manual upload, or pickup folder, and the current package stays in service. The rejection is shown in the update status on the Engines page, including when updates are applied manually, with a recommendation to upgrade instead of retrying. An installed engine that needs a newer version shows a warning on its tile.
+
+**Percentile processing-time metrics in the Executive Report**
+
+The Executive Report and related dashboard views add P50, P90, P95, and P99 processing-time metrics. A few slow objects no longer hide typical processing speed behind average and maximum alone
+
+**Optional skip for already-sanitized Deep CDR output**
+
+Administrators can enable an option so Deep CDR does not sanitize a file again when Core already produced a sanitized result. The option is off by default. It helps MetaDefender Kiosk and USB repeat-scan flows avoid growing piles of sanitized copies. Details: [Skip Sanitizing Already-sanitized Files](/deep-cdr/skip-sanitizing-already-sanitized-files)
+
+**Email notification when processing slots exceed a threshold**
+
+Administrators can configure alerts when the scan queue or processing-slot usage crosses a defined threshold. Alerts can go by email and surface in the dashboard
+
+---
+
+**Further Enhancements**
+
+**1) Reliable reporting to Central Management over slow connections**
+
+For deployments managed by My OPSWAT Central Management across slow or long-distance connections, reports are now sent reliably during continuous, high-volume scanning. The local report buffer uses far less disk space and memory, and reporting no longer stalls for long periods under load.
+
+**2) Centrally managed certificates in Central Management policies**
+
+The certificate fields of a My OPSWAT Central Management policy, for Secure Connection and for batch signing, now list the certificates assigned to that policy. Each instance in the policy uses its own copy of the selected certificate, even when the instance stores it under an adjusted name.
+
+**3) Skip by Hash expiration from Central Management**
+
+The Skip by Hash list now shows the expiration date that My OPSWAT Central Management sets on a centrally managed entry, so administrators can see when a temporary approval or block ends. After the upgrade, existing centrally managed entries are refreshed once so they show their expiration.
+
+**4) File Structure Validation works with Adaptive Sandbox**
+
+File Structure Validation findings, such as macros and hyperlinks, can now decide whether a file is sent to Adaptive Sandbox, the same way Deep CDR findings already can. Organizations that rely on File Structure Validation instead of Deep CDR for this decision keep the same Sandbox filtering behavior. Files that File Structure Validation extracts are also scanned as soon as the engine returns them, for engine versions that return results during processing.
+
+**5) Add a certificate and its private key from a single file**
+
+Adding a certificate by file upload now accepts a single file that contains both the certificate and its private key, so a combined certificate file can be used as it is delivered.
+
+**6) Clearer Deep CDR summary on the processing result**
+
+The Deep CDR card on the processing result now leads with the total number of objects processed, instead of the sanitized count alone, which often read as zero because Deep CDR mostly removes objects.
+
+**7) Vulnerable packages listed first in the SBOM filter**
+
+When the SBOM filter is selected in an archive's extracted file list, files with vulnerable packages are now listed first, so they no longer have to be found among thousands of clean entries.
+
+**8) Full engine name in the File Processing Time chart**
+
+The File Processing Time chart on the dashboard now labels File Structure Validation by its full engine name in the legend and tooltips, consistent with the other engines in the chart.
+
+**9) Clearer Troubleshooting page layout**
+
+Expanded Troubleshooting content is easier to read and navigate in the Management Console.
+
+**10) File name redaction in logs (data ID instead of file name)**
+
+A setting can replace scanned file names in logs with the scan data ID. This reduces exposure of sensitive names in SIEM and log exports while keeping correlation to the scan record
+
+**11) Usage Report settings included in configuration export**
+
+Usage Report settings are included when you export Core configuration, so container and automated deployments can preserve those choices across environments.
+
+---
+
+**Security Enhancements**
+
+- Several issues found in an internal security review have been addressed, tightening access control on administrative and configuration operations and strengthening input validation.
+
+- Upgraded 3rd-party libraries:
+
+  - Protobuf: upgrade to v33.5
+  - gRPC: upgrade to v1.84.0
+
+---
+
+**Bug Fixes**
+
+- Fixed an issue where a split archive submitted with a workflow rule other than the default was processed with the default rule's settings, although the result showed the selected rule.
+- Fixed an issue where a request refused through a My OPSWAT Central Management connection returned the same generic error for every request, instead of naming the refused request.
+- Core can start the bundled PostgreSQL in immutable, non-root containers with a read-only root file system when FIPS-related OpenSSL config must be written to a writable location
+- Upgrading to 5.23.0-era builds could add a MetaDefender Managed File Transfer rule bound to a disabled security zone, which blocked workflow and zone saves with “Rule refers to invalid zone”. That upgrade path is corrected
+- Importing Skip by Hash CSV lists larger than about 10,000 entries completes reliably. Comments with unpaired UTF-16 surrogates no longer reject the whole batch with HTTP 500
+- A crash path in `ometascan` while scanning and viewing Processing History results was fixed.
+- Post Action webhooks use the network manager from its owner thread, which removes related Qt warnings from syslog
+
+## Version v5.23.0
+
+Release Date: 05 October 2026
+
+**Beyond SBOM: CBOM and AIBOM detection**
+
+The Bill of Materials engine now supports CBOM and AIBOM detection. CBOM inventories cryptographic assets and evaluates quantum resistance, while AIBOM identifies AI models and associated licenses.
+
+CBOM and AIBOM findings appear in processing results and on the Security dashboard. Results for individual files, including files in archives and batches, can be exported as JSON, PDF, or HTML.
+
+**Retrieve and manage quarantined files from Central Management**
+
+Administrators can now download quarantined files from My OPSWAT Central Management (MOCM) without accessing the instance console or opening an inbound port. This supports restricted environments where instances permit only outbound connections.
+
+Files are delivered on demand through the existing Central Management connection as password-protected archives. Administrators can also protect, unprotect, and delete quarantined items using the same permissions required by the instance console.
+
+**Password Storage synchronized with Central Management**
+
+Password Storage is now synchronized from MOCM to enrolled instances, similar to post actions and external scanners. Workflow policies that reference a password storage can therefore be applied consistently across an instance group.
+
+Centrally managed storages are labeled by origin, remain read-only on the instance, and are preserved when a configuration is imported.
+
+**Stop processing an archive as soon as a blocked file is found**
+
+A workflow can now stop further archive extraction and scanning as soon as an extracted file is blocked for a configured reason, reducing unnecessary processing.
+
+Files already being scanned complete their current stage. The option applies independently to each archive.
+
+**Accept only password-protected files**
+
+The new **Block unencrypted files** workflow option blocks files that are not password protected with the reason *Password Protection Required*. Password-protected files are processed when the correct password is provided and blocked when no password is supplied.
+
+This option is available for MetaDefender Core standalone deployments.
+
+**Per-file-type configuration for Proactive DLP**
+
+Proactive DLP detection and redaction settings can now be configured by file type, allowing different policies for formats such as PDF and Office documents.
+
+Per-file-type settings apply when Proactive DLP is enabled for that file type and require a supported Proactive DLP engine version.
+
+**Customize Core email notification templates**
+
+Core email notifications can use customized message templates instead of only the built-in wording.
+Administrators can adapt notification content to their organization’s language, branding, or operational guidance.
+This covers the various notification types Core already sends, so outbound mail matches local process needs.
+
+Please check for more details: [Email Template](/configuration/email-template)
+
+**Enforce required headers on file analysis API**
+
+Administrators can configure which HTTP headers must be present on file analysis requests (for example `filename`).
+If a required header is missing, MetaDefender Core rejects the submission with a clear API error instead of accepting an incomplete request. This keeps Processing History and audit trails identifiable when business units submit files in bulk.
+The list of required headers is configurable so each deployment can enforce only what it needs.
+
+---
+
+**Further Enhancements**
+
+**1) Large SBOM and vulnerability reports without the wait**
+
+SBOM and vulnerability reports can now be generated in the background as PDF or HTML. Completed reports are stored and reused instead of being generated again.
+
+A new reports tray shows progress and provides download or retry actions from any console page. The export timeout, previously fixed at ten minutes, is now configurable in Settings.
+
+**2) Clearer overall results when no AV engine is licensed**
+
+For deployments without licensed antivirus engines, a new workflow option allows the overall result to reflect engines that analyzed the file, such as Adaptive Sandbox, instead of returning *Not Scanned* solely because no antivirus engine participated. Existing behavior remains the default.
+
+**3) More accurate File Structure Validation results**
+
+Internally generated files, empty directories, and symbolic links that are intentionally not scanned are no longer included when File Structure Validation results are rolled up to the original file. The result view also opens the tab containing the issue first.
+
+**4) Faster processing history at scale**
+
+Per-engine summaries are now calculated when scan results are stored rather than on each request, improving Processing History performance for large deployments and bulk integrations such as MOCM.
+
+**5) Processing History stays readable whatever an engine returns**
+
+Engine results are sanitized before storage so unusual characters no longer cause blank threat details in Processing History.
+
+**6) Deep File Inspection**
+
+File Structure Validation is now named **Deep File Inspection** throughout the console. It has a dedicated workflow section, processing-result tab, and Processing History column.
+
+**9) Clearer Adaptive Sandbox license notice**
+
+Adaptive Sandbox now shows a license notice only when the daily limit is reached, including the limit and remaining scans. The previous generic partial-data notice has been removed.
+
+**10) Active performance statistics by source system**
+
+Integrators can include a reserved source identifier in scan metadata to filter active performance statistics by submitting system and detect when a source stops submitting files.
+
+**11) Email notification when processing time exceeds a threshold**
+
+A new email notification can alert administrators when a file’s processing time crosses a configured threshold. The threshold is set in Core email-notification settings (for example 60 minutes). The scan itself continues; the alert is informational so operators can investigate slow or stuck work.
+Useful for monitoring long-running or queue-backed workloads without watching the UI continuously.
+
+**12) Timeout filters on History Scheduled Reports**
+
+History Scheduled Reports can filter on timeout-related verdicts. Administrators can schedule reports (and related alerts) that surface files which timed out or were not completed in time.
+
+**13) Redact license key in logs**
+
+An option can redact the license key wherever it appears in log output. When enabled, only the last four characters remain visible for identification; the rest is masked.
+
+---
+
+**Security Enhancements**
+
+- Archive passwords kept out of debug logs: passwords retrieved from Password Storage to open protected archives are no longer written to debug logs.
+- Log file settings from Central Management are validated: log file name validation now also applies to settings pushed from My OPSWAT Central Management.
+- Upgraded 3rd-party libraries:
+
+  - OpenSSL v3.5.9
+  - NGINX v1.30.5
+  - 7-Zip v26.03
+
+---
+
+**Bug Fixes**
+
+- Fixed an issue that caused a server error after uploading a split archive part larger than 2 GB.
+
 ## Version v5.22.1
+
+Release Date: 15 September 2026
 
 **Upgraded 3rd party libraries:**
 

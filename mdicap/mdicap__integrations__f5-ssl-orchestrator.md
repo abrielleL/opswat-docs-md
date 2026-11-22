@@ -2,7 +2,7 @@
 
 # F5 SSL Orchestrator
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 Sample Deployment Diagram
 

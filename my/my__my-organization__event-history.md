@@ -18,3 +18,16 @@ The following events are available.
 - **Remove:** A user has been removed from the organization. The **Impacted** column shows the removed user's email address.
 - **Sign In:** A user has just logged into My OPSWAT.
 - **Sign Out:** A use has just logged out of My OPSWAT
+
+The following changes are also recorded:
+
+- **Default Support Case Watchers:** turning default watchers on or off, adding a default watcher, and removing a default watcher, including the option selected for the contact's open cases. See [Default Support Case Watchers](https://www.opswat.com/docs/my/my-organization/notifications).
+- **Unassigned license keys visible:** changing the setting in ***My Organization > Settings***. See [Unassigned license keys visible](https://www.opswat.com/docs/my/my-organization/security#unassigned-license-keys-visible).
+- **License edits:** changes to the key owners, note or PO Number of a license key. See [Edit a license](https://www.opswat.com/docs/my/license-management/my-organization-license#edit-a-license).
+- **Deployment edits:** changes to the description or deployment owners of a deployment. See [Edit a deployment](https://www.opswat.com/docs/my/license-management/manage-active-deployments#edit-a-deployment).
+
+When owners are cleared automatically, for example because a user is removed from the organization, the change is recorded as made by the system. Edits to a license of a sub-organization are recorded in the Event History of the sub-organization that owns the license.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

@@ -2,8 +2,8 @@
 
 # Getting Started with MetaDefender Drive
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
-## [Boot from MetaDefender Drive](/docs/mddrive/getting-started/getting-started-with-metadefender-drive#boot-from-metadefender-drive)
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## [Boot target system to MetaDefender Drive Bare Metal](/docs/mddrive/getting-started/getting-started-with-metadefender-drive#boot-target-system-to-metadefender-drive-bare-metal)
 
 1. While your device is turned off, insert your MetaDefender Drive into the device's USB Type-A port.
 2. Turn ON your device.
@@ -43,6 +43,10 @@ Warning
 
 Skipping the **Connect to the Internet** step also skips upgrading the Drive software to its latest version. If you operate MetaDefender Drive in an offline environment, you can perform MetaDefender Drive's software and engine updates using the [MetaDefender Drive Toolkit](https://docs.opswat.com/mddrive/advanced-usages/drive-toolkit).
 
+Make sure to use the proper hi-speed USB port and cable
+
+During in Bare Metal boot session, the message about slow I/O operation affection by USB2.0 (or below) throughput will show to grab user's notice.
+
 ## [**License Verification/ Remediation**](/docs/mddrive/getting-started/getting-started-with-metadefender-drive#license-verification-remediation)
 
 MetaDefender Drive will automatically attempt to detect and verify your license. If it can't find a valid license, you will be prompted to remediate it manually:
@@ -74,10 +78,6 @@ For provisining Drive with Toolkit
 Please refer the documentation [MetaDefender Drive Toolkit](/docs/mddrive/getting-started/drive-toolkit)
 
 - You may see the message *Required engines are initializing* right below the engines list. MetaDefender Drive requires a minimum subset of initiated engines to function. As a result, it is required to wait for the engines initialization to finish before you can start performing any scan.
-- It is highly recommended that you regularly
-
-  - [Download Engine Updates](/docs/mddrive/getting-started/update-engines) for Internet Connected Environment or
-  - [Update Engines In Air-Gapped Environment](/docs/mddrive/advanced-usages/update-engines-in-airgapped-environment)
 
 Engine Update Minimum Requirements
 
@@ -156,3 +156,8 @@ If the target machine has 8GB of memory or less, it is recommended to select ***
 *A scan in progress with 4* ***Files with Sensitive Data*** *detected*
 
 *A scan in progress with 19* ***Country of Origin*** *suspected files detected*
+
+To keep MetaDefender Drive up-to-date and manged, follow these instructions:
+
+- [MetaDefender Drive Toolkit](/docs/mddrive/getting-started/drive-toolkit)
+- [Manage MetaDefender Drives with OPSWAT Management](/docs/mddrive/configuration/managing-drives-with-central-management)

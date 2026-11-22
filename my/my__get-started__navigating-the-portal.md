@@ -13,14 +13,15 @@ If you're not sure where to begin, this is a good place to start.
 | Item | Description |
 | ---- | ---- |
 | [Overview](https://www.opswat.com/docs/my/overview/overview) | See license status, alerts, and training progress |
-| [Central Management](https://www.opswat.com/docs/my/central-management/central-management) | Manage multiple OPSWAT products remotely |
+| [Central Management](https://www.opswat.com/docs/my/central-management/central-management) | Shortcut to Central Management version 8 (SaaS) |
 | [Product Downloads](https://www.opswat.com/docs/my/product-downloads/product-downloads) | Access downloadable installers and product details page |
 | [License Management](https://www.opswat.com/docs/my/license-management/license-management) | View license keys track usage and monitor renewal |
-| [OPSWAT Academy](https://www.opswat.com/docs/my/academy/academy) | Enroll in OPSWAT cybersecurity courses monitor learning progress |
+| [Hardware Inventory](https://www.opswat.com/docs/my/hardware-orders/hardware-orders) | Track hardware orders, manage inventory and submit RMA. |
+| [Academy](https://www.opswat.com/docs/my/academy/academy) | Enroll in OPSWAT cybersecurity courses monitor learning progress |
 | [My Organization](https://www.opswat.com/docs/my/my-organization/overview) | Manage organization profile and access control |
 | [Support](https://www.opswat.com/docs/my/support-services/support-services) | Get help, submit tickets, and access resources |
-| [Partner Portal](https://www.opswat.com/docs/my/partner-guide/partner-portal) | For partners Access sales tools, resources, and training |
-| [OPSWAT OEM Portal](https://www.opswat.com/docs/my/others/oem-portal) | For OEMs  Quick access to MetaDefender Endpoint Security SDK artifacts |
+| [Partner Portal](https://www.opswat.com/docs/my/partner-guide/partner-portal) | For partners Access sales and resources |
+| [OEM Portal](https://www.opswat.com/docs/my/oem-portal/oem-portal) | For OEMs  Quick access to MetaDefender Endpoint Security SDK artifacts |
 
 ## Top Menu - Quick Access Tools
 
@@ -44,3 +45,7 @@ This top menu allows you to access OPSWAT's [Access to Cloud Services](https://w
 |  | Profile menu: Access [My Information](https://www.opswat.com/docs/my/my-information/my-information), switch organizations, submit [Data Subject Request](https://www.opswat.com/docs/my/others/data-subject-request), etc. |
 |  | [Notifications](https://www.opswat.com/docs/my/others/notifications): View system notifications and new product release updates |
 | ![](https://uploads.developerhub.io/prod/JYvy/v2pczn5bumi8uo88qybkmbtg7lqse14ga41ilf1o6mz31rsuvmfbkevujbd484r9.png) | [Product Feedback](https://www.opswat.com/docs/my/others/feedback): Submit feedback about OPSWAT’s products and service |
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

@@ -108,9 +108,10 @@ Please see the table below for a detailed permission breakdown.
 | Critical Alerts | Full Access | Full Access | View Only |
 | Event History | View Only | View Only | View Only |
 | License Management | Full Access | Full Access | View Only |
+| NewNotifications Management | Full Access | Full Access | View Only |
 | Organization General Information | Full Access | Full Access | View Only |
 | Role Management | Full Access | Full Access | View Only |
-| Security Management | Full Access | Full Access | View Only |
+| Settings Management | Full Access | Full Access | View Only |
 | Support Service - Organization Cases | Full Access | Full Access | View Only |
 | Support Service - Partner Cases | Full Access | Full Access | View Only |
 | User Management | Full Access | Full Access | View Only |
@@ -127,6 +128,10 @@ With **Sub-Organization Management Enabled**, additional role configurations bec
 
 | Role objects | None | View Only | Full Access |
 | ---- | ---- | ---- | ---- |
-| **License Management - Sub Organization** *Prerequisite:* *Full Access or View Only permission on the* ***License Management*** *role object.* | View licenses, but they are not categorized by sub-organization. All licenses appear in a single list without indication of which belong to sub-organizations. | View licenses categorized by sub-organization, including functions like **Active License** and **See Full License History** | Includes **View Only** permissions and adds the ability to **Download Active Deployment Report** and **View Organization's MetaDefender Cloud License** |
-| **Role Management - Sub Organizations** *Prerequisite:* *Full Access or View Only permission on the* ***Role Management*** *role object.* | No access to sub-organization's role data. | View the list of roles in the sub-organizations; cannot make changes. | -  |
+| **License Management - Sub Organization** | View licenses, but they are not categorized by sub-organization. All licenses appear in a single list without indication of which belong to sub-organizations. | View licenses categorized by sub-organization, including functions like **Active License** and **See Full License History** | Includes **View Only** permissions and adds the ability to **View Organization's MetaDefender Cloud License, ** **Manage Active Deployment, Edit deployment **(description, owner)**; Edit license **(Key owners, Note) |
+| **Role Management - Sub Organizations** *Prerequisite:* *Full Access or View Only permission on the* ***Role Management*** *role object.* | No access to sub-organization's role data. | View the list of roles in the sub-organizations; cannot make changes. |  |
 | **User Management - Sub Organizations** *Prerequisite:* *Full Access or View Only permission on the* ***User Management*** *role object.* | No access to users of sub-organizations. | View, search, and filter users of sub-organizations. Export user list to excel file. | Includes **View Only** permissions and adds the ability to **create new sub-organizations** for the current organization. |
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

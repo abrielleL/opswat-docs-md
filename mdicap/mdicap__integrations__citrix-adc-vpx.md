@@ -2,7 +2,7 @@
 
 # Citrix ADC VPX
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 This documentation is based on Citrix ADC VPX version NS13.0 build 79.64.nc and is the minimum configuration required to integrate Citrix ADC and MetaDefender ICAP Server.
 

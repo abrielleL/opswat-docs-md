@@ -2,6 +2,8 @@
 
 # Import/Export configuration
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 MetaDefender Core current configuration can be exported or a new one can be imported under the **Settings > Top Right Corner > Import or Export**
 
 ## [Export](/docs/mdcore/operating/import-export-configuration#export)
@@ -26,6 +28,7 @@ Click the export button to set the password to encrypt the archive package for e
   - Data Retention: Automatic deletion
   - Health Check: all
   - Central Management: all
+  - Usage Report
 - Users management settings: users, role, directories
 - Engine status and engine advanced configuration: these options are **OFF by default,** user need to select these options if want to export:
 

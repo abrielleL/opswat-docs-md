@@ -2,6 +2,8 @@
 
 # Rate Limiting
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 While communicating with MetaDefender Cloud APIs, you will need to use the authentication mechanism for the given API endpoint and provide your apikey. Each apikey has daily limits, and you can check yours by logging in to [MetaDefender Cloud](https://metadefender.opswat.com/) with your OPSWAT account credentials. Additionally, the MetaDefender Cloud server returns custom headers in each response that will help you track your current API usage.
 
 If you don't have an apikey, see our guide: [Onboarding Process for MetaDefender Cloud API Users](/docs/mdcloud/integrations/onboarding-process-for-metadefender-cloud-api-users)
@@ -56,48 +58,37 @@ When the rate limit is exceeded (user performing more requests per day than thei
 
 The limit is reset after 24 hours from the first request. For example, if an apikey starts calling the API at 11:00 AM and finishes up the rate limit by 22:00 PM, the rate limit will be reset the next day at 11:00 AM.
 
-## [Prevention API Rate Limiting](/docs/mdcloud/integrations/rate-limiting#prevention-api-rate-limiting)
+## [Rate Limiting](/docs/mdcloud/integrations/rate-limiting#rate-limiting)
 
-### [Multiscanning Rate Limit](/docs/mdcloud/integrations/rate-limiting#multiscanning-rate-limit)
+**Limit families.** Each API key has a separate limit for each family of APIs: Prevention (file analysis), Reputation (hash, IP, URL and domain lookups), Sandbox (dynamic analysis), Download (file downloads), Feed (threat intelligence feeds) and Threat Intelligence Search. `GET /v4/apikey/limits/status` returns what remains of each. The `X-RateLimit-For` response header tells you which family a request was counted against.
 
-- When a file is uploaded for multiscanning, the limit is subtracted by 1.
-- When an archive is uploaded for multiscanning, and the user requests an unarchiving, every file inside the archive will be extracted and scanned up to the license limit (see the [licensing](https://metadefender.opswat.com/licensing) page for details).
-- If the uploaded archive contains embedded archives and unarchiving was requested by the user, the embedded archive is also extracted and the files inside are scanned.
-- Every file extracted and scanned from archives is counted as a separate file and the daily limit will be deducted with the total number of files inside the archive plus one because the archive itself is scanned and counted as an individual file. This rule also applies for embedded archives.
-- If the uploaded file is not an archive but the `unarchiving` header is sent (rule: `unarchive` ) the file will not be unarchived and the limit will be subtracted by 1.
+**Daily and monthly intervals.** Limits are counted per day or per month depending on your plan. `X-RateLimit-Reset-In` tells you how many seconds remain in the current interval.
 
-**For Example:**
+##### [**Prevention limit**](/docs/mdcloud/integrations/rate-limiting#prevention-limit)
 
-- When uploading an archive without `unarchiving` header, only the archive itself will be scanned as an individual file and the rate limit will be subtracted by one
-- When uploading an archive with 40 files inside with the `unarchiving` header, the rate limit will be subtracted by 41 (40 files inside + the archive itself)
-- When uploading an archive with 10 files inside with the `unarchiving` header, and one of the 10 files is also an archive with 5 files, the rate limit will be subtracted by 16 (10 files + 5 files in the embedded archive + the archive itself)
+**One file, one call.** Submitting a file consumes one unit of your Prevention limit, whatever combination of Multiscanning, Deep CDR, Proactive DLP and Country of Origin the workflow runs. Deep CDR does not consume a second unit.
 
-Info
+**Archives.** When you ask for archive extraction (`rule: unarchive` or a workflow with extraction enabled), every file extracted from the archive consumes one unit, and the archive itself consumes one. Nested archives are extracted and counted the same way. If the file is not an archive, only one unit is consumed.
 
-**If there is at least one infected file inside the archive, the scan results of the archive will be marked as infected, even if the archive itself is not detected as infected by any engine.**
+Examples:
 
-### [Deep CDR Rate Limit](/docs/mdcloud/integrations/rate-limiting#deep-cdr-rate-limit)
+- An archive submitted without extraction: 1 unit.
+- An archive with 40 files, with extraction: 41 units.
+- An archive with 10 files, one of which is an archive holding 5 files, with extraction: 16 units.
 
-- When a file is uploaded and the Deep CDR header is sent (rule: `sanitize` ), if the file format is supported by Deep CDR, the limit is subtracted by two: one for Multiscanning and one for the Deep CDR analysis
-- When an archive is uploaded with the header rule `multiscan_sanitize_unarchive`, every sanitizable file inside the archive will be sanitized. In addition to the scanned files, the limit will be subtracted by one for every file sanitized inside the archive
-- If the original file is infected, the sanitized version of the file will be scanned using multiscanning free of charge to prove no infection is detected
+If any file inside an archive is infected, the archive is reported as infected even when no engine detects anything in the archive file itself.
 
-## [Reputation API rate limiting](/docs/mdcloud/integrations/rate-limiting#reputation-api-rate-limiting)
+**Sanitized files.** The sanitized version of a file is not rescanned and does not consume a unit. If you want the sanitized version analysed again, submit it as a new file.
 
-### [Not Found Results](/docs/mdcloud/integrations/rate-limiting#not-found-results)
+**Rejected requests.** A request refused with a 4xx error, for example a malformed request or a file over your size limit, does not consume a unit. A request that fails with a 5xx error does.
 
-- When a hash lookup returns not found it is subtracted from the limit at a ratio of 5:1 (for every 5 hashes not found, 1 is subtracted from your rate limit).
+##### [**Sandbox limit**](/docs/mdcloud/integrations/rate-limiting#sandbox-limit)
 
-**For Example**:
+- Each file analysed by Adaptive Sandbox consumes one unit of your Sandbox limit.
+- When an archive is extracted, each extracted file that is sent to the sandbox consumes one unit as its analysis completes. If your remaining Sandbox allowance covers only some of the extracted files, only those files are analysed; when it is exhausted, the scan reports that limits were exceeded and the extracted-file details are omitted.
+- Each file scanned with the Aether workflow consumes one Sandbox unit, charged when the request is accepted. A scan that reaches a definitive verdict early is charged the same as a full run.
+- A sandbox request refused with a 4xx error consumes nothing; `X-RateLimit-Used` reads 0 on such a response.
 
-- If doing 20 hash lookups, and only 10 of them return results (known hashes), the limit will be subtracted by 12 (10 found hashes + 2 times 5 not found hashes)
+##### [**Download limit**](/docs/mdcloud/integrations/rate-limiting#download-limit)
 
-### [Bulk Lookups](/docs/mdcloud/integrations/rate-limiting#bulk-lookups)
-
-- When doing a bulk hash lookup request, the limit is subtracted for every successful response
-- Before doing the lookup on our backend, we eliminate duplicate hashes to avoid subtracting the limit for the same hash multiple times
-- The not found hashes are subtracted at a ratio of 5:1
-
-**For Example:**
-
-- Doing a bulk hash lookup for 20 hashes, where only 10 are found in our database, the limit will be subtracted by 12 (10 found hashes + 2 times 5 not found hashes)
+Downloading a file with `GET /v4/file/{hash}/download` consumes one unit of your Download limit.

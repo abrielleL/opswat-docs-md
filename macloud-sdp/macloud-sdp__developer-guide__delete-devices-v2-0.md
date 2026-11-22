@@ -15,10 +15,10 @@ View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude abou
 
 Use to delete devices on an account
 
-## [API URL](/docs/cm/developer-guidelines/delete-devices-v2-0#api-url)
+## API URL
 
 https://gears.opswat.com/o/api/v2/devices/delete
-## [Request Parameters](/docs/cm/developer-guidelines/delete-devices-v2-0#request-parameters)
+## Request Parameters
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
@@ -27,7 +27,7 @@ https://gears.opswat.com/o/api/v2/devices/delete
 | MAC_list | array<string> | Body | Optional | MAC addresses of devices you want to delete. Don't use this parameter if you already use HWID_list in the body |  |
 | HWID_list | array<string> | Body | Optional | HWIDs of devices you want to delete. Don't use this parameter if you already use MAC_list in the body |  |
 
-## [Response HTTP Code](/docs/cm/developer-guidelines/delete-devices-v2-0#response-http-code)
+## Response HTTP Code
 
 | HTTP Code | Description |
 | --- | --- |
@@ -35,7 +35,7 @@ https://gears.opswat.com/o/api/v2/devices/delete
 | 400 | Bad request |
 | 401 | Unauthorized. Your access_token is invalid or expired |
 
-## [Response Parameters](/docs/cm/developer-guidelines/delete-devices-v2-0#response-parameters)
+## Response Parameters
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -46,7 +46,7 @@ Note: reasons cause failure in deleting a device
 - the cloud couldn't find any devices which reports the given MAC address or HWID
 - the given MAC address is invalid
 
-## [Example](/docs/cm/developer-guidelines/delete-devices-v2-0#example)
+## Example
 
 **Example Request**
 

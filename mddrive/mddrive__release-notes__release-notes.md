@@ -1,45 +1,46 @@
 <!-- source: https://www.opswat.com/docs/mddrive/release-notes/release-notes -->
 
-# MetaDefender Drive v4.4.10
+# MetaDefender Drive v4.4.11
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 |  |  |
 | --- | --- |
-| **Released on** **Oct 02, 2026** | This release includes new features, improvements, bug fixes. |
+| **Released on** **Oct 29, 2026** | This release includes new features, improvements, bug fixes, and known issues. |
 
 **New Features**
 
-- **Automate Out-of-box Experience Setup**: A pre-filled configuration file placed on the drive before deployment handles registration, licensing, and network setup automatically, so MetaDefender Drive is operational without manual steps at the site. Refer to [Automate First-Boot Setup with an Ignition File](/docs/mddrive/configuration/out-of-box-experience-setup) for this new method of setup MetaDefender Drive.
-- **Centralized Scan Profiles with OTP Managed via Central Management:** Added manage OTP in Central Management. Refer to [Centralized Scanning Profile - Provisioning from OPSWAT Central Management](/docs/mddrive/configuration/centralized-scanning-profile-provision-from-ocm) for details.
-- **Allow all preferences in Central Management** Add most common setting in MetaDefender Drive are in Central Management, **including settings for In-Session and KIOSK Certificates for Secure File Storage** (this requires Central Management v.10.7.26091 at minimum. Refer to [Central Management Release](https://www.opswat.com/docs/cm/release-notes) if needed)
-- **Whitelist List Import from Central Management:** Hashes and file locations known to be safe can be imported from OPSWAT Central Management server and then distributed to MetaDefender Drive as an allowed list.
-- **Longer Diff Scan Policy**: The Differential Scan baseline can be kept for up to 365 days on MetaDefender Drive 2 (1 TB)
-- **Show More Status While Booting:** Rather than a static screen for several minutes while scan services load, MetaDefender Drive shows progress messages so the drive does not appear hung.
+- **Threat Removal – In-Place Quarantine:** MetaDefender Drive can quarantine detected files in place during both Bare Metal and In-Session scans. Quarantined files stay on the source volume and can be restored when needed.
 
-- **Sort scan progress**: Newer scan jobs sort to the top of the progress list, so faster jobs remain visibly active even when a slow job is running underneath them.
-- **Expanded Device Inventory:** In-Session and Bare Metal scans now report device inventory to OPSWAT Central Management, adding BIOS type, secure boot status, CPU architecture, memory, Installed Applications, and operating system details.
+  - See [Quarantine Potential Threats In-Place](https://www.opswat.com/docs/mddrive/process/quarantine-potential-threats-in-place).
+  - The [forensic collection](https://www.opswat.com/docs/mddrive/process/collect-forensic-data-from-a-windows-computer) now includes quarantined files, keeping a complete record of quarantined content.
+- **Central Management enrollment from Kiosk:** Any MetaDefender Drive can be enrolled with OPSWAT Central Management through MetaDefender Kiosk when plugged in. See [Enroll MetaDefender Drive with Central Management via Kiosk](https://www.opswat.com/docs/mddrive/configuration/enroll-cm-from-kiosk).
+- **Scan Auto Run:** Administrators can choose Full Scan or Smart Scan to run automatically on system boot. See [Preferences → Auto Run](https://www.opswat.com/docs/mddrive/configuration/preferences-----auto-run).
+- **In-Session works out of the box:** A drive pre-configured with an ignition file applies Central Management enrollment, one-time password authorization, and Wi-Fi settings when started In-Session, matching the Bare Metal experience.
+- **Smart Scan for In-Session:** Operators can run Smart Scan during an In-Session scan, bringing In-Session to parity with Bare Metal scanning options. See [Perform In-Session Scans](https://www.opswat.com/docs/mddrive/process/processing-your-device-with-metadefender-drive-in-session).
 
 **Improvements**
 
-- **Provide clear indication engine ready for scan**: While engines are downloading or installing, the dashboard shows the current status so operators know why scanning cannot begin yet.
-- **Kiosk enrollment on restricted networks:** On networks where certificate revocation list endpoints are unreachable, MetaDefender Drive Toolkit enrollment and engine updates against OPSWAT Central Management complete without error.
-- **Custom scan controls:** Archive scanning and file type analysis can be toggled on or off individually on the Custom scan screen.
-
-- **Missing engine guidance:** When no anti-malware engines are installed, the Custom scan screen replaces the Malware Multiscan checkbox with a message directing to the Engines tab.
-- **Improve In-Session engines setup (splash screen)**: The engine setup phase that appears on launch of MetaDefender Drive In-Session Scan completes faster, cutting the wait before scanning can begin.
-- **Email report signature:** Email scan reports include the digital signature file alongside the PDF.
-- **License-aware engine sync:** License Info now gets synced to OPSWAT Central.
+- **FileType Analysis setting:** FileType Analysis is now a separate setting from Archive Handling and can run on its own. Archive Handling requires FileType Analysis, so it is selected and locked while Archive Handling is on. See [Preferences → FileType Analysis and Archive Handling](https://www.opswat.com/docs/mddrive/configuration/preferences---archive-handling).
+- **Scan time estimate:** The remaining time adjusts gradually as workload is discovered, rather than jumping in large increments, giving a more reliable indication of when the scan will complete.
+- **Low-spec activation:** Machines with 4 GB of RAM or less are no longer blocked from activating a MetaDefender Drive license.
+- **Download progress feedback:** Transfer speed and estimated time remaining are shown during downloads, so operators know the download is progressing.
+- **License error clarity:** A license activation failure now names its cause (wrong key, date mismatch, firewall block, or a server-side error with its HTTP code) instead of a single generic message.
+- **Update check indicator:** The "Checking for new update..." screen shows a progress indicator during the post-install check.
+- **Selective report removal:** Administrators can select and remove individual reports instead of deleting all stored reports at once.
+- **Report sync errors:** When a report fails to reach OPSWAT Central Management, hovering over the warning icon in the report list shows the reason for the failure.
+- **Reporting totals:** Reports in OPSWAT Central Management include more information, including totals, so administrators can answer audit questions directly from the report.
+- **Additional In-Session hardware information:** In-Session now collects additional host inventory, including domain membership and installed software, giving air-gapped environments more visibility.
+- **In-Session device report:** Device inventory and vulnerability data collected during a Smart Touch In-Session scan is improved and available in OPSWAT Central Management through the reports API.
+- **Smart Scan engines:** Smart Scan shows all licensed anti-malware engines immediately after enrollment, without manual reconfiguration.
+- **USB speed alert:** When MetaDefender Drive is connected through USB 2.0 while USB 3.0 is available, users are told they can scan faster by switching ports.
 
 **Bug Fixes**
 
-- Added upfront validation to block scans and clearly notify users when no mountable partitions are found
-- Fixed an issue where Digital Display USBs dropped into the BusyBox prompt during startup
-- Resolves an issue where update check failures in Boot Mode were falsely reported as 'Up to date'
-- Resolves OPSWAT Central Management disconnection after restart
-- Eliminates engine activation hangs caused by virtualized USB I/O emulation overhead
-- MetaDefender Drive reconnects to OPSWAT Central Management when a lost connection is restored
-- Resolves the issue where scan engines disappeared from the UI during boot updates and initialization
-- Resolves the application crash during full In-Session scans
-- Fixing the MetaDefender Drive Integration launcher deadlock eliminates intermittent Kiosk launch failures (14–19%)
-- Enrollment failure messages now identify whether the problem is network-related
+- **Full scan interruption:** A full scan that encounters a service interruption no longer skips the remaining files, so scan results reflect the complete drive contents.
+- **Ghost session error:** Reinserting a MetaDefender Drive after removal no longer shows a false "already running" message caused by processes that did not exit when the drive was unplugged.
+
+**Known Issues**
+
+- **Restore not shown in Central Management action logs:** Windows stores the computer's hardware clock in local time, while MetaDefender Drive reads it as UTC. If the computer last ran Windows in a time zone ahead of UTC, action logs for files restored from **Preferences → In-Place Quarantine** carry a future timestamp and may not show in OPSWAT Central Management. The restore itself is not affected.
+- **In-Session quarantine fails with Microsoft Defender Real-Time Protection:** Real-Time Protection may remove an infected file before In-Session can quarantine it, so the quarantine fails. Temporarily turn off Real-Time Protection before the scan, and turn it back on afterward. See [Quarantine Potential Threats after an In-Session Scan](https://www.opswat.com/docs/mddrive/process/quarantine-threats-in-session-scan).

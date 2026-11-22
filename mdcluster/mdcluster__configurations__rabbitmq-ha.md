@@ -2,6 +2,8 @@
 
 # High Availability support for RabbitMQ
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Info
+
 A minimum of **three** RabbitMQ nodes must be installed on separate hosts for High Availability solution to function properly.
 
 An **odd number** of RabbitMQ nodes is required.
@@ -85,11 +87,11 @@ BashCopy# Windows
 $ rabbitmqctl cluster_status
 ### [Setup Instructions](/docs/mdcluster/configurations/rabbitmq-ha#setup-instructions)
 
-1. Sign to MD Cluster **Control Center** console with your Administrator account.
-2. Navigate to `Inventory` > `Services`.
-3. Expand the `RabbitMQ` group.
-4. Click `Add service`.
+1. Sign in to MD Cluster **Control Center** console with your Administrator account.
+2. Navigate to `Library` > `Services`.
+3. Locate the `RabbitMQ` group.
+4. Click the `+` (Add a RabbitMQ service) button on the right side of the group.
 5. Enter the values for `Name`, `Host`, `Port`, `Username` and `Password` fields of individual RabbitMQ nodes set up in [Build RabbitMQ cluster.](/docs/mdcluster/configurations/rabbitmq-ha#rabbitmq-cluster)
 
-6. Click the Check icon in the bottom right to complete.
-7. Ensure all RabbitMQ nodes are reachable by the MD Cluster **Control Center**.
+6. Click `Add` to complete.
+7. Expand the `RabbitMQ` group and ensure all RabbitMQ nodes are reachable by the MD Cluster **Control Center**.

@@ -2,6 +2,8 @@
 
 # AVEVA PI Connector
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 The NetWall AVEVA Pi Connector extracts values, PI point schema and pertinent Digital State Tables from one or more PI systems in the source (BLUE) domain and stores those values on a designated PI system in the destination (RED) domain.
 
 The Pi Connector also performs historical backfill. Historical backfill alleviates any gaps in archive data on the destination PI system.
@@ -14,7 +16,8 @@ The NetWall AVEVA PI Service software has been tested on Windows 10, Windows 11,
 
 Important
 
-NetWall AVEVA PI Service is a 64 bits application and can't be installed in 32 bits machines.
+- NetWall AVEVA PI Service is a 64 bits application and can't be installed in 32 bits machines.
+- Pi Buffering must be enabled on the flanker.
 
 Please, check the system requirements for an independent node depending on the number of Pi points you need to manage in the table below. Additional resources are required if the AVEVA PI client is installed on the same machine as the PI server:
 
@@ -84,6 +87,7 @@ A security dongle must be inserted in the BLUE side to change configuration.
    25. **Statistics Seconds:** Statistics frequency in seconds. If the value is 0, no statistics are printed (range: 5-3600).
    26. **Use Location1:** If 'Yes' is selected, Location1 on Red must match Instance.
    27. **Description:** user-friendly description for the defined Client.
+   28. **Enabled:** Enable/disable Pi replication configuration
 4. Click on Submit button to save the changes.
 
 ### [PI2PI-Red Service](/docs/netwalldiode/configuration/aveva-pi-connector#pi2pi-red-service)
@@ -115,12 +119,13 @@ A security dongle must be inserted in the RED side to change configuration.
    9. **Database Name:** PI Server name within the Windows Network.
    10. **User:** PI username (leave it blank for using a trusted connection).
    11. **Password:** PI password (leave it blank for using a trusted connection).
-   12. **Point Sources:** User can include here one or more Pi point souces seperated with semicolon.
+   12. **Point Sources:** Input one or more Pi point sources separated with semicolon. Each point name must be unique. Wildcards "*" and "?" are allowed.
    13. **Debug Points:** A maximum number of 10 debugging points can be configured including them in this field separated by semicolon ';'.
    14. **Debug Mode:** User can select the debug mode using this dropdown list. User can select between Disabled, All, Snapshot only and History only.
    15. **Debug details:** User can select the debug detail using this dropdown list. User can select between Count only and List History values.
    16. **Statistics Seconds:** Statistics frequency in seconds. If the value is 0, no statistics are displayed.
    17. **Description:** User-friendly description field for the created client.
+   18. **Enabled:** Enable/disable Pi replication configuration
 4. Click on Submit button to save the changes.
 
 ## [PI Database Replication](/docs/netwalldiode/configuration/aveva-pi-connector#pi-database-replication)
@@ -210,6 +215,7 @@ To configure AVEVA PI Connector, a security dongle must be inserted in the RED s
    18. **Statistics Seconds:** Statistics frequency in seconds. If the value is 0, no statistics are displayed.
    19. **Description:** User-friendly description field for the created client.
    20. **Attribute Blocking:** Identify one or more attributes that are not to be replicated on Red. This applies to all points.
+   21. **Enabled:** Enable/disable Pi replication configuration
 4. Click on Submit button to save the changes.
 
 ## [Optimizing AVEVA Pi Connector Historical Backfill](/docs/netwalldiode/configuration/aveva-pi-connector#optimizing-aveva-pi-connector-historical-backfill)
@@ -248,16 +254,20 @@ Go to the High Availability tab and fill in the following fields:
 
 Click on Submit button to save the changes.
 
-## [Statistics](/docs/netwalldiode/configuration/aveva-pi-connector#statistics)
+## [Connector Statistics](/docs/netwalldiode/configuration/aveva-pi-connector#connector-statistics)
 
 The AVEVA Pi Connector publishes as wide range of statistics that can be utilized for Connector performance monitoring and troubleshooting,
 
 To view statistics, navigate to **AVEVA Pi**  under the **Configuration** menu and click on the **Statistics** tab.
 
-#### [Statistics Tags Export](/docs/netwalldiode/configuration/aveva-pi-connector#statistics-tags-export)
+#### [Blue Statistics](/docs/netwalldiode/configuration/aveva-pi-connector#blue-statistics)
 
-Statistics Tags Export enables user to generate and export statistics tags via a CSV file. The tags can be imported into the Pi Server for AVEVA Pi Connector monitoring.
+#### [Red Statistics](/docs/netwalldiode/configuration/aveva-pi-connector#red-statistics)
 
-To export statistics tags , navigate to **AVEVA Pi**  under the **Configuration** menu and click on the **Statistics** tab. Select **Export Pi Tags** and a CSV file will be automatically generated. Multiple CSV files will be generated based on configuration.
+#### [Statistics Tag Export](/docs/netwalldiode/configuration/aveva-pi-connector#statistics-tag-export)
+
+Statistics Tag Export generates and exports statistics tags via a CSV file. The tags can be imported into the Pi Server for AVEVA Pi Connector monitoring.
+
+To export statistics tags , navigate to **AVEVA Pi**  under the **Configuration** menu and click on the **Statistics** tab. Select **Export Pi Tags** and a CSV file will be automatically generated. One or multiple CSV files will be generated based on your specific configuration.
 
 MetaDefender

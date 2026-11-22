@@ -2,7 +2,7 @@
 
 # MetaDefender Drive v3.15.0
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 | [MetaDefender Drive v3.15.0](/docs/mddrive/release-notes/metadefender-drive-v3-15-0#metadefender-drive-v3150) Released on Dec 08, 2022 | This is a major release that is fully integrated with OPSWAT Toolkit and ready for new advanced features in the future |
 | --- | --- |

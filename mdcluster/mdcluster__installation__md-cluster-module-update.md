@@ -1,8 +1,10 @@
 <!-- source: https://www.opswat.com/docs/mdcluster/installation/md-cluster-module-update -->
 
-# Module update
+# Engine update
 
-MetaDefender Cluster (MD Cluster) introduces three modes of Module Update. To switch between the modes, please sign in to MD Cluster **Control Center** console, navigate to `Settings` and select `Module Update` tab.
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
+MetaDefender Cluster (MD Cluster) introduces three modes of Module Update. To switch between the modes, please sign in to MD Cluster **Control Center** console, navigate to `Settings` and select `Engine Update` tab.
 
 Info
 
@@ -23,14 +25,14 @@ Info
 Please reference [here](https://www.opswat.com/docs/mddownloader/operating/download-all-update-packages) for more details about downloading engine packages from MetaDefender Update Downloader.
 
 1. Sign in to MD Cluster **Control Center** console.
-2. Go to `Inventory` > `Modules`.
-3. Press `Upload Package` at the top right corner.
+2. Go to `Library` > `Engines`.
+3. Click the `...` button at the top right corner and select `Upload Package`.
 
 Info
 
-`Update All` is always disabled if Offline Update mode is selected in `Settings` > `Module Update`.
+`Update All` is always disabled if Offline Update mode is selected in `Settings` > `Engine Update`.
 
-4. Choose your engine package files.
+4. In the `Module Update` dialog, choose your engine package (.zip) files and the corresponding descriptor (.yml) files.
 
 5. Click `Update` to submit the package files.
 
@@ -39,13 +41,13 @@ Info
 Package files from various engines can be selected simultaneously.
 
 6. Wait until engine packages are ready.
-7. Engine update statuses on MetaDefender Core instances can be monitored in `Dashboard` > `System Health` > `Worker Health`.
+7. Engine update statuses on MetaDefender Core instances can be monitored in `Dashboard` > `System Health` > `Workers Health`.
 
 ## [Local folder update](/docs/mdcluster/installation/md-cluster-module-update#local-folder-update)
 
-In local folder update, the administrator can specify the path to a folder in `Pick updates from` option. MD Cluster **Control Center** autonomously gathers packages that are added to the folder, then verifies the packages and stores them in MD Cluster **File Storage** for licensed MetaDefender Core instances to retrieve, install, or update on their end.
+In local folder update, the administrator can specify the path to a folder in `Pick up Updates From` option. MD Cluster **Control Center** autonomously gathers packages that are added to the folder, then verifies the packages and stores them in MD Cluster **File Storage** for licensed MetaDefender Core instances to retrieve, install, or update on their end.
 
-The administrator has the option to select `Delete files after import` so that MD Cluster **Control Center** wipes all packages upon success.
+The administrator has the option to select `Delete Files After Import` so that MD Cluster **Control Center** wipes all packages upon success.
 
 Info
 

@@ -2,7 +2,18 @@
 
 # SBOM release notes
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## [v5.0.1](/docs/mdcore/release-notes/sbom-release-notes#v501)
+
+Release date: 10/28/2026
+
+- Detect the TLS versions enabled by AWS Elastic Load Balancing security policies in Terraform and AWS CloudFormation files, including the hybrid post-quantum key exchange of PQ policies, and report them in the CBOM.
+- Add quantum-readiness rating for TLS protocols and cipher suites.
+- Allow blocking AI models by model type and base model in AIBOM.
+- Keep the declared dependencies of CycloneDX reports, and the notes and annotations of CycloneDX and SPDX reports, in the scan result and in exported reports.
+
+- Reduce database size (requires the matching SCA 5.0.1 engine).
+
 ## [v5.0.0](/docs/mdcore/release-notes/sbom-release-notes#v500)
 
 Release date: 10/05/2026
@@ -24,7 +35,7 @@ Release date: 10/05/2026
 
 Release date: 8/27/2026
 
-- Complete transitive dependency inventory - dependency results now include non-vulnerable packages found in your dependencies' dependencies.
+- Report non-vulnerable dependency packages too, when Return all dependency packages is enabled.
 - SPDX packages without a purl reference are now detected.
 - Validation failures now report a reason.
 

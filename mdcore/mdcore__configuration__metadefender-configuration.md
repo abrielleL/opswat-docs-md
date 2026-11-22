@@ -2,6 +2,7 @@
 
 # MetaDefender Configuration
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [Linux](/docs/mdcore/configuration/metadefender-configuration#linux)
 
 The configuration file for the server is located in `/etc/ometascan/ometascan.conf`
@@ -31,6 +32,8 @@ After modifying the server configuration file you must restart the Metadefender 
 Info
 
 From version 5.15.1, MetaDefender Core (MD Core) allows configuring log file and syslog settings via the MD Core UI or API endpoints ([Advanced Log Configurations](/docs/mdcore/configuration/advanced-log-configuration)). Therefore, the configurations here will be overridden if they conflict with the configurations for the log file or syslog set through the MD Core UI or API endpoints.
+
+We highly recommend configure logger via MetaDefender Core UI.
 
 | key | required | description |
 | --- | --- | --- |
@@ -104,6 +107,8 @@ Info
 From version 5.15.1, MetaDefender Core (MD Core) allows configuring log file and syslog settings via the MD Core UI or API endpoints ([Advanced Log Configurations](/docs/mdcore/configuration/advanced-log-configuration)). Therefore, the configurations here will be overridden if they conflict with the configurations for the log file or syslog set through the MD Core UI or API endpoints.
 
 Event Viewer logging can only be configured in the registry.
+
+We highly recommend configure logger via MetaDefender Core UI.
 
 | key | type | required | description |
 | --- | --- | --- | --- |

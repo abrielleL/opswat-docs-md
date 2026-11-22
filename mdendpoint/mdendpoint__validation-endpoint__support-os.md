@@ -16,7 +16,7 @@
 - Windows 10 Enterprise LTSC
 - Windows 10 IOT 64 bit
 - Windows 11
-- Windows Server 2008 R2, 2012, 2016, 2019, 2022
+- Windows Server 2008 R2, 2012, 2016, 2019, 2022, 2025
 
 > **Additional requirements**
 >
@@ -32,3 +32,7 @@
 - Ubuntu 22.04
 - Ubuntu 24.04
 - Ubuntu 26.04
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/mdendpoint/llms.txt)

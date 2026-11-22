@@ -2,7 +2,9 @@
 
 # Windows
 
-PostgreSQL version 16.9 or higher is required.
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Info
+
+Requires PostgreSQL version 16.9 or later.
 
 ### [Prerequisites](/docs/mdcluster/installation/md-cluster-postgresql-windows#prerequisites)
 
@@ -19,7 +21,7 @@ Before installing the PostgreSQL service, ensure the following requirements are 
 
 ### [Install PostgreSQL](/docs/mdcluster/installation/md-cluster-postgresql-windows#install-postgresql)
 
-1. Go to [Download PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) page.
+1. Go to [Download PostgreSQL](https://get.enterprisedb.com/postgresql/postgresql-16.10-2-windows-x64.exe) page.
 2. Choose and download the Windows x86-64 version.
 3. Once the download is complete, run the installer.
 4. When prompted, keep the **default installation directory**.

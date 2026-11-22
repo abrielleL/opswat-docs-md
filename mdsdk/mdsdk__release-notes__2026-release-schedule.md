@@ -2,7 +2,7 @@
 
 # 2026
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 This page lists every OESIS Framework release in 2026, including releases that have shipped and releases planned for the rest of the year. Select a release date to open its release notes. Planned dates may change, and SDK versions for upcoming releases are announced in the release notes on the release date.
 
@@ -72,8 +72,10 @@ Starting October 2026, OESIS Framework moves from a weekly to a bi-weekly releas
 | [Fri, Oct 2, 2026](https://www.opswat.com/docs/mdsdk/release-notes/october-02-2026) | Hotfix | 4.3.6685.0 | 4.3.5684.0 | 4.3.6077.0 | Released |
 | [Wed, Oct 7, 2026](https://www.opswat.com/docs/mdsdk/release-notes/october-07-2026) | Hotfix | 4.3.6706.0 | — | 4.3.6098.0 | Released |
 | [Tue, Oct 13, 2026](https://www.opswat.com/docs/mdsdk/release-notes/october-13-2026) | Bi-weekly | 4.3.6729.0 | 4.3.5726.0 | 4.3.6120.0 | Released |
-| Tue, Oct 27, 2026 | Monthly | TBA | TBA | TBA | Planned |
-| Tue, Nov 10, 2026 | Bi-weekly | TBA | TBA | TBA | Planned |
+| [Tue, Oct 27, 2026](https://www.opswat.com/docs/mdsdk/release-notes/october-27-2026) | Monthly | 4.3.6788.0 | 4.3.5785.0 | 4.3.6181.0 | Released |
+| [Thu, Oct 29, 2026](https://www.opswat.com/docs/mdsdk/release-notes/october-29-2026) | Hotfix | — | — | 4.3.6193.0 | Released |
+| [Wed, Nov 4, 2026](https://www.opswat.com/docs/mdsdk/release-notes/november-04-2026) | Hotfix | 4.3.6830.0 | — | — | Released |
+| [Tue, Nov 10, 2026](https://www.opswat.com/docs/mdsdk/release-notes/november-10-2026) | Bi-weekly | 4.3.6852.0 | 4.3.5843.0 | 4.3.6240.0 | Released |
 | Wed, Nov 25, 2026 | Monthly | TBA | TBA | TBA | Planned |
 | Tue, Dec 15, 2026 | Bi-weekly | TBA | TBA | TBA | Planned |
 | Tue, Dec 29, 2026 | Monthly | TBA | TBA | TBA | Planned |

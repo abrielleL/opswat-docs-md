@@ -2,7 +2,7 @@
 
 # Logging traffic of bad requests
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 Logging raw TCP traffic can be used to identify issues with bad requests. It provides debug level details for requests that were refused by ICAP Server's request parser due to syntax errors.
 

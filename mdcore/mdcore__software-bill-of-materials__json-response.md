@@ -1,6 +1,8 @@
 <!-- source: https://www.opswat.com/docs/mdcore/software-bill-of-materials/json-response -->
 
-# JSON response
+# SBOM JSON response
+
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 Source code:
 
@@ -8,9 +10,9 @@ Source code:
 
 JsonCopy{
 "final_verdict":{//the aggregated section for both direct and dependent libs
-"blocked": "<boolean>", //true: found CVEs that have severities are higher than the configured threshold, otherwise it is false
+"blocked": "<boolean>", //true when a CVE is at or above the severity threshold, a package licence is blocked, or ("Block if dependencies have vulnerabilities" on) a dependency is vulnerable
 "verdict": "<string>",
-//<"No Vulnerabilities Found" | "Vulnerabilities Found" | "License Risk Found"> //explaination
+//<"No Vulnerabilities Found" | "Vulnerabilities Found" | "License Risk Found">
 "verdict_explanation": ["<string>"],
 "vulnerable_package_count": "<int>", //total direct and dependent vulnerable libs
 "total_package_count": "<int>", //total direct and dependent libs
@@ -21,14 +23,13 @@ JsonCopy{
 "low": "<int>", //total low CVE
 "unknown": "<int>" //total unknown CVE, do not know the severity
 },
-"severity": "<string>", //highest CVE severity from direct and dependent libs
-"dependencies_severity": "<string>", //show if enable dependency detection
+"severity": "<string>", //highest CVE severity from direct and dependent libs; omitted when no vulnerability is found
 "licensing_package_counts": {
 "allowed": "<int>",
 "blocked": "<int>",
 "unknown": "<int>",
 "unsupported": "<int>"
-},
+}
 },
 "other_report_formats": [ // report types that could be exported
 "cyclonedx",
@@ -37,7 +38,7 @@ JsonCopy{
 "overview_report": {
 "author": {
 "name": "OPSWAT Inc.",
-"tool": "SBOM <version string>" // SBOM version
+"tool": "BOM-<engine version>" // e.g. "BOM-5.0.1"
 },
 "scan_mode": "source_code", //source code or container
 "severity": "<string>", //the highest CVE severity from the direct libs
@@ -71,6 +72,10 @@ JsonCopy{
 "group": "<string> ['lang_pkg']",
 "package_name": "<string>",
 "package_version": "<string>",
+"type": "<string>", //component type
+"description": "<string>",
+"licenses": { ... }, //licences found for the package; {} when none
+"original_purl": "<string>", //the package's purl
 "release_date": "<string>",
 "target": "<string>", //the input file name (e.g. pom.xml, requirements.txt, Project.toml, renv.lock, report.spdx.json)
 "vulnerabilities": [
@@ -159,8 +164,8 @@ Container:
 
 JsonCopy{
 "final_verdict":{
-"blocked": "<boolean>",
-"verdict": "<string>",//<"No Vulnerabilities Found" | "Vulnerabilities Found">
+"blocked": "<boolean>", //true when a CVE is at or above the severity threshold or a package licence is blocked
+"verdict": "<string>", //<"No Vulnerabilities Found" | "Vulnerabilities Found">
 "verdict_explanation": ["<string>"],
 "vulnerable_package_count": "<int>",
 "total_package_count": "<int>",
@@ -171,7 +176,13 @@ JsonCopy{
 "low": "<int>",
 "unknown": "<int>"
 },
-"severity": "<string>"
+"licensing_package_counts": {
+"allowed": "<int>",
+"blocked": "<int>",
+"unknown": "<int>",
+"unsupported": "<int>"
+},
+"severity": "<string>" //omitted when no vulnerability is found
 },
 "scan_mode": "container",
 "os_info": {
@@ -239,3 +250,5 @@ JsonCopy{
 }
 ]
 }
+
+Note: severity is present only when at least one vulnerability is found. licensing_package_counts is always present.

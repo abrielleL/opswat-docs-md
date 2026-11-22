@@ -2,6 +2,7 @@
 
 # Errors
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [Error response example](/docs/mdcloud/integrations/errors#error-response-example)
 
 BashCopy{
@@ -78,10 +79,10 @@ messages: [
 |  | 400143 | Private scanning not enabled for the provided API key. | **400** |
 |  | 400144 | Exceeded maximum file size allowed. | **400** |
 |  | 400145 | Request body is empty. Please send a binary file. | **400** |
-|  | 400146 | Provided download url is not valid or inaccessible. | **400** |
+|  | 400146 | Provided download URL is not valid or inaccessible, or its host resolves to a private, loopback or reserved address range | **400** |
 |  | 400147 | Rescan Failed. Requested file is missing from our servers. | **400** |
 |  | 400148 | Requested file is a private one and cannot be rescanned. | **400** |
-|  | 400149 | Could not update the rescan count. | **400** |
+|  | 400149 | Provided callback URL is not valid: it must be http(s) and must not point to a private, loopback or reserved address | **400** |
 |  | 400150 | The `file_ids` field array in body is required | **400** |
 |  | 400151 | The `file_ids` field is not an array | **400** |
 |  | 400152 | The `file_ids` field is empty | **400** |
@@ -113,7 +114,7 @@ messages: [
 |  |  |  |  |
 | **Stats** | 400200 | The number of days requested must be a positive integer | **400** |
 |  | 400201 | Invalid objectId | **400** |
-|  | 400202 | Invalid date | **400** |
+|  | 400202 | Invalid date: `start_date` or `end_date` must be ISO 8601 with a UTC offset between -12:00 and +14:00 | **400** |
 |  | 400203 | Invalid outbreak report filter | **400** |
 |  |  |  |  |
 | **Status** | 400210 | Param type must be one of `prevention_api` / `reputation_api` / `feed_api` | **400** |
@@ -153,6 +154,8 @@ messages: [
 |  | 401006 | Invalid API key | **401** |
 |  | 401007 | You are not authorized | **401** |
 |  | 401008 | You are not authorized to download this file | **401** |
+|  | 401009 | OAuth token has expired | **401** |
+|  | 401010 | OAuth token is invalid | **401** |
 |  |  |  |  |
 | **HTTP errors :: 403** | 403000 | Access Forbidden | **403** |
 |  | 403001 | Requested resource doesn't match your API key | **403** |

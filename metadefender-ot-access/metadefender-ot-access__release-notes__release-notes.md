@@ -2,6 +2,42 @@
 
 # Release Notes
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## [Version 2.4.1](/docs/metadefender-ot-access/release-notes/release-notes#version-241)
+
+**Component versions:** Admin UI 2.4.1, Management Console 3.03.0000
+
+### [**New features**](/docs/metadefender-ot-access/release-notes/release-notes#new-features)
+
+- **Automatic Windows client updates.** The Management Console and the Service client can now update themselves from the OT Access server over their existing connection.
+- **Client update management.** Superadmins can upload, choose and delete Windows client update packages in **Settings**
+- **2FA for Active Directory users.** OT Access now enforces two-factor authentication for AD users on both web and client logins, using the 2FA method configured in OT Access.
+- **AD 2FA defaults per LDAP configuration.** Each LDAP configuration can set the default 2FA method for web and client logins, and a preferred country calling code that is added to AD phone numbers for SMS.
+- **Gateway alerts to administrators.** Gateway alert notifications can now also go to all superadmins, or to the administrators of the gateway's site.
+- **Windows client improvements:**
+
+  - The access adapter now ships with the Console, so you no longer need to install the Service client just to get the adapter.
+  - The access adapter now uses the Microsoft-signed Windows loopback adapter, so it installs on Windows 10 1607+ machines with Secure Boot enabled.
+  - Only `https://` server addresses are accepted.
+  - The client is no longer disconnect when there is no endpoint reachable
+  - Console mode without Adapter is installed per user instead of per machine (no administrator right needed )
+
+### [**Improvements/Updates**](/docs/metadefender-ot-access/release-notes/release-notes#improvementsupdates)
+
+- High-Availability cluster stability improvements: Redis replication, peer IP handling and node rejoin.
+- Account security hardening for password reset and password change.
+- Active Directory user profiles are read-only in OT Access and managed in Active Directory. AD users are no longer subject to password expiry in OT Access.
+
+### [**Bug fixes**](/docs/metadefender-ot-access/release-notes/release-notes#bug-fixes)
+
+- Enabling Service Access or Native Access did not update the endpoint state.
+- MFT users could be deleted.
+- Sensitive information could appear in logs.
+- A setting timeout below 1 was accepted.
+- Syslog messages were decoded incorrectly.
+- The Windows client could crash during 2FA.
+- Users with Native Access bypass were not handled correctly
+
 ## [Version 2.4.0](/docs/metadefender-ot-access/release-notes/release-notes#version-240)
 
 Component versions: Admin UI 2.4.0

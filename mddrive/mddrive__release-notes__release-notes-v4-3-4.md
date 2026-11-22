@@ -2,7 +2,7 @@
 
 # MetaDefender Drive v4.3.4
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 |  |  |
 | --- | --- |

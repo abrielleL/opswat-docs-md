@@ -2,7 +2,7 @@
 
 # Advanced Log Configurations
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 Since Metadefender Core (MD Core) v5.15.1, we’ve supported advanced log configuration, you can configure the log settings directly through the MetaDefender Core UI, via My OPSWAT Central Management or via API endpoints: [Logging configuration](/docs/mdcore/metadefender-core#putlogfileconfig)
 

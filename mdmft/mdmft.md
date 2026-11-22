@@ -4,7 +4,7 @@
 
 # Managed File Transfer
 
-#### v3.11.6 [Latest]
+#### v3.12.0 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mdmft/release-notes)
 

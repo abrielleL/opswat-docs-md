@@ -2,7 +2,114 @@
 
 # Metascan release notes
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+### [V 4.3.0](/docs/mdcore/release-notes/metascan-release-notes#v-430)
+
+Release date: 11/19/2026
+
+- Upgrade Avira Linux SDK to 4.15.33
+
+  - new improvements and security updates, further enhancing its stability and performance
+- Upgrade Avira Linux updater
+
+- Upgrade Avira Windows SDK to 4.15.33
+
+  - new improvements and security updates, further enhancing its stability and performance
+- Upgrade Avira Windows updater
+
+- Upgrade [Vir.IT](http://Vir.IT) Windows SDK to 9.5.108
+
+- Upgrade [Vir.IT](http://Vir.IT) ML Windows SDK to 9.5.108
+
+- Upgrade Xvirus Anti-Malware Linux SDK to 5.2.0
+
+  - AI feature improvements
+- Upgrade Xvirus Anti-Malware Linux updater
+
+- Upgrade Xvirus Anti-Malware Windows SDK to 5.2.0
+
+  - AI feature improvements
+- Upgrade Xvirus Anti-Malware Windows updater
+- Engine update for K7 - Linux
+
+- Engine update for K7 - Windows
+
+- Engine update for Sophos - Linux
+
+- Engine update for Sophos - Windows
+- Engine update for ClamAV - Windows
+
+  - Scanning RAR files feature added
+- Engine update for Systweak - Windows
+
+### [V 4.2.19](/docs/mdcore/release-notes/metascan-release-notes#v-4219)
+
+Release date: 11/12/2026
+
+- Engine update for Bitdefender - Windows
+
+- Engine update for ClamAV - Linux
+
+- Upgrade ClamAV Linux updater
+- Engine update for ESET - Linux
+
+- Engine update for Webroot - Linux
+
+- Engine update for Webroot - Windows
+
+- Engine update for Aurora - Linux
+
+- Engine update for Aurora - Windows
+
+  - x7.6 - x2 time performance improvement following curl dependency upgrade
+
+### [V 4.2.18](/docs/mdcore/release-notes/metascan-release-notes#v-4218)
+
+Release date: 11/11/2026
+
+- Upgrade OPSWAT Predictive Alin AI Linux SDK to 3.6.1
+
+  - Added PDF embedded object scanning
+  - Added byte-pattern signatures
+  - Fixed certificate detection for signed PEs
+- Upgrade OPSWAT Predictive Alin AI Windows SDK to 3.6.1
+
+  - Added PDF embedded object scanning
+  - Added byte-pattern signatures
+  - Fixed certificate detection for signed PEs
+- Upgrade OPSWAT Predictive Alin AI Cloud Linux SDK to 3.6.1
+
+  - Added PDF embedded object scanning
+  - Added byte-pattern signatures
+  - Fixed certificate detection for signed PEs
+- Upgrade OPSWAT Predictive Alin AI Linux updater
+- Upgrade OPSWAT Predictive Alin AI Windows updater
+- Upgrade OPSWAT Predictive Alin AI Cloud Linux updater
+
+### [V 4.2.17](/docs/mdcore/release-notes/metascan-release-notes#v-4217)
+
+Release date: 11/4/2026
+
+- Upgrade Xvirus Anti-Malware Linux SDK to 5.1.3
+
+  - New config options for scan only executables and Cloud scan
+  - Refactored the heuristics engine
+- Upgrade Xvirus Anti-Malware Windows SDK to 5.1.3
+
+  - New config options for scan only executables and Cloud scan
+  - Refactored the heuristics engine
+- Upgrade ESET Windows updater
+
+### [V 4.2.16](/docs/mdcore/release-notes/metascan-release-notes#v-4216)
+
+Release date: 10/28/2026
+
+- Upgrade [Vir.IT](http://Vir.IT) ML Windows SDK to 9.5.106
+- Upgrade [Vir.IT](http://Vir.IT) eXplorer Windows SDK to 9.5.106
+- eEngine update for Emsisoft Windows
+
+  - Heuristic Scan config option is always enabled
+
 ### [V 4.2.15](/docs/mdcore/release-notes/metascan-release-notes#v-4215)
 
 Release date: 10/22/2026

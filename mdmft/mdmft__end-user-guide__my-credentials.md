@@ -2,7 +2,7 @@
 
 # My Credentials
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 MetaDefender MFT allows [certain users](/docs/mdmft/operating/RBAC-role-base-access-control-permissions) to store personal credentials for use in other parts of the application.
 

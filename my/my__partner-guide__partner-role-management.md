@@ -72,10 +72,11 @@ Users with the appropriate Role Management permission can manage roles from: **M
 | Hardware Orders - Organization Hardware | View Only | View Only | View Only | View Only | View Only |
 | Hardware Orders - Customer Hardware | View Only | View Only | View Only | View Only | View Only |
 | License Management - Customer Organizations | Full Access | Full Access | None | Full Access | View Only |
+| Notifications Management | Full Access | Full Access | View Only | Full Access | View Only |
 | Organization General Information | Full Access | Full Access | View Only | Full Access | View Only |
 | Role Management | Full Access | Full Access | View Only | View Only | View Only |
 | Role Management - Sub Organizations | View Only | View Only | None | View Only | None |
-| Security Management | Full Access | Full Access | View Only | Full Access | View Only |
+| Settings Management | Full Access | Full Access | View Only | Full Access | View Only |
 | Support Service - Organization Cases | Full Access | Full Access | View Only | Full Access | View Only |
 | Support Service - Customer Cases | Full Access | Full Access | View Only | Full Access | View Only |
 | Support Service - RMA Cases | Full Access | Full Access | View Only | Full Access | View Only |
@@ -84,7 +85,7 @@ Users with the appropriate Role Management permission can manage roles from: **M
 |  | **Super Admin** | **Admin** | **User** | **MDF Admin** | **Partner User** |
 | **Channel Partner Portal Role Object** |  |  |  |  |  |
 | Channel Partner Portal - Deal Management | Full Access | Full Access | View Only | Full Access | Full Access |
-| New Channel Partner Portal - Opportunity Management | View Only | View Only | View Only | View Only | View Only |
+| Channel Partner Portal - Opportunity Management | View Only | View Only | View Only | View Only | View Only |
 | Channel Partner Portal - MDF ** | Full Access | Full Access | View Only | Full Access | View Only |
 | Channel Partner Portal - Organization Playbook | Full Access | Full Access | View Only | Full Access | Full Access |
 

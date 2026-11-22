@@ -2,6 +2,8 @@
 
 # System Upgrade
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 Upgrading MetaDefender Cluster (MD Cluster) requires careful planning because not all services affect the system in the same way.
 
 Some components can be upgraded while file scanning continues normally, while others are critical infrastructure services that affect authentication, queue management, metadata handling, and file availability across the entire cluster.
@@ -151,7 +153,7 @@ The following worker-related features may be temporarily unavailable during the 
 **Upgrade Procedure:**
 
 1. Sign in to MD Cluster Control Center console using your administrator account.
-2. Go to `Inventory`> `Workers` .
+2. Go to `Library` > `Workers`.
 3. In the notification banner, click `Upgrade Now`, then confirm the upgrade action.
 4. Monitor the upgrade progress and verify that all Workers are running the same latest version.
 
@@ -176,9 +178,9 @@ This step includes upgrading:
 
 1. Download the [MD Core](https://my.opswat.com/portal/home/metadefender-core), [MD Cluster API Gateway](https://my.opswat.com/portal/home/metadefender-cluster) or [MD Cluster Callback Service](https://my.opswat.com/portal/home/metadefender-cluster) installer packages from My OPSWAT.
 2. Sign in to the Control Center console using your administrator account.
-3. Navigate to `Inventory`>`Installers`.
-4. Click `Upload Package` and upload the installer packages. For detailed upload instructions, see [here](/docs/mdcluster/operating/md-cluster-operating-installer).
-5. Go to `Inventory`>`Workers`.
+3. Navigate to `Library` > `Installers`.
+4. Click `Upload Installer` and upload the installer packages. For detailed upload instructions, see [here](/docs/mdcluster/operating/md-cluster-operating-installer).
+5. Go to `Library` > `Workers`.
 6. Expand `Deploy Workers` and select `Upgrade`.
 7. Select the appropriate version of MD Core or MD Cluster API Gateway or MD Cluster Callback Service, then click `Upgrade` to start the process. See [Upgrade Instances](/docs/mdcluster/operating/operating-workers#upgrade-instances) for more information.
 
@@ -223,8 +225,8 @@ Interrupting critical infrastructure services while scans are still processing m
 Before starting Stage 2:
 
 1. Log in to the Control Center web console.
-2. Navigate to `Dashboard` > `Processing History` .
-3. Filter requests by **In-Progress.**
+2. Navigate to `History` > `Processing`.
+3. Click `Display Options`, set the `Result` filter to **In Progress**, and click `Apply`.
 
 4. Wait until all requests are completed.
 

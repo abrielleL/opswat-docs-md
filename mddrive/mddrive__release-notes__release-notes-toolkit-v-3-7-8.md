@@ -2,7 +2,7 @@
 
 # MetaDefender Drive Toolkit v3.7.8
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 |  |  |
 | --- | --- |

@@ -4,7 +4,7 @@
 
 # Endpoint
 
-#### v2609 [Latest]
+#### v2611 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mdendpoint/release-notes)
 

@@ -2,6 +2,8 @@
 
 # Standalone DB - Linux
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Disclaimer
+
 These results should be viewed as guidelines and not performance guarantees, since there are many variables that affect performance (file set, network configurations, hardware characteristics, etc.). If throughput is important to your implementation, OPSWAT recommends site-specific benchmarking before implementing a production solution.
 
 ## [Environment](/docs/mdcore/installation/standalone-db---linux#environment)
@@ -81,18 +83,18 @@ Detailed information of dataset below will be used for testing:
 
 Product versions:
 
-- MetaDefender Core version 5.22.0
+- MetaDefender Core version 5.23.0
 - Engines:
 
   - Metascan 5: Ahnlab, Bitdefender, ClamAV, ESET, K7
   - Metascan 10: Metascan 5 + Avira, Varist, IKARUS, Quick Heal, TACHYON
-  - Metascan MAX: Metascan 10 + Lionic, CMC, CrowdStrike Falcon ML, Aurora, Trellix, Xcitium, RocketCyber, Sophos, Webroot SMD, Xvirus Anti-Malware
-  - Deep CDR: 8.0.3
-  - Proactive DLP: 3.4.1
-  - Archive: 8.0.3
-  - File type analysis: 8.0.3
-  - File-based vulnerability assessment: 4.57-236
-  - Adaptive Sandbox: 3.2.0
+  - Metascan 20: Metascan 10 + Lionic, CMC, CrowdStrike Falcon ML, Aurora, Trellix, Xcitium, RocketCyber, Sophos, Webroot SMD, Xvirus Anti-Malware
+  - Deep CDR: 8.1.1
+  - Proactive DLP: 3.4.2
+  - Archive: 8.1.1
+  - File type analysis: 8.1.1
+  - File-based vulnerability assessment: 4.3.0.0
+  - Adaptive Sandbox: 3.3.0
 
 ## [MetaDefender Core settings](/docs/mdcore/installation/standalone-db---linux#metadefender-core-settings)
 

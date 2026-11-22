@@ -2,6 +2,8 @@
 
 # Standalone DB - Windows
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Disclaimer
+
 These results should be viewed as guidelines and not performance guarantees, since there are many variables that affect performance (file set, network configurations, hardware characteristics, etc.). If throughput is important to your implementation, OPSWAT recommends site-specific benchmarking before implementing a production solution.
 
 ## [Environment](/docs/mdcore/installation/standalone-db---windows#environment)
@@ -79,20 +81,18 @@ Detailed information of dataset below will be used for testing:
 
 ## [Product Information](/docs/mdcore/installation/standalone-db---windows#product-information)
 
-Product versions:
-
-- MetaDefender Core 5.22.0
+- MetaDefender Core 5.23.0
 - Engines:
 
   - Metascan 8: Ahnlab, Avira, ClamAV, ESET, Bitdefender, K7, Quick Heal, VirIT Explorer
   - Metascan 12: Metascan 8, Varist, Ikarus, Emsisoft, Tachyon
   - Metascan 16: Metascan 12, Bkav Pro, CMC, Xcitium, Zillya!
-  - Deep CDR: 8.0.3
-  - Proactive DLP: 3.4.1
-  - Archive: 8.0.3
-  - File type analysis: 8.0.3
-  - File-based vulnerability assessment: 4.2.416.0
-  - Adaptive Sandbox: 3.2.0
+  - Deep CDR: 8.1.0
+  - Proactive DLP: 3.4.2
+  - Archive: 8.1.0
+  - File type analysis: 8.1.0
+  - File-based vulnerability assessment: 4.3.0.0
+  - Adaptive Sandbox: 3.3.0
 
 ## [MetaDefender Core settings](/docs/mdcore/installation/standalone-db---windows#metadefender-core-settings)
 

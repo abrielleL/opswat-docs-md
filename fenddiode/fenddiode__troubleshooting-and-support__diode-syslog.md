@@ -10,7 +10,8 @@ Syslog messages follow this specified format:
 
 TIME DIODEIP [SIDE_OF_DIODE:APPLICATION] MESSAGE
 
-2026-03-05T18:51:17-05:00 192.168.0.203 [Input: FTP] Server start success2026-03-05T18:51:18-05:00 192.168.0.203 [Output: SFTP] Sending event log
+2026-03-05T18:51:17-05:00 192.168.0.203 [Input: FTP] Server start success
+2026-03-05T18:51:18-05:00 192.168.0.203 [Output: SFTP] Sending event log
 ## [Configuring a Diode to Report Syslog](/docs/fenddiode/troubleshooting-and-support/diode-syslog#configuring-a-diode-to-report-syslog)
 
 Using a web browser, log into the diode’s configuration settings.

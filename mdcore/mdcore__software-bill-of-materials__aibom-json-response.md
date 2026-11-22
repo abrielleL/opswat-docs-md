@@ -2,7 +2,7 @@
 
 # AIBOM JSON response
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 This page describes the `aibom_info` section of the scan result, for integrations that parse it. For what AIBOM detects and how to read it, see [AI Bill of Materials (AIBOM) (Beta)](aibom).
 
@@ -11,9 +11,9 @@ This page describes the `aibom_info` section of the scan result, for integration
 JsonCopy"aibom_info": {
 "final_verdict": {
 "verdict": "<string>",
-//"No AI Components Found" | "License Risk Found" | "AI Components Found"
-"verdict_explanation": ["<string>"], //one entry, equal to "verdict"
-"blocked": <boolean>, //true only when licensing_component_counts.blocked > 0
+//"No AI Components Found" | "License Risk Found" | "AI Components Found" | "Base Model Risk Found" | "Model Type Risk Found"
+"verdict_explanation": ["<string>"], //every statement that applies, in precedence order; the first equals "verdict"
+"blocked": <boolean>, //true when any component is blocked by license, base model or model type, field blocked_component_count, blocked_base_model_count, blocked_model_type_count
 "severity": "INFO", //always "INFO"
 "total_component_count": <int>, //number of entries in "components" (repositories, not files)
 "licensing_component_counts": { //absent when there are no components; zeros are always emitted
@@ -73,22 +73,30 @@ JsonCopy{
 }
 ## [Block states](/docs/mdcore/software-bill-of-materials/aibom-json-response#block-states)
 
-The shape of `aibom_info` tells you whether AIBOM ran:
+The shape of `aibom_info` (inside `module_info`, MetaDefender Core 5.23.0 and later) tells you whether AIBOM ran:
 
 | Shape | Meaning |
 | --- | --- |
-| `aibom_info` :`no exist` | AIBOM did not run: it is disabled in the workflow. |
-| `err_code` + `err_details` | AIBOM ran and could not finish. `err_details` is `"AIBOM cache unavailable."` when the model database is unavailable, and `"The module did not complete this scan."` otherwise. |
-| `final_verdict`, `component_group`, `components` | AIBOM ran. When it found nothing, the verdict is `No AI Components Found`, `component_group` is `{}` ,`components` is `[] and licensing_component_counts`is absent. |
+| `aibom_info` is `{}` | AIBOM did not run: it is disabled in the workflow. |
+| `err_code` + `err_details` only | AIBOM ran and could not finish. `err_details` is `"AIBOM cache unavailable."` when the AIBOM model database is unavailable, and `"The module did not complete this scan."` otherwise. |
+| `final_verdict`, `component_group`, `components` | AIBOM ran. When it found nothing, the verdict is `No AI Components Found`, `component_group` is `{}`, `components` is `[]`, and `licensing_component_counts` and the `blocked_*_count` fields are absent. |
 
 ## [Field notes](/docs/mdcore/software-bill-of-materials/aibom-json-response#field-notes)
 
-- **Absent keys mean "not known".** Inside a component, values are never `null`, `""` or `[]` in place of an unknown, so `"version" in component` is a reliable test. Exceptions: the `format` entry of `metadata` is always present when `component_group` is not empty, the counts in `licensing_component_counts` always include zeros, and `model_card.metrics` is carried exactly as the publisher wrote it, `null` values included.
-- **Verdict.** `verdict` is evaluated in this order: `No AI Components Found` (`total_component_count` is 0), `License Risk Found` (`licensing_component_counts.blocked` is greater than 0), `AI Components Found`. Components with an unknown license do not change the verdict.
+- **Absent keys mean "not known".** Inside a component, values are never `null`, `""` or `[]` in place of an unknown, so `"version" in component` is a reliable test. Exceptions: the `format` entry of `metadata` is always present when `component_group` is not empty, the counts in `licensing_component_counts` always include zeros, Empty and null values are removed at every depth, including inside `model_card.metrics`. Exceptions: the `format` entry of `metadata` is always present when `component_group` is not empty; the counts in `licensing_component_counts` always include zeros; and when `components` is not empty, `blocked_component_count`, `blocked_base_model_count` and `blocked_model_type_count` are always present, zeros included.
+- **Verdict.** `verdict` is evaluated in this order: `No AI Components Found` (`total_component_count` is 0), `License Risk Found` (`licensing_component_counts.blocked` > 0), `Base Model Risk Found` (`blocked_base_model_count` > 0), `Model Type Risk Found` (`blocked_model_type_count` > 0), `AI Components Found`. `verdict_explanation` lists every risk statement that applies, in the same order. Components with an unknown license do not change the verdict.
 - **Finding the scanned file in a repository.** In a component's `hashes[]`, the entry whose `sha256` equals `component_group.group_id` **without the `sha256:` prefix** is the file you scanned, under the name that repository gives it. That name often differs from the one you submitted.
+- **A model file found in no public repository** is still reported, as one component with:
+
+  - `uid`: `ai/model/<file name>@sha256:<digest>`
+  - `type`: `machine-learning-model`
+  - `name`: the file name as submitted
+
+  It has no repository fields, and its license block is empty (`{}`), so it counts as unknown in `licensing_component_counts`. By contrast, a component matched to a repository has `uid` `pkg:huggingface/<owner>/<name>@<commit>`, without `@<commit>` when no commit still holds the file.
 - **Header facts versus registry facts.** `component_group.metadata` comes from the file's bytes; everything on a component comes from the publishing registry. If they disagree, for example `parameters` in `metadata` against `model_card.hyperparameters`, that is worth reviewing, not an error in the report. A registry often reports figures for the whole repository rather than for the one file you scanned.
 - **Metadata names are the scanner's own.** Entries in `metadata` use the scanner's names, not the keys inside the file. A GGUF header's `general.license` is reported as `license`. Its value is free text the file declares; license buckets come from the repository's declaration, not from it.
-- **Component order.** Components are sorted by `published_at`, oldest first.
+- **Component order.** Blocked components come first: those blocked by license, then those blocked by a Block Base Models or Block Model Types pattern. The rest follow the model database's ranking, which by default puts first the repository that the other matches name as their base model, then the repository that published the file earliest. Ties are ordered by `published_at`, oldest first, with undated repositories last. `published_at` is the repository's creation date.
+- A component blocked by a list carries `model_card.blocked_by.base_model` or `model_card.blocked_by.model_type`, each `{ "matched_pattern": "<pattern>", "matched_value": "<value>" }`. Blocked components are listed first.
 
 ## [Example](/docs/mdcore/software-bill-of-materials/aibom-json-response#example)
 

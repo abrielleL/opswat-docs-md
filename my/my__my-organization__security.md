@@ -1,13 +1,13 @@
 <!-- source: https://www.opswat.com/docs/my/my-organization/security -->
 
-# Security
+# Settings
 
 > **Who can use this feature?**
 >
 > - **User type:** [Organization user](https://www.opswat.com/docs/my/get-started/user-types-in-my-opswat-portal#organization-user)
-> - **Role:** Full Access on [Security Management](https://www.opswat.com/docs/my/my-organization/single-organization#role-objects-and-permissions)
+> - **Role:** Full Access on [Settings Management](https://www.opswat.com/docs/my/my-organization/single-organization#role-objects-and-permissions)
 
-As an organization admin, or a user with **Full Access on Security Management** role object, you can manage security settings for your organization by navigating to ***My Organization > Security***
+As an organization admin, or a user with **Full Access on Settings Management** role object, you can manage your organization's settings by navigating to ***My Organization > Settings***. This tab was previously named **Security**.
 
 ![](https://uploads.developerhub.io/prod/JYvy/263pw112vye03djp16hh9pfc6pzqizcnha7h8v0op47cg2j4p2g5kltlkbz792vz.png)
 
@@ -57,3 +57,19 @@ When AI Assistance is disabled, the following changes will apply to Support feat
 > **Please note**
 >
 > If an administrator updates the AI Assistance setting, changes only apply on the user's next login.
+
+### Unassigned license keys visible
+
+This setting decides whether license keys with no owner are also suggested to users of your organization when they [submit a support case](https://www.opswat.com/docs/my/support-services/submit-a-case). By default, the setting is **on**, so keys with no owner are suggested along with the keys a user owns.
+
+The helper text in the portal reads: *"When on, license keys with no owner are also suggested when users submit a support case. When off, users are only suggested the keys they own."*
+
+![](https://uploads.developerhub.io/prod/JYvy/eozoy952h3co4m48wgawfcs2y45ofnh05tpy8vlsu911xu7tlyudfos6k0d1fct1.png)
+
+Turn the setting off if your organization assigns key owners and you want users to be suggested only the license keys they own. You assign key owners in License Management, see [Edit a license](https://www.opswat.com/docs/my/license-management/my-organization-license#edit-a-license).
+
+This setting does not change what License Management shows. Each organization has its own setting, and a sub-organization sets its value in its own ***My Organization > Settings*** tab. Changes are recorded in [Event History](https://www.opswat.com/docs/my/my-organization/event-history).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

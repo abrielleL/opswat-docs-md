@@ -1,6 +1,6 @@
 <!-- source: https://www.opswat.com/docs/my/release-notes/2026-3-7 -->
 
-# 2026.3.7 - Oct 5th
+# v2026.3.7 - Oct 5th
 
 | **Version** | v2026.3.7.0 |
 | ---- | ---- |

@@ -20,9 +20,12 @@ The Reports page is organized into four tabs:
 ## Actions
 
 - **Export:** download the results as **PDF - All Scans** or **CSV - All CVEs** (and **CSV - All Packages** on the Packages tab). See the Exports page for all export options.
-- **Delete Reports:** clean up old reports by time frame.
+- **Delete Reports:** delete old reports by time frame.
 - **Scan Now:** start a new scan of a repository from its row in the table.
 - **Cancel scan:** stop a running scan from its row in the table.
+- **Compare**: select 2 to 6 completed reports of the same repository, reference and workflow, then click Compare to see how the findings changed. See Repositories.
+
+> Deleting reports does not reduce disk usage. The database keeps the freed space and uses it for new scans.
 
 ## Next steps
 

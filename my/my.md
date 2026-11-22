@@ -4,7 +4,7 @@
 
 # My OPSWAT Portal
 
-#### 2026.4.1 [Latest]
+#### 2026.4.3 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/my/release-notes)
 
@@ -20,7 +20,9 @@ Get Started[##### Get Started
 
 ###### Track and manage organization’s license usage](/docs/my/license-management)[##### Hardware Inventory
 
-###### Track hardware orders, manage inventory, and submit RMA requests.](/docs/my/hardware-orders)[##### Academy
+###### Track hardware orders, manage inventory, and submit RMA requests.](/docs/my/hardware-orders)[##### OEM Portal
+
+###### Access entitled OEM technology and resources](/docs/my/oem-portal)[##### Academy
 
 ###### Access training, view learning insights, and resume courses](/docs/my/academy)[##### My Information
 

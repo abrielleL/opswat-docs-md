@@ -2,7 +2,7 @@
 
 # Engine Clean-up Tool
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page Info
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Info
 
 This article is only applicable to MetaDefender Core 4.19.0 and 4.19.1.
 

@@ -15,21 +15,21 @@ View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude abou
 
 Use this API to retrieve account settings.
 
-## [API URL](/docs/cm/developer-guidelines/account-config-v3-0#api-url)
+## API URL
 
 https://gears.opswat.com/o/api/v3/configuration
-## [Request Parameters](/docs/cm/developer-guidelines/account-config-v3-0#request-parameters)
+## Request Parameters
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
 | access_token | string | URL | Yes | access token which archived from OAuth authentication step |  |
 | sections | Array of strings | Body | Yes | Specify which settings to fetch information. Available options:   - cross-domain-api: Cross-domain API setting |  |
 
-## [Response HTTP Code](/docs/cm/developer-guidelines/account-config-v3-0#response-http-code)
+## Response HTTP Code
 
 See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 
-## [Response Parameters](/docs/cm/developer-guidelines/account-config-v3-0#response-parameters)
+## Response Parameters
 
 | Key | Datatype | Description |
 | --- | --- | --- |
@@ -38,7 +38,7 @@ See [APIs](https://www.opswat.com/docs/macloud-sdp/3.54.0/developer-guide/apis)
 | cross-domain-api.enabled | number | Values:   - 1: API is enable on endpoints at the configured port - 0: API is disable on endpoints |
 | cross-domain-api.port | number | port number which the cross-domain API is listening on endpoints |
 
-## [Example](/docs/cm/developer-guidelines/account-config-v3-0#example)
+## Example
 
 **Request Example**
 

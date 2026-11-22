@@ -176,6 +176,20 @@ To verify the value, sign in and open the browser developer tools Network tab. T
 
 Installs that serve HTTPS themselves with `sudo mdssc -u enable_https`, or use plain HTTP without a TLS proxy, need no change.
 
+## HTTPS Behind a Proxy
+
+Tells MDSSC that a load balancer or proxy in front of it ends HTTPS. With `yes`, the session cookies get the `__Host-` prefix, as they do when MDSSC serves HTTPS itself.
+
+Default value is **no**.
+
+```bash
+HTTPS_BEHIND_PROXY=yes
+```
+
+Use this when a load balancer, reverse proxy or ingress terminates TLS and forwards plain HTTP to MDSSC. Set [Allowed Origins](#allowed-origins) too. After you change the value, run `sudo mdssc -c restart`. All users must log in again.
+
+Installs that serve HTTPS themselves with `sudo mdssc https on` need no change.
+
 > **Note:** The following limits apply to source code repositories, which are downloaded as ZIP archives. Sizes are given in B, KB, MB, GB or TB, where 1 KB = 1024 bytes. A repository that exceeds a limit is not scanned, and the reason appears in the Scan failed message on its report page.
 
 ## Maximum Archive Download Size

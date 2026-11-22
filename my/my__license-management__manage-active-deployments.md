@@ -26,6 +26,10 @@ You can
 - Search the list to find a specific Deployment ID.
 - Export selected deployment IDs to excel file *(not applicable for* *Expired* *licenses)*
 - Select one or multiple Deployment IDs and deactivate them (see below).
+- **Edit** the description and deployment owners of an active deployment (see [Edit a deployment](https://www.opswat.com/docs/my/license-management/manage-active-deployments#edit-a-deployment)).
+- Search the list by deployment **Description**.
+
+The list also shows each deployment's **Description** and **Deployment Owner**, and the **PO Number** of the license key. The PO Number is view only here; you set it when you [edit the license](https://www.opswat.com/docs/my/license-management/my-organization-license#edit-a-license).
 
 > **NOTE**
 > **'Manage Active Deployments'** is not available for Volume licenses.
@@ -47,3 +51,31 @@ You can
 ![](https://uploads.developerhub.io/prod/JYvy/lvlx4ci8lq3srpauf8jo41anoo2lx7kjwyidrgw289kg4o177b8mkc52pkbe580r.png)
 
 The selected deployments are deactivated, and the freed slots become available for reuse. Every activate and deactivate action is recorded in the organization event log. (My Organization > [Event History](https://www.opswat.com/docs/my/my-organization/event-history))
+
+## Edit a deployment
+
+![](https://uploads.developerhub.io/prod/JYvy/gqxhx7gkbvg3fe6rome3p0diqfjq7kkplr7zldhf79t4wzy8gwl1vrs51khmu30x.png)
+
+As a user with **Full Access** on the **License Management** role object (or on **License Management - Sub Organizations** for licenses of a sub-organization), you can edit the description and the owners of an active deployment.
+
+1. Open **Manage Active Deployments** for the license key.
+2. Find the deployment and click **Edit** on its row.
+3. In the **Edit Deployment** dialog, update any of the following fields:
+   - **Description:** optional. The same rules apply as for the description you enter when you [activate a license](https://www.opswat.com/docs/my/license-management/activate-license).
+   - **Deployment Owner:** optional. Select one or more active users of the organization that owns the license who have access to License Management in that organization. You can search by name or email, and there is no limit on the number of owners.
+4. Click **Save**. The button stays disabled until you change a value.
+
+> **NOTE**
+>
+> Only active deployments can be edited. For removed and failed deployments, the **Edit** action is disabled.
+
+Deployment owners are for your records and give no extra permissions. Owners are cleared automatically when:
+
+- the owner is removed from the organization or set to Inactive.
+- the deployment's status becomes Removed.
+
+If an owner later loses access to License Management, they stay an owner, but they are no longer offered when you pick new owners. Every edit is recorded in [Event History](https://www.opswat.com/docs/my/my-organization/event-history).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

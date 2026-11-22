@@ -2,6 +2,7 @@
 
 # Syslog facility
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [Do I need to change this?](/docs/mdcore/configuration/syslog-facility#do-i-need-to-change-this)
 
 Most users can leave this setting alone. MetaDefender Core works out of the box with the default value (`daemon`), which is the same behavior as before this feature existed.

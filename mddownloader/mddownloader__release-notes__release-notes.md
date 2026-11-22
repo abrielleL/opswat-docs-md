@@ -2,7 +2,15 @@
 
 # Release Notes
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## [Version 3.6.1](/docs/mddownloader/release-notes/release-notes#version-361)
+
+Release date: Nov 20, 2026
+
+Enhancements:
+
+- Upgraded NGINX to v1.30.7
+
 ## [Version 3.6.0](/docs/mddownloader/release-notes/release-notes#version-360)
 
 Release date: Oct 08, 2026

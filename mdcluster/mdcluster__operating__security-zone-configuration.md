@@ -2,7 +2,9 @@
 
 # Security zone configuration
 
-The Security zone page is found under `Workflow Management` > `Security Zones` after successful login.
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
+The Security zone page is found under `Workflow`: on the **Workflows** page, click the **...** (more) button and select `Manage Security Zones`.
 
 The following actions are available:
 

@@ -324,7 +324,7 @@ Auth NoneHeaders
 | apikey | string | Generated `session_id` from [Login](/docs/mdcore/metadefender-distributed-cluster/ref#userlogin) call can be used as an `apikey` for API calls that require authentication. |  |
 | --- | --- | --- | --- |
 
-Request Body application/json
+Request Body application/jsonExpand all
 
 | object | object | MetaDefender user role describing object. |  |
 | --- | --- | --- | --- |
@@ -350,7 +350,7 @@ Request Body application/json
 | service | array[string] | An object defining the permission set allowed on MetaDefender individual role.  Enum: `read`,`write` |  |
 | packageupload | array[string] | An object defining the permission set allowed on MetaDefender individual role.  Enum: `read`,`write` |  |
 
-POST /admin/rolecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+POST /admin/rolecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Request processed successfully
 
@@ -600,7 +600,7 @@ Auth NoneHeaders
 | apikey | string | Generated `session_id` from [Login](/docs/mdcore/metadefender-distributed-cluster/ref#userlogin) call can be used as an `apikey` for API calls that require authentication. |  |
 | --- | --- | --- | --- |
 
-GET /admin/config/healthcheckcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /admin/config/healthcheckcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Request processed successfully.
 
@@ -643,7 +643,7 @@ Request Body application/json
 | number_active_av_engines | integer | Minimum number of active anti-virus engines required to be considered healthy. Must be at least 1.  minimum: 1 |  |
 | required_engines | array[string] | List of engine identifiers that must be active for the system to be considered healthy. The `7z` (Archive Extraction) and `filetype` (FileType) engines are always required and will be included regardless of whether they are present in this list. |  |
 
-POST /admin/config/healthcheckcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpsampleResponses application/json 200
+POST /admin/config/healthcheckcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpsampleResponses application/json Expand all200
 
 Request processed successfully. Returns the updated health check configuration.
 
@@ -840,7 +840,7 @@ Auth NoneHeaders
 | apikey | string | Generated `session_id` from [Login](/docs/mdcore/metadefender-distributed-cluster/ref#userlogin) call can be used as an `apikey` for API calls that require authentication. |  |
 | --- | --- | --- | --- |
 
-GET /admin/workercURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /admin/workercURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 A list of connected workers.
 
@@ -940,7 +940,7 @@ Auth NoneHeaders
 | apikey | string | Generated `session_id` from [Login](/docs/mdcore/metadefender-distributed-cluster/ref#userlogin) call can be used as an `apikey` for API calls that require authentication. |  |
 | --- | --- | --- | --- |
 
-GET /admin/worker/instance/deploy/available/{installer_id}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /admin/worker/instance/deploy/available/{installer_id}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Request to get available workers was successful
 
@@ -1005,7 +1005,7 @@ Auth NoneHeaders
 | apikey | string | Generated `session_id` from [Login](/docs/mdcore/metadefender-distributed-cluster/ref#userlogin) call can be used as an `apikey` for API calls that require authentication. |  |
 | --- | --- | --- | --- |
 
-Request Body Deploy MetaDefender CoreDeploy MetaDefender Cluster API GatewayDeploy MetaDefender Cluster Callback ServiceDeploy MetaDefender Cluster Download Serviceapplication/json
+Request Body application/jsonExpand allOne ofDeploy MetaDefender CoreDeploy MetaDefender Cluster API GatewayDeploy MetaDefender Cluster Callback ServiceDeploy MetaDefender Cluster Download Service
 
 | object | object |  |  |
 | --- | --- | --- | --- |
@@ -1173,7 +1173,7 @@ Auth NoneHeaders
 | apikey | string | Generated `session_id` from [Login](/docs/mdcore/metadefender-distributed-cluster/ref#userlogin) call can be used as an `apikey` for API calls that require authentication. |  |
 | --- | --- | --- | --- |
 
-Request Body File Storage ConfigurationDataLake, DataWarehouse or Broker ConfigurationCaching Configurationapplication/json
+Request Body application/jsonOne ofFile Storage ConfigurationDataLake, DataWarehouse or Broker ConfigurationCaching Configuration
 
 | object | object | service type `filestorage` configuration details |  |
 | --- | --- | --- | --- |
@@ -1217,7 +1217,7 @@ Auth NoneHeaders
 | apikey | string | Generated `session_id` from [Login](/docs/mdcore/metadefender-distributed-cluster/ref#userlogin) call can be used as an `apikey` for API calls that require authentication. |  |
 | --- | --- | --- | --- |
 
-GET /admin/servicecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /admin/servicecURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Details of all added services and their status.
 
@@ -1277,7 +1277,7 @@ Auth NoneHeaders
 | apikey | string | Generated `session_id` from [Login](/docs/mdcore/metadefender-distributed-cluster/ref#userlogin) call can be used as an `apikey` for API calls that require authentication. |  |
 | --- | --- | --- | --- |
 
-Request Body application/json
+Request Body application/jsonExpand all
 
 | object | object | Request payload to connect a service and optionally set display name and configuration. |  |
 | --- | --- | --- | --- |
@@ -1289,7 +1289,7 @@ Request Body application/json
 | password | string | the password for the service. Applicable for type `caching`, `broker`, `datalake`, and `warehouse` |  |
 | connection_key | string | the connection key for the service. Applicable for type `filestorage` |  |
 
-PUT /admin/service/{service_id}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+PUT /admin/service/{service_id}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Request to add service was successful
 
@@ -1387,7 +1387,7 @@ Auth NoneHeaders
 | apikey | string | Generated `session_id` from [Login](/docs/mdcore/metadefender-distributed-cluster/ref#userlogin) call can be used as an `apikey` for API calls that require authentication. |  |
 | --- | --- | --- | --- |
 
-GET /admin/service/{service_type}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /admin/service/{service_type}cURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Request to get service type was successful
 
@@ -1588,7 +1588,7 @@ Auth NoneHeaders
 | apikey | string | Generated `session_id` from [Login](/docs/mdcore/metadefender-distributed-cluster/ref#userlogin) call can be used as an `apikey` for API calls that require authentication. |  |
 | --- | --- | --- | --- |
 
-GET /admin/installercURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /admin/installercURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 Request processed successfully
 
@@ -1673,7 +1673,7 @@ Auth NoneQuery String
 | verbose | boolean | Optional. Return the per-component readiness detail instead of an empty body. |  |
 | --- | --- | --- | --- |
 
-GET /readyzcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json 200
+GET /readyzcURLRequestRequestsnet/httpGuzzleHttpClientOkHttpResponses application/json Expand all200
 
 The MetaDefender Cluster Control Center is ready; every backing service is healthy.
 

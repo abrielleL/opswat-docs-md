@@ -16,7 +16,8 @@ The NetWall AVEVA PI Service software has been tested on Windows 10, Windows 11,
 
 Important
 
-OPSWAT NetWall AVEVA PI Service is a 64 bits application and can't be installed in 32 bits machines.
+- NetWall AVEVA PI Service is a 64 bits application and can't be installed in 32 bits machines.
+- Pi Buffering must be enabled on the flanker.
 
 Please, check the system requirements for an independent node depending on the number of Pi points you need to manage in the table below. Additional resources are required if the AVEVA PI client is installed on the same machine as the PI server:
 
@@ -86,6 +87,7 @@ To configure the AVEVA PI Connector, a security dongle should be inserted in the
    25. **Statistics Seconds:** Statistics frequency in seconds. If the value is 0, no statistics are printed (range: 5-3600).
    26. **Use Location1:** If 'Yes' is selected, Location1 on Red must match Instance.
    27. **Description:** user-friendly description for the defined Client.
+   28. **Enabled:** Enable/disable Pi replication configuration
 4. Click on Submit button to save the changes.
 
 ### [PI2PI-Red Service](/docs/netwall/configuration/osipi-connector#pi2pi-red-service)
@@ -123,6 +125,7 @@ To configure AVEVA PI Connector, a security dongle should be inserted in the RED
    15. **Debug details:** User can select the debug detail using this dropdown list. User can select between Count only and List History values.
    16. **Statistics Seconds:** Statistics frequency in seconds. If the value is 0, no statistics are displayed.
    17. **Description:** User-friendly description field for the created client.
+   18. **Enabled:** Enable/disable Pi replication configuration
 4. Click on Submit button to save the changes.
 
 ## [PI Database Replication](/docs/netwall/configuration/osipi-connector#pi-database-replication)
@@ -166,7 +169,7 @@ To configure AVEVA PI Connector, a security dongle should be inserted in the BLU
    20. **Debug Points:** Points for debugging, separated by semicolon ';'. Maximum 10 points.
    21. **Debug Mode:** User can select the debug mode using this dropdown list. User can select between Disabled, All, Snapshot only and History only.
    22. **Debug Detail:** User can select the debug detail using this dropdown list. User can select between Count only and List History values.
-   23. **Point Sources:** One or more PI point sources, separated with semicolon ';'.
+   23. **Point Sources:** Input one or more Pi point sources separated with semicolon. Each point name must be unique. Wildcards "*" and "?" are allowed.
    24. **Point Filter Name:** Allows filtering on attributes in addition to Point Sources.
    25. **Point Table Refresh Rate:** Rate in hours for transmitting the PI Point Table. Valid values are 0.2-2.
    26. **Schema Records per Second:** Maximum number of Schema records to transmitper second. Valid values are 1000-5000.
@@ -252,6 +255,10 @@ Click on **Submit** button to save the changes.
 The AVEVA Pi Connector publishes as wide range of statistics that can be utilized for Connector performance monitoring and troubleshooting,
 
 To view statistics, navigate to **AVEVA Pi**  under the **Configuration** menu and click on the **Statistics** tab.
+
+#### [Blue Statistics](/docs/netwall/configuration/osipi-connector#blue-statistics)
+
+#### [Red Statistics](/docs/netwall/configuration/osipi-connector#red-statistics)
 
 #### [Statistics Tag Export](/docs/netwall/configuration/osipi-connector#statistics-tag-export)
 

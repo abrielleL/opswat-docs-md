@@ -15,10 +15,10 @@ View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude abou
 
 To retrieve event logs on your account.
 
-## [API URL](/docs/cm/developer-guidelines/get-logs-v2-0#api-url)
+## API URL
 
 https://gears.opswat.com/o/api/v2/logs
-## [Request Parameters](/docs/cm/developer-guidelines/get-logs-v2-0#request-parameters)
+## Request Parameters
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
@@ -27,7 +27,7 @@ https://gears.opswat.com/o/api/v2/logs
 | page | int | URL | Optional | Specific page number which event logs will be returned in. If the requested page exceeds the number of pages of event logs, error code will be 413. It means that the requested page number is too large, no devices will be returned in this case. | 1 |
 | event_type | int | URL | Optional | Specific what kind of event logs you want to retrieve.  1: device events  2: administrator events | 1 |
 
-## [Response HTTP Code](/docs/cm/developer-guidelines/get-logs-v2-0#response-http-code)
+## Response HTTP Code
 
 | HTTP Code | Description |
 | --- | --- |
@@ -36,7 +36,7 @@ https://gears.opswat.com/o/api/v2/logs
 | 406 | Too many records to return |
 | 413 | Requested page number exceeds limit |
 
-## [Response Parameters](/docs/cm/developer-guidelines/get-logs-v2-0#response-parameters)
+## Response Parameters
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ https://gears.opswat.com/o/api/v2/logs
 | eventlog | array<string> | Array of events of the event log. The information will be formated as "<hh:mm> | [AM/PM] | <event category> | <device's hostname> | <event description>" |
 | date | string | timestamp when the event log occurs |
 
-## [Example](/docs/cm/developer-guidelines/get-logs-v2-0#example)
+## Example
 
 **Example Request**
 

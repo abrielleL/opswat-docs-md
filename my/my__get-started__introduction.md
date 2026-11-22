@@ -15,15 +15,16 @@ My OPSWAT Portal is your central place to manage licenses, access support, downl
 
 ## Key Features
 
-- **Streamlined License Management** - View usage, access license details, monitor expiration, and plan renewals proactively.
-- **Comprehensive Support Experience** - Find instant answers with our AI chatbot, connect with a live agent, or submit and manage your support cases – all in one place.
-- **Product Hub** - Easily access all product documentation and latest product installer to ensure optimal performance and security.
-- **Real-time Status Dashboard** - Quickly assess license health, stay on top of account- and system-level updates, and monitor learning progress in a single view.
-- **Integrated Learning Dashboard -** Advance your expertise with integrated OPSWAT Academy. Track progress, climb tiers, unlock badges, and pick up where you left off.
-- **Product Management** - Manage multiple OPSWAT products remotely, improve data flows visibility, and provide better reports for each product and entire account.
+- **License Management: **Stay ahead of every renewal. Track usage, activate offline, and deactivate deployments without a case. 
+- **Hardware Inventory: **Never wonder where your order is. Follow shipping and delivery, and keep all your hardware in one view. 
+- **Trust Center: **See how OPSWAT earns your trust. Access security information and OPSWAT CVEs 
+- **Product Downloads: **Always start with the right version. Get the software and releases you are entitled to. 
+- **Learning & Certifications: **Build skills without a second login. Take courses and labs, climb the Cyber League, earn certificates. 
+- **Comprehensive Support: **Get answers fast. Ask Ozzy, our virtual assistant, chat with an agent, and track every case. 
+- **Organization and Access: **Control who gets in. Invite colleagues, assign roles, and secure access with MFA. 
+- **OEM Portal [OEM CUSTOMERS ONLY]: **Access entitled OEM technology and resources. 
 - **All-in-One Access Point** - Easily access OPSWAT cloud products and services with single sign-on.
-- **Organization and User Management** - Ensure secure access and streamline workflows with role-based access control (RBAC)
-- **Partner Tools**: Register deals, request joint marketing funds, monitor customer licenses, and access sales enablement materials. *(Available only to OPSWAT Partners)*
+- **Partner Tools **OPSWAT Channel Partners only: Register deals, request joint marketing funds, monitor customer licenses, and access sales enablement materials.
 
 > **Tip**
 >
@@ -44,10 +45,16 @@ My OPSWAT Portal is designed for a wide range of users across the OPSWAT ecosyst
 >
 > Feature access varies based on your role and license status. Some capabilities may be limited for prospective users or non-admin roles. Learn more in [User Types](https://www.opswat.com/docs/my/get-started/user-types-in-my-opswat-portal)
 
-> ## Next Steps
+## Next Steps
 
 To get started with My OPSWAT Portal:
 
 1. **Review System Requirements** - Ensure your browser and screen resolution meet the minimum requirements
 2. **Register and Sign in** - Create an OPSWAT account and begin exploring features
 3. **Understand User Types** - Learn about Personal and Organization account types
+
+> Download the PDF version of this documentation [HERE](https://api.developerhub.io/api/public/version/14441/pdf-download?k=a6b51a9a0af05d9ec9d134a90e5330f835674d4c082419d723b5cd85050fe9c8)
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

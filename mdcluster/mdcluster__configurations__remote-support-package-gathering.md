@@ -2,22 +2,24 @@
 
 # Remote Support Package Gathering
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 The support package contains log files and is essential for OPSWAT to troubleshoot issues. Since version **2.2.0**, it is now possible to gather a support package remotely via the web console of the MetaDefender Cluster Control Center.
 
 Info
 
 Ensure that all MD Cluster services are upgraded to version 2.2.0 or higher to fully support this feature.
 
-### [Remote support package gathering steps:](/docs/mdcluster/configurations/remote-support-package-gathering#remote-support-package-gathering-steps)
+### Remote support package gathering steps:
 
-1. Go to `Settings` > `Export` .
-2. Select which MetaDefender Cluster services need to generate support package, then select `Generate`
+1. Go to `Settings` and click `Generate Support Package`.
+2. In the `Export Support Package` dialog, select which MetaDefender Cluster services need to generate support package (`Service Type`) and the `Time Range`, then select `Generate`
 
 Info
 
 Select the MetaDefender Cluster Worker service to generate a support package for its deployed instance as well.
 
-3. Wait for the generation process to complete successfully. Once it is done, the download button will appear, and the support packages will be ready for download.
+3. Wait for the generation process to complete successfully. Once it is done, the package appears with status `Success` in the `Support Package Details` table and can be downloaded from its **Actions** column.
 
 Info
 

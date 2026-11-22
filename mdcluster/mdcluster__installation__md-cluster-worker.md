@@ -2,7 +2,8 @@
 
 # MD Cluster Worker
 
-### [Supported Operating Systems](/docs/mdcluster/installation/md-cluster-worker#supported-operating-systems)
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+### Supported Operating Systems
 
 | OS | Version |
 | --- | --- |
@@ -11,37 +12,37 @@
 
 ---
 
-### [Overview](/docs/mdcluster/installation/md-cluster-worker#overview)
+### Overview
 
 This section describes how to install a **MD Cluster Worker** on a target machine by retrieving and executing an installation script from **MD Cluster Control Center**. After installation, administrators can monitor the health status of the installed worker.
 
 ---
 
-### [Prerequisites](/docs/mdcluster/installation/md-cluster-worker#prerequisites)
+### Prerequisites
 
 | Requirement | Description |
 | --- | --- |
 | Privileges | **Administrator** privileges on Windows; **Root** or **sudo** access on Linux |
 | Network | MD Cluster Worker must be able to communicate with MD Cluster Control Center |
 | Port | Default port 8893 must be open for MD Cluster Control Center to reach |
-| Dependencies | Meet [System requirements](/docs/mdcluster/installation/md-cluster-system-requirements) |
+| Dependencies | Meet [System requirements](/installation/md-cluster-system-requirements) |
 
 ---
 
-### [Allow Cross IP Sessions](/docs/mdcluster/installation/md-cluster-worker#allow-cross-ip-sessions)
+### Allow Cross IP Sessions
 
 1. Sign in to MD Cluster **Control Center** console using your administrator account.
 2. From the sidebar, go to `Settings` > `Security`.
-3. Toggle `Allow Cross IP Sessions`.
+3. In `Session Policies`, toggle `Allow Cross IP Sessions`.
 
 ---
 
-### [Retrieve the installation script](/docs/mdcluster/installation/md-cluster-worker#retrieve-the-installation-script)
+### Retrieve the installation script
 
-1. From the sidebar, go to to `Inventory` > `Workers`.
-2. Expand `Add Workers` and select `Add by script`.
+1. From the sidebar, go to `Library` > `Workers`.
+2. Expand `Add Workers` and select `Add by Script`.
 
-3. In Worker Installation, choose the appropriate platform (Windows or Linux).
+3. In `Add Workers by Script`, choose the appropriate platform (Windows or Linux).
 4. Enter the connection key provided by your administrator and leave the other settings as default.
 
 Warning
@@ -53,7 +54,7 @@ Avoid using **loopback** addresses (such as localhost, 127.0.0.1, or ::1) when g
 
 ---
 
-### [Execute the installation script](/docs/mdcluster/installation/md-cluster-worker#execute-the-installation-script)
+### Execute the installation script
 
 1. Access the target machine.
 2. Run the copied command:
@@ -67,15 +68,15 @@ BashCopy...
 
 ---
 
-### [Verify the installation](/docs/mdcluster/installation/md-cluster-worker#verify-the-installation)
+### Verify the installation
 
 1. Sign in to MD Cluster **Control Center** console.
-2. From the sidebar, go to `Inventory` > `Workers`.
+2. From the sidebar, go to `Library` > `Workers`.
 3. Confirm that the worker with the previously collected Worker ID appears with the correct version and platform.
 
 ---
 
-### [Service management](/docs/mdcluster/installation/md-cluster-worker#service-management)
+### Service management
 
 - Stop the service:
 
@@ -100,7 +101,7 @@ $ sudo systemctl --machine=md-cluster-worker@.host --user restart md-cluster-wor
 
 ---
 
-### [Customize the service configuration](/docs/mdcluster/installation/md-cluster-worker#customize-the-service-configuration)
+### Customize the service configuration
 
 During installation, MD Cluster Worker service generates a configuration file at
 
@@ -121,7 +122,7 @@ $ sudo systemctl --machine=md-cluster-worker@.host --user restart md-cluster-wor
 
 ---
 
-### [Uninstall the service](/docs/mdcluster/installation/md-cluster-worker#uninstall-the-service)
+### Uninstall the service
 
 1. Navigate to MD Cluster Worker installation directory.
 2. Open PowerShell (Admin) on Windows or a sudo terminal on Linux.
@@ -134,7 +135,7 @@ $ sudo <path_to_worker_installed>/bin/uninstall.sh
 
 ---
 
-### [Troubleshooting](/docs/mdcluster/installation/md-cluster-worker#troubleshooting)
+### Troubleshooting
 
 **CURL error 403 during installation**
 
@@ -150,7 +151,7 @@ Solutions:
 
 ---
 
-### [Configuration reference](/docs/mdcluster/installation/md-cluster-worker#configuration-reference)
+### Configuration reference
 
 **Common configurations**
 
@@ -173,11 +174,11 @@ Solutions:
 
 **Advanced configurations**
 
-- `Worker added automatically during installation` (Optional)
+- `Worker Added Automatically During Installation` (Optional)
 
-  - Value: String
+  - Value: On/Off, plus an optional worker host
   - Description: The worker host is automatically detected from the IP address used to connect to MD Cluster Control Center. To register the worker with a DNS or domain name instead, specify the hostname here.
-- `Skip SSL verification when connecting to Control Center` (Optional)
+- `Skip SSL Verification When Connecting to Control Center` (Optional)
 
   - Value: Yes or No
   - Description: Use this option only for testing or when using self-signed certificates. For production, use a CA-signed certificate and keep SSL verification enabled.
@@ -189,7 +190,7 @@ Solutions:
 
   - Value: String
   - Description: Use an **API Key instead of** `Allow Cross IP Sessions` for authentication during installation. This is the recommended alternative when you don’t want to enable Allow Cross IP Sessions.
-- `Skip dependency installation` (Optional, Linux only] :
+- `Skip Dependency Installation` (Optional, Linux only):
 
   - Value: Yes or No
   - Description: Skip installing dependencies on Linux (e.g. when they are pre‑installed or managed by your OS image).

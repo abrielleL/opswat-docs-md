@@ -2,7 +2,7 @@
 
 # External User Settings
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 ### [Show My Files for External Users](/docs/mdmft/configuration/external-user-settings#show-my-files-for-external-users)
 
@@ -30,9 +30,19 @@ This is useful when temporary accounts and file sharing with external people is 
 
 ### [Enforce Random Password for External Users](/docs/mdmft/configuration/external-user-settings#enforce-random-password-for-external-users)
 
-When enabled, the system automatically generates a secure password for new external user accounts. The password is sent directly to the external user via email — account creators cannot set or view it.
+When enabled, the system automatically generates a secure password for new external user accounts. The password is sent directly to the external user via email — account creators cannot set or view it, although the account creators can still change the password.
 
 If disabled (default), the account creator sets the password manually during account creation.
+
+**Prerequisites**
+
+The generated password reaches the external user only by email, so this setting works only when both of these are in place:
+
+1. An email server is configured under **Notifications** > **SMTP**.
+
+2. The **Notify Local, External or Active Directory Users Upon Account Creation** notification is turned on under **Notifications** > **Notifications Settings**, in the **New User Welcome Notifications** section.
+
+Notifications Settings are available only after an email server is configured, so complete step 1 first. If either prerequisite is missing, the external user doesn't receive their password.
 
 ### [Disable External User Expiration](/docs/mdmft/configuration/external-user-settings#disable-external-user-expiration)
 
@@ -49,6 +59,10 @@ Sets the default period after which a external user account is permanently remov
 Warning
 
 Existing guests will not be able to log in after this option is enabled.
+
+### [Disable Inactive External Users](/docs/mdmft/configuration/external-user-settings#disable-inactive-external-users)
+
+When turned on, External Users who doesn't log in within a configurable period of time, between 1-365 days, will be disabled. Disabled users won't be able to log in until they are enabled again.
 
 ### [Limit Login Attempts for External Users](/docs/mdmft/configuration/external-user-settings#limit-login-attempts-for-external-users)
 

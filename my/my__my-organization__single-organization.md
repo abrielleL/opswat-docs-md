@@ -164,15 +164,16 @@ Please see the table below for a detailed permission breakdown.
 | Number of users | 1 | Multiple | Multiple |
 | Super Admin ownership | Can transfer to another Admin | None | None |
 | **Role Object** | **Permissions** |  |  |
-| New Access Management | Full Access | Full Access | View Only |
+| Access Management | Full Access | Full Access | View Only |
 | Critical Alerts | Full Access | Full Access | View Only |
 | Event History | View Only | View Only | View Only |
 | License Management | Full Access | Full Access | View Only |
 | Hardware Inventory - Organization Hardware | View Only | View Only | View Only |
+| New Notifications Management | Full Access | Full Access | View Only |
 | Organization General Information | Full Access | Full Access | View Only |
 | OAuth Applications | Full Access | Full Access | None |
 | Role Management | Full Access | Full Access | View Only |
-| Security Management | Full Access | Full Access | View Only |
+| Settings Management | Full Access | Full Access | View Only |
 | Support Service - Organization Cases | Full Access | Full Access | View Only |
 | Support Service - Partner Cases | Full Access | Full Access | View Only |
 | Support Service - RMA Cases | Full Access | Full Access | View Only |
@@ -201,12 +202,13 @@ Here’s a breakdown of key Role Objects and their permissions:
 | **Access Management** *Applies to My Organization >* [*Conditional Access *](https://www.opswat.com/docs/my/my-organization/conditional-access)*tab* | No access | View the list of organization conditional access policies | Add or edit organization conditional access policies |
 | **Critical Alert Users** *Applies to My Organization >* [*Critical Alert Users*](https://my.opswat.com/my-organization/critical-alert-users) *tab* | No access | View the list of email list subscribed to receive critical alerts. | Add or remove email subscriptions for critical alerts. |
 | **Event History** *Applies to* *My Organization > *[*Event History*](https://my.opswat.com/my-organization/event-history)* tab* | No access | Can access and view all recorded events; cannot make changes. |  |
-| **License Management** *Applies to* [*License Management*](https://my.opswat.com/license-management/my-organization)* page.* | Can see the License Management tab but cannot view organization's licenses. | View licenses of the current organization, including functions like **Active License** and **See Full License History**. | Includes View Only permissions plus the ability to **Download Active Deployment Report**, **Edit license notes** and **View Organization's MD Cloud License** |
+| **License Management** *Applies to* [*License Management*](https://my.opswat.com/license-management/my-organization)* page.* | Can see the License Management tab but cannot view organization's licenses. | View licenses of the current organization, including functions like **Active License** and **See Full License History**. | Includes View Only permissions plus the ability to **Download Active Deployment Report**, **Edit license** (key owners, note and PO Number), **Edit deployment** (description and deployment owners) and **View Organization's MD Cloud License** |
 | **Hardware Inventory - Organization Hardware** *Applies to Hardware Inventory > Organization Hardware tab* | No access | view your organization's hardware |  |
+| New** Notifications Management** *Applies to My Organization >* [*Notifications*](https://www.opswat.com/docs/my/my-organization/notifications) *tab* | No access | View the default support case watchers list and whether default watchers are turned on; cannot make changes. | Add or remove default support case watchers, and turn default watchers on or off. |
 | **Organization General Information** *Applies to My Organization > *[*General Information*](https://my.opswat.com/my-organization/general-information)* tab* | No access | View organization's general information. | View and update the organization's general information. |
 | **OAuth Applications** *Applies to *[*OAuth Application*](https://my.opswat.com/portal/oauth-application)* function* | No access | -  | Create, update and delete organization OAuth applications |
 | **Role Management** *Applies to My Organization > *[*Roles*](https://my.opswat.com/my-organization/application-roles)* tab* | No access | View the list of roles in your organization; cannot make changes. | View and modify roles, including adding, editing, or removing them. |
-| **Security Management** *Applies to My Organization > *[*Security Management*](https://my.opswat.com/my-organization/security)* tab* | No access | View the security settings; cannot make changes. | View and modify security settings |
+| **Settings Management** *Applies to My Organization > *[*Settings*](https://www.opswat.com/docs/my/my-organization/security)* tab* | No access | View the Settings tab and its settings; cannot make changes. | View and change the settings, including **Unassigned license keys visible**. |
 | **Support Service - Organization Cases** *Applies to* [*Support*](https://my.opswat.com/support-services)* page* | Submit support cases and false detection report | View organization cases - cases submitted by other users in the organization | View and update organization cases |
 | **Support Service - Partner Cases** *Applies to* [*Support*](https://my.opswat.com/support-services)* page* | No access | View partner cases - cases submitted by partners | View and update partner cases |
 | **Support Service - RMA Cases** | No access | View RMA cases | Submit and update RMA Cases |
@@ -215,3 +217,7 @@ Here’s a breakdown of key Role Objects and their permissions:
 Information Roles with Full Access to User Management and Role Management objects in My OPSWAT will be migrated to the other cloud services (such as OPSWAT SSO) as the Admin role.
 
 Information:  The My OPSWAT Portal has removed the rule that "Admins cannot remove other Admins" starting from release 2024.4.1. From this version onward, users who have Full Access permission on User Management can remove all users except the Super Admin.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/my/llms.txt)

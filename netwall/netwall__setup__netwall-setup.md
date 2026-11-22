@@ -2,6 +2,7 @@
 
 # MetaDefender Security Gateway Setup
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [Hardware Requirements](/docs/netwall/setup/netwall-setup#hardware-requirements)
 
 If any items you are supposed to receive are missing or damaged, contact Support.
@@ -110,7 +111,7 @@ Use the following table to connect both servers to your system. You will not nee
 | 6 | RJ45 LAN Port (LAN2) | N/A. |
 | 7 | RJ45 LAN Port (LAN1) | MetaDefender Security Gateway BLUE: Connect to the source network with an ethernet cable.  MetaDefender Security Gateway RED: Connect to the destination network with an ethernet cable. |
 | 8 | Line In | N/A. |
-| 9 | PCIe card slot |  |
+| 9 | PCIe Cable Port | Connect BLUE Serial Cable to RED Serial Cable. |
 | 10 | USB 3.2 Gen 2 Ports | N/A. |
 | 11 | HDMI Port (HDMI1) | Connect to a HDMI monitor to access the CLI. |
 | 12 | DisplayPort (DP1) | N/A. |
@@ -120,6 +121,25 @@ Use the following table to connect both servers to your system. You will not nee
 | 16 | USB 3.2 Gen 2 Ports | N/A. |
 | 17 | Line Out | N/A. |
 | 18 | Microphone | N/A. |
+
+#### [Dell Server for 1GBPS and 10Gbps](/docs/netwall/setup/netwall-setup#dell-server-for-1gbps-and-10gbps)
+
+The following graphic shows the back panel view of the server.
+
+| Port Number | Description | MetaDefender Security Gateway Connection |
+| --- | --- | --- |
+| 1 | COM Port (COM1) | N/A |
+| 2 | RJ45 LAN Port (LAN1) | Security Gateway BLUE: Connect to the source network with an ethernet cable. Security Gateway RED: Connect to the destination network with an ethernet cable. |
+| 3 | RJ45 LAN Port (LAN2) | N/A |
+| 4 | PCIe Cable Port | Connect BLUE Serial Cable to RED Serial Cable. |
+| 5 | SFP1 | 10Gb Ethernet |
+| 6 | SFP2 | 10Gb Ethernet |
+| 7 | Power supply Unit | Connect Optical Diode BLUE and RED to their power supplies with the power cables. |
+| 8 | Power supply Unit | Connect Optical Diode BLUE and RED to their power supplies with the power cables. |
+| 9 | USB Port (USB2) | Plug in the security dongle in one of the USB ports to configure the appliance. |
+| 10 | USB Port (USB1) | Plug in the security dongle in one of the USB ports to configure the appliance. |
+| 11 | iDRAC Port | N/A. |
+| 12 | D-Sub Port (VGA1) | Connect to a VGA monitor to access the CLI. |
 
 ### [Connect servers to each other](/docs/netwall/setup/netwall-setup#connect-servers-to-each-other)
 

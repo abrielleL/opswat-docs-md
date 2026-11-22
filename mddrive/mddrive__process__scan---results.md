@@ -2,7 +2,11 @@
 
 # Scan Reports
 
-MetaDefender Drive offers comprehensive scan reports with detailed lists of issues and vulnerabilities found during scans. Once a scan is completed and its report is generated, users can view lists of the **Files with no issues**, **Potentially Infected files**, **Files with** **Potential Zero-Day Vulnerabilities**, **Files with Sensitive Data**, **Files with Suspicious** **Country of Origin**, and **Skipped Files**. And along with that, previous scan reports can be accessed from the **Reports** page.
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
+**MetaDefender Drive Bare Metal** offers comprehensive scan reports with detailed lists of issues and vulnerabilities found during scans. Once a scan is completed and its report is generated, users can view lists of the **Files with no issues**, **Potentially Infected files**, **Files with** **Potential Zero-Day Vulnerabilities**, **Files with Sensitive Data**, **Files with Suspicious** **Country of Origin**, and **Skipped Files**. And along with that, previous scan reports can be accessed from the **Reports** page.
+
+**MetaDefender Drive In-Session reports are also available** and viewable from a Bare Metal boot session.
 
 ### [Potentially Infected](/docs/mddrive/process/scan---results#potentially-infected)
 
@@ -52,7 +56,7 @@ Firmware Updates
 
 OPSWAT maintains a database of firmware upgrades and keeps it updated periodically with each release. If you find a mismatch or outdated information, please contact OPSWAT with detailed information about the system.
 
-## [System Properties](/docs/mddrive/process/scan---results#system-properties)
+### [System Properties](/docs/mddrive/process/scan---results#system-properties)
 
 By clicking the **View Properties** button at the top of the scan results page, you will be able to view properties extracted from the scanned system, including Serial Number, CPU, Memory, Hostname, Operating System, IP address, and MAC address.
 
@@ -63,10 +67,6 @@ System Properties window
 After each scan, the report will be saved in the ***/reports*** folder of MetaDefender Drive's NTFS partition. From **Settings** →**Preferences** → **Reports,** **you can choose to save the scan reports** **in the following formats:** JSON (default), TXT, PDF and CSV.
 
 Report saving formats
-
-Info
-
-Saving reports to external media is recommended to ensure no data is lost in case of a MetaDefender Drive malfunction.
 
 To view more details about **Skipped Files** and to manage **Scan Results**, please see:
 

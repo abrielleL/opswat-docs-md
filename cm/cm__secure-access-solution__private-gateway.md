@@ -25,7 +25,10 @@ This section walks you through steps to deploy a private gateway with an OVA fil
 5. Import the ova to a virtual machine
 6. Log in as the admin user using the default password.
 7. Update that default password to something more secure.
-8. Give the VM a static IP address. This form will default to the IP address assigned by DHCP, but you can set it to whatever makes sense for your environment.
+8. Give the VM static IP addresses in the Gateway Configuration Tool under **[F7] Network Info**. The page shows IPv4 and IPv6 settings together. If the network assigns addresses automatically (DHCP for IPv4, SLAAC or DHCPv6 for IPv6), the fields are filled in with those values. Select** Submit** to keep them, or change them to whatever makes sense for your environment. Submitted addresses are saved as static, so they don't change after a reboot.
+   1. **IPv4**: address, netmask, gateway, and DNS 1 and 2. Required.
+   2. **IPv6**: address, prefix length, gateway, and DNS 1 and 2. Needed only to protect IPv6 applications; leave all IPv6 fields blank to use IPv4 only. The IPv6 gateway can be left empty if the network has no IPv6 router.
+   Allow the gateway's IPv4 address, and its IPv6 address if configured, in the firewall of each protected application.
 9. Navigate to the Register page, My OPSWAT Central Management will automatically register your gateway upon deployment. This step can take a while while it generates keys and calls back to Secure IT Access Controller to register itself.
 10. When registration is complete you’ll be notified to go to the My OPSWAT Central Management console. New gateways start in a “pending” state. This means that an administrator must approve them before they can be used.
 11. Navigating **Secure Access > Access Methods**, you will see the new gateway in a list of private gateways waiting to be accepted and activated. If somebody else used your registration code and you don’t recognize the entry here you could remove them instead.
@@ -34,7 +37,9 @@ This section walks you through steps to deploy a private gateway with an OVA fil
 
 ## Deploy a gateway with an AMI
 
-This section guides you how to deploy a SDP Private Gateway with an AMI
+This section guides you how to deploy a SDP Private Gateway with an AMI.
+
+The gateway supports IPv4 and IPv6 protected applications. The instance gets its IPv4 address from the subnet. To also protect IPv6 applications, enable IPv6 on the VPC and on the subnet the gateway uses, and assign an IPv6 address to the instance.
 
 1. Find the most recent gateway AMI for your region:
 
@@ -57,6 +62,8 @@ This section guides you how to deploy a SDP Private Gateway with an AMI
 ## Deploy a gateway with an Azure app
 
 The OPSWAT SDP Private Gateway is an offering in the Azure marketplace that allows you to access resources hosted in Azure that you otherwise want to protect from outside access.
+
+Note Gateways deployed from the Azure app support IPv4 protected applications only. To protect IPv6 applications, use an OVA or AMI gateway.
 
 ### Getting Started
 
@@ -129,3 +136,7 @@ The OPSWAT SDP Private Gateway is an offering in the Azure marketplace that allo
 - If the gateway shows as provisioning with a wait icon instead of an **Accept** button just wait a few minutes. The gateway is generating cryptographic keys for securing client traffic.
 - If you haven’t entered the registration code via **Custom data** in the **Advanced** tab when setting up the gateway in Azure, you will need to log in to the gateway via the Azure serial console or SSH to enter that registration code now. Once you’ve done that it should appear in the My OPSWAT Central Managements' **Access Methods** page.
 - Click **Accept** next to the gateway, and a pop up window will appear. Assign to a pool and check off **Activate this gateway**.
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

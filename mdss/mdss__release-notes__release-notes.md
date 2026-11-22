@@ -2,6 +2,26 @@
 
 # Release notes
 
+## **MetaDefender™ Storage Security 4.6.3**
+
+**Release date:** November 19, 2026
+
+**End of support**: May 19, 2028
+
+#### **Improvements**
+
+- **nginx 1.30.7.** The Windows installer and the web client container image now ship nginx 1.30.7, which fixes the vulnerabilities listed in the [nginx security advisories](https://nginx.org/en/security_advisories.html). Upgrade to 4.6.3 to get it; Linux installations with internet access can also run `mdss -u update`.
+
+## **MetaDefender™ Storage Security 4.6.2**
+
+**Release date:** November 16, 2026
+
+**End of support**: May 16, 2028
+
+#### **Improvements**
+
+- **PostgreSQL 17.12.** MDSS now ships PostgreSQL 17.12 on Linux and Windows, which fixes the vulnerabilities listed in the [PostgreSQL November 12, 2026 security release](https://www.postgresql.org/about/news/postgresql-187-1712-1616-1520-1425-and-19-rc-2-released-3442/). Upgrade to 4.6.2 to get it; Linux installations with internet access can also run `mdss -u update`.
+
 ## **MetaDefender™ Storage Security 4.6.1**
 
 **Release date:** October 14, 2026
@@ -12,14 +32,14 @@
 >
 > From MDSS 4.6.0, the Lambda or cloud function must send the full file path as reported by the cloud provider. MDSS trims the configured folder location itself.
 >
-> **Impact: **Customers using event-based Real-Time Protection through a Lambda or cloud function on a cloud storage unit **added with a folder location**.
+> **Impact:** Customers using event-based Real-Time Protection through a Lambda or cloud function on a cloud storage unit **added with a folder location**.
 >
 > **Additional details:** This keeps all cloud integrations consistent, and the function needs no code changes whether the unit has a folder location or not.
 >
 > **Mitigation**
 > **Q:** Is your storage unit added with a folder location?
-> **Yes: **When upgrading to 4.6.0, remove the code that strips the folder location from your cloud function.
-> **No: **nothing to do.
+> **Yes:** When upgrading to 4.6.0, remove the code that strips the folder location from your cloud function.
+> **No:** nothing to do.
 
 #### **Enhancements**
 
@@ -40,6 +60,19 @@
 **Release date:** October 5, 2026
 
 **End of support**: April 5, 2028
+
+> **Important change alert**
+>
+> From MDSS 4.6.0, **DISCOVERY_SERVICE_{PROTOCOL}_RTP_HANDLING** (SMB, SFTP, NFS, FTP) is no longer used. Polling Real-Time Protection takes its start date from the scan's "Pick files modified since" setting instead.
+>
+> **Impact:** Customers running polling Real-Time Protection on SMB, SFTP, NFS or FTP storage units with DISCOVERY_SERVICE_{PROTOCOL}_RTP_HANDLING=1 in customer.env.
+>
+> **Additional details:** The 4.6.0 upgrade moves the "Pick files modified since" date of every running polling RTP scan on a protocol whose setting is 1 to 1 January 2000, so those scans keep covering existing files. For new scans, please follow this article: [Real Time Processing configuration for NAS](https://www.opswat.com/docs/mdss/configuration/real-time-processing-configuration-for-nas)
+>
+> **Mitigation**
+> **Q:** Is DISCOVERY_SERVICE_{PROTOCOL}_RTP_HANDLING=1 set in your customer.env?
+> **Yes:** Keep it there while upgrading to 4.6.0, then remove it. For RTP scans created after the upgrade, choose "Use the oldest available timeframe" in the scan wizard.
+> **No:** nothing to do.
 
 #### **New Features**
 

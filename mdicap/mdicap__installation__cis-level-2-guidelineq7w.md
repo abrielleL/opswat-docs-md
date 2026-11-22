@@ -2,7 +2,7 @@
 
 # CIS Level 2 Guidelines - Linux
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page Info
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Info
 
 Support Ubuntu Pro 22.04, 24.04
 

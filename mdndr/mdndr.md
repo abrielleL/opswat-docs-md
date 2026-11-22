@@ -4,7 +4,7 @@
 
 # NDR
 
-#### v5.3.0 [Latest]
+#### v5.4.0 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mdndr/release-notes)
 

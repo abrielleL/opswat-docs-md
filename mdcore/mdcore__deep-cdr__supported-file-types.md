@@ -2,7 +2,7 @@
 
 # Supported File Types
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [What is CDR?](/docs/mdcore/deep-cdr/supported-file-types#what-is-cdr)
 
 An increasingly popular and effective method of compromising computer security, especially as part of a targeted attack, involves sharing common document types or image files with victims. Even though the original versions of these files do not contain executable data, attackers have found ways to trigger these files to execute embedded malicious code. Popular techniques used to accomplish this include VBA macros, exploit payloads, and embedded Flash or JavaScript code. This type of attack has a high success rate because most users don’t expect common file types to contain infections. For high-risk files or scenarios, Content Disarm & Reconstruction (CDR) prevents any possibility of malicious content (including zero-day threats) from executing. High-risk files can be sanitized through several different methods:
@@ -10,7 +10,7 @@ An increasingly popular and effective method of compromising computer security, 
 - Removing hidden exploitable objects (e.g., scripts, macros, etc.)
 - Converting the file format
 
-## [Supported File Types (total 231)](/docs/mdcore/deep-cdr/supported-file-types#supported-file-types-total-231)
+## [Supported File Types (total 232)](/docs/mdcore/deep-cdr/supported-file-types#supported-file-types-total-232)
 
 | Source File Type | Description | Target Sanitized Types |
 | --- | --- | --- |
@@ -65,6 +65,7 @@ An increasingly popular and effective method of compromising computer security, 
 | hta | HTML Application | **hta** |
 | mar | Mozilla Archive | **mar** |
 | pdf | Adobe Portable Document Format | **pdf**, html, svg, jpg, bmp, png, tiff, txt, pptx |
+| fdf | Forms Data Format | **fdf** |
 | ai | Adobe Illustrator | **ai** |
 | ait | Adobe Illustrator Template | **ait** |
 | idml | InDesign Markup Language | **idml** |

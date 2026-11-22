@@ -69,13 +69,13 @@ In offline environments, all required Docker images must be downloaded on an int
 
 #### Recommended: Load images using the offline toolkit (RHEL only)
 
-For RHEL installations, download the 4.2.0 offline or portable toolkit and its corresponding checksum from My OPSWAT -> [Product Downloads](https://my.opswat.com/home/metadefender-software-supply-chain). Download the files on an internet-connected machine and transfer them to the offline machine.
+For RHEL installations, download the 4.3.2 offline or portable toolkit and its corresponding checksum from My OPSWAT -> [Product Downloads](https://my.opswat.com/home/metadefender-software-supply-chain). Download the files on an internet-connected machine and transfer them to the offline machine.
 
 Extract the offline toolkit and load the images:
 
 ```bash
-tar -xzf mdssc-offline-4.2.0.tar.gz
-cd mdssc-offline-4.2.0
+tar -xzf mdssc-offline-4.3.2.tar.gz
+cd mdssc-offline-4.3.2
 sudo ./mdssc.sh -u load_images
 ```
 
@@ -93,29 +93,26 @@ All images are versioned per release.
 
 Use the following placeholders:
 
-- `<MDSSC_VERSION>` — e.g. `4.2.0`
-- `<PLATFORM_VERSION>` — e.g. `platform-2.5.2`
+- `<MDSSC_VERSION>` — e.g. `4.3.2`
+- `<PLATFORM_VERSION>` — e.g. `2.7.2-mdssc`
 
 #### Step 1: Pull Images (Online Machine)
 
 ```bash
-docker pull docker.io/opswat/mdssc_api:4.2.0
-docker pull docker.io/opswat/mdssc_frontend:4.2.0
-docker pull docker.io/opswat/mdssc_binaries:4.2.0
-docker pull docker.io/opswat/mdssc_sourcecode:4.2.0
-docker pull docker.io/opswat/mdssc_containers:4.2.0
-docker pull docker.io/opswat/mdssc_notifications:4.2.0
-docker pull docker.io/opswat/mdssc_processing:4.2.0
-docker pull docker.io/opswat/mdssc_pgmigrations:4.2.0
+docker pull docker.io/opswat/mdssc_api:4.3.2
+docker pull docker.io/opswat/mdssc_frontend:4.3.2
+docker pull docker.io/opswat/mdssc_binaries:4.3.2
+docker pull docker.io/opswat/mdssc_sourcecode:4.3.2
+docker pull docker.io/opswat/mdssc_containers:4.3.2
+docker pull docker.io/opswat/mdssc_notifications:4.3.2
+docker pull docker.io/opswat/mdssc_processing:4.3.2
+docker pull docker.io/opswat/mdssc_pgmigrations:4.3.2
 
-docker pull docker.io/library/postgres:17
-docker pull docker.io/library/rabbitmq:4.2.2-alpine
-docker pull docker.io/library/redis:8.4.0-alpine
+docker pull docker.io/library/postgres:17.12
+docker pull docker.io/library/rabbitmq:4.2.4-alpine
+docker pull docker.io/library/redis:8.6.0-alpine
 
-docker pull docker.io/opswat/mdcloudservices_commonservices:platform-2.5.2
-docker pull docker.io/opswat/mdcloudservices_mdplatform:platform-2.5.2
-docker pull docker.io/opswat/mdcloudservices_licensing:platform-2.5.2
-docker pull docker.io/opswat/mdcloudservices_identityservice:platform-2.5.2
+docker pull docker.io/opswat/mdcloudservices_mdplatform:2.7.2-mdssc
 ```
 
 > **Info**
@@ -134,10 +131,7 @@ docker save \
   opswat/mdssc_notifications:<MDSSC_VERSION> \
   opswat/mdssc_processing:<MDSSC_VERSION> \
   opswat/mdssc_pgmigrations:<MDSSC_VERSION> \
-  opswat/mdcloudservices_commonservices:<PLATFORM_VERSION> \
   opswat/mdcloudservices_mdplatform:<PLATFORM_VERSION> \
-  opswat/mdcloudservices_licensing:<PLATFORM_VERSION> \
-  opswat/mdcloudservices_identityservice:<PLATFORM_VERSION> \
   postgres:<POSTGRES_VERSION> \
   redis:<REDIS_VERSION> \
   rabbitmq:<RABBITMQ_VERSION> \

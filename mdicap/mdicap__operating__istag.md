@@ -2,7 +2,7 @@
 
 # ISTag
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 - [Overview](/docs/mdicap/operating/istag#overview)
 - [MetaDefender ICAP Server specific ISTag](/docs/mdicap/operating/istag#metadefender-icap-server-specific-istag)

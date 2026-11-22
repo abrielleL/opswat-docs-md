@@ -2,9 +2,9 @@
 
 # Security
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
-This section will allow the system administrator to enable secure connections to MetaDefender Cluster Control Center if required. In addition, Request rate limit, Password and Session policies are set in this section.
+This section will allow the system administrator to enable secure connections to MetaDefender Cluster Control Center if required. In addition, Request rate limit, Password and Session policies are set in this section. These settings are found under **Settings** > **Security** tab.
 
 ### [Request Rate Limit](/docs/mdcluster/operating/operating-security#request-rate-limit)
 
@@ -24,7 +24,7 @@ The updated limit may take up to **30 seconds** to take effect after it is saved
 
 ---
 
-### [Password Policy](/docs/mdcluster/operating/operating-security#password-policy)
+### [Password Policies](/docs/mdcluster/operating/operating-security#password-policies)
 
 Info
 
@@ -32,15 +32,15 @@ These password policies changes only apply to new user creations and future pass
 
 Local users' password can be enforced to meet requirements set by administrators, which includes following constraints:
 
-- **Enforce password policy:**
+- **Enforce Password History** (**Passwords Remembered (0-24)**):
 
   - Determines the number of unique new passwords that must be associated with a user account before an old password can be reused.
   - Range: [0-24].
   - Default: 0 (to disable enforcement).
-- **Password must meet complexity requirements:**
+- **Password Must Meet Complexity Requirements:**
 
   - Determines whether passwords must meet a series of guidelines that are considered important for a strong password.
-  - Default: unchecked
+  - Default: Disabled
 
 Complexity requirements
 
@@ -50,7 +50,7 @@ Complexity requirements
 - At least 1 base 10 digits (0 through 9).
 - At least 1 non-alphanumeric characters (special characters): (~!@#$%^&*_-+=`|(){}[]:;"'<>,.?/).
 
-- **Minimum password length:**
+- **Enforce Min Password Length** (**Min Password Length (0-30)**):
 
   - The least number of characters that can make up a password for a user account.
   - Range: [0-30].
@@ -58,36 +58,36 @@ Complexity requirements
 
 ---
 
-### [Session Policy](/docs/mdcluster/operating/operating-security#session-policy)
+### [Session Policies](/docs/mdcluster/operating/operating-security#session-policies)
 
 **Session policies** control how user sessions are created and maintained in MD Cluster. You can configure session expiration, allow or prevent multiple concurrent sessions for the same user, and control whether requests from different IP addresses are accepted within an authenticated session.
 
 Changes take effect for new sessions. Existing sessions continue to use the settings that were in effect when they were established.
 
-- **Idle session timeout**: Idle timeout to invalidate individual user’s session based on that user last activity.
-- **Session timeout**: Absolute timeout to invalidate individual user’s session regardless of that user activities.
+- **Enable Idle Session Timeout** / **Idle Session Timeout**: Idle timeout to invalidate individual user’s session based on that user last activity.
+- **Enable Session Timeout** / **Session Timeout**: Absolute timeout to invalidate individual user’s session regardless of that user activities.
 - **Allow Duplicate Sessions**: Allow same user to have multiple active sessions.
 - **Allow Cross IP Sessions**: Allow requests coming from sources different from the authenticated origin.
 
-### [Scan from link](/docs/mdcluster/operating/operating-security#scan-from-link)
+### [Scan From Link](/docs/mdcluster/operating/operating-security#scan-from-link)
 
 These settings control how MetaDefender Cluster downloads files that are submitted by link (the `downloadfrom` header of `POST /file`). They apply to the whole cluster.
 
-- **Max download queue**: the number of downloads that can run at the same time.
+- **Max Download Queue**: the number of downloads that can run at the same time.
 
   - When the limit is reached, a new link is **not** refused. It waits in the queue and starts when a running download finishes.
   - Use a lower value to limit the network and disk load on the Download Service. Use a higher value to download more files in parallel.
-- **Idle timeout**: How long a download can go without receiving any data before it stops.
+- **Idle Timeout**: How long a download can go without receiving any data before it stops.
 
   - The value is in **milliseconds**.
   - The timer restarts every time data arrives. A slow download that still receives data does not stop.
   - When the timeout is reached, the download result is `Download Failed` with the error detail `Server took too long to respond`.
 
-The idle timeout does not limit the total download time. The total time is limited by the workflow setting **General > Timeouts > File download**. When that limit is reached, the result is Download Timeout.
+The idle timeout does not limit the total download time.
 
-- **Enforce scan from link validation**: Turn this on to allow or block links by pattern. When it is off, every link is downloaded, and the validation type and patterns are ignored.
+- **Enforce Scan From Link Validation**: Turn this on to allow or block links by pattern. When it is off, every link is downloaded, and the **Validation Type** and **Patterns** are ignored.
 
-| **Type** | A link is downloaded when |
+| **Validation Type** | A link is downloaded when |
 | --- | --- |
 | Blocklist | It matches none of the patterns. |
 | Allowlist | It matches at least one pattern. |

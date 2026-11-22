@@ -2,6 +2,8 @@
 
 # Notifications and Alerts
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 The Notifications and Alerts feature is aimed at helping organization admins manage key events that occur within their organization. You do need to have an organization set up to utilize the Notifications and Alerts feature. To create an organization please visit the [Accounts' Organization](/docs/mdcloud/account-management/accounts--organization) page.
 
 With the Notifications and Alerts feature, you will be able to get notified for the following via email, in app notifications, or both depending on your preferences:

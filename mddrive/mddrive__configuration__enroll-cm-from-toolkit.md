@@ -2,13 +2,16 @@
 
 # Enroll MetaDefender Drive to Central Management Server from MetaDefender Drive Toolkit
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 1. From MetaDefender Drive Toolkit (version 3.8.5 and later), with MetaDefender Drive inserted into the computer where Drive Toolkit is running from, select **My OPSWAT Integration**.
 
 2. Then enter your **My OPSWAT Central Management URL** and **Registration Code**, that you can obtain from your My OPSWAT Central Management account, in the dialog box
 
 3. Set **Automatically sync report after scan** if needed
-4. Click **Next**
-5. Select the Drives you want to enroll with OPSWAT Central Management Server. You can check **External Drives** to select all of attached Drives
+4. Set **Update from this Central Management server** if the server has been set up properly to host Drive engines and image updates
+5. Click **Next**
+6. Select the Drives you want to enroll with OPSWAT Central Management Server. You can check **External Drives** to select all of attached Drives
 
 6. Click **Confirm and Proceed**. Spinners will appear showing enrollment is in progress.
 

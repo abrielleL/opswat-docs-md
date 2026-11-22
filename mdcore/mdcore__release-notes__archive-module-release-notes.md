@@ -2,7 +2,25 @@
 
 # Archive Module release notes
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## [v8.1.3](/docs/mdcore/release-notes/archive-module-release-notes#v813)
+
+Release date: 11/18/2026
+
+- Supported sanitization details for compressed containers:
+
+  - Reported what was sanitized inside each entry of an archive.
+  - Added support for EML and MSG attachments.
+- Upgraded the bundled .NET runtime to address known vulnerabilities.
+
+## [v8.1.2](/docs/mdcore/release-notes/archive-module-release-notes#v812)
+
+Release date: 11/4/2026
+
+- Supported Microsoft Purview Information Protection decryption for PDF files.
+- Upgraded the bundled System.Security.Cryptography.Pkcs library to address CVE-2026-84008.
+- Fixed PST compression failure when the file contains items with matching name prefixes.
+
 ## [v8.1.1](/docs/mdcore/release-notes/archive-module-release-notes#v811)
 
 Release date: 10/14/2026

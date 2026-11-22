@@ -2,6 +2,7 @@
 
 # Results Management
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ### [Analyze Reports](/docs/mddrive/process/results--management#analyze-reports)
 
 MetaDefender Drive comes with data visualization graphs and scan reports list, including:
@@ -70,3 +71,28 @@ The Reports page showing the status of syncing reports with OPSWAT Central Manag
 Once all reports are synced, the status bar next to the **Sync all Reports** button will display the message *"All Reports Synced Successfully"*:
 
 The Reports page showing the status after all reports have been synced with OPSWAT Central Management
+
+The Scan Reports from both Bare Metal and In-Session scan sessions can both be sent to OPSWAT Central Management from any of these instance once the connection established:
+
+- MetaDefender Drive when it boots in Bare Metal mode
+- MetaDefender Drive In-Session
+- MetaDefender Drive plugged into a running KIOSK
+
+## [Delete Reports](/docs/mddrive/process/results--management#delete-reports)
+
+Reports from scan sessions of MetaDefender Drive can be deleted in several methods to save space.
+
+**Delete Reports from Preferences**:
+
+1. Go to **Preference → Reports → Delete Reports**
+2. Click **Delete** to confirm when asked
+
+**Auto Remove Reports after synced to Central Management**
+
+1. When enrolling to Central Management, enable **Remove after synced**
+2. After reports are synced, they will automatically be removed
+
+**Manually Delete Reports**
+
+1. From Report page, select reports wanted to delete. **Be sure to sync all important reports to Central Management before proceeding this destructive actions.**
+2. Click Delete to confirm when asked

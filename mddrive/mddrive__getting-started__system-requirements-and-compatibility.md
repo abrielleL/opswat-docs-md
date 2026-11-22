@@ -2,6 +2,8 @@
 
 # System Requirements and Compatibility
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 For Devices with Specs Meeting or Below the Minimum Requirements
 
 To boot and run MetaDefender Drive on a target device with hardware specifications meeting or below the minimum requirements, MetaDefender Drive must be flashed activated with all the engines copied using the [MetaDefender Drive Toolkit](https://www.opswat.com/docs/mddrive/maintenance).
@@ -12,8 +14,8 @@ To boot and run MetaDefender Drive on a target device with hardware specificatio
 
 |  |
 | --- |
-| Recent Intel i3 or comparable dual-core 64-bit processor  **Modern multi-core 64-bit processors are recommended for optimal performance* |
-| 8 GB of system memory (RAM)  **On devices with less system memory, MetaDefender Drive recommends a reduced set of engines based on the detected hardware — see* [*Running from hardware below the recommendation*](https://www.opswat.com/docs/mddrive/advanced-usages/low-spec-hardware) |
+| Recent Intel i3 or comparable dual-core 64-bit processor  *Modern multi-core 64-bit processors are recommended for optimal performance* |
+| 8 GB of system memory (RAM)  *On devices with less system memory, MetaDefender Drive recommends a reduced set of engines based on the detected hardware — see* [*Running from hardware below the recommendation*](https://www.opswat.com/docs/mddrive/advanced-usages/low-spec-hardware) |
 | HDD or SSD *(PATA/IDE, SATA, NVME, SCSI, and USB interfaces are supported)* |
 | Internet access *(Only needed to perform license activation, engine updates, and software upgrades)* |
 | 1024×768 display |

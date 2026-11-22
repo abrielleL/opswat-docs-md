@@ -2,6 +2,8 @@
 
 # Schedule Report
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 The scheduled report will generate and deliver periodic updates tailored for the administrator. These reports are designed to provide comprehensive insights and relevant data, enabling informed decision-making and efficient management of ongoing tasks or operations.
 
 ## [Processing Activity](/docs/mdcore/configuration/schedule-report#processing-activity)
@@ -17,6 +19,8 @@ The system generates a detailed report in CSV format, for file processing activi
   - Monthly
   - Quarterly
   - Onetime - send the report only one time
+
+Tips: The users can enable the option "Do Not Send Email If Report Has No Data" to skip the reports that have no data.
 
 ## [Executive Report](/docs/mdcore/configuration/schedule-report#executive-report)
 

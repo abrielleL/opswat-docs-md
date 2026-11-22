@@ -2,7 +2,7 @@
 
 # Using build tool kit with your own docker image
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page Info
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Info
 
 The docker build tool kit could be found on OPSWAT Portal - Products - Utilities
 

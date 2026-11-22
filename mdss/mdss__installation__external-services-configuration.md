@@ -70,6 +70,8 @@ Reference: [Create a Cloud SQL for PostgreSQL instance (Google)](https://cloud.g
 
 Reference: [Getting started with Amazon MQ for RabbitMQ (AWS)](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/getting-started-rabbitmq.html)
 
+> **Amazon MQ for RabbitMQ 4.3 or higher** is not supported yet. Create the broker on RabbitMQ 4.2 and turn off automatic minor version upgrades. AWS still upgrades a broker once its version reaches end of support, so check the Amazon MQ version support calendar before that date.
+
 #### CloudAMQP (Azure and Google Cloud)
 
 Azure and Google Cloud do not offer a native managed service compatible with the standard RabbitMQ (AMQP 0-9-1) protocol — Azure Service Bus is **not** RabbitMQ-compatible. For these providers, use **CloudAMQP** (managed RabbitMQ available via the CSP marketplaces) or self-deploy RabbitMQ on a Linux VM as described in [RabbitMQ Configuration](#rabbitmq-configuration).

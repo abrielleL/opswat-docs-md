@@ -2,6 +2,8 @@
 
 # Transport Layer Security
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Warning
+
 For production MetaDefender Email Gateway Security deployments a more sophisticated TLS configuration is recommended than what is described below. Please consult the [nginx documentation on Configuring HTTPS servers](http://nginx.org/en/docs/http/configuring_https_servers.html) for further details.
 
 Warning
@@ -96,9 +98,11 @@ The configuration file must follow the Nginx syntax. For details see <http://ngi
 
 Example
 
-`ssl_ciphers HIGH:!aNULL:!MD5;`
+This example allows only cipher suites with forward secrecy (ECDHE) and authenticated encryption (AES-GCM, ChaCha20-Poly1305) for TLS 1.2. TLS 1.3 cipher suites are not affected by `ssl_ciphers`.
 
-Recommended cipher suites
+ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305;
+ssl_prefer_server_ciphers on;
+ssl_ecdh_curve X25519:prime256v1:secp384r1;Recommended cipher suites
 
 For cipher suite recommendations see the section *Recommended TLS versions and cipher suites*.
 

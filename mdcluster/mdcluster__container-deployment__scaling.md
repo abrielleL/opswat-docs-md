@@ -2,7 +2,7 @@
 
 # Scaling
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 Two kinds of scaling apply to MetaDefender Cluster, and they work very differently.
 
@@ -12,7 +12,7 @@ Two kinds of scaling apply to MetaDefender Cluster, and they work very different
 
 MetaDefender Cluster Control Center and MetaDefender Cluster Identity Service are singletons and cannot be scaled.
 
-## [MetaDefender Cluster Workers](/docs/mdcluster/container-deployment/scaling#metadefender-cluster-workers)
+## MetaDefender Cluster Workers
 
 Scale each instance type independently, according to which resource is the bottleneck: `ometascan` for scan throughput, `api-gateway` for file submission capacity, `callback-service` for webhook delivery.
 
@@ -21,7 +21,7 @@ helm upgrade mdcluster ./mdcluster --reuse-values \
 --set workers.api-gateway.replicas=3 \
 --set workers.callback-service.replicas=3 \
 --set workers.download-service.replicas=3
-## [MetaDefender Cluster File Storage](/docs/mdcluster/container-deployment/scaling#metadefender-cluster-file-storage)
+## MetaDefender Cluster File Storage
 
 **Never scale MetaDefender Cluster File Storage in.** Files are distributed across the instances, not copied to all of them, so removing a replica removes the MetaDefender Cluster Control Center's only route to every file that lived there. With the default `FILE_STORAGE_MAX_REPLICA: 1` each file has exactly one copy, so scaling in loses access to a share of your stored files immediately — and the MetaDefender Cluster Control Center reports nothing wrong.
 
@@ -29,7 +29,7 @@ Scaling **out** is safe, but offline: it needs a maintenance window with all Met
 
 Scaling MetaDefender Cluster File Storage requires **downtime**.
 
-### [Procedure](/docs/mdcluster/container-deployment/scaling#procedure)
+### Procedure
 
 1. **Scale all MetaDefender Cluster Worker instances to zero.** MetaDefender Cluster File Storage cannot be reconfigured while MetaDefender Cluster workers are running.
 
@@ -53,6 +53,6 @@ Scaling MetaDefender Cluster File Storage requires **downtime**.
    --set workers.callback-service.replicas=3 \
    --set workers.download-service.replicas=3
 
-Finally, confirm on the **Services** page of the console that every MetaDefender Cluster File Storage replica is listed and healthy.
+Finally, confirm on the **Library > Services** page of the console that every MetaDefender Cluster File Storage replica is listed and healthy.
 
-Two settings control how many copies of each file are stored - see [Configuration](/docs/mdcluster/container-deployment/high-availability#configuration).
+Two settings control how many copies of each file are stored - see [Configuration](/container-deployment/high-availability#configuration).

@@ -2,6 +2,7 @@
 
 # Installation
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ### [Overview](/docs/mdcluster/installation/md-cluster-installation#overview)
 
 This section describes how to install and set up **MetaDefender Cluster** (MD Cluster), a distributed system composed of multiple services, including:
@@ -87,7 +88,7 @@ Ensure all services are installed and running before proceeding to the next step
 After installation, register all infrastructure services and MD Cluster File Storage to Control Center.
 
 1. Sign in to MD Cluster **Control Center** console using your administrator account.
-2. From the sidebar, go to `Inventory` > `Services`.
+2. From the sidebar, go to `Library` > `Services`.
 3. Follow the [instructions](/docs/mdcluster/operating/md-cluster-operating-services) to add the services.
 4. Verify connectivity to
 
@@ -103,7 +104,7 @@ After installation, register all infrastructure services and MD Cluster File Sto
 1. Follow the [instructions](/docs/mdcluster/installation/md-cluster-worker) to obtain the installation script.
 2. Access each target machine and run the script.
 3. Sign in to MD Cluster **Control Center** console.
-4. From the sidebar, go to `Inventory` > `Workers`.
+4. From the sidebar, go to `Library` > `Workers`.
 5. Verify that the installed workers are showing as `Available`.
 
 ---
@@ -119,7 +120,7 @@ Execution installers are deployable units managed by MD Cluster Worker, responsi
 Typical steps:
 
 1. Sign in to MD Cluster Control Center console using your administrator account.
-2. From the sidebar, go to `Inventory` > `Installers`.
+2. From the sidebar, go to `Library` > `Installers`.
 3. Follow the [instructions](/docs/mdcluster/operating/md-cluster-operating-installer) to upload the installers.
 
 Info
@@ -131,7 +132,7 @@ While MD Core and MD Cluster API Gateway are **essential** to the main flow, MD 
 #### [Step 6: Deploy execution instances](/docs/mdcluster/installation/md-cluster-installation#step-6-deploy-execution-instances)
 
 1. Sign in to MD Cluster Control Center console.
-2. From the sidebar, go to `Inventory` > `Workers`.
+2. From the sidebar, go to `Library` > `Workers`.
 3. Ensure that MD Cluster Workers are showing as `Available`.
 
 4. Follow the [instructions](/docs/mdcluster/operating/operating-workers#deploy-instances) to deploy execution instances.
@@ -146,7 +147,7 @@ At least one instance of **MD Cluster API gateway** and **MD Core** must be depl
 #### [Step 7: Activate license](/docs/mdcluster/installation/md-cluster-installation#step-7-activate-license)
 
 1. Sign in to MD Cluster **Control Center** console.
-2. From the sidebar, go to `Inventory` > License
+2. From the sidebar, go to `Library` > `Licenses`
 3. Follow the [instructions](/docs/mdcluster/operating/md-cluster-operating-licenses) to activate the product according to your license type.
 4. Confirm activation.
 
@@ -157,7 +158,7 @@ At least one instance of **MD Cluster API gateway** and **MD Core** must be depl
 After licensing, verify system status.
 
 1. Sign in to the MD Cluster **Control Center** console.
-2. Submit a file for scanning from the Control Center.
+2. From the sidebar, go to `Analyze`, click `Add a File` (or drag and drop a file), and then click `Analyze`.
 
 Submitting files from the Control Center is intended only to verify that the system is working correctly. For actual scanning workloads, submit files through the API Gateway using [POST – Analyze File (Asynchronous Mode).](/docs/mdcluster/api-gateway#fileanalysispost)
 

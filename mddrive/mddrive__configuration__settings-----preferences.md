@@ -2,7 +2,7 @@
 
 # Settings → Preferences
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 The preferences section is where most of MetaDefender Drive's interface and scan configurations are adjusted:
 
@@ -17,9 +17,11 @@ Follow the instructions for each settings:
 - [Settings → Smart Scan](/docs/mddrive/configuration/preferences---smartscan-settings)
 - [Preferences → Auto Run](/docs/mddrive/configuration/preferences-----auto-run)
 - [Preferences → Skip By Hash](/docs/mddrive/configuration/preferences-----skip-by-hash)
-- [Preferences → Archive Handling](/docs/mddrive/configuration/preferences---archive-handling)
+- [Preferences → FileType Analysis and Archive Handling](/docs/mddrive/configuration/preferences-----archive-and-filetype-handling)
 - [Preferences → Vulnerability Settings](/docs/mddrive/configuration/preferences---vulnerability-settings)
 - [Preferences → DLP Settings](/docs/mddrive/configuration/preferences---dlp-settings)
 - [Preferences → Country Of Origin](/docs/mddrive/configuration/preferences---country-of-origin)
 - [Preferences → System Policy](/docs/mddrive/configuration/preferences---system-policy)
 - [Preferences → Scan Results](/docs/mddrive/configuration/preferences---scan-results)
+
+When managed by **My OPSWAT Central Management**, these settings are view-only.

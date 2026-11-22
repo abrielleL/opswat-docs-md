@@ -2,7 +2,7 @@
 
 # Database Maintenance | MetaDefender Core 4.18.0
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page Info
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Info
 
 Only applicable to MetaDefender Core 4.18.0 with SQLite database.
 

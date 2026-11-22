@@ -2,25 +2,33 @@
 
 # Requirements
 
-Summarize Page    Connect to Cursor Connect to VS Code
+View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+## [Version compatibility](/docs/mdmft/high-availability/requirements#version-compatibility)
 
-| Component | Requirement |
-| --- | --- |
-| Operating system | Windows Server 2019 / 2022 / 2025 (64-bit). All SQL nodes joined to the same Active Directory domain |
-| SQL Server edition | **Enterprise** (full Availability Group). Developer edition is Enterprise-equivalent and free for non-production, so it is suitable for lab and test environments |
-| SQL Server version | 2016 or later (Database Level Health Detection requires 2016 or newer) |
-| SQL service account | A single **domain** account (for example `DOMAIN\svc-sql`), identical on both nodes, so the replicas can authenticate to each other |
-| Cluster | Windows Server Failover Cluster (WSFC) across both SQL nodes, plus a **file-share witness** for quorum |
-| Ports | `1433` (SQL client and listener), `5022` (Availability Group data-mirroring endpoint), `1434/UDP` (SQL Browser, only for named instances) |
+To ensure full compatibility between all MetaDefender® MFT nodes (active, passive) and the MetaDefender MFT HA Controller™, all components must run the same product version. We maintain a unified version across all components: a change in any module triggers a full-version rollout of every component.
 
-For the general MetaDefender® MFT prerequisites and the High Availability file storage requirements, see [Requirements](/docs/mdmft/high-availability/requirements).
+## [Database](/docs/mdmft/high-availability/requirements#database)
 
-> **Info**
->
-> Only a full **Availability Group** is supported, not a Basic Availability Group. This is why Enterprise (or the Enterprise-equivalent Developer) edition is required — Standard edition offers only Basic Availability Groups.
+Both the active and passive MetaDefender® MFT nodes must have configured with the same database instance. For more information about the supported databases [here](/docs/mdmft/installation/system-requirements#database).
 
-> **Warning**
->
-> MetaDefender® MFT expects **Force Encryption** to be enabled on SQL Server, but the MetaDefender® MFT services cannot persist the `TrustServerCertificate` setting. Through a listener, each replica presents its own certificate whose name does not match the listener name, so validated TLS requires a certificate whose **Subject Alternative Name covers the listener name and both node names**, installed in the MetaDefender® MFT host's LocalMachine Trusted Root store. Alternatively, disable Force Encryption (or set `--encrypt false` when repointing) for environments where transport encryption is not required.
+## [File storage](/docs/mdmft/high-availability/requirements#file-storage)
 
-Continue to [Setup](/docs/mdmft/high-availability/sql-server-ha-setup).
+The HA cluster requires a [Network Storage](/docs/mdmft/configuration/storage#adding-a-new-network-storage), [Amazon S3 bucket](/docs/mdmft/configuration/storage#adding-a-new-cloud-storage-in-amazon-s3) or [S3 Compatible Object Storage](/docs/mdmft/configuration/storage#adding-s3-compatible-storage) for each storage type. All MetaDefender Managed File Transfer™ nodes must be able to access the storage. For more information about the storage types, click [here](/docs/mdmft/configuration/storage).
+
+## [HA Controller requirements](/docs/mdmft/high-availability/requirements#ha-controller-requirements)
+
+The MetaDefender MFT HA Controller™ acts a proxy and must be provisioned with sufficient hardware to forward all expected incoming traffic to the active node without becoming a performance bottleneck. Because the proxy’s job is lighter than the full application server (it does not run background jobs or heavy processing), its resource requirements can be somewhat lower—but it still needs to handle the peak network load.
+
+|  | Minimum | Recommended |
+| --- | --- | --- |
+| CPU | 4 Cores | 8 Cores |
+| RAM | 8 GB | 16 GB |
+| Storage | 64 GB | 64 GB |
+
+## [Network setup](/docs/mdmft/high-availability/requirements#network-setup)
+
+The MetaDefender MFT HA Controller™ and MetaDefender® MFT nodes should be able to access each other through network. In the recommended setup only the MetaDefender MFT HA Controller™ is open to the external/public network, the individual MetaDefender® MFT nodes are not exposed.
+
+## [License](/docs/mdmft/high-availability/requirements#license)
+
+To operate MetaDefender® MFT in a High Availability cluster with two nodes, a valid license is required for both nodes.

@@ -2,7 +2,7 @@
 
 # Copy Files to Secure Files Storage
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 To start using Secure File Storage:
 
@@ -39,4 +39,4 @@ After Copying Files into Secure File Storage
 
 If you plug the Secure File Storage into a host you will see an empty 32GB storage that is ready for another copy session, and the files that were previously copied into Secure File Storage can only be accessed from a computer **only when they have been scanned and confirmed safe** by an OPSWAT MetaDefender Kiosk.
 
-Unscanned Files now are ready to be examined by MetaDefender KIOSK, follow this instruction to [Scan Files in Secure File Storage with KIOSK](/docs/mddrive/process/san-secure-files-storage-with-kiosk).
+Unscanned Files now are ready to be examined by MetaDefender KIOSK, follow this instruction to [Scan Files in Secure File Storage with KIOSK](/docs/mddrive/process/san-secure-files-storage-with-kiosk-old).

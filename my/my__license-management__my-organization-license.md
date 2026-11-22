@@ -56,8 +56,10 @@ Below the overview chart, you’ll find a detailed list of your organization’s
 | Status | Active, Expiring or Expired. |
 | Start Date (UTC) | The date when the license becomes effective. |
 | Expiration Date (UTC) | The expiration date of the license. Please note License start and expiration dates are shown in **UTC (UTC+0)** for consistency across all environments and time zones. This may look different from other features of My OPSWAT Portal that use your local time zone. |
-| NewEntitlement | Maximum licensed instances. - **Regular license:** You purchase a fixed number of product instances, and each instance is activated individually against the OPSWAT Activation Server. Hover to see   - **Max Instances**: number of product instances the license covers   - **Deployed instances: **how many of those instances are currently activated   - For OPSWAT Central Management (CM7), My OPSWAT On-premises (CM8), My OPSWAT Central Management (CM10), MetaDefender Kiosk Linux, and MetaDefender Endpoint licenses, hovering will additionally show the **Max devices** value. - **Volume license:** A licensing model managed through OLMS (On-Premises License Management Server). Product instances connect to OLMS locally to obtain a license; when an instance stops, its license is automatically released and can be reused by another instance. Hover to see   - **Max Instances**: maximum concurrent instances that can hold a license   - **Max Offline Time**: maximum minutes an instance can continue using its license while disconnected from OLMS |
+| NewEntitlement | Maximum licensed instances. - **Regular license:** You purchase a fixed number of product instances, and each instance is activated individually against the OPSWAT Activation Server. Hover to see   - **Max Instances**: number of product instances the license covers   - **Deployed instances:** how many of those instances are currently activated   - For OPSWAT Central Management (CM7), My OPSWAT On-premises (CM8), My OPSWAT Central Management (CM10), MetaDefender Kiosk Linux, and MetaDefender Endpoint licenses, hovering will additionally show the **Max devices** value. - **Volume license:** A licensing model managed through OLMS (On-Premises License Management Server). Product instances connect to OLMS locally to obtain a license; when an instance stops, its license is automatically released and can be reused by another instance. Hover to see   - **Max Instances**: maximum concurrent instances that can hold a license   - **Max Offline Time**: maximum minutes an instance can continue using its license while disconnected from OLMS |
 | Type | Evaluation/Purchased - **Evaluated Licenses:** Temporary licenses used for evaluating a product. - **Purchased Licenses**: Licenses for on-premises products that have been purchased by the user account. |
+| NewOwner | The users assigned as owners of the license key. Their full names are shown; hover to see their email addresses. If there are more than two owners, the first two are shown followed by **+N more**, and hovering shows the full list. Shows `-` when no owner is assigned. |
+| NewPO Number | Your organization's own reference for the license key, for example for internal tracking, renewals or finance. It is not OPSWAT's order number. Shows `-` when empty. |
 | Note | Custom remarks for each license key. |
 
 > **View licenses across main and sub‑organizations**
@@ -71,12 +73,34 @@ Depending on your permission level on the **License Management** role object, yo
 | Permission | Description |
 | ---- | ---- |
 | **None** | - **Activate License:** Activate a license for the selected product. Please refer to [Activate License](https://www.opswat.com/docs/my/license-management/activate-license) for details. - View **personal** MetaDefender Cloud licenses - View personal MetaDefender IT Access License |
-| **View Only** | - **Pin:** Move the license to the top of the section for better visibility and quick access. - **See full License History:** View the full license history *(expired ones are hidden by default).* - **Download Product Installer:** Open the installer download dialog. - **Filter** by Product name, license status and license type. - **Search** by License key and Product name |
-| **Full Access** | - View organization's MetaDefender Cloud licenses - **Edit note:** Edit the note attached to the license. - **Manage Active Deployment Report:** see every active deployment associated with a license key and, and deactivate Core deployments. Further reading at [Manage Active Deployments](https://www.opswat.com/docs/my/license-management/manage-active-deployments) |
+| **View Only** | - **Pin:** Move the license to the top of the section for better visibility and quick access. - **See full License History:** View the full license history *(expired ones are hidden by default).* - **Download Product Installer:** Open the installer download dialog. - **Filter** by Product name, license status, license type, **Owner** (including **No owner**) and **Deployment Owner**. You can select several owners in each owner filter. A license matches the **Deployment Owner** filter when any of its deployments has a selected owner. - **Search** by License key, Product name, Note, PO Number and deployment description. A license matches a description when any of its deployments, whatever its status, has a matching description. Search matches part of the text, is not case-sensitive, and works together with the selected filters. |
+| **Full Access** | - View organization's MetaDefender Cloud licenses - **Edit:** Edit the key owners, note and PO Number of the license. This action replaces **Edit note**. See [Edit a license](https://www.opswat.com/docs/my/license-management/my-organization-license#edit-a-license). - **Manage Active Deployment Report:** see every active deployment associated with a license key and, and deactivate Core deployments. Further reading at [Manage Active Deployments](https://www.opswat.com/docs/my/license-management/manage-active-deployments) - **Edit deployment:** In **Manage Active Deployments**, edit the description and deployment owners of an active deployment. See [Edit a deployment](https://www.opswat.com/docs/my/license-management/manage-active-deployments#edit-a-deployment). |
 
 > **Info**
 >
 > If you're not belong to any organization, you’ll only see the cloud-based product licenses specifically associated with your personal user account.
+
+### Edit a license
+
+As a user with **Full Access** on the **License Management** role object, you can record who owns a license key, add a note, and add your own PO Number. For licenses of a sub-organization, you need **Full Access** on **License Management - Sub Organizations** (see [Organization and its sub-organizations' Licenses](https://www.opswat.com/docs/my/license-management/my-main-sub-organizations-licenses)).
+
+1. In the **On-Premises Product Licenses** list, click the **three-dot icon** next to the license key.
+2. Select **Edit**.
+3. In the **Edit License** dialog, update any of the following fields:
+   - **Key Owners:** select one or more active users of the organization that owns the license key. You can search by name or email, and there is no limit on the number of owners.
+   - **Note:** your remarks for the license key.
+   - **PO Number:** optional free text, up to 50 characters, for your own reference such as internal tracking, renewals or finance. It is not OPSWAT's order number and is never filled in automatically.
+4. Click **Save**. The button stays disabled until you change a value.
+
+![](https://uploads.developerhub.io/prod/JYvy/2ts4jiy3eb9mjrq49r1kay3xawdrbqnohvsb5elca0sgep0hespn8n7u3bdpeely.png)
+
+You can edit active, expiring and expired licenses. The **Owner** and **PO Number** of a license key are also shown in **See full License History**.
+
+> **Info**
+>
+> Key owners are for your records. They do not change anyone's permissions, and License Management still shows every license to users with access. Their only effect is on which license keys are suggested to a user when they [submit a support case](https://www.opswat.com/docs/my/support-services/submit-a-case), together with the [Unassigned license keys visible](https://www.opswat.com/docs/my/my-organization/security#unassigned-license-keys-visible) setting.
+
+When a user is removed from your organization or set to Inactive, they are removed from the owners of every license key of the organization. Every edit is recorded in [Event History](https://www.opswat.com/docs/my/my-organization/event-history).
 
 ## License Expiration Notifications
 

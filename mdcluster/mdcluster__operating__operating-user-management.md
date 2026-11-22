@@ -2,7 +2,8 @@
 
 # User Management
 
-### [Users And Groups](/docs/mdcluster/operating/operating-user-management#users-and-groups)
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+### [Users](/docs/mdcluster/operating/operating-user-management#users)
 
 This section lists the existing users for MetaDefender Cluster. A user can be added in this section and can be assigned a specific role.
 
@@ -14,5 +15,5 @@ This section list the existing roles available for MetaDefender Cluster. Each ro
 
 This section lists the existing directories for MetaDefender Cluster. Each directory has a specific permission that will enforce the following login policies:
 
-- Number of failed logins before lockout.
-- Lockout time (minutes).
+- Failed Logins Before Lockout.
+- Lockout Time (minutes).

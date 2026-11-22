@@ -2,17 +2,16 @@
 
 # CBOM JSON response
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [JSON structure](/docs/mdcore/software-bill-of-materials/cbom-json-response#json-structure)
 
 Inside a component, fields that have no value are **omitted entirely**; they are never returned as `null`, `""` or `[]`. Treat an absent key as "not known", not as "empty". The top-level `components` array is always present and is `[]` when no cryptographic assets were found.
 
 JsonCopy"cbom_info": {
 "final_verdict": { //scan-level summary; advisory only
-"verdict": "<string>",
-//"Verification Failed" | "No Cryptography Found" | "Unsafe Cryptography Found" | "Cryptography Found"
+"verdict": "<string>", //"No Cryptography Found" | "Risk Cryptography Found" | "Cryptography Found"
 "verdict_explanation": ["<string>"], //one entry, equal to "verdict"
-"blocked": false, //always false: CBOM never blocks a file
+"blocked": <bool>, //true when "Block on Cryptographic Risk" is met; always false with the default (None)
 "severity": "INFO", //always "INFO"
 "total_asset_count": <int>, //number of entries in "components"
 "asset_counts": { //assets per type; all keys always present, zeros included
@@ -71,10 +70,10 @@ Each component carries one `*_properties` object inside `crypto_properties`, sel
 
 | `asset_type` | Object | Fields |
 | --- | --- | --- |
-| `algorithm` | `algorithm_properties` | `algorithm_family`, `parameter_set_identifier`, `category`, `key_lengths[]`, `classical_security_level`, `nist_quantum_security_level`, `output_size`, `reference_primitive`, `performance`, `usage.recommended` |
-| `certificate` | `certificate_properties` | `subject_name`, `issuer_name`, `certificate_format`, `description`, `not_valid_before`, `not_valid_after`, `public_key_length`, `signature_algorithm_ref`, `public_key_algorithm_ref`, `signature_algorithm_details`, `public_key_algorithm_details` |
-| `protocol` | `protocol_properties` | `type`, `version`, `cipher_suites[]`, `usage.recommended` |
-| `related_crypto_material` | `related_crypto_material_properties` | `type`, `algorithm_ref`, `key_lengths[]`, `min_key_length` |
+| `algorithm` | `algorithm_properties` | `primitive`, `algorithm_family`, `parameter_set_identifier`, `elliptic_curve`, `mode`, `padding`, `execution_environment`, `implementation_platform`, `certification_level[]`, `crypto_functions[]`, `classical_security_level`, `nist_quantum_security_level`, `reference_primitive`, `category`, `key_lengths[]`, `min_key_length`, `output_size`, `usage`, `performance`, `conditions[]`, `known_weaknesses[]`, `disallowed_for[]` |
+| `certificate` | `certificate_properties` | `subject_name`, `issuer_name`, `serial_number`, `certificate_format`, `certificate_extension`, `description`, `not_valid_before`, `not_valid_after`, `public_key_length`, `signature_algorithm_ref`, `public_key_ref`, `public_key_algorithm_ref`, `signature_algorithm_details`, `public_key_algorithm_details`, `fingerprint`, `certificate_state[]`, `certificate_extensions[]`, `related_cryptographic_assets[]` (plus lifecycle dates when imported) |
+| `protocol` | `protocol_properties` | `type`, `version`, `cipher_suites[]` {`name`, `algorithms[]`, `identifiers[]`, `tls_groups[]`, `tls_signature_schemes[]`}, `crypto_ref_array[]`, `ikev2_transform_types`, `related_cryptographic_assets[]`, `usage`, `performance`, `conditions[]`, `known_weaknesses[]` |
+| `related_crypto_material` | `related_crypto_material_properties` | `type`, `id`, `state`, `algorithm_ref`, `size`, `format`, `value`, `secured_by` {`mechanism`, `algorithm_ref`}, `fingerprint`, `related_cryptographic_assets[]`, `key_lengths[]`, `min_key_length` (plus lifecycle dates when imported) |
 | `library` | *(none)* | Library details are at the `crypto_properties` level: `vendor`, `library_type`, `library_supports[]`, `notes[]`, `detection_kind` |
 
 For related crypto material, `algorithm_ref` holds the name of the algorithm the key or secret belongs to (for example `Ed25519`).
@@ -87,7 +86,7 @@ For libraries, `detection_kind` tells how the library was found: `declared-depen
 
 ### [Risk](/docs/mdcore/software-bill-of-materials/cbom-json-response#risk)
 
-- `overall_safe` is what the UI shows as **Overall Risk**: `safe`, `unsafe` or `unknown`. An asset is `unknown` when there is not enough information to grade it on one of the two axes (classical, quantum).
+- crypto_properties.risk.overall is what the UI shows as Overall Risk: safe, unknown or unsafe. Unknown assets are not counted as unsafe. An asset is `unknown` when there is not enough information to grade it on one of the two axes (classical, quantum).
 - When a level is `unknown`, the matching `safe` value is `false`. Read it as "not confirmed safe", not as "found unsafe".
 - `quantum.is_pqc` names a mechanism and is distinct from the `quantum-safe` level: AES-256 is quantum-safe without being a post-quantum algorithm.
 - `quantum.recommended_replacement` is an **array**, because there can be more than one successor. RSA, for example, needs ML-KEM (FIPS 203) for key establishment *and* ML-DSA (FIPS 204) for signatures; `applies_to` says which use each entry covers. If you need a single answer, read the first element.
@@ -107,20 +106,20 @@ Certificates extracted from binary files are byte-offset findings, not line-base
 
 1. `No Cryptography Found`: `total_asset_count` is 0.
 
-2. `Unsafe Cryptography Found`: `risk_summary.overall.unsafe` is greater than 0.
+2. `Risk Cryptography Found`: risk_summary.overall.unsafe is greater than 0 and the workflow's CBOM Module > Block on Cryptographic Risk is set to Unsafe. blocked is then true.
 
-3. `Cryptography Found`: all other cases, including when every asset is `safe` or `unknown`.
+3. `Cryptography Found`: all other cases, including unsafe assets under the default threshold None, which neither reports a risk nor blocks.
 
-> **Note:** `No Cryptography Found` is returned both when an analyzed file yields no cryptographic assets and when the file type is not covered by CBOM analysis. The verdict does not distinguish between these two cases.
+> **Note:** `No Cryptography Found` is returned both when an analyzed file yields no cryptographic assets and when the file type is not covered by CBOM analysis. The verdict does not distinguish between these two cases. "Verification Failed" is no longer returned. If CBOM cannot read its input, cbom_info carries err_code and err_details. If CBOM is disabled in the workflow, cbom_info is {}.
 
 ## [Examples](/docs/mdcore/software-bill-of-materials/cbom-json-response#examples)
 
-### [A private key file](/docs/mdcore/software-bill-of-materials/cbom-json-response#a-private-key-file)
+### [A private key file (default threshold None)](/docs/mdcore/software-bill-of-materials/cbom-json-response#a-private-key-file-default-threshold-none)
 
 JsonCopy"cbom_info": {
 "final_verdict": {
-"verdict": "Unsafe Cryptography Found",
-"verdict_explanation": ["Unsafe Cryptography Found"],
+"verdict": "Cryptography Found",
+"verdict_explanation": ["Cryptography Found"],
 "blocked": false,
 "severity": "INFO",
 "total_asset_count": 1,
@@ -162,6 +161,8 @@ JsonCopy"cbom_info": {
 }
 ]
 }
+
+With the threshold set to Unsafe, the same file returns "Risk Cryptography Found" and "blocked": true.
 
 ### [A library declared in a Maven `pom.xml` (one component shown)](/docs/mdcore/software-bill-of-materials/cbom-json-response#a-library-declared-in-a-maven-pomxml-one-component-shown)
 

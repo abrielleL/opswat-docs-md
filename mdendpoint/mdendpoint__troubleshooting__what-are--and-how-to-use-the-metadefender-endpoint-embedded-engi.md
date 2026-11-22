@@ -6,42 +6,66 @@
 >
 > This article applies to MetaDefender Endpoint releases subsequent to version 7.6.2411.603. deployed on Windows systems when connected to MyOPSWAT Central Management v10.
 
-MetaDefender Endpoint Embedded Engines are local anti-malware engines that run directly on the Windows endpoint. They enable MetaDefender Endpoint to perform threat scanning locally, reducing reliance on remote scan sources such as MetaDefender Core or MetaDefender Cloud for supported local scanning workflows.
+MetaDefender Endpoint Embedded Engines are local anti-malware engines that run directly on the Windows endpoint. They enable MetaDefender Endpoint to perform threat scanning locally, reducing reliance on remote scan sources such as MetaDefender Core or MetaDefender Cloud for supported local scanning workflows. For any privacy concerns, this ensures files do not leave the local device for scanning.
 
 This capability is particularly valuable in environments where endpoints may be offline, remote, restricted, or air-gapped, but still require malware scanning.
 
-In removable media scenarios, the embedded antivirus engine can be used to take over when connectivity is unavailable, allowing files to continue being scanned without interruption.
+In removable media scenarios, the embedded antivirus engines can be used to take over when connectivity is unavailable, allowing files to continue being scanned without interruption.
 
 ## What can you scan with the Embedded Engines?
 
 On Windows, MetaDefender Endpoint’s malware scanning capabilities include the following scan types:
 
-- **Memory Scan**: scans memory, including processes and libraries currently loaded in memory.
-- **Full System Scan**: scans memory and local drives.
-- **Custom Scan**: can scan local files/folders, boot sectors, attached drives, removable drives, and network drives.
+- **Memory Scan**: scans memory, including processes and libraries currently loaded in memory
+- **Full System Scan**: scans memory and local drives
+- **Custom Scan**: can scan local files/folders, boot sectors, attached drives, removable drives, and network drives
 - **Removable media:** removable media files remain scannable even when internet connectivity is interrupted or unavailable
 - **Download Protection:** can scan files that have been downloaded from the internet
 
 ## Licensing
 
-Embedded Engines is not a free/base feature. Threat Detection is only available to customers who have a MetaDefender Endpoint Plus license. For that reason, Embedded Engines should be treated as a licensed Threat Detection capability.
+Embedded Engines is not a free/base feature. Embedded engine threat detection is only available to customers who have a MetaDefender Endpoint Plus license. For that reason, Embedded Engines should be treated as a licensed Threat Detection capability.
 
-## How to activate Embedded Engines in OCM v10
+## How to activate Embedded Engines in My OPSWAT Central Management v10
 
-To enable Embedded Engines in **My OPSWAT Central Management v10**, use the following path:
+Embedded Engines in **My OPSWAT Central Management v10**, can be enabled for all features that require scanning files.
 
-1. Open **Policies**.
-2. Go to **Endpoint Security**.
-3. Select the target policy.
-4. Open **Advanced Endpoint Protection**.
-5. Enable **Threat Detection for Windows**.
-6. Click **Add Scan Server**.
-7. In **Select a scan source**, choose **Embedded Engines**.
-8. Save the policy.
+### Peripheral Media Protection
 
-![](https://uploads.developerhub.io/prod/2x2P/r0wz91crp5iv00rny76kp8wy3prjnaa0g7dm0q8itc5dswufm09e3kkw8nfgj8q3.png)
+1. In the left hand menu, in the *Solution *section, expand **Peripheral Media Protection**
+2. Open **Policies**
+3. Select the target policy
+4. Set **Peripheral Media Protection** to *Active*
+5. Expand **Scan Workflow**
+6. Click **Add Scan Server**
+7. In **Select a scan source**, choose **Embedded Engines**
+8. Click** Add**
+9. Save the policy
 
-If you want Embedded Engines to be used for removable-media on-access scanning, also enable **On-Access File Scanning** and make sure **Enable Removable Media Protection** is turned on before saving the policy. OPSWAT documents this flow in the release notes for the feature rollout.
+### Malware Scan
+
+1. In the left hand menu, in the *Solution *section, expand **Endpoint Security**
+2. Open **Policies**
+3. Select the target policy under the **Endpoint Security** tab
+4. Select the** Malware Scan **tab
+5. Set **Malware Scan** to *Active *and expand the feature
+6. Expand **Scan Workflow**
+7. Click **Add Scan Server**
+8. In **Select a scan source**, choose **Embedded Engines**
+9. Click** Add**
+10. Save the policy
+
+### Download Protection
+
+1. In the left hand menu, in the *Solution *section, expand **Endpoint Security**
+2. Open **Policies**
+3. Select the target policy under the **Download Protection **tab
+4. Set **Download Protection** to *Active*
+5. Expand **Scan Workflow**
+6. Click **Add Scan Server**
+7. In **Select a scan source**, choose **Embedded Engines**
+8. Click** Add**
+9. Save the policy
 
 ## What are the embedded engines available to use?
 
@@ -54,16 +78,24 @@ When **Embedded Engines** is selected as the scan source in **OCM v10**, the fol
 
 These engines are configured directly under the **Add Scan Server** window when **Embedded Engines** is chosen as the scan source. This allows administrators to define which local detection engines MetaDefender Endpoint will use for endpoint-side threat scanning.
 
-## How to select which scanning method to use in MetaDefender Endpoint:
+## How to select which scanning method to use in MetaDefender Endpoint
 
-Malware Scan:
+**Peripheral Media Protection**
+
+![](https://uploads.developerhub.io/prod/2x2P/gwvk1l90s3g3bcf3ns6txpxwcwbzpjrqkebxe5tw0ti1f6sb6jae5b16i58gtanj.png)
+
+**Malware Scan**
 
 ![](https://uploads.developerhub.io/prod/2x2P/znu9ndryfauovrp2gscfxttp0lhfr2uh57g5feyqedlh1hrv4a0rfmdzev3ys7yd.png)
 
-Peripheral Media Protection:
+**Download Protection**
 
-![](https://uploads.developerhub.io/prod/2x2P/gwvk1l90s3g3bcf3ns6txpxwcwbzpjrqkebxe5tw0ti1f6sb6jae5b16i58gtanj.png)
+![](https://uploads.developerhub.io/prod/2x2P/iz7p4heugzb4bzodokidr1yr9vo9qvei40ar33o6ekdim5rvk5vcepsxr3bbvj0h.png)
 
 > **Support:**
 >
 > If **Further Assistance** is required, please proceed to log a [**support case or chat with one of our support engineers**](https://my.opswat.com/support).
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/mdendpoint/llms.txt)

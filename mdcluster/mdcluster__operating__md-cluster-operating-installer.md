@@ -2,10 +2,12 @@
 
 # Installers
 
-The Installers section lists all MetaDefender Cluster (MD Cluster) API Gateway, MD Cluster Callback Service and MetaDefender Core installers that have been recorded so far. These installers are used when deplying to a Worker.
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
-Once OPSWAT releases a new version of the MD Cluster API Gateway, MD Cluster Callback Service and MetaDefender Core. The system administrator needs to download the installers from the OPSWAT portal and upload them to the MD Cluster Control Center by clicking `Upload Package` button in the top right corner.
+The Installers section (**Library** > **Installers**) lists all MetaDefender Cluster (MD Cluster) API Gateway, MD Cluster Callback Service, Download Service and MetaDefender Core installers that have been recorded so far. These installers are used when deplying to a Worker.
 
-The system administrator can upload several installer files at once.
+Once OPSWAT releases a new version of the MD Cluster API Gateway, MD Cluster Callback Service and MetaDefender Core. The system administrator needs to download the installers from the OPSWAT portal and upload them to the MD Cluster Control Center by clicking `Upload Installer` button in the top right corner.
+
+The system administrator can upload several installer files (.msi, .deb, .rpm) at once by clicking `Choose Files` and then `Upload`.
 
 Installer files are uploaded to the MD Cluster File Storage and will be ready for deployment or upgrading.

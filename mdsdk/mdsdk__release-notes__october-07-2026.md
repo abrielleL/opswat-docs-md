@@ -2,7 +2,7 @@
 
 # October 7th, 2026
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [Release Note](/docs/mdsdk/release-notes/october-07-2026#release-note)
 
 ### [Release Date](/docs/mdsdk/release-notes/october-07-2026#release-date)
@@ -30,7 +30,6 @@ View as Markdown Ask ChatGPT about this page Ask Claude about this page
 
 #### [Windows](/docs/mdsdk/release-notes/october-07-2026#windows)
 
-- Resolved a named pipe vulnerability by implementing exclusive pipe ownership and randomized rendezvous names, improving protection against unauthorized process takeovers and ensuring secure communication between the SDK and third-party hosts.
 - Resolved Zoom 7.0.6 being incorrectly flagged for vulnerabilities via correcting the fix versions for CVE-2026-53413, CVE-2026-53414, and CVE-2026-53415, improving the accuracy of vulnerability reporting for users on the 7.0.x branch.
 - Fixed disk exhaustion caused by accumulated temporary registry transaction files during DetectProducts when detect_all_users_products is enabled. The SDK now cleans up all transaction sidecar files after the operation completes.
 - Fixed the incorrect classification of Microsoft Office 365 and Office Click-to-Run applications as manual patching by updating the data rules to recognize download scripts as automatic, ensuring users can accurately identify and leverage automatic patching for these products.

@@ -16,10 +16,10 @@ View as Markdown Summarize this page Ask ChatGPT about this page Ask Claude abou
 
 Use to get application details which installed on endpoints on an account.
 
-## [API URL](/docs/cm/developer-guidelines/application-details#api-url)
+## API URL
 
 https://gears.opswat.com/o/api/v3/apps/details
-## [Request Parameters](/docs/cm/developer-guidelines/application-details#request-parameters)
+## Request Parameters
 
 | Key | Datatype | Parameter Type | Required | Description | Default |
 | --- | --- | --- | --- | --- | --- |
@@ -28,11 +28,11 @@ https://gears.opswat.com/o/api/v3/apps/details
 | version | string | body | Yes | Product version |  |
 | verbose.cves | interger | body | No | Specify if CVEs information is included on the response  Values can be:   - 0: not include - 1: include | 0 |
 
-## [Response HTTP Code](/docs/cm/developer-guidelines/application-details#response-http-code)
+## Response HTTP Code
 
-See details in the Response HTTP Code section in [this page](/docs/cm/developer-guidelines/apis)
+See details in the Response HTTP Code section in [this page](/developer-guidelines/apis)
 
-## [Response Parameters](/docs/cm/developer-guidelines/application-details#response-parameters)
+## Response Parameters
 
 | Key | DataType | Description |
 | --- | --- | --- |
@@ -56,7 +56,7 @@ See details in the Response HTTP Code section in [this page](/docs/cm/developer-
 | cves.cvss2_score | double | Common vulnerability scoring system v2.0 |
 | cves.cvss3_score | double | Common vulnerability scoring system v3.0 |
 
-## [Example](/docs/cm/developer-guidelines/application-details#example)
+## Example
 
 **Example Request with verbose as 0**
 

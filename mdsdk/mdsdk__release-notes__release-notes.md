@@ -2,8 +2,16 @@
 
 # Release Notes
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [Security SDK](/docs/mdsdk/release-notes/release-notes#security-sdk)
+
+[November 10th, 2026](/docs/mdsdk/release-notes/november-10-2026)
+
+[November 4th, 2026](/docs/mdsdk/release-notes/november-04-2026)
+
+[October 29th, 2026](/docs/mdsdk/release-notes/october-29-2026)
+
+[October 27th, 2026](/docs/mdsdk/release-notes/october-27-2026)
 
 [October 13th, 2026](/docs/mdsdk/release-notes/october-13-2026)
 

@@ -2,7 +2,7 @@
 
 # F5 BIG IP Integrations
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 MetaDefender ICAP Server can be integrated to different F5 solutions in different ways. Please follow the guide which is the best match for your use-case:
 

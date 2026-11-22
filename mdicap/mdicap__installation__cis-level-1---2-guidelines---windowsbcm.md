@@ -2,7 +2,7 @@
 
 # CIS Level 1 & 2 Guidelines - Windows
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [CIS Level 1](/docs/mdicap/installation/cis-level-1---2-guidelines---windowsbcm#cis-level-1)
 
 Windows version has been tested: Windows Server 2022 and 2025

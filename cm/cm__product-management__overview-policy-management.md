@@ -7,14 +7,14 @@ This section explains how to manage policies in your account.
 My OPSWAT Central Management groups policies of products by solution as below
 
 1. Peripherial Media: policies for MetaDefender Kiosk
-2. Endpoint Security: policies for endpoints
+2. Endpoint Security: policies for MetaDefender Endpoint
 3. Hardware Supply Chain: policies for MetaDefender Drive
-4. File Security: policies for MetaDefender Core
+4. File Security: policies for MetaDefender Core and MetaDefender ICAP Server
 
-## Manage policies
+## Manage Policies
 
-1. Log into the My OPSWAT Central Management console.
-2. Navigate to the **Policies,** select a solution you would like to view policies.
+1. Log into the My OPSWAT Central Management console
+2. Navigate to the **Policies,** select a solution you would like to view policies
 3. You can perform some actions on a specific policy, such as:
 
 - **Clone** - lets you quickly create a duplicate of a policy within an account.
@@ -59,3 +59,7 @@ My OPSWAT Central Management will create a default policy based on the latest ve
 5. Confirm your change with your PIN.
 
 **Note that* My OPSWAT Central Management *will re-assess device status for devices in the group with the new policy, except changes for Threat Detection.*
+
+---
+
+[All pages in this documentation](https://www.opswat.com/docs/cm/llms.txt)

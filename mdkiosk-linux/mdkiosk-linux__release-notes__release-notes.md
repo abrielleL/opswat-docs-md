@@ -5,7 +5,7 @@
 View as Markdown Ask ChatGPT about this page Ask Claude about this page
 ## [5.7.7](/docs/mdkiosk-linux/release-notes/release-notes#577)
 
-| **22 Oct 2026** |  |
+| **3 Nov 2026** |  |
 | --- | --- |
 | Ubuntu 22.04 Operating System Support | Kiosk for Linux now runs on Ubuntu 22.04 as its underlying operating system. |
 | Remove Encrypted Files After a Scan | Users can now remove encrypted files detected during a scan session directly from the scan results once the session finishes, either one file at a time or all at once with “Remove All”. Kiosk confirms each removal with a “File Removed” message. |

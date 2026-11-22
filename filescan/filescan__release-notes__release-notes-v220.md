@@ -2,7 +2,7 @@
 
 # Release Notes for v2.2.0
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [Date: 6 February, 2025](/docs/filescan/release-notes/release-notes-v220#date-6-february-2025)
 
 **What's New**

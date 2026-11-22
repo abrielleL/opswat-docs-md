@@ -4,7 +4,7 @@
 
 # ICAP Server
 
-#### v5.16.0 [Latest]
+#### v5.16.3 [Latest]
 
 [Release Notes](https://www.opswat.com/docs/mdicap/release-notes)
 

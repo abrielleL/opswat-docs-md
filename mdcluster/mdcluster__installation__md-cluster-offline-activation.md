@@ -2,10 +2,11 @@
 
 # Offline Activation
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 ## [Collect Deployment IDs](/docs/mdcluster/installation/md-cluster-offline-activation#collect-deployment-ids)
 
 1. Sign in to MetaDefender Cluster (MD Cluster) **Control Center** console.
-2. Go to `Inventory` > `Licenses` and select `Offline License` tab.
+2. Go to `Library` > `Licenses` and select `Offline License` tab.
 3. Select Deployment IDs of MetaDefender Core instances you prefer to activate.
 4. Press `Export` at the top right corner and save the exported file to your location of choice.
 
@@ -42,12 +43,12 @@ The license file is associated with one unique Deployment ID. The users must car
 ## [Activate MetaDefender Core instances with license files](/docs/mdcluster/installation/md-cluster-offline-activation#activate-metadefender-core-instances-with-license-files)
 
 1. Sign in to MD Cluster **Control Center** console.
-2. Go to `Inventory` > `Licenses` and select `Offline License` tab.
+2. Go to `Library` > `Licenses` and select `Offline License` tab.
 3. Click `Activate`.
 
-4. Drop the license files into the dash area for submission.
+4. In the `Activate Offline License` panel, click `Upload Activation File` and select the license files.
 
 5. Click `Confirm` to complete.
-6. MD Cluster **Control Center** activates MetaDefender Core instances associated with the provided license files and displays their activation status.
+6. MD Cluster **Control Center** activates the MetaDefender Core instances associated with the license files. If every file is accepted, the panel closes and a success notification appears; otherwise the panel lists the result for each file. The **Status** column on the `Offline License` tab shows each instance's activation status.
 
-7. Select an activated MetaDefender Core instance and press `Details` to view the license details
+7. Open the actions menu (**...**) of an activated MetaDefender Core instance and select `Details` to view the license details.

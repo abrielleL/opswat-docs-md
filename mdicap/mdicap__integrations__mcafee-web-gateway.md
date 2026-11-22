@@ -2,7 +2,7 @@
 
 # McAfee Web Gateway
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 The current documentation is based on McAfee Web Gateway version 7.7.
 

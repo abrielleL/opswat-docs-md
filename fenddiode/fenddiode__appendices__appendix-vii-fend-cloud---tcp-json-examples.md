@@ -8,7 +8,61 @@ This appendix provides example JSON outputs from the Fend Cloud API, local MQTT 
 
 ## [Modbus JSON](/docs/fenddiode/appendices/appendix-vii-fend-cloud---tcp-json-examples#modbus-json)
 
-MQTT PublisherFend CloudTCP Client with JSON ConversionCopy{ "type": "modbusTCP", "created": 0, "diode": "FD_169", "payload": { "address": "192.168.0.21", "transactionID": 3685, "sequenceNum": 15, "deviceID": 20, "function": 4, "register": 30018, "valueRaw": "3FC7173AA8380717", "value": "0.180396396768679", "dataType": "f64", "hiByteFirst": 1, "hiWordFirst": 1 }}{ "payload": { "address": "192.168.1.21", "sequenceNum": 204, "hiByteFirst": 1, "valueRaw": "6A6758544A58794F", "hiWordFirst": 1, "function": 4, "dataType": "str64", "deviceID": 1, "value": "jgXTJXyO", "transactionID": 25192, "register": 108 }, "ingested": 1664891195192, "created": 1664891189152, "scope": "data", "id": "abcd", "diode": "XX-XXXX-XXXXXX", "type": "modbusTCP"}{ "type": "modbusTCP", "created": 0, "diode": "0", "payload": { "address": "192.168.0.20", "transactionID": 46308, "sequenceNum": 0, "deviceID": 20, "function": 4, "register": 30022, "valueRaw": "724A5365", "value": "rJSe", "dataType": "str32", "hiByteFirst": 1, "hiWordFirst": 1 }}
+MQTT PublisherFend CloudTCP Client with JSON ConversionCopy{
+"type": "modbusTCP",
+"created": 0,
+"diode": "FD_169",
+"payload": {
+"address": "192.168.0.21",
+"transactionID": 3685,
+"sequenceNum": 15,
+"deviceID": 20,
+"function": 4,
+"register": 30018,
+"valueRaw": "3FC7173AA8380717",
+"value": "0.180396396768679",
+"dataType": "f64",
+"hiByteFirst": 1,
+"hiWordFirst": 1
+}
+}{
+"payload": {
+"address": "192.168.1.21",
+"sequenceNum": 204,
+"hiByteFirst": 1,
+"valueRaw": "6A6758544A58794F",
+"hiWordFirst": 1,
+"function": 4,
+"dataType": "str64",
+"deviceID": 1,
+"value": "jgXTJXyO",
+"transactionID": 25192,
+"register": 108
+},
+"ingested": 1664891195192,
+"created": 1664891189152,
+"scope": "data",
+"id": "abcd",
+"diode": "XX-XXXX-XXXXXX",
+"type": "modbusTCP"
+}{
+"type": "modbusTCP",
+"created": 0,
+"diode": "0",
+"payload": {
+"address": "192.168.0.20",
+"transactionID": 46308,
+"sequenceNum": 0,
+"deviceID": 20,
+"function": 4,
+"register": 30022,
+"valueRaw": "724A5365",
+"value": "rJSe",
+"dataType": "str32",
+"hiByteFirst": 1,
+"hiWordFirst": 1
+}
+}
 ### [Modbus JSON Field Definitions](/docs/fenddiode/appendices/appendix-vii-fend-cloud---tcp-json-examples#modbus-json-field-definitions)
 
 payload [object] – A single Modbus data point
@@ -41,7 +95,98 @@ type [string] – Type of data (protocol) sent from diode. Modbus TCP in this ca
 
 ## [BACnet JSON](/docs/fenddiode/appendices/appendix-vii-fend-cloud---tcp-json-examples#bacnet-json)
 
-MQTT PublisherFend CloudTCP Client with JSON ConversionCopy{ "created": 0, "diode": "FD_169", "type": "BACnetIP", "payload": { "dst": "192.168.1.201", "src": "192.168.1.179", "objects": [ { "objectType": "analog-input", "objectInstance": 1, "properties": { "present-value": 4.02 } }, { "objectType": "analog-input", "objectInstance": 2, "properties": { "present-value": 5 } } ] }}{ "payload": { "dst": "192.168.1.201", "src": "192.168.1.179", "objects": [ { "objectType": "analog-input", "objectInstance": 1, "properties": { "present-value": 4.02 } }, { "objectType": "analog-input", "objectInstance": 2, "properties": { "present-value": 5 } } ] }, "ingested": 1630630788660, "created": 1630630787587, "scope": "data", "id": "abcd", "diode": "XX-XXXX", "type": "BACnetIP"{ "created": 0, "diode": "0", "type": "BACnetIP", "payload": { "dst": "192.168.1.201", "src": "192.168.1.179", "objects": [ { "objectType": "analog-input", "objectInstance": 1, "properties": { "present-value": 4.02 } }, { "objectType": "analog-input", "objectInstance": 2, "properties": { "present-value": 5 } } ] }}
+MQTT PublisherFend CloudTCP Client with JSON ConversionCopy{
+"created": 0,
+"diode": "FD_169",
+"type": "BACnetIP",
+"payload": {
+"dst": "192.168.1.201",
+"src": "192.168.1.179",
+"objects": [
+{
+"objectType": "analog-input",
+"objectInstance": 1,
+"properties": {
+"present-value": 4.02
+}
+},
+{
+"objectType": "analog-input",
+"objectInstance": 2,
+"properties": {
+"present-value": 5
+}
+}
+]
+}
+}{
+"payload": {
+"dst": "192.168.1.201",
+"src": "192.168.1.179",
+"objects": [
+{
+"objectType": "analog-input",
+"objectInstance": 1,
+"properties": {
+"present-value": 4.02
+}
+},
+{
+"objectType": "analog-input",
+"objectInstance": 2,
+"properties": {
+"present-value": 5
+}
+}
+]
+},
+"ingested": 1630630788660,
+"created": 1630630787587,
+"scope": "data",
+"id": "abcd",
+"diode": "XX-XXXX",
+"type": "BACnetIP"
+}{
+"created": 0,
+"diode": "0",
+"type": "BACnetIP",
+"payload": {
+"dst": "192.168.1.201",
+"src": "192.168.1.179",
+"objects": [
+{
+"objectType": "analog-input",
+"objectInstance": 1,
+"properties": {
+"present-value": 4.02
+}
+},
+{
+"objectType": "analog-input",
+"objectInstance": 2,
+"properties": {
+"present-value": 5
+}
+}
+]
+}
+}
 ## [LonIP JSON](/docs/fenddiode/appendices/appendix-vii-fend-cloud---tcp-json-examples#lonip-json)
 
-MQTT PublisherCopy{ "created": 0, "diode": "FD_169", "type": "LON/IP",  "payload": { "destIP": "129.229.2.37", "SrcSubnet": 9, "srcIP": "129.229.2.32", "SrcNode": 2, "NVSelector": 66, "DstSubnet": 1, "Data": "8a8a", "DstNode": 126, "NVDirection": 0, "Domain": "8e" }}
+MQTT PublisherCopy{
+"created": 0,
+"diode": "FD_169",
+"type": "LON/IP",
+"payload": {
+"destIP": "129.229.2.37",
+"SrcSubnet": 9,
+"srcIP": "129.229.2.32",
+"SrcNode": 2,
+"NVSelector": 66,
+"DstSubnet": 1,
+"Data": "8a8a",
+"DstNode": 126,
+"NVDirection": 0,
+"Domain": "8e"
+}
+}

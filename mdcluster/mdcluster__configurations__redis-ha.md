@@ -2,6 +2,8 @@
 
 # High Availability support for Redis
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool Info
+
 A minimum of **two** Redis instances must be installed on separate hosts for High Availability solution to function properly.
 
 An **odd number** of **Redis Sentinels** should be installed.
@@ -61,15 +63,15 @@ $ redis-cli -h <sentinel_host> -p <sentinel_port>
 > sentinel get-master-addr-by-name myprimary
 ### [Setup instructions](/docs/mdcluster/configurations/redis-ha#setup-instructions)
 
-1. Sign to MD Cluster **Control Center** console with your Administrator account.
-2. Navigate to `Inventory` > `Services`.
-3. Expand the `Redis` group.
-4. Click `Add service`.
+1. Sign in to MD Cluster **Control Center** console with your Administrator account.
+2. Navigate to `Library` > `Services`.
+3. Locate the `Redis` group.
+4. Click the `+` (Add a Redis service) button on the right side of the group.
 5. Enter the values for `Name`, `Host`, `Port`, `Username` and `Password` fields of individual Redis instance.
 
 Warning
 
 MD Cluster Control Center **only accepts Redis** and **not Redis Sentinel**.
 
-6. Click the Check icon in the bottom right to complete.
-7. Ensure all RabbitMQ nodes are reachable by the MD Cluster **Control Center**.
+6. Click `Add` to complete.
+7. Expand the `Redis` group and ensure all Redis instances are reachable by the MD Cluster **Control Center**.

@@ -2,7 +2,7 @@
 
 # MetaDefender ICAP Server configuration
 
-View as Markdown Ask ChatGPT about this page Ask Claude about this page
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
 
 The MetaDefender ICAP Server configuration is separated into two parts. The basic server configurations are stored in the configuration files. Other configuration values can be set via the Web Management Console.
 

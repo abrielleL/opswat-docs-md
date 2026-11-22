@@ -2,6 +2,8 @@
 
 # API Security FAQ
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 - Confidentiality
 - Availability
 
@@ -93,10 +95,7 @@
 
 ### [Service Locations](/docs/mdcloud/operation/api-security-faq#service-locations)
 
-- Where is the system located? (Country(s) - Cloud / Hybrid / On-Premise)
-
-  - Cloud: Customers can select between Europe (Germany), the USA (North America), Canada (Montreal), Australia (Sydney). OPSWAT values the experience and privacy of our users. Our service is provided by servers located in the following [locations](/docs/mdcloud/compliance/locations). Please consult with the product team if you would like to see a service closer to the customer’s region.
-  - Response time: OPSWAT is continuously monitoring the response time for its services. You can find the average scan times on [Metadefender Cloud Statistics](https://www.opswat.com/docs/mdcloud/operation/average-scan-times)
+MetaDefender Cloud runs in seven regions: United States, Germany, Canada, Australia, Japan, India and Israel. Your request is served by the region closest to you, and your files are processed and stored in that region only. To choose a region, send your requests to its endpoint; the endpoints are listed on the [Locations](/docs/mdcloud/compliance/locations) page.
 
 ## [OPSWAT Compliance and Certifications](/docs/mdcloud/operation/api-security-faq#opswat-compliance-and-certifications)
 

@@ -2,6 +2,8 @@
 
 # What are the differences between AVs in OPSWAT and the other services?
 
+View as Markdown Ask ChatGPT about this page Ask Claude about this page Connect your AI tool
+
 When comparing antivirus (AV) scanning capabilities, it's essential to understand how configurations and engine versions impact detection performance and reliability. OPSWAT products are specifically designed to protect critical infrastructure, focusing on stability, privacy, and minimizing false positives. This approach differs from other services, which may prioritize higher detection rates at the cost of increased false positives or reduced data privacy. Below, we explore the key differences in configurations and engine versions between OPSWAT and other services.
 
 ## [Configurations](/docs/mdcore/knowledge-base/what-are-the-differences-between-avs-in-opswat-and-the-other-ser#configurations)
@@ -15,6 +17,7 @@ Some antivirus engines have a cloud scanning feature that is disabled by default
 | Lionic | Enable Cloud Scan |
 | Sophos | Enable Cloud Scan |
 | AhnLab | Enable Cloud Scan |
+| Xvirus | Enable Cloud Scan |
 
 - **Other Configurations**
 
